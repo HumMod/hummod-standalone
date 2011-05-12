@@ -1,0 +1,39 @@
+HumMod / Triglyceride.REF
+
+Created : 2010-05-30
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+I'm using some rough estimates here.
+
+A triglyceride is comprised of three 16-carbon
+fatty acids and a glycerol.
+
+The molecular weights are
+
+  FA       = 237
+  FA       = 237
+  FA       = 237
+  Glycerol =  92
+           ------
+  Total    = 803
+
+By weight (mG/Min), we get the following scaling
+
+  FA Rate = 0.89 * Triglyceride Rate
+  Glycerol Rate = 0.11 * Triglyceride Rate
+
+  Triglyceride Rate = 1.12 * FA Rate
+
+Use GI fatty acid absorption to get rate for
+glycerol and triglyceride.
+
+At the hydrolysis end, we use triglyceride rate
+to get the rate for fatty acids and glycerol.
+
+Note that we need the hydrolysis rate early to
+use in the fatty acid pool.
+
+End

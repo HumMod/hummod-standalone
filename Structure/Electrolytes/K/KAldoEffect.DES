@@ -1,0 +1,61 @@
+HumMod / KAldoEffect
+
+Created : 20-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> KAldoEffect </name>
+
+<variables>
+
+<parm><name> Tau </name><val> 120.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Delayed </name>
+  <outputname> Delayed </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> Immediate </inputname>
+  <rateconstname> RateConst </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.01 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> Effect </name>
+  <point><x>    0 </x><y> 0.9 </y><slope> 0.0 </slope></point>
+  <point><x>  300 </x><y> 1.0 </y><slope> 0.00025 </slope></point>
+  <point><x> 1500 </x><y> 1.1 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def><name> RateConst </name><val> INVERT Tau </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Immediate </name><val> Effect [ AldoPool.[Aldo(pMol/L)] ] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

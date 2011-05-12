@@ -1,0 +1,19 @@
+HumMod / Blood
+
+Created : 15-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Blood\ ?>
+
+<?include Volume\Volume.DES ?>
+<?include Plasma\Plasma.DES ?>
+<?include RedCells\RedCells.DES ?>
+<?include Chemistry\Chemistry.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Hemoglobin\Hemoglobin.DES ?>
+
+End

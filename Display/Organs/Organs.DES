@@ -1,0 +1,42 @@
+HumMod / Organs
+
+Created : 15-Apr-05
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Organs\ ?>
+
+<?include Bladder\Bladder.DES ?>
+<?include Bone\Bone.DES ?>
+<?include Brain\Brain.DES ?>
+<!-- <?include CoronarySinus\CoronarySinus.DES ?> -->
+<?include Fat\Fat.DES ?>
+<?include GILumen\GILumen.DES ?>
+<?include GITract\GITract.DES ?>
+<?include HeartValves\HeartValves.DES ?>
+<?include Hypothalamus\Hypothalamus.DES ?>
+<?include Kidney\Kidney.DES ?>
+<?include LeftHeart\LeftHeart.DES ?>
+<?include LHPumping\LHPumping.DES ?>
+<?include LipidDeposits\LipidDeposits.DES ?>
+<?include Liver\Liver.DES ?>
+<?include LiverMetabolism\LiverMetabolism.DES ?>
+<?include OtherTissue\OtherTissue.DES ?>
+<?include Pericardium\Pericardium.DES ?>
+<?include Peritoneum\Peritoneum.DES ?>
+<?include RespiratoryCenter\RespiratoryCenter.DES ?>
+<?include RespiratoryMuscle\RespiratoryMuscle.DES ?>
+<?include RightHeart\RightHeart.DES ?>
+<?include RHPumping\RHPumping.DES ?>
+<?include SkeletalMuscle\SkeletalMuscle.DES ?>
+<?include Skin\Skin.DES ?>
+<?include SplanchnicCirculation\SplanchnicCirculation.DES ?>
+<?include Sweat\Sweat.DES ?>
+
+<?if GENDER-FEMALE Ovaries\Ovaries.DES ?>
+<?if GENDER-FEMALE Uterus\Uterus.DES ?>
+<!-- <?ifnot GENDER-FEMALE Testes\Testes.DES ?> -->
+
+End

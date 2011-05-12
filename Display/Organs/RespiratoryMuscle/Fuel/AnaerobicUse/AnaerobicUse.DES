@@ -1,0 +1,41 @@
+HumMod / AnaerobicUse
+
+Created : 27-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> RespiratoryMuscleFuel-AnaerobicUse </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> RespiratoryMuscle </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Resp. Muscle Fuel - Anaerobic Use </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<structurename> RespiratoryMuscle-Fuel </structurename>
+
+<?path Display\Organs\RespiratoryMuscle\Fuel\AnaerobicUse\ ?>
+
+<?include Cal-Min.DES ?>
+<?include mG-Min.DES ?>
+
+</panel>
+
+End

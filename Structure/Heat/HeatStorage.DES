@@ -1,0 +1,75 @@
+HumMod / HeatStorage
+
+Created : 2010-04-18
+Last Modified : 2010-04-18
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> HeatStorage </name>
+
+<variables>
+
+<var><name> Mass </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Change </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Mass </name>
+  <val>
+      HeatCore.Mass
+    + HeatSkeletalMuscle.Mass
+    + HeatSkin.Mass
+    + GILumenTemperature.Mass
+
+  </val>
+</def>
+
+<def>
+  <name> Gain </name>
+  <val>
+      GILumenTemperature.Intake
+    + Metabolism-CaloriesUsed.TotalHeat(kCal/Min)
+    + HeatIVDrip.Flux
+    + HeatTransfusion.Flux
+    + HeatShivering.Cals
+
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val>
+      HeatUrine.Flux
+    + HeatSweating.Flux
+    + HeatHemorrhage.Flux
+    + HeatDialyzer.Flux
+
+    + HeatRadiation.Flux
+    + HeatConduction.Flux
+    + HeatInsensibleSkin.Flux
+    + HeatInsensibleLung.Flux
+
+    + GILumenTemperature.Vomitus
+    + GILumenTemperature.Diarrhea
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

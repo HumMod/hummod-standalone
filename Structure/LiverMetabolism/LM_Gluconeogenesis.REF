@@ -1,0 +1,37 @@
+HumMod / LM_Gluconeogenesis
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+  Gluconeogenesis is generally
+   active.
+
+   Science 254:573-576, 1991.
+
+   MRI images during fasting
+
+              15   40   60 Hrs fast
+             ---- ---- ----
+     [Glu]    85   67   63
+     [I]      11    7    8
+     [Glgn]   75  139  172
+     Made    106   96  112 mG/Min
+
+   Diabetes 25:283-291, 1976.
+
+   [I] of 73 (by infusion) stopped
+   glycogenolysis but not neogenesis.
+
+   [I] of 240 decreased neogenesis
+   to 10% of control.
+
+   Plasma AA conc adds a mass action
+   effect.
+
+
+End

@@ -1,0 +1,17 @@
+HumMod / SweatAcclimation.REF
+
+Created : 2010-05-15
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+Acclimation has a time constant of 6 days.
+
+The output is effect (nominal 1.0) the modulate H2O
+secretion rate.
+
+The input is the steady-state value which is the basic
+effect multiplied by a function of skin temperature.
+
+End

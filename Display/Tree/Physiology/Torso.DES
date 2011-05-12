@@ -1,0 +1,116 @@
+HumMod / Torso
+
+Created : 24-Mar-08
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Torso </name>
+  <label> Torso </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Torso-Summary </name>
+  <label> Summary </label>
+  <parent> Torso </parent>
+</leaf>
+
+<separatorbar>
+  <parent> Torso </parent>
+</separatorbar>
+
+<branch>
+  <name> Torso-Upper </name>
+  <label> Upper </label>
+  <parent> Torso </parent>
+</branch>
+
+<leaf>
+  <name> Torso-Upper-BloodPressure </name>
+  <label> Blood Pressure </label>
+  <parent> Torso-Upper </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Upper-H2O </name>
+  <label> H2O </label>
+  <parent> Torso-Upper </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Upper-Capillaries_Lymph </name>
+  <label> Capillaries - Lymph </label>
+  <parent> Torso-Upper </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Upper-InterstitialProtein </name>
+  <label> Interstitial Protein </label>
+  <parent> Torso-Upper </parent>
+</leaf>
+
+<branch>
+  <name> Torso-Middle </name>
+  <label> Middle </label>
+  <parent> Torso </parent>
+</branch>
+
+<leaf>
+  <name> Torso-Middle-BloodPressure </name>
+  <label> Blood Pressure </label>
+  <parent> Torso-Middle </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Middle-H2O </name>
+  <label> H2O </label>
+  <parent> Torso-Middle </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Middle-Capillaries_Lymph </name>
+  <label> Capillaries - Lymph </label>
+  <parent> Torso-Middle </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Middle-InterstitialProtein </name>
+  <label> Interstitial Protein </label>
+  <parent> Torso-Middle </parent>
+</leaf>
+
+<branch>
+  <name> Torso-Lower </name>
+  <label> Lower </label>
+  <parent> Torso </parent>
+</branch>
+
+<leaf>
+  <name> Torso-Lower-BloodPressure </name>
+  <label> Blood Pressure </label>
+  <parent> Torso-Lower </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Lower-H2O </name>
+  <label> H2O </label>
+  <parent> Torso-Lower </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Lower-Capillaries_Lymph </name>
+  <label> Capillaries - Lymph </label>
+  <parent> Torso-Lower </parent>
+</leaf>
+
+<leaf>
+  <name> Torso-Lower-InterstitialProtein </name>
+  <label> Interstitial Protein </label>
+  <parent> Torso-Lower </parent>
+</leaf>
+
+End

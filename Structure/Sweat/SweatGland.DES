@@ -1,0 +1,86 @@
+HumMod / SweatGland
+
+Created : 25-Mar-07
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SweatGland </name>
+
+<variables>
+
+<var><name> H2ORate </name></var>
+
+<parm><name> H2ORateBasic </name><val> 1.0 </val></parm>
+
+<var><name> NaRate </name></var>
+<var><name> KRate </name></var>
+<var><name> ClRate </name></var>
+
+<var><name> [Na+] </name></var>
+<var><name> [K+] </name></var>
+<var><name> [Cl-] </name></var>
+
+<var><name> NerveEffect </name></var>
+<var><name> FuelEffect </name></var>
+<var><name> AcclimationEffect </name></var>
+<var><name> SkinFunctionEffect </name></var>
+
+<parm><name> ClampSwitch </name><val> FALSE </val></parm>
+<parm><name> ClampLevel </name><val> 0.0 </val></parm>
+
+</variables>
+
+<equations>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> NerveEffect </name>
+  <point><x> 0.0 </x><y>  0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 4.0 </x><y> 30.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> NerveEffect </name><val> NerveEffect [ HypothalamusSweating.NerveActivity ] </val></def>
+<def><name> FuelEffect </name><val> SweatFuel.Mass </val></def>
+<def><name> AcclimationEffect </name><val>  SweatAcclimation.Effect </val></def>
+<def><name> SkinFunctionEffect </name><val> Skin-Function.Effect </val></def>
+
+<conditional>
+<name> H2ORate </name>
+<test> ClampSwitch </test>
+<true> ClampLevel </true>
+<false>
+    NerveEffect
+  * FuelEffect
+  * AcclimationEffect
+  * SkinFunctionEffect
+  * H2ORateBasic
+</false>
+</conditional>
+
+<def><name> [Na+] </name><val> NaPool.[Na+] </val></def>
+<def><name> [K+] </name><val> KPool.[K+] </val></def>
+<def><name> [Cl-] </name><val> ClPool.[Cl-] </val></def>
+
+<def><name> NaRate </name><val> [Na+] * H2ORate </val></def>
+<def><name> KRate </name><val> [K+] * H2ORate </val></def>
+<def><name> ClRate </name><val> [Cl-] * H2ORate </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+
+EndEnd

@@ -1,0 +1,15 @@
+HumMod / LipidDeposits
+
+Created : 31-Mar-08
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Organs\LipidDeposits\ ?>
+
+<?include Balance\Balance.DES ?>
+<?include FattyAcidUptake\FattyAcidUptake.DES ?>
+<?include FattyAcidRelease\FattyAcidRelease.DES ?>
+
+End

@@ -1,0 +1,42 @@
+HumMod / Exercise-Metabolism.REF
+
+Created : 03-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+There is a new feature here and it's pretty cool. I wanted the
+transitions to and from exercise to be fast but not instantaneous.
+So I put in a delay (actually 3 delays for 3 exercise variables.
+
+Then the question arose: what if I wanted the transition to be
+instantaneous? This would be defined as a tau of zero and an
+infinite rate constant. So the rate constant is calculated from
+tau as follows
+
+  <conditional><name> K </name>
+  <test> Tau GT 0.0 </test>
+  <true> INVERT Tau </true>
+  <false> INFINITE </false>
+  </conditional>
+
+Then I modified delay and stable delay to respond properly to
+an infinite rate constant. The input value must be returned
+as the output value with no additional calculations. In other
+words, the INFINITE value cannot be used in any mathematical
+calculations. It is a very large value and it will typically
+cause an overflow when used in math.
+
+Caution. The value for INFINITE used above must be identical
+to the value used internally by the numerical methods, since
+this value is passed in and used in a test.
+
+  { if (K == Real :: VAL_INFINITE)
+    { return In ;
+    }
+  ...
+
+End

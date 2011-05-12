@@ -1,0 +1,57 @@
+HumMod / Accumulation
+
+Created : 2010-05-26
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.6 </high>
+   <wide> 30.0 </wide>
+   <title> Accumulation </title>
+
+<structurename> IVDrip </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalH2O </name>
+  <format> <integer/> </format>
+  <label> Total H2O </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalH2O </name>
+      <label> H2O </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 100 </max></scale>
+  </yaxis>
+</showgraph>
+
+<actionbutton>
+  <row> 9.8 </row><col> 1.0 </col>
+  <blockname> Reset </blockname>
+  <label> Reset </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for total H2O volume are mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

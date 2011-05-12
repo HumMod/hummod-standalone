@@ -1,0 +1,17 @@
+HumMod / Pericardium
+
+Created : 10-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<leaf>
+  <name> Pericardium </name>
+  <label> Pericardium </label>
+  <parent> ORGANS </parent>
+</leaf>
+
+End

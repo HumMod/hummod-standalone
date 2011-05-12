@@ -1,0 +1,51 @@
+HumMod / Pericardium-V0
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> Pericardium-V0 </name>
+
+<variables>
+
+<parm><name> K </name><val> 0.0035 </val></parm>
+<parm><name> NormalTMP </name><val> 1.0 </val></parm>
+
+<var><name> PressureGradient </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 500.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 5.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> PressureGradient </name>
+  <val> Pericardium-TMP.Pressure - NormalTMP </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> K * PressureGradient </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

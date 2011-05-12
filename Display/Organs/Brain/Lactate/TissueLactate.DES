@@ -1,0 +1,107 @@
+HumMod / TissueLactate
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 18.6 </high>
+   <wide> 30.0 </wide>
+   <title> Tissue Lactate </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [Lac-(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Lac- (mEq/L)] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Lac-(mEq/L)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> [Lac-(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Lac- (mG/dL)] </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Mass (mEq) </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 3 </col>
+  <name> Change </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> Made </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Made </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.6 </row><col> 1.0 </col>
+  <name> Used </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Used </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.6 </row><col> 1.0 </col>
+  <name> Outflux </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Outflux </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.0 </row><col> 1.0 </col>
+  <name> DC </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Diffusion Coefficient </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> [Lac-] = 1.0 mEq/L </line>
+  <line>  </line>
+  <line> Mass = 1.19 mEq </line>
+  <line> Outflux ~ 0 mEq/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

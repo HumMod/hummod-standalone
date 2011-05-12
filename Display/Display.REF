@@ -1,0 +1,32 @@
+HumMod / Display.REF
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+The tree is organized using parents, where the most senior parents are main
+menu selections.
+
+The senior parent menu names are compiled in. They are
+
+   PHYSIOLOGY
+   ORGANS
+   LIFESTYLE
+   CLINIC
+
+Display data folders are oganized following the structure of the pop down
+menus.
+
+The display of the first panel is determined by the first panel parsed. Hence,
+I include the Chart first to specify that it is displayed first. All other
+includes are not significant.
+
+Future plans call for a vertical, left-side window showing a collapsible tree
+of all panels. Mulpiple panels can be displayed at one time with tabs used to
+select the visible panel.
+
+End

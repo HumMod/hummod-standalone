@@ -1,0 +1,112 @@
+HumMod / AnesthesiaIVBrain
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVBrain </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<var>
+  <name> BrainFunc </name>
+</var>
+
+<var>
+  <name> TidalVol </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.60 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> BrainFunc </name>
+  <point><x> 0.000 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 0.015 </x><y> 0.4 </y><slope> -5.0 </slope></point>
+  <point><x> 0.045 </x><y> 0.2 </y><slope> -5.0 </slope></point>
+  <point><x> 0.060 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TidalVol </name>
+  <point><x> 0.000 </x><y> 1 </y><slope> 0 </slope></point>
+  <point><x> 0.045 </x><y> 0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / Brain-Size.Vol </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> [Tissue] * AnesthesiaIVSolubility.BrainK </val>
+</def>
+
+<def>
+  <name> BrainFunc </name>
+  <val> BrainFunc [ [Tissue] ] </val>
+</def>
+
+<def>
+  <name> TidalVol </name>
+  <val> TidalVol [ [Tissue] ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaIVBlood.[Blood] - [Vein] )
+    * Brain-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

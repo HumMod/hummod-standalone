@@ -1,0 +1,59 @@
+HumMod / Creatine.REF
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Creatine   C4H9N3O2 M.W. = 131.15
+Creatinine C4H7N3O M.W. = 113.12
+
+So, creatinine is creatine - H2O
+
+For creatinine, mG * 0.00884 = mMol
+
+So, 1 mG/mL = 8.84 mOsm/L.
+
+   J. Nutrition 106:371-381, 1976.
+
+   Whole-body creatine stores are 128 G.
+
+   Skeletal muscle has a creatine concentration
+   of 4 mG/G Wet Weight.
+
+   J. Biol. Chem. 168:493, 1947.
+   JCI 31:850-858, 1952.
+   J. Lab. Clin. Med. 62:579-590, 1963.
+
+   With a muscle mass of 27.7 kG, this makes
+   skeletal muscle creatine stores 111 G and
+   other stores 17 G.
+
+   Exit from muscle and conversion to creatinine
+   has a very steady rate constant of 0.0169
+   /Day.
+
+   J. Nutrition 106:371-381, 1976 (Again).
+
+   If we go from G to mG/Min, this rate constant
+   become 0.0169 * 1000 / 1440 or 0.012.  The
+   units are (mG/Min)/G.
+
+   Scale for change in M.W.
+
+     Creatinine = 113.12
+     Creatine = 131.15
+     Ratio = 0.86
+
+   Conversion constant is then 0.012 * 0.86
+   or 0.010.
+
+   With stores of 128 G, creatinine formation
+   rate is 1.28 mG/Min or 1.84 G/Day.  J. Nutrition
+   paper reports 1.87 G/Day.
+
+
+End

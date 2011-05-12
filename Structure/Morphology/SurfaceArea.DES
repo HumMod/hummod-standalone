@@ -1,0 +1,36 @@
+HumMod / SurfaceArea
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SurfaceArea </name>
+
+<variables>
+
+<var>
+  <name> Area </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Area </name>
+  <val>
+      0.007184
+    * ( Weight.Weight(kG) ^ 0.425 )
+    * ( Height.Height ^ 0.725 )
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

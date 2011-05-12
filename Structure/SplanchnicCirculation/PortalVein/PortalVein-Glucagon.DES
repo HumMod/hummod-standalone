@@ -1,0 +1,37 @@
+HumMod / PortalVein-Glucagon
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> PortalVein-Glucagon </name>
+
+<variables>
+
+<var><name> [Glucagon] </name></var>
+<var><name> [Increment] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<conditional><name> [Increment] </name>
+  <test> PortalVein.PlasmaFlow GT 0.0 </test>
+  <true> 1000.0 * ( GlucagonSecretion.Rate / PortalVein.PlasmaFlow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> [Glucagon] </name><val> GlucagonPool.[Glucagon] + [Increment] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

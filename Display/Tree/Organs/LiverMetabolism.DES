@@ -1,0 +1,107 @@
+HumMod / LiverMetabolism
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<branch>
+  <name> LiverMetabolism </name>
+  <label> Liver Metabolism </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> LiverMetabolism-PortalVein </name>
+  <label> Portal Vein </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<separatorbar><parent> LiverMetabolism </parent></separatorbar>
+
+<leaf>
+  <name> LiverMetabolism-AminoAcids </name>
+  <label> Amino Acids </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<branch>
+  <name> LM_FattyAcids </name>
+  <label> Fatty Acids </label>
+  <parent> LiverMetabolism </parent>
+</branch>
+
+<leaf>
+  <name> LM_FattyAcids-FABalance </name>
+  <label> FA Balance </label>
+  <parent> LM_FattyAcids </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> LM_FattyAcids-AminoAcidsToFA </name>
+  <label> Amino Acids To FA </label>
+  <parent> LM_FattyAcids </parent>
+</leaf>
+
+<leaf>
+  <name> LM_FattyAcids-GlucoseToFA </name>
+  <label> Glucose To FA </label>
+  <parent> LM_FattyAcids </parent>
+</leaf>
+-->
+
+<leaf>
+  <name> LiverMetabolism-Gluconeogenesis </name>
+  <label> Gluconeogenesis </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<leaf>
+  <name> LiverMetabolism-Glucose </name>
+  <label> Glucose </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> LiverMetabolism-Glycerol </name>
+  <label> Glycerol </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+-->
+
+<leaf>
+  <name> LiverMetabolism-Glycogen </name>
+  <label> Glycogen </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<leaf>
+  <name> LiverMetabolism-Ketoacids </name>
+  <label> Ketoacids </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> LiverMetabolism-Lactate </name>
+  <label> Lactate </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+-->
+
+<separatorbar>
+  <parent> LiverMetabolism </parent>
+</separatorbar>
+
+<leaf>
+  <name> LiverMetabolism-Insulin </name>
+  <label> Insulin </label>
+  <parent> LiverMetabolism </parent>
+</leaf>
+
+End

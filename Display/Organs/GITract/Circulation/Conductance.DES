@@ -1,0 +1,114 @@
+HumMod / Conductance
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 20.8 </high>
+   <wide> 30.0 </wide>
+   <title> Vascular Conductance </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Conductance </name>
+  <label> Conductance </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Conductance </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 10 </min><max> 15 </max><inc> 5 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> PO2Effect </name>
+    <label> pO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsEffect </name>
+    <label> Symps </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> A2Effect </name>
+    <label> [AII] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> ADHEffect </name>
+    <label> [ADH] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Viscosity.ConductanceEffect </name>
+    <label> Viscosity </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Anesthesia.VascularConductance </name>
+    <label> Anesthesia </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> GITract-Vasculature.Effect </name>
+    <label> Vascularity </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<repeatlist>
+  <name> GITract-Flow.BasicConductance </name>
+  <repeat><reps> 100 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> BasicConductance </name>
+  <listname> GITract-Flow.BasicConductance </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Vascular conductance is normally </line>
+  <line> 11.2 ( mL / Min ) / mmHg </line>
+  <line>  </line>
+  <line> Conductance effects are normally </line>
+  <line> 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

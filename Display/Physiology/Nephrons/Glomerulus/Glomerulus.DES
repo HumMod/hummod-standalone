@@ -1,0 +1,24 @@
+HumMod / Glomerulus
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Nephrons\Glomerulus\ ?>
+
+<?include Filtrate\Filtrate.DES ?>
+<?include Sodium\Sodium.DES ?>
+<?include Chloride\Chloride.DES ?>
+<?include Bicarbonate\Bicarbonate.DES ?>
+<?include Ketoacid\Ketoacid.DES ?>
+<?include Phosphate\Phosphate.DES ?>
+<?include Sulphate\Sulphate.DES ?>
+<?include Protein\Protein.DES ?>
+<?include Glucose\Glucose.DES ?>
+<?include Creatinine\Creatinine.DES ?>
+<?include Urea\Urea.DES ?>
+
+End

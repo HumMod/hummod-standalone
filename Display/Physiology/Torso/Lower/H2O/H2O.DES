@@ -1,0 +1,38 @@
+HumMod / H2O
+
+Created : 2010-04-18
+Last Modified : 2010-04-18
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> Torso-Lower-H2O </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> H2O </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Lower Torso - H2O </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Torso\Lower\H2O\ ?>
+
+<?include Balance.DES ?>
+<?include InterstitialPressure.DES ?>
+
+</panel>
+
+End

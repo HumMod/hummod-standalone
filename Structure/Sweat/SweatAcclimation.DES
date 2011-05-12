@@ -1,0 +1,63 @@
+HumMod / SweatAcclimation
+
+Created : 2010-05-15
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> SweatAcclimation </name>
+
+<variables>
+
+<parm><name> BasicEffect </name><val> 1.0 </val></parm>
+<var><name> TemperatureEffect </name></var>
+
+
+<parm><name> Tau </name><val> 6.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Effect </name>
+  <outputname> Effect </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> TemperatureEffect </name>
+  <point><x>  60 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+  <point><x>  85 </x><y> 1.0 </y><slope> 0.05 </slope></point>
+  <point><x> 100 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT ( Tau * 1440.0 ) </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> TemperatureEffect </name><val> TemperatureEffect [ HeatSkin.Temp(F) ] </val></def>
+<def><name> SteadyState </name><val> BasicEffect * TemperatureEffect </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+
+End

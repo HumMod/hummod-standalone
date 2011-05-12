@@ -1,0 +1,36 @@
+HumMod / MD_Na
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MD_Na </name>
+
+<variables>
+
+<var><name> [Na+(mEq/L)] </name></var>
+<var><name> Na+Flow </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<conditional>
+  <name> [Na+(mEq/L)] </name>
+  <test> LH_Na.[Na+] EQ UNDEFINED </test>
+  <true> 0.0 </true>
+  <false> LH_Na.[Na+] </false>
+</conditional>
+
+<def><name> Na+Flow </name><val> LH_Na.Outflow </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

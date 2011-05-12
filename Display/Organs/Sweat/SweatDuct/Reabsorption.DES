@@ -1,0 +1,120 @@
+HumMod / Reabsorption
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 19.6 </high>
+   <wide> 30.0 </wide>
+   <title> Reabsorption </title>
+
+<structurename> SweatDuct </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> H2OReab </name>
+  <label> H2O </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> NaReab </name>
+  <label> Na+ </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> KReab </name>
+  <label> K+ </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> ClReab </name>
+  <label> Cl- </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 1.0 </col>
+  <name> FractReab </name>
+  <label> Fraction </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showmap>
+  <row> 6.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 3 </leftmargin>
+
+  <xaxis>
+    <name> H2OInflow </name>
+    <label> H2O Inflow </label>
+    <scale>
+      <min> 0 </min><max> 50 </max><inc> 10 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <name> FractReab </name>
+    <label> F </label>
+    <scale>
+      <min> 0 </min><max> 1.0 </max>
+    </scale>
+  </yaxis>
+
+  <blockname> FractReab </blockname>
+</showmap>
+
+<showvalue>
+  <row> 14.0 </row><col> 1.0 </col>
+  <name> H2OInflow </name>
+  <label> H2O Inflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 15.0 </row><col> 1.0 </col>
+  <name> AldoEffect </name>
+  <label> Aldo Effect </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 16.4 </row><col> 1.0 </col>
+  <name> FractReabK </name>
+  <label> K </label>
+  <format><decimal> 3 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> FractReabBasic </name>
+  <firstval> 0.1 </firstval>
+  <repeat><reps> 9 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 17.8 </row><col> 1.0 </col>
+  <name> FractReabBasic </name>
+  <listname> FractReabBasic </listname>
+  <label> Basic Fraction </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

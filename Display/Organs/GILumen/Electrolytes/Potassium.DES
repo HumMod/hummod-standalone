@@ -1,0 +1,100 @@
+HumMod / Potassium
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 20.0 </row>
+   <col> 1.0 </col>
+   <high> 17.6 </high>
+   <wide> 30.0 </wide>
+   <title> Potassium </title>
+
+<structurename> GILumenPotassium </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 40 </min><max> 50 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Intake </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Dietary Intake </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> Absorption </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Absorption </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> [K+(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [K+] </label>
+</showvalue>
+
+<repeatlist>
+  <name> GILumenPotassium.Perm </name>
+  <repeat><reps> 50 </reps><stepsize>  0.0001 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 16.0 </row><col> 1.0 </col>
+  <name> Perm </name>
+  <listname> GILumenPotassium.Perm </listname>
+  <label> Perm </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> K+ mass is typically 25 mEq. [K+] is typically </line>
+  <line> 25 mEq/L. </line>
+  <line>  </line>
+  <line> Dietary intake and absorption are 0.049 mEq/Min. </line>
+  <line>  </line>
+  <line> Permeability is 0.002 /Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

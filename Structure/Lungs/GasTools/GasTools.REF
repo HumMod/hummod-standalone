@@ -1,0 +1,16 @@
+HumMod / GasTools
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The gas law being implemented here does volume
+conversion according to
+
+  V2 = V1 * (P2/P1) * (T1/T2)
+
+End

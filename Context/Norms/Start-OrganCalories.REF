@@ -1,0 +1,58 @@
+HumMod / Start-OrganCalories
+
+Created : 29-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+The normal amount of calories used (NormalCalsUsed) is the
+product of organ weight (Organ-Size.Mass) and the normal
+calories use per gram of organ weight (NormalCalsUsed((Cal/Min)/G)).
+
+Organ               Cals/Min  Weight   (Cals/Min)/G
+------------------  --------  -------  ------------
+Bone                  89.5      8560      0.0105
+Brain                238.6      1160      0.2057
+Fat                   29.8     16600      0.0018
+GITract              118.3      1270      0.0931
+Kidney               108.3       260
+  Basal               47.0                0.1808
+  Reabsorption        61.3
+LeftHeart            130.9       230
+  Basal               20.0                0.0870
+  Contraction        111.0
+Liver                187.9      1540      0.1220
+OtherTissue           49.7      3630      0.0137
+RespiratoryMuscle     29.9      3080
+   Basal               9.0                0.0029
+   Contraction        21.0
+   Shivering           0.0
+RightHeart            25.0        40
+  Basal                3.0                0.0750
+  Contraction         22.0
+SkeletalMuscle       141.4     27400
+   Basal             141.4                0.0052
+   Contraction         0.0
+   Shivering           0.0
+Skin                  39.7      2240      0.0177
+------------------  --------  --------  ------------
+Total               1189.0     66000
+
+  Blood                         5400
+  External H2O                  1000
+Fluids                          6400
+------------------  --------  --------  ------------
+Weight                         72400
+
+Several organs have a basal calorie consumption plus an additional calorie
+consumption as follows
+
+LeftHeart and RightHeart have basal use and contraction. SkeletalMuscle
+and RespiratoryMuscle have basal use, contraction and shivering. Kidney
+has basal use and reabsorption.
+
+
+
+End

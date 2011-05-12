@@ -1,0 +1,22 @@
+HumMod / AAPool
+
+Created : 07-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The circulating amino acid pool is typically 7500 mG. The
+volume of distribution is the ECFV or 15000 ml. This
+yields a concentration of 50 mG/dL.
+
+Pathways include
+
+# Uptake from GI tract lumen.
+# Hepatic uptake for gluconeogenesis.
+# Hepatic uptake for triglyceride synthesis.
+# Exchange with cell protein pool.
+# Pool degradation.
+
+End

@@ -1,0 +1,42 @@
+HumMod / DietThirst
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietThirst </name>
+
+<variables>
+
+<var><name> Rate(L/Day) </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Rate(L/Day) </name>
+  <point><x> 233 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x> 253 </x><y>  2.0 </y><slope> 0.2 </slope></point>
+  <point><x> 313 </x><y> 30.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate(L/Day) </name>
+  <val> Rate(L/Day) [ OsmBody.[Osm(mOsm/L)]-Osmoreceptors ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

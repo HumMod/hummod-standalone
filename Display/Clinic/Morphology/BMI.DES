@@ -1,0 +1,61 @@
+HumMod / BMI
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 11.2 </row>
+   <col> 32.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> BMI </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BMI.BMI </name>
+   <format><decimal> 1 </decimal></format>
+   <label> BMI </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Weight.Weight(kG) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Weight (kG) </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> Height.Height(M) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Height (M) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Originally called Quetelet's index. </line>
+  <line>  </line>
+  <line> Physique Sociale 2:92, 1869. </line>
+  <line>  </line>
+  <line> BMI = W / H^2 </line>
+  <line>  </line>
+  <line> BMI = Body Mass Index in kG/M^2 </line>
+  <line> W = Weight in kG </line>
+  <line> H = Height in M </line>
+  <line>  </line>
+  <line> For example </line>
+  <line>  </line>
+  <line> MI = 24.5 kG/M^2 </line>
+  <line> W = 77.5 kG </line>
+  <line> H = 1.78 M </line>
+</infobutton>
+
+</groupbox>
+
+End

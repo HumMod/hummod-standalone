@@ -1,0 +1,232 @@
+HumMod / HgbProps
+
+Created : 28-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HgbProps </name>
+
+<variables>
+
+<constant><name> HILLCONSTANT </name><val> 2.3 </val></constant>
+<constant><name> PO2SATURATED </name><val> 120 </val></constant>
+<constant><name> O2SOLUBILITY </name><val> 0.00003 </val></constant>
+
+<constant><name> TEMPK </name><val> 0.024 </val></constant>
+<constant><name> PHK </name><val> -0.40 </val></constant>
+<constant><name> PCO2K </name><val> 0.06 </val></constant>
+<constant><name> COK </name><val> -0.0067 </val></constant>
+
+<constant><name> TEMPNORM </name><val> 37.0 </val></constant>
+<constant><name> PHNORM </name><val> 7.40 </val></constant>
+<constant><name> CO2NORM </name><val> 40.0 </val></constant>
+<constant><name> CONORM </name><val> 0.0 </val></constant>
+
+<var><name> pO2 </name></var>
+<var><name> [O2] </name></var>
+
+<var><name> pH </name></var>
+<var><name> pCO2 </name></var>
+<var><name> Temp </name></var>
+
+<var><name> pHEffect </name></var>
+<var><name> pCO2Effect </name></var>
+<var><name> TempEffect </name></var>
+<var><name> COEffect </name></var>
+
+<parm><name> TempSens </name><val> 1.0 </val></parm>
+<parm><name> pHSens </name><val> 1.0 </val></parm>
+<parm><name> pCO2Sens </name><val> 1.0 </val></parm>
+<parm><name> COSens </name><val> 1.0 </val></parm>
+
+<var><name> Del </name></var>
+<var><name> Log </name></var>
+
+<parm><name> P50Basic </name><val> 26.6 </val></parm>
+<var><name> P50 </name></var>
+
+<var><name> ScaleForSat </name></var>
+<var><name> Sat </name></var>
+
+<var><name> S </name></var>
+<var><name> An </name></var>
+<var><name> A </name></var>
+<var><name> K </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Setup </name>
+
+<def>
+  <name> Del </name>
+  <val> Temp - TEMPNORM </val>
+</def>
+
+<def>
+  <name> TempEffect </name>
+  <val> 10 ^ ( TempSens * TEMPK * Del ) </val>
+</def>
+
+<def>
+  <name> Del </name>
+  <val> pH - PHNORM </val>
+</def>
+
+<def>
+  <name> pHEffect </name>
+  <val> 10 ^ ( pHSens * PHK * Del ) </val>
+</def>
+
+<conditional>
+  <name> Log </name>
+  <test> pCO2 LT 1.0 </test>
+  <true> 0.0 </true>
+  <false> LOG10 pCO2 </false>
+</conditional>
+
+<def>
+  <name> Del </name>
+  <val> Log - LOG10 CO2NORM </val>
+</def>
+
+<def>
+  <name> pCO2Effect </name>
+  <val> 10 ^ ( pCO2Sens * PCO2K * Del ) </val>
+</def>
+
+<def>
+  <name> Del </name>
+  <val> HgbConc.CarboxyPercent - CONORM </val>
+</def>
+
+<def>
+  <name> COEffect </name>
+  <val> 10 ^ ( COSens * COK * Del ) </val>
+</def>
+
+<def>
+  <name> P50 </name>
+  <val>
+      P50Basic
+    * TempEffect
+    * pHEffect
+    * pCO2Effect
+    * COEffect
+  </val>
+</def>
+
+<def>
+  <name> An </name>
+  <val> ( PO2SATURATED / P50 ) ^ HILLCONSTANT </val>
+</def>
+
+<def>
+  <name> ScaleForSat </name>
+  <val> ( 1.0 + An ) / An </val>
+</def>
+
+</block>
+
+<block><name> O2ToPO2 </name>
+
+<testcase>
+
+<case>
+<test> [O2] LE 0.0 </test>
+
+<def>
+  <name> pO2 </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> [O2] GT HgbConc.[O2Max] </test>
+
+<def>
+  <name> pO2 </name>
+  <val> PO2SATURATED + ( ( [O2] - HgbConc.[O2Max] ) / O2SOLUBILITY ) </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+
+<def>
+  <name> Sat </name>
+  <val> [O2] / HgbConc.[O2Max] </val>
+</def>
+
+<def>
+  <name> S </name>
+  <val> Sat / ScaleForSat </val>
+</def>
+
+<def>
+  <name> A </name>
+  <val> ( S / ( 1.0 - S ) ) ^ ( 1.0 / HILLCONSTANT ) </val>
+</def>
+
+<def>
+  <name> pO2 </name>
+  <val> A * P50 </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> PO2ToO2 </name>
+
+<testcase>
+
+<case>
+<test> pO2 LE 0.0 </test>
+
+<def>
+  <name> [O2] </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> pO2 GE PO2SATURATED </test>
+
+<def>
+  <name> [O2] </name>
+  <val> HgbConc.[O2Max] + ( ( pO2 - PO2SATURATED ) * O2SOLUBILITY ) </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+
+<def>
+  <name> An </name>
+  <val> ( pO2 / P50 ) ^ HILLCONSTANT </val>
+</def>
+
+<def>
+  <name> Sat </name>
+  <val> ScaleForSat * An / ( 1.0 + An ) </val>
+</def>
+
+<def>
+  <name> [O2] </name>
+  <val> Sat * HgbConc.[O2Max] </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

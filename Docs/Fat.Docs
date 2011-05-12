@@ -1,0 +1,30 @@
+Digital Human / Fat
+
+Created : 21-Oct-04
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\Fat\ ?>
+
+<?include Fat-Flow.docs ?>
+<?include Fat-Pressure.docs ?>
+<?include Fat-Size.docs ?>
+
+<?include Fat-CO2.docs ?>
+<?include Fat-Lactate.docs ?>
+<?include Fat-Ph.docs ?>
+
+<?include Fat-Fuel.docs ?>
+<?include Fat-Function.docs ?>
+<?include Fat-Metabolism.docs ?>
+<?include Fat-AlphaReceptors.docs ?>
+<?include Fat.docs ?>
+<?include Fat-Vasculature.docs ?>
+</docs>
+
+End

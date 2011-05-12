@@ -1,0 +1,105 @@
+HumMod / GILumenVolume
+
+Created : 05-Jun-06
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GILumenVolume </name>
+
+<variables>
+
+<var><name> InitialMass </name></var>
+<var><name> Mass(L) </name></var>
+
+<var><name> Intake </name></var>
+<var><name> Absorption </name></var>
+<var><name> Vomitus </name></var>
+<var><name> Diarrhea </name></var>
+
+<var><name> [OsmNa] </name></var>
+<var><name> [OsmK] </name></var>
+<var><name> [Osm] </name></var>
+
+<parm><name> [Fiber] </name><val> 0.043 </val></parm>
+
+<parm><name> Perm </name><val> 150.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> InitialMass </name><val> 1000.0 </val></def>
+<def><name> Mass </name><val> InitialMass </val></def>
+
+</block>
+
+<block><name> Conc </name>
+
+<def><name> Mass(L) </name><val> Mass / 1000.0 </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> [OsmNa] </name>
+  <val> 2 * GILumenSodium.[Na+] </val>
+</def>
+
+<def>
+  <name> [OsmK]  </name>
+  <val> 2 * GILumenPotassium.[K+] </val>
+</def>
+
+<def>
+  <name> [Osm] </name>
+  <val> [OsmNa] + [OsmK] + [Fiber] </val>
+</def>
+
+<def>
+  <name> Intake </name>
+  <val> DietIntakeH2O.Rate(mL/Min) </val>
+</def>
+
+<def>
+  <name> Absorption </name>
+  <val> Perm * ( OsmBody.[Osm]-CellWall - [Osm] ) </val>
+</def>
+
+<def>
+  <name> Vomitus </name>
+  <val> GILumenVomitus.H2OLoss </val>
+</def>
+
+<def>
+  <name> Diarrhea </name>
+  <val> GILumenDiarrhea.H2OLoss </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Intake - Absorption - Vomitus - Diarrhea </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

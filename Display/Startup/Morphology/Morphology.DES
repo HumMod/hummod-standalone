@@ -1,0 +1,44 @@
+HumMod / Morphology
+
+Created : 05-Feb-10
+Last Modified : 06-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-Morphology </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> WholeBody </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Startup - Morphology </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Morphology\ ?>
+
+<?include Gender.DES ?>
+<?include Age.DES ?>
+<?include Height.DES ?>
+
+<?include OtherMass.DES ?>
+<?include FatMass.DES ?>
+<?include MuscleMass.DES ?>
+
+</panel>
+
+End

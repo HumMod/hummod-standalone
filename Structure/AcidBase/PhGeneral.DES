@@ -1,0 +1,50 @@
+HumMod / PhGeneral
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PhGeneral </name>
+
+<variables>
+
+<var><name> pH </name></var>
+<var><name> pK </name></var>
+<var><name> pCO2 </name></var>
+<var><name> SID </name></var>
+<var><name> H+ </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> pCO2 LE 0.0 </test>
+<def><name> pH </name><val> pK + 3 </val></def>
+</case>
+
+<case>
+<test> ( SID / pCO2 ) LT 1e-3 </test>
+<def><name> pH </name><val> pK - 3 </val></def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def><name> pH </name><val> pK + LOG10 ( SID / pCO2 ) </val></def>
+</case>
+
+</testcase>
+
+<def><name> H+ </name><val> 10 ^ ( 9.0 - pH ) </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

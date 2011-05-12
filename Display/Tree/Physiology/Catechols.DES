@@ -1,0 +1,46 @@
+HumMod / Tree-Catechols
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Catechols </name>
+  <label> Catechols </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Catechols_Norepinephrine </name>
+  <label> Norepinephrine </label>
+  <parent> Catechols </parent>
+</leaf>
+
+<leaf>
+  <name> Catechols_Epinephrine </name>
+  <label> Epinephrine </label>
+  <parent> Catechols </parent>
+</leaf>
+
+<leaf>
+  <name> Catechols_AlphaPool </name>
+  <label> Alpha Pool </label>
+  <parent> Catechols </parent>
+</leaf>
+
+<leaf>
+  <name> Catechols_BetaPool </name>
+  <label> Beta Pool </label>
+  <parent> Catechols </parent>
+</leaf>
+
+<leaf>
+  <name> Catechols_Pheochromocytoma </name>
+  <label> Pheochromocytoma </label>
+  <parent> Catechols </parent>
+</leaf>
+
+End

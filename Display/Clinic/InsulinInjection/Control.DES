@@ -1,0 +1,87 @@
+HumMod / Control
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 12.0 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> InsulinInjection </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> InjectInsulinNow </blockname>
+  <label> Inject Insulin Now </label>
+</actionbutton>
+
+<showvalue>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> TotalInjections </name>
+  <format> <integer/> </format>
+  <label> Total Injections </label>
+</showvalue>
+
+<repeatlist>
+  <name> InsulinInjection.Dose </name>
+  <repeat><reps> 50 </reps><stepsize>  1.0 </stepsize></repeat>
+  <repeat><reps>  5 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.4 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Dose </name>
+  <listname> InsulinInjection.Dose </listname>
+  <label> Dose (U) </label>
+</slidebar>
+
+<maplist>
+  <name> InsulinInjection.Type </name>
+  <map><val> 0 </val><img> Normal (4 Hrs) </img></map>
+  <map><val> 1 </val><img> Intermediate (10 Hrs) </img></map>
+  <map><val> 2 </val><img> Long (18 Hrs) </img></map>
+</maplist>
+
+<label>
+  <row> 6.0 </row><col> 1.0 </col>
+  <text> Duration Of Action </text>
+</label>
+
+<radiobuttons>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> Type </name>
+  <listname> InsulinInjection.Type </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<showvalue>
+  <row> 10.4 </row><col> 1.0 </col>
+  <name> TotalDose </name>
+  <format> <integer/> </format>
+  <label> Total Dose </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Dose is specified in insulin units (U). </line>
+  <line> Injection site is S.C. A typical maintenance </line>
+  <line> dose is 40 U/Day. </line>
+  <line>  </line>
+  <line> 1 U = 1/24 mG </line>
+  <line>  </line>
+  <line> Molecular weight of insulin is 5754. </line>
+</infobutton>
+
+</groupbox>
+
+End

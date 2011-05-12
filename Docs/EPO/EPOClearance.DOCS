@@ -1,0 +1,127 @@
+QHP 2008 / EPO.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EPOClearance
+ </structurename>
+
+<vardoc>
+<name> EPOClearance.K </name>
+<topic> EPOClearance - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> EPOClearance.Rate </name>
+<topic> EPOClearance - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> EPOClearance.K </seealso>
+<seealso> EPOPool.Mass </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> EPOClearance - Overview </name>
+<label> Overview </label>
+<content>
+
+EPO Clearance
+Experimentation in rats examining the rapid 
+disappearance phase after a single injection of 
+EPO, suggests a distribution space of twice the 
+plasma volume or 40% of the extracellular fluid 
+volume(ECFV). If we assume an EPO mass is typically
+136U and a volume of distribution of 40% of the ECFV,
+this results in a typical plasma concentration of
+22 mU/ml.There is no evidence that clearance of EPO 
+is subject to any physiological regulation. Thus 
+changes in serum [EPO] result from changes in 
+production. Normal levels of [EPO] range from 10-30mU/mL.
+
+Review
+Eckardt KU & Kurtz A. 
+Regulation of erythropoietin production.
+Eur. J. Clin. Invest. 35 (suppl 3): 13-19, 2005
+
+Rat Data 
+Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+Human Data
+Miller ME, Cronkite EP, Garcia, JF Plasma levels of 
+immunoreactive erythropoietin after acute blood loss in man.
+Br J of Haematology 52:545-549, 1982
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPOPool - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+EPO mass is typically 136 U with a
+volume of distribution of 40% of
+ECFV, yielding a typical conc of 
+22 mU/ml.[EPO] levels range from 10-30mU/mL 
+in humans. Typical secretion and clearance
+rates are 0.75 U/Min.
+
+Plasma Levels in Humans
+1.Milledge JS, Cotes, PM Serum erythropoietin in humans 
+at high altitude and its relation to plasma renin.
+J Appl Physiology 59: 360-364, 1985
+
+2.Miller ME, Cronkite EP, Garcia, JF
+Plasma levels of immunoreactive erythropoietin
+after acute blood loss in man.
+Brit. J. Haematology 52: 545-549, 1982
+
+3.Kokot M, Kokot F, Franek E, Wiecek A, Nowicki M, Dulawa J
+Effect of Isobaric hyperoxemia on erythropoietin secretion
+in hypertensive patients.
+Hypertension 24: 486-490, 1994
+
+4.Koeffler HP, Goldwasser E
+Erythropoietin radioimmunoassay in evaluating patients 
+with polycythemia. Ann Int Med 94: 44-47, 1981
+
+Plasma Levels in Rats
+1.Cahan C, Heokje PL, Goldwasser E, Decker MJ, Strohl KP
+Assessing the characteristic between length of hypoxic 
+exposure and serum erythropoietin levels.
+Am J Physiol 258: R1016 - R1021, 1990
+ 
+2.Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Mass U
+Plasma Concentration  mU/ml
+Fluxes  U/min
+
+</content>
+</topicdoc>
+
+
+
+End

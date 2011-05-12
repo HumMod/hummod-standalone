@@ -1,0 +1,61 @@
+HumMod / MedullaNa
+
+Created : 11-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MedullaNa </name>
+
+<variables>
+
+<var><name> [Na+] </name></var>
+<var><name> [Na+(mEq/L)] </name></var>
+<var><name> Osmolarity </name></var>
+<var><name> Washup </name></var>
+
+<parm><name> CCEfficiency </name><val> 97.0 </val></parm>
+<var><name> CCK </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 13.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.13 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Parms </name>
+
+<def><name> CCK </name><val> 1.0 - ( CCEfficiency / 100.0 ) </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [Na+] </name><val> Mass / Medulla.Volume </val></def>
+<def><name> [Na+(mEq/L)] </name><val> 1000.0 * [Na+] </val></def>
+<def><name> Osmolarity </name><val> 2.0 * [Na+(mEq/L)] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Washup </name><val> CCK * [Na+] * VasaRecta.Outflow </val></def>
+<def><name> Change </name><val> CD_Na.Reab - Washup </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,98 @@
+HumMod / Hydrolysis
+
+Created : 2010-06-03
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 1.0 </col>
+   <high> 21.0 </high>
+   <wide> 30.0 </wide>
+   <title> Hydrolysis </title>
+
+<structurename> TriglycerideHydrolysis </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 200 </max><inc> 100 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> TriglycerideEffect </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Triglyceride Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 10.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> TriglyceridePool.[Triglyceride(mG/dL)] </name>
+    <label> [Triglyceride] </label>
+    <scale><min> 0 </min><max> 200 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 3 </max></scale>
+  </yaxis>
+
+  <curvename> TriglycerideEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 17.8 </row><col> 1.0 </col>
+  <name> TriglyceridePool.[Triglyceride(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Triglyceride (mG/dL)] </label>
+</showvalue>
+
+<repeatlist>
+  <name> Basic </name>
+  <repeat><reps> 200 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> Basic </name>
+  <listname> Basic </listname>
+  <label> Basic </label>
+</slidebar>
+
+
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

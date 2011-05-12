@@ -1,0 +1,23 @@
+HumMod / RBCVol.REF
+
+Created : 2010-04-22
+Last Modified : 2010-04-22
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+
+The integral here is red cell volume. Red cell
+water and solids are calculated as a fraction
+of the volume.
+
+For hemorrhage and transfusion, we use red cell
+flow rate for red cell volume. The red cell water
+and solids are implicitly correct.
+
+For heat movement in hemorrhage and transfusion,
+we use the total blood flow rate.
+
+We use the plasma flow rate for plasma mass
+balance.
+
+End

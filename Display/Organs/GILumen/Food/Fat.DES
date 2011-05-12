@@ -1,0 +1,100 @@
+HumMod / Fat
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 16.8 </high>
+   <wide> 30.0 </wide>
+   <title> Fat </title>
+
+<structurename> GILumenFat </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 3000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Intake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Dietary Intake </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> Absorption </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Absorption </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> [Fat] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> [Fat] </label>
+</showvalue>
+
+<repeatlist>
+  <name> GILumenFat.Perm </name>
+  <repeat><reps> 10 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 15.0 </row><col> 1.0 </col>
+  <name> Perm </name>
+  <listname> GILumenFat.Perm </listname>
+  <label> Perm </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Fat mass is typically 1990 mG. [Fat] </line>
+  <line> is typically 3.80 mG/mL. </line>
+  <line>  </line>
+  <line> Dietary intake and absorption are 60 mG/Min. </line>
+  <line>  </line>
+  <line> Permeability is 0.03 /Min </line>
+</infobutton>
+
+</groupbox>
+
+End

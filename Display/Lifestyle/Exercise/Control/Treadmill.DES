@@ -1,0 +1,151 @@
+HumMod / Treadmill
+
+Created : 10-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 15.0 </row>
+   <col> 32.0 </col>
+   <high> 19.8 </high>
+   <wide> 30.0 </wide>
+   <title> Treadmill </title>
+
+<structurename> Exercise-Treadmill </structurename>
+
+<maplist><name> Exercise-Treadmill.RunOrWalk </name>
+  <map><val> 0 </val><img> Run </img></map>
+  <map><val> 1 </val><img> Walk </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> RunOrWalk </name>
+  <listname> Exercise-Treadmill.RunOrWalk </listname>
+  <nolabel/>
+</radiobuttons>
+
+<repeatlist>
+  <name> Exercise-Treadmill.Speed(MPH) </name>
+  <repeat><reps> 30 </reps><stepsize>  0.5 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Speed(MPH) </name>
+  <listname> Exercise-Treadmill.Speed(MPH) </listname>
+  <label> Speed (MPH) </label>
+</slidebar>
+
+<showvalue>
+  <row> 4.2 </row><col> 3.0 </col>
+  <name> Speed(KPH) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Speed (KPH) </label>
+</showvalue>
+
+<repeatlist>
+  <name> Exercise-Treadmill.Grade(%) </name>
+  <repeat><reps> 15 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> Grade(%) </name>
+  <listname> Exercise-Treadmill.Grade(%) </listname>
+  <label> Grade (%) </label>
+</slidebar>
+
+<showvalue>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> Power(W) </name>
+  <format> <integer/> </format>
+  <label> Power (Watts) </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.0 </row><col> 3.0 </col>
+  <name> Power(kPM/Min) </name>
+  <format> <integer/> </format>
+  <label> Power (kP M/Min) </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 1.0 </col>
+  <name> StepsPerMinute </name>
+  <format> <integer/> </format>
+  <label> Steps / Minute </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> ElapsedTime </name>
+   <format><timer/></format>
+   <label> Elapsed Time </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.0 </row><col> 1.0 </col>
+  <name> DistanceTraveled(Feet) </name>
+  <format> <integer/> <fieldwidth> 6 </fieldwidth> </format>
+  <label> Distance Traveled (Feet) </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.0 </row><col> 3.0 </col>
+  <name> Distance(Miles) </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Distance (Miles) </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.0 </row><col> 3.0 </col>
+  <name> Distance(kM) </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Distance (kM) </label>
+</showvalue>
+
+<actionbutton>
+   <row> 15.2 </row><col> 1.0 </col>
+   <blockname> ResetTime&Distance </blockname>
+   <label> Reset Time & Distance </label>
+</actionbutton>
+
+<repeatlist>
+  <name> Exercise-Treadmill.Efficiency(%) </name>
+  <firstval> 1 </firstval>
+  <repeat><reps> 99 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 16.8 </row><col> 1.0 </col>
+  <name> Efficiency(%) </name>
+  <listname> Exercise-Treadmill.Efficiency(%) </listname>
+  <label> Efficiency (%) </label>
+  <fieldwidth> 5 </fieldwidth>
+</slidebar>
+
+<showvalue>
+   <row> 18.2 </row><col> 1.0 </col>
+   <name> TotalWatts </name>
+   <format> <integer/> </format>
+   <label> Total Watts </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Select treadmill in exercise control </line>
+  <line> to start the treadmill. </line>
+  <line> </line>
+  <line> kP M/Min is the very British </line>
+  <line> kiloPound-Meters/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

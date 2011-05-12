@@ -1,0 +1,151 @@
+HumMod / Conductance
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 25.8 </high>
+   <wide> 30.0 </wide>
+   <title> Vascular Conductance </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Conductance </name>
+  <label> Total Conductance </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Conductance </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> SmallVesselConductance </name>
+  <label> Small Vessel Conductance </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showbargraph>
+  <row> 11.0 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> PO2Effect </name>
+    <label> pO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsEffect </name>
+    <label> Symps </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> ADHEffect </name>
+    <label> [ADH] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Viscosity.ConductanceEffect </name>
+    <label> Viscosity </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Anesthesia.VascularConductance </name>
+    <label> Anesthesia </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> OtherTissue-Vasculature.Effect </name>
+    <label> Vascularity </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> MetabolismEffect </name>
+    <label> Metabolism </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> RightHeart-Infarction.Effect </name>
+    <label> Infarction </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<repeatlist>
+  <name> RightHeart-Flow.SmallVesselBasicConductance </name>
+  <repeat><reps> 100 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 21.4 </row><col> 1.0 </col>
+  <name> SmallVesselBasicConductance </name>
+  <listname> RightHeart-Flow.SmallVesselBasicConductance </listname>
+  <label> Basic </label>
+</slidebar>
+
+<showvalue>
+  <row> 22.8 </row><col> 1.0 </col>
+  <name> LargeVesselConductance </name>
+  <label> Large Vessel Conductance </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> RightHeart-Flow.LargeVesselBasicConductance </name>
+  <repeat><reps> 100 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 24.2 </row><col> 1.0 </col>
+  <name> LargeVesselBasicConductance </name>
+  <listname> RightHeart-Flow.LargeVesselBasicConductance </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Total vascular conductance is typically </line>
+  <line> 0.4 ( mL / Min ) / mmHg </line>
+  <line>  </line>
+  <line> Small vessel conductance is ~ 0.4. </line>
+  <line>  </line>
+  <line> Large vessel conductance is ~ 10.0 </line>
+  <line>  </line>
+  <line> Conductances are connected in series. </line>
+  <line>  </line>
+  <line> Conductance effects are normally </line>
+  <line> 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,98 @@
+HumMod / RelativeHumidity
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RelativeHumidity </name>
+
+<variables>
+
+<parm><name> Percent </name><val> 30.0 </val></parm>
+<var><name> VaporPressure </name></var>
+<var><name> [H2O] </name></var>
+<var><name> SaturationPressure </name></var>
+<var><name> DewPoint </name></var>
+<constant><name> A </name><val> 18.6686 </val></constant>
+<constant><name> B </name><val> 4030.183 </val></constant>
+<constant><name> C </name><val> 235.0 </val></constant>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<testcase>
+
+<case>
+<test> AmbientTemperature.Temp(C) GT 100.0 </test>
+<def>
+  <name> SaturationPressure </name>
+  <val> 760.0 </val>
+</def>
+</case>
+
+<case>
+<test> AmbientTemperature.Temp(C) LT -273.15 </test>
+<def>
+  <name> SaturationPressure </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> SaturationPressure </name>
+  <val> EXP ( A - ( B / ( AmbientTemperature.Temp(C) + C ) ) ) </val>
+</def>
+</case>
+
+</testcase>
+
+<def>
+  <name> VaporPressure </name>
+  <val> 0.01 * Percent * SaturationPressure </val>
+</def>
+
+<def>
+  <name> [H2O] </name>
+  <val> VaporPressure / Barometer.Pressure </val>
+</def>
+
+<testcase>
+
+<case>
+<test> VaporPressure GT 760.0 </test>
+<def>
+  <name> DewPoint </name>
+  <val> 100.0 </val>
+</def>
+</case>
+
+<case>
+<test> VaporPressure LT 0.0 </test>
+<def>
+  <name> DewPoint </name>
+  <val> -273.15 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> DewPoint </name>
+  <val> B / ( A - LOG ( VaporPressure ) ) - C </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+</definitions>
+</structure>
+
+End

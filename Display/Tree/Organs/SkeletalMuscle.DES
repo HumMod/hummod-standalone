@@ -1,0 +1,156 @@
+HumMod / SkeletalMuscle
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> SkeletalMuscle </name>
+  <label> Skeletal Muscle </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> SkeletalMuscle-Circulation </name>
+  <label> Circulation </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Conductance </name>
+  <label> Conductance </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> SkeletalMuscle-Effluents </name>
+  <label> Effluent Blood </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Heat </name>
+  <label> Heat </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+-->
+
+<branch>
+  <name> SkeletalMuscle-Fuel </name>
+  <label> Fuel </label>
+  <parent> SkeletalMuscle </parent>
+</branch>
+
+<leaf>
+  <name> SkeletalMuscleFuel-Selection </name>
+  <label> Selection </label>
+  <parent> SkeletalMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscleFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> SkeletalMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscleFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> SkeletalMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscleFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> SkeletalMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Glycogen </name>
+  <label> Glycogen </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Insulin </name>
+  <label> Insulin </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-CO2 </name>
+  <label> CO2 </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Lactate </name>
+  <label> Lactate </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Nerves </name>
+  <label> Nerves </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Function </name>
+  <label> Function </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Structure </name>
+  <label> Structure </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Size </name>
+  <label> Size </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-ContractileProtein </name>
+  <label> Contractile Protein </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-MusclePumping </name>
+  <label> Muscle Pumping </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> SkeletalMuscle-Metaboreflex </name>
+  <label> Metaboreflex </label>
+  <parent> SkeletalMuscle </parent>
+</leaf>
+
+End

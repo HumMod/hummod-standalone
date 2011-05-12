@@ -1,0 +1,164 @@
+HumMod / WholeBody
+
+Created : 31-May-05
+Last Modified : 2010-04-18
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 26.2 </high>
+   <wide> 30.0 </wide>
+   <title> WholeBody </title>
+
+<structurename> BodyH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TotalVol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total H2O </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalVol(L) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 40 </min><max> 50 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3.0 </col>
+   <name> GILumenVolume.Intake </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Dietary Intake </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3.0 </col>
+   <name> MetabolicH2O.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Metabolism </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 3.0 </col>
+   <name> IVDrip.H2ORate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> IV Drip </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.2 </row><col> 3.0 </col>
+   <name> Transfusion.PlasmaRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Transfusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.6 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.6 </row><col> 3.0 </col>
+   <name> CD_H2O.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Urine </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.6 </row><col> 3.0 </col>
+   <name> Hemorrhage.PlasmaRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Hemorrhage </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.6 </row><col> 3.0 </col>
+   <name> DialyzerActivity.UltrafiltrationRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Dialysis </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.6 </row><col> 3.0 </col>
+   <name> SweatDuct.H2OOutflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sweat </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.6 </row><col> 3.0 </col>
+   <name> HeatInsensibleSkin.H2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Insensible Skin Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 22.6 </row><col> 3.0 </col>
+   <name> HeatInsensibleLung.H2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Insensible Lung Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 23.6 </row><col> 3.0 </col>
+   <name> GILumenVomitus.H2OLoss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Vomitus </label>
+</showvalue>
+
+<showvalue>
+   <row> 24.6 </row><col> 3.0 </col>
+   <name> GILumenDiarrhea.H2OLoss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Diarrhea </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are L and mL/Min. </line>
+  <line> Typical values are </line>
+  <line>  </line>
+  <line> Total Body H2O = 41.8 L </line>
+  <line> Change ~ 0 mL/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

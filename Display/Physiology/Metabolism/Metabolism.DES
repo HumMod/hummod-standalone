@@ -1,0 +1,26 @@
+HumMod / Metabolism
+
+Created : 24-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\Metabolism\ ?>
+
+<?include AminoAcids\AminoAcids.DES ?>
+<?include Creatine\Creatine.DES ?>
+<?include Creatinine\Creatinine.DES ?>
+<?include FattyAcids\FattyAcids.DES ?>
+<?include FuelUse\FuelUse.DES ?>
+<?include Glucose\Glucose.DES ?>
+<?include Glycerol\Glycerol.DES ?>
+<?include Ketoacids\Ketoacids.DES ?>
+<?include RespiratoryQuotient\RespiratoryQuotient.DES ?>
+<?include Summary\Summary.DES ?>
+<?include Triglycerides\Triglycerides.DES ?>
+<?include Urea\Urea.DES ?>
+
+End

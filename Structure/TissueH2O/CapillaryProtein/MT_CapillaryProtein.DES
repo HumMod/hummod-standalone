@@ -1,0 +1,34 @@
+HumMod / MT_CapillaryProtein
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> MT_CapillaryProtein </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> Gradient </name></var>
+
+<parm><name> Perm </name><val> 0.44 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Gradient </name><val> PlasmaProtein.[Protein] - MT_InterstitialProtein.[Protein] </val></def>
+<def><name> Rate </name><val> Perm * Gradient </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,118 @@
+HumMod / GILumenTemperature
+
+Created : 05-Jun-06
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GILumenTemperature </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Intake </name></var>
+<var><name> Absorption </name></var>
+<var><name> Vomitus </name></var>
+<var><name> Diarrhea </name></var>
+
+<var><name> DegK </name></var>
+<var><name> DegC </name></var>
+<var><name> DegF </name></var>
+
+<var><name> Conduction </name></var>
+<var><name> Convection </name></var>
+
+<parm><name> Cond </name><val> 0.01 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 310.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.6 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Conc </name>
+
+<def>
+  <name> DegK </name>
+  <val> 1000.0 * Mass / GILumenVolume.Mass </val>
+</def>
+
+<def>
+  <name> DegC </name>
+  <val> DegK - 273.15 </val>
+</def>
+
+<def>
+  <name> DegF </name>
+  <val> ( 9 / 5 ) * DegC + 32 </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Conduction </name>
+  <val> Cond * ( DegK - HeatCore.Temp(K) ) </val>
+</def>
+
+<def>
+  <name> Convection </name>
+  <val> SpecificHeat.Water(kCal/G) * DegK * GILumenVolume.Absorption </val>
+</def>
+
+<def>
+  <name> Intake </name>
+  <val> SpecificHeat.Water(kCal/G) * DietGoalH2O.DegK * GILumenVolume.Intake </val>
+</def>
+
+<def>
+  <name> Absorption </name>
+  <val> Conduction + Convection </val>
+</def>
+
+<def>
+  <name> Vomitus </name>
+  <val> GILumenVomitus.HeatLoss </val>
+</def>
+
+<def>
+  <name> Diarrhea </name>
+  <val> GILumenDiarrhea.HeatLoss </val>
+</def>
+
+<def>
+  <name> Gain </name>
+  <val> Intake </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> Absorption + Vomitus + Diarrhea </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

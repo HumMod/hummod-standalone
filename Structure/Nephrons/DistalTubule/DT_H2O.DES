@@ -1,0 +1,81 @@
+HumMod / DT_H2O
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DT_H2O </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> FractReab </name>
+</var>
+
+<var>
+  <name> Reab </name>
+</var>
+
+<var>
+  <name> ADHEffect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> ADHOnOutflow </name>
+  <point><x>  0.0 </x><y> 0.060 </y><slope> 0 </slope></point>
+  <point><x>  2.0 </x><y> 0.110 </y><slope> 0.02 </slope></point>
+  <point><x> 10.0 </x><y> 0.160 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Inflow </name>
+  <val> LH_H2O.Outflow </val>
+</def>
+
+<def>
+  <name> ADHEffect </name>
+  <val> ADHOnOutflow [ NephronADH.[ADH] ] </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> DT_Na.Outflow / ADHEffect </val>
+</def>
+
+<def>
+  <name> Reab </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+<conditional>
+  <name> FractReab </name>
+  <test> Inflow GT 0.0 </test>
+  <true> ( Reab / Inflow ) MIN 1.0 </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

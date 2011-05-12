@@ -1,0 +1,43 @@
+HumMod / RespiratoryCenter-Radiation
+
+Created : 07-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RespiratoryCenter-Radiation </name>
+
+<variables>
+
+<var><name> TotalDrive </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> TotalDrive </name>
+  <point><x>    0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>  500 </x><y> 3.5 </y><slope> 0.003 </slope></point>
+  <point><x> 1000 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> TotalDrive </name>
+  <val> TotalDrive [ Exercise-Metabolism.TotalWatts ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

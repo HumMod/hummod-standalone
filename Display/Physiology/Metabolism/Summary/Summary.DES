@@ -1,0 +1,41 @@
+HumMod / Summary
+
+Created : 29-Apr-05
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> Metabolism_Summary </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Metabolism Summary </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Metabolism\Summary\ ?>
+
+<?include MetabolicRate.DES ?>
+<?include BMR.DES ?>
+<?include Balance.DES ?>
+
+<?include OrganCalories.DES ?>
+
+</panel>
+
+End

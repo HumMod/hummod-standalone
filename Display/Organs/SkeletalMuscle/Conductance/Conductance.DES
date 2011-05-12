@@ -1,0 +1,39 @@
+HumMod / Conductance
+
+Created : 03-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> SkeletalMuscle-Conductance </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> SkeletalMuscle </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Skeletal Muscle - Conductance </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\SkeletalMuscle\Conductance\ ?>
+
+<?include MetabolicVasodilation.DES ?>
+<?include O2Vasodilation.DES ?>
+
+</panel>
+
+End

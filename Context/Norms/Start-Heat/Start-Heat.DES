@@ -1,0 +1,25 @@
+HumMod / Start-Heat DES
+
+Created : 14-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-Heat </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> HeatCore.Initialize </call>
+  <call> HeatSkin.Initialize </call>
+  <call> HeatSkeletalMuscle.Initialize </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,95 @@
+HumMod / Tension
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 1.0 </col>
+   <high> 16.8 </high>
+   <wide> 30.0 </wide>
+   <title> Smooth Muscle Tension </title>
+
+<structurename> Brain-Flow </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TensionEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Conductance Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Brain-Flow.TotalTension </name>
+    <label> Tension </label>
+    <scale>
+      <min> 0 </min><max> 2</max>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Cond </label>
+    <scale>
+      <min> 0 </min><max> 3 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+
+  <curvename> TensionOnConductance </curvename>
+</showcurve>
+
+
+<showvalue>
+   <row> 10.2 </row><col> 1.0 </col>
+   <name> TotalTension </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Total Tension </label>
+</showvalue>
+
+<showbargraph>
+  <row> 11.2 </row><col> 1.0 </col><high> 5 </high><wide> 28 </wide>
+  <leftmargin> 9 </leftmargin>
+  <title> Tension </title>
+  <showinitialvalues/>
+  <bar>
+    <name> PO2OnTension </name>
+    <label> pO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> PCO2OnTension </name>
+    <label> pCO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Anesthesia.VascularConductance </name>
+    <label> Anesthesia </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Conductance effect is typically 1.0 </line>
+  <line> x Normal. </line>
+  <line>  </line>
+  <line> Total tension is typically 1.0 x Normal. </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

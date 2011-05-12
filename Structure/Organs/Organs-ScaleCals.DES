@@ -1,0 +1,35 @@
+HumMod / Organs-ScaleCals
+
+Created : 29-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-ScaleCals </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> Bone-Metabolism.ScaleCals </call>
+  <call> Brain-Metabolism.ScaleCals </call>
+  <call> Fat-Metabolism.ScaleCals </call>
+  <call> GITract-Metabolism.ScaleCals </call>
+  <call> Kidney-Metabolism.ScaleCals </call>
+  <call> LeftHeart-Metabolism.ScaleCals </call>
+  <call> Liver-Metabolism.ScaleCals </call>
+  <call> OtherTissue-Metabolism.ScaleCals </call>
+  <call> RespiratoryMuscle-Metabolism.ScaleCals </call>
+  <call> RightHeart-Metabolism.ScaleCals </call>
+  <call> SkeletalMuscle-Metabolism.ScaleCals </call>
+  <call> Skin-Metabolism.ScaleCals </call>
+  
+</block>
+
+</definitions>
+</structure>
+
+End

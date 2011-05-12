@@ -1,0 +1,43 @@
+HumMod / Circulation
+
+Created : 18-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> RightHeart-Circulation </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> RightHeart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Right Heart - Circulation </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<structurename> RightHeart-Flow </structurename>
+
+<?path Display\Organs\RightHeart\Circulation\ ?>
+
+<?include BloodFlow.DES ?>
+<?include Pump.DES ?>
+
+<?include Conductance.DES ?>
+
+</panel>
+
+End

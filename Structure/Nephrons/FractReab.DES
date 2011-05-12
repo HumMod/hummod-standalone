@@ -1,0 +1,75 @@
+HumMod / FractReab
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> FractReab </name>
+
+<variables>
+
+<var>
+  <name> Normal </name>
+</var>
+
+<var>
+  <name> Effects </name>
+</var>
+
+<var>
+  <name> Fract </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> GetFract </name>
+
+<testcase>
+
+  <case>
+  <test> Normal LE 0.0 </test>
+
+    <def>
+      <name> Fract </name>
+      <val> 0.0 </val>
+    </def>
+  </case>
+
+  <case>
+  <test> Normal GE 1.0 </test>
+
+    <def>
+      <name> Fract </name>
+      <val> 1.0 </val>
+    </def>
+  </case>
+
+  <case>
+  <test> Effects LE 0.0 </test>
+
+    <def>
+      <name> Fract </name>
+      <val> 0.0 </val>
+    </def>
+  </case>
+
+  <case>
+  <test> TRUE </test>
+
+    <def>
+      <name> Fract </name>
+      <val> Normal ^ ( INVERT Effects ) </val>
+    </def>
+  </case>
+
+</testcase>
+
+</block>
+</definitions>
+</structure>
+
+End

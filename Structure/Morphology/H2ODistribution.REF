@@ -1,0 +1,179 @@
+HumMod / H2ODistribution
+
+Created : 02-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+I'll scale to a 77.5 kG (171 Lbs) male.
+
+There are 12 organs. Additional weight is found in blood
+volume.
+
+         % BW  Wt(G)   H2O   Solid   Vol
+        -----  -----  -----  -----  -----
+Bone    14.29  11075   3508   7566   7838
+Brain    2.00   1550   1200    350   1499
+Fat     21.42  16601   2490  14110  17766
+GITract  2.11   1635   1107    528   1559
+Kidney   0.44    341    259     82    329
+LHeart   0.39    302    218     85    290
+Liver    2.57   1992   1414    578   1908
+Other    6.00   4650   3148   1502   4432
+RespMus  5.20   4030   3023   1008   3884
+RHeart   0.08     62     45     17     59
+SkelMus 34.80  26970  20228   6743  25990
+Skin     3.70   2868   1743   1118   2571
+
+Blood    7.00   5425   4615    810   5425
+        -----  -----  -----  -----  -----
+Total  100.00  77500  43003  34497  73450
+
+Other includes lungs, esophagus, spinal cord, adrenals,
+thyroid, miscellaneous tissues and fluids.
+
+The density of this composition is 1.055. For organs
+where no specfic information is available, the H2O
+fraction is 0.677, the solid fraction is 0.323 and the
+solid density is 1.17.
+
+SKELETON
+
+Skeleton is 59% bone and 41% marrow. By weight, the bone
+is 88% bone mineral with a density of 2.3. The marrow
+is 40% solids with a density of 1.00.
+
+                      ---- Solids ----
+         Wt(G) H2O(G) Wt(G) Dens  Vol   Vol
+         ----- ------ ----- ---- ----- -----
+Bone      6534   784   5750 2.30  2500  3284
+Marrow    4541  2724   1816 1.05  1730  4454
+         ----- ------ ----- ---- ----- -----
+Skeleton 11075  3508   7566       4230  7738
+
+The density of whole skeleton is 1.43.
+
+FAT
+
+Fat is mostly lipid deposits with a density of 0.905.
+There are also some non-lipid solids with a density of
+1.38. The H2O fraction is 0.15, the lipid fraction is
+0.80 and the other solids fraction is 0.05.
+
+                 -- Lipid -- -Non-Lipid- 
+    Wt(G) H2O(G) Wt(G)  Vol  Wt(G)  Vol   Vol
+    ----- ------ ----- ----- ----- ----- -----
+Fat 16601  2490  13280 14674   830   601 17766
+
+Density is 0.93.
+
+SKIN
+
+The ICRP book has skin at 3.71% of body weight.
+
+Some other references have a larger percent, but they
+probably got some of the fatty subdermis. This should
+be in adipose tissue.
+
+  J.Biol.Chem. 203:359, 1953.
+
+Skin is 61% H2O with a solid density of 1.36.
+
+     Wt(G)  H20  Solid  Vol
+     ----- ----- ----- -----
+Skin  2868  1749  1118  2571
+
+Skin keeps most of its H2O in the interstitium.
+Interstitial fraction is 0.87 while organ fraction
+is 0.13. Skin has a density of 1.12.
+
+SKELETAL MUSCLE
+
+Skeletal Muscle is 75% H2O.
+
+  Harmer. JAP 89:1793, 2000.
+  Sullivan. JAP 77:2194, 1994.
+
+The size of muscle interstitium needs more work.
+Published values seem too small.
+
+Peripheral H2O is IFV plus organ H2O. This is total
+body H2O minus plasma volume and red cell H2O.
+
+Total protein is 17.2% of wt and contractile protein
+is 12.4% of wt.
+
+BRAIN
+
+Wt is 2107 G. H2O is 77.4. Spinal cord is 27 G and is
+now in other tissues.
+
+HEART
+
+Wt. is 332G. H2O is 72%.
+
+Total protein is 16.5% of wt. Contractile protein is
+probably the same as skeletal muscle.
+
+Total heart volume in diastole is reported to be
+843 mL, but this seems too large. I'll look into
+it. Suggested values are
+
+                   Right  Left  Total
+                   -----  ----  -----
+Tissue                62   302    364
+Atrial Blood          60    60    120
+Ventricular Blood    125   125    250
+                   -----  ----  -----
+Total                             734
+
+LIVER
+
+Wt is 1830G. H2O is 71%. IFV may be 27.5% of
+liver volume.
+
+KIDNEY
+
+Wt is 310 G. H2O is 76%. Density is 1.050.
+
+IFV AND ORGAN H2O
+
+  IFV            12.0
+  Organ H2O      26.4
+                 ----
+  Peripheral H2O 38.4
+
+         H2O    IFV   Organ
+        -----  -----  -----
+Bone     3508   1053   2456
+Brain    1200    216    984
+Fat      2490    747   1743
+GITract  1107    332    775
+Kidney    259     78    181
+LHeart    218     65    152
+Liver    1414    525    889
+Other    3148    944   2204
+RespMus  3023    846   2176
+RHeart     45     13     31
+SkelMus 20228   5664  14564
+Skin     1749   1522    227
+        -----  -----  -----
+Total   38388  12005  26383
+
+Fraction of peripheral H2O in IFV is variable. Default
+value is 0.3. Fraction H2O in organ is also variable.
+Default is 0.7.
+
+References.
+
+Physiological parameter values for PBPK models.
+International Life Sciences Institute and Risk Science
+Institute. 1994.
+
+Snyder, W.S., M.J. Cook, E.S. Nasset, L.R. Karhausen,
+G.P. Howells and I.H. Tipton. Report of the Task Group
+on Reference Man. ICRP Publication 23. Pergamon 1974.
+
+End

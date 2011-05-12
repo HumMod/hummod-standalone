@@ -1,0 +1,149 @@
+HumMod / GlomerulusFiltrate
+
+Created : 09-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlomerulusFiltrate </name>
+
+<variables>
+
+<var><name> GFRxNormal </name></var>
+<constant><name> GFRNORMAL </name><val> 125.0 </val></constant>
+<var><name> AnionAdjustment </name></var>
+<var><name> CationAdjustment </name></var>
+<var><name> KAdjustment </name></var>
+<var><name> Pressure </name></var>
+<var><name> FiltrationFraction </name></var>
+<var><name> EffCOP </name></var>
+<var><name> [EffProtein] </name></var>
+<var><name> PressureGradient </name></var>
+<parm><name> Perm </name><val> 20.0 </val></parm>
+<var><name> Kf </name></var>
+<var><name> PT_Pressure </name></var>
+<parm><name> PT_Conductance </name><val> 7.0 </val></parm>
+<parm><name> PelvisPressure </name><val> 0.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> GFR </name>
+  <startname> GFR </startname>
+  <initialval> 125.0 </initialval>
+  <endname> EndGFR </endname>
+  <errorlim> 1.25 </errorlim>
+  <searchmin> 0.0 </searchmin>
+  <searchmaxname> SearchMax </searchmaxname>
+</impliciteq>
+
+</equations>
+
+<definitions>
+
+<block><name> AdjustIons </name>
+
+<def><name> KAdjustment </name>
+  <val> ( BloodIons.Cations - BloodIons.AnionsLessProtein )  / ( BloodIons.Cations + BloodIons.AnionsLessProtein ) </val>
+</def>
+
+<def><name> AnionAdjustment </name><val> 1.0 + KAdjustment </val></def>
+<def><name> CationAdjustment </name><val> 1.0 - KAdjustment </val></def>
+
+</block>
+
+<block><name> Calc </name>
+
+<if>
+  <test> Kidney-Flow.BloodFlow LE 0.0 </test>
+  <true>
+    <def><name> Pressure </name><val> ( Kidney-Pressure.ArtyPressure + Kidney-Pressure.VeinPressure ) / 2.0 </val></def>
+    <call> Failed </call>
+    <exitblock/>
+  </true>
+</if>
+
+<call> AdjustIons </call>
+
+<def><name> Pressure </name><val> Kidney-Pressure.VeinPressure + ( Kidney-Flow.BloodFlow  / Kidney-EfferentArtery.Conductance ) </val></def>
+<def><name> Kf </name><val> Kidney-NephronCount.Filtering(xNormal) * Perm </val></def>
+
+<def><name> SearchMax </name>
+  <val>
+    ( Kf * ( Pressure - PlasmaProtein.COP - PelvisPressure ) )
+    MIN
+    ( 0.8 * Kidney-Flow.PlasmaFlow )
+  </val>
+</def>
+
+<if>
+  <test> SearchMax LE 0.0 </test>
+  <true><call> Failed </call><exitblock/></true>
+</if>
+
+<implicitmath><name> GFR </name>
+
+<def><name> FiltrationFraction </name><val> GFR / Kidney-Flow.PlasmaFlow </val></def>
+<def><name> [EffProtein] </name><val> PlasmaProtein.[Protein] / ( 1.0 - FiltrationFraction ) </val></def>
+
+<copy><from> [EffProtein] </from><to> Colloids.[Prot] </to></copy>
+  <call> Colloids.GetPres </call>
+<copy><from> Colloids.Pres </from><to> EffCOP </to></copy>
+
+<def><name> PT_Pressure </name><val> PelvisPressure + ( GFR / PT_Conductance ) </val></def>
+<def><name> PressureGradient </name><val> Pressure - EffCOP - PT_Pressure </val></def>
+<def><name> EndGFR </name><val> Kf * PressureGradient </val></def>
+
+</implicitmath>
+
+<def><name> GFRxNormal </name><val> GFR / GFRNORMAL </val></def>
+
+<call> GlomerulusBicarbonate.Calc </call>
+<call> GlomerulusChloride.Calc </call>
+<call> GlomerulusCreatinine.Calc </call>
+<call> GlomerulusGlucose.Calc </call>
+<call> GlomerulusKetoacid.Calc </call>
+<call> GlomerulusPhosphate.Calc </call>
+<call> GlomerulusProtein.Calc </call>
+<call> GlomerulusSodium.Calc </call>
+<call> GlomerulusSulphate.Calc </call>
+<call> GlomerulusUrea.Calc </call>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> GFR </name><val> 0.0 </val></def>
+<def><name> EndGFR </name><val> 0.0 </val></def>
+<def><name> GFRxNormal </name><val> 0.0 </val></def>
+<def><name> FiltrationFraction </name><val> UNDEFINED </val></def>
+<def><name> EffCOP </name><val> Pressure </val></def>
+
+<copy><from> EffCOP </from><to> Colloids.Pres </to></copy>
+  <call> Colloids.Get[Prot] </call>
+<copy><from> Colloids.[Prot] </from><to> [EffProtein] </to></copy>
+
+<def><name> PT_Pressure </name><val> 0.0 </val></def>
+<def><name> PressureGradient </name><val> 0.0 </val></def>
+
+<call> GlomerulusBicarbonate.Failed </call>
+<call> GlomerulusChloride.Failed </call>
+<call> GlomerulusCreatinine.Failed </call>
+<call> GlomerulusGlucose.Failed </call>
+<call> GlomerulusKetoacid.Failed </call>
+<call> GlomerulusPhosphate.Failed </call>
+<call> GlomerulusProtein.Failed </call>
+<call> GlomerulusSodium.Failed </call>
+<call> GlomerulusSulphate.Failed </call>
+<call> GlomerulusUrea.Failed </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

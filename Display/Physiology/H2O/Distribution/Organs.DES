@@ -1,0 +1,131 @@
+HumMod / Organs
+
+Created : 14-May-05
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 18.2 </high>
+   <wide> 30.0 </wide>
+   <title> Organs </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Bone-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Bone </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Brain-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Brain </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Fat-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Fat </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> GITract-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Kidney-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> LeftHeart-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.4 </row><col> 1.0 </col>
+  <name> Liver-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Liver </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.4 </row><col> 1.0 </col>
+  <name> OtherTissue-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 1.0 </col>
+  <name> RespiratoryMuscle-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.4 </row><col> 1.0 </col>
+  <name> RightHeart-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.4 </row><col> 1.0 </col>
+  <name> SkeletalMuscle-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> Skin-Size.LiquidVol </name>
+  <format><integer/></format>
+  <label> Skin </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.8 </row><col> 1.0 </col>
+  <name> CellH2O.Vol </name>
+  <format><integer/></format>
+  <label> Organs Total </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.2 </row><col> 1.0 </col>
+  <name> RBCH2O.Vol </name>
+  <format><integer/></format>
+  <label> Red Cells </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.6 </row><col> 1.0 </col>
+  <name> ICFV.Vol </name>
+  <format><integer/></format>
+  <label> ICFV </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for tissue H2O are mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

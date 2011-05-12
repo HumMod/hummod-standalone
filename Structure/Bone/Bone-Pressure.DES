@@ -1,0 +1,62 @@
+HumMod / Bone-Pressure
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Bone-Pressure </name>
+
+<variables>
+
+<var>
+  <name> ArtyPressure </name>
+</var>
+
+<var>
+  <name> VeinPressure </name>
+</var>
+
+<var>
+  <name> PressureGradient </name>
+</var>
+
+<parm>
+  <name> PumpSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> PumpSetting </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> ArtyPressure </name>
+  <test> PumpSwitch </test>
+  <true> PumpSetting </true>
+  <false> SystemicArtys.Pressure </false>
+</conditional>
+
+<def>
+  <name> VeinPressure </name>
+  <val> SystemicVeins.Pressure </val>
+</def>
+
+<def>
+  <name> PressureGradient </name>
+  <val> ( ArtyPressure - VeinPressure ) MAX 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

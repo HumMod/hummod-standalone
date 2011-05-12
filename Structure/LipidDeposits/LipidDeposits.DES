@@ -1,0 +1,61 @@
+HumMod / LipidDeposits
+
+Created : 30-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\LipidDeposits\ ?>
+
+<?include LipidDeposits-Uptake.DES ?>
+<?include LipidDeposits-Release.DES ?>
+
+<structure><name> LipidDeposits </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Change(mG/Min) </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 130.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> Fat-Size.InitialLipidMass </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<call> LipidDeposits-Uptake.Dervs </call>
+<call> LipidDeposits-Release.Dervs </call>
+
+<def><name> Gain </name><val> LipidDeposits-Uptake.Rate </val></def>
+<def><name> Loss </name><val> LipidDeposits-Release.Rate </val></def>
+
+<def><name> Change(mG/Min) </name><val> Gain - Loss </val></def>
+<def><name> Change </name><val> 0.001 * Change(mG/Min) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

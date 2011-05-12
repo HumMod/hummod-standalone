@@ -1,0 +1,44 @@
+HumMod / DetailedANP
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\ANP\ ?>
+
+<?include ANPPool.DES ?>
+<?include ANPPump.DES ?>
+<?include ANPSecretion.DES ?>
+<?include ANPClearance.DES ?>
+
+<structure><name> ANP </name>
+
+<definitions>
+<block><name> Parms </name>
+
+  <call> ANPSecretion.Parms </call>
+  <call> ANPPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ANPPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ANPSecretion.Dervs </call>
+  <call> ANPClearance.Dervs </call>
+  <call> ANPPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

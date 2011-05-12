@@ -1,0 +1,70 @@
+HumMod / CellH2O
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 17.8 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Cell H2O </title>
+
+<structurename> Skin-Size </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> InitialCellH2O </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Initial CellH2O </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> FractTotal </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> CellH2O.InitialVol </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> CellH2O </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Current Cell H2O </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 3.0 </col>
+  <name> FractTotal </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 3.0 </col>
+  <name> CellH2O.Vol </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Target [Glucose(mG/dL)] is 110.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

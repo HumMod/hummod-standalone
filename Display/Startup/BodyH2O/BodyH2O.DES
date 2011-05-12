@@ -1,0 +1,43 @@
+HumMod / BodyH2O
+
+Created : 14-Dec-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-BodyH2O </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> H2O </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Startup - Body H2O </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\BodyH2O\ ?>
+
+<?include TotalBodyH2O.DES ?>
+<?include TissueH2O.DES ?>
+<?include ExternalH2O.DES ?>
+<?include ECFV.DES ?>
+<?include ICFV.DES ?>
+<?include Interstitium.DES ?>
+
+</panel>
+
+End

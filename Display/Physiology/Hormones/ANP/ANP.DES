@@ -1,0 +1,42 @@
+HumMod / DetailedANP
+
+Created : 28-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Hormones_ANP </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Atrial Natriuretic Peptide </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Hormones\ANP\ ?>
+
+<?include Pool.DES ?>
+<?include Pump.DES ?>
+<?include Clearance.DES ?>
+
+<?include Secretion.DES ?>
+
+</panel>
+
+End

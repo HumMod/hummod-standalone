@@ -1,0 +1,58 @@
+HumMod / Tumor
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 24.4 </row>
+   <col> 1.0 </col>
+   <high> 6.2 </high>
+   <wide> 30.0 </wide>
+   <title> Tumor </title>
+
+<structurename> ReninTumor </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> ReninTumor.Setting </name>
+  <repeat><reps> 10 </reps><stepsize>    10.0 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>   100.0 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>  1000.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Setting </name>
+  <listname> ReninTumor.Setting </listname>
+  <label> Setting </label>
+</slidebar>
+
+<showvalue>
+   <row> 4.6 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Tumor renin secretion rate is GU/Min. </line>
+  <line> </line>
+  <line> Normal kidney renin secretion rate is 145 GU/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

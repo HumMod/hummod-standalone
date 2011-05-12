@@ -1,0 +1,100 @@
+HumMod / A2Pool
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> A2Pool </name>
+
+<variables>
+
+<var>
+  <name> [A2(pG/mL)] </name>
+</var>
+
+<var>
+  <name> Log10Conc </name>
+</var>
+
+<var>
+  <name> [A2(pMol/L)] </name>
+</var>
+
+<var>
+  <name> FormationRate </name>
+</var>
+
+<var>
+  <name> EndogenousRate </name>
+</var>
+
+<var>
+  <name> CEActivity </name>
+</var>
+
+<parm>
+  <name> Block(%) </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm>
+  <name> CEBase </name>
+  <val> 30.0 </val>
+</parm>
+
+<constant>
+  <name> A2CONC </name>
+  <val> 0.3333 </val>
+</constant>
+
+<constant>
+  <name> PG_TO_PMOL </name>
+  <val> 0.956 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> CEActivity </name>
+  <val> CEBase * ( 1.0 - ( Block(%) / 100.0 ) ) </val>
+</def>
+
+<def>
+  <name> EndogenousRate </name>
+  <val> ReninPool.[PRA] * CEActivity </val>
+</def>
+
+<def>
+  <name> FormationRate </name>
+  <val> EndogenousRate + A2Pump.Rate </val>
+</def>
+
+<def>
+  <name> [A2(pG/mL)] </name>
+  <val> A2CONC * FormationRate </val>
+</def>
+
+<def>
+  <name> [A2(pMol/L)] </name>
+  <val> PG_TO_PMOL * [A2(pG/mL)] </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [A2(pG/mL)] GT 1.0 </test>
+  <true> LOG10 [A2(pG/mL)] </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

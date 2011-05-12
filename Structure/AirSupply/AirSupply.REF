@@ -1,0 +1,26 @@
+HumMod / AirSupply.REF
+
+Created : 24-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Each tank has a valve that is set to the target
+percent in the gas mixture. But the valves interact,
+so we then calculate the exact percent.
+
+The species are
+
+  O2 (21%)
+  N2 (79%)
+  CO2 (0%)
+  CO (0%)
+  AnestheticGas (0%)
+
+CO is specified in PPM.
+
+To add CO2, CO or AnestheticGas, turn on the gas tanks.
+
+End

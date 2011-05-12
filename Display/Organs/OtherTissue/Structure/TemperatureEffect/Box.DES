@@ -1,0 +1,76 @@
+HumMod / Box (for Temperature Effect)
+
+Created : 2010-05-31
+Last Modified : 2010-05-31
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.8 </high>
+   <wide> 30.0 </wide>
+
+<structurename> OtherTissue-Structure </structurename>
+ 
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TemperatureEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Damage Rate </label>
+</showvalue>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> TemperatureMaximum </name>
+  <listname> Common.Structure </listname>
+  <label> Maximum </label>
+</slidebar>
+
+<showvalue>
+   <row> 4.2 </row><col> 1.0 </col>
+   <name> TemperatureFactor </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Temperature Factor </label>
+</showvalue>
+
+<showcurve>
+  <row> 5.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> HeatCore.Temp(C) </name>
+    <label> Core Temperature </label>
+    <scale><min> 36 </min><max> 48 </max></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 1.0 </max></scale>
+  </yaxis>
+
+  <curvename> TemperatureFactor </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> HeatCore.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Core Temperature </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effects are normally 0.0, but can </line>
+  <line> increase to 0.05 and 0.1 /Min with </line>
+  <line> insult. </line>
+  <line>  </line>
+  <line> Cell pH is normally 7.05 pH units. </line>
+</infobutton>
+
+</groupbox>
+
+End

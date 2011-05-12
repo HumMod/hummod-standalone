@@ -1,0 +1,53 @@
+HumMod / SANode-Rate
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SANode-Rate </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> ParasympatheticEffect </name></var>
+<var><name> SympatheticEffect </name></var>
+<parm><name> BasicRate </name><val> 82.0 </val></parm>
+
+<var><name> Is_SinusRhythm </name><val> TRUE </val></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> ParasympatheticEffect </name>
+  <point><x> 0.0 </x><y>   0 </y><slope> 0 </slope></point>
+  <point><x> 2.0 </x><y> -20 </y><slope> -8 </slope></point>
+  <point><x> 8.0 </x><y> -40 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SympatheticEffect </name>
+  <point><x> 0.0 </x><y>   0 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y>  10 </y><slope> 10 </slope></point>
+  <point><x> 5.0 </x><y> 120 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> ParasympatheticEffect </name><val> ParasympatheticEffect [ VagusNerve.NA(Hz) ] </val></def>
+<def><name> SympatheticEffect </name><val> SympatheticEffect [ SANode-BetaReceptors.Activity ] </val></def>
+<def><name> Rate </name><val> BasicRate + ParasympatheticEffect + SympatheticEffect </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

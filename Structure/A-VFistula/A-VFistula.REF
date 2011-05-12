@@ -1,0 +1,32 @@
+HumMod / A-VFistula.REF
+
+Created : 2010-05-20
+Last Modified : 2010-05-20
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+An A-V fistula has several functional aspects.
+
+Blood Flow. Blood flow out of the systemic
+arteries and into the peripheral veins is
+increased. The variable OrganFlow.PeripheralFlow
+in circulation implements both the outflow and
+inflow features.
+
+Oxygen Transport. No changes. O2 dynamics are
+based on uptake and use, so the fistula has
+only an indirect effect.
+
+CO2 Transport. CO2, as [HCO3-] get the same
+treatment as O2. Hence the effect of the fistula
+is significant but indirect.
+
+Gas Anesthesia. This required a major revision
+to a much better structure -- using stable
+integrals. The result is that we can now shunt
+gas anesthetic from artery to vein.
+
+
+
+End

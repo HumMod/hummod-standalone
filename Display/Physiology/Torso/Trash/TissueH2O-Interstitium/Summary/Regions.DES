@@ -1,0 +1,135 @@
+HumMod / Regions
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 18.2 </row>
+   <col> 1.0 </col>
+   <high> 19.6 </high>
+   <wide> 30.0 </wide>
+   <title> Regions </title>
+
+<structurename> UT_H2O </structurename>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> Upper Torso </text>
+  <color> DARKBLUE </color>
+</label>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.0 </row><col> 1 </col>
+   <name> Gain </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.0 </row><col> 1 </col>
+   <name> Loss </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<structurename> MT_H2O </structurename>
+
+<label>
+  <row> 7.4 </row><col> 1.0 </col>
+  <text> Middle Torso </text>
+  <color> DARKBLUE </color>
+</label>
+
+<showvalue>
+   <row> 8.8 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.8 </row><col> 3.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.0 </row><col> 1 </col>
+   <name> Gain </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.0 </row><col> 1 </col>
+   <name> Loss </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<structurename> LT_H2O </structurename>
+
+<label>
+  <row> 13.4 </row><col> 1.0 </col>
+  <text> Lower Torso </text>
+  <color> DARKBLUE </color>
+</label>
+
+<showvalue>
+   <row> 14.8 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.8 </row><col> 3.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.0 </row><col> 1 </col>
+   <name> Gain </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.0 </row><col> 1 </col>
+   <name> Loss </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for volume ARE Ml. Units for change, </line>
+  <line> gain and loss are mL/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

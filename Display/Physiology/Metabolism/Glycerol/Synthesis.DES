@@ -1,0 +1,48 @@
+HumMod / Synthesis
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 23.8 </row>
+   <col> 32.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Synthesis </title>
+
+<structurename> GlycerolPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Synthesis </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> [Glycerol]Effect </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glycerol] Effect </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> BasicSynthesis </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Basic </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

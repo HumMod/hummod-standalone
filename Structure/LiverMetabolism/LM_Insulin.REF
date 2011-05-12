@@ -1,0 +1,51 @@
+HumMod / LM_Glycogen.REF
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   Changes in the influence of insulin
+   on glucose disposal are rather slow.
+   I use InsulinDelayed as the stimulus.
+
+      Diabetes 36:327, 1987
+      J.Clin.Endo.Metab. 64:902, 1987
+
+   From: JCI 78:472, 1986
+
+   Glucose disposal half-times are shown
+   below using a glucose clamp and step
+   change in insulin conc.  On means
+   increased disposal.  Off means
+   decreased disposal.
+
+      Infusion  [Conc] T 1/2 (Min)
+      mU/M2/Min  uU/mL   On   Off
+      --------- ------ ----- -----
+         15        45    52    34
+         40       120    44    43
+
+   Hepatic glucose production.  Off
+   means falling output.  On means
+   increasing output.
+
+      Infusion  [Conc] T 1/2 (Min)
+      mU/M2/Min  uU/mL  Off   On
+      --------- ------ ----- -----
+         15        45    22    54
+         40       120    18    59
+
+The portal vein concentrations on a normal
+diet are approximately
+
+  [Glucose] = 130 mG/dL
+  [FA] = 25 mG/dL
+  [Glucagon] = 160 pG/mL
+  [Insulin] = 50 uU/mL
+
+
+End

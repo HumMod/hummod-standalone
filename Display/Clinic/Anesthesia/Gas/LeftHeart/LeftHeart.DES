@@ -1,0 +1,35 @@
+HumMod / LeftHeart
+
+Created : 2010-05-22
+Last Modified : 2010-05-22
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> GasAnesthesiaLeftHeart </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> GasAnesthesia </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Left Heart </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<?path Display\Clinic\Anesthesia\Gas\LeftHeart\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

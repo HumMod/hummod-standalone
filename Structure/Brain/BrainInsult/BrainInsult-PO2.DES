@@ -1,0 +1,77 @@
+HumMod / PO2
+
+Created : 11-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BrainInsult-PO2 </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<equations>
+
+<stabledelay>
+  <name> PO2Delay </name>
+  <outputname> PO2Delay </outputname>
+  <initialval> 37.0 </initialval>
+  <inputname> PO2 </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+  <errorlim> 0.37 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PO2 </name>
+  <point><x> 10.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 30.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Effect </name>
+  <val> PO2 [ PO2Delay ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> K </name>
+  <val> 4.0 </val>
+</def>
+
+<def>
+  <name> DxMax </name>
+  <val> 1.0 </val>
+</def>
+
+<def>
+  <name> PO2 </name>
+  <val> Brain-Flow.PO2 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

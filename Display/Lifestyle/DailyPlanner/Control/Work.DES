@@ -1,0 +1,66 @@
+HumMod / Work
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Work </title>
+
+<structurename> DailyPlannerControl </structurename>
+
+<repeatlist>
+  <name> DailyPlannerControl.WorkLevel </name>
+  <repeat><reps> 15 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> WorkLevel </name>
+  <listname> DailyPlannerControl.WorkLevel </listname>
+  <label> Level </label>
+</slidebar>
+
+<repeatlist>
+  <name> DailyPlannerControl.WorkDuration </name>
+  <repeat><reps> 12 </reps><stepsize> 5.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> WorkDuration </name>
+  <listname> DailyPlannerControl.WorkDuration </listname>
+  <label> Duration </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Specify the work level and fraction of </line>
+  <line> each hour actually used for working </line>
+  <line> here. </line>
+  <line>  </line>
+  <line> Work is specified in Watts. </line>
+  <line> Time is specified in minutes. </line>
+  <line>  </line>
+  <line> Note that the watts specified here are </line>
+  <line> motion watts. For every motion watt, </line>
+  <line> there is an additional 3.55 heat watts </line>
+  <line> for a total of 4.55 watts or 65 kCal/Min. </line>
+  <line>  </line>
+  <line>  </line>
+  <line> 50 Watts = Moderate Work </line>
+  <line> 100 Watts = Heavy Work </line>
+  <line> 150 Watts = Very Heavy Work </line>
+</infobutton>
+
+</groupbox>
+
+End

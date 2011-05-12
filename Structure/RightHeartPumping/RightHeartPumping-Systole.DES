@@ -1,0 +1,58 @@
+HumMod / RightHeartPumping-Systole
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> RightHeartPumping-Systole </name>
+
+<variables>
+
+<var><name> ESV </name></var>
+<var><name> ESP </name></var>
+<var><name> TMP </name></var>
+
+<parm><name> A-Basic </name><val> 3.53 </val></parm>
+<var><name> A </name></var>
+<parm><name> n </name><val> 0.5 </val></parm>
+
+<parm><name> Contractility-Basic </name><val> 1.0 </val></parm>
+<var><name> Contractility </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> ESP </name><val> PulmArty.Pressure + 9.0 </val></def>
+<def><name> TMP </name><val> ESP - Pericardium-Cavity.Pressure </val></def>
+
+<def><name> Contractility </name>
+ <val>
+     Contractility-Basic
+   * RightHeart-BetaReceptors.Activity
+
+ </val>
+</def>
+
+<def><name> A </name><val> Contractility * A-Basic </val></def>
+
+<call> V=f(P) </call>
+
+</block>
+
+<block><name> P=f(V) </name>
+  <def><name> TMP </name><val> A * ( ESV ^ n ) </val></def>
+</block>
+
+<block><name> V=f(P) </name>
+  <def><name> ESV </name><val> ( TMP / A ) ^ ( 1.0 / n ) </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

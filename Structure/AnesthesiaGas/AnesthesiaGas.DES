@@ -1,0 +1,81 @@
+HumMod / AnesthesiaGas
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\AnesthesiaGas\ ?>
+
+<?include AnesthesiaGasSolubility.DES ?>
+
+<?include AnesthesiaGasBone.DES ?>
+<?include AnesthesiaGasBrain.DES ?>
+<?include AnesthesiaGasFat.DES ?>
+<?include AnesthesiaGasGITract.DES ?>
+<?include AnesthesiaGasKidney.DES ?>
+<?include AnesthesiaGasLeftHeart.DES ?>
+<?include AnesthesiaGasLiver.DES ?>
+<?include AnesthesiaGasOtherTissue.DES ?>
+<?include AnesthesiaGasRespiratoryMuscle.DES ?>
+<?include AnesthesiaGasRightHeart.DES ?>
+<?include AnesthesiaGasSkeletalMuscle.DES ?>
+<?include AnesthesiaGasSkin.DES ?>
+
+<?include AnesthesiaGasArty.DES ?>
+<?include AnesthesiaGasVein.DES ?>
+<?include AnesthesiaGasLung.DES ?>
+
+<structure><name> AnesthesiaGas </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> AnesthesiaGasSolubility.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+  <call> AnesthesiaGasArty.CalcConc </call>
+  <call> AnesthesiaGasVein.CalcConc </call>
+
+  <call> AnesthesiaGasBone.CalcConc </call>
+  <call> AnesthesiaGasBrain.CalcConc </call>
+  <call> AnesthesiaGasFat.CalcConc </call>
+  <call> AnesthesiaGasGITract.CalcConc </call>
+  <call> AnesthesiaGasKidney.CalcConc </call>
+  <call> AnesthesiaGasLeftHeart.CalcConc </call>
+  <call> AnesthesiaGasLiver.CalcConc </call>
+  <call> AnesthesiaGasOtherTissue.CalcConc </call>
+  <call> AnesthesiaGasRespiratoryMuscle.CalcConc </call>
+  <call> AnesthesiaGasRightHeart.CalcConc </call>
+  <call> AnesthesiaGasSkeletalMuscle.CalcConc </call>
+  <call> AnesthesiaGasSkin.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+  <call> AnesthesiaGasLung.Dervs </call>
+  <call> AnesthesiaGasArty.Dervs </call>
+  <call> AnesthesiaGasVein.Dervs </call>
+
+  <call> AnesthesiaGasBone.Dervs </call>
+  <call> AnesthesiaGasBrain.Dervs </call>
+  <call> AnesthesiaGasFat.Dervs </call>
+  <call> AnesthesiaGasGITract.Dervs </call>
+  <call> AnesthesiaGasKidney.Dervs </call>
+  <call> AnesthesiaGasLeftHeart.Dervs </call>
+  <call> AnesthesiaGasLiver.Dervs </call>
+  <call> AnesthesiaGasOtherTissue.Dervs </call>
+  <call> AnesthesiaGasRespiratoryMuscle.Dervs </call>
+  <call> AnesthesiaGasRightHeart.Dervs </call>
+  <call> AnesthesiaGasSkeletalMuscle.Dervs </call>
+  <call> AnesthesiaGasSkin.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

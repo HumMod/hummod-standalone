@@ -1,0 +1,81 @@
+HumMod / LungCO2
+
+Created : 10-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LungCO2 </name>
+
+<variables>
+
+<var><name> [Alveolar] </name></var>
+<var><name> PAlveolar </name></var>
+<var><name> [Capy] </name></var>
+<var><name> PCapy </name></var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> Expired </name>
+  <startname> Expired </startname>
+  <initialval> 200.0 </initialval>
+  <endname> EndExpired </endname>
+  <errorlim> 2.0 </errorlim>
+</impliciteq>
+
+</equations>
+
+<definitions>
+<block><name> Calc </name>
+
+<if>
+  <test> Breathing.AlveolarVentilation(STPD) GT 0.0 </test>
+  <true>
+    <call> CalcExpired </call>
+  </true>
+  <false> Not breathing
+    <call> CalcNoneExpired </call>
+  </false>
+</if>
+
+</block>
+
+<block><name> CalcExpired </name>
+  <implicitmath><name> Expired </name>
+
+  <def><name> [Alveolar] </name>
+    <val>  Bronchi.[CO2] + ( Expired / Breathing.AlveolarVentilation(STPD) ) </val>
+  </def>
+
+  <def><name> PAlveolar </name><val> [Alveolar] * Barometer.Pressure </val></def>
+  <def><name> PCapy </name><val> PAlveolar </val></def>
+
+  <copy><from> PCapy </from><to> Blood-GasToBase.pCO2 </to></copy>
+  <copy><from> BloodIons.[SID] </from><to> Blood-GasToBase.[SID] </to></copy>
+    <call> Blood-GasToBase.Calc </call>
+  <copy><from> Blood-GasToBase.[HCO3] </from><to> [Capy] </to></copy>
+
+  <def><name> EndExpired </name>
+    <val> LungBloodFlow.AlveolarVentilated * ( LungArtyCO2.[CO2] - [Capy] ) * CO2Tools.MolsToLiters </val>
+  </def>
+
+  </implicitmath>
+</block>
+
+<block><name> CalcNoneExpired </name>
+  <def><name> Expired </name><val> 0.0 </val></def>
+  <def><name> [Capy] </name><val> LungArtyCO2.[CO2] </val></def>
+  <def><name> PCapy </name><val> LungArtyCO2.PCO2 </val></def>
+  <def><name> PAlveolar </name><val> PCapy </val></def>
+  <def><name> [Alveolar] </name><val> PAlveolar / 760.0 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

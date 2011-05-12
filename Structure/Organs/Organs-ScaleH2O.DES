@@ -1,0 +1,33 @@
+HumMod / Organs-ScaleH2O
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-ScaleH2O </name>
+
+<definitions>
+
+<block><name> ScaleH2O </name>
+  <call> Bone-Size.ScaleH2O </call>
+  <call> Brain-Size.ScaleH2O </call>
+  <call> Fat-Size.ScaleH2O </call>
+  <call> GITract-Size.ScaleH2O </call>
+  <call> Kidney-Size.ScaleH2O </call>
+  <call> LeftHeart-Size.ScaleH2O </call>
+  <call> Liver-Size.ScaleH2O </call>
+  <call> OtherTissue-Size.ScaleH2O </call>
+  <call> RespiratoryMuscle-Size.ScaleH2O </call>
+  <call> RightHeart-Size.ScaleH2O </call>
+  <call> SkeletalMuscle-Size.ScaleH2O </call>
+  <call> Skin-Size.ScaleH2O </call>
+</block>
+
+</definitions>
+</structure>
+
+End

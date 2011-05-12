@@ -1,0 +1,41 @@
+HumMod / DialyzerActivity.REF
+
+Created : 04-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+The dialyzer is based on the assumption of diffusion equilibrium, which
+means that the blood and dialysate outflow concentrations are equal.
+We then apply conservation of mass (using flows) to calculate the
+appropriate concentrations.
+
+Physical units
+
+# H2O - mL
+# Sody, Poty, Clor - mEq/L
+# Urea - mG/100 mL
+
+Let KB = QB / (QB + QD)
+    KD = QD / (QB + QD)
+
+   [BOut] = KB [BIn] + KD [DIn]
+   [DOut] = KB [BIn] + KD [DIn]
+
+This very strange relationship says that the outlet concentrations will
+be the same (!) and will be a function of inlet concentrations and flows.
+
+Apply conservation of mass to get
+
+   Flux = Alpha ([BIn] - [DIn])
+
+where flux is blood to dialysate and
+
+   Alpha = (QB * QD) / (QB + QD)
+
+I might add an efficiency term later.
+
+End

@@ -1,0 +1,19 @@
+Digital Human / Midodrine
+
+Created : 10-Apr-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+
+<?include Midodrine\MidodrinePool.docs ?>
+<?include Midodrine\DesglymidodrinePool.docs ?>
+
+<?include Midodrine\DesglymidodrineKidney.docs ?>
+<?include Midodrine\MidodrineGILumen.docs ?>
+<?include Midodrine\MidodrineSingleDose.docs ?>
+<?include Midodrine\MidodrineDailyDose.docs ?>
+
+End

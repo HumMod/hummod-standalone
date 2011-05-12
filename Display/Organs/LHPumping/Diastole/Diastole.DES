@@ -1,0 +1,37 @@
+HumMod / Diastole
+
+Created : 16-May-05
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<panel><name> LHPumping-Diastole </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> LeftHeart(2) </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Left Heart Pumping - Diastole </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\LHPumping\Diastole\ ?>
+
+<?include Pressure-Volume.DES ?>
+<?include Technical.DES ?>
+<?include Stiffness.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,99 @@
+HumMod / Summary
+
+Created : 11-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.2 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> RightHeartPumping-Pumping </structurename>
+
+<showvalue>
+   <row> 1.4 </row>
+   <col> 1.0 </col>
+   <name> BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Blood Flow </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row>
+   <col> 1.0 </col>
+   <name> StrokeVolume </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Stroke Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 3.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> StrokeVolume </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 70 </min><max> 80 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<structurename> Heart-Ventricles </structurename>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Heart Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 12.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 70 </min><max> 80 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<structurename> RightHeartPumping-Pumping </structurename>
+
+<showvalue>
+   <row> 19.6 </row>
+   <col> 1.0 </col>
+   <name> EjectionFraction </name>
+   <format><decimal> 2 </decimal></format>
+   <label> EjectionFraction </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

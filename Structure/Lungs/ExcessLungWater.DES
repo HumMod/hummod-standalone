@@ -1,0 +1,89 @@
+HumMod / ExcessLungWater
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ExcessLungWater </name>
+
+<variables>
+
+<var><name> InitialVolume </name></var>
+
+<parm><name> Perm </name><val> 3.0 </val></parm>
+
+<var><name> Grad </name></var>
+<var><name> Flux </name></var>
+<var><name> Lymph </name></var>
+
+<var><name> Volume(L) </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Volume </name>
+  <integralname> Volume </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> Lymph </name>
+  <point><x>   10.0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 1000.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> InitialVolume </name><val> 0.0 </val></def>
+<def><name> Volume </name><val> InitialVolume </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Volume(L) </name><val> Volume / 1000.0 </val></def>
+
+<if>
+<test> OtherTissue-Function.Failed </test>
+<true><call> Failed </call></true>
+<false><call> NotFailed </call></false>
+</if>
+
+<def><name> Change </name><val> Flux - Lymph </val></def>
+
+</block>
+
+<block><name> NotFailed </name>
+
+<def><name> Grad </name><val> PulmCapys.Pressure - PlasmaProtein.COP </val></def>
+<def><name> Flux </name><val> ( Perm * Grad ) MAX 0.0 </val></def>
+<def><name> Lymph </name><val> Lymph [ Volume ] </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> Grad </name><val> 0.0 </val></def>
+<def><name> Flux </name><val> 0.0 </val></def>
+<def><name> Lymph </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

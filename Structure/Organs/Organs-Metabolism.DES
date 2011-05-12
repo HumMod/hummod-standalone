@@ -1,0 +1,48 @@
+HumMod / Organs-Metabolism
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Metabolism </name>
+
+<definitions>
+
+<block><name> CalcCals </name>
+  <call> Bone-Metabolism.CalcCals </call>
+  <call> Brain-Metabolism.CalcCals </call>
+  <call> Fat-Metabolism.CalcCals </call>
+  <call> GITract-Metabolism.CalcCals </call>
+  <call> Kidney-Metabolism.CalcCals </call>
+  <call> LeftHeart-Metabolism.CalcCals </call>
+  <call> Liver-Metabolism.CalcCals </call>
+  <call> OtherTissue-Metabolism.CalcCals </call>
+  <call> RespiratoryMuscle-Metabolism.CalcCals </call>
+  <call> RightHeart-Metabolism.CalcCals </call>
+  <call> SkeletalMuscle-Metabolism.CalcCals </call>
+  <call> Skin-Metabolism.CalcCals </call>
+</block>
+
+<block><name> SplitCals </name>
+  <call> Bone-Metabolism.SplitCals </call>
+  <call> Brain-Metabolism.SplitCals </call>
+  <call> Fat-Metabolism.SplitCals </call>
+  <call> GITract-Metabolism.SplitCals </call>
+  <call> Kidney-Metabolism.SplitCals </call>
+  <call> LeftHeart-Metabolism.SplitCals </call>
+  <call> Liver-Metabolism.SplitCals </call>
+  <call> OtherTissue-Metabolism.SplitCals </call>
+  <call> RespiratoryMuscle-Metabolism.SplitCals </call>
+  <call> RightHeart-Metabolism.SplitCals </call>
+  <call> SkeletalMuscle-Metabolism.SplitCals </call>
+  <call> Skin-Metabolism.SplitCals </call>
+</block>
+
+</definitions>
+</structure>
+
+End

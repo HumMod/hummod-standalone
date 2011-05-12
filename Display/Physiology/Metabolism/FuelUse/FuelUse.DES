@@ -1,0 +1,42 @@
+HumMod / FuelUse
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> Metabolism_FuelUse </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Fuel Use </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Metabolism\FuelUse\ ?>
+
+<?include Glucose.DES ?>
+<?include Ketoacids.DES ?>
+<?include FattyAcids.DES ?>
+<?include Glycerol.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,28 @@
+HumMod / Insulin
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Hormones_Insulin </name>
+  <label> Insulin </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_Insulin_Circulating </name>
+  <label> Circulating </label>
+  <parent> Hormones_Insulin </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Insulin_BetaCells </name>
+  <label> Beta Cells </label>
+  <parent> Hormones_Insulin </parent>
+</leaf>
+
+End

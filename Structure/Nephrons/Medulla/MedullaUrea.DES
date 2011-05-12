@@ -1,0 +1,65 @@
+HumMod / MedullaUrea
+
+Created : 11-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MedullaUrea </name>
+
+<variables>
+
+<var><name> [Urea] </name></var>
+<var><name> [Urea(mG/dL)] </name></var>
+<var><name> Osmolarity </name></var>
+
+<constant><name> MG_TO_MOSM </name><val> 16.67 </val></constant>
+
+<var><name> Washup </name></var>
+<parm><name> CCEfficiency </name><val> 98.0 </val></parm>
+
+<var><name> CCK </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 590.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 5.9 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def><name> CCK </name><val> 1.0 - ( CCEfficiency / 100.0 ) </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [Urea] </name><val> Mass / Medulla.Volume </val></def>
+<def><name> [Urea(mG/dL)] </name><val> 100.0 * [Urea] </val></def>
+<def><name> Osmolarity </name><val> MG_TO_MOSM * [Urea] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Washup </name><val> CCK * [Urea] * VasaRecta.Outflow </val></def>
+<def><name> Change </name><val> CD_Urea.Reab - Washup </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

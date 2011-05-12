@@ -1,0 +1,191 @@
+HumMod / Brain-Function
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Brain-Function </name>
+
+<variables>
+
+<var><name> Failed </name><val> FALSE </val></var>
+<var><name> Effect </name></var>
+<var><name> Normal </name><val> TRUE </val></var>
+<var><name> Confused </name><val> FALSE </val></var>
+<var><name> Impaired </name><val> FALSE </val></var>
+<var><name> Comatose </name><val> FALSE </val></var>
+<var><name> NotBreathing </name><val> FALSE </val></var>
+<var><name> MayBeDead </name><val> FALSE </val></var>
+<var><name> IsReallyDead </name><val> FALSE </val></var>
+
+<var><name> NotResponding </name><val> FALSE </val></var>
+
+<var><name> LastState </name><val> 0 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Effect </name>
+  <val> BrainInsult.Effect </val>
+</def>
+
+<def><name> Normal </name><val> FALSE </val></def>
+<def><name> Confused </name><val> FALSE </val></def>
+<def><name> Impaired </name><val> FALSE </val></def>
+<def><name> Comatose </name><val> FALSE </val></def>
+<def><name> NotBreathing </name><val> FALSE </val></def>
+<def><name> MayBeDead </name><val> FALSE </val></def>
+<def><name> IsReallyDead </name><val> FALSE </val></def>
+
+<def><name> NotResponding </name><val> FALSE </val></def>
+
+<testcase>
+
+<case>
+<test> Effect LE 0.40 </test>
+<def><name> Comatose </name><val> TRUE </val></def>
+<def><name> NotResponding </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> Effect LE 0.60 </test>
+<def><name> Impaired </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> Effect LE 0.80 </test>
+<def><name> Confused </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def><name> Normal </name><val> TRUE </val></def>
+</case>
+
+</testcase>
+
+<testcase>
+
+<case>
+<test> Effect LE 0.20 </test>
+<def><name> NotBreathing </name><val> TRUE </val></def>
+<def><name> NotResponding </name><val> TRUE </val></def>
+</case>
+
+</testcase>
+
+<testcase>
+
+<case>
+<test> Effect EQ 0.0 </test>
+<def><name> IsReallyDead </name><val> TRUE </val></def>
+<def><name> NotResponding </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> Effect LE 0.10 </test>
+<def><name> MayBeDead </name><val> TRUE </val></def>
+<def><name> NotResponding </name><val> TRUE </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Page </name>
+
+<testcase>
+
+<case>
+<test> ( Effect EQ 0.0 ) AND ( LastState LT 6 ) </test>
+<page> Your patient is dead ... </page>
+<def><name> LastState </name><val> 6 </val></def>
+</case>
+
+<case>
+<test> ( Effect LE 0.1 ) AND ( LastState LT 5 ) </test>
+<page> Your patient may be dead! </page>
+<def><name> LastState </name><val> 5 </val></def>
+</case>
+
+<case>
+<test> ( Effect LE 0.2 ) AND ( LastState LT 4 ) </test>
+<page> Your patient is not breathing! </page>
+<def><name> LastState </name><val> 4 </val></def>
+</case>
+
+<case>
+<test> ( Effect LE 0.4 ) AND ( LastState LT 3 ) </test>
+<page> Your patient is not conscious! </page>
+<def><name> LastState </name><val> 3 </val></def>
+</case>
+
+<case>
+<test> ( Effect LE 0.6 ) AND ( LastState LT 2 ) </test>
+<page> I can't talk wery bell ... </page>
+<def><name> LastState </name><val> 2 </val></def>
+</case>
+
+<case>
+<test> ( Effect LE 0.8 ) AND ( LastState LT 1 ) </test>
+<page> I'm like confused. </page>
+<def><name> LastState </name><val> 1 </val></def>
+</case>
+
+<case>
+<test> ( Effect GE 0.95 ) AND ( LastState GT 0 ) </test>
+<page> Now I'm feeling better. </page>
+<def><name> LastState </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> ( Effect GE 0.60 ) AND ( LastState GT 3 ) </test>
+<page> Your patient seems to be conscious again. </page>
+<def><name> LastState </name><val> 3 </val></def>
+</case>
+
+<case>
+<test> ( Effect GE 0.40 ) AND ( LastState GT 4 ) </test>
+<page> Your patient is breathing again. </page>
+<def><name> LastState </name><val> 4 </val></def>
+</case>
+
+<case>
+<test> ( Effect GE 0.20 ) AND ( LastState GE 5 ) </test>
+<page> Wait. Your patient is NOT dead! </page>
+<def><name> LastState </name><val> 5 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<testcase>
+
+<case>
+<test> NOT Failed AND ( Effect LT 0.2 ) </test>
+<def><name> Failed </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> Failed AND ( Effect GT 0.4 ) </test>
+<def><name> Failed </name><val> FALSE </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

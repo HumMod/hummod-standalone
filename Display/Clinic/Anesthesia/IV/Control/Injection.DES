@@ -1,0 +1,79 @@
+HumMod / Injection
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 10.4 </high>
+   <wide> 30.0 </wide>
+   <title> Injection </title>
+
+<structurename> AnesthesiaIVInjection </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> InjectNow </blockname>
+  <label> Inject Now </label>
+</actionbutton>
+
+<repeatlist>
+  <name> AnesthesiaIVInjection.Dose </name>
+  <repeat><reps> 100 </reps><stepsize> 10 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Dose </name>
+  <listname> AnesthesiaIVInjection.Dose </listname>
+  <label> Dose </label>
+</slidebar>
+
+<repeatlist>
+  <name> AnesthesiaIVInjection.Timespan </name>
+  <firstval> 5.0 </firstval>
+  <repeat><reps> 11 </reps><stepsize> 5.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.6 </row><col> 1.0 </col>
+  <name> Timespan </name>
+  <listname> AnesthesiaIVInjection.Timespan </listname>
+  <label> Timespan (Sec) </label>
+</slidebar>
+
+<showvalue>
+   <row> 6.2 </row><col> 1.0 </col>
+   <name> TotalInjections </name>
+   <format> <integer/> </format>
+   <label> Total Injections </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.2 </row><col> 1.0 </col>
+   <name> CumulativeDose </name>
+   <format> <integer/> </format>
+   <label> Cumulative Dose </label>
+</showvalue>
+
+<actionbutton>
+  <row> 8.8 </row><col> 1.0 </col>
+  <blockname> AnesthesiaIVInjection.Reset </blockname>
+  <label> Reset </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> For thiopental, a typical primer </line>
+  <line> dose is 2.0 - 2.5 mG/kG. </line>
+</infobutton>
+
+</groupbox>
+
+End

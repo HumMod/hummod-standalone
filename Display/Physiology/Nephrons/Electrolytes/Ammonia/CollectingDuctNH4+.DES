@@ -1,0 +1,85 @@
+HumMod / CollectingDuctNH4+
+
+Created : 09-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 24.2 </high>
+   <wide> 30.0 </wide>
+   <title> Collecting Duct NH4+ </title>
+
+<structurename> CD_NH4 </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Outflow </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Excretion Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Outflow </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 0.06 </max><inc> 0.01 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> PhEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 12.8 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> BloodPh.ArtysPh </name>
+    <label> Arterial pH </label>
+    <scale><min> 6.9 </min><max> 7.9 </max><inc> 0.1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> PhOnFlux </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 21.8 </row><col> 1.0 </col>
+   <name> BloodPh.ArtysPh </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Arterial pH </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

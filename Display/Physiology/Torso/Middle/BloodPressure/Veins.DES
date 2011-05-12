@@ -1,0 +1,56 @@
+HumMod / Veins
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 22.8 </row>
+   <col> 1.0 </col>
+   <high> 10.4 </high>
+   <wide> 30.0 </wide>
+   <title> Veins </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> RegionalPressure.MiddleVein </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> RegionalPressure.MiddleVein </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 10 </max></scale>
+  </yaxis>
+</showgraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Venous pressure is close to 0 mmHg </line>
+  <line> when lying and dependent on region </line>
+  <line> and gravity when sitting and standing. </line>
+  <line>  </line>
+  <line> Venous pressure is a little higher </line>
+  <line> in the lower torso than in other regions </line>
+  <line> when lying due to the Gauer effect. </line>
+</infobutton>
+
+</groupbox>
+
+End

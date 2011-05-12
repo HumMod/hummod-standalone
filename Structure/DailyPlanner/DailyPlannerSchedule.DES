@@ -1,0 +1,82 @@
+HumMod / DailyPlannerSchedule
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DailyPlannerSchedule </name>
+
+<variables>
+
+<parm><name> Hour12AM-1AM  </name><val> 0 </val></parm>
+<parm><name>  Hour1AM-2AM  </name><val> 0 </val></parm>
+<parm><name>  Hour2AM-3AM  </name><val> 0 </val></parm>
+<parm><name>  Hour3AM-4AM  </name><val> 0 </val></parm>
+<parm><name>  Hour4AM-5AM  </name><val> 0 </val></parm>
+<parm><name>  Hour5AM-6AM  </name><val> 0 </val></parm>
+<parm><name>  Hour6AM-7AM  </name><val> 1 </val></parm>
+<parm><name>  Hour7AM-8AM  </name><val> 4 </val></parm>
+<parm><name>  Hour8AM-9AM  </name><val> 2 </val></parm>
+<parm><name>  Hour9AM-10AM </name><val> 2 </val></parm>
+<parm><name> Hour10AM-11AM </name><val> 2 </val></parm>
+<parm><name> Hour11AM-12PM </name><val> 2 </val></parm>
+<parm><name> Hour12PM-1PM  </name><val> 4 </val></parm>
+<parm><name>  Hour1PM-2PM  </name><val> 2 </val></parm>
+<parm><name>  Hour2PM-3PM  </name><val> 2 </val></parm>
+<parm><name>  Hour3PM-4PM  </name><val> 2 </val></parm>
+<parm><name>  Hour4PM-5PM  </name><val> 2 </val></parm>
+<parm><name>  Hour5PM-6PM  </name><val> 1 </val></parm>
+<parm><name>  Hour6PM-7PM  </name><val> 4 </val></parm>
+<parm><name>  Hour7PM-8PM  </name><val> 1 </val></parm>
+<parm><name>  Hour8PM-9PM  </name><val> 1 </val></parm>
+<parm><name>  Hour9PM-10PM </name><val> 1 </val></parm>
+<parm><name> Hour10PM-11PM </name><val> 0 </val></parm>
+<parm><name> Hour11PM-12AM </name><val> 0 </val></parm>
+
+<var><name> MealCount </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def><name> MealCount </name>
+<val>
+   ( Hour12AM-1AM EQ 4 ) 
+ + (  Hour1AM-2AM EQ 4 ) 
+ + (  Hour2AM-3AM EQ 4 ) 
+ + (  Hour3AM-4AM EQ 4 ) 
+ + (  Hour4AM-5AM EQ 4 ) 
+ + (  Hour5AM-6AM EQ 4 ) 
+ + (  Hour6AM-7AM EQ 4 ) 
+ + (  Hour7AM-8AM EQ 4 ) 
+ + (  Hour8AM-9AM EQ 4 ) 
+ + (  Hour9AM-10AM EQ 4 ) 
+ + ( Hour10AM-11AM EQ 4 ) 
+ + ( Hour11AM-12PM EQ 4 ) 
+ + ( Hour12PM-1PM EQ 4 ) 
+ + (  Hour1PM-2PM EQ 4 ) 
+ + (  Hour2PM-3PM EQ 4 ) 
+ + (  Hour3PM-4PM EQ 4 ) 
+ + (  Hour4PM-5PM EQ 4 ) 
+ + (  Hour5PM-6PM EQ 4 ) 
+ + (  Hour6PM-7PM EQ 4 ) 
+ + (  Hour7PM-8PM EQ 4 ) 
+ + (  Hour8PM-9PM EQ 4 ) 
+ + (  Hour9PM-10PM EQ 4 ) 
+ + ( Hour10PM-11PM EQ 4 ) 
+ + ( Hour11PM-12AM EQ 4 ) 
+</val>
+</def>
+
+</block>
+
+</definitions>
+
+</structure>
+
+End

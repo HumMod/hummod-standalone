@@ -1,0 +1,66 @@
+HumMod / FuelEffect
+
+Created : 08-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 12.2 </row>
+   <col> 32.0 </col>
+   <high> 9.8 </high>
+   <wide> 30.0 </wide>
+   <title> Fuel Effect </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> GITract-Structure.FuelEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Damage Rate </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.6 </row><col> 1.0 </col><high> 5 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> GITract-Fuel.FractUseDelay </name>
+    <label> Fuel Use </label>
+    <scale>
+      <min> 0 </min><max> 1 </max>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale>
+      <min> 0 </min><max> 0.05 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> GITract-Structure.FuelOnStructure </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> GITract-Fuel.FractUseDelay </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Fractional Use </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effects are normally 0.0, but can </line>
+  <line> increase to 0.05 and 0.1 /Min with </line>
+  <line> insult. </line>
+  <line>  </line>
+  <line> Normal fractional fuel use is 1.0 of need. </line>
+</infobutton>
+
+</groupbox>
+
+End

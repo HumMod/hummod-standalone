@@ -1,0 +1,21 @@
+HumMod / Context
+
+Created : 23-Nov-08
+Last Modified : 10-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> CONTEXT </name>
+  <label> Context </label>
+  <parent> MAINMENU </parent>
+</branch>
+
+<?path Display\Tree\Context\ ?>
+
+<?include Traits\Traits.DES ?>
+<?include Norms\Norms.DES ?>
+
+End

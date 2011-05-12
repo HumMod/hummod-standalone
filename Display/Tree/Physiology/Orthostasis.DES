@@ -1,0 +1,48 @@
+HumMod / Tree-Orthostasis
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Orthostasis </name>
+  <label> Orthostasis </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> OrthostasisRegionalPressures </name>
+  <label> Regional Pressures </label>
+  <parent> Orthostasis </parent>
+</leaf>
+
+<branch>
+  <name> SequesteredBlood </name>
+  <label> Sequestered Blood </label>
+  <parent> Orthostasis </parent>
+</branch>
+
+<leaf>
+  <name> SequesteredBloodArteries </name>
+  <label> Arteries </label>
+  <parent> SequesteredBlood </parent>
+</leaf>
+
+<leaf>
+  <name> SequesteredBloodVeins </name>
+  <label> Veins </label>
+  <parent> SequesteredBlood </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> OrthostasisPostureEnergy </name>
+  <label> Posture Energy </label>
+  <parent> Orthostasis </parent>
+</leaf>
+-->
+
+End

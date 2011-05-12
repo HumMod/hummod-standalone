@@ -1,0 +1,106 @@
+HumMod / MT_H2O
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> MT_H2O </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> InitialVol </name></var>
+<var><name> Vol(L) </name></var>
+
+<var><name> MetabolicH2O </name></var>
+<var><name> SweatH2O </name></var>
+<var><name> InsensibleSkinH2O </name></var>
+<var><name> InsensibleLungH2O </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 190.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialVol </name>
+  <val> TissueH2O.MT_SizeFract * TissueH2O.InitialVol </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> InitialVol </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> MetabolicH2O </name>
+  <val> TissueH2O.MT_CalsFract * MetabolicH2O.Rate </val>
+</def>
+
+<def>
+  <name> SweatH2O </name>
+  <val> TissueH2O.MT_SweatFract * SweatDuct.H2OOutflow </val>
+</def>
+
+<def>
+  <name> InsensibleSkinH2O </name>
+  <val> TissueH2O.MT_SkinFract * HeatInsensibleSkin.H2O </val>
+</def>
+
+<def>
+  <name> InsensibleLungH2O </name>
+  <val> TissueH2O.MT_LungFract * HeatInsensibleLung.H2O </val>
+</def>
+
+<def><name> Gain </name>
+  <val>
+     MT_CapillaryWater.Rate
+   + MetabolicH2O
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>
+     MT_LymphWater.Rate
+   + SweatH2O
+   + InsensibleSkinH2O
+   + InsensibleLungH2O
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

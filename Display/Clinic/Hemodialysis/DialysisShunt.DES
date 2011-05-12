@@ -1,0 +1,65 @@
+HumMod / DialysisShunt
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 6.2 </high>
+   <wide> 30.0 </wide>
+   <title> Dialysis Shunt </title>
+
+<structurename> DialysisShunt </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> BloodFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Blood Flow </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> PressureGradient </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Pressure Gradient </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Conductance </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Conductance </label>
+</showvalue>
+
+<repeatlist>
+  <name> DialysisShunt.BasicConductance </name>
+  <repeat><reps> 20 </reps><stepsize>  1.0 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.6 </row><col> 3.0 </col>
+  <name> BasicConductance </name>
+  <listname> DialysisShunt.BasicConductance </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> You must establish a shunt before using the dialyzer. </line>
+  <line>  </line>
+  <line> Blood Flow = mL/Min </line>
+  <line> Conductance = (mL/Min)/mmHg </line>
+</infobutton>
+
+</groupbox>
+
+End

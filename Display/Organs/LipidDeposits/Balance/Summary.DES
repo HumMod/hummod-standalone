@@ -1,0 +1,88 @@
+HumMod / Summary
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.2 </high>
+   <wide> 30.0 </wide>
+
+<structurename> LipidDeposits </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 13000 </min><max> 14000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 4 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.2</row><col> 1.0 </col>
+  <name> Change(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change (mG/Min) </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.6 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Typical values are </line>
+  <line>  </line>
+  <line> Mass = 13300.0 G </line>
+  <line> Change = ~0 G/Min </line>
+  <line>  </line>
+  <line> Gain = 100.0 mG/Min </line>
+  <line> Loss = 100.0 mG/Min </line>
+  <line>  </line>
+  <line> Note the scale change. </line>
+</infobutton>
+
+</groupbox>
+
+End

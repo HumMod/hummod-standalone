@@ -1,0 +1,114 @@
+HumMod / FattyAcidsUsed
+
+Created : 28-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.4 </high>
+   <wide> 30.0 </wide>
+   <title> Fatty Acids Used </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Bone-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Bone </label>
+</showvalue>
+
+<label>
+  <row> 2.4 </row><col> 1.0 </col>
+  <text> No Brain Use </text>
+</label>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Fat-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Fat </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> GITract-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Kidney-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> LeftHeart-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.4 </row><col> 1.0 </col>
+  <name> Liver-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Liver </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.4 </row><col> 1.0 </col>
+  <name> OtherTissue-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 1.0 </col>
+  <name> RespiratoryMuscle-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.4 </row><col> 1.0 </col>
+  <name> RightHeart-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.4 </row><col> 1.0 </col>
+  <name> SkeletalMuscle-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> Skin-Fuel.FAUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skin </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.8 </row><col> 1.0 </col>
+  <name> Metabolism-FattyAcid.TotalBurn </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for fatty acids used are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,111 @@
+HumMod / GlasgowComaScale
+
+Created : 15-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlasgowComaScale </name>
+
+<variables>
+
+<var>
+  <name> Value </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> Brain-Function.IsReallyDead </test>
+
+  <def>
+    <name> Value </name>
+    <val> 3.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.MayBeDead </test>
+
+  <def>
+    <name> Value </name>
+    <val> 4.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.NotBreathing </test>
+
+  <def>
+    <name> Value </name>
+    <val> 5.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Seizure.Convulsing </test>
+
+  <def>
+    <name> Value </name>
+    <val> 6.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.Comatose </test>
+
+  <def>
+    <name> Value </name>
+    <val> 7.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.Impaired </test>
+
+  <def>
+    <name> Value </name>
+    <val> 13.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.Confused </test>
+
+  <def>
+    <name> Value </name>
+    <val> 14.0 </val>
+  </def>
+
+</case>
+
+<case>
+<test> Brain-Function.Normal </test>
+
+  <def>
+    <name> Value </name>
+    <val> 15.0 </val>
+  </def>
+
+</case>
+
+</testcase>
+
+</block>
+</definitions>
+</structure>
+
+End

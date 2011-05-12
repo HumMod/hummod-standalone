@@ -1,0 +1,43 @@
+Digital Human / Traits DES
+
+Created : 03-Apr-05
+Last Modified : 21-Nov-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<?path docs ?>
+
+<?include \Traits-Adiposity\Traits-Adiposity.docs ?>
+<?include \Traits-Adiposity\MorbidlyObese.docs ?>
+<?include \Traits-Adiposity\Normal Weight.docs ?>
+<?include \Traits-Adiposity\Obese.docs ?>
+<?include \Traits-Adiposity\Overweight.docs ?>
+<?include \Traits-Adiposity\Underweight.docs ?>
+
+
+<?include \Traits-AgeAge\Traits-AgeAge.docs ?>
+<?include \Traits-AgeAge\MiddleAge.docs ?>
+<?include \Traits-AgeAge\Old.docs ?>
+<?include \Traits-AgeAge\VeryOld.docs ?>
+<?include \Traits-AgeAge\Young.docs ?>
+<?include \Traits-AgeAge\Youngish.docs ?>
+
+
+<?include \Traits-BodySizeBodySize\Traits-BodySize.docs ?>
+<?include \Traits-BodySizeBodySize\Large.docs ?>
+<?include \Traits-BodySizeBodySize\Normal.docs ?>
+<?include \Traits-BodySizeBodySize\Small.docs ?>
+<?include \Traits-BodySizeBodySize\VeryLarge.docs ?>
+
+
+<?include \Traits-Muscularity\Traits-Muscularity.docs ?>
+<?include \Traits-Muscularity\AboveNormal.docs ?> 
+<?include \Traits-Muscularity\BelowNormal.docs ?> 
+<?include \Traits-Muscularity\TrainedAthlete.docs ?>
+<?include \Traits-Muscularity\Normal.docs ?>
+
+
+End

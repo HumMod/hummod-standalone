@@ -1,0 +1,205 @@
+HumMod / DigoxinDailyDose
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DigoxinDailyDose </name>
+
+<variables>
+
+<parm>
+  <name> Dose </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm>
+  <name> TakeDaily </name>
+  <val> FALSE </val>
+</parm>
+
+<var>
+  <name> LastTakeDaily </name>
+  <val> FALSE </val>
+</var>
+
+<parm>
+  <name> TimesADay </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> TimeLastDose </name>
+  <val> UNDEFINED </val>
+</var>
+
+<var>
+  <name> TimeNextDose </name>
+  <val> UNDEFINED </val>
+</var>
+
+<var>
+  <name> TotalDoses </name>
+  <val> 0.0 </val>
+</var>
+
+<var>
+  <name> CumulativeDose </name>
+  <val> 0.0 </val>
+</var>
+
+<timervar>
+  <name> Timer </name>
+  <val> 0.0 </val>
+  <state> OFF </state>
+</timervar>
+
+<var>
+  <name> IntervalGoal </name>
+</var>
+
+<var>
+  <name> Interval </name>
+</var>
+
+<constant>
+  <name> PREPTIME </name>
+  <val> 10.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def>
+  <name> IntervalGoal </name>
+  <val> 1440.0 / TimesADay </val>
+</def>
+
+<if><test> TakeDaily EQ LastTakeDaily </test>
+<true>
+  <exitblock/>
+</true>
+</if>
+
+<if><test> TakeDaily </test>
+<true>
+
+<timer>
+  <name> Timer </name>
+  <val> 0.0 </val>
+  <state> UP </state>
+</timer>
+
+<def>
+  <name> Interval </name>
+  <val> PREPTIME </val>
+</def>
+
+<def>
+  <name> TimeNextDose </name>
+  <val> System.X + PREPTIME </val>
+</def>
+
+</true>
+<false>
+
+<timer>
+  <name> Timer </name>
+  <state> OFF </state>
+</timer>
+
+<def>
+  <name> TimeNextDose </name>
+  <val> UNDEFINED </val>
+</def>
+
+</false>
+</if>
+
+<def>
+  <name> LastTakeDaily </name>
+  <val> TakeDaily </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if><test> TakeDaily </test>
+<false>
+  <exitblock/>
+</false>
+</if>
+
+<if><test> Timer LT Interval </test>
+<true>
+  <exitblock/>
+</true>
+</if>
+
+<timer>
+  <name> Timer </name>
+  <val> 0.0 </val>
+</timer>
+
+<def>
+  <name> TimeNextDose </name>
+  <val> TimeNextDose + IntervalGoal </val>
+</def>
+
+<def>
+  <name> TimeLastDose </name>
+  <val> System.X </val>
+</def>
+
+<def>
+  <name> Interval </name>
+  <val> TimeNextDose - System.X </val>
+</def>
+
+<def>
+  <name> DigoxinGILumen.Mass </name>
+  <val> DigoxinGILumen.Mass + Dose </val>
+</def>
+
+<def>
+  <name> TotalDoses </name>
+  <val> TotalDoses + 1.0 </val>
+</def>
+
+<def>
+  <name> CumulativeDose </name>
+  <val> CumulativeDose + Dose </val>
+</def>
+
+</block>
+
+<block><name> Reset </name>
+
+<def>
+  <name> TimeLastDose </name>
+  <val> UNDEFINED </val>
+</def>
+
+<def>
+  <name> TotalDoses </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> CumulativeDose </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

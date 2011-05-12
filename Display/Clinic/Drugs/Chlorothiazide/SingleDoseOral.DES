@@ -1,0 +1,75 @@
+HumMod / SingleDoseOral
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 10.2 </high>
+   <wide> 30.0 </wide>
+   <title> Single Dose Oral </title>
+
+<structurename> ThiazideSingleDose </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> TakeDoseNow </blockname>
+  <label> Take Dose Now </label>
+</actionbutton>
+
+<repeatlist>
+  <name> ThiazideSingleDose.Dose </name>
+  <repeat><reps> 4 </reps><stepsize> 250.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.2 </row><col> 1.0 </col>
+  <name> Dose </name>
+  <listname> ThiazideSingleDose.Dose </listname>
+  <label> Dose </label>
+</slidebar>
+
+<showvalue>
+   <row> 4.6 </row><col> 1.0 </col>
+   <name> TimeLastDose </name>
+   <format>
+      <timestamp/>
+      <fieldwidth> 14 </fieldwidth>
+   </format>
+   <label> Last Dose </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.6 </row><col> 1.0 </col>
+   <name> TotalDoses </name>
+   <format> <integer/> </format>
+   <label> Total Doses </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.6 </row><col> 1.0 </col>
+   <name> CumulativeDose </name>
+   <format> <integer/> </format>
+   <label> Cumulative Dose </label>
+</showvalue>
+
+<actionbutton>
+  <row> 8.2 </row><col> 1.0 </col>
+  <blockname> Reset </blockname>
+  <label> Reset </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Typical dose is 500 - 2000 mG/Day. </line>
+</infobutton>
+
+</groupbox>
+
+End

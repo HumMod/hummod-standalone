@@ -1,0 +1,85 @@
+HumMod / HypothalamusSweating
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HypothalamusSweating </name>
+
+<variables>
+
+<var>
+  <name> NerveActivity </name>
+</var>
+
+<var>
+  <name> TemperatureDifference </name>
+</var>
+
+<var>
+  <name> SetPoint </name>
+</var>
+
+<var>
+  <name> SkinTempOffset </name>
+</var>
+
+<parm>
+  <name> Base </name>
+  <val> 37.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> SkinTempOffset </name>
+  <point><x> 25 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 35 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> NerveActivity </name>
+  <point><x> 0.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 2.0 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcEffect </name>
+
+<def>
+  <name> SkinTempOffset </name>
+  <val> SkinTempOffset [ HeatSkin.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> SetPoint </name>
+  <val>
+      Base
+    + SkinTempOffset
+    + HypothalamusSweatingAcclimation.Offset
+  </val>
+</def>
+
+<def>
+  <name> TemperatureDifference </name>
+  <val> HeatCore.Temp(C) - SetPoint </val>
+</def>
+
+<def>
+  <name> NerveActivity </name>
+  <val> NerveActivity [ TemperatureDifference ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,48 @@
+HumMod / UT_InterstitialWater
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> UT_InterstitialWater </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> Vol(L) </name></var>
+
+<var><name> Pressure </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PressureVolume </name>
+  <point><x>   600.0 </x><y> -30.0 </y><slope>  0.01 </slope></point>
+  <point><x>  2000.0 </x><y>  -4.8 </y><slope>  0.0004 </slope></point>
+  <point><x>  5000.0 </x><y>   0.0 </y><slope>  0.0004 </slope></point>
+  <point><x> 12000.0 </x><y>  50.0 </y><slope>  0.01 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> Vol </name><val> UT_H2O.Vol - CellH2O.UT_Vol </val></def>
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+<def><name> Pressure </name><val> PressureVolume [ Vol ] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

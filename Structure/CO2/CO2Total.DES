@@ -1,0 +1,56 @@
+HumMod / CO2Total
+
+Created : 10-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CO2Total </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Inflow </name>
+  <val>
+      Bone-CO2.OutflowBase
+    + Brain-CO2.OutflowBase
+    + Fat-CO2.OutflowBase
+    + GITract-CO2.OutflowBase
+    + Kidney-CO2.OutflowBase
+    + LeftHeart-CO2.OutflowBase
+    + Liver-CO2.OutflowBase
+    + OtherTissue-CO2.OutflowBase
+    + RespiratoryMuscle-CO2.OutflowBase
+    + RightHeart-CO2.OutflowBase
+    + SkeletalMuscle-CO2.OutflowBase
+    + Skin-CO2.OutflowBase
+  </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> LungCO2.Expired * CO2Tools.LitersToMols </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

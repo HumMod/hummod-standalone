@@ -1,0 +1,124 @@
+HumMod / SweatDuct
+
+Created : 25-Mar-07
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> SweatDuct </name>
+
+<variables>
+
+<parm><name> FractReabBasic </name><val> 0.8 </val></parm>
+
+<var><name> FractReab </name></var>
+<var><name> FractReabK </name></var>
+
+<var><name> AldoEffect </name></var>
+
+<var><name> H2OInflow </name></var>
+<var><name> H2OReab </name></var>
+<var><name> H2OOutflow </name></var>
+
+<var><name> NaInflow </name></var>
+<var><name> NaReab </name></var>
+<var><name> NaOutflow </name></var>
+
+<var><name> KInflow </name></var>
+<var><name> KReab </name></var>
+<var><name> KOutflow </name></var>
+
+<var><name> ClInflow </name></var>
+<var><name> ClReab </name></var>
+<var><name> ClOutflow </name></var>
+
+<var><name> [Na+In] </name></var>
+<var><name> [Na+Out] </name></var>
+
+<var><name> [K+In] </name></var>
+<var><name> [K+Out] </name></var>
+
+<var><name> [Cl-In] </name></var>
+<var><name> [Cl-Out] </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> AldoEffect </name>
+  <point><x>   0 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+  <point><x>  12 </x><y> 1.0 </y><slope> 0.03 </slope></point>
+  <point><x> 100 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> FractReabK </name><val> LOG ( FractReabBasic ) / 15.0 </val></def>
+</block>
+
+<block><name> FractReab </name>
+
+<def>
+  <name> FractReab </name>
+  <val> EXP ( FractReabK * H2OInflow / AldoEffect ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def><name> H2OInflow </name><val> SweatGland.H2ORate </val></def>
+
+<def>
+  <name> AldoEffect </name>
+  <val> AldoEffect [ AldoPool.[Aldo(nG/dL)] ] </val>
+</def>
+
+<call> FractReab </call>
+
+<def><name> H2OReab </name><val> 0.0 </val></def>
+<def><name> H2OOutflow </name><val> H2OInflow - H2OReab </val></def>
+
+<def><name> NaInflow </name><val> SweatGland.NaRate </val></def>
+<def><name> NaReab </name><val> FractReab * NaInflow </val></def>
+<def><name> NaOutflow </name><val> NaInflow - NaReab </val></def>
+
+<def><name> KInflow </name><val> SweatGland.KRate </val></def>
+<def><name> KReab </name><val> 0.0 </val></def>
+<def><name> KOutflow </name><val> KInflow - KReab </val></def>
+
+<def><name> ClInflow </name><val> SweatGland.ClRate </val></def>
+<def><name> ClReab </name><val> FractReab * ClInflow </val></def>
+<def><name> ClOutflow </name><val> ClInflow - ClReab </val></def>
+
+<def><name> [Na+In] </name><val> SweatGland.[Na+] </val></def>
+<def><name> [K+In] </name><val> SweatGland.[K+] </val></def>
+<def><name> [Cl-In] </name><val> SweatGland.[Cl-] </val></def>
+
+<if>
+<test> H2OOutflow GT 0.0 </test>
+<true>
+  <def><name> [Na+Out] </name><val> NaOutflow / H2OOutflow </val></def>
+  <def><name> [K+Out] </name><val> KOutflow / H2OOutflow </val></def>
+  <def><name> [Cl-Out] </name><val> ClOutflow / H2OOutflow </val></def>
+</true>
+<false>
+  <def><name> [Na+Out] </name><val> [Na+In] </val></def>
+  <def><name> [K+Out] </name><val> [K+In] </val></def>
+  <def><name> [Cl-Out] </name><val> [Cl-In] </val></def>
+</false>
+</if>
+
+</block>
+
+</definitions>
+</structure>
+
+End

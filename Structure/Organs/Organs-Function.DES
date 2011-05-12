@@ -1,0 +1,47 @@
+HumMod / Organs-Function
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Function </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Bone-Function.Calc </call>
+  <call> Fat-Function.Calc </call>
+  <call> GITract-Function.Calc </call>
+  <call> Kidney-Function.Calc </call>
+  <call> LeftHeart-Function.Calc </call>
+  <call> Liver-Function.Calc </call>
+  <call> OtherTissue-Function.Calc </call>
+  <call> RespiratoryMuscle-Function.Calc </call>
+  <call> RightHeart-Function.Calc </call>
+  <call> SkeletalMuscle-Function.Calc </call>
+  <call> Skin-Function.Calc </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> Bone-Function.Wrapup </call>
+  <call> Brain-Function.Wrapup </call>
+  <call> Fat-Function.Wrapup </call>
+  <call> GITract-Function.Wrapup </call>
+  <call> Kidney-Function.Wrapup </call>
+  <call> LeftHeart-Function.Wrapup </call>
+  <call> Liver-Function.Wrapup </call>
+  <call> OtherTissue-Function.Wrapup </call>
+  <call> RespiratoryMuscle-Function.Wrapup </call>
+  <call> RightHeart-Function.Wrapup </call>
+  <call> SkeletalMuscle-Function.Wrapup </call>
+  <call> Skin-Function.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

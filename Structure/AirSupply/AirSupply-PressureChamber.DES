@@ -1,0 +1,42 @@
+HumMod / AirSupply-PressureChamber
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AirSupply-PressureChamber </name>
+
+<variables>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Pressure(Atm) </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Pressure </name>
+  <val> 760.0 * Pressure(Atm) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

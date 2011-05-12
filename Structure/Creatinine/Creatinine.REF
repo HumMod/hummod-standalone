@@ -1,0 +1,43 @@
+HumMod / Creatinine.REF
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Creatine   C4H9N3O2 M.W. = 131.15
+Creatinine C4H7N3O M.W. = 113.12
+
+So, creatinine is creatine - H2O
+
+For creatinine, mG * 0.00884 = mMol
+
+So, 1 mG/mL = 8.84 mOsm/L.
+
+   Clin. Sci. 58:327-335, 1980.
+
+   The volume of distribution of creatinine is 49%
+   of body weight.  With a body weight of 77 kG and
+   a total body water of 43.2 L, the volume of
+   distribution is 37.7 L or 0.87 times total body
+   water.
+
+   J. Gerontol. 31:155-162, 1976.
+
+   Normal plasma concentration is 0.82 mG/dL.  This
+   makes typical body stores equal to 309 mG.
+
+   Clin. Sci. 58:327-335, 1980.
+
+   Extrarenal excretion is proportional to plasma
+   concentration, so it has been reported as
+   clearance equal to 0.038 (L/Day)/kG B.W.  For
+   a 77 kG subject with plasma conc of 0.82, this
+   yields a rate constant of 0.02 dL/Min. Excretion
+   is about 1 1/2% of the total.                    */
+
+
+End

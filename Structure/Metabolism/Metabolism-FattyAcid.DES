@@ -1,0 +1,41 @@
+HumMod / Metabolism-FattyAcid
+
+Created : 01-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Metabolism-FattyAcid </name>
+
+<variables>
+
+<var><name> TotalBurn </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> TotalBurn </name>
+  <val>
+       Bone-Fuel.FAUsed(mG/Min)
+     + Fat-Fuel.FAUsed(mG/Min)
+     + GITract-Fuel.FAUsed(mG/Min)
+     + Kidney-Fuel.FAUsed(mG/Min)
+     + LeftHeart-Fuel.FAUsed(mG/Min)
+     + Liver-Fuel.FAUsed(mG/Min)
+     + OtherTissue-Fuel.FAUsed(mG/Min)
+     + RespiratoryMuscle-Fuel.FAUsed(mG/Min)
+     + RightHeart-Fuel.FAUsed(mG/Min)
+     + SkeletalMuscle-Fuel.FAUsed(mG/Min)
+     + Skin-Fuel.FAUsed(mG/Min)
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,84 @@
+HumMod / BloodPh
+
+Created : 29-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BloodPh </name>
+
+<variables>
+
+<var>
+  <name> ArtysPh </name>
+</var>
+
+<var>
+  <name> Artys[H+] </name>
+</var>
+
+<var>
+  <name> VeinsPh </name>
+</var>
+
+<var>
+  <name> Veins[H+] </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<copy>
+  <from> CO2Artys.Pressure </from>
+  <to> PhBlood.pCO2 </to>
+</copy>
+
+<copy>
+  <from> BloodIons.[SID(mEq/L)] </from>
+  <to> PhBlood.SID </to>
+</copy>
+
+<call> PhBlood.Calc </call>
+
+<copy>
+  <from> PhBlood.pH </from>
+  <to> ArtysPh </to>
+</copy>
+
+<copy>
+  <from> PhBlood.H+ </from>
+  <to> Artys[H+] </to>
+</copy>
+
+<copy>
+  <from> CO2Veins.Pressure </from>
+  <to> PhBlood.pCO2 </to>
+</copy>
+
+<copy>
+  <from> BloodIons.[SID(mEq/L)] </from>
+  <to> PhBlood.SID </to>
+</copy>
+
+<call> PhBlood.Calc </call>
+
+<copy>
+  <from> PhBlood.pH </from>
+  <to> VeinsPh </to>
+</copy>
+
+<copy>
+  <from> PhBlood.H+ </from>
+  <to> Veins[H+] </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

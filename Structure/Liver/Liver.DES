@@ -1,0 +1,26 @@
+HumMod / Liver
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Liver\ ?>
+
+<?include Liver-O2.DES ?>
+<?include Liver-Size.DES ?>
+
+<?include Liver-CO2.DES ?>
+<?include Liver-Lactate.DES ?>
+<?include Liver-Ph.DES ?>
+
+<?include Liver-Fuel.DES ?>
+<?include Liver-Function.DES ?>
+<?include Liver-Metabolism.DES ?>
+<?include Liver-AlphaReceptors.DES ?>
+<?include Liver-Structure.DES ?>
+
+End

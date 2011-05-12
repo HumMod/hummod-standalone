@@ -1,0 +1,110 @@
+HumMod / PulmArty DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PulmArty </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> Outflow </name></var>
+<parm><name> V0 </name><val> 110.0 </val></parm>
+<var><name> StressedVol </name></var>
+<var><name> Pressure </name></var>
+<var><name> ExternalPressure </name></var>
+<parm><name> Compliance </name><val> 5.3 </val></parm>
+<parm><name> Conductance </name><val> 1350 </val></parm>
+
+<constant><name> KS </name><val> 0.475 </val></constant>
+<constant><name> KD </name><val> 0.351 </val></constant>
+
+<var><name> SBP </name></var>
+<var><name> DBP </name></var>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 201.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> StressedVol </name>
+  <val> ( Vol - V0 ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> Thorax.AvePressure </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> ( StressedVol / Compliance ) + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> CalcOutflow </name>
+
+<def>
+  <name> Outflow </name>
+  <val> Conductance * ( Pressure - PulmCapys.Pressure ) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> DxMax </name>
+  <test> Conductance GT 0.0 </test>
+  <true> 0.5 * Compliance / Conductance </true>
+  <false> INFINITY </false>
+</conditional>
+
+<def>
+  <name> Inflow </name>
+  <val> RightVentricle.Outflow </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+</block>
+
+<block><name> PulsatilePressure </name>
+
+<def><name> SBP </name>
+  <val> Pressure + ( KS * ( CardiacOutput.StrokeVolume / Compliance ) ) </val>
+</def>
+
+<def><name> DBP </name>
+  <val> Pressure - ( KD * ( CardiacOutput.StrokeVolume / Compliance ) ) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

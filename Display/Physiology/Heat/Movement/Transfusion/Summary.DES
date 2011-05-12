@@ -1,0 +1,74 @@
+HumMod / Summary
+
+Created : 2010-04-22
+Last Modified : 2010-04-22
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> HeatTransfusion </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Flux </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Heat Gain </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Flux </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Transfusion.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Transfusion Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> AmbientTemperature.Temp(K) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Room Temp (deg K)) </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> SpecificHeat.Blood(kCal/G) </name>
+   <format><decimal> 5 </decimal></format>
+   <label> Specific Heat Blood </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for heat gain are kCal/Min. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

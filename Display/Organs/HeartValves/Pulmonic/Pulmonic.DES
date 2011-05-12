@@ -1,0 +1,36 @@
+HumMod / Pulmonic
+
+Created : 23-Aug-08
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<panel><name> HeartValves-Pulmonic </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> RightHeart(2) </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Heart Valves - Pulmonic </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\HeartValves\Pulmonic\ ?>
+
+<?include Stenosis.DES ?>
+<?include Regurgitation.DES ?>
+
+</panel>
+
+End

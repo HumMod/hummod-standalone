@@ -1,0 +1,99 @@
+HumMod / Baroreflex DES
+
+Created : 21-Oct-04
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> Baroreflex </name>
+
+<variables>
+
+<var><name> NA </name></var>
+
+<var><name> PressureChange </name></var>
+<var><name> PressureEffect </name></var>
+
+<var><name> TissueFunctionEffect </name></var>
+
+<parm><name> Tau </name><val> 10.0 </val></parm>
+
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> AdaptedPressure </name>
+  <outputname> AdaptedPressure </outputname>
+  <initialval> 97.0 </initialval>
+  <inputname> SinusPressure </inputname>
+  <rateconstname> RateConst </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.97 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PressureEffect </name>
+  <point><x> -50.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.02 </slope></point>
+  <point><x>  50.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+<def>
+  <name> RateConst </name>
+  <val> INVERT ( 60.0 * Tau ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> PressureChange </name>
+  <val> CarotidSinus.Pressure - AdaptedPressure </val>
+</def>
+
+<def>
+  <name> PressureEffect </name>
+  <val> PressureEffect [ PressureChange ] </val>
+</def>
+
+<def>
+  <name> TissueFunctionEffect </name>
+  <val> NOT OtherTissue-Function.Failed </val>
+</def>
+
+<conditional>
+  <name> NA </name>
+  <test> Clamp </test>
+  <true> Level </true>
+  <false> PressureEffect * TissueFunctionEffect </false>
+</conditional>
+
+</block>
+
+<block><name> Dervs </name>
+<def>
+  <name> SinusPressure </name>
+  <val> CarotidSinus.Pressure </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

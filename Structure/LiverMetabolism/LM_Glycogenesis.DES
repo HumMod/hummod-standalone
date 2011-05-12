@@ -1,0 +1,72 @@
+HumMod / LM_Glycogenesis
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_Glycogenesis </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> BasicRate </name><val> 75.0 </val></parm>
+
+<var><name> InsulinEffect </name></var>
+<var><name> MassEffect </name></var>
+<var><name> GlucoseEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  35 </x><y> 1.0 </y><slope> 0.03 </slope></point>
+  <point><x> 120 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x>   0 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100 </x><y> 1.0 </y><slope> -0.05 </slope></point>
+  <point><x> 200 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucoseEffect </name>
+  <point><x> 120 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 130 </x><y> 1.0 </y><slope> 0.06 </slope></point>
+  <point><x> 200 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ LM_Insulin.[InsulinDelayed] ] </val></def>
+<def><name> MassEffect </name><val> MassEffect [ LM_Glycogen.Mass ] </val></def>
+<def><name> GlucoseEffect </name><val> GlucoseEffect [ PortalVein-Glucose.[Glucose(mG/dL)] ] </val></def>
+
+<def><name> Rate </name>
+  <val>
+      BasicRate
+    * InsulinEffect
+    * MassEffect
+    * GlucoseEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

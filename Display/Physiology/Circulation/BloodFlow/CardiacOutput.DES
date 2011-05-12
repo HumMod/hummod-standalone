@@ -1,0 +1,95 @@
+HumMod / CardiacOutput
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 19.8 </high>
+   <wide> 30.0 </wide>
+   <title> Cardiac Output </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> CardiacOutput.Flow </name>
+   <format><integer/></format>
+   <label> Cardiac Output </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> CardiacOutput.Flow </name>
+      <label> CO </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 5000 </min><max> 6000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> CardiacOutput.StrokeVolume </name>
+   <format><integer/></format>
+   <label> Stroke Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Heart-Rate.Rate </name>
+   <format><integer/></format>
+   <label> Heart Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 12.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> CardiacOutput.StrokeVolume </name>
+      <label> SV </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> Heart-Rate.Rate </name>
+      <label> HR </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <scale>
+      <min> 70 </min><max> 80 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> NORMAL VALUES AND UNITS </line>
+  <line> Cardiac Output = 5400 mL/Min </line>
+  <line>  </line>
+  <line> Stroke Volume = 75 mL </line>
+  <line> Heart Rate = 72 /Min </line>
+</infobutton>
+
+</groupbox>
+
+End

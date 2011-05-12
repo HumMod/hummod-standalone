@@ -1,0 +1,42 @@
+HumMod / Aldosterone Reference
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Molecular weight of aldo is 360.4.
+Thus 1 pMol = 360.4 pG.
+
+Concentrations are pMol/L and
+nG/100 mL
+
+Typical [Aldo] is 330 pMol/L.
+
+Volume of distribution is body
+water (43,000 mL).
+
+Aldo is cleared by the liver.
+Extraction coefficient ~ 0.78,
+working on sphanchnic blood flow.
+
+nG/dL = 0.036 * pMol/L.
+
+Adrenal function depends on other
+tissue function.
+
+Acta Endo. 72:293, 1973.
+
+This paper shows a rather quick rise
+in [aldo] with AII infusion.  Thus,
+I'll make the acute response immediate.
+There may be a need later for a
+chronic response.
+
+The effect of [Aldo] on the nephron is
+delayed. This should be implemented in
+Nephron.
+
+End

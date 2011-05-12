@@ -1,0 +1,143 @@
+HumMod / InspiredAir
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 9.4 </high>
+   <wide> 30.0 </wide>
+   <title> Inspired Air </title>
+
+<structurename> AirSupply-InspiredAir </structurename>
+
+<label>
+  <row> 1.4 </row><col> 12 </col>
+  <text> % </text>
+</label>
+
+<label>
+  <row> 1.4 </row><col> 20 </col>
+  <text> mmHg </text>
+</label>
+
+<label>
+  <row> 2.8 </row><col> 1.0 </col>
+  <text> O2 </text>
+</label>
+
+<showvalue>
+   <row> 2.8 </row><col> 12 </col>
+   <name> O2(%) </name>
+   <format> <integer/> </format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 20 </col>
+   <name> PO2 </name>
+   <format> <integer/> </format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 3.8 </row><col> 1.0 </col>
+  <text> N2 </text>
+</label>
+
+<showvalue>
+   <row> 3.8 </row><col> 12 </col>
+   <name> N2(%) </name>
+   <format> <integer/> </format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 20 </col>
+   <name> PN2 </name>
+   <format> <integer/> </format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 4.8 </row><col> 1.0 </col>
+  <text> CO2 </text>
+</label>
+
+<showvalue>
+   <row> 4.8 </row><col> 12 </col>
+   <name> CO2(%) </name>
+   <format><decimal> 2 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 20 </col>
+   <name> PCO2 </name>
+   <format><decimal> 1 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 5.8 </row><col> 1.0 </col>
+  <text> CO </text>
+</label>
+
+<showvalue>
+   <row> 5.8 </row><col> 12 </col>
+   <name> CO(%) </name>
+   <format><decimal> 3 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 20 </col>
+   <name> PCO2 </name>
+   <format><decimal> 2 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 6.8 </row><col> 1.0 </col>
+  <text> Anesthetic </text>
+</label>
+
+<showvalue>
+   <row> 6.8 </row><col> 12 </col>
+   <name> Anesthetic(%) </name>
+   <format><decimal> 2 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 6.8 </row><col> 20 </col>
+   <name> PAnesthetic </name>
+   <format><decimal> 1 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 7.8 </row><col> 1.0 </col>
+  <text> Total </text>
+</label>
+
+<label>
+  <row> 7.8 </row><col> 12 </col>
+  <text> 100 </text>
+</label>
+
+<showvalue>
+   <row> 7.8 </row><col> 20 </col>
+   <name> Pressure </name>
+   <format> <integer/> </format>
+   <nolabel/>
+</showvalue>
+
+</groupbox>
+
+End

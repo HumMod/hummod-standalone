@@ -1,0 +1,306 @@
+5400QHP 2008 / BloodVolume.DOCS
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BloodVol </structurename>
+
+<vardoc>
+<name> Change </name>
+<topic> BloodVol - Overview </topic>
+<topic> BloodVol- Concentration Units </topic>
+<topic> BloodVol - Physical Units </topic>
+<seealso> BloodVol.Gain </seealso>
+<seealso> BloodVol.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> Collapsed  </name>
+<topic> Collapsed - Overview </topic>
+<topic> BloodVol.V0 </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> CollapsedEffect </name>
+<topic> Collapsed - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> FractionFatMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXX </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXXX </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXX </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXX </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXXX </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXX </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXX </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> XXXX </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> BloodVol - Overview </name>
+<label> Overview </label>
+<content>
+
+Blood contains both extracellular fluid (fluid in plasma) 
+and intracellular fluid (the fluid in the red blood cells). 
+The average blood volume of adults is about 7% of body 
+weight or 5400mL. About 60% of the blood is plasma (3000mL)
+and 40% is red blood cells (2400mL).
+
+Changes in blood volume can result from either gains or losses 
+of one or both RBC volume and plasma volume.
+
+Guyton AC, Hall JE Textbook of Medical Physiology. 
+Eleventh Edition 2006
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> BloodVol - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Volume mL or L
+Hct % 
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> BloodVol - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+The average blood volume of adults is 7% of body weight 
+or about 5400mL or 5.4L. The average red cell volume is 
+2400mL and the average plama volume is 3000mL.
+Hematocrit is typically 44% in males and 40% in females
+
+</content>
+</topicdoc>
+
+   
+
+<topicdoc>
+<name> BloodVolume.InitialHct </name>
+<label> InitialHct - Male & Female </label>
+<content>
+
+The hematocrit is the percentage of blood
+comprised of red blood cells. In females this is 
+40% or 2160mL. In males the hematocrit is 44% 
+or 2376mL. These values vary with body composition
+and other clinical conditions. 
+
+</content>
+</topicdoc>
+
+<topicdoc> 
+<name> Collapsed-Overview </name>
+<label> Overview </label>
+<content>
+
+Blood vessels tend to collapse at low volumes. This 
+occurs when the internal pressure in the vessel is 
+equal to the external pressure. (The transmural pressure 
+is thus zero). If the vessel is collapsed then the 
+blood volume is the unstressed volume.
+
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> StressedVol - Definition </name>
+<label> Definition </label>
+<content>
+
+The unstressed volume is the volume of blood in a blood 
+vessel at a transmural pressure of zero. Transmural 
+pressure refers to the difference between the pressure 
+within a vessel and the pressure outside the vessel. 
+The unstressed volume is denoted by V0. Additional volume 
+in excess of V0 which causes any increase in transmural 
+pressure is the stressed volume. The sum of stressed and 
+unstressed volumes is the total blood volume 
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> FractionLeanMass - Definiton </name>
+<label> Definition </label>
+<content>
+
+Blood volume is correlated with body weight. This correlation,
+however, diminishes as the amount of fat mass in the body 
+increases due to the relative paucity of vascularization 
+of adipose tissue. Blood volume is therefore more closely 
+related to lean body mass than actual weight. The variable 
+FractionLeanMass is the fraction of the blood volume which 
+exists within the lean mass of tissues in the body. Calculation 
+of blood volume based on both the amount of lean body mass and
+fat mass enables a more accurate measure of blood volume.
+
+Sjostrand T. Volume and distribution of blood and their
+significance in regulating the circulation. 
+Physiol Rev 33:202 - 228, 1953. 
+
+Kohrt WM, Malley MT, Dalsky GP, Holloszy JO. Body composition
+of healthy sedentary and trained, young and older men and women.
+Med Sci Sports Exerc 24(7):832 - 837, 1992.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> FractionFatMass - Definiton </name>
+<label> Definition </label>
+<content>
+
+Blood volume is correlated with body mass. This correlation,
+however, diminishes as the amount of fat mass in the body 
+increases due to the relative paucity of vascularization 
+of adipose tissue. FractionFatMass is the fraction of the 
+blood which is sequestered within the fat mass of tissues 
+in the body. Calculation of blood volume based on both the 
+amount of lean body mass and fat mass enables a more accurate 
+measure of blood volume.
+
+Sjostrand T. Volume and distribution of blood and their
+significance in regulating the circulation. 
+Physiol Rev 33:202 - 228, 1953 
+
+Kohrt WM, Malley MT, Dalsky GP, Holloszy JO. Body composition
+of healthy sedentary and trained, young and older men and women.
+Med Sci Sports Exerc 24(7):832 - 837, 1992.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> V0 - Definition </name>
+<label> Definition </label>
+<content>
+
+The unstressed volume is the volume of blood in a vessel
+at a transmural pressure of zero. Transmural pressure refers
+to the difference between the pressure within a vessel and 
+the pressure outside the vessel. The unstressed volume is 
+denoted by V0. Additional volume in excess of V0 which 
+causes any increase in transmural pressure is the stressed 
+volume. The sum of stressed and unstressed volumes is the 
+total blood volume within the circulation. Unstressed volume
+is approximately 70% of the total blood volume.
+  
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> StressedVolume - Overview </name>
+<label> Overview </label>
+<content>
+
+Additional volume in excess of V0 which causes any increase 
+in transmural pressure is the stressed volume. The sum of 
+stressed and unstressed volumes is the total blood volume 
+within the circulation.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+
+
+   
+End

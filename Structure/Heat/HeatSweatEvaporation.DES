@@ -1,0 +1,98 @@
+HumMod / HeatSweatEvaporation
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatSweatEvaporation </name>
+
+<variables>
+
+<var><name> Flux </name></var>
+
+<var><name> VaporPressureSkin </name></var>
+<var><name> VaporPressureGradient </name></var>
+
+<var><name> WindEffect </name></var>
+<var><name> BasicEvaporation </name></var>
+<var><name> MaximumEvaporation </name></var>
+
+<var><name> H2OEvaporation </name></var>
+<var><name> H2ODrip </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> WindEffect </name>
+  <point><x>  0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 20 </x><y> 1.5 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> BasicEvaporation </name>
+  <point><x>  0 </x><y>  0 </y><slope> 0.0 </slope></point>
+  <point><x> 40 </x><y> 20 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Flux </name>
+
+<copy>
+  <from> HeatSkin.Temp(C) </from>
+  <to> TempTools.Temp </to>
+</copy>
+
+<call> TempTools.TempToSatPres </call>
+
+<copy>
+  <from> TempTools.Pres </from>
+  <to> VaporPressureSkin </to>
+</copy>
+
+<def>
+  <name> VaporPressureGradient </name>
+  <val> ( VaporPressureSkin - RelativeHumidity.VaporPressure ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> WindEffect </name>
+  <val> WindEffect [ Wind.MPH ] </val>
+</def>
+
+<def>
+  <name> BasicEvaporation </name>
+  <val> BasicEvaporation [ VaporPressureGradient ] </val>
+</def>
+
+<def>
+  <name> MaximumEvaporation </name>
+  <val> WindEffect * BasicEvaporation </val>
+</def>
+
+<def>
+  <name> H2OEvaporation </name>
+  <val> SweatDuct.H2OOutflow MIN MaximumEvaporation </val>
+</def>
+
+<def>
+  <name> Flux </name>
+  <val> H2OEvaporation * TempTools.Vapor(kCal/G) </val>
+</def>
+
+<def>
+  <name> H2ODrip </name>
+  <val> SweatDuct.H2OOutflow - H2OEvaporation </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

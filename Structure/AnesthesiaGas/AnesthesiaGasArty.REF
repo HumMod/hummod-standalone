@@ -1,0 +1,43 @@
+HumMod / AnesthesiaGasArty.REF
+
+Created : 2010-05-22
+Last Modified : 2010-05-22
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+Arterial gas stores use mass balance, implemented
+by a stable integral.
+
+Blood Volume Distribution =========================
+
+Blood volume is divided into two compartments at
+the pulmonary capillaries and system capillaries.
+
+Arterial-Side Blood Volume ========================
+
+The arterial-side volume is comprised of
+
+# Pulmonary Capillaries
+# Pulmonary Veins
+# Left Atrium
+# Left Ventricle
+# Systemic Arteries
+# Arterial Sequestered Blood
+
+A typical volume is 1600 mL.
+
+Venous-Side Blood Volume ==========================
+
+The venous-side volume is comprised of
+
+# Systemic Veins
+# Splanchnic Veins
+# Right Atrium
+# Right Ventricle
+# Pulmonary Artery
+# Venous Sequestered Blood
+
+A typical volume is 3800 mL.
+
+End

@@ -1,0 +1,81 @@
+HumMod / Nutrition
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.2 </high>
+   <wide> 30.0 </wide>
+   <title> Nuitrition</title>
+
+<structurename> DietIntakeNutrition </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Intake(xGoal) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Intake (xGoal) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Intake(xGoal) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<maplist>
+  <name> Fixed? </name>
+  <map><val> 0 </val><img> Intake Controlled By Appetite </img></map>
+  <map><val> 1 </val><img> Fixed Intake </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Fixed? </name>
+  <listname> Fixed? </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<repeatlist>
+  <name> FixedIntake(xGoal) </name>
+  <repeat><reps> 30 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> FixedIntake(xGoal) </name>
+  <listname> FixedIntake(xGoal) </listname>
+  <label> Fixed Intake </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical value for nuitrition intake is 1.0 xGoal. </line>
+</infobutton>
+
+</groupbox>
+
+End

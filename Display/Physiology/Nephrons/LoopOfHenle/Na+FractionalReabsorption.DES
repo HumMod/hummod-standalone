@@ -1,0 +1,61 @@
+HumMod / Na+FractionalReabsorption
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 18.2 </row>
+   <col> 1.0 </col>
+   <high> 11.0 </high>
+   <wide> 30.0 </wide>
+   <title> Na+ Fractional Reabsorption </title>
+
+<structurename> LH_Na </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> FractReab </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Fraction </label>
+</showvalue>
+
+<showbargraph>
+  <row> 2.8 </row><col> 1.0 </col><high> 6.0 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar><name> LoadEffect </name><label> Na+ Load </label><color> BLUE </color></bar>
+  <bar><name> AldoEffect </name><label> [Aldo] </label><color> BLUE </color></bar>
+  <bar><name> FurosemideEffect </name><label> Furosemide </label><color> BLUE </color></bar>
+  <bar><name> Kidney-Function.Effect </name><label> Function </label><color> BLUE </color></bar>
+  <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+</showbargraph>
+
+<repeatlist>
+  <name> LH_Na.BasicFract </name>
+  <repeat><reps> 100 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.2 </row><col> 1.0 </col>
+  <name> BasicFract </name>
+  <listname> LH_Na.BasicFract </listname>
+  <label> Normal </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical fraction is 0.760. </line>
+  <line>  </line>
+  <line> Typical effects are 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

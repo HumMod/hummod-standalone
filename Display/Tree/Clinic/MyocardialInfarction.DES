@@ -1,0 +1,15 @@
+HumMod / MyocardialInfarction DES
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<leaf>
+  <name> MyocardialInfarction </name>
+  <label> Myocardial Infarction </label>
+  <parent> CLINIC </parent>
+</leaf>
+
+End

@@ -1,0 +1,27 @@
+HumMod / AutopsyReport.REF
+
+Created : 2010-05-19
+Last Modified : 2010-05-19
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+I'm trying to put the autopsy report in a
+double wide.
+
+Wide = 61
+Left column at col's 1.0 and 3.0.
+Right column at col's 32.0 and 34.0
+
+Another use of a double-wide is Startup |
+BodySize | Weight.
+
+The schema for checkmarks is
+
+<checkmark>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Autopsy.StillAlive </name>
+   <label> Subject is still alive </label>
+</checkmark>
+
+End

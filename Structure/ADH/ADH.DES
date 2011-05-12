@@ -1,0 +1,54 @@
+HumMod / ADH
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\ADH\ ?>
+
+<?include ADHPool.DES ?>
+<?include ADHPump.DES ?>
+<?include ADHClearance.DES ?>
+<?include ADHSlowMass.DES ?>
+<?include ADHFastMass.DES ?>
+<?include ADHSynthesis.DES ?>
+<?include ADHSecretion.DES ?>
+
+<structure><name> ADH </name>
+
+<definitions>
+<block><name> Parms </name>
+
+  <call> ADHPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ADHPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ADHSlowMass.Flux </call>
+  <call> ADHFastMass.Flux </call>
+
+  <call> ADHSynthesis.Dervs </call>
+  <call> ADHSecretion.Dervs </call>
+
+  <call> ADHSlowMass.Dervs </call>
+  <call> ADHFastMass.Dervs </call>
+
+  <call> ADHClearance.Dervs </call>
+  <call> ADHPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

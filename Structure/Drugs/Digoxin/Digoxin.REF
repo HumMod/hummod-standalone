@@ -1,0 +1,59 @@
+HumMod / Digoxin Reference
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Tabs are 0.125, 0.25, 0.375, and
+0.5 mG.  Usually one dose a day
+is enough.
+
+Oral priming dose: 0.75 - 1.25 mG.
+Oral maintenance dose: 0.125 - 0.5 mG.
+
+MW = 780.92
+
+Plasma conc is nG/mL.
+
+   1.5 - Excellent Therapeutic
+   2.0 - Nauseated
+   2.5 - Likely V-Fib
+
+Mass is uG. Conc is nG/mL.  So
+divide by a volume of distribution
+of L to get conc, since
+
+   uG/L = nG/mL
+
+Volume of distribution is very
+large, about 700 L.
+
+Bioavailability is 75%.  We'll take
+the rest out in the GI lumen.
+
+Digoxin is filtered and secreted by
+the proximal tubule.
+
+Loss tau is 56 hours or 3377 Min.  Loss
+rate constant (/Min) is 0.0002968.
+
+With a volume of distribution of 700 L,
+this is a clearance of 207 mL/Min.
+Divide it up into GFR and secretion.
+
+Clearance (mL/Min)
+
+Split the rate constant in the same
+proportion.
+
+   Filtration  0.000178 (GFR * [Conc])
+   Secretion   0.000118 (x Mass)
+               --------
+   Total       0.000296               */
+
+
+
+End

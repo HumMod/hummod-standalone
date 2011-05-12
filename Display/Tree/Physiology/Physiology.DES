@@ -1,0 +1,42 @@
+HumMod / Physiology DES
+
+Created : 14-Oct-04
+Last Modified : 2010-06-05
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> PHYSIOLOGY </name>
+  <label> Physiology </label>
+  <parent> MAINMENU </parent>
+</branch>
+
+<?path Display\Tree\Physiology\ ?>
+
+<?include AcidBase.DES ?>
+<?include AutonomicNerves.DES ?>
+<?include Blood.DES ?>
+<?include CarbonMonoxide.DES ?>
+<?include Catechols.DES ?>
+<?include CellProtein.DES ?>
+<?include Circulation.DES ?>
+<?include CirculatoryProtein.DES ?>
+<?include CO2.DES ?>
+<?include Electrolytes.DES ?>
+<?include H2O.DES ?>
+<?include HeartRate.DES ?>
+<?include Heat.DES ?>
+<?include Hormones\Hormones.DES ?>
+<?include Lactate.DES ?>
+<?include Lungs.DES ?>
+<?include Metabolism.DES ?>
+<?include Nephrons.DES ?>
+<?include O2.DES ?>
+<?include Orthostasis.DES ?>
+<?include Osmoles.DES ?>
+<?include PKs.DES ?>
+<?include Torso.DES ?>
+<?include VascularCompartments.DES ?>
+
+End

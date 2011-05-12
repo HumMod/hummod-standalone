@@ -1,0 +1,70 @@
+HumMod / ANP
+
+Created : 22-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 19.6 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> ANP </title>
+
+<structurename> ANPPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Target[ANP] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Initial [ANP] </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> InitialMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> ECFV.InitialVol(L) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> ECFV(L) </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> [ANP] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Current [ANP] </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 3.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 3.0 </col>
+  <name> ECFV.Vol(L) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> ECFV(L) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Target [ANP(pMol/L)] is 20.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

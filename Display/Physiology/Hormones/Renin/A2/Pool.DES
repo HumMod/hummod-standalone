@@ -1,0 +1,96 @@
+HumMod / Pool
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.4 </high>
+   <wide> 30.0 </wide>
+   <title> Pool </title>
+
+<structurename> A2Pool </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [A2(pG/mL)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [A2] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [A2(pG/mL)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 10.0 </row><col> 1.0 </col>
+   <name> FormationRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Formation Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.0 </row><col> 3 </col>
+   <name> EndogenousRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Endogenous </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.0 </row><col> 3 </col>
+   <name> A2Pump.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pump </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.4 </row><col> 1.0 </col>
+   <name> CEActivity </name>
+   <format><decimal> 1 </decimal></format>
+   <label> CEActivity </label>
+</showvalue>
+
+<slidebar>
+  <row> 14.6 </row><col> 3 </col>
+  <name> Block(%) </name>
+  <listname> Common.Percent </listname>
+  <label> Block (%) </label>
+</slidebar>
+
+<showvalue>
+   <row> 15.8 </row><col> 3 </col>
+   <name> CEBase </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Base </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical recumbent [A2] is 10.0 pG/mL. </line>
+  <line> </line>
+</infobutton>
+
+</groupbox>
+
+End

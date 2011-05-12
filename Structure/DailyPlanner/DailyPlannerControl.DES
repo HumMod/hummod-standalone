@@ -1,0 +1,494 @@
+HumMod / DailyPlannerControl
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DailyPlannerControl </name>
+
+<variables>
+
+<parm>
+  <name> Switch </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm>
+  <name> WorkLevel </name>
+  <val> 50.0 </val>
+</parm>
+
+<parm>
+  <name> WorkDuration </name>
+  <val> 50.0 </val>
+</parm>
+
+<parm>
+  <name> AerobicsLevel </name>
+  <val> 100.0 </val>
+</parm>
+
+<parm>
+  <name> AerobicsDuration </name>
+  <val> 30.0 </val>
+</parm>
+
+<parm>
+  <name> MealsDuration </name>
+  <val> 30.0 </val>
+</parm>
+
+<var>
+  <name> FeedingTime </name>
+</var>
+
+<var>
+  <name> FeedingFraction </name>
+</var>
+
+<var>
+  <name> Status </name>
+  <val> 0 </val>
+</var>
+
+<timervar>
+  <name> WaitingTimer </name>
+</timervar>
+
+<timervar>
+  <name> HourTimer </name>
+</timervar>
+
+<timervar>
+  <name> WorkTimer </name>
+</timervar>
+
+<timervar>
+  <name> AerobicsTimer </name>
+</timervar>
+
+<timervar>
+  <name> MealsTimer </name>
+</timervar>
+
+<var>
+  <name> MinutesIntoDay </name>
+</var>
+
+<var>
+  <name> HoursIntoDay </name>
+</var>
+
+<var>
+  <name> MinutesUntilMidnight </name>
+</var>
+
+<var>
+  <name> Task </name>
+</var>
+
+<constant><name> OFF </name><val> 0 </val></constant>
+<constant><name> STARTNOW </name><val> 1 </val></constant>
+<constant><name> STARTATMIDNIGHT </name><val> 2 </val></constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<onjustchanged><name> Switch </name>
+
+<testcase>
+
+<case>
+  <test> Switch EQ STARTNOW </test>
+  <call> Start </call>
+</case>
+
+<case>
+  <test> Switch EQ STARTATMIDNIGHT </test>
+  <call> StartWaiting </call>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <call> Stop </call>
+</case>
+
+</testcase>
+
+</onjustchanged>
+
+<def>
+  <name> FeedingTime </name>
+  <val> DailyPlannerSchedule.MealCount * DailyPlannerControl.MealsDuration </val>
+</def>
+
+<def>
+  <name> FeedingFraction </name>
+  <val> FeedingTime / 1440.0 </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+  <testcase>
+
+  <case>
+  <test> Status EQ 0 </test>
+  <exitblock/>
+  </case>
+
+  <case>
+  <test> Status EQ 1 </test>
+  <call> Waiting </call>
+  </case>
+
+  <case>
+  <test> Status EQ 2 </test>
+  <call> Active </call>
+  </case>
+
+  </testcase>
+</block>
+
+<block><name> StartWaiting </name>
+  <def><name> MinutesIntoDay </name><val> System.X REM 1440.0 </val></def>
+
+  <if>
+  <test> MinutesIntoDay </test>
+  <true>
+    <message> Daily planner will start at midnight. </message>
+    <def><name> Status </name><val> 1 </val></def>
+    <timer><name> WaitingTimer </name><val> 1440.0 - MinutesIntoDay </val><state> DOWN </state></timer>
+  </true>
+  <false>
+    <call> Start </call>
+  </false>
+  </if>
+</block>
+
+<block><name> Waiting </name>
+
+<ontimedout>
+  <name> WaitingTimer </name>
+  <call> Start </call>
+</ontimedout>
+</block>
+
+<block><name> Active </name>
+
+<ontimedout>
+  <name> HourTimer </name>
+  <call> NewTask </call>
+</ontimedout>
+
+<ontimedout>
+  <name> WorkTimer </name>
+  <call> Resting </call>
+</ontimedout>
+
+<ontimedout>
+  <name> AerobicsTimer </name>
+  <call> Resting </call>
+</ontimedout>
+
+<ontimedout>
+  <name> MealsTimer </name>
+  <call> Resting </call>
+</ontimedout>
+
+</block>
+
+<block><name> Start </name>
+  <message> Daily planner is starting. </message>
+  <def><name> Status </name><val> 2 </val></def>
+  <call> NewTask </call>
+</block>
+
+<block><name> Stop </name>
+  <def><name> Status </name><val> 0 </val></def>
+
+  <timer><name> WaitingTimer </name><state> OFF </state></timer>
+  <timer><name> HourTimer </name><state> OFF </state></timer>
+  <timer><name> WorkTimer </name><state> OFF </state></timer>
+  <timer><name> AerobicsTimer </name><state> OFF </state></timer>
+  <timer><name> MealsTimer </name><state> OFF </state></timer>
+
+  <def><name> Status.Activity </name><val> 3 </val></def>
+  <def><name> Status.Exertion </name><val> 0 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.LYING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+  <def><name> Status.Nutrition </name><val> 2 </val></def>
+</block>
+
+<block><name> NewTask </name>
+  <call> GetTask </call>
+
+  <testcase>
+
+  <case>
+  <test> Task EQ 0 </test>
+  <call> StartSleep </call>
+  </case>
+
+  <case>
+  <test> Task EQ 1 </test>
+  <call> StartRest </call>
+  </case>
+
+  <case>
+  <test> Task EQ 2 </test>
+  <call> StartWork </call>
+  </case>
+
+  <case>
+  <test> Task EQ 3 </test>
+  <call> StartAerobics </call>
+  </case>
+
+  <case>
+  <test> Task EQ 4 </test>
+  <call> StartMeals </call>
+  </case>
+
+  </testcase>
+
+  <timer><name> HourTimer </name><val> 60.0 </val><state> DOWN </state></timer>
+
+</block>
+
+<block><name> GetTask </name>
+  <def><name> HoursIntoDay </name><val> ROUND ( ( System.X REM 1440.0 ) / 60.0 ) </val></def>
+
+  <testcase>
+
+  <case>
+  <test> HoursIntoDay EQ 0 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour12AM-1AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 1 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour1AM-2AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 2 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour2AM-3AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 3 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour3AM-4AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 4 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour4AM-5AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 5 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour5AM-6AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 6 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour6AM-7AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 7 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour7AM-8AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 8 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour8AM-9AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 9 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour9AM-10AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 10 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour10AM-11AM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 11 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour11AM-12PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 12 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour12PM-1PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 13 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour1PM-2PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 14 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour2PM-3PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 15 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour3PM-4PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 16 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour4PM-5PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 17 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour5PM-6PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 18 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour6PM-7PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 19 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour7PM-8PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 20 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour8PM-9PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 21 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour9PM-10PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 22 </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour10PM-11PM </val></def>
+  </case>
+
+  <case>
+  <test> HoursIntoDay EQ 23  </test>
+  <def><name> Task </name><val> DailyPlannerSchedule.Hour11PM-12AM </val></def>
+  </case>
+
+  </testcase>
+
+</block>
+
+<block><name> StartSleep </name>
+  <def><name> Status.Activity </name><val> 0 </val></def>
+  <def><name> Status.Exertion </name><val> 0 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.LYING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+  <def><name> Status.Nutrition </name><val> 1 </val></def>
+</block>
+
+<block><name> StopSleep </name>
+  <call> Resting </call>
+</block>
+
+<block><name> StartRest </name>
+  <call> Resting </call>
+</block>
+
+<block><name> StartWork </name>
+  <timer><name> WorkTimer </name><val> WorkDuration </val><state> DOWN </state></timer>
+
+  <def><name> Status.Activity </name><val> 1 </val></def>
+  <def><name> Status.Exertion </name><val> 1 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.STANDING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+
+  <def><name> Status.Nutrition </name><val> 1 </val></def>
+</block>
+
+<block><name> StopWork </name>
+  <call> Resting </call>
+</block>
+
+<block><name> StartAerobics </name>
+  <timer><name> AerobicsTimer </name><val> AerobicsDuration </val><state> DOWN </state></timer>
+
+  <def><name> Status.Activity </name><val> 1 </val></def>
+  <def><name> Status.Exertion </name><val> 2 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.STANDING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+  <def><name> Status.Nutrition </name><val> 1 </val></def>
+</block>
+
+<block><name> StopAerobics </name>
+  <call> Resting </call>
+</block>
+
+<block><name> StartMeals </name>
+  <timer><name> MealsTimer </name><val> MealsDuration </val><state> DOWN </state></timer>
+
+  <def><name> Status.Activity </name><val> 1 </val></def>
+  <def><name> Status.Exertion </name><val> 0 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.SITTING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+  <def><name> Status.Nutrition </name><val> 0 </val></def>
+</block>
+
+<block><name> StopMeals </name>
+  <call> Resting </call>
+</block>
+
+<block><name> Resting </name>
+  <def><name> Status.Activity </name><val> 1 </val></def>
+  <def><name> Status.Exertion </name><val> 0 </val></def>
+
+  <def>
+     <name> PostureControl.Request </name>
+     <val> PostureControl.SITTING </val>
+  </def>
+  <call> PostureControl.RequestChange </call> 
+
+  <def><name> Status.Nutrition </name><val> 1 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

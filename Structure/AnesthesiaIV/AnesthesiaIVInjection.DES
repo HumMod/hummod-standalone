@@ -1,0 +1,114 @@
+HumMod / AnesthesiaIVInjection
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVInjection </name>
+
+<variables>
+
+<parm>
+  <name> Dose </name>
+  <val> 300.0 </val>
+</parm>
+
+<parm>
+  <name> Timespan </name>
+  <val> 30.0 </val>
+</parm>
+
+<var>
+  <name> K </name>
+  <val> 0.0 </val>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+<var>
+  <name> TotalInjections </name>
+  <val> 0.0 </val>
+</var>
+
+<var>
+  <name> CumulativeDose </name>
+  <val> 0.0 </val>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 3.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Loss </name>
+  <val> K * Mass </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> - Loss </val>
+</def>
+
+</block>
+
+<block><name> InjectNow </name>
+
+<def>
+  <name> Mass </name>
+  <val> Mass + Dose </val>
+</def>
+
+<def>
+  <name> K </name>
+  <val> INVERT ( 2.0 * ( Timespan / 60.0 ) ) </val>
+</def>
+
+<def>
+  <name> TotalInjections </name>
+  <val> TotalInjections + 1 </val>
+</def>
+
+<def>
+  <name> CumulativeDose </name>
+  <val> CumulativeDose + Dose </val>
+</def>
+
+</block>
+
+<block><name> Reset </name>
+
+<def>
+  <name> TotalInjections </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> CumulativeDose </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

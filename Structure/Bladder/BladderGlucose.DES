@@ -1,0 +1,53 @@
+HumMod / BladderGlucose
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BladderGlucose </name>
+<variables>
+
+<var><name> [Glucose] </name></var>
+<var><name> [Glucose(mMol/L)] </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <def><name> Change </name><val> CD_Glucose.Outflow </val></def>
+
+</block>
+
+<block><name> Conc </name>
+
+  <def><name> [Glucose] </name><val> Mass / BladderVolume.Mass </val></def>
+  <def><name> [Glucose(mMol/L)] </name><val> 100.0 * [Glucose] </val></def>
+
+</block>
+
+<block><name> Void </name>
+
+  <def><name> Mass </name><val> Mass - ( BladderVolume.VolumeVoid * [Glucose] ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

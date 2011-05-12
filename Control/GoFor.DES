@@ -1,0 +1,116 @@
+HumMod / GoFor
+
+   Created : 12-Mar-07
+   Last Modified : 2010-05-28
+   Author : Tom Coleman
+   Copyright : 2006-2010
+   By : University of Mississippi Medical Center
+
+<gofor>
+  <solutionint> 0.0166666 </solutionint>
+  <displayint> 0.0166666 </displayint>
+  <menuitem> 1 Sec </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 0.0833333 </solutionint>
+  <displayint> 0.0166666 </displayint>
+  <menuitem> 5 Sec </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 0.1666666 </solutionint>
+  <displayint> 0.0166666 </displayint>
+  <menuitem> 10 Sec </menuitem>
+</gofor>
+
+<gobar/>
+
+<gofor>
+  <solutionint> 1 </solutionint>
+  <displayint> 0.1666666 </displayint>
+  <menuitem> 1 Min </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 5.0 </solutionint>
+  <displayint> 0.5 </displayint>
+  <menuitem> 5 Min </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 10 </solutionint>
+  <displayint> 0.5 </displayint>
+  <menuitem> 10 Min </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 30.0 </solutionint>
+  <displayint> 5.0 </displayint>
+  <storageint> 2.0 </storageint>
+  <menuitem> 30 Min </menuitem>
+</gofor>
+
+<gobar/>
+
+<gofor>
+  <solutionint> 60 </solutionint>
+  <displayint> 10.0 </displayint>
+  <storageint> 5.0 </storageint>
+  <menuitem> 1 Hour </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 360.0 </solutionint>
+  <displayint> 60.0 </displayint>
+  <storageint> 30.0 </storageint>
+  <menuitem> 6 Hours </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 720.0 </solutionint>
+  <displayint> 120.0 </displayint>
+  <storageint> 60.0 </storageint>
+  <menuitem> 12 Hours </menuitem>
+</gofor>
+
+<gobar/>
+
+<gofor>
+  <solutionint> 1440 </solutionint>
+  <displayint> 240 </displayint>
+  <storageint> 120 </storageint>
+  <menuitem> 1 Day </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 10080 </solutionint>
+  <displayint> 1440 </displayint>
+  <storageint> 360 </storageint>
+  <menuitem> 1 Week </menuitem>
+</gofor>
+
+<gobar/>
+
+<gofor>
+  <solutionint> 43200.0 </solutionint>
+  <displayint> 2880 </displayint>
+  <storageint> 1440 </storageint>
+  <menuitem> 30 Days </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 86400.0 </solutionint>
+  <displayint> 2880 </displayint>
+  <storageint> 1440 </storageint>
+  <menuitem> 60 Days </menuitem>
+</gofor>
+
+<gofor>
+  <solutionint> 129600.0 </solutionint>
+  <displayint> 2880 </displayint>
+  <storageint> 1440 </storageint>
+  <menuitem> 90 Days </menuitem>
+</gofor>
+
+End

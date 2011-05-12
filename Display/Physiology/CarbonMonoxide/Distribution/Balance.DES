@@ -1,0 +1,84 @@
+HumMod / Balance
+
+Created : 2010-06-05
+Last Modified : 2010-06-05
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.2 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> CO </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [CO] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [CO] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [CO] </name>
+      <label> [CO] </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 0.001 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<repeatlist>
+  <name> EndogenousProduction </name>
+  <repeat><reps> 100 </reps><stepsize>  0.001 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.4 </row><col> 3.0 </col>
+  <name> EndogenousProduction </name>
+  <listname> EndogenousProduction </listname>
+  <label> Made </label>
+</slidebar>
+
+<showvalue>
+   <row> 13.6 </row><col> 3.0 </col>
+   <name> Uptake </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Uptake </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

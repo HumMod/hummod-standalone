@@ -1,0 +1,66 @@
+HumMod / Kidney-Myogenic DES
+
+Created : 11-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+
+<?path Structure\Kidney\ ?>
+
+<?include Kidney-MyogenicDelay.DES ?>
+
+<structure><name> Kidney-Myogenic </name>
+
+<variables>
+
+<parm><name> Tau </name><val> 4.0 </val></parm>
+
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+
+<var><name> PressureChange(Steady-State) </name></var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> AdaptedPressure </name>
+  <outputname> AdaptedPressure </outputname>
+  <initialval> 77.0 </initialval>
+  <inputname> InterlobarPressure </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.1 </errorlim>
+</delay>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT ( 60.0 * Tau ) </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> InterlobarPressure </name><val> ( Kidney-ArcuateArtery.Pressure + GlomerulusFiltrate.Pressure ) / 2.0 </val></def>
+
+<conditional><name> PressureChange(Steady-State) </name>
+<test> Clamp </test>
+<true> Level </true>
+<false> InterlobarPressure - AdaptedPressure </false>
+</conditional>
+
+<call> Kidney-MyogenicDelay.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

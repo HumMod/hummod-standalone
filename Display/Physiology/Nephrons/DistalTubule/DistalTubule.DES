@@ -1,0 +1,16 @@
+HumMod / DistalTubule
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Nephrons\DistalTubule\ ?>
+
+<?include Aldosterone\Aldosterone.DES ?>
+<?include Potassium\Potassium.DES ?>
+<?include Sodium\Sodium.DES ?>
+
+End

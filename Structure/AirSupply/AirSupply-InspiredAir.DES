@@ -1,0 +1,201 @@
+HumMod / AirSupply-InspiredAir
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AirSupply-InspiredAir </name>
+
+<variables>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+<var>
+  <name> O2(%) </name>
+</var>
+
+<var>
+  <name> N2(%) </name>
+</var>
+
+<var>
+  <name> CO2(%) </name>
+</var>
+
+<var>
+  <name> CO(%) </name>
+</var>
+
+<var>
+  <name> Anesthetic(%) </name>
+</var>
+
+<var>
+  <name> [O2] </name>
+</var>
+<var>
+  <name> PO2 </name>
+</var>
+
+<var>
+  <name> [N2] </name>
+</var>
+<var>
+  <name> PN2 </name>
+</var>
+
+<var>
+  <name> [CO2] </name>
+</var>
+<var>
+  <name> PCO2 </name>
+</var>
+
+<var>
+  <name> [CO] </name>
+</var>
+<var>
+  <name> PCO </name>
+</var>
+
+<var>
+  <name> [Anesthetic] </name>
+</var>
+<var>
+  <name> PAnesthetic </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> Pressure </name>
+  <test> AirSupply-PressureChamber.Switch </test>
+  <true> AirSupply-PressureChamber.Pressure </true>
+  <false> Barometer.Pressure </false>
+</conditional>
+
+<if>
+<test> AirSupply-GasTanks.Switch </test>
+
+<true>
+
+<def>
+  <name> O2(%) </name>
+  <val> AirSupply-GasTanks.O2(%) </val>
+</def>
+
+<def>
+  <name> N2(%) </name>
+  <val> AirSupply-GasTanks.N2(%) </val>
+</def>
+
+<def>
+  <name> CO2(%) </name>
+  <val> AirSupply-GasTanks.CO2(%) </val>
+</def>
+
+<def>
+  <name> CO(%) </name>
+  <val> AirSupply-GasTanks.CO(%) </val>
+</def>
+
+<def>
+  <name> Anesthetic(%) </name>
+  <val> AirSupply-GasTanks.Anesthetic(%) </val>
+</def>
+
+</true>
+
+<false>
+
+<def>
+  <name> O2(%) </name>
+  <val> 21.0 </val>
+</def>
+
+<def>
+  <name> N2(%) </name>
+  <val> 79.0 </val>
+</def>
+
+<def>
+  <name> CO2(%) </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> CO(%) </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> Anesthetic(%) </name>
+  <val> 0.0 </val>
+</def>
+
+</false>
+</if>
+
+<def>
+  <name> [O2] </name>
+  <val> 0.01 * O2(%) </val>
+</def>
+
+<def>
+  <name> PO2 </name>
+  <val> [O2] * Pressure </val>
+</def>
+
+<def>
+  <name> [N2] </name>
+  <val> 0.01 * N2(%) </val>
+</def>
+
+<def>
+  <name> PN2 </name>
+  <val> [N2] * Pressure </val>
+</def>
+
+<def>
+  <name> [CO2] </name>
+  <val> 0.01 * CO2(%) </val>
+</def>
+
+<def>
+  <name> PCO2 </name>
+  <val> [CO2] * Pressure </val>
+</def>
+
+<def>
+  <name> [CO] </name>
+  <val> 0.01 * CO(%) </val>
+</def>
+
+<def>
+  <name> PCO </name>
+  <val> [CO] * Pressure </val>
+</def>
+
+<def>
+  <name> [Anesthetic] </name>
+  <val> 0.01 * Anesthetic(%) </val>
+</def>
+
+<def>
+  <name> PAnesthetic </name>
+  <val> [Anesthetic] * Pressure </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

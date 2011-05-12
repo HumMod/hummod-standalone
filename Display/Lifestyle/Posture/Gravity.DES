@@ -1,0 +1,41 @@
+HumMod / Gravity
+
+Created : 16-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Gravity </title>
+
+<repeatlist>
+  <name> Gravity.Gz </name>
+  <repeat><reps> 30 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps> 14 </reps><stepsize> 0.5 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Gravity.Gz </name>
+  <listname> Gravity.Gz </listname>
+  <label> Gz </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Gravity normally acts downward </line>
+  <line> along the spine when the subject </line>
+  <line> is standing. </line>
+</infobutton>
+
+</groupbox>
+
+End

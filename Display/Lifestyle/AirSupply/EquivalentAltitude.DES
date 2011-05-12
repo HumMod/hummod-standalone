@@ -1,0 +1,49 @@
+HumMod / EquivalentAltitude
+
+Created : 20-Sep-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 11.8 </row>
+   <col> 1.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> Equivalent Altitude </title>
+
+<structurename> EquivalentAltitude </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1 </col>
+   <name> Feet </name>
+   <format> <integer/> </format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> GeographicAltitude </name>
+   <format> <integer/> </format>
+   <label> Geographic </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> OxygenAltitude </name>
+   <format> <integer/> </format>
+   <label> Oxygen </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1 </col>
+   <name> AirSupply-InspiredAir.O2(%) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Inspired O2 (%) </label>
+</showvalue>
+
+</groupbox>
+
+End

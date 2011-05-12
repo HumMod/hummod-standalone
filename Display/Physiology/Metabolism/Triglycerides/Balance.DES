@@ -1,0 +1,104 @@
+HumMod / Balance
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 18.2 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> TriglyceridePool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 14000 </min><max> 15000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 3.0 </col>
+  <name> GutAbsorption </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gut Absorption </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.2 </row><col> 3.0 </col>
+  <name> LiverRelease </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Liver Release </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.6 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.6 </row><col> 3.0 </col>
+  <name> TriglycerideHydrolysis.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Hydrolysis </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.6 </row><col> 3.0 </col>
+  <name> TriglycerideDecomposition.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Decomposition </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for triglyceride movement are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

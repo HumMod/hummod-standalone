@@ -1,0 +1,126 @@
+HumMod / Summary
+
+Created : 17-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 22.0 </row>
+   <col> 1.0 </col>
+   <high> 14.0 </high>
+   <wide> 30.0 </wide>
+   <title> Outflow Summary </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> SystemicArtys.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Arteries </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> OrganFlow.HepaticVeinFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Splanchnic </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> OrganFlow.PeripheralFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Peripheral </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> SystemicVeins.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 1.0 </col>
+   <name> SplanchnicVeins.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Splanchnic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 1.0 </col>
+   <name> RightAtrium.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Atrium </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 1.0 </col>
+   <name> RightVentricle.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Ventricle </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.4 </row><col> 1.0 </col>
+   <name> PulmArty.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Artery </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> PulmCapys.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Capillaries </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.4 </row><col> 1.0 </col>
+   <name> PulmVeins.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.4 </row><col> 1.0 </col>
+   <name> LeftAtrium.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Atrium </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 1.0 </col>
+   <name> LeftVentricle.Outflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Ventricle </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mL/Min. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Systemic Arteries = 5400.0 </line>
+  <line>  </line>
+  <line> Splanchnic = 1250.0 </line>
+  <line> Periphery = 4150.0 </line>
+  <line>  </line>
+  <line> Systemic Veins = 4150.0 </line>
+  <line> Splanchnic Veins = 1250.0 </line>
+  <line> Right Atrium = 5400.0 </line>
+  <line> Right Ventricle = 5400.0 </line>
+  <line> Pulmonary Artery = 5400.0 </line>
+  <line> Pulmonary Capillaries = 5400.0 </line>
+  <line> Pulmonary Veins = 5400.0 </line>
+  <line> Left Atrium = 5400.0 </line>
+  <line> Left Ventricle = 5400.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

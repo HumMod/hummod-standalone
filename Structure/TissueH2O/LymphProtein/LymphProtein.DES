@@ -1,0 +1,46 @@
+HumMod / LymphProtein
+
+Created : 25-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\TissueH2O\LymphProtein\ ?>
+
+<?include UT_LymphProtein.DES ?>
+<?include MT_LymphProtein.DES ?>
+<?include LT_LymphProtein.DES ?>
+
+<structure><name> LymphProtein </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> UT_LymphProtein.Dervs </call>
+<call> MT_LymphProtein.Dervs </call>
+<call> LT_LymphProtein.Dervs </call>
+
+<def><name> Rate </name>
+  <val>
+      UT_LymphProtein.Rate
+    + MT_LymphProtein.Rate
+    + LT_LymphProtein.Rate
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

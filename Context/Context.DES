@@ -1,0 +1,27 @@
+HumMod / Context
+
+Created : 23-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\ ?>
+
+<?include Traits\Traits.DES ?>
+<?include Start\Start.DES ?>
+
+<structure><name> Context </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Traits.Calc </call>
+  <call> Start.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

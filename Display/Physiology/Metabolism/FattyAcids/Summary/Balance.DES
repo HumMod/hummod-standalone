@@ -1,0 +1,118 @@
+HumMod / Balance
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 22.4 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> FAPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 2000 </min><max> 3000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.4 </row><col> 3.0 </col>
+  <name> TriglycerideHydrolysis.FattyAcidRate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Triglyceride Hydrolysis </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.4 </row><col> 3.0 </col>
+  <name> LipidDeposits-Release.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Adipose Release </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.8 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.8 </row><col> 3.0 </col>
+  <name> Metabolism-FattyAcid.TotalBurn </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Tissue Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 18.8 </row><col> 3.0 </col>
+  <name> LipidDeposits-Uptake.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Adipose Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 19.8 </row><col> 3.0 </col>
+  <name> LM_Ketoacids.FattyAcidUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Ketoacid Synthesis </label>
+</showvalue>
+
+<showvalue>
+  <row> 20.8 </row><col> 3.0 </col>
+  <name> FADecomposition.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Decomposition </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for fatty acid movement are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

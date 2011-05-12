@@ -1,0 +1,40 @@
+HumMod / Ketoacids.REF
+
+Created : 01-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   Amer.J.Med. 61:9, 1976.
+
+   This review develops a 2 component
+   scheme of KA synthesis.
+
+   # Insulin lack stimulates FFA
+     release from adipose tissue.
+     Increased blood [FFA] stimulate
+     hepatic KA synthesis.
+
+   # Glucagon acts directly on the
+     liver to stimulate KA synthesis.
+
+   NEJM 292:985, 1975.
+
+   Insulin was infused into diabetics
+   and then the infusion was abruptly
+   stopped.  Blood [KA] began rising
+   immediately.
+
+   JCI 56:1340, 1975.
+
+   Infusing glucagon and releasing
+   FFA leads to an increase in [KA]
+   that begins immediately.
+
+So hepatic synthesis is a function of glucagon and fatty acid
+effects.
+
+End

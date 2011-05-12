@@ -1,0 +1,36 @@
+HumMod / Aldosterone
+
+Created : 07-Apr-05
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<?path Structure\Aldosterone\ ?>
+
+<?include AldoPool.DES ?>
+<?include AldoSecretion.DES ?>
+<?include AldoDisposal.DES ?>
+<?include AldoPump.DES ?>
+<?include AldoTumor.DES ?>
+
+<structure><name> Aldosterone </name>
+
+<definitions>
+
+<block><name> CalcConc </name>
+  <call> AldoPool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> AldoPump.Dervs </call>
+  <call> AldoSecretion.Dervs </call>
+  <call> AldoDisposal.Dervs </call>
+  <call> AldoPool.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End
+End

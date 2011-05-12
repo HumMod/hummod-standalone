@@ -1,0 +1,40 @@
+HumMod / Drugs DES
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Drugs </name>
+  <label> Drugs </label>
+  <parent> CLINIC </parent>
+</branch>
+
+<leaf>
+  <name> DrugsThiazide </name>
+  <label> Chlorothiazide </label>
+  <parent> Drugs </parent>
+</leaf>
+
+<leaf>
+  <name> DrugsDigoxin </name>
+  <label> Digoxin </label>
+  <parent> Drugs </parent>
+</leaf>
+
+<leaf>
+  <name> DrugsFurosemide </name>
+  <label> Furosemide </label>
+  <parent> Drugs </parent>
+</leaf>
+
+<leaf>
+  <name> DrugsMidodrine </name>
+  <label> Midodrine </label>
+  <parent> Drugs </parent>
+</leaf>
+
+End

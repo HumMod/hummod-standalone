@@ -1,0 +1,24 @@
+HumMod / VascularCompartments
+
+Created : 24-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\VascularCompartments\ ?>
+
+<?include LeftAtrium\LeftAtrium.DES ?>
+<?include LeftVentricle\LeftVentricle.DES ?>
+<?include PulmonaryArtery\PulmonaryArtery.DES ?>
+<?include PulmonaryCapillaries\PulmonaryCapillaries.DES ?>
+<?include PulmonaryVeins\PulmonaryVeins.DES ?>
+<?include RightAtrium\RightAtrium.DES ?>
+<?include RightVentricle\RightVentricle.DES ?>
+<?include SplanchnicVeins\SplanchnicVeins.DES ?>
+<?include SystemicArteries\SystemicArteries.DES ?>
+<?include SystemicVeins\SystemicVeins.DES ?>
+
+End

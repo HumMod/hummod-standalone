@@ -1,0 +1,93 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> CarotidSinus </structurename>
+
+<vardoc>
+<name> CarotidSinus.Level </name>
+<topic> CarotidSinus - Overview </topic>
+<seealso> CarotidSinus.Pressure </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> CarotidSinus.Pressure </name>
+<topic> Pressure - Overview </topic>
+<topic> Pressure - Values </topic>
+<seealso> CarotidSinus.Level </seealso>
+<seealso> RegionalPressure.Carotid </seealso>
+<seealso> Baroreflex </seealso>
+</vardoc>
+
+<vardoc>
+<name> CarotidSinus.Switch </name>
+<topic> CarotidSinus - Overview </topic>
+</vardoc>
+
+<topicdoc>
+<name> CarotidSinus - Overview </name>
+<label> Overview </label>
+<content>
+
+The carotid sinus is a region located on the wall 
+of each internal carotid artery slightly above the
+the carotid bifurcation of the carotid artery. 
+It contains abundant pressure receptors called 
+baroreceptors. These baroreceptors are spray-type 
+nerve endings that are stimulated when stretched. 
+Signals are transmitted from each each carotid sinus 
+through very small Hering's nerve to the glossopharyngeal 
+nerve and then to the tractus solitarius in the medullary 
+area of the brain stem. The baroreceptors respond 
+extremely rapidly to changes in arterial pressure. 
+Excitation reflexly causes the arterial pressure to 
+decrease by decreasing both peripheral resistance and 
+cardiac output. 
+
+The switch feature enables the model user to disable 
+the carotid sinus reflex. When the switch is off, 
+carotid artery pressure is equal to arterial pressure 
+and the reflex is functional. When the switch is on, 
+the carotid artery pressure is equal to a fixed perfusion 
+pressure defined by the user. 
+
+Angel-Davis J, Daly M de B. Comparison of reflex 
+vasomotor responses to separate and combined stimulation 
+of carotid sinus and aortic arch baroreceptors by 
+pulsatile and non-pulsatile pressures in the dog. 
+J Physiol 209: 257-293, 1970.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Pressure </name>
+<label> Pressure - Overview </label>
+<content>
+
+Carotid sinus pressure is aortic pressure plus the
+hydrostatic gradient.Units are mmHg
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Pressure - Values </name>
+<label> values </label>
+<content>
+
+In the upright position:
+Aortic pressure = 97mmHg
+Hydrostatic Gradient = -15mmHg
+Sinus Pressure = 82mmHg
+
+</content>
+</topicdoc>
+
+   
+
+End

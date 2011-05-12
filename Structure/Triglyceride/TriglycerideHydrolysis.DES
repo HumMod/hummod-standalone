@@ -1,0 +1,66 @@
+HumMod / TriglycerideHydrolyssis
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> TriglycerideHydrolysis </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> TriglycerideEffect </name></var>
+
+<parm><name> Basic </name><val> 100.0 </val></parm>
+
+<constant><name> TRIG_TO_FFA </name><val> 0.89 </val></constant>
+<constant><name> TRIG_TO_GLY </name><val> 0.11 </val></constant>
+
+<var><name> FattyAcidRate </name></var>
+<var><name> GlycerolRate </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> TriglycerideEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100 </x><y> 1.0 </y><slope> 0.03 </slope></point>
+  <point><x> 200 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Rate </name>
+  <def>
+    <name> TriglycerideEffect </name>
+    <val> TriglycerideEffect [ TriglyceridePool.[Triglyceride(mG/dL)] ] </val>
+  </def>
+
+  <def>
+    <name> Rate </name>
+    <val> Basic * TriglycerideEffect </val>
+  </def>
+
+  <def>
+    <name> FattyAcidRate </name>
+    <val> TRIG_TO_FFA * Rate </val>
+  </def>
+
+  <def>
+    <name> GlycerolRate </name>
+    <val> TRIG_TO_GLY * Rate </val>
+  </def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

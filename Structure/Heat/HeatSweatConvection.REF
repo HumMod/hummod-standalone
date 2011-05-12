@@ -1,0 +1,13 @@
+HumMod / HeatSweatConvection.REF
+
+Created : 2010-05-17
+Last Modified : 2010-05-17
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+Heat loss by convection is a function of the sweat
+rate, the temperature of the skin (K) and the
+specific heat of H2O (kCal/G).
+
+End

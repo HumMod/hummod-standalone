@@ -1,0 +1,138 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> OrganFlow </structurename>
+
+<vardoc>
+<name> OrganFlow.PeripheralFlow </name>
+<topic> PeripheralFlow - Overview </topic>
+<topic> PeripheralFlow - Physical Units </topic>
+<topic> PeripheralFlow - Concentration Units</topic>
+<seealso>Bone-Flow.BloodFlow  </seealso>
+<seealso>Brain-Flow.BloodFlow  </seealso>
+<seealso>Fat-Flow.BloodFlow   </seealso>
+<seealso>Kidney-Flow.BloodFlow   </seealso>
+<seealso>LeftHeart-Flow.BloodFlow   </seealso>
+<seealso>OtherTissue-Flow.BloodFlow   </seealso>
+<seealso>RespiratoryMuscle-Flow.BloodFlow    </seealso>
+<seealso>RightHeart-Flow.BloodFlow   </seealso>
+<seealso>SkeletalMuscle-Flow.BloodFlow   </seealso>
+<seealso>Skin-Flow.BloodFlow   </seealso>
+
+
+</vardoc>
+
+<vardoc>
+<name> OrganFlow.HepaticVeinFlow </name>
+<topic> HepaticVeinFlow - Overview </topic>
+<topic> HepaticVeinFlow - Physical Units </topic>
+<topic> HepaticVeinFlow - Concentration Units </topic>
+<seealso> GITract-Flow.BloodFlow </seealso>
+<seealso> HepaticArty.Flow </seealso>
+</vardoc>
+
+<topicdoc>
+<name> PeripheralFlow - Overview </name>
+<label> Overview </label>
+<content>
+
+Peripheral flow is all organ flow minus the 
+Hepatic Vein Flow.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PeripheralFlow - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Flow is expressed in mL/min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PeripheralFlow - Concentration Units </name>
+<label> Concentration Units  </label>
+<content>
+
+Typical values for peripheral flow are 4180mL/Min
+
+Individual organ flows are shown below :
+
+Organ     Flow (mL/Min) 
+-------- ------- 
+Bone       420  
+Brain      820 
+Fat        240   
+Kidney    1200  
+LHeart     190  
+Other      380  
+RespMus    100   
+RHeart      40   
+SkeMus     650  
+Skin       140   
+------- ------- 
+Total     4180
+
+Williams LR and Leggett RW. Reference values for resting
+blood flow to organs of man. Clinical Physics and 
+Physiological Measurement Vol 10, No 3, 187 - 217;1989.
+
+Leggett RW and Williams LR. A proposed blood circulation
+model for reference man. Health Physics 69(2):187-201;1995
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> HepaticVeinFlow - Overview </name>
+<label> Overview </label>
+<content>
+
+Hepatic Vein Flow is GITract Flow plus Hepatic Artery Flow
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> HepaticVeinFlow - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Hepatic Vein Flow is expressed in mL/min
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> HepaticVeinFlow - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Hepatic Vein Flow is GITract Flow plus hepatic artery flow   
+
+  GITract 1000mL/min
+  HepArty  250mL/min
+--------- ----
+Total     1250mL/min
+
+Williams LR and Leggett RW. Reference values for resting
+blood flow to organs of man. Clinical Physics and 
+Physiological Measurement Vol 10, No 3, 187 - 217;1989.
+
+Leggett RW and Williams LR. A proposed blood circulation
+model for reference man. Health Physics 69(2):187-201;1995
+
+
+</content>
+</topicdoc>
+   
+
+End

@@ -1,0 +1,18 @@
+Digital Human / FSH
+
+Created : 07-Apr-05
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path docs\FSH\ ?>
+
+<?include FSH-Circulating.docs ?>
+<?include FSH-AnteriorPituitary.docs ?>
+
+</docs>
+End

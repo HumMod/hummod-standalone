@@ -1,0 +1,19 @@
+Digital Human / Sweat
+
+Created : 25-Mar-07
+Last Modified : 20-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path Docs\Sweat\ ?>
+
+<?include SweatGland.docs ?>
+<?include SweatDuct.docs ?>
+<?include SweatFuel.docs ?>
+
+</docs>
+End

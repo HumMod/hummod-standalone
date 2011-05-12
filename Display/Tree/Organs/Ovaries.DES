@@ -1,0 +1,96 @@
+HumMod / Ovaries
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Ovaries </name>
+  <label> Ovaries </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Ovaries-Summary </name>
+  <label> Summary </label>
+  <parent> Ovaries </parent>
+</leaf>
+
+<branch>
+  <name> Ovaries-Follicle </name>
+  <label> Follicle </label>
+  <parent> Ovaries </parent>
+</branch>
+
+<leaf>
+  <name> Follicle-Summary </name>
+  <label> Summary </label>
+  <parent> Ovaries-Follicle </parent>
+</leaf>
+
+<leaf>
+  <name> Follicle-Growth </name>
+  <label> Growth </label>
+  <parent> Ovaries-Follicle </parent>
+</leaf>
+
+<leaf>
+  <name> Follicle-Atresia </name>
+  <label> Atresia </label>
+  <parent> Ovaries-Follicle </parent>
+</leaf>
+
+<branch>
+  <name> Ovaries-CorpusLuteum </name>
+  <label> Corpus Luteum </label>
+  <parent> Ovaries </parent>
+</branch>
+
+<leaf>
+  <name>CorpusLuteum-Summary </name>
+  <label> Summary </label>
+  <parent> Ovaries-CorpusLuteum </parent>
+</leaf>
+
+<leaf>
+  <name>CorpusLuteum-Growth </name>
+  <label> Growth </label>
+  <parent> Ovaries-CorpusLuteum </parent>
+</leaf>
+
+<leaf>
+  <name>CorpusLuteum-Involution </name>
+  <label> Involution </label>
+  <parent> Ovaries-CorpusLuteum </parent>
+</leaf>
+
+<separatorbar><parent> Ovaries </parent></separatorbar>
+
+<leaf>
+  <name> Ovaries-Estradiol </name>
+  <label> Estradiol </label>
+  <parent> Ovaries </parent>
+</leaf>
+
+<leaf>
+  <name> Ovaries-Progesterone </name>
+  <label> Progesterone </label>
+  <parent> Ovaries </parent>
+</leaf>
+
+<leaf>
+  <name> Ovaries-Testosterone </name>
+  <label> Testosterone </label>
+  <parent> Ovaries </parent>
+</leaf>
+
+<leaf>
+  <name> Ovaries-Inhibin </name>
+  <label> Inhibin </label>
+  <parent> Ovaries </parent>
+</leaf>
+
+End

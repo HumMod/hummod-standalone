@@ -1,0 +1,53 @@
+HumMod / PortalVein-FattyAcid
+
+Created : 30-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PortalVein-FattyAcid </name>
+
+<variables>
+
+<var><name> [FattyAcid] </name></var>
+<var><name> [FattyAcid(mG/dL)] </name></var>
+
+<var><name> [Increment] </name></var>
+<var><name> [Increment(mG/dL)] </name></var>
+
+<var><name> [Decrement] </name></var>
+<var><name> [Decrement(mG/dL)] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<conditional><name> [Increment] </name>
+  <test> PortalVein.PlasmaFlow GT 0.0 </test>
+  <true> GILumenFat.Absorption / PortalVein.PlasmaFlow </true>
+  <false> 0.0 </false>
+</conditional>
+
+<conditional><name> [Decrement] </name>
+  <test> PortalVein.PlasmaFlow GT 0.0 </test>
+  <true> GITract-Fuel.FAUsed(mG/Min) / PortalVein.PlasmaFlow </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> [FattyAcid] </name><val> FAPool.[FA] + [Increment] - [Decrement] </val></def>
+
+<def><name> [Increment(mG/dL)] </name><val> 100.0 * [Increment] </val></def>
+<def><name> [Decrement(mG/dL)] </name><val> 100.0 * [Decrement] </val></def>
+
+<def><name> [FattyAcid(mG/dL)] </name><val> FAPool.[FA(mG/dL)] + [Increment(mG/dL)] - [Decrement(mG/dL)] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

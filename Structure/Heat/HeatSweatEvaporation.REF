@@ -1,0 +1,34 @@
+HumMod / HeatSweatEvaporation.REF
+
+Created : 2010-05-17
+Last Modified : 2010-05-17
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+   Water loss by evaporation is a
+   function of the difference in
+   water vapor pressure at the skin
+   and water vapor pressure in the
+   air.
+
+   Water vapor pressure at the skin
+   is a function of skin temperature
+   and is assumed to be saturated.
+
+   Water vapor pressure in the air
+   is a function of air temperature
+   and relative humidity.
+
+   If water loss is more than the
+   maximum evaporative loss, dripping
+   begins.
+
+   JAP 35:689-694, 1973.
+   AJP 143:21-32, 1945.
+   AJP 151:626, 1947.
+   AJP 120:277, 1937.
+   AJP 120:288, 1937.
+   Amer J. Hygiene 26:84-102, 1937.
+
+End

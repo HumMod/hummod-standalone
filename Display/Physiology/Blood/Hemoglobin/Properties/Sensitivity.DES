@@ -1,0 +1,78 @@
+HumMod / Sensitivity
+
+Created : 21-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 9.0 </high>
+   <wide> 30.0 </wide>
+   <title> Sensitivity </title>
+
+<structurename> HgbProps </structurename>
+
+<repeatlist>
+  <name> HgbProps.P50Basic </name>
+  <repeat><reps> 26 </reps><stepsize> 1.0 </stepsize></repeat>
+  <repeat><reps> 10 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps> 23 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> P50Basic </name>
+  <listname> HgbProps.P50Basic </listname>
+  <label> Basic P50 </label>
+</slidebar>
+
+<maplist><name> HgbProps.Sens </name>
+  <map><val> 0.0 </val><img> None </img></map>
+  <map><val> 0.5 </val><img> Decreased </img></map>
+  <map><val> 1.0 </val><img> Normal </img></map>
+  <map><val> 1.5 </val><img> Increased </img></map>
+  <map><val> 2.0 </val><img> Maximum </img></map>
+</maplist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> TempSens </name>
+  <listname> HgbProps.Sens </listname>
+  <label> Temp </label>
+</slidebar>
+
+<slidebar>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> pHSens </name>
+  <listname> HgbProps.Sens </listname>
+  <label> pH </label>
+</slidebar>
+
+<slidebar>
+  <row> 5.8 </row><col> 1.0 </col>
+  <name> pCO2Sens </name>
+  <listname> HgbProps.Sens </listname>
+  <label> pCO2 </label>
+</slidebar>
+
+<slidebar>
+  <row> 7.2 </row><col> 1.0 </col>
+  <name> COSens </name>
+  <listname> HgbProps.Sens </listname>
+  <label> CO </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,19 @@
+HumMod / Exercise
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Exercise\ ?>
+
+<?include Exercise-Control.DES ?>
+<?include Exercise-Bike.DES ?>
+<?include Exercise-Treadmill.DES ?>
+<?include Exercise-MusclePump.DES ?>
+<?include Exercise-Metabolism.DES ?>
+<?include Exercise-Motivation.DES ?>
+
+End

@@ -1,0 +1,52 @@
+HumMod / SplanchnicCirculation
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> SplanchnicCirculation </name>
+  <label> Splanchnic Circulation </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> SplanchnicCirculation-Summary </name>
+  <label> Summary </label>
+  <parent> SplanchnicCirculation </parent>
+</leaf>
+
+<branch>
+  <name> PortalVein </name>
+  <label> Portal Vein </label>
+  <parent> SplanchnicCirculation </parent>
+</branch>
+
+<leaf>
+  <name> PortalVein-Glucose </name>
+  <label> Glucose </label>
+  <parent> PortalVein </parent>
+</leaf>
+
+<leaf>
+  <name> PortalVein-FattyAcid </name>
+  <label> Fatty Acid </label>
+  <parent> PortalVein </parent>
+</leaf>
+
+<leaf>
+  <name> PortalVein-Insulin </name>
+  <label> Insulin </label>
+  <parent> PortalVein </parent>
+</leaf>
+
+<leaf>
+  <name> PortalVein-Glucagon </name>
+  <label> Glucagon </label>
+  <parent> PortalVein </parent>
+</leaf>
+
+End

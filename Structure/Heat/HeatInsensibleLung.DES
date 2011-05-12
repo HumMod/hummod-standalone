@@ -1,0 +1,91 @@
+HumMod / HeatInsensibleLung
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatInsensibleLung </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+<var>
+  <name> Liquid </name>
+</var>
+
+<var>
+  <name> Vapor </name>
+</var>
+
+<var>
+  <name> Air </name>
+</var>
+
+<var>
+  <name> H2O </name>
+</var>
+
+<parm>
+  <name> K </name>
+  <val> 0.80E-3 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Flux </name>
+
+<def>
+  <name> H2O </name>
+  <val>
+      K
+    * Breathing.TotalVentilation
+    * ( ( 47.0 - RelativeHumidity.VaporPressure )
+    / Barometer.Pressure )
+  </val>
+</def>
+
+<def>
+  <name> Liquid </name>
+  <val>
+      H2O
+    * HeatCore.Temp(K)
+    * SpecificHeat.Water(kCal/G)
+  </val>
+</def>
+
+<def>
+  <name> Vapor </name>
+  <val>
+      H2O
+    * TempTools.Vapor(kCal/G)
+  </val>
+</def>
+
+<def>
+  <name> Air </name>
+  <val>
+      Breathing.TotalVentilation
+    * ( HeatCore.Temp(K)
+    - AmbientTemperature.Temp(K) )
+    * SpecificHeat.Air(kCal/mL)
+  </val>
+</def>
+
+<def>
+  <name> Flux </name>
+  <val> Liquid + Vapor + Air </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

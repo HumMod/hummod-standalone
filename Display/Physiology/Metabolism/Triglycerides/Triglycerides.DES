@@ -1,0 +1,41 @@
+HumMod / Triglycerides
+
+Created : 29-Apr-05
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> Metabolism_Triglycerides </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Triglycerides </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Metabolism\Triglycerides\ ?>
+
+<?include Concentration.DES ?>
+<?include Hydrolysis.DES ?>
+
+<?include Balance.DES ?>
+<?include Decomposition.DES ?>
+
+</panel>
+
+End

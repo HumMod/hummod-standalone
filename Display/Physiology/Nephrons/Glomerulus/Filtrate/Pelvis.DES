@@ -1,0 +1,41 @@
+HumMod / Pelvis
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 22.4 </row>
+   <col> 1.0 </col>
+   <high> 3.0 </high>
+   <wide> 30.0 </wide>
+   <title> Pelvis </title>
+
+<structurename> GlomerulusFiltrate </structurename>
+
+<repeatlist>
+  <name> GlomerulusFiltrate.PelvisPressure </name>
+  <repeat><reps> 30 </reps><stepsize>  1.0 </stepsize></repeat>
+  <repeat><reps>  7 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> PelvisPressure </name>
+  <listname> GlomerulusFiltrate.PelvisPressure </listname>
+  <label> Pressure </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Pelvis pressure is typically 0. </line>
+</infobutton>
+
+</groupbox>
+
+End

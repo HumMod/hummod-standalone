@@ -1,0 +1,48 @@
+HumMod / LH Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Luteinizing Hormone
+
+M.W. ~ 30,000
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+Units are IU/L.
+
+Williams give these concentrations for the female
+
+   Basal = 0.8 - 26 IU/L
+   Surge = 25 - 57 IU/L
+
+In the male, [Conc] is 7 IU/L.
+
+Initial mass in the male is 105 IU. Initial mass in the
+female is 53.5.
+
+Clearance is 25 mL/Min in the male.
+
+Yen et.al. J. Clin. Endocr. 28:1763-1767, 1968.
+
+This paper has good data on half-life. Data is
+from surgical females.
+
+LH and hCG showed double exponentials. LH had half
+lives of 21 minutes and 235 minutes.
+
+A half life of 200 minutes yields a k of 0.005.
+
+[Conc] in female is 13.0 basal and 41.0 during surge.
+
+Basal secretion would be 13.0 IU/L * 9.720 L * 0.005
+or 0.63 IU/Min.
+
+End

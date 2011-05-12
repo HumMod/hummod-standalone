@@ -1,0 +1,79 @@
+HumMod / Transfusion
+
+Created : 30-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Transfusion </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> Setting </name><val> 0.0 </val></parm>
+<parm><name> Hct(%) </name><val> 44.0 </val></parm>
+
+<var><name> Hct </name></var>
+
+<var><name> PlasmaRate </name></var>
+<var><name> ProteinRate </name></var>
+<var><name> RBCRate </name></var>
+<var><name> NaRate </name></var>
+<var><name> KRate </name></var>
+<var><name> ClRate </name></var>
+
+<var><name> Units </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Volume </name>
+  <integralname> Volume </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Rate </dervname>
+  <errorlim> 10.0  </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<conditional>
+  <name> Rate </name>
+  <test> Switch </test>
+  <true> Setting </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> Hct </name><val> Hct(%) / 100.0 </val></def>
+<def><name> PlasmaRate </name><val> ( 1.0 - Hct ) * Rate </val></def>
+<def><name> ProteinRate </name><val> 0.07 * PlasmaRate </val></def>
+<def><name> RBCRate </name><val> Hct * Rate </val></def>
+<def><name> NaRate </name><val> 0.140 * Rate </val></def>
+<def><name> KRate </name><val> 0.0044 * Rate </val></def>
+<def><name> ClRate </name><val> 0.105 * Rate </val></def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def><name> Units </name><val> 0.0025 * Volume </val></def>
+
+</block>
+
+<block><name> ResetVolume </name>
+
+<def><name> Volume </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

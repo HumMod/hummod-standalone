@@ -1,0 +1,128 @@
+QHP 2008 / ACIDBASE.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> PhBlood </structurename>
+
+<vardoc>
+<name> H+ </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> pCO2 </name>
+<topic> pCO2 - Overview </topic>
+<topic> pCO2 - Physical Units </topic>
+<topic> pCO2 - Concentration Units </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> pH </name>
+<topic> pH - Overview </topic>
+<topic> pH - Physical Units </topic>
+<topic> pH - Concentration Units </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> pK </name>
+<topic> pK - Overview  </topic>
+<topic> pK - Physical Units </topic>
+<topic> pK - Concentration Units  </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SID </name>
+<topic> SID - Overview  </topic>
+<topic> SID - Physical Units  </topic>
+<topic> SID - Concentration Units  </topic>
+<seealso> BloodIons </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> SID - Overview </name>
+<label> Overview </label>
+<content>
+
+These sums use mEq/L.
+
+The cations are all strong ions.
+
+  [Na+] 144.0
+  [K+]    4.5
+        -----
+  Total 148.5
+
+The anions are mostly strong ions.
+
+  [CL-]   107.0
+  [KA-]     0.0
+  [Lac-]    1.0
+  [SO4--]   0.3
+  [PO4--]   0.2
+          -----
+  Total   108.5
+
+The weak anion is [HCO3] at 28.
+
+  Strong  108.5
+  [HCO3-]  28.0
+          -----
+  Total   136.5
+
+The remainder of the anion gap is filled with
+protein at 12.0
+
+  Strong  108.5
+  Weak     28.0
+  Protein  12.0
+          -----
+  Total   148.5
+
+The SID is strong cation minus strong anion. We also
+need a SID value in mEq/mL.
+
+CALCULATION SEQUENCE
+
+We can't calculate all of the ion sums at once.
+Calculate SID first. It's value is then used to
+calculate [HCO3]. Then return here to finish sums.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+      
+
+End

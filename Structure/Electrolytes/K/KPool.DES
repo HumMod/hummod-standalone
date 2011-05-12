@@ -1,0 +1,77 @@
+HumMod / KPool
+
+Created : 06-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> KPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [K+] </name></var>
+<var><name> [K+(mEq/L)] </name></var>
+
+<var><name> Target[K+] </name><val> 0.0044 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 0.660 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialMass </name><val> Target[K+] * ECFV.Vol </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> Conc </name>
+  <def><name> [K+] </name><val> Mass / ECFV.InitialVol </val></def>
+  <def><name> [K+(mEq/L)] </name><val> 1000.0 * [K+] </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name>
+  <val>  
+      GILumenPotassium.Absorption
+    + KFluxToPool.Rate
+    + IVDrip.KRate
+    + Transfusion.KRate
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>  
+      CD_K.Outflow
+    + KFluxToCell.Rate
+    + SweatDuct.KOutflow
+    + Hemorrhage.KRate
+    + DialyzerActivity.K+Flux
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

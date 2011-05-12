@@ -1,0 +1,24 @@
+HumMod / LungBloodFlow.REF
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+LungBloodFlow first needs an estimate of the
+total lung blood flow.
+
+We get this by averaging the pulmonary artery
+outflow and pulmonary capillaries outflow.
+
+These values are typically available when the
+vascular compartment dervs are calculated, but
+this is a little late for lung blood flow.
+
+So we make special calls to the pulmonary artery
+and capillaries to calculate outflow and we
+make the calls before calculating lung blood
+flow details.
+
+End

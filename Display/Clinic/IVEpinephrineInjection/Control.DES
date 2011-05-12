@@ -1,0 +1,75 @@
+HumMod / Control
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 8.8 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> IVEpinephrineInjection </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> InjectEpinephrineNow </blockname>
+  <label> Inject Epinephrine Now </label>
+</actionbutton>
+
+<repeatlist>
+  <name> IVEpinephrineInjection.Dose </name>
+  <repeat><reps> 20 </reps><stepsize> 0.01 </stepsize></repeat>
+  <repeat><reps> 18 </reps><stepsize> 0.10 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.2 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Dose </name>
+  <listname> IVEpinephrineInjection.Dose </listname>
+  <label> Dose (U) </label>
+</slidebar>
+
+<repeatlist>
+  <name> IVEpinephrineInjection.Timespan </name>
+  <firstval> 5 </firstval>
+  <repeat><reps> 6 </reps><stepsize> 5.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.6 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Timespan </name>
+  <listname> IVEpinephrineInjection.Timespan </listname>
+  <label> Timespan (Sec) </label>
+</slidebar>
+
+<showvalue>
+  <row> 6.2</row><col> 1.0 </col>
+  <name> TotalInjections </name>
+  <format> <integer/> </format>
+  <label> Total Injections </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.2 </row><col> 1.0 </col>
+  <name> TotalDose </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Total Dose </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Recommended dosing for cardiac </line>
+  <line> arrest is 1 mG every 5 minutes. </line>
+</infobutton>
+
+</groupbox>
+
+End

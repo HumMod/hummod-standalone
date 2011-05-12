@@ -1,0 +1,172 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BetaPool </structurename>
+
+<vardoc>
+<name> BetaPool.Effect </name>
+<topic> BetaPool - Definition </topic>
+<topic> Receptor Dynamics Overview  </topic>
+<topic> Adrenergic Receptors Overview </topic>
+</vardoc>
+
+<vardoc>
+<name> BetaPool.EpiPart </name>
+<topic> EpiPart - Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BetaPool.EPISCALE </name>
+<topic> EPISCALE - Definition</topic>
+</vardoc>
+
+<vardoc>
+<name> BetaPool.NEPart </name>
+<topic> NEPart - Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BetaPool.NESCALE </name>
+<topic> NESCALE - Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BetaPool.Total </name>
+<topic> Total - Definition </topic>
+</vardoc>
+
+<topicdoc>
+<name> BetaPool - Definition </name>
+<label> Definition </label>
+<content>
+
+The beta pool is the quantity of stimulated beta receptors.
+Under resting conditions the effect of beta pool stimulation
+is 1.0 and norepinephrine and epinephrine make roughly equal
+contributions to the beta pool. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Adrenergic Receptors Overview </name>
+<label> Adrenergic Receptors Overview </label>
+<content>
+
+There are two major types of adrenergic receptors, alpha 
+receptors and beta receptors. Alpha receptors can be subdivided 
+into alpha 1  and alpha 2 receptors. Beta receptors can be 
+subdivided into beta 1 receptors and beta 2 receptors. 
+Norepinephrine and epinephrine have slightly different effects 
+in exciting the alpha and beta receptors. Norepinephrine excites 
+mainly alpha receptors but excites beta receptors to a lesser 
+extent as well. Epinephrine excites both types of receptors 
+approximately equally. Therefore the relative effects of 
+norepinephrine and epinephrine on different effector
+organs are determined by the types of receptors in the organs.
+Furthermore certain alpha functions are excitatory, whereas 
+others are inhibitory. Likewise certain beta functions are 
+excitatory and others are inhibitory. Therefore, alpha and beta 
+receptors are not necessarly associated with excitation or 
+inhibition but simply with the affinity of the hormone for the 
+receptors in the given effector organ.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Receptor Dynamics Overview  </name>
+<label> Receptor Dynamics Overview </label>
+<content>
+
+Clark JW, Leff P. Operational models of pharmacological
+agonism. Proc R. Soc Lond 220: 141-162, 1983.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> NESCALE - Definition </name>
+<label> Definition </label>
+<content>
+
+The NESCALE is a constant which relates plasma levels of 
+norepinephrine to beta agonism. Together with EPISCALE, 
+normal plasma levels of epinephrine and NE are mapped to 
+an beta agonism of 1.0.    
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NEPart - Definition </name>
+<label> Definition </label>
+<content>
+
+Since beta receptors see both epinephrine and norepinephrine, 
+the blood concentration of Epi and NE do not quantitate their
+effect on beta receptors. In the model NE and Epi contribute 
+equally to beta agonism and normal plasma concentrations of 
+NE and Epi are mapped to a beta agonism of 1.0. This is done 
+by using two constants NESCALE and EPISCALE to calculate NEPart 
+and EpiPart respectively. 
+
+NEPart = NESCALE*[NE] 
+EpiPart = EPISCALE*[Epi]
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPISCALE - Definition </name>
+<label> Definition </label>
+<content>
+
+The EPISCALE is a constant which relates plasma levels of 
+epinephrine to beta agonism. Together with NESCALE, 
+normal plasma levels of epinephrine and NE are mapped to 
+an beta agonism of 1.0.    
+ 
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> EpiPart - Definition </name>
+<label> Definition </label>
+<content>
+
+Since beta receptors see both epinephrine and norepinephrine, 
+the blood concentration of epinephrine and norepinephrine 
+do not quantitate either's effect on beta receptors. In the model 
+NE and Epi contribute equally to beta agonism and normal plasma 
+concentrations of NE and Epi are mapped to a beta agonism of 1.0. 
+This is done by using two constants NESCALE and EPISCALE to 
+calculate NEPart & EpiPart respectively. 
+ 
+NEPart = NEScale*[NE] 
+EpiPart = EPISCALE*[Epi]
+
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Total - Definition </name>
+<label> Definition </label>
+<content>
+
+Total beta pool is the sum of the effects of epinephrine and
+norepinephrine on beta receptors. 
+
+</content>
+</topicdoc>
+
+   
+End

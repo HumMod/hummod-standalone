@@ -1,0 +1,31 @@
+HumMod / CreatineSkeletalMuscle
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CreatineSkeletalMuscle </name>
+
+<variables>
+
+<parm><name> Mass </name><val> 111.0 </val></parm>
+<var><name> [Creatine] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [Creatine] </name><val> 1000.0 * ( Mass / SkeletalMuscle-Size.Mass ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

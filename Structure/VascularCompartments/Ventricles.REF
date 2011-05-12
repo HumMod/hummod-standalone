@@ -1,0 +1,51 @@
+HumMod / Ventricles.REF
+
+Created : 05-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+The pressure-volume characteristics of both ventricles in diastole
+and systole will be described using a power function.
+
+  P = A * (V ^ n)
+
+P = Pressure
+V = Volume
+A = Scale Factor
+n = curvature
+
+The function is invertable.
+
+  V = (P/A) ^ (1/n)
+
+Some typical values
+
+                                 Right                 Left
+                           ---------------------- ------------------------
+Nominal Vol            87.5              87.5
+Nominal TMP            3.0                6.0
+Compliance            29.2              14.6
+Pericardial P           -3.0               -3.0
+
+DIASTOLE
+  EDP                        1.0                5.0
+  EDV                    125.0            125.0
+  TMP                       4.0                8.0
+  n                            2.0                2.0
+  V^n                 15625.0        15625.0
+  A                             0.00026       0.00051
+
+SYSTOLE
+  ESP                     22.0              120.0
+  ESV                     50.0                50.0
+  TMP                    25.0              123.0
+  n                           0.5                  0.5
+  V^n                        7.07                7.07
+  A                           3.53              17.39
+
+
+End

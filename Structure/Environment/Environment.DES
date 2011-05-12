@@ -1,0 +1,43 @@
+HumMod / Environment
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Environment\ ?>
+
+<?include Altitude.DES ?>
+<?include AmbientTemperature.DES ?>
+<?include Barometer.DES ?>
+<?include Clothes.DES ?>
+<?include EquivalentAltitude.DES ?>
+<?include RelativeHumidity.DES ?>
+<?include Wind.DES ?>
+
+<structure><name> Environment </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> Altitude.Parms </call>
+  <call> Barometer.Calc </call>
+  <call> AmbientTemperature.Parms </call>
+  <call> RelativeHumidity.Parms </call>
+
+</block>
+
+<block><name> FinishParms </name>
+
+  <call> EquivalentAltitude.Parms </call>
+
+</block>
+
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,54 @@
+HumMod / PortalVein-Glucose
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> PortalVein-Glucose </name>
+
+<variables>
+
+<var><name> [Glucose] </name></var>
+<var><name> [Glucose(mG/dL)] </name></var>
+
+<var><name> [Increment] </name></var>
+<var><name> [Increment(mG/dL)] </name></var>
+
+<var><name> [Decrement] </name></var>
+<var><name> [Decrement(mG/dL)] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<conditional><name> [Increment] </name>
+  <test> PortalVein.PlasmaFlow GT 0.0 </test>
+  <true> GILumenCarbohydrates.Absorption / PortalVein.PlasmaFlow </true>
+  <false> 0.0 </false>
+</conditional>
+
+<conditional><name> [Decrement] </name>
+  <test> PortalVein.PlasmaFlow GT 0.0 </test>
+  <true> GITract-Fuel.TotalGlucoseUsed(mG/Min) / PortalVein.PlasmaFlow </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> [Glucose] </name><val> GlucosePool.[Glucose] + [Increment] - [Decrement] </val></def>
+
+<def><name> [Increment(mG/dL)] </name><val> 100.0 * [Increment] </val></def>
+<def><name> [Decrement(mG/dL)] </name><val> 100.0 * [Decrement] </val></def>
+
+<def><name> [Glucose(mG/dL)] </name><val> GlucosePool.[Glucose(mG/dL)] + [Increment(mG/dL)] - [Decrement(mG/dL)] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

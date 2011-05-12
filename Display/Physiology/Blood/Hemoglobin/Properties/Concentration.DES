@@ -1,0 +1,84 @@
+HumMod / Concentration
+
+Created : 21-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.2 </high>
+   <wide> 30.0 </wide>
+   <title> Concentration </title>
+
+<structurename> HgbConc </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [Total] </name>
+   <format><decimal> 3 </decimal></format>
+   <label> [Total] </label>
+</showvalue>
+
+<radiobuttons>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Clamp </name>
+  <listname> Common.Switch </listname>
+  <label> Clamp </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> HgbConc.[Level] </name>
+  <repeat><reps> 30 </reps><stepsize> 0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> [Level] </name>
+  <listname> HgbConc.[Level] </listname>
+  <label> [Level] </label>
+</slidebar>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> HctEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Hematocrit Effect </label>
+</showvalue>
+
+<repeatlist>
+  <name> HgbConc.[Basic] </name>
+  <repeat><reps> 30 </reps><stepsize> 0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 7.2 </row><col> 1.0 </col>
+  <name> [Basic] </name>
+  <listname> HgbConc.[Basic] </listname>
+  <label> [Basic] </label>
+</slidebar>
+
+<showbargraph>
+  <row> 8.6 </row><col> 1.0 </col><high> 5.0 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <title> [Hgb] </title>
+  <showinitialvalues/>
+  <bar><name> [Total] </name><label> [Total] </label><color> BLUE </color></bar>
+  <bar><name> [Free] </name><label> [Free] </label><color> BLUE </color></bar>
+  <bar><name> [Carboxy] </name><label> [CO Hgb] </label><color> BLUE </color></bar>
+  <scale><min> 0 </min><max> 0.16 </max><inc> 0.02 </inc></scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

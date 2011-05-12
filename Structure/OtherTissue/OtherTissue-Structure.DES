@@ -1,0 +1,114 @@
+HumMod / OtherTissue-Structure
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> OtherTissue-Structure </name>
+
+<variables>
+
+<var><name> PhFactor </name></var>
+<var><name> PhEffect </name></var>
+<parm><name> PhMaximum </name><val> 0.1 </val></parm>
+
+<var><name> FuelFactor </name></var>
+<var><name> FuelEffect </name></var>
+<parm><name> FuelMaximum </name><val> 0.05 </val></parm>
+
+<var><name> TemperatureFactor </name></var>
+<var><name> TemperatureEffect </name></var>
+<parm><name> TemperatureMaximum </name><val> 0.05 </val></parm>
+
+</variables>
+
+<equations>
+
+<backwardeuler>
+  <name> Effect </name>
+  <integralname> Effect </integralname>
+  <initialval> 1.0 </initialval>
+  <f1name> F1 </f1name>
+  <f2name> F2 </f2name>
+  <dervname> Change </dervname>
+</backwardeuler>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PhFactor </name>
+  <point><x> 6.5 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 6.6 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FuelFactor </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 0.3 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TemperatureFactor </name>
+  <point><x> 44.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 46.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PhFactor </name>
+  <val> PhFactor [ OtherTissue-Ph.Ph ] </val>
+</def>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhFactor * PhMaximum </val>
+</def>
+
+<def>
+  <name> FuelFactor </name>
+  <val> FuelFactor [ OtherTissue-Fuel.FractUseDelay ] </val>
+</def>
+
+<def>
+  <name> FuelEffect </name>
+  <val> FuelFactor * FuelMaximum </val>
+</def>
+
+<def>
+  <name> TemperatureFactor </name>
+  <val> TemperatureFactor [ HeatCore.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> TemperatureEffect </name>
+  <val> TemperatureFactor * TemperatureMaximum </val>
+</def>
+
+<def>
+  <name> F1 </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> F2 </name>
+  <val>
+      PhEffect
+    + FuelEffect
+    + TemperatureEffect
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,67 @@
+HumMod / LipidDeposits-Uptake
+
+Created : 30-Mar-08
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<structure><name> LipidDeposits-Uptake </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> Basic </name><val> 100.0 </val></parm>
+
+<var><name> InsulinEffect </name></var>
+<var><name> FattyAcidEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+  <point><x>  20 </x><y> 1.0 </y><slope> 0.03 </slope></point>
+  <point><x> 100 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> FattyAcidEffect </name>
+  <point><x>  0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 15 </x><y> 1.0 </y><slope> 0.10 </slope></point>
+  <point><x> 50 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> InsulinEffect </name>
+  <val> InsulinEffect [ InsulinPool.[Insulin] ] </val>
+</def>
+
+<def>
+  <name> FattyAcidEffect </name>
+  <val> FattyAcidEffect [ FAPool.[FA(mG/dL)] ] </val>
+</def>
+
+<def>
+  <name> Rate </name>
+  <val>
+      Basic
+    * InsulinEffect
+    * FattyAcidEffect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

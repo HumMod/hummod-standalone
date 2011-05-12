@@ -1,0 +1,17 @@
+HumMod / CPR.REF
+
+Created : 02-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The CPR status is enumerated as follows
+
+   0 = Inactive
+   1 = Ready
+   2 = Active
+
+End

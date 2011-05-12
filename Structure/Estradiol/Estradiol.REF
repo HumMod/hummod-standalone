@@ -1,0 +1,53 @@
+HumMod / Estradiol Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+C18-H24-O2   M.W. = 272.4
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+I originally used pMol/L and pG/mL here, but I think
+that nMol/L and nG/mL are better (and are consistent
+with progesterone and teswtosterone).
+
+Units are nMol/L (basic) and nG/mL. Multiply nMol/L by
+0.2724 to get nG/mL.
+
+[Conc] is 0.15 nMol/L in basal state and 0.80 nMol/L in the
+surge. [Conc] of over 0.70 nMol/L for 50 hours will trigger
+the LH and FSH surge.
+
+[Conc] in the male is close to 0.
+
+Clearance is 1350 L/Day or 938 mL/Min.
+
+                 [Conc] nMol/L  nG/mL Secretion pMol/Min
+Early Follicular      0.20      0.060     0.210   
+Late Follicular       2.00      0.500     2.130
+Luteal                0.70      0.200     0.750
+
+Initial (early follicular) mass is 1.94 nMol in the
+female and much less in the male.
+
+The clearance rate constant comes from
+
+  Degradation = Secretion = K * Mass
+
+  K = 0.21 (nMol/Min) / 1.94 nMol or 0.108 /Min
+
+Or a tau of 9.3 Min.
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

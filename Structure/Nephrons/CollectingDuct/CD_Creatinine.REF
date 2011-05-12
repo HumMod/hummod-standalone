@@ -1,0 +1,53 @@
+HumMod / CD_Creatinine
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Creatine   C4H9N3O2 M.W. = 131.15
+Creatinine C4H7N3O M.W. = 113.12
+
+So, creatinine is creatine - H2O
+
+For creatinine, mG * 0.00884 = mMol
+
+So, 1 mG/mL = 8.84 mOsm/L.
+
+   The ratio of creatinine clearance to true
+   GFR gives total excretion as a fraction
+   of GFR.  The part greater than 1.0 is the
+   secretion as a fraction of GFR.
+
+   Nephron 3:201-205, 1966.  Ratio = 1.25
+
+   Ann. Int. Med. 113:501-506, 1990.
+
+   Patients with lupus.
+
+           Control Cimetidine
+           ------- ----------
+      CCr     75      64
+      GFR     55      57
+      Ratio  1.36    1.12
+
+   Scand. J. Clin. Lab. Invest. 49:155-159, 1989.
+
+   Transplant patient.
+
+           Control Cimetidine
+           ------- ----------
+      CCr     65      46
+      GFR     41      42
+      Ratio  1.43    1.03
+
+
+   I'll make the secretion equal to a clearance
+   of 22 mL/Min.  This yields a rate constant
+   of 0.22 dL/Min.
+
+
+End

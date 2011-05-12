@@ -1,0 +1,20 @@
+Digital Human / Testes
+
+Created : 07-Apr-05
+Last Modified : 03-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path Docs\testes\ ?>
+
+<?include Testes-Testosterone.docs ?>
+<?include Testes-Estradiol.docs ?>
+<?include Testes-Progesterone.docs ?>
+<?include Testes-Inhibin.docs ?>
+
+</docs>
+End

@@ -1,0 +1,38 @@
+HumMod / Glucose
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The molecular weight of glucose is 180. A glycosyl group in
+glycogen weighs 162, since a H2O is removed in binding.
+
+   mG/dL * 0.05551 = mMol/L
+
+                 mG/dL  mMol/L
+                 -----  ------
+   Hypoglycemia    45     2.5
+   Starving        60     3.3
+   Fasting         85     4.7
+   Drip           110     6.1
+   Fed            130     7.2
+   Glucose Load   200    11.1
+
+   Volume of distribution is ECFV.
+
+   Best units for ECFV mass are mG.
+
+   The basic units for concentration
+   are mG/mL, but we also need mG/dL
+   and mMol/L for display and maybe
+   for calculation.
+
+      [Conc] = 1.1 mG/mL
+      ECFV = 15000 mL
+      Glucose mass = 16500 mG
+
+End

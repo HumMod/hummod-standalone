@@ -1,0 +1,111 @@
+HumMod / MetabolicVasodilation
+
+Created : 03-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 22.8 </high>
+   <wide> 30.0 </wide>
+   <title> Metabolic Vasodilation </title>
+
+<structurename> SkeletalMuscle-MetabolicVasodilation </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> SkeletalMuscle-MetabolicVasodilation.OnTau </name>
+  <repeat><reps> 10 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 10.0 </row><col> 1.0 </col>
+  <name> OnTau </name>
+  <listname> SkeletalMuscle-MetabolicVasodilation.OnTau </listname>
+  <label> On Delay </label>
+</slidebar>
+
+<repeatlist>
+  <name> SkeletalMuscle-MetabolicVasodilation.OffTau  </name>
+  <repeat><reps> 50 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.4 </row><col> 1.0 </col>
+  <name> OffTau </name>
+  <listname> SkeletalMuscle-MetabolicVasodilation.OffTau </listname>
+  <label> Off Delay </label>
+</slidebar>
+
+<showvalue>
+   <row> 12.8 </row><col> 1.0 </col>
+   <name> SteadyState </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Steady-State </label>
+</showvalue>
+
+<showcurve>
+  <row> 13.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+
+  <xaxis>
+    <name> SkeletalMuscle-Metabolism.O2Need </name>
+    <label> O2 Need </label>
+    <scale><min> 0 </min><max> 3000 </max><inc> 1000 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> SS </label>
+    <scale><min> 0 </min><max> 6 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> SteadyState </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 21.2 </row><col> 1.0 </col>
+   <name> SkeletalMuscle-Metabolism.O2Need </name>
+   <format><decimal> 1 </decimal></format>
+   <label> O2 Need </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

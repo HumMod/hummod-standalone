@@ -1,0 +1,42 @@
+HumMod / Descriptors-Muscularity
+
+Created : 21-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Descriptors-Muscularity </name>
+
+<?path Context\Traits\Descriptors\Descriptors-Muscularity\ ?>
+
+<variables>
+
+<constant><name> BELOWNORMAL </name><val> 0 </val></constant>
+<constant><name> NORMAL </name><val> 1 </val></constant>
+<constant><name> ABOVENORMAL </name><val> 2 </val></constant>
+<constant><name> TRAINEDATHLETE </name><val> 3 </val></constant>
+
+<var><name> IsBelowNormal </name><val> FALSE </val></var>
+<var><name> IsNormal </name><val> TRUE </val></var>
+<var><name> IsAboveNormal </name><val> FALSE </val></var>
+<var><name> IsTrainedAthlete </name><val> FALSE </val></var>
+
+<var><name> Value </name><val> 1 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+  <?if MUSCULARITY-BELOWNORMAL BelowNormal.DES ?>
+  <?if MUSCULARITY-NORMAL Normal.DES ?>
+  <?if MUSCULARITY-ABOVENORMAL AboveNormal.DES ?>
+  <?if MUSCULARITY-TRAINEDATHLETE TrainedAthlete.DES ?>
+</block>
+
+</definitions>
+</structure>
+
+End

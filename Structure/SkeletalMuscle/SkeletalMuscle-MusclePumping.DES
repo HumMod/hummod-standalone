@@ -1,0 +1,48 @@
+HumMod / SkeletalMuscle-MusclePumping
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-MusclePumping </name>
+
+<variables>
+
+<var><name> Effect </name></var>
+<var><name> IntensityEffect </name></var>
+<var><name> RateEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> IntensityEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.007 </slope></point>
+  <point><x> 300 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> RateEffect </name>
+  <point><x>  0 </x><y> 0.0 </y><slope> 0.04 </slope></point>
+  <point><x> 60 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> IntensityEffect </name><val> IntensityEffect [ Exercise-Metabolism.MotionWatts ] </val></def>
+<def><name> RateEffect </name><val> RateEffect [ Exercise-Metabolism.ContractionRate ] </val></def>
+
+<def><name> Effect </name><val> 1.0 + ( IntensityEffect * RateEffect ) </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

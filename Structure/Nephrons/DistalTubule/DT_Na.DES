@@ -1,0 +1,173 @@
+HumMod / DT_Na
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DT_Na </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> FractReab </name>
+</var>
+
+<var>
+  <name> Reab </name>
+</var>
+
+<parm>
+  <name> BasicFract </name>
+  <val> 0.75 </val>
+</parm>
+
+<var>
+  <name> TotalEffect </name>
+</var>
+
+<var>
+  <name> LoadEffect </name>
+</var>
+
+<var>
+  <name> AldoEffect </name>
+</var>
+
+<var>
+  <name> ThiazideEffect </name>
+</var>
+
+<parm>
+  <name> AldoSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> AldoLevel </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> [Na+] </name>
+</var>
+
+<parm>
+  <name> NormMaxReab </name>
+  <val> 2.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> LoadOnFract </name>
+  <point><x> 0.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+  <point><x> 1.6 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> AldoOnFract </name>
+  <point><x>  0.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+  <point><x> 12.0 </x><y> 1.0 </y><slope> 0.08 </slope></point>
+  <point><x> 50.0 </x><y> 3.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ThiazideOnFract </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> -2.0 </slope></point>
+  <point><x> 0.6 </x><y> 0.2 </y><slope>  0.0 </slope></point>
+</curve> ???Check Units
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Inflow </name>
+  <val> LH_Na.Outflow </val>
+</def>
+
+<def>
+  <name> LoadEffect </name>
+  <val> LoadOnFract [ Inflow ] </val>
+</def>
+
+<def>
+  <name> AldoEffect </name>
+  <val> AldoOnFract [ NephronAldo.[Aldo(nG/dL)] ] </val>
+</def>
+
+<def>
+  <name> ThiazideEffect </name>
+  <val> ThiazideOnFract [ ThiazidePool.[Thiazide] ] </val>
+</def>
+
+<def>
+  <name> TotalEffect </name>
+  <val>
+      LoadEffect
+    * AldoEffect
+    * ThiazideEffect
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+<copy>
+  <from> BasicFract </from>
+  <to> FractReab.Normal </to>
+</copy>
+
+<copy>
+  <from> TotalEffect </from>
+  <to> FractReab.Effects </to>
+</copy>
+
+<call> FractReab.GetFract </call>
+
+<copy>
+  <from> FractReab.Fract </from>
+  <to> FractReab </to>
+</copy>
+
+<def>
+  <name> Reab </name>
+  <val>
+    ( FractReab * Inflow )
+    MIN
+    ( NormMaxReab * AldoEffect ) </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> Inflow - Reab </val>
+</def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Na+] </name>
+  <val> 1000.0 * DT_H2O.ADHEffect </val>
+</def>
+
+
+</block>
+
+</definitions>
+</structure>
+
+End

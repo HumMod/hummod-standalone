@@ -1,0 +1,115 @@
+HumMod / Values-Height DES
+
+Created : 22-Nov-08
+Last Modified : 01-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Values-Height </name>
+
+<variables>
+
+<constant><name> MALE_SHORT </name><val> 160.0 </val></constant>
+<constant><name> MALE_NORMAL </name><val> 178.0 </val></constant>
+<constant><name> MALE_TALL </name><val> 200.0 </val></constant>
+<constant><name> MALE_VERYTALL </name><val> 230.0 </val></constant>
+
+<constant><name> FEMALE_SHORT </name><val> 150.0 </val></constant>
+<constant><name> FEMALE_NORMAL </name><val> 165.0 </val></constant>
+<constant><name> FEMALE_TALL </name><val> 180.0 </val></constant>
+<constant><name> FEMALE_VERYTALL </name><val> 200.0 </val></constant>
+
+<var><name> Height(cM) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<if>
+<test> Descriptors-Gender.IsMale </test>
+<true>
+  <call> Male </call>
+</true>
+<false>
+   <call> Female </call>
+</false>
+</if>
+
+</block>
+
+<block><name> Male </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-BodySize.IsSmall </test>
+  <def><name> Height(cM) </name><val> MALE_SHORT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsNormal </test>
+  <def><name> Height(cM) </name><val> MALE_NORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsLarge </test>
+  <def><name> Height(cM) </name><val> MALE_TALL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsVeryLarge </test>
+  <def><name> Height(cM) </name><val> MALE_VERYTALL </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Body size trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Female </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-BodySize.IsSmall </test>
+  <def><name> Height(cM) </name><val> FEMALE_SHORT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsNormal </test>
+  <def><name> Height(cM) </name><val> FEMALE_NORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsLarge </test>
+  <def><name> Height(cM) </name><val> FEMALE_TALL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-BodySize.IsVeryLarge </test>
+  <def><name> Height(cM) </name><val> FEMALE_VERYTALL </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Body size trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,33 @@
+HumMod / Pericardium DES
+
+Created : 10-Oct-08
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> Clinic_Pericardium </name>
+  <label> Pericardium </label>
+  <parent> CLINIC </parent>
+</branch>
+
+<leaf>
+  <name> PericardialHemorrhage </name>
+  <label> Pericardial Hemorrhage </label>
+  <parent> Clinic_Pericardium </parent>
+</leaf>
+
+<leaf>
+  <name> PericardialDrain </name>
+  <label> Pericardial Drain </label>
+  <parent> Clinic_Pericardium </parent>
+</leaf>
+
+<leaf>
+  <name> PericardialRupture </name>
+  <label> Pericardial Rupture </label>
+  <parent> Clinic_Pericardium </parent>
+</leaf>
+
+End

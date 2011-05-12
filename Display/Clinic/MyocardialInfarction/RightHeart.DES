@@ -1,0 +1,116 @@
+HumMod / RightHeart
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 29.6 </high>
+   <wide> 30.0 </wide>
+   <title> Right Heart </title>
+
+<structurename> RightHeart-Infarction </structurename>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Area% </name>
+  <listname> Common.Percent </listname>
+  <label> Area (%) </label>
+</slidebar>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> DamagedTissueFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Damaged </label>
+</showvalue>
+
+<showgraph>
+  <row> 3.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> DamagedTissueFraction </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> IschemicTissueFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Ischemic </label>
+</showvalue>
+
+<showgraph>
+  <row> 12.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> IschemicTissueFraction </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 19.6 </row><col> 1.0 </col>
+  <name> DeadTissueFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Dead </label>
+</showvalue>
+
+<showgraph>
+  <row> 20.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> DeadTissueFraction </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 28.0 </row><col> 1.0 </col>
+  <name> IsIschemic </name>
+  <format><boolean/></format>
+  <label> Is Ischemic </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Damaged, ischemic and dead all represent a </line>
+  <line> fraction of the heart wall. </line>
+</infobutton>
+
+</groupbox>
+
+End

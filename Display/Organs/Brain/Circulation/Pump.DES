@@ -1,0 +1,43 @@
+HumMod / Pump
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 1.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Perfusion Pump </title>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Brain-Pressure.PumpSwitch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Brain-Pressure.PumpSetting </name>
+  <listname> Common.PerfusionPump </listname>
+  <label> Pressure </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> This is a constant pressure </line>
+  <line> system. </line>
+  <line>  </line>
+  <line> Pressure units are mmHg. </line>
+</infobutton>
+
+</groupbox>
+
+End

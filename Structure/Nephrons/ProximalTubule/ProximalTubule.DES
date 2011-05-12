@@ -1,0 +1,16 @@
+HumMod / ProximalTubule
+
+Created : 09-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Nephrons\ProximalTubule\ ?>
+
+<?include PT_Na.DES ?>
+<?include PT_H2O.DES ?>
+<?include PT_NH3.DES ?>
+
+End

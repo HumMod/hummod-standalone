@@ -1,0 +1,42 @@
+HumMod / AnesthesiaGasLung Reference
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+We assume no diffusion barrier.
+Thus, gas uptake is flow limited,
+with the flows being alveolar
+ventilation and ventilated blood
+flow.
+
+   [B] - Bronchial Conc
+   [Alv] - Alveolar Conc
+   [Cap] - Capillary Conc
+   [V] - Pulmonary Vein Conc
+
+   pB - Bronchial pGas
+   pAlv - Alveolar pGas
+   pCap - Capillary pGas
+
+   Uptake = AlvVent * ([B] - [Alv])
+   Uptake = VentFlow * ([Cap] - [V])
+
+   pAlv = 760 * [Alv]
+   pCap = BloodK * [Cap]
+
+   pAlv = pCap
+
+Solving for pAlv yields
+
+          AvlVent * [B] + VentFlow * [V]
+   pAlv = ------------------------------
+            AlvVent / 760 + VentFlow / BloodK
+
+Trap for vent and flow both 0.  If so,
+pAlv will be 0.
+
+End

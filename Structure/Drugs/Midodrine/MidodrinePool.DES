@@ -1,0 +1,85 @@
+HumMod / MidodrinePool
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MidodrinePool </name>
+
+<variables>
+
+<var>
+  <name> [Midodrine] </name>
+</var>
+
+<var>
+  <name> Gain </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+<parm>
+  <name> K </name>
+  <val> 0.02 </val>
+</parm>
+
+<parm>
+  <name> VolDist </name>
+  <val> 90.0 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 20.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Midodrine] </name>
+  <val> Mass / VolDist </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> MidodrineGILumen.Loss
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> K * Mass
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

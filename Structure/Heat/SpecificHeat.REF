@@ -1,0 +1,26 @@
+HumMod / SpecificHeat Reference
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Specific heat for water is 1.0
+   by definition, where units are
+
+   Heat    Cal
+   Mass    G
+   Temp    Kelvin
+   SH      (Cal/G) / deg K
+
+   Specific heat of whole blood is
+   0.92 (Cal/G)/K or 3.85 (J/G)/K
+   - Astrand and Rodahl.
+
+   Specific heat of tissue of normal
+   composition is 0.83 (Cal/G)/K.
+
+
+End

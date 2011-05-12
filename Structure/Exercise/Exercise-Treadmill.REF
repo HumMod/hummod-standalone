@@ -1,0 +1,66 @@
+HumMod / Exercise-Treadmill.REF
+
+Created : 10-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+Elapsed time and distance are
+calculated in PostDxCode and
+should be used for display only.
+
+Data for energy use is reported in calories. Some conversions.
+
+1 Watt = 14.3307 Cal/Min
+1 Cal/Min = 0.06978 Watts
+1 kCal/Min = 69.78 Watts
+1 kCal/Hr = 1.163 Watts
+
+1 MPH = 88 FPM
+1.609 kM in a mile
+33 W for 1 MPH
+6.12 * Watt = KPM
+
+The treadmill structure defines only the external work (power).
+With an efficiency of of 22%, total power is 1/0.22 (4.54...)
+times external power.
+
+The primary references are
+
+JAP 38:351, 1975.
+J.Physiol. 197:717, 1968.
+JAP 18:367, 1963.
+JAP 8:73, 1955.
+
+Energy cost is
+
+1 kCal/kG BW to go 1 kM.  
+x 1.609 kM / Mile
+-----
+1.609 kCal/kG BW for 1 Mile
+x Hr
+----- 
+1.609 (kCal/Hr)/kG BW for 1 MPH
+x 1.163 Watts per kCal/Hr
+------- 
+1.871 Watts/kG BW for 1 MPH
+x 0.22 efficiency
+------
+0.412 External Watts/ kG BW for 1 MPH.
+
+Steps per minute is passed along as contractions
+per minute.  The use of steps per minute is as
+follows
+
+# It pumps down venous pressure in the legs when standing.
+# It pumps blood through exercising skeletal muscle.
+
+1 MPH equals 39 steps per minute.
+
+Treadmill energy depends on body weight, so we must do final power
+power calculations after body weight is determined.
+
+End

@@ -1,0 +1,98 @@
+HumMod / ArterialBloodGases
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 7.4 </high>
+   <wide> 30.0 </wide>
+   <title> Arterial Blood Gases </title>
+
+<showtable>
+<row> 1.4 </row><col> 1.0 </col>
+
+<column>
+<indent> 0 </indent>
+<fieldwidth> 6 </fieldwidth>
+<justify> CENTER </justify>
+
+<textcell> pO2 </textcell>
+
+<valuecell>
+  <name> PO2Artys.Pressure </name>
+  <format><decimal> 0 </decimal></format>
+</valuecell>
+
+<textcell> </textcell>
+<textcell> pCO2 </textcell>
+
+<valuecell>
+  <name> CO2Artys.Pressure </name>
+  <format><decimal> 0 </decimal></format>
+</valuecell>
+
+</column>
+
+<column>
+<indent> 7 </indent>
+<fieldwidth> 6 </fieldwidth>
+<justify> CENTER </justify>
+
+<textcell> [O2] </textcell>
+
+<valuecell>
+  <name> O2Artys.[O2] </name>
+  <format><decimal> 3 </decimal></format>
+</valuecell>
+
+<textcell> </textcell>
+<textcell> [CO2] </textcell>
+
+<valuecell>
+  <name> CO2Artys.[HCO3(mEq/L)] </name>
+  <format><decimal> 0 </decimal></format>
+</valuecell>
+
+</column>
+
+<column>
+<indent> 14 </indent>
+<fieldwidth> 6 </fieldwidth>
+<justify> CENTER </justify>
+
+<textcell> Sat % </textcell>
+
+<valuecell>
+  <name> PO2Artys.Sat(%) </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+</showtable>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical Values </line>
+  <line> </line>
+  <line> O2 </line>
+  <line> |  pO2 = 91 mmHg</line>
+  <line> |  [O2] = 0.200 mL/mL </line>
+  <line> |  Saturation = 97% </line>
+  <line> </line>
+  <line> CO2 </line>
+  <line> |  pCO2 = 41 mmHg </line>
+  <line> |  [CO2] = 27 mEq/L HCO3- </line>
+</infobutton>
+
+</groupbox>
+
+End

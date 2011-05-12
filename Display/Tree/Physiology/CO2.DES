@@ -1,0 +1,34 @@
+HumMod / CO2
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Physiology_CO2 </name>
+  <label> CO2 </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> CO2_Blood </name>
+  <label> Blood </label>
+  <parent> Physiology_CO2 </parent>
+</leaf>
+
+<leaf>
+  <name> CO2_Lungs </name>
+  <label> Lungs </label>
+  <parent> Physiology_CO2 </parent>
+</leaf>
+
+<leaf>
+  <name> CO2_Tissue </name>
+  <label> Tissue </label>
+  <parent> Physiology_CO2 </parent>
+</leaf>
+
+End

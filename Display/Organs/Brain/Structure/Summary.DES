@@ -1,0 +1,83 @@
+HumMod / Summary
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Brain-Structure.Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Brain-Structure.Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1 </max>
+      
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 5 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <title> Damage Rate </title>
+  <showinitialvalues/>
+  <bar>
+    <name> Brain-Structure.PhEffect </name>
+    <label> pH </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Brain-Structure.FuelEffect </name>
+    <label> Fuel </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Brain-Structure.TemperatureEffect </name>
+    <label> Temp </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 0.1 </max><inc> 0.1 </inc>
+  </scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> The structure effect is normally 1.0 </line>
+  <line> x normal. </line>
+  <line> </line>
+  <line> Damage rates are 0 in good health and </line>
+  <line> up to 0.1 /Min during insults. </line>
+</infobutton>
+
+</groupbox>
+
+End

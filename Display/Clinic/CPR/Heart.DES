@@ -1,0 +1,84 @@
+HumMod / Heart
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Heart </title>
+
+<structurename> CPR-Heart </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<maplist>
+  <name> CPR-Heart.Status </name>
+  <map><val> 0  </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Ready </img></map>
+  <map><val> 2  </val><img> Active </img></map>
+</maplist>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Status </name>
+  <format><list> CPR-Heart.Status </list></format>
+  <label> Status </label>
+</showvalue>
+
+<label>
+  <row> 4.4 </row><col> 1.0 </col>
+  <text> Activate On </text>
+</label>
+
+<checkbox>
+  <row> 5.4 </row><col> 2.0 </col>
+  <name> ActivateOnFibrillation </name>
+  <label> Ventricular Fibrillation </label>
+</checkbox>
+
+<checkbox>
+  <row> 6.6 </row><col> 2.0 </col>
+  <name> ActivateOnAsystole </name>
+  <label> Asystole </label>
+</checkbox>
+
+<repeatlist>
+  <name> CPR-Heart.ThumpRate </name>
+  <repeat><reps> 15 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 8.2 </row><col> 1.0 </col>
+  <name> ThumpRate </name>
+  <listname> CPR-Heart.ThumpRate </listname>
+  <label> Thump Rate </label>
+</slidebar>
+
+<repeatlist>
+  <name> CPR-Heart.Force </name>
+  <repeat><reps> 50 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.6 </row><col> 1.0 </col>
+  <name> Force </name>
+  <listname> CPR-Heart.Force </listname>
+  <label> Force </label>
+</slidebar>
+
+</groupbox>
+
+End

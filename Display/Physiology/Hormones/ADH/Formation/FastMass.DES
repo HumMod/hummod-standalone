@@ -1,0 +1,56 @@
+HumMod / FastMass
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 31.4 </row>
+   <col> 1.0 </col>
+   <high> 7.2 </high>
+   <wide> 30.0 </wide>
+   <title> Fast Mass </title>
+
+<structurename> ADHFastMass </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> ADHSecretion.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Secretion </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Flux (Out) </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> ADHSlowMass.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Flux (In) </label>
+</showvalue>
+
+</groupbox>
+
+End

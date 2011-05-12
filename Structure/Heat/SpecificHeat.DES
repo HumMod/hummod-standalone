@@ -1,0 +1,53 @@
+HumMod / SpecificHeat
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SpecificHeat </name>
+
+<variables>
+
+<constant>
+  <name> Water </name>
+  <val> 1.00 </val>
+</constant>
+
+<constant>
+  <name> Water(kCal/G) </name>
+  <val> 0.001 </val>
+</constant>
+
+<constant>
+  <name> Tissue </name>
+  <val> 0.83 </val>
+</constant>
+
+<constant>
+  <name> Tissue(kCal/G) </name>
+  <val> 0.00083 </val>
+</constant>
+
+<constant>
+  <name> Blood </name>
+  <val> 0.92 </val>
+</constant>
+
+<constant>
+  <name> Blood(kCal/G) </name>
+  <val> 0.00092 </val>
+</constant>
+
+<constant>
+  <name> Air(kCal/mL) </name>
+  <val> 3.1E-7 </val>
+</constant>
+
+</variables>
+
+</structure>
+
+End

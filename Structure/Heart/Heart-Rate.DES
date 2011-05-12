@@ -1,0 +1,30 @@
+HumMod / Heart-Rate DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Rate </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> Rate </name><val> Heart-Ventricles.Rate </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

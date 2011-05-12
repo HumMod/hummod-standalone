@@ -1,0 +1,33 @@
+HumMod / Start-General.REF
+
+Created : 30-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+The general scaler (X-Textbook) is designed to have a value of
+1.0 when body size is textbook (male with all traits set to
+normal). The value is weighted much more to lean tissue mass
+than fat mass.
+
+Lean tissue mass is the sum of masses of the 11 lean organs.
+Blood volume and external volume are excluded.
+
+Lean Mass = 49,400 G
+Fat Mass = 16,600 G
+
+These values can be used to calculate the fractions below.
+
+X-Textbook = 1.0
+
+LeanPart = 0.9
+  LeanFraction = 0.0000182
+  Weight.InitialLeanTissueMass = 49400.0
+  
+FatPart = 0.1
+  FatFraction = 0.0000060
+  Fat-Size.InitialMass = 16600.0
+  
+End

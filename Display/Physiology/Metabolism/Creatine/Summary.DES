@@ -1,0 +1,63 @@
+HumMod / Summary
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> CreatineCells </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> CreatineSkeletalMuscle.Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> OtherMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Other </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> CreatineToCreatinine </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Creatine -> Creatinine </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 3.0 </col>
+  <name> K </name>
+  <format><decimal> 3 </decimal></format>
+  <label> K </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line> Units for mass are G. Units for conversion are </line>
+  <line> G/Min.  </line>
+</infobutton>
+
+</groupbox>
+
+End

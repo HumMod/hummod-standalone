@@ -1,0 +1,70 @@
+HumMod / TotalBodyH2O
+
+Created : 14-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Total Body H2O </title>
+
+<structurename> BodyH2O </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> InitialTotalVol </name>
+  <format> <integer/> </format>
+  <label> Initial </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> TissueH2O.InitialVol </name>
+  <format> <integer/> </format>
+  <label> Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> PlasmaVol.InitialVol </name>
+  <format> <integer/> </format>
+  <label> Plasma </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 3.0 </col>
+  <name> RBCH2O.InitialVol </name>
+  <format> <integer/> </format>
+  <label> Red Blood Cells </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 3.0 </col>
+  <name> ExternalH2O.InitialVol </name>
+  <format> <integer/> </format>
+  <label> External </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 1.0 </col>
+  <name> TotalVol </name>
+  <format> <integer/> </format>
+  <label> Current </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for volume are mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

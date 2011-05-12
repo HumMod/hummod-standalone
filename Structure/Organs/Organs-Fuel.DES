@@ -1,0 +1,33 @@
+HumMod / Organs-Fuel
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Fuel </name>
+
+<definitions>
+
+<block><name> Dervs </name>
+  <call> Bone-Fuel.Dervs </call>
+  <call> Brain-Fuel.Dervs </call>
+  <call> Fat-Fuel.Dervs </call>
+  <call> GITract-Fuel.Dervs </call>
+  <call> Kidney-Fuel.Dervs </call>
+  <call> LeftHeart-Fuel.Dervs </call>
+
+  <call> OtherTissue-Fuel.Dervs </call>
+  <call> RespiratoryMuscle-Fuel.Dervs </call>
+  <call> RightHeart-Fuel.Dervs </call>
+  <call> SkeletalMuscle-Fuel.Dervs </call>
+  <call> Skin-Fuel.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

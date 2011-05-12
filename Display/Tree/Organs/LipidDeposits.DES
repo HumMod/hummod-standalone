@@ -1,0 +1,33 @@
+HumMod / LipidDeposits
+
+Created : 30-Mar-08
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> LipidDeposits </name>
+  <label> Lipid Deposits </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> LipidDeposits-Balance </name>
+  <label> Balance </label>
+  <parent> LipidDeposits </parent>
+</leaf>
+
+<leaf>
+  <name> LipidDeposits-FattyAcidUptake </name>
+  <label> Fatty Acid Uptake </label>
+  <parent> LipidDeposits </parent>
+</leaf>
+
+<leaf>
+  <name> LipidDeposits-FattyAcidRelease </name>
+  <label> Fatty Acid Release </label>
+  <parent> LipidDeposits </parent>
+</leaf>
+
+End

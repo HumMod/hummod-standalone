@@ -1,0 +1,120 @@
+HumMod / CO.REF
+
+Created : 2010-06-04
+Last Modified : 2010-06-04
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+The affinity of hemoglobin for CO is 230 ! times
+its affinity for oxygen.
+
+Allen, T.A. & W.S. Root. Partition of carbon
+monoxide and oxygen between air and whole blood
+of rats, dogs and men as affected by pH.
+J.Appl.Physiol. 10:186-190, 1957.
+   
+Because of this great affinity, all of the CO
+in the body is assumed to be carboxyhemoglobin.
+
+Binding is as follows : 1.334 ml of CO binds
+to 1 G Hgb.
+
+CO and O2 bind to hemoglobim competitively.
+CO in the blood only has a pCO when O2 is
+trying to displace it.  The relationship is
+
+   SCALE * pCO    Blood CO Conc
+   ----------- = ----------------
+      pO2        Pulm Cap O2 Conc
+
+where SCALE is 230.
+
+Endogenous CO production is 0.4 mL/Hr or 0.007
+mL/Min.
+
+Coburn, etal. J. Clin. Invest. 42:1172, 1963.
+
+PRM PermCO_O2Ratio (PFX "CO/O2 Ratio", 0.81, "mL/mL") ;
+PRM PermClampSwitch (PFX "Clamp", 0.0, "0=OFF, 1=ON") ;
+PRM PermClampLevel (PFX "Level", 17.0, "(mL/Min) / mmHg") ;
+
+#undef PFX
+#define PFX "CO Lung, "
+
+VAR LungConc (PFX "Conc", "mmHg") ;
+VAR LungPres (PFX "pCO", "mmHg") ;
+
+VAR Perm (PFX "Permeability", "(mL/Min) / mmHg") ;
+
+/* Calculate conc early, between
+   blood volume and hemoglobin.     */
+
+COD CalcConc (void)
+
+{ VAL( Conc )
+     = VAL( Mass )
+     / ((1.0 + VAL( ExtraSpace ))
+     * VAL( BloodVol :: Vol )) ;
+}
+
+/* Calculate Derv() after big loop
+   supplies pulmonary membrane
+   permeability, O2 and pO2 in
+   pulmonary capillary, and alveolary
+   ventilation.
+
+   At the pulmonary membrane, CO is
+   slightly less permeable than O2.    */
+
+COD DervCode (void)
+
+{ if (VAL( PermClampSwitch ) == 0)
+  { VAL( Perm )
+       = VAL( PermCO_O2Ratio )
+       * VAL( PulmMemb :: Perm ) ;
+  }
+  else // clamped
+  { VAL( Perm ) = VAL( PermClampLevel ) ;
+  }
+
+  if (VAL( LungO2 :: CapConc ) > 0.0)
+  { double N, D ;
+    N = VAL( Conc )
+      * VAL( LungO2 :: CapPres ) ;
+    D = VAL( HaldaneFactor )
+      * VAL( LungO2 :: CapConc ) ;
+    VAL( Pres ) = N / D ;
+  }
+  else // no O2 competition @ hgb
+  { VAL( Pres ) = 0.0 ;
+  }
+
+  if (VAL( RespSumy :: AlvVent_STPD) > 0.0)
+  { double A, B, C, D ;
+    A = VAL( Perm ) * VAL( Pres ) ;
+    B = VAL( RespSumy :: AlvVent_STPD ) *
+       VAL( GasCO :: BronConc ) ;
+    C = VAL( RespSumy :: AlvVent_STPD ) ;
+    D = 760.0 * VAL( Perm ) ;
+    VAL( LungConc ) = (A+B)/(C+D) ;
+    VAL( LungPres ) = 760.0 *
+       VAL( LungConc ) ;
+    VAL( Derv )
+       = VAL( Perm )
+       * (VAL( LungPres )
+       - VAL( Pres ))
+       + VAL( EndoProd ) ;
+  }
+  else // not breathing
+  { VAL( Derv ) = VAL( EndoProd ) ;
+    VAL( LungPres ) = VAL( Pres ) ;
+    VAL( LungConc ) = VAL( Pres ) /
+       760.0 ;
+  }
+}
+
+#undef CLS
+#undef PFX
+
+/* End */

@@ -1,0 +1,209 @@
+HumMod / Settings
+
+Created : 03-Mar-08
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 29.6 </high>
+   <wide> 30.0 </wide>
+   <title> Settings </title>
+
+<structurename> IVDrip </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<repeatlist>
+  <name> H2OSetting </name>
+  <repeat><reps> 20 </reps><stepsize>  1.0 </stepsize></repeat>
+  <repeat><reps> 16 </reps><stepsize>  5.0 </stepsize></repeat>
+  <repeat><reps> 20 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> H2OSetting </name>
+  <listname> H2OSetting </listname>
+  <label> H2O Rate </label>
+</slidebar>
+
+<repeatlist>
+  <name> Conc </name>
+  <repeat><reps> 200 </reps><stepsize>   1.0 </stepsize></repeat>
+  <repeat><reps>  10 </reps><stepsize>  10.0 </stepsize></repeat>
+  <repeat><reps>   7 </reps><stepsize> 100.0 </stepsize></repeat>
+</repeatlist>
+
+<label>
+  <row> 4.2 </row><col> 1.0 </col>
+  <text> Clinical Saline </text>
+</label>
+
+<maplist><name> ClinicalSaline </name>
+  <map><val>   0 </val><img> None </img></map>
+  <map><val>  40 </val><img> 1/4 Normal </img></map>
+  <map><val>  80 </val><img> 1/2 Normal </img></map>
+  <map><val> 154 </val><img> Normal (0.9%) </img></map>
+  <map><val> 170 </val><img> 1% </img></map>
+  <map><val> 345 </val><img> 2% </img></map>
+  <map><val> 520 </val><img> 3% </img></map>
+  <map><val> 860 </val><img> 5% </img></map>
+</maplist>
+
+<slidebar>
+  <row> 5.4 </row><col> 2.0 </col>
+  <name> ClinicalSaline </name>
+  <listname> ClinicalSaline </listname>
+  <nolabel/>
+</slidebar>
+
+<showvalue>
+  <row> 6.6 </row><col> 2.0 </col>
+  <name> ClinicalSaline </name>
+  <format><decimal> 0 </decimal></format>
+  <label> [NaCl] </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.6 </row><col> 2.0 </col>
+  <name> ClinicalSalineRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<label>
+  <row> 9.0 </row><col> 1.0 </col>
+  <text> Sodium Chloride </text>
+</label>
+
+<slidebar>
+  <row> 10.2 </row><col> 2.0 </col>
+  <name> [NaCl] </name>
+  <listname> Conc </listname>
+  <label> [NaCl] </label>
+</slidebar>
+
+<showvalue>
+  <row> 11.4 </row><col> 2.0 </col>
+  <name> NaClRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<label>
+  <row> 12.8 </row><col> 1.0 </col>
+  <text> Sodium Bicarbonate </text>
+</label>
+
+<slidebar>
+  <row> 14.0 </row><col> 2.0 </col>
+  <name> [Bicarb] </name>
+  <listname> Conc </listname>
+  <label> [Bicarb] </label>
+</slidebar>
+
+<showvalue>
+  <row> 15.2 </row><col> 2.0 </col>
+  <name> BicarbRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<label>
+  <row> 16.6 </row><col> 1.0 </col>
+  <text> Ammonium Chloride </text>
+</label>
+
+<slidebar>
+  <row> 17.8 </row><col> 2.0 </col>
+  <name> [NH4Cl] </name>
+  <listname> Conc </listname>
+  <label> [NH4Cl] </label>
+</slidebar>
+
+<showvalue>
+  <row> 19.0 </row><col> 2.0 </col>
+  <name> NH4ClRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<label>
+  <row> 20.4 </row><col> 1.0 </col>
+  <text> Potassium Chloride </text>
+</label>
+
+<slidebar>
+  <row> 21.6 </row><col> 2.0 </col>
+  <name> [KCl] </name>
+  <listname> Conc </listname>
+  <label> [KCl] </label>
+</slidebar>
+
+<showvalue>
+  <row> 22.8 </row><col> 2.0 </col>
+  <name> KClRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<label>
+  <row> 24.2 </row><col> 1.0 </col>
+  <text> Protein </text>
+</label>
+
+<slidebar>
+  <row> 25.4 </row><col> 2.0 </col>
+  <name> [Protein] </name>
+  <listname> Conc </listname>
+  <label> [Protein] </label>
+</slidebar>
+
+<showvalue>
+  <row> 26.6 </row><col> 2.0 </col>
+  <name> ProteinRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<showvalue>
+  <row> 28.0 </row><col> 1.0 </col>
+  <name> [Osm] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Osm] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> H2O </line>
+  <line>  </line>
+  <line> H2O = mL/Min </line>
+  <line> Volume = mL </line>
+  <line>  </line>
+  <line> ELECTROLYTES </line>
+  <line>  </line>
+  <line> [Conc] = mMol/L </line>
+  <line> Rate = mMol/Min </line>
+  <line>  </line>
+  <line> PROTEIN </line>
+  <line>  </line>
+  <line> [Conc] = G/dL </line>
+  <line> Rate = G/Min </line>
+  <line>  </line>
+  <line> Isotonic (0.9%) saline is 154 mMol/L NaCl. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

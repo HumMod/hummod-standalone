@@ -1,0 +1,46 @@
+HumMod / CapillaryProtein
+
+Created : 25-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\TissueH2O\CapillaryProtein\ ?>
+
+<?include UT_CapillaryProtein.DES ?>
+<?include MT_CapillaryProtein.DES ?>
+<?include LT_CapillaryProtein.DES ?>
+
+<structure><name> CapillaryProtein </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> UT_CapillaryProtein.Dervs </call>
+<call> MT_CapillaryProtein.Dervs </call>
+<call> LT_CapillaryProtein.Dervs </call>
+
+<def><name> Rate </name>
+  <val>
+      UT_CapillaryProtein.Rate
+    + MT_CapillaryProtein.Rate
+    + LT_CapillaryProtein.Rate
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,19 @@
+Digital Human / SplanchnicCirculation
+
+Created : 04-Apr-08
+Last Modified : 04-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path Docs\SplanchnicCirculation\ ?>
+
+<?include PortalVein.docs ?>
+<?include HepaticArtery.docs ?>
+<?include HepaticVein.docs ?>
+
+</docs>
+End

@@ -1,0 +1,61 @@
+HumMod / DialyzerControl
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> DialyzerControl </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+
+<parm><name> Interval(Days) </name><val> 3.0 </val></parm>
+<parm><name> Duration(Hrs) </name><val> 5.0 </val></parm>
+<parm><name> BloodFlow(%) </name><val> 20.0 </val></parm>
+<parm><name> DialysateFlow </name><val> 500.0 </val></parm>
+<parm><name> Ultrafiltration </name><val> 10.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<onjustchanged><name> Switch </name>
+  <if>
+  <test> Switch </test>
+  <true>
+    <call> TurnOn </call>
+  </true>
+  <false>
+    <call> DialyzerActivity.Stop </call>
+  </false>
+  </if>
+</onjustchanged>
+
+</block>
+
+<block><name> TurnOn </name>
+
+<if>
+<test> DialysisShunt.BloodFlow GT 0.0 </test>
+<true>
+  <call> DialyzerActivity.Start </call>
+</true>
+<false>
+  <def><name> Switch </name><val> FALSE </val></def>
+  <message> Establish shunt before using dialysis machine. </message>
+</false>
+</if>
+
+</block>
+
+</definitions>
+</structure>
+
+End

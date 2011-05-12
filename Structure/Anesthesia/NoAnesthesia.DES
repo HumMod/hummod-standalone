@@ -1,0 +1,67 @@
+QHP 2006 / NoAnesthesia
+
+Created : 28-Sep-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Anesthesia </name>
+
+<variables>
+
+<var>
+  <name> BrainFunction </name>
+</var>
+
+<var>
+  <name> TidalVolume </name>
+</var>
+
+<var>
+  <name> HeartContractility </name>
+</var>
+
+<var>
+  <name> VascularConductance </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> BrainFunction </name>
+  <val> 1.0 </val>
+</def>
+
+<def>
+  <name> TidalVolume </name>
+  <val> 1.0 </val>
+</def>
+
+<def>
+  <name> HeartContractility </name>
+  <val> 1.0 </val>
+</def>
+
+<def>
+  <name> VascularConductance </name>
+  <val> 1.0 </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,47 @@
+HumMod / HeatShivering
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatShivering </name>
+
+<variables>
+
+<var><name> Cals </name></var>
+<var><name> NerveEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> NerveEffect </name>
+  <point><x> 0.0 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x> 4.0 </x><y> 70.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Cals </name>
+
+<def>
+  <name> NerveEffect </name>
+  <val> NerveEffect [ HypothalamusShivering.NerveActivity ] </val>
+</def>
+
+<def>
+  <name> Cals </name>
+  <val> NerveEffect * SkeletalMuscle-Structure.Effect </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,18 @@
+HumMod / Steady State 31 Days.REF
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The computer is a Dell Dimension 8100 with
+a 1500 MHz Intel CPU running Windows 2000.
+
+Steady state to 31 days required 1687 steps
+and 236 retries with an average Dx of 25.6
+minutes. Run time was 17.3 seconds.
+
+
+End

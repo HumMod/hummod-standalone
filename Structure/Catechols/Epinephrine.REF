@@ -1,0 +1,44 @@
+HumMod / Epinephrine
+
+Created : 28-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Epinephrine (C9 H13 N O3) has a molecular weight
+of 183.
+
+   Epi uG * 5.46 = nMol
+
+Multiply by 0.00546 to convert pG/mL to nMol/L.
+
+Typical plasma concentration is
+
+        pG/mL  nMol/L
+        -----  ------
+   Epi    40    0.22
+
+Volume of distribution for catechols is ECFV or
+15,000 mL.
+
+Typical circulating pool is 600 nG or 600000 pG.
+
+Clearance is
+
+       L/Min   nG/Min  K 1/Min
+       -----   ------  -------
+   Epi  9.4      376    0.627
+
+This is the secretion rate also.
+
+   Epi 376 = 40 * K'
+   K' = 9.4
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

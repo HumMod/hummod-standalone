@@ -1,0 +1,44 @@
+HumMod / Chlorothiazide
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Drugs\Chlorothiazide\ ?>
+
+<?include ThiazidePool.DES ?>
+<?include ThiazideKidney.DES ?>
+<?include ThiazideGILumen.DES ?>
+<?include ThiazideSingleDose.DES ?>
+<?include ThiazideDailyDose.DES ?>
+
+<structure><name> Chlorothiazide </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> ThiazideDailyDose.Parms </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> ThiazideGILumen.CalcConc </call>
+  <call> ThiazidePool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> ThiazideGILumen.Dervs </call>
+  <call> ThiazideKidney.Dervs </call>
+  <call> ThiazidePool.Dervs </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> ThiazideDailyDose.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

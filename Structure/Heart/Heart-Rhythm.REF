@@ -1,0 +1,18 @@
+HumMod / Heart-Rhythm.REF
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The enumerated values for rhythm are
+
+0 - Sinus
+1 - Ventricle
+2 - Paced
+3 - CPRThumper
+4 - None
+
+End

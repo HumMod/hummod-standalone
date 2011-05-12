@@ -1,0 +1,135 @@
+HumMod / Evaporation
+
+Created : 2010-05-17
+Last Modified : 2010-05-17
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 7.4 </row>
+   <col> 32.0 </col>
+   <high> 27.6 </high>
+   <wide> 30.0 </wide>
+   <title> Evaporation </title>
+
+<structurename> HeatSweatEvaporation </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Flux </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Heat Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> H2OEvaporation </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Evaporation Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3.0 </col>
+   <name> SweatDuct.H2OOutflow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sweat Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.2 </row><col> 1.0 </col>
+   <name> MaximumEvaporation </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Maximum Evaporation </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.6 </row><col> 1.0 </col>
+   <name> WindEffect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> WindEffect </label>
+</showvalue>
+
+<showcurve>
+  <row> 7.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> Wind.MPH </name>
+    <label> Wind (MPH) </label>
+    <scale><min> 0 </min><max> 20 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> WindEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> Wind.MPH </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Wind (MPH) </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.0 </row><col> 1.0 </col>
+   <name> BasicEvaporation </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Basic Evaporation </label>
+</showvalue>
+
+<showcurve>
+  <row> 17.0 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> VaporPressureGradient </name>
+    <label> Gradient </label>
+    <scale><min> 0 </min><max> 40 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 20 </max></scale>
+  </yaxis>
+
+  <curvename> BasicEvaporation </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 24.0 </row><col> 1.0 </col>
+   <name> VaporPressureGradient </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Vapor Pressure Gradient </label>
+</showvalue>
+
+<showvalue>
+   <row> 25.0 </row><col> 3.0 </col>
+   <name> VaporPressureSkin </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Vapor Pressure Skin </label>
+</showvalue>
+
+<showvalue>
+   <row> 26.0 </row><col> 3.0 </col>
+   <name> RelativeHumidity.VaporPressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Vapor Pressure Air </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for heat flux are kCal/Min. </line>
+  <line> </line>
+  <line> Units for H2O loss are mL/Min.</line>
+</infobutton>
+
+</groupbox>
+
+End

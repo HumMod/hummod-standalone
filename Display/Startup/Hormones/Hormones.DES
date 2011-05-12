@@ -1,0 +1,17 @@
+HumMod / Hormones
+
+Created : 14-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Startup\Hormones\ ?>
+
+<?include General\General.DES ?>
+<?include Metabolic\Metabolic.DES ?>
+<?include Catechols\Catechols.DES ?>
+<?include Gender\Gender.DES ?>
+
+End

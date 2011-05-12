@@ -1,0 +1,20 @@
+Digital Human / K
+
+Created : 21-Oct-04
+Last Modified : 14-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+
+
+<?include K\KCell.docs ?>
+<?include K\KPool.docs ?>
+<?include K\KMembrane.docs ?>
+<?include K\KFluxToCell.docs ?>
+<?include K\KFluxToPool.docs ?>
+<?include K\KAldoEffect.docs ?>
+
+
+End

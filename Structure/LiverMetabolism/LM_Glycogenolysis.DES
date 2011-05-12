@@ -1,0 +1,91 @@
+HumMod / LM_Glycogenolysis
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_Glycogenolysis </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> BasicRate </name><val> 75.0 </val></parm>
+
+<var><name> InsulinEffect </name></var>
+<var><name> GlucagonEffect </name></var>
+<var><name> MassEffect </name></var>
+<var><name> GlucoseEffect </name></var>
+<var><name> EpinephrineEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x>  35 </x><y> 1.0 </y><slope> -0.02 </slope></point>
+  <point><x> 120 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucagonEffect </name>
+  <point><x> 170 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 680 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucoseEffect </name>
+  <point><x>  45 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x> 125 </x><y> 1.0 </y><slope> -0.01 </slope></point>
+  <point><x> 350 </x><y> 0.3 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> EpinephrineEffect </name>
+  <point><x>    0 </x><y>  0.8 </y><slope> 0.0 </slope></point>
+  <point><x>   40 </x><y>  1.0 </y><slope> 0.01 </slope></point>
+  <point><x>  400 </x><y> 10.0 </y><slope> 0.02 </slope></point>
+  <point><x> 1200 </x><y> 20.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ LM_Insulin.[InsulinDelayed] ] </val></def>
+<def><name> GlucagonEffect </name><val> GlucagonEffect [ PortalVein-Glucagon.[Glucagon] ] </val></def>
+<def><name> MassEffect </name><val> MassEffect [ LM_Glycogen.Mass ] </val></def>
+<def><name> GlucoseEffect </name><val> GlucoseEffect [ PortalVein-Glucose.[Glucose(mG/dL)] ] </val></def>
+<def><name> EpinephrineEffect </name><val> EpinephrineEffect [ EpiPool.[Epi(pG/mL)] ] </val></def>
+
+<def><name> Rate </name>
+  <val> 
+      BasicRate
+    * InsulinEffect
+    * GlucagonEffect
+    * MassEffect
+    * GlucoseEffect
+    * EpinephrineEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

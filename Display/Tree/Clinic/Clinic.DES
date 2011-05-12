@@ -1,0 +1,44 @@
+HumMod / Clinic DES
+
+Created : 14-Oct-04
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> CLINIC </name>
+  <label> Clinic </label>
+  <parent> MAINMENU </parent>
+</branch>
+
+<?path Display\Tree\Clinic\ ?>
+
+<?include A-VFistula.DES ?>
+<?include Anesthesia.DES ?>
+<?include AutopsyReport.DES ?>
+<?include Blockers.DES ?>
+<?include CardiacPacemaker.DES ?>
+<?include Chart.DES ?>
+<?include CPR.DES ?>
+<?include Defibrillator.DES ?>
+<?include Drugs.DES ?>
+<?include ECG.DES ?>
+<?include Evaluation.DES ?>
+<?include Hemodialysis.DES ?>
+<?include Hemorrhage.DES ?>
+<!-- <?include InfusionPumps.DES ?> -->
+<?include InsulinInjection.DES ?>
+<?include IVDrip.DES ?>
+<?include IVEpinephrineInjection.DES ?>
+<?include Morphology.DES ?>
+<?include MyocardialInfarction.DES ?>
+<?include OralH2O-GlucoseLoad.DES ?>
+<?include Pericardium.DES ?>
+<?include Pneumothorax.DES ?>
+<!-- <?include Stimulators.DES ?> -->
+<?include Transfusion.DES ?>
+<?include Ventilator.DES ?>
+<?include VentricularFibrillation.DES ?>
+
+End

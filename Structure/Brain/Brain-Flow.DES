@@ -1,0 +1,189 @@
+HumMod / Brain-Flow
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Brain-Flow </name>
+
+<variables>
+
+<var>
+  <name> Conductance </name>
+</var>
+
+<parm>
+  <name> BasicConductance </name>
+  <val> 9.1 </val>
+</parm>
+
+<var>
+  <name> PO2OnTension </name>
+</var>
+
+<var>
+  <name> PCO2OnTension </name>
+</var>
+
+<var>
+  <name> TotalTension </name>
+</var>
+
+<var>
+  <name> TensionEffect </name>
+</var>
+
+<var>
+  <name> AerobicFraction </name>
+</var>
+
+<var>
+  <name> O2Use </name>
+</var>
+
+<var>
+  <name> [O2] </name>
+</var>
+
+<var>
+  <name> BloodFlow </name>
+</var>
+<var><name> PlasmaFlow </name></var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> PO2 </name>
+  <startname> PO2 </startname>
+  <initialval> 37.0 </initialval>
+  <endname> PO2End </endname>
+  <errorlim> 0.37 </errorlim>
+  <searchmin> 0.0 </searchmin>
+  <searchmaxname> SearchMax </searchmaxname>
+</impliciteq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PO2OnTension </name>
+  <point><x> 22 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 36 </x><y> 1.0 </y><slope> 0.02 </slope></point>
+  <point><x> 60 </x><y> 1.2 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PCO2OnTension </name>
+  <point><x> 20 </x><y> 1.8 </y><slope> 0 </slope></point>
+  <point><x> 45 </x><y> 1.0 </y><slope> -0.05 </slope></point>
+  <point><x> 75 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TensionOnConductance </name>
+  <point><x> 0.0 </x><y> 2.2 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> -0.5 </slope></point>
+  <point><x> 2.0 </x><y> 0.6 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PO2OnAerobicFraction </name>
+  <point><x>  2.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 20.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PCO2OnTension </name>
+  <val> PCO2OnTension [ Brain-CO2.PCO2 ] </val>
+</def>
+
+<def>
+  <name> SearchMax </name>
+  <val> PO2Artys.Pressure </val>
+</def>
+
+<implicitmath><name> PO2 </name>
+
+<def>
+  <name> PO2OnTension </name>
+  <val> PO2OnTension [ PO2 ] </val>
+</def>
+
+<def>
+  <name> TotalTension </name>
+  <val>
+      PO2OnTension
+    * PCO2OnTension
+    * Anesthesia.VascularConductance
+  </val>
+</def>
+
+<def>
+  <name> TensionEffect </name>
+  <val> TensionOnConductance [ TotalTension ] </val>
+</def>
+
+<def>
+  <name> Conductance </name>
+  <val>
+      BasicConductance
+    * TensionEffect
+    * Viscosity.ConductanceEffect
+    * Brain-Vasculature.Effect
+  </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> ( Brain-Pressure.PressureGradient * Conductance ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> AerobicFraction </name>
+  <val> PO2OnAerobicFraction [ PO2 ] </val>
+</def>
+
+<def>
+  <name> O2Use </name>
+  <val> Brain-Metabolism.O2Need * AerobicFraction </val>
+</def>
+
+<conditional>
+  <name> [O2] </name>
+  <test> BloodFlow GT 0.0 </test>
+  <true> O2Artys.[O2] - ( O2Use / BloodFlow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+<copy>
+  <from> [O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> PO2End </to>
+</copy>
+
+</implicitmath>
+
+<def><name> PlasmaFlow </name><val> BloodFlow * BloodVol.PVCrit </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

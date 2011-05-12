@@ -1,0 +1,49 @@
+HumMod / Insulin
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Insulin\ ?>
+
+<?include InsulinPool.DES ?>
+<?include InsulinPump.DES ?>
+<?include InsulinClearance.DES ?>
+<?include InsulinStorage.DES ?>
+<?include InsulinSecretion.DES ?>
+<?include InsulinSynthesis.DES ?>
+
+<structure><name> Insulin </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> InsulinPump.Parms </call>
+  <call> InsulinSynthesis.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> InsulinPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> InsulinSynthesis.Dervs </call>
+  <call> InsulinSecretion.Dervs </call>
+  <call> InsulinClearance.Dervs </call>
+  <call> InsulinStorage.Dervs </call>
+  <call> InsulinPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

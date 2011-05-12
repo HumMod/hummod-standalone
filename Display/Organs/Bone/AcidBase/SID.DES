@@ -1,0 +1,88 @@
+HumMod / SID
+
+Created : 12-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 15.3 </high>
+   <wide> 30.0 </wide>
+   <title> SID </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [SID(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [SID (mEq/L)] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [SID(mEq/L)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 30.0 </min><max> 40.0 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> KCell.[K+] </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [K+] </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> CellSID.OtherCations </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [Other Cations] </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> CellSID.StrongAnions </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [Strong Anions] </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 1.0 </col>
+  <name> Bone-Lactate.[Lac-] </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [Lac-] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> [SID (mEq/L)] = 36.0 mEq/L </line>
+  <line>  </line>
+  <line> [K+] = 0.142 mEq/mL </line>
+  <line> [Other Cations] = 0.012 mEq/mL </line>
+  <line> [Strong Anions] = 0.117 mEq/mL </line>
+  <line> [Lac-] = 0.001 mEq/mL </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,15 @@
+HumMod / Pericardium
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Clinic\Pericardium\ ?>
+
+<?include PericardialHemorrhage\PericardialHemorrhage.DES ?>
+<?include PericardialDrain\PericardialDrain.DES ?>
+<?include PericardialRupture\PericardialRupture.DES ?>
+
+End

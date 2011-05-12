@@ -1,0 +1,126 @@
+HumMod / Compartments
+
+Created : 17-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.8 </high>
+   <wide> 30.0 </wide>
+   <title> Compartments </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> SystemicArtys.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Arteries </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> SystemicVeins.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> SplanchnicVeins.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Splanchnic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> RightAtrium.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Atrium </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 1.0 </col>
+   <name> RightVentricle.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Ventricle </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 1.0 </col>
+   <name> PulmArty.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Artery </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 1.0 </col>
+   <name> PulmCapys.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Capillaries </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.4 </row><col> 1.0 </col>
+   <name> PulmVeins.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> LeftAtrium.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Atrium </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.4 </row><col> 1.0 </col>
+   <name> LeftVentricle.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Ventricle </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> BVSeq.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sequestered </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1.0 </col>
+   <name> BloodVol.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mL. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Systemic Arteries = 1000.0 </line>
+  <line> Systemic Veins = 2450.0 </line>
+  <line> Splanchnic Veins = 1000.0 </line>
+  <line> Right Atrium = 50.0 </line>
+  <line> Right Ventricle = 75.0 </line>
+  <line> Pulmonary Artery = 200.0 </line>
+  <line> Pulmonary Capillaries = 200.0 </line>
+  <line> Pulmonary Veins = 210.0 </line>
+  <line> Left Atrium = 50.0 </line>
+  <line> Left Ventricle = 75.0 </line>
+  <line>  </line>
+  <line> Sequestered = 220.0 </line>
+  <line>  </line>
+  <line> Total = 5400.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

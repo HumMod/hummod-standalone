@@ -1,0 +1,84 @@
+HumMod / Solubility
+
+Created : 01-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structurename> AnesthesiaIVSolubility </structurename>
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.0 </high>
+   <wide> 30.0 </wide>
+   <title> Solubility </title>
+
+<repeatlist>
+  <name> AnesthesiaIVSolubility.General </name>
+  <firstval> 0.1 </firstval>
+  <repeat>
+    <reps> 49 </reps>
+    <stepsize> 0.1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> General </name>
+  <listname> AnesthesiaIVSolubility.General </listname>
+  <label> General </label>
+</slidebar>
+
+<repeatlist>
+  <name> AnesthesiaIVSolubility.Brain </name>
+  <firstval> 0.1 </firstval>
+  <repeat>
+    <reps> 49 </reps>
+    <stepsize> 0.1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Brain </name>
+  <listname> AnesthesiaIVSolubility.Brain </listname>
+  <label> Brain </label>
+</slidebar>
+
+<repeatlist>
+  <name> AnesthesiaIVSolubility.Adipose </name>
+  <firstval> 0.1 </firstval>
+  <repeat>
+    <reps> 199 </reps>
+    <stepsize> 0.1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.6 </row><col> 1.0 </col>
+  <name> Adipose </name>
+  <listname> AnesthesiaIVSolubility.Adipose </listname>
+  <label> Adipose </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Solubility is a multiple of solubility </line>
+  <line> in blood. </line>
+  <line>  </line>
+  <line> Normal values represent thiopental </line>
+  <line>  </line>
+  <line> Normal values are </line>
+  <line>  </line>
+  <line> General = 1.0 </line>
+  <line> Brain = 1.3 </line>
+  <line> Adipose = 13.3 </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,45 @@
+HumMod / Descriptors-Age
+
+Created : 21-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Descriptors-Age </name>
+
+<?path Context\Traits\Descriptors\Descriptors-Age\ ?>
+
+<variables>
+
+<constant><name> YOUNG </name><val> 0 </val></constant>
+<constant><name> YOUNGISH </name><val> 1 </val></constant>
+<constant><name> MIDDLEAGED </name><val> 2 </val></constant>
+<constant><name> OLD </name><val> 3 </val></constant>
+<constant><name> VERYOLD </name><val> 4 </val></constant>
+
+<var><name> IsYoung </name><val> FALSE </val></var>
+<var><name> IsYoungish </name><val> FALSE </val></var>
+<var><name> IsMiddleaged </name><val> TRUE </val></var>
+<var><name> IsOld </name><val> FALSE </val></var>
+<var><name> IsVeryOld </name><val> FALSE </val></var>
+
+<var><name> Value </name><val> 2 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+  <?if AGE-YOUNG Young.DES ?>
+  <?if AGE-YOUNGISH Youngish.DES ?>
+  <?if AGE-MIDDLEAGED Middleaged.DES ?>
+  <?if AGE-OLD Old.DES ?>
+  <?if AGE-VERYOLD VeryOld.DES ?>
+</block>
+
+</definitions>
+</structure>
+
+End

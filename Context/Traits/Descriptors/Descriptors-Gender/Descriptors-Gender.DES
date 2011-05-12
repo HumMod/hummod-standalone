@@ -1,0 +1,36 @@
+HumMod / Descriptors-Gender
+
+Created : 21-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Descriptors-Gender </name>
+
+<?path Context\Traits\Descriptors\Descriptors-Gender\ ?>
+
+<variables>
+
+<constant><name> MALE </name><val> 0 </val></constant>
+<constant><name> FEMALE </name><val> 1 </val></constant>
+
+<var><name> IsMale </name><val> TRUE </val></var>
+<var><name> IsFemale </name><val> FALSE </val></var>
+
+<var><name> Value </name><val> 0 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+  <?if GENDER-MALE Male.DES ?>
+  <?if GENDER-FEMALE Female.DES ?>
+</block>
+
+</definitions>
+</structure>
+
+End

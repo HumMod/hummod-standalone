@@ -1,0 +1,32 @@
+HumMod / BMI
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BMI </name>
+
+<variables>
+
+<var>
+  <name> BMI </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> BMI </name>
+  <val> Weight.Weight(kG) / ( Height.Height(M) ^ 2 ) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

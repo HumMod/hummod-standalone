@@ -1,0 +1,26 @@
+HumMod / H2O-Movement
+
+Created : 24-Apr-05
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\H2O\Movement\ ?>
+
+<?include Dialysis\Dialysis.DES ?>
+<?include Diarrhea\Diarrhea.DES ?>
+<?include DietaryIntake\DietaryIntake.DES ?>
+<?include Hemorrhage\Hemorrhage.DES ?>
+<?include InsensibleLung\InsensibleLung.DES ?>
+<?include InsensibleSkin\InsensibleSkin.DES ?>
+<?include IVDrip\IVDrip.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include Sweating\Sweating.DES ?>
+<?include Transfusion\Transfusion.DES ?>
+<?include Urine\Urine.DES ?>
+<?include Vomitus\Vomitus.DES ?>
+
+End

@@ -1,0 +1,41 @@
+HumMod / FSH Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Follicle Stimulating Hormone
+
+M.W. ~ 36,000
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+Units are IU/L.
+
+In the female, [Conc] is 5.5 IU/L in the basal state and
+12 IU/L during the surge.
+
+In the male, [Conc] is 8 IU/L.
+
+Initial mass in the male is 120 IU. Initial mass in the
+female is 53.5.
+
+Clearance is 14 mL/Min in the male.
+
+At 8 IU/L, degradation is 0.112 IU/Min.
+
+  Degradation = Secretion = K * Mass
+
+  K = 0.112 (IU/Min) / 120 IU or 0.00093 /Min.
+
+Tau is 1071 Min.
+
+FSH may have a potency of 9380 IU/mG.
+
+End

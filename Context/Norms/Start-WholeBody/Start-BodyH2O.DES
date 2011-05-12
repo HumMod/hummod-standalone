@@ -1,0 +1,31 @@
+HumMod / Start-BodyH2O DES
+
+Created : 14-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-BodyH2O </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> TissueH2O.Initialize </call>
+  <call> ExternalH2O.Initialize </call>
+  <call> BodyH2O.Initialize </call>
+  <call> ECFV.Initialize </call>
+  <call> ICFV.Initialize </call>
+  <call> InterstitialWater.Initialize </call>
+  <call> CellH2O.Initialize </call>
+
+  <call> Organs-ScaleH2O.ScaleH2O </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

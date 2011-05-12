@@ -1,0 +1,39 @@
+HumMod / Summary
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> Torso-Summary </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> WholeBody </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Torso - Summary </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Torso\Summary\ ?>
+
+<?include UpperTorso.DES ?>
+<?include MiddleTorso.DES ?>
+<?include LowerTorso.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,58 @@
+HumMod / GlucagonEffect
+
+Created : 31-Mar-08
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 34.8 </row>
+   <col> 32.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Glucagon Effect </title>
+
+<structurename> LipidDeposits-Release </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> GlucagonEffect </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Glucagon Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> GlucagonPool.[Glucagon] </name>
+    <label> [Glucagon] </label>
+    <scale><min> 0 </min><max> 200 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> GlucagonEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> GlucagonPool.[Glucagon] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glucagon] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

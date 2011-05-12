@@ -1,0 +1,61 @@
+HumMod / Heart-Intervals
+
+Created : 30-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Heart-Intervals </name>
+
+<variables>
+
+<var><name> R-R </name></var>
+<var><name> Systolic </name></var>
+<var><name> Diastolic </name></var>
+<constant><name> SYSTOLICK </name><val> 0.343 </val></constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> CPR-Heart.Status EQ CPR-Heart.ACTIVE </test>
+
+<def><name> R-R </name><val> 60.0 / CPR-Heart.ThumpRate </val></def>
+<def><name> Systolic </name><val> 0.5 * R-R </val></def>
+<def><name> Diastolic </name><val> R-R - Systolic </val></def>
+
+</case>
+
+<case>
+<test> Heart-Rate.Rate LE 0.0 </test>
+
+<def><name> R-R </name><val> 0.0 </val></def>
+<def><name> Systolic </name><val> 0.0 </val></def>
+<def><name> Diastolic </name><val> 0.0 </val></def>
+
+</case>
+
+<case>
+<test> TRUE </test>
+
+<def><name> R-R </name><val> 60.0 / Heart-Rate.Rate </val></def>
+<def><name> Systolic </name><val> SYSTOLICK * SQRT R-R </val></def>
+<def><name> Diastolic </name><val> R-R - Systolic </val></def>
+
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

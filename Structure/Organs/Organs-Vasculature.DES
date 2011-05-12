@@ -1,0 +1,44 @@
+HumMod / Organs-Vasculature
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Vasculature </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> Bone-Vasculature.Parms </call>
+  <call> Brain-Vasculature.Parms </call>
+  <call> Fat-Vasculature.Parms </call>
+  <call> GITract-Vasculature.Parms </call>
+  <call> LeftHeart-Vasculature.Parms </call>
+  <call> OtherTissue-Vasculature.Parms </call>
+  <call> RespiratoryMuscle-Vasculature.Parms </call>
+  <call> RightHeart-Vasculature.Parms </call>
+  <call> SkeletalMuscle-Vasculature.Parms </call>
+  <call> Skin-Vasculature.Parms </call>
+</block>
+
+<block><name> Calc </name>
+  <call> Bone-Vasculature.Calc </call>
+  <call> Brain-Vasculature.Calc </call>
+  <call> Fat-Vasculature.Calc </call>
+  <call> GITract-Vasculature.Calc </call>
+  <call> LeftHeart-Vasculature.Calc </call>
+  <call> OtherTissue-Vasculature.Calc </call>
+  <call> RespiratoryMuscle-Vasculature.Calc </call>
+  <call> RightHeart-Vasculature.Calc </call>
+  <call> SkeletalMuscle-Vasculature.Calc </call>
+  <call> Skin-Vasculature.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

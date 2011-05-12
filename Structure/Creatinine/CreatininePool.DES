@@ -1,0 +1,80 @@
+HumMod / CreatininePool
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CreatininePool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> RenalLoss </name></var>
+<var><name> ExtrarenalLoss </name></var>
+
+<var><name> [Creatinine] </name></var>
+<var><name> [Creatinine(mG/dL)] </name></var>
+<var><name> [Creatinine(uMol/L)] </name></var>
+
+<var><name> VolDist </name></var>
+<parm><name> VolDistFract </name><val> 0.87 </val></parm>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_UMOL </name><val> 8840.0 </val></constant>
+
+<var><name> Target[Creatinine] </name><val> 0.0082 </val></var>
+<var><name> InitialMass </name></var>
+<var><name> InitialVolDist </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 3.10 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialVolDist </name><val> VolDistFract * BodyH2O.InitialTotalVol </val></def>
+  <def><name> InitialMass </name><val> Target[Creatinine] * InitialVolDist </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> Conc </name>
+
+<def><name> VolDist </name><val> VolDistFract * BodyH2O.TotalVol </val></def>
+<def><name> [Creatinine] </name><val> Mass / VolDist </val></def>
+<def><name> [Creatinine(mG/dL)] </name><val> PER_ML_TO_PER_DL * [Creatinine] </val></def>
+<def><name> [Creatinine(uMol/L)] </name><val> MG_TO_UMOL * [Creatinine] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> RenalLoss </name><val> CD_Creatinine.Outflow </val></def>
+<def><name> ExtrarenalLoss </name><val> 0.02 * [Creatinine(mG/dL)] </val></def>
+
+<def><name> Gain </name><val> CreatineCells.CreatineToCreatinine </val></def>
+<def><name> Loss </name><val> RenalLoss + ExtrarenalLoss </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

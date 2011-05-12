@@ -1,0 +1,59 @@
+HumMod / Metabolism-Tools
+
+Created : 01-Apr-05
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<structure><name> Metabolism-Tools </name>
+
+<variables>
+
+<constant><name> CalToO2 </name><val> 0.2093 </val></constant>
+<constant><name> O2ToCal </name><val> 4.778 </val></constant>
+
+<constant><name> FatCalToCO2 </name><val> 0.1465 </val></constant>
+<constant><name> CarboCalToCO2 </name><val> 0.2093 </val></constant>
+
+<constant><name> WattToKPM </name><val> 6.12 </val></constant>
+
+<constant><name> CAL_MIN_TO_KCAL_DAY </name><val> 1.44 </val></constant>
+
+<constant><name> CAL_MIN_TO_WATT </name><val> 0.0697 </val></constant>
+<constant><name> KCAL_MIN_TO_WATT </name><val> 69.7 </val></constant>
+
+<constant><name> WATT_TO_CAL_MIN </name><val> 14.34 </val></constant>
+<constant><name> WATT_TO_KCAL_MIN </name><val> 0.0143 </val></constant>
+
+<constant><name> CAL_TO_JOULE </name><val> 4.19 </val></constant>
+
+<constant><name> CarboAerobic(kCal/G) </name><val> 4.10 </val></constant>
+<constant><name> CarboAerobic(kCal/mG) </name><val> 0.00410 </val></constant>
+<constant><name> CarboAerobic(mG/kCal) </name><val> 243.90 </val></constant>
+<constant><name> CarboAerobic(mG/Cal) </name><val> 0.2439 </val></constant>
+
+<constant><name> CarboAnaerobic(kCal/G) </name><val> 0.1577 </val></constant>
+<constant><name> CarboAnaerobic(kCal/mG) </name><val> 0.0001577 </val></constant>
+<constant><name> CarboAnaerobic(mG/kCal) </name><val> 6341.1 </val></constant>
+<constant><name> CarboAnaerobic(mG/Cal) </name><val> 6.3411 </val></constant>
+
+<constant><name> Fat(kCal/G) </name><val> 9.3 </val></constant>
+<constant><name> Fat(kCal/mG) </name><val> 0.0093 </val></constant>
+<constant><name> Fat(mG/kCal) </name><val> 107.5 </val></constant>
+<constant><name> Fat(mG/Cal) </name><val> 0.1075 </val></constant>
+
+<constant><name> Protein(kCal/G) </name><val> 4.35 </val></constant>
+
+<constant><name> Lac-(kCal/G) </name><val> 3.94 </val></constant>
+<constant><name> Lac-(mG/Cal) </name><val> 0.2538 </val></constant>
+
+<constant><name> Carbo(Cal/mG) </name><val> 4.10 </val></constant>
+<constant><name> Fat(Cal/mG) </name><val> 9.3 </val></constant>
+<constant><name> Protein(Cal/mG) </name><val> 4.35 </val></constant>
+
+</variables>
+
+</structure>
+
+End

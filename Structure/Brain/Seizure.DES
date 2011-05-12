@@ -1,0 +1,86 @@
+HumMod / Seizure
+
+Created : 14-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Seizure </name>
+
+<variables>
+
+<var>
+  <name> Convulsing </name>
+  <val> FALSE </val>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<if>
+  <test> Convulsing </test>
+  <true>
+
+  <andif>
+    <test>
+       ( ( HeatCore.Temp(C) LT 41.5 )
+         OR
+         ( HeatCore.Temp(C) GT 44.5 )
+       )
+       AND
+       ( ( Brain-Fuel.FractUseDelay GT 0.85 )
+         OR
+         ( Brain-Fuel.FractUseDelay LT 0.40 )
+       )
+    </test>
+    <true>
+
+    <def>
+      <name> Convulsing </name>
+      <val> FALSE </val>
+    </def>
+
+    <page> Your patient stopped convulsing. </page>
+
+    </true>
+  </andif>
+
+  </true>
+  <false>
+
+  <andif>
+    <test>
+       ( ( HeatCore.Temp(C) GE 42.0 )
+         AND
+         ( HeatCore.Temp(C) LE 44.0 )
+       )
+       OR
+       ( ( Brain-Fuel.FractUseDelay LE 0.80 )
+         AND
+         ( Brain-Fuel.FractUseDelay GE 0.45 )
+       )
+    </test>
+    <true>
+
+    <def>
+      <name> Convulsing </name>
+      <val> TRUE </val>
+    </def>
+
+    <page> Your patient is convulsing. </page>
+
+    </true>
+  </andif>
+
+  </false>
+</if>
+
+</block>
+</definitions>
+</structure>
+
+End

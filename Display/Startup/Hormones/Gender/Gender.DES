@@ -1,0 +1,44 @@
+HumMod / Gender
+
+Created : 22-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-Hormones-Gender </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Hormones - Gender </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Hormones\Gender\ ?>
+
+<?include Estradiol.DES ?>
+<?include FSH.DES ?>
+<?include hCG.DES ?>
+<?include Inhibin.DES ?>
+<?include LH.DES ?>
+<?include Progesterone.DES ?>
+<?include Testosterone.DES ?>
+
+</panel>
+
+End

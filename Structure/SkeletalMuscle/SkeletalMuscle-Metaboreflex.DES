@@ -1,0 +1,76 @@
+HumMod / SkeletalMuscle-Metaboreflex
+
+Created : 17-Jan-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-Metaboreflex </name>
+
+<variables>
+
+<var>
+  <name> NerveActivity </name>
+</var>
+
+<parm>
+  <name> Clamp </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Level </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PhOnNerveActivity </name>
+  <point><x> 6.5 </x><y> 5.0 </y><slope> 0 </slope></point>
+  <point><x> 6.9 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> SkeletalMuscle-Function.Failed </test>
+<def>
+  <name> NerveActivity </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> Clamp </test>
+<def>
+  <name> NerveActivity </name>
+  <val> Level </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> NerveActivity </name>
+  <val> PhOnNerveActivity [ SkeletalMuscle-Ph.Ph ] </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+</definitions>
+
+</structure>
+
+End

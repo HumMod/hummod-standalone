@@ -1,0 +1,100 @@
+HumMod / AnesthesiaGasSolubility
+
+Created : 01-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+Solubility is mL gas per mL tissue
+at a gas pressure of 760 mmHg over
+the tissue. We use a function of the
+inverse.
+
+  SolubleK = 760 / Solubility   (1)
+
+Units for Soluble K are mmHg / (mL/mL).
+SolubleK is used to calculate partial pressure.
+
+  pGas = SolubleK * [Gas]       (2)
+
+Default values describe isoflurane.
+
+  Tissue    Solubility
+  --------  ---------
+  Blood         1.4
+  General       4.2
+  Brain         3.6
+  Adipose      63.0
+
+<structure><name> AnesthesiaGasSolubility </name>
+
+<variables>
+
+<parm>
+  <name> Blood </name>
+  <val> 1.4 </val>
+</parm>
+
+<var>
+  <name> BloodK </name>
+</var>
+
+<parm>
+  <name> General </name>
+  <val> 4.2 </val>
+</parm>
+
+<var>
+  <name> GeneralK </name>
+</var>
+
+<parm>
+  <name> Brain </name>
+  <val> 3.6 </val>
+</parm>
+
+<var>
+  <name> BrainK </name>
+</var>
+
+<parm>
+  <name> Adipose </name>
+  <val> 63.0 </val>
+</parm>
+
+<var>
+  <name> AdiposeK </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> BloodK </name>
+  <val> 760.0 / Blood </val>
+</def>
+
+<def>
+  <name> GeneralK </name>
+  <val> 760.0 / General  </val>
+</def>
+
+<def>
+  <name> BrainK </name>
+  <val> 760.0 / Brain </val>
+</def>
+
+<def>
+  <name> AdiposeK </name>
+  <val> 760.0 / Adipose </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,51 @@
+HumMod / RBCClearance
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RBCClearance </name>
+
+<variables>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<var>
+  <name> K </name>
+</var>
+
+<parm>
+  <name> Tau </name>
+  <val> 120.0 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT ( 1440.0 * Tau ) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> K * RBCVol.Vol </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

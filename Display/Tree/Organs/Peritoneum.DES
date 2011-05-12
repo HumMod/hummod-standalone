@@ -1,0 +1,16 @@
+HumMod / Peritoneum
+
+Created : 19-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<leaf>
+  <name> Peritoneum </name>
+  <label> Peritoneum </label>
+  <parent> ORGANS </parent>
+</leaf>
+
+End

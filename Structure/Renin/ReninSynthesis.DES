@@ -1,0 +1,82 @@
+HumMod / ReninSynthesis
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> ReninSynthesis </name>
+
+<variables>
+
+<var><name> TGFEffect </name></var>
+<var><name> SympsEffect </name></var>
+<parm><name> Base </name><val> 290.0 </val></parm>
+<parm><name> Tau </name><val> 60.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Rate </name>
+  <outputname> Rate </outputname>
+  <initialval> 290.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 2.90 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> TGFEffect </name>
+  <point><x> 0.0 </x><y> 10.0 </y><slope> 0 </slope></point>
+  <point><x> 0.6 </x><y>  2.0 </y><slope> -4.0 </slope></point>
+  <point><x> 1.0 </x><y>  1.0 </y><slope> -1.0 </slope></point>
+  <point><x> 2.0 </x><y>  0.3 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SympsEffect </name>
+  <point><x> 0.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> 1.0 </slope></point>
+  <point><x> 2.5 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT Tau </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> TGFEffect </name><val> TGFEffect [ TGF-Renin.Signal ] </val></def>
+<def><name> SympsEffect </name><val> SympsEffect [ Kidney-BetaReceptors.Activity ] </val></def>
+
+<def>
+  <name> SteadyState </name>
+  <val>
+       Base
+     * TGFEffect
+     * SympsEffect
+     * Kidney-NephronCount.Total(xNormal)
+     * Kidney-Function.Effect
+ </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,67 @@
+HumMod / BloodVolume
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\BloodVolume\ ?>
+
+<?include BloodVol.DES ?>
+<?include PlasmaVol.DES ?>
+<?include RBCVol.DES ?>
+<?include RBCSolids.DES ?>
+<?include RBCH2O.DES ?>
+
+<?include RBCSecretion.DES ?>
+<?include RBCClearance.DES ?>
+<?include [EPO]Delay.DES ?>
+
+<structure><name> BloodVolume </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> RBCClearance.Parms </call>
+  <call> [EPO]Delay.Parms </call>
+
+</block>
+
+<block><name> CalcVol </name>
+
+  <call> RBCVol.CalcVol </call>
+  <call> RBCSolids.CalcVol </call>
+  <call> RBCH2O.CalcVol </call>
+  <call> PlasmaVol.CalcVol </call>
+  <call> BloodVol.CalcVol </call>
+
+</block>
+
+<block><name> CalcV0 </name>
+
+  <call> BloodVol.CalcV0 </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> RBCSecretion.Dervs </call>
+  <call> RBCClearance.Dervs </call>
+
+  <call> [EPO]Delay.Dervs </call>
+
+  <call> RBCVol.Dervs </call>
+  <call> RBCH2O.Dervs </call>
+  <call> PlasmaVol.Dervs </call>
+  <call> BloodVol.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

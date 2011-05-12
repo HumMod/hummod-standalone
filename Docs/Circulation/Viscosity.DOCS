@@ -1,0 +1,150 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Viscosity </structurename>
+
+<vardoc>
+<name> Viscosity.Clamp </name>
+<topic> Clamp - Overview </topic>
+<topic> Viscosity - Physical Units </topic>
+<topic> Viscosity - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> Viscosity.ConductanceEffect </name>
+<topic> ConductanceEffect - Overview </topic>
+<topic> Viscosity - Physical Units  </topic>
+<topic> Viscosity - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> Viscosity.Level </name>
+<topic> Viscosity - Overview </topic>
+<topic> Viscosity - Physical Units  </topic>
+<topic> Viscosity - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> Viscosity.Value </name>
+<topic> Viscosity - Overview </topic>
+<topic> Viscosity - Physical Units   </topic>
+<topic> Viscosity - Concentration Units  </topic>
+<seealso> BloodVol.Hct </seealso>
+<seealso> Viscosity.Level </seealso> 
+</vardoc>
+
+
+<topicdoc>
+<name> Viscosity - Overview </name>
+<label> Overview </label>
+<content>
+
+The viscosity of blood is a measure of its resistance 
+to flow. The greater the viscosity, the less the flow
+in a blood vessel if all other factors are constant.
+Conversely the less viscous a fluid is, the greater 
+the flow. The viscosity of normal blood is about three
+times as great as the viscosity of water and is largely 
+the result of the large numbers of suspended red cells
+in the blood. Each of these cells exerts frictional 
+drag against adjacent cells and against the wall of the
+blood vessel. The percentage of the blood that is cells
+is called the hematocrit. The viscosity of blood increases
+dramatically as the hematocrit increases. When the 
+hematocrit rises to 60 or 70 whcih it often does in 
+polycythemia, the blood viscosity can become as great as 
+ten times that of water, and its flow through blood vessels
+is greatly retarded. 
+
+Relationship of hematocrit to viscosity is described in 
+the following references:
+
+Fan FC, Chen RY, Schuessler GB and Chien S. Effects of 
+hematocrit variations on regional hemodynamics and
+oxygen transport in the dog.
+Am J Physiol 238: H545-H552,1980
+
+Stone HO, Thompson HK and Schmidt-Nielson K. Influence 
+of erthrocytes on blood viscosity. 
+Am. J. Physiol 214:913-918,1968.
+
+Whittaker SRF, Winton FR. The apparent viscosity of blood
+flowing in the isolated hindlimb of the dog, and its 
+variation with corpuscular concentration. 
+J. Physiol 78:339-369,1933.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ConductanceEffect - Overview </name>
+<label> Overview </label>
+<content>
+
+Conductance is a measure of the blood flow through 
+a vessel for a given pressure difference. It is the
+exact reciprocal of resistance. Since viscosity affects
+resistance to flow, viscosity also affects conductance. 
+As viscosity increases, conductance decreases.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Viscosity - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+The viscosity of normal blood is about 3 times as great
+as the viscosity of water.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Viscosity - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Viscosity at a normal hematocrit of 0.44 is expressed as 1
+
+Relationship of hematocrit to viscosity is described in 
+the following references:
+
+Fan FC, Chen RY, Schuessler GB and Chien S. Effects of 
+hematocrit variations on regional hemodynamics and
+oxygen transport in the dog.
+Am J Physiol 238: H545-H552,1980
+
+Stone HO, Thompson HK and Schmidt-Nielson K. Influence 
+of erthrocytes on blood viscosity. 
+Am. J. Physiol 214:913-918, 1968.
+
+Whittaker SRF, Winton FR. The apparent viscosity of blood
+flowing in the isolated hindlimb of the dog, and its 
+variation with corpuscular concentration. 
+J. Physiol 78:339-369, 1933.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Clamp - Overview </name>
+<label> Overview </label>
+<content>
+
+The clamp feature enables the model user to fix a particular
+variable at a set value. In the case of viscosity,
+if the clamp is set to TRUE then viscosity would stay fixed at
+the initial level. If the clamp is set to FALSE, then viscosity
+will change as defined by the relationship of hematocrit to 
+viscosity.
+
+</content>
+</topicdoc>
+

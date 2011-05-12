@@ -1,0 +1,100 @@
+HumMod / Control
+
+Created : 2005-05-25
+Last Modified : 2010-03-23
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.2 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Status </structurename>
+
+<checkmark>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Lying </name>
+   <label> Lying </label>
+</checkmark>
+
+<checkmark>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Sitting </name>
+   <label> Sitting </label>
+</checkmark>
+
+<checkmark>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> Standing </name>
+   <label> Standing </label>
+</checkmark>
+
+<checkmark>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> Tilting </name>
+   <label> Tilting </label>
+</checkmark>
+
+<structurename> PostureControl </structurename>
+
+<label>
+  <row> 5.8 </row><col> 1.0 </col>
+  <text> Restraint </text>
+</label>
+
+<maplist>
+  <name> Restraint </name>
+  <map><val> 0 </val><img> None </img></map>
+  <map><val> 1 </val><img> Lying </img></map>
+  <map><val> 2 </val><img> Sitting </img></map>
+  <map><val> 3 </val><img> Standing </img></map>
+  <map><val> 4 </val><img> Tilting </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> Restraint</name>
+  <listname> Restraint </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<label>
+  <row> 12.4 </row><col> 1.0 </col>
+  <text> Request </text>
+</label>
+
+<maplist>
+  <name> Request </name>
+  <map><val> 1 </val><img> Lying </img></map>
+  <map><val> 2 </val><img> Sitting </img></map>
+  <map><val> 3 </val><img> Standing </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> PostureControl.Request </name>
+  <listname> PostureControl.Request </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Requested posture is ignored when restraint </line>
+  <line> is on, posture is being controlled by the daily </line>
+  <line> planner or when the subject is comatose. </line>
+  <line> </line>
+  <line> Restraint, on the other hand, is always </line>
+  <line> enforced. </line>
+</infobutton>
+
+</groupbox>
+
+End

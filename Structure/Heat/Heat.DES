@@ -1,0 +1,92 @@
+HumMod / Heat
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Heat\ ?>
+
+<?include SpecificHeat.DES ?>
+<?include TempTools.DES ?>
+<?include HeatCore.DES ?>
+<?include HeatSkin.DES ?>
+<?include HeatSkeletalMuscle.DES ?>
+<?include Convulsing.DES ?>
+<?include HeatMetabolism.DES ?>
+<?include HeatRadiation.DES ?>
+<?include HeatConduction.DES ?>
+<?include HeatInsensibleSkin.DES ?>
+<?include HeatInsensibleLung.DES ?>
+<?include HeatShivering.DES ?>
+<?include HeatSweatConvection.DES ?>
+<?include HeatSweatEvaporation.DES ?>
+<?include HeatSweating.DES ?>
+
+<?include HeatIVDrip.DES ?>
+<?include HeatTransfusion.DES ?>
+<?include HeatHemorrhage.DES ?>
+<?include HeatDialyzer.DES ?>
+<?include HeatUrine.DES ?>
+
+<?include HeatStorage.DES ?>
+
+<structure><name> Heat </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+</block>
+
+<block><name> CalcTemp </name>
+
+  <call> HeatCore.CalcTemp </call>
+  <call> HeatSkin.CalcTemp </call>
+  <call> HeatSkeletalMuscle.CalcTemp </call>
+
+  <call> HeatMetabolism.Calc </call>
+
+</block>
+
+<block><name> Cals </name>
+
+  <call> HeatShivering.Cals </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> HeatRadiation.Flux </call>
+  <call> HeatConduction.Flux </call>
+  <call> HeatInsensibleSkin.Flux </call>
+  <call> HeatInsensibleLung.Flux </call>
+
+  <call> HeatSweatEvaporation.Flux </call>
+  <call> HeatSweatConvection.Flux </call>
+  <call> HeatSweating.Flux </call>
+
+  <call> HeatIVDrip.Flux </call>
+  <call> HeatTransfusion.Flux </call>
+  <call> HeatHemorrhage.Flux </call>
+  <call> HeatDialyzer.Flux </call>
+  <call> HeatUrine.Flux </call>
+
+  <call> HeatCore.Flux </call>
+  <call> HeatSkin.Flux </call>
+  <call> HeatSkeletalMuscle.Flux </call>
+
+  <call> HeatCore.Dervs </call>
+  <call> HeatSkin.Dervs </call>
+  <call> HeatSkeletalMuscle.Dervs </call>
+
+  <call> HeatStorage.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

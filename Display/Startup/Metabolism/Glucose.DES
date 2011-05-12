@@ -1,0 +1,70 @@
+HumMod / Glucose
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Glucose </title>
+
+<structurename> GlucosePool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Target[Glucose] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Initial [Glucose] </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> InitialMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> ECFV.InitialVol </name>
+  <format><decimal> 0 </decimal></format>
+  <label> ECFV </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> [Glucose] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Current [Glucose] </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 3.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 3.0 </col>
+  <name> ECFV.Vol </name>
+  <format><decimal> 0 </decimal></format>
+  <label> ECFV </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Target [Glucose(mG/dL)] is 110.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

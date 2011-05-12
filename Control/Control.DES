@@ -1,0 +1,19 @@
+HumMod / Control
+
+Created : 16-Aug-96
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 1996-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<control>
+
+<?include Control\GoFor.DES ?>
+<?include Control\GoTo.DES ?>
+<?include Control\SettlingTime.DES ?>
+
+</control>
+
+End

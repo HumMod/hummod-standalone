@@ -1,0 +1,32 @@
+HumMod / BVSeq DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BVSeq </name>
+
+<variables>
+
+<var>
+  <name> Vol </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Vol </name>
+  <val> BVSeqArtys.Vol + BVSeqVeins.Vol </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

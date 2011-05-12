@@ -1,0 +1,126 @@
+HumMod / TissueH2O
+
+Created : 14-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 10.8 </row>
+   <col> 1.0 </col>
+   <high> 16.4 </high>
+   <wide> 30.0 </wide>
+   <title> Tissue H2O </title>
+
+<structurename> TissueH2O </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> InitialVol </name>
+  <format> <integer/> </format>
+  <label> Initial </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> Fat-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Adipose Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> Bone-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Bone </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 3.0 </col>
+  <name> Brain-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Brain </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 3.0 </col>
+  <name> GITract-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.4 </row><col> 3.0 </col>
+  <name> Kidney-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.4 </row><col> 3.0 </col>
+  <name> LeftHeart-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.4 </row><col> 3.0 </col>
+  <name> Liver-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Liver </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 3.0 </col>
+  <name> OtherTissue-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.4 </row><col> 3.0 </col>
+  <name> RespiratoryMuscle-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.4 </row><col> 3.0 </col>
+  <name> RightHeart-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.4 </row><col> 3.0 </col>
+  <name> SkeletalMuscle-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> SkeletalMuscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 3.0 </col>
+  <name> Skin-Size.InitialLiquidVol </name>
+  <format> <integer/> </format>
+  <label> Skin </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.8 </row><col> 1.0 </col>
+  <name> Vol </name>
+  <format> <integer/> </format>
+  <label> Current </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for volume are mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

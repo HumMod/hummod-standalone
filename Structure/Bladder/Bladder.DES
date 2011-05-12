@@ -1,0 +1,97 @@
+HumMod / Bladder
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Bladder\ ?>
+
+<?include BladderVolume.DES ?>
+<?include BladderSodium.DES ?>
+<?include BladderChloride.DES ?>
+<?include BladderCreatinine.DES ?>
+<?include BladderGlucose.DES ?>
+<?include BladderBicarbonate.DES ?>
+<?include BladderPotassium.DES ?>
+<?include BladderKetoacid.DES ?>
+<?include BladderAmmonia.DES ?>
+<?include BladderPhosphate.DES ?>
+<?include BladderProtein.DES ?>
+<?include BladderSulphate.DES ?>
+<?include BladderUrea.DES ?>
+
+<structure><name> Bladder </name>
+<variables>
+
+<var><name> TimeLastVoid </name><val> 0.0 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <call> BladderVolume.Dervs </call>
+  <call> BladderSodium.Dervs </call>
+  <call> BladderChloride.Dervs </call>
+  <call> BladderCreatinine.Dervs </call>
+  <call> BladderGlucose.Dervs </call>
+  <call> BladderBicarbonate.Dervs </call>
+  <call> BladderPotassium.Dervs </call>
+  <call> BladderKetoacid.Dervs </call>
+  <call> BladderAmmonia.Dervs </call>
+  <call> BladderPhosphate.Dervs </call>
+  <call> BladderProtein.Dervs </call>
+  <call> BladderSulphate.Dervs </call>
+  <call> BladderUrea.Dervs </call>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<call> BladderSodium.Conc </call>
+<call> BladderChloride.Conc </call>
+<call> BladderCreatinine.Conc </call>
+<call> BladderGlucose.Conc </call>
+<call> BladderBicarbonate.Conc </call>
+<call> BladderPotassium.Conc </call>
+<call> BladderKetoacid.Conc </call>
+<call> BladderAmmonia.Conc </call>
+<call> BladderPhosphate.Conc </call>
+<call> BladderProtein.Conc </call>
+<call> BladderSulphate.Conc </call>
+<call> BladderUrea.Conc </call>
+
+<if>
+<test> BladderVolume.Mass GE 1000.0 </test>
+<true>
+
+  <def><name> TimeLastVoid </name><val> System.X </val></def>
+  <call> BladderVolume.Void </call>
+  <call> BladderSodium.Void </call>
+  <call> BladderChloride.Void </call>
+  <call> BladderCreatinine.Void </call>
+  <call> BladderGlucose.Void </call>
+  <call> BladderBicarbonate.Void </call>
+  <call> BladderPotassium.Void </call>
+  <call> BladderKetoacid.Void </call>
+  <call> BladderAmmonia.Void </call>
+  <call> BladderPhosphate.Void </call>
+  <call> BladderProtein.Void </call>
+  <call> BladderSulphate.Void </call>
+  <call> BladderUrea.Void </call>
+
+</true>
+</if>
+
+
+
+</block>
+
+</definitions>
+</structure>
+
+End

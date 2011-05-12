@@ -1,0 +1,15 @@
+HumMod / ThyroidGland
+
+Created : 28-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Hormones\ThyroidGland\ ?>
+
+<?include T4-T3\T4-T3.DES ?>
+<?include TSH\TSH.DES ?>
+
+End

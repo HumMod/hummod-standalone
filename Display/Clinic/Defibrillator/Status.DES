@@ -1,0 +1,97 @@
+HumMod / Status
+
+Created : 15-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.4 </high>
+   <wide> 30.0 </wide>
+   <title> Status </title>
+
+<structurename> Heart-ECG </structurename>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> ECG </text>
+  <color> DARKBLUE </color>
+</label>
+
+<checkmark>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Is_OK </name>
+  <label> OK </label>
+</checkmark>
+
+<checkmark>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Is_Paced </name>
+  <label> Paced </label>
+</checkmark>
+
+<checkmark>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> Is_STShift </name>
+  <label> ST-Shift </label>
+</checkmark>
+
+<checkmark>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Is_VFib </name>
+  <label> V-Fib </label>
+</checkmark>
+
+<checkmark>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> Is_Flat </name>
+  <label> Flat </label>
+</checkmark>
+
+<structurename> Heart-Rhythm </structurename>
+
+<label>
+  <row> 7.8 </row><col> 1.0 </col>
+  <text> Rhythm </text>
+  <color> DARKBLUE </color>
+</label>
+
+<checkmark>
+  <row> 8.8 </row><col> 1.0 </col>
+  <name> Is_Sinus  </name>
+  <label> Sinus </label>
+</checkmark>
+
+<checkmark>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Is_Ventricle </name>
+  <label> Ventricle </label>
+</checkmark>
+
+<checkmark>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> Is_Paced </name>
+  <label> Paced </label>
+</checkmark>
+
+<checkmark>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Is_CPRThumper </name>
+  <label> CPR Thumper </label>
+</checkmark>
+
+<checkmark>
+  <row> 12.8 </row><col> 1.0 </col>
+  <name> Is_None </name>
+  <label> None </label>
+</checkmark>
+
+
+</groupbox>
+
+End

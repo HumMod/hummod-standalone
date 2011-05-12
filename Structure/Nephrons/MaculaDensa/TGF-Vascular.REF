@@ -1,0 +1,55 @@
+HumMod / TGF-Vascular.REF
+
+Created : 12-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   AII directly applied to the afferent
+   artery has no effect, while the
+   efferent artery is quite sensitive
+   to AII.  AII has no direct effect
+   on interlobular arteries.
+
+   Edwards.  AJP 244:F526-F534, 1983.
+   Proc Soc Exp Med Biol 141:336-339, 1972.
+
+   Further evidence comes from stop-flow
+   protocals, where AII added or block
+   does not change stop-flow pressure.
+
+   JCI 64:1325-1335, 1979.
+   AJP 255:F383-F390, 1988.
+   Miner. Elect. Metab. 15:103-107, 1989.
+
+   AII effect must come through TGF.
+
+   Schnermann & Briggs argue that the
+   feedback signal to vasculature and
+   renin are the same.
+
+   Renal Physiol.  9:193-203, 1986.
+
+   This is probably qualitatively true
+   but quantitatively somewhat in error.
+
+   Both macula densa [Na+] and [AII]
+   contribute to the signal.
+
+   We postulate here that [Na+] signal
+   has a stronger influence on renin
+   while [AII] has a stronger effect
+   on vasculature.
+
+   Olsen AJP 249:F299-F307, 1985.
+
+   The maximum renal response to AII
+   is seen at an infusion rate of 45
+   (nG/Min)/kG.  This increases [AII]
+   to 1175 pG/mL.
+
+
+End

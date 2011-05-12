@@ -1,0 +1,81 @@
+HumMod / PulmonaryMembrane
+
+Created : 2010-06-04
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> PulmonaryMembrane </name>
+
+<variables>
+
+<var><name> Permeability </name></var>
+<var><name> DiffusingCapacity </name></var>
+
+<constant><name> DC_TO_PERM </name><val> 5.0 </val></constant>
+
+<var><name> ActiveArea </name></var>
+<parm><name> TotalArea </name><val> 80.0 </val></parm>
+
+<var><name> Recruitment </name></var>
+
+<var><name> Thickness </name></var>
+<parm><name> Thickness-Structure </name><val> 0.6 </val></parm>
+<var><name> Thickness-H2O </name></var>
+
+<constant><name> DC_SCALER </name><val> 0.55 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Recruitment </name>
+  <point><x>     0 </x><y> 0.01 </y><slope> 0.0 </slope></point>
+  <point><x>  5500 </x><y> 0.30 </y><slope> 0.0001 </slope></point>
+  <point><x> 15000 </x><y> 1.00 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Thickness-H2O </name>
+  <val> ExcessLungWater.Volume / TotalArea </val>
+</def>
+
+<def>
+  <name> Recruitment </name>
+  <val> Recruitment [ LungBloodFlow.Alveolar ] </val>
+</def>
+
+<def>
+  <name> Thickness </name>
+  <val> Thickness-Structure + Thickness-H2O </val>
+</def>
+
+<def>
+  <name> ActiveArea </name>
+  <val> TotalArea * Recruitment </val>
+</def>
+
+<def>
+  <name> DiffusingCapacity </name>
+  <val> DC_SCALER * ActiveArea / Thickness </val>
+</def>
+
+<def>
+  <name> Permeability </name>
+  <val> DC_TO_PERM * DiffusingCapacity </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

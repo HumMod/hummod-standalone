@@ -1,0 +1,22 @@
+HumMod / ExternalH2O.REF
+
+Created : 2010-03-24
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+External H2O initially involves
+
+# H2O in GI lumen
+# Excess lung water
+# Water in peritoneal space
+
+But the GI lumen is a separate thermal compartment,
+so it is not included in the core thermal compartment.
+
+Peritoneum and excess lung go in the core thermal
+compartment.
+
+End

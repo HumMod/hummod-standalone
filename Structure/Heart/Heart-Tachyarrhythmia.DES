@@ -1,0 +1,39 @@
+HumMod / Heart-Tachyarrhythmia
+
+Created : 26-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Heart-Tachyarrhythmia </name>
+
+<variables>
+
+<var><name> Effect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Effect </name>
+  <point><x> 200 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 300 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> Effect </name><val> Effect [ Heart-Rate.Rate ] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

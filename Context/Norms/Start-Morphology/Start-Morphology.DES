@@ -1,0 +1,35 @@
+HumMod / Start-Morphology DES
+
+Created : 03-Feb-10
+Last Modified : 03-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\Start-Morphology\ ?>
+
+<?include Start-Age.DES ?>
+<?include Start-Height.DES ?>
+<?include Start-Gender.DES ?>
+<?include Start-Weight.DES ?>
+<?include Start-FatSize.DES ?>
+<?include Start-SkeletalMuscleSize.DES ?>
+
+<structure><name> Start-Morphology </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-Age.Calc </call>
+  <call> Start-Height.Calc </call>
+  <call> Start-Gender.Calc </call>
+  <call> Start-Weight.Calc </call>
+  <call> Start-FatSize.Calc </call>
+  <call> Start-SkeletalMuscleSize.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

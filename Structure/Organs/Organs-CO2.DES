@@ -1,0 +1,48 @@
+HumMod / Organs-CO2
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-CO2 </name>
+
+<definitions>
+
+<block><name> CalcConc </name>
+  <call> Bone-CO2.CalcConc </call>
+  <call> Brain-CO2.CalcConc </call>
+  <call> Fat-CO2.CalcConc </call>
+  <call> GITract-CO2.CalcConc </call>
+  <call> Kidney-CO2.CalcConc </call>
+  <call> LeftHeart-CO2.CalcConc </call>
+  <call> Liver-CO2.CalcConc </call>
+  <call> OtherTissue-CO2.CalcConc </call>
+  <call> RespiratoryMuscle-CO2.CalcConc </call>
+  <call> RightHeart-CO2.CalcConc </call>
+  <call> SkeletalMuscle-CO2.CalcConc </call>
+  <call> Skin-CO2.CalcConc </call>
+</block>
+
+<block><name> CalcDervs </name>
+  <call> Bone-CO2.CalcDervs </call>
+  <call> Brain-CO2.CalcDervs </call>
+  <call> Fat-CO2.CalcDervs </call>
+  <call> GITract-CO2.CalcDervs </call>
+  <call> Kidney-CO2.CalcDervs </call>
+  <call> LeftHeart-CO2.CalcDervs </call>
+  <call> Liver-CO2.CalcDervs </call>
+  <call> OtherTissue-CO2.CalcDervs </call>
+  <call> RespiratoryMuscle-CO2.CalcDervs </call>
+  <call> RightHeart-CO2.CalcDervs </call>
+  <call> SkeletalMuscle-CO2.CalcDervs </call>
+  <call> Skin-CO2.CalcDervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

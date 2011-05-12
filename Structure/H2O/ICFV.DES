@@ -1,0 +1,66 @@
+HumMod / ICFV
+
+Created : 06-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ICFV </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+
+<var><name> Vol(L) </name></var>
+
+<var><name> FractBodyH2O </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> FractBodyH2O </name>
+  <val> 1.0 - ECFV.FractBodyH2O </val>
+</def>
+
+<def>
+  <name> InitialVol </name>
+  <val> FractBodyH2O * BodyH2O.InitialVol </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> InitialVol </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> Vol </name>
+  <val> OsmBody.ICFV </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

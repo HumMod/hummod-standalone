@@ -1,0 +1,43 @@
+HumMod / RespiratoryMuscle-ContractileProtein
+
+Created : 05-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RespiratoryMuscle-ContractileProtein </name>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 4.2 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> RespiratoryMuscle-Size.InitialProteinMass </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Change </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

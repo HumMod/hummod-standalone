@@ -1,0 +1,41 @@
+HumMod / Testes
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Testes\ ?>
+
+<?include Testes-Testosterone.DES ?>
+<?include Testes-Estradiol.DES ?>
+<?include Testes-Progesterone.DES ?>
+<?include Testes-Inhibin.DES ?>
+
+<structure><name> Testes </name>
+
+<variables>
+
+<!--
+<var><name>  </name></var>
+-->
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <call> Testes-Estradiol.Dervs </call>
+  <call> Testes-Progesterone.Dervs </call>
+  <call> Testes-Testosterone.Dervs </call>
+  <call> Testes-Inhibin.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

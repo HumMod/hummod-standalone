@@ -1,0 +1,39 @@
+HumMod / Sweat
+
+Created : 08-Dec-05
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> Sweat </name>
+  <label> Sweat </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Sweat_Gland </name>
+  <label> Gland </label>
+  <parent> Sweat </parent>
+</leaf>
+
+<leaf>
+  <name> Sweat_Duct </name>
+  <label> Duct </label>
+  <parent> Sweat </parent>
+</leaf>
+
+<leaf>
+  <name> Sweat_Acclimation </name>
+  <label> Acclimation </label>
+  <parent> Sweat </parent>
+</leaf>
+
+<leaf>
+  <name> Sweat_Fuel </name>
+  <label> Fuel </label>
+  <parent> Sweat </parent>
+</leaf>
+
+End

@@ -1,0 +1,16 @@
+HumMod / Electrolytes
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Nephrons\Electrolytes\ ?>
+
+<?include Ammonia\Ammonia.DES ?>
+<?include Chloride\Chloride.DES ?>
+<?include Bicarbonate\Bicarbonate.DES ?>
+
+End

@@ -1,0 +1,115 @@
+QHP 2008 / Heart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> SANode-BetaReceptors </structurename>
+
+<vardoc>
+<name> SANode-BetaReceptors.Activity </name>
+<topic> SANode-Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> BetaBlockade.Effect </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.HumoralAgonism </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> BetaPool.Effect</seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.HUMORALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.NeuralAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> GangliaGeneral.NA(Hz) </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.NEURALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.Setting </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.Switch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-BetaReceptors.TotalAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> SANode-Overview </name>
+<label> Overview </label>
+<content>
+
+The SA node is a small flattened ellipsoid strip of 
+specialized muscle about 3mm wide, 15mm long and 1 mm
+thick located in the superior posterolateral wall of
+the right atrium immediately below and slightly lateral 
+to the superior vena cava. 
+The SA Node controls the rate of beat of the entire heart.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label>  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

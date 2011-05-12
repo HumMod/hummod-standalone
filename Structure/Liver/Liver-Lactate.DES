@@ -1,0 +1,143 @@
+HumMod / Liver-Lactate
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Liver-Lactate </name>
+
+<variables>
+
+<var><name> [Lac-] </name></var>
+<var><name> [Lac-(mEq/L)] </name></var>
+<var><name> [Lac-(mG/dL)] </name></var>
+<parm><name> DC </name><val> 100.0 </val></parm>
+<var><name> Made </name></var>
+<var><name> Made(mG/Min) </name></var>
+<var><name> Used </name></var>
+<var><name> Used(mG/Min) </name></var>
+<var><name> Outflux </name></var>
+<var><name> Outflux(0) </name></var>
+<var><name> K </name></var>
+<var><name> Alpha </name></var>
+
+<constant><name> MEQ_ML_TO_MG_DL </name><val> 9008.0 </val></constant>
+<constant><name> GLUCOSE_TO_LACTATE </name><val> 0.99 </val></constant>
+<constant><name> MG_TO_MEQ </name><val> 0.0112 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 1.43 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.014 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Lac-] </name>
+  <val> Mass / Liver-Size.LiquidVol </val>
+</def>
+
+<def>
+  <name> [Lac-(mEq/L)] </name>
+  <val> 1000.0 * [Lac-] </val>
+</def>
+
+<def>
+  <name> [Lac-(mG/dL)] </name>
+  <val> MEQ_ML_TO_MG_DL * [Lac-] </val>
+</def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def>
+  <name> Made(mG/Min) </name>
+  <val> GLUCOSE_TO_LACTATE * Liver-Fuel.AnaerobicGlucoseUsed(mG/Min) </val>
+</def>
+
+<def>
+  <name> Made </name>
+  <val> MG_TO_MEQ * Made(mG/Min) </val>
+</def>
+
+<def>
+  <name> Used(mG/Min) </name>
+  <val> Liver-Fuel.LacUsed(mG/Min) </val>
+</def>
+
+<def>
+  <name> Used </name>
+  <val> MG_TO_MEQ * Used(mG/Min) </val>
+</def>
+
+
+<def>
+  <name> K </name>
+  <val> DC / Liver-Size.LiquidVol </val>
+</def>
+
+<testcase>
+
+<case>
+<test> System.Dx GE UNDEFINED </test>
+<def>
+  <name> Alpha </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> ( K * System.Dx ) GE 100.0 </test>
+<def>
+  <name> Alpha </name>
+  <val> 4E-44 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> Alpha </name>
+  <val> EXP ( -  K * System.Dx ) </val>
+</def>
+</case>
+
+</testcase>
+
+<def>
+  <name> Outflux(0) </name>
+  <val> DC * ( [Lac-] - LacPool.[Lac-] ) </val>
+</def>
+
+<def>
+  <name> Outflux </name>
+  <val>
+        ( Alpha * Outflux(0) )
+    + ( ( 1 - Alpha ) * ( Made + Used ) )
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Made - Used - Outflux </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

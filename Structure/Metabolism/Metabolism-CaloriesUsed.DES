@@ -1,0 +1,160 @@
+HumMod / Metabolism-CaloriesUsed
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Metabolism-CaloriesUsed </name>
+
+<variables>
+
+<var><name> Total </name></var>
+<var><name> Total(kCal/Min) </name></var>
+
+<var><name> TotalHeat </name></var>
+<var><name> TotalHeat(kCal/Min) </name></var>
+
+<var><name> TotalMotion </name></var>
+<var><name> TotalMotion(kCal/Min) </name></var>
+
+<var><name> CoreHeat </name></var>
+<var><name> CoreHeat(kCal/Min) </name></var>
+
+<var><name> CoreMotion </name></var>
+<var><name> CoreMotion(kCal/Min) </name></var>
+
+<var><name> SkeletalMuscleHeat </name></var>
+<var><name> SkeletalMuscleHeat(kCal/Min) </name></var>
+
+<var><name> SkeletalMuscleMotion </name></var>
+<var><name> SkeletalMuscleMotion(kCal/Min) </name></var>
+
+<var><name> SkinHeat </name></var>
+<var><name> SkinHeat(kCal/Min) </name></var>
+
+<var><name> SkinMotion </name></var>
+<var><name> SkinMotion(kCal/Min) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> CoreMotion </name>
+  <val>
+      RespiratoryMuscle-Work.MotionCals
+    + RightHeart-Work.MotionCals
+    + LeftHeart-Work.MotionCals
+  </val>
+</def>
+
+<def>
+  <name> CoreMotion(kCal/Min) </name>
+  <val> CoreMotion / 1000.0 </val>
+</def>
+
+<def>
+  <name> CoreHeat </name>
+  <val>
+      Brain-Metabolism.TotalCalsUsed
+    + Bone-Metabolism.TotalCalsUsed
+    + Fat-Metabolism.TotalCalsUsed
+    + GITract-Metabolism.TotalCalsUsed
+    + Kidney-Metabolism.TotalCalsUsed
+    + LeftHeart-Metabolism.TotalCalsUsed
+    + Liver-Metabolism.TotalCalsUsed
+    + OtherTissue-Metabolism.TotalCalsUsed
+    + RespiratoryMuscle-Metabolism.TotalCalsUsed
+    + RightHeart-Metabolism.TotalCalsUsed
+
+    - CoreMotion
+  </val>
+</def>
+
+<def>
+  <name> CoreHeat(kCal/Min) </name>
+  <val> CoreHeat / 1000.0 </val>
+</def>
+
+<def>
+  <name> SkeletalMuscleMotion </name>
+  <val> SkeletalMuscle-Work.MotionCals </val>
+</def>
+
+<def>
+  <name> SkeletalMuscleMotion(kCal/Min) </name>
+  <val> SkeletalMuscleMotion / 1000.0 </val>
+</def>
+
+<def>
+  <name> SkeletalMuscleHeat </name>
+  <val>
+      SkeletalMuscle-Metabolism.TotalCalsUsed
+    - SkeletalMuscleMotion
+  </val>
+</def>
+
+<def>
+  <name> SkeletalMuscleHeat(kCal/Min) </name>
+  <val> SkeletalMuscleHeat / 1000.0 </val>
+</def>
+
+<def>
+  <name> SkinMotion </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> SkinMotion(kCal/Min) </name>
+  <val> SkinMotion / 1000.0 </val>
+</def>
+
+<def>
+  <name> SkinHeat </name>
+  <val> Skin-Metabolism.TotalCalsUsed </val>
+</def>
+
+<def>
+  <name> SkinHeat(kCal/Min) </name>
+  <val> SkinHeat / 1000.0 </val>
+</def>
+
+<def>
+  <name> TotalHeat </name>
+  <val> CoreHeat + SkeletalMuscleHeat + SkinHeat </val>
+</def>
+
+<def>
+  <name> TotalHeat(kCal/Min) </name>
+  <val> TotalHeat / 1000.0 </val>
+</def>
+
+<def>
+  <name> TotalMotion </name>
+  <val> CoreMotion + SkeletalMuscleMotion + SkinMotion </val>
+</def>
+
+<def>
+  <name> TotalMotion(kCal/Min) </name>
+  <val> TotalMotion / 1000.0 </val>
+</def>
+
+<def>
+  <name> Total </name>
+  <val> TotalHeat + TotalMotion </val>
+</def>
+
+<def>
+  <name> Total(kCal/Min) </name>
+  <val> Total / 1000.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

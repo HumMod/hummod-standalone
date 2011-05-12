@@ -1,0 +1,47 @@
+HumMod / OrganFlow.REF
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+These are the values used in the initial description
+of organ blood flow.
+
+Conduct - (mL/Min)/mmHg
+Flow - mL/Min
+O2Need - mL/Min
+
+Organ    Conduct Flow O2Need
+-------- ------- ---- ------
+Bone       4.7    423  18.8
+Brain      9.1    819  50.2
+Fat        2.7    243   6.2
+GITract   11.2    997  25.0
+Kidney    13.3   1197  21.3
+LHeart     2.1    189  27.4
+Liver                  39.6
+Other      4.2    378  10.4
+RespMus    1.1     99   6.3
+RHeart     0.4     36   5.2
+SkeMus     7.2    648  30.0
+Skin       1.6    144   9.0
+HepArty    2.8    250  -0-
+-------- ------- ---- ------
+Total            5423 249.3
+
+Pressure gradient is 89 mmHg for GITract and HepArty.
+Gradient is 90 mmHg for all other organs.
+
+Region    Flow
+--------- ----
+Periphery 4176
+HepVein   1247
+  GITract  997
+  HepArty  250
+--------- ----
+Total     5423
+
+End

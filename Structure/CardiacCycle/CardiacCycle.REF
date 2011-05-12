@@ -1,0 +1,64 @@
+HumMod / Pumping.REF
+
+Created : 17-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Both the systolic and diastolic pressure-volume relationships
+are curves. Diastolic pressure sweeps up as the pericardium
+distends. Systolic pressure hit a plateau as afterload kicks
+in.
+
+  TMP = exp (Stiffness * Vol) - 1              (1)
+  Vol = ln (TMP + 1) / Stiffness               (2)
+
+Normal stiffness values are 0.015 for the left ventricle and
+0.0088 for the right.
+
+Compliance is dTMP/dVol inverted.
+
+                             1
+  Compliance = -----------------------------   (3)
+               Stiffness * exp (Stiff * Vol)
+
+#define CLS PV ::
+
+DBL CalcVol (double Stiffness, double TMP)
+
+{ if (TMP < 0.0)
+  { return 0.0 ;
+  }
+
+  return log (TMP + 1) / Stiffness ;
+}
+
+DBL CalcComp (double Stiffness, double Vol)
+
+{ if (Vol < 0.0)
+  { return REALUNDEF ;
+  }
+
+  return 1.0 / (Stiffness * exp (Stiffness
+     * Vol)) ;
+}
+
+DBL CalcTMP (double Stiffness, double Vol)
+
+{ if (Vol < 0.0)
+  { return 0.0 ;
+  }
+
+  return exp (Stiffness * Vol) - 1.0 ;
+}
+
+#undef CLS
+
+/* End */
+
+
+
+
+End

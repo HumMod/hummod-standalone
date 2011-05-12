@@ -1,0 +1,88 @@
+HumMod / Common
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<maplist>
+  <name> Common.Switch </name>
+  <map><val> 0 </val><img> Off </img></map>
+  <map><val> 1 </val><img> On </img></map>
+</maplist>
+
+<maplist>
+  <name> Common.EffectIs </name>
+  <map><val> 0 </val><img> Variable </img></map>
+  <map><val> 1 </val><img> Fixed </img></map>
+</maplist>
+
+<maplist>
+  <name> Common.NoYes </name>
+  <map><val> 0 </val><img> No </img></map>
+  <map><val> 1 </val><img> Yes </img></map>
+</maplist>
+
+<maplist>
+  <name> Common.Active </name>
+  <map><val> 0 </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Active </img></map>
+</maplist>
+
+<maplist>
+  <name> Common.Gender </name>
+  <map><val> 0 </val><img> Male </img></map>
+  <map><val> 1 </val><img> Female </img></map>
+</maplist>
+
+<repeatlist>
+  <name> Common.Percent </name>
+  <repeat><reps> 100 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<repeatlist>
+  <name> Common.Fraction </name>
+  <repeat><reps> 100 </reps><stepsize> 0.01 </stepsize></repeat>
+</repeatlist>
+
+Standard organ perfusion pump goes
+from 0 to 200 mmHg.
+
+<repeatlist>
+  <name> Common.PerfusionPump </name>
+  <repeat><reps> 14 </reps><stepsize> 5 </stepsize></repeat>
+  <repeat><reps> 40 </reps><stepsize> 1 </stepsize></repeat>
+  <repeat><reps> 18 </reps><stepsize> 5 </stepsize></repeat>
+</repeatlist>
+
+A symbol for xy plots.
+
+<symbol>
+  <name> Common.RedBox </name>
+  <style> BOX </style>
+  <color> RED </color>
+  <size> 4 </size>
+  <linewidth> 2 </linewidth>
+</symbol>
+
+<repeatlist>
+  <name> Common.Multiplier </name>
+  <repeat><reps>   5 </reps><stepsize> 0.10 </stepsize></repeat>
+  <repeat><reps> 100 </reps><stepsize> 0.01 </stepsize></repeat>
+  <repeat><reps>  45 </reps><stepsize> 0.10 </stepsize></repeat>
+</repeatlist>
+
+<maplist>
+  <name> Common.Failed </name>
+  <map><val> 0 </val><img> Failed </img></map>
+  <map><val> 1 </val><img> OK </img></map>
+</maplist>
+
+<repeatlist>
+  <name> Common.Structure </name>
+  <repeat><reps> 20 </reps><stepsize> 0.01 </stepsize></repeat>
+</repeatlist>
+
+End

@@ -1,0 +1,78 @@
+HumMod / Kidney-EfferentArtery DES
+
+Created : 10-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   Renal blood flow - 1200 mL/Min.
+
+   Pressures (mmHg)
+
+   # Systemic Arteries  97
+   # Arcuate Artery     95
+   # Glomerulus         60
+   # Peripheral Vein     7
+
+   Renal conductance ((ml/min)/mmHg)
+
+   # Total           13.3
+   # Large Artery   600.0
+   # Afferent        34.3
+   # Efferent        22.6
+
+   Kon Mineral Electrolyte Metab.
+   15:33-44, 1989 for an overview
+   of renal nerve influence on
+   segmental resistance.
+
+   Kon AJP 25:F545-F553, 1983 for
+   data on segmental resistance.
+   Afferent response is stronger
+   than efferent response.
+
+   J. Physiol. 313:237-250, 1981.
+   Carotid occlusion unloads bars's
+   and increases RNA 62%.  This does
+   not decrease flow.  A somewhat
+   stronger intervention does.
+
+      [AII] 1/2 Maximum Effect
+
+      Tissue          [AII] pG/mL
+      --------------- -----------
+      Proximal Tubule     10
+      Efferent Artery     40
+      Afferent Artery    100
+
+   Hall AJP 250:R960-R972, 1986.
+
+   Olsen AJP 249:F299-F307, 1985.
+
+   With AII infusion, filtration
+   fraction rises rapidly, showing
+   efferent sensitivity.  Fraction
+   continues to rise until [AII]
+   reaches 1175 pG/mL, which is its
+   maximum renal effect.
+
+   The following Olsen data is used
+   to estimate maximum efferent
+   effect.  AII infusion rate is 45
+   (nG/Min)/kG.
+
+        Control Max AII
+        ------- -------
+   GP      60     50    mmHg (Est)
+   VP       7      7    mmHg
+   RBF    400    180    mL/Min
+   EffC   7.5    4.2    Ratio = 0.56
+
+   DiBona says that there is no tonic
+   a-symp's effect.
+
+
+End

@@ -1,0 +1,38 @@
+HumMod / GlomerulusBicarbonate
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlomerulusBicarbonate </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [HCO3-] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [HCO3-] </name><val> CO2Veins.[HCO3] * GlomerulusFiltrate.AnionAdjustment </val></def>
+<def><name> Rate </name><val> [HCO3-] * GlomerulusFiltrate.GFR </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [HCO3-] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

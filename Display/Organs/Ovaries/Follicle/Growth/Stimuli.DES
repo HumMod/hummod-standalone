@@ -1,0 +1,124 @@
+HumMod / Stimuli
+
+Created : 06-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 29.6 </high>
+   <wide> 30.0 </wide>
+   <title> Stimuli </title>
+
+<structurename> Follicle-Growth </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> FSHEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> FSH Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> FSH-Circulating.[Conc(IU/L)] </name>
+    <label> [FSH] </label>
+    <scale><min> 0 </min><max> 20 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> FSHEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> FSH-Circulating.[Conc(IU/L)] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [FSH (IU/L)] </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> EstradiolEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Estradiol Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 11.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Estradiol.[Conc(nMol/L)] </name>
+    <label> [Estradiol] </label>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 3 </max></scale>
+  </yaxis>
+
+  <curvename> EstradiolEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 18.8 </row><col> 1.0 </col>
+   <name> Estradiol.[Conc(nMol/L)] </name>
+   <format><decimal> 3 </decimal></format>
+   <label> [Estradiol (nMol/L)] </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.2 </row><col> 1.0 </col>
+   <name> MassEffect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 21.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Ovaries-Follicle.Mass </name>
+    <label> Mass </label>
+    <scale><min> 0 </min><max> 4000 </max><inc> 1000 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 10 </max></scale>
+  </yaxis>
+
+  <curvename> MassEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 28.2 </row><col> 1.0 </col>
+   <name> Ovaries-Follicle.Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

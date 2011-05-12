@@ -1,0 +1,99 @@
+HumMod / LeftHeart-Structure
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LeftHeart-Structure </name>
+
+<variables>
+
+<var>
+  <name> PhEffect </name>
+</var>
+
+<var>
+  <name> FuelEffect </name>
+</var>
+
+<var>
+  <name> TemperatureEffect </name>
+</var>
+
+</variables>
+
+<equations>
+
+<backwardeuler>
+  <name> Effect </name>
+  <integralname> Effect </integralname>
+  <initialval> 1.0 </initialval>
+  <f1name> F1 </f1name>
+  <f2name> F2 </f2name>
+  <dervname> Change </dervname>
+</backwardeuler>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PhOnStructure </name>
+  <point><x> 6.5 </x><y> 0.1 </y><slope> 0 </slope></point>
+  <point><x> 6.6 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FuelOnStructure </name>
+  <point><x> 0.0 </x><y> 0.05 </y><slope> 0 </slope></point>
+  <point><x> 0.3 </x><y> 0.00 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TemperatureOnStructure </name>
+  <point><x> 44.0 </x><y> 0.00 </y><slope> 0 </slope></point>
+  <point><x> 46.0 </x><y> 0.05 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhOnStructure [ LeftHeart-Ph.Ph ] </val>
+</def>
+
+<def>
+  <name> FuelEffect </name>
+  <val> FuelOnStructure [ LeftHeart-Fuel.FractUseDelay ] </val>
+</def>
+
+<def>
+  <name> TemperatureEffect </name>
+  <val> TemperatureOnStructure [ HeatCore.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> F1 </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> F2 </name>
+  <val>
+      PhEffect
+    + TemperatureEffect
+    + FuelEffect
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

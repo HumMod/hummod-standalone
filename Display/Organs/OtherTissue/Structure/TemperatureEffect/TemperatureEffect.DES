@@ -1,0 +1,37 @@
+HumMod / TemperatureEffect
+
+Created : 2010-05-31
+Last Modified : 2010-05-31
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> OtherTissueStructure-TemperatureEffect </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> OtherTissue </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Structure - Temperature Effect </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\OtherTissue\Structure\TemperatureEffect\ ?>
+
+<?include Box.DES ?>
+
+</panel>
+
+End

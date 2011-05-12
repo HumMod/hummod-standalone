@@ -1,0 +1,80 @@
+HumMod / Summary
+
+Created : 2010-05-22
+Last Modified : 2010-05-22
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 16.2 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> AnesthesiaIVOtherTissue </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [Tissue] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [Tissue] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Tissue] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 0.01 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3.0 </col>
+   <name> Change </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> AnesthesiaIVBlood.[Blood] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [Artery] </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1.0 </col>
+   <name> [Vein] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [Vein] </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> OtherTissue-Flow.BloodFlow </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Blood Flow </label>
+</showvalue>
+
+</groupbox>
+
+End

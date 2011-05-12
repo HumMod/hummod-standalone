@@ -1,0 +1,39 @@
+HumMod / CircyManager.REF
+
+Created : 16-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+                   P  PExt DelP  Vol  V0  Strs  Comp
+                  --- ---- ---- ---- ---- ---- -----
+Left Atrium        5   -3    8    50    0   50   6.25
+Left Ventricle     4   -3    7    75    0   75   9.4
+Pulm Arty         13   -4   17   200  110   90   5.3
+Pulm Capys         9   -4   13   200  140   60   4.6
+Pulm Veins         6   -4   10   210  150   60   6.0
+Right Atrium       1   -3    4    50    0   50  12.5
+Right Ventricle    0   -3    3    75    0   75  18.7
+Splanchnic Veins   8    0    8  1000  500  500  62.5
+Systemic Artys    97    0   97  1000  850  150   1.55
+Systemic Veins     7    0    7  2540 1800  740 105.7
+                                ---- ---- ---- -----
+Total                           5400 3550 1850 237.5
+
+                   Pu  Pd DelP Flow Cond
+                  --- --- ---- ---- ----
+Left Atrium        5   4    1  5400 5400
+Pulm Arty         13   9    4  5400 1350
+Pulm Capys         9   6    3  5400 1800
+Pulm Veins         6   5    1  5400 5400
+Right Atrium       1   0    1  5400 5400
+Splanchnic Veins   8   1    7  1250  178
+Systemic Artys
+  Systemic Flow   97   7   90  4150   46
+  GI Flow         97   8   89  1000 11.2
+  Hepatic Flow    97   8   89   250  2.8
+Systemic Veins     7   1    6  4150  692
+
+End

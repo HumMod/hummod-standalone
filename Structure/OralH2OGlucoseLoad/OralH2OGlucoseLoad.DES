@@ -1,0 +1,59 @@
+HumMod / OralH2OGlucoseLoad
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> OralH2OGlucoseLoad </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> H2ORate </name><val> 0.0 </val></parm>
+<parm><name> Glucose(%) </name><val> 5.0 </val></parm>
+
+<var><name> GlucoseRate </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> TotalH2O </name>
+  <integralname> TotalH2O </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> H2OChange </dervname>
+</diffeq>
+
+<diffeq>
+  <name> TotalGlucose </name>
+  <integralname> TotalGlucose </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> GlucoseChange </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <def><name> GlucoseRate </name><val> 0.01 * Glucose(%) * H2ORate </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <def><name> H2OChange </name><val> H2ORate </val></def>
+  <def><name> GlucoseChange </name><val> GlucoseRate </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,143 @@
+HumMod / Stimuli
+
+Created : 03-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 32.6 </high>
+   <wide> 30.0 </wide>
+   <title> Stimuli </title>
+
+<structurename> FSH-AnteriorPituitary </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> GnRHEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> GnRH Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> GnRH.Period(Min) </name>
+    <label> GnRH Period </label>
+    <scale><min> 0 </min><max> 200 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> GnRHEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> GnRH.Period(Min) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> GnRH Period (Min) </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> EstradiolEffectDelayed </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Estradiol Effect Delayed </label>
+</showvalue>
+
+<repeatlist>
+  <name> Delay(Hrs) </name>
+  <repeat><reps> 100 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> Delay(Hrs)  </name>
+  <listname> Delay(Hrs)  </listname>
+  <label> Delay (Hrs)  </label>
+</slidebar>
+
+<showvalue>
+   <row> 13.6 </row><col> 1.0 </col>
+   <name> EstradiolEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Estradiol Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 14.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Estradiol.[Conc(nMol/L)] </name>
+    <label> [Estradiol (nMol/L)] </label>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 5 </max></scale>
+  </yaxis>
+
+  <curvename> EstradiolEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 21.6 </row><col> 1.0 </col>
+   <name> Estradiol.[Conc(nMol/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Estradiol (nMol/L)] </label>
+</showvalue>
+
+<showvalue>
+   <row> 23.0 </row><col> 1.0 </col>
+   <name> InhibinEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Inhibin Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 24.0 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Inhibin.[Conc(IU/L)] </name>
+    <label> [Inhibin (IU/L)] </label>
+    <scale><min> 0 </min><max> 7000 </max><inc> 1000 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> InhibinEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 31.0 </row><col> 1.0 </col>
+   <name> Inhibin.[Conc(IU/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Inhibin (IU/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

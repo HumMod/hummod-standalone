@@ -1,0 +1,54 @@
+HumMod / Control
+
+Created : 15-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.6 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Heart-VFib </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Is_Fibrillating </name>
+  <format><list> Common.NoYes </list></format>
+  <label> Fibrillating? </label>
+  <noequals/>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> ElapsedTime </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Elapsed Time </label>
+</showvalue>
+
+<actionbutton>
+  <row> 4.0 </row><col> 1.0 </col>
+  <blockname> ResetElapsedTime </blockname>
+  <label> Reset Elapsed Time </label>
+</actionbutton>
+
+<actionbutton>
+  <row> 5.8 </row><col> 1.0 </col>
+  <blockname> RequestStart </blockname>
+  <label> Fibrillate Now </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

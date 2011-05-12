@@ -1,0 +1,144 @@
+HumMod / Summary
+
+Created : 17-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 22.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> SystemicArtys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Arteries </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> SystemicVeins.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Systemic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> SplanchnicVeins.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Splanchnic Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> RightAtrium.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Atrium </label>
+</showvalue>
+
+<label>
+   <row> 5.4 </row><col> 1.0 </col>
+   <text> Right Ventricle = N/A </text>
+</label>
+
+<showvalue>
+   <row> 6.4 </row><col> 1.0 </col>
+   <name> PulmArty.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Artery </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 1.0 </col>
+   <name> PulmCapys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Capillaries </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.4 </row><col> 1.0 </col>
+   <name> PulmVeins.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pulmonary Veins </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> LeftAtrium.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Atrium </label>
+</showvalue>
+
+<label>
+   <row> 10.4 </row><col> 1.0 </col>
+   <text> Left Ventricle = N/A </text>
+</label>
+
+<showgraph>
+  <row> 11.8 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> SystemicArtys.Pressure </name>
+      <label> Syst Arty </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> PulmArty.Pressure </name>
+      <label> Pulm Arty </label>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+    <yvar>
+      <name> SystemicVeins.Pressure </name>
+      <label> Syst Vein </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> LeftAtrium.Pressure </name>
+      <label> LAP </label>
+      <linecolor> GREEN </linecolor>
+    </yvar>
+    <yvar>
+      <name> RightAtrium.Pressure </name>
+      <label> RAP </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 100 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mmHg. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Systemic Arteries = 97.0 </line>
+  <line> Systemic Veins = 7.0 </line>
+  <line> Splanchnic Veins = 8.0 </line>
+  <line> Right Atrium = 1.0 </line>
+  <line> Right Ventricle = 0.0 </line>
+  <line> Pulmonary Artery = 13.0 </line>
+  <line> Pulmonary Capillaries = 9.0 </line>
+  <line> Pulmonary Veins = 6.0 </line>
+  <line> Left Atrium = 5.0 </line>
+  <line> Left Ventricle = 4.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

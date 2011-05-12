@@ -1,0 +1,64 @@
+HumMod / Pericardium
+
+Created : 16-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Pericardium\ ?>
+
+<?include Pericardium-Cavity.DES ?>
+<?include Pericardium-Drain.DES ?>
+<?include Pericardium-Hemorrhage.DES ?>
+<?include Pericardium-TMP.DES ?>
+<?include Pericardium-V0.DES ?>
+
+<structure><name> Pericardium </name>
+
+<variables>
+  <var><name> TotalVol </name></var>
+  <var><name> StressedVol </name></var>
+
+  <parm><name> IsOpen </name><val> FALSE </val></parm>
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> TotalVol </name>
+  <val>
+       RightHeart-Size.Vol
+     + RightAtrium.Vol
+     + RightVentricle.Vol
+
+     + LeftHeart-Size.Vol
+     + LeftAtrium.Vol
+     + LeftVentricle.Vol
+
+     + Pericardium-Cavity.Vol
+  </val>
+</def>
+
+<call> Pericardium-TMP.Calc </call>
+<call> Pericardium-Cavity.Calc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+<call> Pericardium-Drain.Dervs </call>
+<call> Pericardium-Hemorrhage.Dervs </call>
+
+<call> Pericardium-Cavity.Dervs </call>
+<call> Pericardium-V0.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

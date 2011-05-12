@@ -1,0 +1,271 @@
+HumMod / Status
+
+Created : 28-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Status </name>
+
+<variables>
+
+<var><name> Activity </name><val> 3 </val></var>
+<var><name> Exertion </name><val> 0 </val></var>
+<var><name> Posture </name><val> 1 </val></var>
+<var><name> Nutrition </name><val> 2 </val></var>
+
+<var><name> Sleeping </name></var>
+<var><name> Awake </name></var>
+<var><name> Unconscious </name></var>
+<var><name> NotDefined </name></var>
+<var><name> Resting </name></var>
+<var><name> Working </name></var>
+<var><name> Aerobics </name></var>
+<var><name> ExerciseBike </name></var>
+<var><name> Treadmill </name></var>
+<var><name> Lying </name></var>
+<var><name> Sitting </name></var>
+<var><name> Standing </name></var>
+<var><name> Tilting </name></var>
+<var><name> Eating </name></var>
+<var><name> BetweenMeals </name></var>
+<var><name> Continuous </name></var>
+<var><name> CantEat </name></var>
+
+<var><name> Conscious </name><val> TRUE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> CheckConscious </name>
+
+<if>
+<test> Brain-Function.Comatose </test>
+<true>
+  <andif>
+  <test> Conscious </test>
+  <true>
+    <def><name> Conscious </name><val> FALSE </val></def>
+    <call> JustLostConscious </call>
+  </true>
+  </andif>
+</true>
+<false>
+  <andif>
+  <test> NOT Conscious </test>
+  <true>
+    <def><name> Conscious </name><val> TRUE </val></def>
+  </true>
+  </andif>
+</false>
+</if>
+</block>
+
+<block><name> Wrapup </name>
+
+<call> Activity </call>
+<call> Exertion </call>
+<call> Posture </call>
+<call> Nutrition </call>
+
+</block>
+
+<block><name> Activity </name>
+
+<testcase>
+
+<case>
+<test> Activity EQ 3 </test>
+<def><name> Sleeping </name><val> 0 </val></def>
+<def><name> Awake </name><val> 0 </val></def>
+<def><name> Unconscious </name><val> 0 </val></def>
+<def><name> NotDefined </name><val> 1 </val></def>
+</case>
+
+<case>
+<test> Activity EQ 1 </test>
+<def><name> Sleeping </name><val> 0 </val></def>
+<def><name> Awake </name><val> 1 </val></def>
+<def><name> Unconscious </name><val> 0 </val></def>
+<def><name> NotDefined </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Activity EQ 0 </test>
+<def><name> Sleeping </name><val> 1 </val></def>
+<def><name> Awake </name><val> 0 </val></def>
+<def><name> Unconscious </name><val> 0 </val></def>
+<def><name> NotDefined </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Activity EQ 2 </test>
+<def><name> Sleeping </name><val> 0 </val></def>
+<def><name> Awake </name><val> 0 </val></def>
+<def><name> Unconscious </name><val> 1 </val></def>
+<def><name> NotDefined </name><val> 0 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Exertion </name>
+
+<testcase>
+
+<case>
+<test> Exertion EQ 0 </test>
+<def><name> Resting </name><val> 1 </val></def>
+<def><name> Working </name><val> 0 </val></def>
+<def><name> Aerobics </name><val> 0 </val></def>
+<def><name> ExerciseBike </name><val> 0 </val></def>
+<def><name> Treadmill </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Exertion EQ 1 </test>
+<def><name> Resting </name><val> 0 </val></def>
+<def><name> Working </name><val> 1 </val></def>
+<def><name> Aerobics </name><val> 0 </val></def>
+<def><name> ExerciseBike </name><val> 0 </val></def>
+<def><name> Treadmill </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Exertion EQ 2 </test>
+<def><name> Resting </name><val> 0 </val></def>
+<def><name> Working </name><val> 0 </val></def>
+<def><name> Aerobics </name><val> 1 </val></def>
+<def><name> ExerciseBike </name><val> 0 </val></def>
+<def><name> Treadmill </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Exertion EQ 3 </test>
+<def><name> Resting </name><val> 0 </val></def>
+<def><name> Working </name><val> 0 </val></def>
+<def><name> Aerobics </name><val> 0 </val></def>
+<def><name> ExerciseBike </name><val> 1 </val></def>
+<def><name> Treadmill </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Exertion EQ 4 </test>
+<def><name> Resting </name><val> 0 </val></def>
+<def><name> Working </name><val> 0 </val></def>
+<def><name> Aerobics </name><val> 0 </val></def>
+<def><name> ExerciseBike </name><val> 0 </val></def>
+<def><name> Treadmill </name><val> 1 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Posture </name>
+
+<testcase>
+
+<case>
+<test> Posture EQ PostureControl.LYING </test>
+<def><name> Lying </name><val> TRUE </val></def>
+<def><name> Sitting </name><val> FALSE </val></def>
+<def><name> Standing </name><val> FALSE </val></def>
+<def><name> Tilting </name><val> FALSE </val></def>
+</case>
+
+<case>
+<test> Posture EQ PostureControl.SITTING </test>
+<def><name> Lying </name><val> FALSE </val></def>
+<def><name> Sitting </name><val> TRUE </val></def>
+<def><name> Standing </name><val> FALSE </val></def>
+<def><name> Tilting </name><val> FALSE </val></def>
+</case>
+
+<case>
+<test> Posture EQ PostureControl.STANDING </test>
+<def><name> Lying </name><val> FALSE </val></def>
+<def><name> Sitting </name><val> FALSE </val></def>
+<def><name> Standing </name><val> TRUE </val></def>
+<def><name> Tilting </name><val> FALSE </val></def>
+</case>
+
+<case>
+<test> Posture EQ PostureControl.TILTED </test>
+<def><name> Lying </name><val> FALSE </val></def>
+<def><name> Sitting </name><val> FALSE </val></def>
+<def><name> Standing </name><val> FALSE </val></def>
+<def><name> Tilting </name><val> TRUE </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Nutrition </name>
+
+<testcase>
+
+<case>
+<test> Nutrition EQ 2 </test>
+<def><name> Eating </name><val> 0 </val></def>
+<def><name> BetweenMeals </name><val> 0 </val></def>
+<def><name> Continuous </name><val> 1 </val></def>
+<def><name> CantEat </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Nutrition EQ 0 </test>
+<def><name> Eating </name><val> 1 </val></def>
+<def><name> BetweenMeals </name><val> 0 </val></def>
+<def><name> Continuous </name><val> 0 </val></def>
+<def><name> CantEat </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Nutrition EQ 1 </test>
+<def><name> Eating </name><val> 0 </val></def>
+<def><name> BetweenMeals </name><val> 1 </val></def>
+<def><name> Continuous </name><val> 0 </val></def>
+<def><name> CantEat </name><val> 0 </val></def>
+</case>
+
+<case>
+<test> Nutrition EQ 3 </test>
+<def><name> Eating </name><val> 0 </val></def>
+<def><name> BetweenMeals </name><val> 0 </val></def>
+<def><name> Continuous </name><val> 0 </val></def>
+<def><name> CantEat </name><val> 1 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> JustLostConscious </name>
+  <if>
+  <test> DailyPlannerControl.Switch </test>
+  <true>
+    <def><name> DailyPlannerControl.Switch </name><val> FALSE </val></def>
+    <call> DailyPlannerControl.Stop </call>
+    <message> Subject lost consciousness. Daily planner stopped. </message>
+  </true>
+  </if>
+
+
+  <def><name> PostureControl.Request </name><val> 0 </val></def>
+
+  <def><name> Status.Activity </name><val> 2 </val></def>
+  <def><name> Status.Exertion </name><val> 0 </val></def>
+  <def><name> Status.Posture </name><val> 0 </val></def>
+  <def><name> Status.Nutrition </name><val> 3 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

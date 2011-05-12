@@ -1,0 +1,55 @@
+HumMod / Furosemide Reference
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Mass is mG. Conc is uG/mL.  So
+divide by a volume of distribution
+of L to get conc, since
+
+   mG/L = uG/mL
+
+Clin. Pharm. Ther. 24:199-207, 1978.
+J. Pharm. Biopharm. 7:265-274, 1979.
+
+Volume of distribution is 110 mL/kG,
+which is 57% of ECFV.
+
+Loss rate constant is (/Min)
+
+   Total = 0.02
+      Renal = 0.01
+      Non-Renal = 0.01
+
+Maximum excretory effect occurs at
+1 mG/L which is 8.5 mG in 8.5 L of
+ECFV.  Renal secretion is 0.08 mG/Min
+at this concentration.
+
+Parenteral administration: 20 mG
+in 2 mL and 100 mG in 10 mL.
+
+Typical dose is 20 - 40 mG.  Repeat,
+as needed, after 2 hours.
+
+MW = 330.75
+
+Plasma conc is uG/mL.
+
+Mass is conserved between injectate
+and ECFV when integral is an Euler.
+Integration error changes only the
+time constant -- not mass balance.
+This is not true of a backward Euler.
+
+Injection timespan is specified
+in seconds.  Time span is 2 time
+constants.
+
+
+
+End

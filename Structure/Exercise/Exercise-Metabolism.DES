@@ -1,0 +1,185 @@
+HumMod / Exercise-Metabolism
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Exercise-Metabolism </name>
+
+<variables>
+
+<var><name> HeatWatts </name></var>
+<constant><name> WattsToCals </name><val> 14.34 </val></constant>
+<var><name> TotalCals </name></var>
+<var><name> MotionCals </name></var>
+<var><name> HeatCals </name></var>
+
+<parm><name> Tau </name><val> 0.2 </val></parm>
+<var><name> K </name></var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> TotalWatts </name>
+  <outputname> TotalWatts </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> TargetTotalWatts </inputname>
+  <rateconstname> TotalWattsK </rateconstname>
+  <dervname> TotalWattsDerv </dervname>
+  <errorlim> 3.0 </errorlim>
+</delay>
+
+<delay>
+  <name> MotionWatts </name>
+  <outputname> MotionWatts </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> TargetMotionWatts </inputname>
+  <rateconstname> MotionWattsK </rateconstname>
+  <dervname> MotionWattsDerv </dervname>
+  <errorlim> 0.6 </errorlim>
+</delay>
+
+<delay>
+  <name> ContractionRate </name>
+  <outputname> ContractionRate </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> TargetContractionRate </inputname>
+  <rateconstname> ContractionRateK </rateconstname>
+  <dervname> ContractionRateDerv </dervname>
+  <errorlim> 0.5 </errorlim>
+</delay>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<conditional><name> K </name>
+<test> Tau GT 0.0 </test>
+<true> INVERT Tau </true>
+<false> INFINITE </false>
+</conditional>
+
+<def><name> TotalWattsK </name><val> K </val></def>
+<def><name> MotionWattsK </name><val> K </val></def>
+<def><name> ContractionRateK </name><val> K </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<testcase>
+
+<case>
+<test> Status.Exertion EQ 0 </test>
+<def>
+  <name> TargetTotalWatts </name>
+  <val> 0.0 </val>
+</def>
+<def>
+  <name> TargetMotionWatts </name>
+  <val> 0.0 </val>
+</def>
+<def>
+  <name> TargetContractionRate </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> Status.Exertion EQ 1 </test>
+<def>
+  <name> TargetMotionWatts </name>
+  <val> DailyPlannerControl.WorkLevel </val>
+</def>
+<def>
+  <name> TargetTotalWatts </name>
+  <val> MotionWatts / 0.22 </val>
+</def>
+<def>
+  <name> TargetContractionRate </name>
+  <val> 10.0 </val>
+</def>
+</case>
+
+<case>
+<test> Status.Exertion EQ 2 </test>
+<def>
+  <name> TargetMotionWatts </name>
+  <val> DailyPlannerControl.AerobicsLevel </val>
+</def>
+<def>
+  <name> TargetTotalWatts </name>
+  <val> MotionWatts / 0.22 </val>
+</def>
+<def>
+  <name> TargetContractionRate </name>
+  <val> 50.0 </val>
+</def>
+</case>
+
+<case>
+<test> Status.Exertion EQ 3 </test>
+<def>
+  <name> TargetTotalWatts </name>
+  <val> Exercise-Bike.TotalWatts </val>
+</def>
+<def>
+  <name> TargetMotionWatts </name>
+  <val> Exercise-Bike.Power(W) </val>
+</def>
+<def>
+  <name> TargetContractionRate </name>
+  <val> Exercise-Bike.RPM </val>
+</def>
+</case>
+
+<case>
+<test> Status.Exertion EQ 4 </test>
+<def>
+  <name> TargetTotalWatts </name>
+  <val> Exercise-Treadmill.TotalWatts </val>
+</def>
+<def>
+  <name> TargetMotionWatts </name>
+  <val> Exercise-Treadmill.Power(W) </val>
+</def>
+<def>
+  <name> TargetContractionRate </name>
+  <val> Exercise-Treadmill.StepsPerMinute </val>
+</def>
+</case>
+
+</testcase>
+
+<def>
+  <name> HeatWatts </name>
+  <val> TotalWatts - MotionWatts </val>
+</def>
+
+<def>
+  <name> TotalCals </name>
+  <val> WattsToCals * TotalWatts </val>
+</def>
+
+<def>
+  <name> MotionCals </name>
+  <val> WattsToCals * MotionWatts </val>
+</def>
+
+<def>
+  <name> HeatCals </name>
+  <val> WattsToCals * HeatWatts </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

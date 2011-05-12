@@ -1,0 +1,37 @@
+HumMod / FABalance
+
+Created : 2010-06-06
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<panel><name> LM_FattyAcids-FABalance </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Liver </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Liver - FA Balance </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\LiverMetabolism\FattyAcids\FABalance\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

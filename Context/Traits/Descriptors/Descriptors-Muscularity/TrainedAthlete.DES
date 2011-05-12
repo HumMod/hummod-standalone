@@ -1,0 +1,15 @@
+HumMod / TrainedAthlete.DES
+
+Created : 21-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<def><name> IsNormal </name><val> FALSE </val></def>
+<def><name> IsTrainedAthlete </name><val> TRUE </val></def>
+
+<def><name> Value </name><val> TRAINEDATHLETE </val></def>
+
+End

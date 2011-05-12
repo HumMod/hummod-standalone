@@ -1,0 +1,89 @@
+HumMod / Pressure
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 16.2 </high>
+   <wide> 30.0 </wide>
+   <title> Blood Pressure </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> RightAtrium.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> RightAtrium.Pressure </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> RightAtrium.TMP</name>
+   <format><decimal> 1 </decimal></format>
+   <label> Transmural Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> RightAtrium.Compliance</name>
+   <format><decimal> 1 </decimal></format>
+   <label> Compliance </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> RightAtrium.StressedVol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Stressed Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.6 </row><col> 1.0 </col>
+   <name> RightAtrium.ExternalPressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> External Pressure </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> Pressure = 1.0 mmHg </line>
+  <line>  </line>
+  <line> Transmural Pressure = 4.0 </line>
+  <line>  </line>
+  <line> Compliance = 12.5 mL/mmHg </line>
+  <line> Stressed Volume = 50.0 mL </line>
+  <line>  </line>
+  <line> External Pressure = -3.0 mmHg </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,114 @@
+HumMod / H2O
+
+Created : 19-Jun-06
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> H2O </name>
+  <label> H2O </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> H2O-Distribution </name>
+  <label> Distribution </label>
+  <parent> H2O </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Storage </name>
+  <label> Storage </label>
+  <parent> H2O </parent>
+</leaf>
+
+<separatorbar>
+  <parent> H2O </parent>
+</separatorbar>
+
+<branch>
+  <name> H2O-Movement </name>
+  <label> Movement </label>
+  <parent> H2O </parent>
+</branch>
+
+<leaf>
+  <name> H2O-Movement-DietaryIntake </name>
+  <label> Dietary Intake </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-IVDrip </name>
+  <label> IV Drip </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Transfusion </name>
+  <label> Transfusion </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<separatorbar>
+  <parent> H2O-Movement </parent>
+</separatorbar>
+
+<leaf>
+  <name> H2O-Movement-Urine </name>
+  <label> Urine </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Hemorrhage </name>
+  <label> Hemorrhage </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Dialysis </name>
+  <label> Dialysis </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Sweating </name>
+  <label> Sweating </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-InsensibleSkin </name>
+  <label> Insensible Skin </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-InsensibleLung </name>
+  <label> Insensible Lung </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Vomitus </name>
+  <label> Vomitus </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+<leaf>
+  <name> H2O-Movement-Diarrhea </name>
+  <label> Diarrhea </label>
+  <parent> H2O-Movement </parent>
+</leaf>
+
+End

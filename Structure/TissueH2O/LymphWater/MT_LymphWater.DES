@@ -1,0 +1,46 @@
+HumMod / MT_LymphWater
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> MT_LymphWater </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> PressureEffect </name></var>
+
+<parm><name> NormalRate </name><val> 0.8 </val></parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PressureFlow </name>
+  <point><x> -14.0 </x><y>  0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  -4.0 </x><y>  1.0 </y><slope> 0.1 </slope></point>
+  <point><x>   2.0 </x><y>  8.0 </y><slope> 4.0 </slope></point>
+  <point><x>   6.0 </x><y> 25.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> PressureEffect </name><val> PressureFlow [ MT_InterstitialWater.Pressure ] </val></def>
+<def><name> Rate </name><val> PressureEffect * NormalRate </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

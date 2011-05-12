@@ -1,0 +1,43 @@
+HumMod / MotorRadiation DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MotorRadiation </name>
+
+<variables>
+
+<var><name> TotalEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> TotalEffect </name>
+  <point><x>    0 </x><y> 0.0 </y><slope> 0.004 </slope></point>
+  <point><x>  500 </x><y> 2.2 </y><slope> 0.002 </slope></point>
+  <point><x> 1000 </x><y> 2.6 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> TotalEffect </name>
+  <val> TotalEffect [ Exercise-Metabolism.TotalWatts ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

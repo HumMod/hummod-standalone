@@ -1,0 +1,33 @@
+Digital Human / Nephrons
+
+Created : 21-Oct-04
+Last Modified : 08-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\Nephrons\ ?>
+
+<?include FractReab.docs ?>
+
+<?include CollectingDuct.docs ?>
+<?include DistalTubule.docs ?>
+<?include Glomerulus.docs ?>
+<?include LoopOfHenle.docs ?>
+<?include Medulla.docs ?>
+<?include MaculaDensa.docs ?>
+<?include ProximalTubule.docs ?>
+
+<?include NephronIFP.docs ?>
+<?include NephronAldo.docs ?>
+<?include NephronADH.docs ?>
+<?include VasaRecta.docs ?>
+<?include NephronGlucose.docs ?>
+<?include NephronKetoacids.docs ?>
+<?include NephronANP.docs ?>
+
+</docs>
+End

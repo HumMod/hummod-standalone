@@ -1,0 +1,74 @@
+HumMod / HeatInsensibleSkin
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatInsensibleSkin </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+<var>
+  <name> Liquid </name>
+</var>
+
+<var>
+  <name> Vapor </name>
+</var>
+
+<var>
+  <name> H2O </name>
+</var>
+
+<parm>
+  <name> Base </name>
+  <val> 0.37 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Flux </name>
+
+<conditional>
+  <name> H2O </name>
+  <test> Skin-Flow.BloodFlow GT 0.0 </test>
+  <true> Base </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> Liquid </name>
+  <val>
+      H2O
+    * HeatSkin.Temp(K)
+    * SpecificHeat.Water(kCal/G)
+  </val>
+</def>
+
+<def>
+  <name> Vapor </name>
+  <val>
+      H2O
+    * TempTools.Vapor(kCal/G)
+  </val>
+</def>
+
+<def>
+  <name> Flux </name>
+  <val> Liquid + Vapor </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

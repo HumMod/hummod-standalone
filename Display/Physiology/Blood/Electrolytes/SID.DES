@@ -1,0 +1,51 @@
+HumMod / SID
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 7.2 </row>
+   <col> 1.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> SID </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BloodIons.[SID(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [SID] </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> BloodIons.Cations </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Cations </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> BloodIons.StrongAnions </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Strong Anions </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> [SID] = 40.0 mEq/L </line>
+  <line>  </line>
+  <line> Cations = 148.5 mEq/L </line>
+  <line> Strong Anions = 108.5 mEq/L </line>
+</infobutton>
+
+</groupbox>
+
+End

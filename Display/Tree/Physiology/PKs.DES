@@ -1,0 +1,40 @@
+HumMod / Tree-Pharmacokinetics
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> PKs </name>
+  <label> Pharmacokinetics </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> PKsChlorothiazide </name>
+  <label> Chlorothiazide </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsDigoxin </name>
+  <label> Digoxin </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsFurosemide </name>
+  <label> Furosemide </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsMidodrine </name>
+  <label> Midodrine </label>
+  <parent> PKs </parent>
+</leaf>
+
+End

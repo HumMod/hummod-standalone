@@ -1,0 +1,45 @@
+HumMod / Compartments
+
+Created : 05-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 14.8 </row>
+   <col> 1.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> Compartments </title>
+
+<structurename> Brain-Size </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> IFV </name>
+   <format> <integer/> </format>
+   <label> IFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> CellH2O</name>
+   <format> <integer/> </format>
+   <label> Cell H2O </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> IFV = 220 mL </line>
+  <line> Cell H2O = 1000 mL </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,39 @@
+HumMod / Context.REF
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Context scales the model structure when the model is loaded.
+
+Context has two main parts
+
+# Traits
+  # Descriptors
+  # Values
+# Start
+
+Traits has two subsections: Descriptors and values.
+
+Descriptors transforms the trait descriptors from tokens to
+enumerated values for trait variables. This is the first
+step in the starting process.
+
+Values transforms enumerated values to quantitative values.
+
+Start takes the quantitative values and applies them to all
+of the model initial values and parameters that require
+adjustment.
+
+We can call out to appropriate model parts with appropriate
+values or model parts can call in during start up to get
+values. Either way works, I think.
+
+First I'll try call outs from scale components to .Init or
+.Initialize blocks in the model parts.
+
+End

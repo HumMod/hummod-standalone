@@ -1,0 +1,188 @@
+HumMod / Storage
+
+Created : 2010-04-19
+Last Modified : 2010-04-19
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 30.6 </high>
+   <wide> 30.0 </wide>
+   <title> Storage </title>
+
+<structurename> HeatStorage </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><integer/></format>
+   <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 18000 </min><max> 20000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3.0 </col>
+   <name> GILumenTemperature.Intake </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Dietary Intake </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3.0 </col>
+   <name> Metabolism-CaloriesUsed.TotalHeat(kCal/Min) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Metabolism </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 3.0 </col>
+   <name> HeatIVDrip.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> IV Drip </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.2 </row><col> 3.0 </col>
+   <name> HeatTransfusion.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Transfusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.2 </row><col> 3.0 </col>
+   <name> HeatShivering.Cals </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Shivering </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.6 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.6 </row><col> 3.0 </col>
+   <name> HeatUrine.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Urine </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.6 </row><col> 3.0 </col>
+   <name> HeatHemorrhage.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Hemorrhage </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.6 </row><col> 3.0 </col>
+   <name> HeatDialyzer.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Dialysis </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.6 </row><col> 3.0 </col>
+   <name> HeatRadiation.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Radiation </label>
+</showvalue>
+
+<showvalue>
+   <row> 22.6 </row><col> 3.0 </col>
+   <name> HeatConduction.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Conduction </label>
+</showvalue>
+
+<showvalue>
+   <row> 23.6 </row><col> 3.0 </col>
+   <name> HeatSweating.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sweating </label>
+</showvalue>
+
+<showvalue>
+   <row> 24.6 </row><col> 3.0 </col>
+   <name> HeatInsensibleSkin.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Insensible Skin </label>
+</showvalue>
+
+<showvalue>
+   <row> 25.6 </row><col> 3.0 </col>
+   <name> HeatInsensibleLung.Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Insensible Lung </label>
+</showvalue>
+
+<showvalue>
+   <row> 26.6 </row><col> 3.0 </col>
+   <name> GILumenTemperature.Vomitus </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Vomitus </label>
+</showvalue>
+
+<showvalue>
+   <row> 27.6 </row><col> 3.0 </col>
+   <name> GILumenTemperature.Diarrhea </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Diarrhea </label>
+</showvalue>
+
+<showvalue>
+   <row> 29.0 </row><col> 1.0 </col>
+   <name> Weight.Weight(kG) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass (kG) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

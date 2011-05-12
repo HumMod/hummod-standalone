@@ -1,0 +1,115 @@
+HumMod / Control
+
+Created : 16-Jan-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 16.6 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Transfusion </structurename>
+
+<radiobuttons>
+  <row> 1.6 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<label>
+  <row> 3.2 </row><col> 1.0 </col>
+  <text> Rates </text>
+</label>
+
+<showvalue>
+   <row> 4.2 </row><col> 2.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.2 </row><col> 2.0 </col>
+   <name> RBCRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> RBC's </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.2 </row><col> 2.0 </col>
+   <name> PlasmaRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Plasma </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.2 </row><col> 2.0 </col>
+   <name> ProteinRate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Protein </label>
+</showvalue>
+
+<showvalue>
+   <row>8.2 </row><col> 2.0 </col>
+   <name> NaRate </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Na+ </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.2 </row><col> 2.0 </col>
+   <name> KRate </name>
+   <format><decimal> 3 </decimal></format>
+   <label> K+ </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.2 </row><col> 2.0 </col>
+   <name> ClRate </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Cl- </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> Volume </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.8 </row><col> 3 </col>
+   <name> Units </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Units </label>
+</showvalue>
+
+<actionbutton>
+   <row> 14.6 </row><col> 1.0 </col>
+   <blockname> ResetVolume </blockname>
+   <label> Reset Volume </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Set up transfusion parameters. Then turn </line>
+  <line> the transfusion on and off here. </line>
+  <line> Monitor volume. </line>
+  <line> </line>
+  <line> Units for rates are mL/Min. </line>
+  <line> Units for volume are mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

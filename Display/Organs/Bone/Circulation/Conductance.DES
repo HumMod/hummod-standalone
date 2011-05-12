@@ -1,0 +1,142 @@
+HumMod / Conductance
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 25.4 </high>
+   <wide> 30.0 </wide>
+   <title> Vascular Conductance </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Bone-Flow.Conductance </name>
+  <label> Conductance </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Bone-Flow.Conductance </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 4 </min><max> 5 </max><inc> 1.0 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> PO2Effect </name>
+    <label> pO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsEffect </name>
+    <label> Symps </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> A2Effect </name>
+    <label> [AII] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> ADHEffect </name>
+    <label> [ADH] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Viscosity.ConductanceEffect </name>
+    <label> Viscosity </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Anesthesia.VascularConductance </name>
+    <label> Anesthesia </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> OtherTissue-Vasculature.Effect </name>
+    <label> Vascularity </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<showvalue>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> BasicConductance </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Basic Conductance </label>
+</showvalue>
+
+<repeatlist>
+  <name> Bone-Flow.BasicConductance </name>
+  <repeat><reps> 100 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 20.4 </row><col> 3.0 </col>
+  <name> Multiplier </name>
+  <listname> Common.Multiplier </listname>
+  <label> Multiplier </label>
+</slidebar>
+
+<showvalue>
+  <row> 21.8 </row><col> 1.0 </col>
+  <name> InitialConductance </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Initial Conductance </label>
+</showvalue>
+
+<showvalue>
+  <row> 22.8 </row><col> 3.0 </col>
+  <name> Conductance(/G) </name>
+  <format><decimal> 6 </decimal></format>
+  <label> Conductance (/G) </label>
+</showvalue>
+
+<showvalue>
+  <row> 23.8</row><col> 3.0 </col>
+  <name> Bone-Size.InitialMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Initial Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Vascular conductance is normally </line>
+  <line> 4.7 ( mL / Min ) / mmHg </line>
+  <line>  </line>
+  <line> Conductance effects are normally </line>
+  <line> 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

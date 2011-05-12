@@ -1,0 +1,191 @@
+QHP 2008 / Glucose.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> GlucosePool </structurename>
+
+<vardoc>
+<name> [Glucose(mG/dL)]</name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+<seealso> InsulinSecretion.GlucoseEffect </seealso>
+<seealso> GlucagonSecretion. GlucoseEffect </seealso>
+</vardoc>
+
+<vardoc>
+<name> [Glucose(mMol/L)] </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> [Glucose] </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> [Osm(mOsm/L)]</name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> [Osm] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Change </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Gain </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name>  InitialMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Loss </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> MG_TO_MMOL </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> MW </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+<seealso> GlucosePool.Osmoles </seealso>
+</vardoc>
+
+<vardoc>
+<name> Osmoles </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> OsmECFV.Non-Electrolytes </seealso>
+</vardoc>
+
+<vardoc>
+<name> PER_ML_TO_PER_DL </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> Target[Glucose] </name>
+<topic>    </topic>
+<topic>    </topic>
+<seealso>     </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Glucose - Overview </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucose - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma Concentration  mG/mL, mG/dL or nMol/L
+Mass  mG 
+mG/dL * 0.05551 = mMol/L
+mG * 5.551 = mMol
+mG/mL * 100 = mG/dL
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucose - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Molecular Weight (MW) of glucose is 180
+
+Typical plasma glucose concentration [Glucose] = 1.1mg/mL
+The volume of distribution is the ECFV.
+
+Glucose Mass = ECFV * [Glucose]
+             = 15000 * 1.1 = 16500mG
+
+Typical glucose concentrations under a variety of
+physiological situations
+
+                 mG/dL  mMol/L
+                 -----  ------
+   Hypoglycemia    45     2.5
+   Starving        60     3.3
+   Fasting         85     4.7
+   Drip           110     6.1
+   Fed            130     7.2
+   Glucose Load   200    11.1
+ 
+
+</content>
+</topicdoc>
+
+  
+
+End

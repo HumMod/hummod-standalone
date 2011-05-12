@@ -1,0 +1,129 @@
+HumMod / Balance
+
+Created : 2010-04-18
+Last Modified : 2010-04-18
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 22.8 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> LT_H2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format><integer/></format>
+   <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Vol </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 8000 </min><max> 10000 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 10.0 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.4 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 3.0 </col>
+   <name> LT_CapillaryWater.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Capillary Leak </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.4 </row><col> 3.0 </col>
+   <name> LT_H2O.MetabolicH2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Metabolism </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.8 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.8 </row><col> 3.0 </col>
+   <name> LT_LymphWater.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Lymph Flow </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.8 </row><col> 3.0 </col>
+   <name> LT_H2O.SweatH2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sweat </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.8 </row><col> 3.0 </col>
+   <name> LT_H2O.InsensibleSkinH2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Skin Insensible Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.8 </row><col> 3.0 </col>
+   <name> LT_H2O.InsensibleLungH2O </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Lung Insensible Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.2 </row><col> 1.0 </col>
+   <name> LT_InterstitialWater.Vol </name>
+   <format><integer/></format>
+   <label> Interstitial H2O </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.2 </row><col> 1.0 </col>
+   <name> CellH2O.LT_Vol </name>
+   <format><integer/></format>
+   <label> Cell H2O </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mL. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

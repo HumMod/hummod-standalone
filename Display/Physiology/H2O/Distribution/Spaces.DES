@@ -1,0 +1,128 @@
+HumMod / Spaces
+
+Created : 31-May-05
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.2 </high>
+   <wide> 30.0 </wide>
+   <title> Spaces </title>
+
+<structurename> BodyH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TotalVol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total H2O </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3.0 </col>
+   <name> IntravascularVol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Intravascular </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3.0 </col>
+   <name> ExtravascularVol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Extravascular </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> ICFV.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> ICFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 3 </col>
+   <name> CellH2O.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Cells </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.8 </row><col> 3 </col>
+   <name> RBCH2O.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Red Cells </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> ECFV.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> ECFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.2 </row><col> 3 </col>
+   <name> PlasmaVol.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Plasma </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.2 </row><col> 3 </col>
+   <name> InterstitialWater.Vol(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Interstitium </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 3.0 </col>
+   <name> ExcessLungWater.Volume(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Excess Lung H2O </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3.0 </col>
+   <name> PeritoneumSpace.Volume(L) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Peritoneum </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.6 </row><col> 1.0 </col>
+   <name> ExternalH2O.Other(L) </name>
+    <format><decimal> 1 </decimal></format>
+   <label> External Other </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are L. Typical values are </line>
+  <line>  </line>
+  <line> Total H2O = 41.8 </line>
+  <line> Intravascular = 4.6 </line>
+  <line> Extravascular = 37.3 </line>
+  <line>  </line>
+  <line> Intracellular = 26.5 </line>
+  <line> Cells (less RBC's) = 24.9 </line>
+  <line> RBC's = 1.6 </line>
+  <line>  </line>
+  <line> Extracellular = 14.4 </line>
+  <line> Plasma = 3.0 </line>
+  <line> Interstitium = 11.3 </line>
+  <line> Excess Lung H2O = 0.0 </line>
+  <line> Peritoneum = 0.0 </line>
+  <line>  </line>
+  <line> External Other = 1.0 </line>
+  <line>  </line>
+  <line> External other is the gut lumen. </line>
+</infobutton>
+
+</groupbox>
+
+End

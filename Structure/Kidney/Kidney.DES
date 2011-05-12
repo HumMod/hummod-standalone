@@ -1,0 +1,38 @@
+HumMod / Kidney
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Kidney\ ?>
+
+<?include Kidney-EfferentArtery.DES ?>
+<?include Kidney-AfferentArtery.DES ?>
+<?include Kidney-ArcuateArtery.DES ?>
+
+<?include Kidney-Pressure.DES ?>
+<?include Kidney-Flow.DES ?>
+<?include Kidney-Size.DES ?>
+<?include Kidney-Function.DES ?>
+<?include Kidney-Alpha.DES ?>
+
+<?include Kidney-CO2.DES ?>
+<?include Kidney-Lactate.DES ?>
+<?include Kidney-Ph.DES ?>
+
+<?include Kidney-Fuel.DES ?>
+<?include Kidney-Metabolism.DES ?>
+<?include Kidney-AlphaReceptors.DES ?>
+<?include Kidney-BetaReceptors.DES ?>
+<?include Kidney-Structure.DES ?>
+
+<?include Kidney-NephronCount.DES ?>
+<?include Kidney-O2.DES ?>
+
+<?include Kidney-Myogenic.DES ?>
+
+End

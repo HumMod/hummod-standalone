@@ -1,0 +1,111 @@
+HumMod / Balance
+
+Created : 29-Mar-08
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 21.4 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> GlycerolPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 1000 </min><max> 2000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.4 </row><col> 3.0 </col>
+  <name> Synthesis </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Synthesis </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.4 </row><col> 3.0 </col>
+  <name> TriglycerideHydrolysis </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Triglyceride Hydrolysis </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.8 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.8 </row><col> 3.0 </col>
+  <name> Degradation </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Degradation </label>
+</showvalue>
+
+<showvalue>
+  <row> 18.8 </row><col> 3.0 </col>
+  <name> GutFAAbsorption </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gut FA Absorption </label>
+</showvalue>
+
+<showvalue>
+  <row> 19.8 </row><col> 3.0 </col>
+  <name> LiverFARelease </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Liver FA Release </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for glycerol movement are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

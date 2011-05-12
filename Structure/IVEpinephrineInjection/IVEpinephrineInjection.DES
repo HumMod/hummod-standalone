@@ -1,0 +1,41 @@
+HumMod / IVEpinephrineInjection
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> IVEpinephrineInjection </name>
+
+<variables>
+
+<parm><name> Dose </name><val> 1.0 </val></parm>
+<parm><name> Timespan </name><val> 15.0 </val></parm>
+
+<var><name> TotalInjections </name><val> 0 </val></var>
+<var><name> TotalDose </name><val> 0.0 </val></var>
+
+</variables>
+
+<definitions>
+<block><name> InjectEpinephrineNow </name>
+
+<def>
+  <name> TotalInjections </name>
+  <val> TotalInjections + 1 </val>
+</def>
+
+<def>
+  <name> TotalDose </name>
+  <val> TotalDose + Dose </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

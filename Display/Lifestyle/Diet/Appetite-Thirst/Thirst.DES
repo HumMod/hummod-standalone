@@ -1,0 +1,64 @@
+HumMod / Thirst
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 19.8 </row>
+   <col> 32.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Thirst </title>
+
+<structurename> DietThirst </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate(L/Day) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Thirst (L/Day) </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> OsmBody.[Osm(mOsm/L)]-Osmoreceptors </name>
+    <label> [Osm] </label>
+    <scale>
+      <min> 230 </min><max> 320 </max><inc> 10 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Thirst </label>
+    <scale>
+      <min> 0 </min><max> 30 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> Rate(L/Day) </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> OsmBody.[Osm(mOsm/L)]-Osmoreceptors </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Osm-Osmoreceptors] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Thirst is typically ~2 L/Day. </line>
+</infobutton>
+
+</groupbox>
+
+End

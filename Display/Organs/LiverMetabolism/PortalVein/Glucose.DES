@@ -1,0 +1,89 @@
+HumMod / Glucose
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 19.2 </row>
+   <col> 1.0 </col>
+   <high> 16.8 </high>
+   <wide> 30.0 </wide>
+   <title> Glucose </title>
+
+<structurename> PortalVein-Glucose </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [Glucose(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glucose (mG/dL)] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Glucose(mG/dL)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 40 </min><max> 60 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> [Increment(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Increment(mG/dL)] </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 3.0 </col>
+  <name> GILumenCarbohydrates.Absorption </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Absorption </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.8 </row><col> 3.0 </col>
+  <name> GITract-Flow.PlasmaFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Plasma Flow </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.2 </row><col> 1.0 </col>
+  <name> GlucosePool.[Glucose(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glucose Pool (mG/dL)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Note the scale change. Insulin secretion is reported in </line>
+  <line> mU/min while insulin pool concentration is reported in </line>
+  <line> uU/mL. </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

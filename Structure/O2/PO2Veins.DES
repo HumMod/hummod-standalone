@@ -1,0 +1,74 @@
+HumMod / PO2Veins
+
+Created : 15-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PO2Veins </name>
+
+<variables>
+
+<var>
+  <name> Pressure </name>
+  <val> 40.0 </val>
+</var>
+
+<var>
+  <name> Sat(%) </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<copy>
+  <from> O2Veins.[O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> Pressure </to>
+</copy>
+
+<copy>
+  <from> O2Veins.[O2] </from>
+  <to> HgbConc.[O2] </to>
+</copy>
+
+<call> HgbConc.Sat(%) </call>
+
+<copy>
+  <from> HgbConc.Sat(%) </from>
+  <to> Sat(%) </to>
+</copy>
+
+</block>
+
+<block><name> ForDisplay </name>
+
+<copy>
+  <from> Pressure </from>
+  <to> HgbTissue.pO2 </to>
+</copy>
+
+<call> HgbTissue.PO2ToO2 </call>
+
+<copy>
+  <from> HgbTissue.[O2] </from>
+  <to> O2Veins.[O2] </to>
+</copy>
+
+</block>
+
+</definitions>
+</structure>
+
+End

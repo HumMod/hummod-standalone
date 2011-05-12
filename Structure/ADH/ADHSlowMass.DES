@@ -1,0 +1,59 @@
+HumMod / ADHSlowMass
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ADHSlowMass </name>
+
+<variables>
+
+<parm>
+  <name> FluxK </name>
+  <val> 0.0010 </val>
+</parm>
+
+<var>
+  <name> Flux </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 17000.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 170.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Flux </name>
+
+<def>
+  <name> Flux </name>
+  <val> FluxK * Mass </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Change </name>
+  <val> ADHSynthesis.Rate + ADHFastMass.Flux - Flux </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

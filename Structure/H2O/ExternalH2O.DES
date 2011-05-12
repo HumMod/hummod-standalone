@@ -1,0 +1,110 @@
+HumMod / ExternalH2O
+
+Created : 14-Dec-08
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ExternalH2O </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+
+<var><name> Vol(L) </name></var>
+
+<var><name> Core </name></var>
+<var><name> InitialCore </name></var>
+
+<var><name> Core(L) </name></var>
+
+<var><name> Other </name></var>
+<var><name> InitialOther </name></var>
+
+<var><name> Other(L) </name></var>
+
+<var><name> Change </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<call> GILumenVolume.Initialize </call>
+<call> PeritoneumSpace.Initialize </call>
+<call> ExcessLungWater.Initialize </call>
+
+<def>
+  <name> InitialCore </name>
+  <val>
+       PeritoneumSpace.InitialVolume
+     + ExcessLungWater.InitialVolume
+  </val>
+</def>
+
+<def>
+  <name> InitialOther </name>
+  <val> GILumenVolume.InitialMass </val>
+</def>
+
+<def>
+  <name> InitialVol </name>
+  <val> InitialCore + InitialOther </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> Core </name>
+  <val> PeritoneumSpace.Volume + ExcessLungWater.Volume </val>
+</def>
+
+<def>
+  <name> Core(L) </name>
+  <val> Core / 1000.0 </val>
+</def>
+
+<def>
+  <name> Other </name>
+  <val> GILumenVolume.Mass </val>
+</def>
+
+<def>
+  <name> Other(L) </name>
+  <val> Other / 1000.0 </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> Core + Other </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Change </name>
+  <val>
+       GILumenVolume.Change
+     + PeritoneumSpace.Change
+     + ExcessLungWater.Change
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

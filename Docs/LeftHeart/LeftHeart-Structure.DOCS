@@ -1,0 +1,96 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Structure </structurename>
+
+<vardoc>
+<name> LeftHeart-Structure.Change </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Structure.F1 </seealso>
+<seealso> LeftHeart-Structure.F2 </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.F1 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.F2 </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Structure.PhEffect </seealso>
+<seealso> LeftHeart-Structure.TemperatureEffect </seealso>
+<seealso> LeftHeart-Structure.FuelEffect </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.FuelEffect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Fuel.FractUseDelay </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.PhEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-pH.pH </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Structure.TemperatureEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> HeatCore.Temp(C) </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

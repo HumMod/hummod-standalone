@@ -1,0 +1,18 @@
+HumMod / SplanchnicCirculation
+
+Created : 04-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+These are auxillary calculations. The basic hemodynamic
+calculations (from elsewhere) are
+
+Hepatic Artery Blood Flow : HepaticArty.Flow
+Portal Vein Blood Flow : GITract-Flow.BloodFlow
+Hepatic Vein Blood Flow : SplanchnicVeins.Outflow
+
+End

@@ -1,0 +1,100 @@
+HumMod / DialyzerControl
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 8.6 </row>
+   <col> 1.0 </col>
+   <high> 10.2 </high>
+   <wide> 30.0 </wide>
+   <title> Dialyzer Control </title>
+
+<structurename> DialyzerControl </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<repeatlist>
+  <name> DialyzerControl.Interval(Days) </name>
+  <repeat><reps>  7 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Interval(Days) </name>
+  <listname> DialyzerControl.Interval(Days) </listname>
+  <label> Interval (Days) </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialyzerControl.Duration(Hrs) </name>
+  <repeat><reps> 24 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.4 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Duration(Hrs) </name>
+  <listname> DialyzerControl.Duration(Hrs) </listname>
+  <label> Duration (Hrs) </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialyzerControl.BloodFlow(%) </name>
+  <repeat><reps> 100 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 5.8 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> BloodFlow(%) </name>
+  <listname> DialyzerControl.BloodFlow(%) </listname>
+  <label> Blood Flow (%) </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialyzerControl.DialysateFlow </name>
+  <repeat><reps> 20 </reps><stepsize> 100.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 7.2 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> DialysateFlow </name>
+  <listname> DialyzerControl.DialysateFlow </listname>
+  <label> Dialysate Flow </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialyzerControl.Ultrafiltration </name>
+  <repeat><reps> 40 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 8.6 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Ultrafiltration </name>
+  <listname> DialyzerControl.Ultrafiltration </listname>
+  <label> Ultrafiltration </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Dialyzer blood flow is specified </line>
+  <line> as a percentage of dialysis shunt </line>
+  <line> blood flow. </line>
+  <line>  </line>
+  <line> Dialysate flow and ultrafiltration </line>
+  <line> are specified  in mL/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

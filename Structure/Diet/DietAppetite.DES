@@ -1,0 +1,55 @@
+HumMod / DietAppetite
+
+Created : 15-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietAppetite </name>
+
+<variables>
+
+<var><name> LeptinEffect </name></var>
+<var><name> [Leptin-Receptor] </name></var>
+<parm><name> Block(%) </name><val> 0.0 </val></parm>
+<var><name> K </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> LeptinEffect </name>
+  <point><x>  0 </x><y> 3.0 </y><slope> 0 </slope></point>
+  <point><x>  8 </x><y> 1.0 </y><slope> -0.04 </slope></point>
+  <point><x> 50 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> K </name>
+  <val> 1.0 - ( Block(%) / 100.0 ) </val>
+</def>
+
+<def>
+  <name> [Leptin-Receptor] </name>
+  <val> K * LeptinPool.[Leptin(nG/mL)] </val>
+</def>
+
+<def>
+  <name> LeptinEffect </name>
+  <val> LeptinEffect [ [Leptin-Receptor] ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

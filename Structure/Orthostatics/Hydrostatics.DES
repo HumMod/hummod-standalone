@@ -1,0 +1,108 @@
+HumMod / Hydrostatics
+
+Created : 18-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Hydrostatics </name>
+
+<variables>
+
+<parm><name> BrainCM </name><val> -18.0 </val></parm>
+<parm><name> CarotidCM </name><val> -15.0 </val></parm>
+<parm><name> UpperTorsoCM </name><val> -10.0 </val></parm>
+<parm><name> MiddleTorsoCM </name><val> 4.0 </val></parm>
+<parm><name> LowerTorsoCM </name><val> 50.0 </val></parm>
+
+<var><name> BrainGradient </name></var>
+<var><name> CarotidGradient </name></var>
+<var><name> UpperTorsoGradient </name></var>
+<var><name> MiddleTorsoGradient </name></var>
+<var><name> LowerTorsoArtyGradient </name></var>
+<var><name> LowerTorsoVeinGradient </name></var>
+
+<var><name> FractGz </name></var>
+<var><name> LegArtyFractGz </name></var>
+<var><name> LegVeinFractGz </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> Status.Posture EQ PostureControl.LYING </test>
+
+<def><name> FractGz </name><val> 0.0 </val></def>
+<def><name> LegArtyFractGz </name><val> 0.0 </val></def>
+<def><name> LegVeinFractGz </name><val> 0.2 </val></def>
+</case>
+
+<case>
+<test> Status.Posture EQ PostureControl.SITTING </test>
+
+<def><name> FractGz </name><val> 1.0 </val></def>
+<def><name> LegArtyFractGz </name><val> 0.7 </val></def>
+<def><name> LegVeinFractGz </name><val> 0.7 </val></def>
+</case>
+
+<case>
+<test> Status.Posture EQ PostureControl.STANDING </test>
+
+<def><name> FractGz </name><val> 1.0 </val></def>
+<def><name> LegArtyFractGz </name><val> 1.0 </val></def>
+<def><name> LegVeinFractGz </name><val> 1.0 </val></def>
+</case>
+
+<case>
+<test> Status.Posture EQ PostureControl.TILTED </test>
+
+<def><name> FractGz </name><val> SINDEG TiltTable.Degrees </val></def>
+<def><name> LegArtyFractGz </name><val> FractGz </val></def>
+<def><name> LegVeinFractGz </name><val> 0.2 + FractGz </val></def>
+</case>
+
+</testcase>
+
+<def>
+  <name> BrainGradient </name>
+  <val> BrainCM * Gravity.Gz * FractGz </val>
+</def>
+
+<def>
+  <name> CarotidGradient </name>
+  <val> CarotidCM * Gravity.Gz * FractGz </val>
+</def>
+
+<def>
+  <name> UpperTorsoGradient </name>
+  <val> UpperTorsoCM * Gravity.Gz * FractGz </val>
+</def>
+
+<def>
+  <name> MiddleTorsoGradient </name>
+  <val> MiddleTorsoCM * Gravity.Gz * FractGz </val>
+</def>
+
+<def>
+  <name> LowerTorsoArtyGradient </name>
+  <val> LowerTorsoCM * Gravity.Gz * LegArtyFractGz </val>
+</def>
+
+<def>
+  <name> LowerTorsoVeinGradient </name>
+  <val> LowerTorsoCM * Gravity.Gz * LegVeinFractGz </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

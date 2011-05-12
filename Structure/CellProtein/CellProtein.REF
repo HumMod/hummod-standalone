@@ -1,0 +1,44 @@
+HumMod / CellProtein.REF
+
+Created : 07-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The cell protein pool is typically 6000.0 G. This
+pool slowly exchanges aminoacids with the circulating
+amino acid pool.
+
+An adequate protein pool supports cell function.
+
+Normal concentration is 214 G/L or mG/mL.
+
+Clin.Sci. 33:507, 1967 has protein turnover at 150
+mG/Min. Guyton (p880) has it at 280 mG/Min. A good
+estimate is 200 mG/Min or 0.2 G/Min.
+
+The circulating AA pool drives inflow while cell
+protein concentration drives outflow. There is also
+cellular degradation.
+
+I'm going to try mG as the unit for mass. It is a very large
+number, but the rates are just right.
+
+Mass = 6000000.0
+
+[Protein] = 215 mG/mL
+
+Inflow = 232.0 mG/Min
+Outflow = 200.0 mG/Min
+Degradation = 32.0 mG/Min
+
+[Pool Protein] = 50.0 mG/dL or 0.50 mG/mL
+
+InflowK = 464.0
+OutflowK = 0.93
+DegradationK = 0.0000053
+
+
+End

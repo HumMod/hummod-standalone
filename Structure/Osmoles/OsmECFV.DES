@@ -1,0 +1,55 @@
+HumMod / OsmECFV
+
+Created : 26-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> OsmECFV </name>
+
+<variables>
+
+<var><name> Total </name></var>
+<var><name> Electrolytes </name></var>
+<var><name> Anions </name></var>
+<parm><name> OtherAnions </name><val> 373.0 </val></parm>
+<var><name> Cations </name></var>
+<var><name> Non-Electrolytes </name></var>
+<parm><name> UnknownOsmoles </name><val> 340.0 </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> Cations </name><val> NaPool.Mass + KPool.Mass </val></def>
+
+<def><name> Anions </name>
+  <val>
+      ClPool.Mass
+    + LacPool.Mass
+    + KAPool.Osmoles
+    + SO4Pool.Osmoles
+    + PO4Pool.Osmoles
+    + OtherAnions
+  </val>
+</def>
+
+<def><name> Non-Electrolytes </name>
+  <val>
+      GlucosePool.Osmoles
+    + UreaPool.Osmoles
+    + UnknownOsmoles
+  </val>
+</def>
+
+<def><name> Electrolytes </name><val> Cations + Anions </val></def>
+<def><name> Total </name><val> Electrolytes + Non-Electrolytes </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

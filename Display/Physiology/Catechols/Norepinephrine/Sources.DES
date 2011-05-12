@@ -1,0 +1,63 @@
+HumMod / Sources
+
+Created : 23-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 7.4 </high>
+   <wide> 30.0 </wide>
+   <title> Sources </title>
+
+<structurename> NESecretion </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> NEPool.Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Secretion </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> Spillover </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Spillover </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> NEPump.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pump </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> Pheochromocytoma.NERate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pheo </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Most NE typically comes from spillover. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,21 @@
+Digital Human / RespiratoryCenter
+
+Created : 24-Dec-05
+Last Modified : 07-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path Docs\RespiratoryCenter\ ?>
+
+<?include RespiratoryCenter-Output.docs ?>
+<?include RespiratoryCenter-Integration.docs ?>
+<?include RespiratoryCenter-Chemical.docs ?>
+<?include RespiratoryCenter-Exercise.docs ?>
+<?include RespiratoryCenter-Radiation.docs ?>
+<?include RespiratoryCenter-Metaboreflex.docs ?>
+
+</docs>
+End

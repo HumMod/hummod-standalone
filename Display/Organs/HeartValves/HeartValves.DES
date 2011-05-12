@@ -1,0 +1,16 @@
+HumMod / HeartValves
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<?path Display\Organs\HeartValves\ ?>
+
+<?include Aortic\Aortic.DES ?>
+<?include Mitral\Mitral.DES ?>
+<?include Pulmonic\Pulmonic.DES ?>
+<?include Tricuspid\Tricuspid.DES ?>
+
+End

@@ -1,0 +1,29 @@
+HumMod / CorpusLuteum-Growth
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CorpusLuteum-Growth </name>
+
+<variables>
+
+<var><name> Growth </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Growth </name><val> Ovaries-Follicle.Atresia </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

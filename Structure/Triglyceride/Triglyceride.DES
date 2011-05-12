@@ -1,0 +1,40 @@
+HumMod / Triglyceride
+
+Created : 07-Apr-05
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<?path Structure\Triglyceride\ ?>
+
+<?include TriglyceridePool.DES ?>
+<?include TriglycerideDecomposition.DES ?>
+<?include TriglycerideHydrolysis.DES ?>
+
+<structure><name> Triglyceride </name>
+
+<definitions>
+
+<block><name> Init </name>
+  <call> TriglyceridePool.Init </call>
+</block>
+
+<block><name> Conc </name>
+  <call> TriglyceridePool.Conc </call>
+</block>
+
+<block><name> Rate </name>
+  <call> TriglycerideHydrolysis.Rate </call>
+  <call> TriglycerideDecomposition.Rate </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> TriglyceridePool.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End
+End

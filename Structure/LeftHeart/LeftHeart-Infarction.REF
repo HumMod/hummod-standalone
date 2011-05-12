@@ -1,0 +1,29 @@
+HumMod / LeftHeart-Infarction REF
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+The effect is initially 1.0 x Normal and it
+decreased to 0.0 as the damaged area increases
+to 100%.
+
+The damaged fraction is a parameter that is
+initially 0 and is increased by user
+interaction.
+
+The damaged fraction is divided into ischemic
+and dead (scar) tissue.  After an infarct,
+damaged fraction is all ischemic, but it
+gradually changes from ischemic to scar.
+
+Ischemia is declared present when 0.05 (5%)
+of the surface area is ischemic.
+
+The rate constant for cell death is 0.004,
+which is a tau of 250.0 minutes.
+
+
+End

@@ -1,0 +1,165 @@
+HumMod / LH_Na
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LH_Na </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> FractReab </name>
+</var>
+
+<var>
+  <name> Reab </name>
+</var>
+
+<parm>
+  <name> BasicFract </name>
+  <val> 0.75 </val>
+</parm>
+
+<var>
+  <name> TotalEffect </name>
+</var>
+
+<var>
+  <name> LoadEffect </name>
+</var>
+
+<var>
+  <name> AldoEffect </name>
+</var>
+
+<var>
+  <name> FurosemideEffect </name>
+</var>
+
+<var>
+  <name> [Na+] </name>
+</var>
+
+<parm>
+  <name> MaxReab </name>
+  <val> 7.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> LoadOnFract </name>
+  <point><x>  0.0 </x><y> 3.0 </y><slope> 0 </slope></point>
+  <point><x>  7.2 </x><y> 1.0 </y><slope> -0.2 </slope></point>
+  <point><x> 20.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> AldoOnFract </name>
+  <point><x>  0.0 </x><y> 0.7 </y><slope> 0 </slope></point>
+  <point><x> 10.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FurosemideOnFract </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> -1 </slope></point>
+  <point><x> 0.1 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>??? Check [Furosemide] PD
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Inflow </name>
+  <val> PT_Na.Outflow </val>
+</def>
+
+<def>
+  <name> LoadEffect </name>
+  <val> LoadOnFract [ Inflow ] </val>
+</def>
+
+<def>
+  <name> AldoEffect </name>
+  <val> AldoOnFract [ NephronAldo.[Aldo(nG/dL)] ] </val>
+</def>
+
+<def>
+  <name> FurosemideEffect </name>
+  <val>
+      Kidney-Function.Effect
+    * Kidney-NephronCount.Filtering(xNormal)
+    * FurosemideOnFract [ FurosemidePool.[Furosemide] ]
+  </val>
+</def>
+
+<def>
+  <name> TotalEffect </name>
+  <val>
+      LoadEffect
+    * AldoEffect
+    * FurosemideEffect
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+<copy>
+  <from> BasicFract </from>
+  <to> FractReab.Normal </to>
+</copy>
+
+<copy>
+  <from> TotalEffect </from>
+  <to> FractReab.Effects </to>
+</copy>
+
+<call> FractReab.GetFract </call>
+
+<copy>
+  <from> FractReab.Fract </from>
+  <to> FractReab </to>
+</copy>
+
+<def>
+  <name> Reab </name>
+  <val> ( FractReab * Inflow ) MIN MaxReab </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> Inflow - Reab </val>
+</def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<conditional>
+  <name> [Na+] </name>
+  <test> LH_H2O.Outflow GT 0.0 </test>
+  <true> 1000.0 * Outflow / LH_H2O.Outflow </true>
+  <false> UNDEFINED </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

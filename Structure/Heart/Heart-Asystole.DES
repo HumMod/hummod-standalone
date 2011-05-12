@@ -1,0 +1,32 @@
+HumMod / Heart-Asystole
+
+Created : 15-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Asystole </name>
+
+<variables>
+  <var><name> Is_Asystole </name><val> FALSE </val></var>
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<conditional><name> Is_Asystole </name>
+  <test> LeftHeart-Function.Failed </test>
+  <true> TRUE </true>
+  <false> FALSE </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

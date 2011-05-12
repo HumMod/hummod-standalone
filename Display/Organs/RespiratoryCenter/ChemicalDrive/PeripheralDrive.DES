@@ -1,0 +1,76 @@
+HumMod / PeripheralDrive
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 23.2 </row>
+   <col> 32.0 </col>
+   <high> 12.8 </high>
+   <wide> 30.0 </wide>
+   <title> Peripheral Drive </title>
+
+<structurename> RespiratoryCenter-Chemical </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> PeripheralDrive </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Drive </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> PeripheralDrive </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Chemoreceptors.FiringRate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Chemoreceptor Firing </label>
+</showvalue>
+
+<repeatlist>
+  <name> PeripheralBase </name>
+  <repeat><reps> 20 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> PeripheralBase </name>
+  <listname> PeripheralBase </listname>
+  <label> Base </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Chemical drive is normally 1.0 x Normal </line>
+  <line> and is the sum of central drive (0.6) </line>
+  <line> and peripheral drive (0.4) </line>
+</infobutton>
+
+</groupbox>
+
+End

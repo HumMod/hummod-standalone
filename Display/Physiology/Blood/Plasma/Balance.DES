@@ -1,0 +1,132 @@
+HumMod / Balance
+
+Created : 27-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 17.4 </high>
+   <wide> 30.0 </wide>
+   <title> Gain - Loss </title>
+
+<structurename> PlasmaVol </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> GILumenVolume.Absorption </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gut Absorption </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> LymphWater.Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Systemic Lymph </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3 </col>
+   <name> IVDrip.H2ORate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV Drip </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 3 </col>
+   <name> ExcessLungWater.Lymph </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Lung Lymph </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 3 </col>
+   <name> PeritoneumSpace.Loss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Peritoneal Lymph </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 3 </col>
+   <name> Transfusion.Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Transfusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.8 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.8 </row><col> 3 </col>
+   <name> CD_H2O.Outflow </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Urine </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3 </col>
+   <name> CapillaryWater.Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Capillary Filtration </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 3 </col>
+   <name> Hemorrhage.Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Hemorrhage </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.8 </row><col> 3 </col>
+   <name> ExcessLungWater.Flux </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Lung Filtration </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.8 </row><col> 3 </col>
+   <name> PeritoneumSpace.Gain </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Hepatic Effusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.8 </row><col> 3 </col>
+   <name> DialyzerActivity.UltrafiltrationRate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Hemodialysis </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.8 </row><col> 3 </col>
+   <name> Pericardium-Hemorrhage.PlasmaFlow </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Pericardial Bleed </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Gain - loss units are mL/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

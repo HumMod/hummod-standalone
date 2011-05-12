@@ -1,0 +1,43 @@
+HumMod / Size
+
+Created : 24-Nov-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-OtherTissue-Size </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> OtherTissue </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Other Tissue - Size </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Organ-OtherTissue\Size ?>
+
+<?include Mass.DES ?>
+<?include InterstitialH2O.DES ?>
+<?include CellH2O.DES ?>
+
+<?include H2O.DES ?>
+<?include Solids.DES ?>
+
+</panel>
+
+End

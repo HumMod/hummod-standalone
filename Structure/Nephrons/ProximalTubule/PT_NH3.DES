@@ -1,0 +1,96 @@
+HumMod / PT_NH3
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PT_NH3 </name>
+
+<variables>
+
+<var>
+  <name> SecretionRate </name>
+</var>
+
+<parm>
+  <name> BasicRate </name>
+  <val> 0.04 </val>
+</parm>
+
+<parm>
+  <name> Tau </name>
+  <val> 3.0 </val>
+</parm>
+
+<var>
+  <name> AcutePhEffect </name>
+</var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> ChronicDelay </name>
+  <outputname> ChronicDelay </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> ChronicPhEffect </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PhOnAcute </name>
+  <point><x> 7.00 </x><y> 2.0 </y><slope> 0 </slope></point>
+  <point><x> 7.45 </x><y> 1.0 </y><slope> -3.0 </slope></point>
+  <point><x> 7.80 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PhOnChronic </name>
+  <point><x> 7.00 </x><y> 3.0 </y><slope> 0 </slope></point>
+  <point><x> 7.45 </x><y> 1.0 </y><slope> -4.0 </slope></point>
+  <point><x> 7.80 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT ( Tau * 1440.0 ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> AcutePhEffect </name>
+  <val> PhOnAcute [ BloodPh.ArtysPh ] </val>
+</def>
+
+<def>
+  <name> ChronicPhEffect </name>
+  <val> PhOnChronic [ BloodPh.ArtysPh ] </val>
+</def>
+
+<def>
+  <name> SecretionRate </name>
+  <val> BasicRate * AcutePhEffect * ChronicDelay </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,51 @@
+HumMod / Norepinephrine
+
+Created : 28-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Norepinephrine (C8 H11 N O3) has a molecular
+weight of 169.
+
+   NE  uG * 5.92 = nMol
+
+Multiply by 0.00592 to convert pG/mL to nMol/L.
+
+Typical plasma concentration is
+
+        pG/mL  nMol/L
+        -----  ------
+   NE    240    1.42
+
+Volume of distribution for catechols is ECFV or
+15,000 mL.
+
+Typical circulating pool is 3600 nG.
+
+Clearance is
+
+       L/Min   nG/Min  K 1/Min
+       -----   ------  -------
+   NE   4.5     1080    0.300
+
+This is the secretion rate also, with about
+80% of the NE coming from neurotransmitter
+spillover.
+
+   NE Secretion  220 nG/Min
+   NE Spillover  860   "
+
+   Removal = [Conc] * K'
+
+   NE 1080 = 240 * K'
+   K' = 4.5
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

@@ -1,0 +1,55 @@
+HumMod / Decomposition
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 20.6 </row>
+   <col> 32.0 </col>
+   <high> 5.6 </high>
+   <wide> 30.0 </wide>
+   <title> Decomposition </title>
+
+<structurename> TriglycerideDecomposition </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<repeatlist>
+  <name> TriglycerideDecomposition.K </name>
+  <repeat><reps> 30 </reps><stepsize> 0.0001 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 3.0 </col>
+  <name> K </name>
+  <listname> TriglycerideDecomposition.K </listname>
+  <label> K </label>
+</slidebar>
+
+<showvalue>
+   <row> 3.8 </row><col> 3.0 </col>
+   <name> TriglyceridePool.Mass </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for rate constant K are /Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

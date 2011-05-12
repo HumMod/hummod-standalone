@@ -1,0 +1,36 @@
+HumMod / Pneumothorax
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<panel><name> Clinic_Pneumothorax </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Lungs </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Chart </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<?path Display\Clinic\Pneumothorax\ ?>
+
+<?include RightHemithorax.DES ?>
+<?include LeftHemithorax.DES ?>
+
+</panel>
+
+End

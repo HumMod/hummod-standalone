@@ -1,0 +1,96 @@
+HumMod / Summary
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> HypothalamusTSH </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TemperatureEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temperature Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TemperatureEffect </name>
+      <label> Effect </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 20 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showcurve>
+  <row> 10.0 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> TemperatureDifference </name>
+    <label> Difference </label>
+    <scale><min> -2 </min><max> 2 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 4 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> TemperatureEffect </curvename>
+</showcurve>
+
+
+<showvalue>
+   <row> 17.4 </row><col> 1.0 </col>
+   <name> TemperatureDifference </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temperature Difference </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.4 </row><col> 1.0 </col>
+   <name> HeatCore.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Core Temperature </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.4 </row><col> 1.0 </col>
+   <name> SetPoint </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Set Point </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> The temperature effect is typically </line>
+  <line> 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

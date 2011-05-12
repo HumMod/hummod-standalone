@@ -1,0 +1,33 @@
+HumMod / CO2.Ref
+
+Created : 10-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+CO2 is actually represented by HCO3.  CO2 in solution
+is included in the HCO3.
+
+The arterial side CO2 compartment is moderately stiff,
+with a volume of 1000 mL and an outflow of 5400 mL/Min.
+This creates a critical DX of 0.184 Min. The venous
+side compartment is a little better, with a critical DX
+of 0.82 Min.
+
+So I'm setting up the arterial compartment as a 
+constrained compartment while making the venous
+compartment virtual.
+
+The mass integrals are total and arterial. The venous
+mass is total minus arterial.
+
+          Blood   HCO3 [HCO3]
+          -----  ----- ------
+Arty Side  1535   36.8  24.0
+Vein Side  3865   98.5  25.5
+          -----  ----- ------
+Total      5400  135.3  25.0
+
+End

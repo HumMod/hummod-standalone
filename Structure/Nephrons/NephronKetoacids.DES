@@ -1,0 +1,55 @@
+HumMod / NephronKetoacids
+
+Created : 11-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> NephronKetoacids </name>
+
+<variables>
+
+<var><name> Excretion </name></var>
+<var><name> Excretion(mMol/Min) </name></var>
+
+<var><name> Reab </name></var>
+<var><name> Reab(mMol/Min) </name></var>
+
+<parm><name> ReabMax </name><val> 30.0 </val></parm>
+
+<var><name> PhEffect </name></var>
+
+<constant><name> MG_TO_MMOL </name><val> 0.0098 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PhOnExcretion </name>
+  <point><x> 7.00 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 7.40 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcExcretion </name>
+
+<def><name> PhEffect </name><val> PhOnExcretion [ BloodPh.ArtysPh ] </val></def>
+
+<def><name> Reab </name><val> ( GlomerulusKetoacid.Rate * PhEffect ) MIN ReabMax </val></def>
+<def><name> Reab(mMol/Min) </name><val> MG_TO_MMOL * Reab </val></def>
+
+<def><name> Excretion </name><val> GlomerulusKetoacid.Rate - Reab </val></def>
+<def><name> Excretion(mMol/Min) </name><val> MG_TO_MMOL * Excretion </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

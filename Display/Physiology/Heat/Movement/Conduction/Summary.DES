@@ -1,0 +1,86 @@
+HumMod / Summary
+
+Created : 2010-04-22
+Last Modified : 2010-04-22
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> HeatConduction </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Flux </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Heat Loss </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Flux </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1 </col>
+   <name> ClothesEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Clothes Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1 </col>
+   <name> BloodFlowEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Blood Flow Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1 </col>
+   <name> WindEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Wind Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.8 </row><col> 1 </col>
+   <name> TemperatureDifference </name>
+   <format>
+     <decimal> 2 </decimal>
+     <fieldwidth> 6 </fieldwidth>
+   </format>
+   <label> Temperature Difference </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for heat flux are kCal/Min. </line>
+  <line> </line>
+  <line> Temperature difference is skin </line>
+  <line> minus ambient in deg K. </line>
+</infobutton>
+
+</groupbox>
+
+End

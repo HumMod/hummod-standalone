@@ -1,0 +1,42 @@
+HumMod / UT_CapillaryWater
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> UT_CapillaryWater </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> Gradient </name></var>
+
+<parm><name> Perm </name><val> 1.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Gradient </name>
+  <val>
+      RegionalPressure.UpperCapy
+    - UT_InterstitialWater.Pressure
+    + UT_InterstitialProtein.COP
+    - PlasmaProtein.COP
+  </val>
+</def>
+
+<def><name> Rate </name><val> Perm * Gradient </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

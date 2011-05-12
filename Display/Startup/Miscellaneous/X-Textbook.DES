@@ -1,0 +1,85 @@
+HumMod / X-Textbook
+
+Created : 22-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 9.8 </high>
+   <wide> 30.0 </wide>
+   <title> X-Textbook </title>
+
+<structurename> Start-General </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> X-Textbook </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Scaler </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> LeanPart </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Lean Part </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.8 </row><col> 3.0 </col>
+  <name> LeanFraction </name>
+  <format><decimal> 7 </decimal></format>
+  <label> Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 3.0 </col>
+  <name> InitialLeanMass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.2 </row><col> 1.0 </col>
+  <name> FatPart </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Fat Part </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.2 </row><col> 3.0 </col>
+  <name> FatFraction </name>
+  <format><decimal> 7 </decimal></format>
+  <label> Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.2 </row><col> 3.0 </col>
+  <name> InitialFatMass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> This is a scaler that is used to scale some of </line>
+  <line> the model's textbook values as a function of </line>
+  <line> lean body mass and fat body mass. </line>
+  <line> </line>
+  <line> The scaler is weighted heavily toward lean body </line>
+  <line> mass (90%) rather than fat body mass (10%). </line>
+  <line> </line>
+  <line> Scaler is used to scale initial blood volume </line>
+  <line> right now and maybe some other stuff later. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,29 @@
+HumMod / Osmoles
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<branch>
+  <name> Osmoles </name>
+  <label> Osmoles </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Osmoles-WholeBody </name>
+  <label> Whole Body </label>
+  <parent> Osmoles </parent>
+</leaf>
+
+<leaf>
+  <name> Osmoles-Compartments </name>
+  <label> Compartments </label>
+  <parent> Osmoles </parent>
+</leaf>
+
+End

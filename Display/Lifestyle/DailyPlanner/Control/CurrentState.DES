@@ -1,0 +1,143 @@
+HumMod / CurrentState
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 8.8 </row>
+   <col> 1.0 </col>
+   <high> 24.2 </high>
+   <wide> 30.0 </wide>
+   <title> Current State </title>
+
+<structurename> Status </structurename>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> Activity </text>
+</label>
+
+<checkmark>
+  <row> 2.4 </row><col> 2.0 </col>
+  <name> Sleeping </name>
+  <label> Sleeping </label>
+</checkmark>
+
+<checkmark>
+  <row> 3.4 </row><col> 2.0 </col>
+  <name> Awake </name>
+  <label> Awake </label>
+</checkmark>
+
+<checkmark>
+  <row> 4.4 </row><col> 2.0 </col>
+  <name> Unconscious </name>
+  <label> Unconscious </label>
+</checkmark>
+
+<checkmark>
+  <row> 5.4 </row><col> 2.0 </col>
+  <name> NotDefined </name>
+  <label> Not Defined </label>
+</checkmark>
+
+<label>
+  <row> 6.8 </row><col> 1.0 </col>
+  <text> Exertion </text>
+</label>
+
+<checkmark>
+  <row> 7.8 </row><col> 2.0 </col>
+  <name> Resting </name>
+  <label> Resting </label>
+</checkmark>
+
+<checkmark>
+  <row> 8.8 </row><col> 2.0 </col>
+  <name> Working </name>
+  <label> Working </label>
+</checkmark>
+
+<checkmark>
+  <row> 9.8 </row><col> 2.0 </col>
+  <name> Aerobics </name>
+  <label> Aerobics </label>
+</checkmark>
+
+<checkmark>
+  <row> 10.8 </row><col> 2.0 </col>
+  <name> ExerciseBike </name>
+  <label> Exercise Bike </label>
+</checkmark>
+
+<checkmark>
+  <row> 11.8 </row><col> 2.0 </col>
+  <name> Treadmill </name>
+  <label> Treadmill </label>
+</checkmark>
+
+<label>
+  <row> 13.2 </row><col> 1.0 </col>
+  <text> Posture </text>
+</label>
+
+<checkmark>
+  <row> 14.2 </row><col> 2.0 </col>
+  <name> Lying </name>
+  <label> Lying </label>
+</checkmark>
+
+<checkmark>
+  <row> 15.2 </row><col> 2.0 </col>
+  <name> Sitting </name>
+  <label> Sitting </label>
+</checkmark>
+
+<checkmark>
+  <row> 16.2 </row><col> 2.0 </col>
+  <name> Standing </name>
+  <label> Standing </label>
+</checkmark>
+
+<checkmark>
+  <row> 17.2 </row><col> 2.0 </col>
+  <name> Tilting </name>
+  <label> Tilting </label>
+</checkmark>
+
+<label>
+  <row> 18.6 </row><col> 1.0 </col>
+  <text> Nutrition </text>
+</label>
+
+<checkmark>
+  <row> 19.6 </row><col> 2.0 </col>
+  <name> Eating </name>
+  <label> Eating </label>
+</checkmark>
+
+<checkmark>
+  <row> 20.6 </row><col> 2.0 </col>
+  <name> BetweenMeals </name>
+  <label> Between Meals </label>
+</checkmark>
+
+<checkmark>
+  <row> 21.6 </row><col> 2.0 </col>
+  <name> Continuous </name>
+  <label> Continuous </label>
+</checkmark>
+
+<checkmark>
+  <row> 22.6 </row><col> 2.0 </col>
+  <name> CantEat </name>
+  <label> Can't Eat </label>
+</checkmark>
+
+</groupbox>
+
+End

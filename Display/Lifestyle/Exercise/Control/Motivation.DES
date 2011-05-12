@@ -1,0 +1,70 @@
+HumMod / Motivation
+
+Created : 24-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 15.2 </row>
+   <col> 1.0 </col>
+   <high> 8.0 </high>
+   <wide> 30.0 </wide>
+   <title> Motivation </title>
+
+<structurename> Exercise-Motivation </structurename>
+
+<maplist>
+  <name> Exercise-Control.Motivation </name>
+  <map><val> 0.02 </val><img> Low </img></map>
+  <map><val> 0.03 </val><img> Normal </img></map>
+  <map><val> 0.04 </val><img> High </img></map>
+  <map><val> 0.05 </val><img> Extreme </img></map>
+</maplist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Motivation </name>
+  <listname> Exercise-Control.Motivation </listname>
+  <nolabel/>
+</slidebar>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Motivation </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Maximum Muscle [Lac-] </label>
+</showvalue>
+
+<label>
+   <row> 4.2 </row>
+   <col> 1.0 </col>
+   <text> Current Skeletal Muscle Status </text>
+</label>
+
+<showvalue>
+   <row> 5.4 </row><col> 3.0 </col>
+   <name> SkeletalMuscle-Lactate.[Lac-] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [Lac-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 3.0 </col>
+   <name> SkeletalMuscle-Ph.Ph </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for muscle [Lac-] are mEq/mL. </line>
+</infobutton>
+
+</groupbox>
+
+End

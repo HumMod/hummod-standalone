@@ -1,0 +1,82 @@
+HumMod / Follicle-Growth
+
+Created : 08-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Follicle-Growth </name>
+
+<variables>
+
+<var><name> Growth </name></var>
+
+<var><name> FSHEffect </name></var>
+<var><name> EstradiolEffect </name></var>
+<var><name> MassEffect </name></var>
+
+<parm><name> BasicGrowth </name><val> 0.02 </val></parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> FSHEffect </name>
+  <point><x>  0.0 </x><y> 0.8 </y><slope> 0.0 </slope></point>
+  <point><x>  5.0 </x><y> 2.0 </y><slope> 0.2 </slope></point>
+  <point><x> 15.0 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> EstradiolEffect </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 3.0 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x>    0.0 </x><y>  1.0 </y><slope> 0.005 </slope></point>
+  <point><x> 4000.0 </x><y> 10.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> FSHEffect </name>
+  <val> FSHEffect [ FSH-Circulating.[Conc(IU/L)] ] </val>
+</def>
+
+<def>
+  <name> EstradiolEffect </name>
+  <val> EstradiolEffect [ Estradiol.[Conc(nMol/L)] ] </val>
+</def>
+
+<def>
+  <name> MassEffect </name>
+  <val> MassEffect [ Ovaries-Follicle.Mass ] </val>
+</def>
+
+<def>
+  <name> Growth </name>
+  <val>
+      BasicGrowth
+    * FSHEffect
+    * EstradiolEffect
+    * MassEffect
+    * ( Ovaries.Phase EQ Ovaries.IS_FOLLICULAR )
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

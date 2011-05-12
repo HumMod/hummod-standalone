@@ -1,0 +1,20 @@
+HumMod / Start-Creatine DES
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-Creatine </name>
+
+<definitions>
+
+<block><name> Calc </name>
+</block>
+
+</definitions>
+</structure>
+
+End

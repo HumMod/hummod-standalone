@@ -1,0 +1,60 @@
+QHP 2008 / Brain.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> GlasgowComaScale  </structurename>
+
+<vardoc>
+<name> GlasgowComaScale.Value </name>
+<topic> GlasgowComaScale - Overview </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> GlasgowComaScale - Overview </name>
+<label> Overview </label>
+<content>
+
+The Glasgow Coma Scale is a clinical scale established 
+to assess the depth of impaired consciousness and coma. 
+Three aspects of behaviour are independently measured 
+- motor responsiveness, verbal performance, and eye opening. 
+The scale runs from a maximum of 15 to a minimum of 3.
+
+  Eye Opening
+     Spontaneous             4
+     To speech               3
+     To pain                 2
+     None                    1
+
+  Best Motor Response
+     Obeys                   6
+     Localizes               5
+     Withdraws               4
+     Abnormal flexion        3
+     Extensor response       2
+     None                    1
+
+  Verbal Response
+     Oriented                5
+     Confused conversion     4
+     Inappropriate words     3
+     Incomprehensible sounds 2
+     None                    1
+
+Teasdale G and Jennett B. Assessment of Coma and impaired 
+consciousness. A practical Scale. The Lancet 13(2):81-84, 1974.
+
+Teasdale G, Jennett B. Assessment and prognosis of coma 
+after head injury. Acta Neurochir (Wien)34: 45 1976
+
+
+</content>
+</topicdoc>
+ 
+
+End

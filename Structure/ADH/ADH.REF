@@ -1,0 +1,57 @@
+HumMod / ADH Reference
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Typical [ADH] is 2.0 pg/ml at a
+   secretion rate of 3.2 ng/min.
+
+   Physical units.
+
+   [Plasma]    pG/mL
+   Plasma Mass nG
+   Fluxes      nG/Min
+   Stored Mass uG
+
+   Volume of distribution is ECFV,
+   which is 15000 mL.
+
+   Initial ECFV pool is 30 nG or
+   30000 pG.
+
+   Normal synthesis and secretion
+   rates are 3.2 nG/Min into and
+   out of the fast pool.
+
+   The fast mass is 3200 nG, making
+   the fractional secretion rate
+   0.001 /Min.
+
+   The slow mass is 17000 nG.
+
+   Fluxes between the fast and slow
+   pools is 17 nG/Min, defining these
+   2 rate constants.
+
+      SlowToFast - 0.0010 /Min
+      FastToSlow - 0.0053 /Min
+
+   Thrasher. AJP 278:R469-R475, 2000.
+
+       Neural stimulation of ADH release
+       seems to come primarily from the
+       baroreflex.
+
+   I favoring the idea that there is little
+   tonic neural stimulation of AVP release.
+
+   Hemorrhage causes a big stimulus.  Brain
+   death only decreases AVP moderately.
+   Trauma to the hypophysis will decrease
+   AVP more.
+
+End

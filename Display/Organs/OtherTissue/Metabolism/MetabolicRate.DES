@@ -1,0 +1,134 @@
+HumMod / MetabolicRate
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 24.6 </high>
+   <wide> 30.0 </wide>
+   <title> Metabolic Rate </title>
+
+<structurename> OtherTissue-Metabolism </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalCalsUsed </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total (Cal/Min) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalCalsUsed </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 40 </min><max> 60 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 5 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> Thyroid.Effect </name>
+    <label> Thyroxine </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> HeatMetabolism.Core </name>
+    <label> Temperature </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> OtherTissue-Structure.Effect </name>
+    <label> Structure </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    
+  </scale>
+</showbargraph>
+
+<showbargraph>
+  <row> 14.8 </row><col> 1.0 </col><high> 4 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Calories </title>
+  <showinitialvalues/>
+  <bar>
+    <name> OtherTissue-Metabolism.AerobicCals </name>
+    <label> Aerobic </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> OtherTissue-Metabolism.AnaerobicCals </name>
+    <label> Anaerobic </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 60 </max><inc> 10 </inc>
+  </scale>
+</showbargraph>
+
+<showvalue>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> NormalCalsUsed </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Normal </label>
+</showvalue>
+
+<slidebar>
+  <row> 20.5 </row><col> 3.0 </col>
+  <name> CalMultiplier </name>
+  <listname> Common.Multiplier </listname>
+  <label> Multiplier </label>
+</slidebar>
+
+<showvalue>
+  <row> 21.8 </row><col> 3.0 </col>
+  <name> NormalCalsUsed((Cal/Min)/G) </name>
+  <format><decimal> 4 </decimal></format>
+  <label> Cals ((Cal/Min)/G) </label>
+</showvalue>
+
+<showvalue>
+  <row> 22.8 </row><col> 3.0 </col>
+  <name> OtherTissue-Size.Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Organ Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Total Metabolic Rate = 50 Cal/Min </line>
+  <line>  </line>
+  <line> Effects ~ 1.0 </line>
+  <line>  </line>
+  <line> Aerobic ~ Total </line>
+  <line> Anaerobic ~ 0 </line>
+</infobutton>
+
+</groupbox>
+
+End

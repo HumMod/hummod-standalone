@@ -1,0 +1,33 @@
+HumMod / LeftHeartPumping
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<?path Structure\LeftHeartPumping\ ?>
+
+<?include LeftHeartPumping-Pumping.DES ?>
+<?include LeftHeartPumping-Diastole.DES ?>
+<?include LeftHeartPumping-Systole.DES ?>
+<?include LeftHeartPumping-Valves.DES ?>
+
+
+<structure><name> LeftHeartPumping </name>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<!--  <call> LeftHeartPumping-Valves.Calc </call> -->
+  <call> LeftHeartPumping-Diastole.Calc </call>
+  <call> LeftHeartPumping-Systole.Calc </call>
+  <call> LeftHeartPumping-Pumping.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

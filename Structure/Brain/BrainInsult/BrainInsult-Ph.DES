@@ -1,0 +1,42 @@
+HumMod / Ph
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BrainInsult-Ph </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Ph </name>
+  <point><x> 6.6 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 6.7 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Effect </name>
+  <val> Ph [ Brain-Ph.Ph ] </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

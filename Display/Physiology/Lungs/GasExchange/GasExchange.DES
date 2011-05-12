@@ -1,0 +1,43 @@
+HumMod / GasExchange
+
+Created : 29-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Lungs_GasExchange </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Lungs </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Lungs - Gas Exchange </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Lungs\GasExchange\ ?>
+
+<?include O2Uptake.DES ?>
+<?include LungPO2.DES ?>
+<?include GasExchangeRatio.DES ?>
+
+<?include CO2Expired.DES ?>
+<?include LungPCO2.DES ?>
+
+</panel>
+
+End

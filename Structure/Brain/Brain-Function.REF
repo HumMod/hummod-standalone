@@ -1,0 +1,79 @@
+HumMod / BrainFunc.REF
+
+Created : 26-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Brain function is determined by the most grave of the
+following influences.
+
+# pH
+# pO2
+# Hyperosmolarity
+# Hypoosmolarity
+# Fuel
+# Temperature
+# Anesthetic
+
+The resulting effect is used to calculate the
+neurological signs.
+
+  Sign             Top   Bttm   Exit
+  -------------   ----   ----   ----
+  Normal          1.00   0.80   Never
+  Confused        0.80   0.60   0.95
+  Impaired        0.60   0.40   0.80
+  Comatose        0.40   0.20   0.60
+  NotBreathing    0.20   0.10   0.40
+  MayBeDead       0.10   0.00   0.20
+  ReallyDead      ***    ***    Never
+
+*** Really dead is based on loss of brain structure,
+which is irreverisble. We'll toggle at BrainStruct.Effect
+< 0.5.
+
+We would like to calculate brain function as high as
+possible. But pO2 and fuel are not available up high,
+so we may use stable delays to establish the state.
+
+Pages are used to announce changes in brain function.
+
+  I'm like confused.
+  Now I'm feeling better.
+
+  I can't talk wery bell ...
+
+  Your patient is not conscious!
+  Your patient seems to be conscious again.
+
+  Your patient is not breathing!
+  Your patient is breathing again.
+
+  Your patient is convulsing.
+  Your patient has stopped convulsing.
+
+  Your patient may be dead!
+  Wait.  Your patient is NOT dead!
+
+  Your patient is dead ...
+
+We need a little hysteresis in the brain function pages
+to prevent a flurry of pages when function is at a
+boundary. This is implemented using an enumerated value
+for last brain state.
+
+  State         Value
+  ------------- -----
+  Normal          0
+  Confused        1
+  Impaired        2
+  Comatose        3
+  Not Breathing   4
+  May Be Dead     5
+  Is Really Dead  6
+
+
+End

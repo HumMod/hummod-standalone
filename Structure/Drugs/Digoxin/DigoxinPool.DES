@@ -1,0 +1,114 @@
+HumMod / DigoxinPool
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DigoxinPool </name>
+
+<variables>
+
+<var>
+  <name> [Digoxin] </name>
+</var>
+
+<var>
+  <name> Gain </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+<var>
+  <name> VolDist </name>
+  <val> 700.0 </val>
+</var>
+
+<var>
+  <name> Nauseated </name>
+  <val> FALSE </val>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Digoxin] </name>
+  <val> Mass / VolDist </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> DigoxinGILumen.Loss
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val>
+     DigoxinKidney.UrineLoss
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+<testcase>
+
+<case><test> ( NOT Nauseated ) AND ( [Digoxin] GT 2.0 ) </test>
+
+<def>
+  <name> Nauseated </name>
+  <val> TRUE </val>
+</def>
+
+<page> I'm sick at my stomach. </page>
+
+</case>
+
+<case><test> ( Nauseated ) AND ( [Digoxin] LE 1.5 ) </test>
+
+<def>
+  <name> Nauseated </name>
+  <val> FALSE </val>
+</def>
+
+<page> I'm feeling better now. </page>
+
+</case>
+
+</testcase>
+</block>
+
+</definitions>
+</structure>
+
+End

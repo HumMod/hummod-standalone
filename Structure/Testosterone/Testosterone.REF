@@ -1,0 +1,50 @@
+HumMod / Testosterone Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+C19-H28-O2  M.W. = 288.4
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+Units are nMol/L and nG/mL. Multiply nMol/L by
+0.2884 to get nG/mL.
+
+[Conc] = 18.5 nMol/L or 5.3 nG/mL at [LH] = 7.0
+IU/L and [FSH] = 8.7 IU/L in the male. [Conc] in
+the female is ~ 0 for any stimulation level.
+
+Initial mass in the male is 277.5 nMol.
+
+Degradation is 5 mG/Day or 3472 nG/Min. Or 12.0
+nMol/Min
+
+  Degradation = Secretion = K * Mass
+
+  K = 12.0 nMol/Min / 277.5 nMol or 0.043.
+
+Tau is 23 Min.
+
+Vierhapper et.al. Metabolism 49:229-231, 2000.
+
+Testosterone production
+
+  Male = 210 uG/Hr (3500.0 nG/Min, 12.1 nMol/Min)
+  Female = 4.3 uG/Hr (71.7 nG/Min, 0.25 nMol/Min)
+
+In the female, this leads to a mass of 5.8 nMol and a
+[Conc] of 0.60 nMol/L.
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

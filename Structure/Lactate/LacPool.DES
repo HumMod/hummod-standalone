@@ -1,0 +1,111 @@
+HumMod / LacPool
+
+Created : 02-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LacPool </name>
+
+<variables>
+
+<var>
+  <name> [Lac-] </name>
+</var>
+
+<var>
+  <name> [Lac-(mEq/L)] </name>
+</var>
+
+<var>
+  <name> [Lac-(mG/dL)] </name>
+</var>
+
+<parm>
+  <name> PumpSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> PumpSetting </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> PumpRate </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 15.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.150 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Parms </name>
+
+<conditional>
+  <name> PumpRate </name>
+  <test> PumpSwitch </test>
+  <true> PumpSetting </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Lac-] </name>
+  <val> Mass / ECFV.Vol </val>
+</def>
+
+<def>
+  <name> [Lac-(mEq/L)] </name>
+  <val> 1000.0 * [Lac-] </val>
+</def>
+
+<def>
+  <name> [Lac-(mG/dL)] </name>
+  <val> 9008.0 * [Lac-] </val>
+</def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def>
+  <name> Change </name>
+  <val>
+      Bone-Lactate.Outflux
+    + Brain-Lactate.Outflux
+    + Fat-Lactate.Outflux
+    + GITract-Lactate.Outflux
+    + Kidney-Lactate.Outflux
+    + LeftHeart-Lactate.Outflux
+    + Liver-Lactate.Outflux
+    + OtherTissue-Lactate.Outflux
+    + RespiratoryMuscle-Lactate.Outflux
+    + RightHeart-Lactate.Outflux
+    + SkeletalMuscle-Lactate.Outflux
+    + Skin-Lactate.Outflux
+
+    + PumpRate
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

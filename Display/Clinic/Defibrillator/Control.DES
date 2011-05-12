@@ -1,0 +1,54 @@
+HumMod / Control
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.8 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Heart-Defibrillator </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> ShockNow </blockname>
+  <label> ShockNow </label>
+</actionbutton>
+
+<repeatlist>
+  <name> Heart-Defibrillator.Joules </name>
+  <repeat><reps> 40 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.2 </row><col> 1.0 </col>
+  <name> Joules </name>
+  <listname> Heart-Defibrillator.Joules </listname>
+  <label> Joules </label>
+</slidebar>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> TotalShocks </name>
+  <format> <integer/> </format>
+  <label> Total Shocks </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.2 </row><col> 1.0 </col>
+  <name> Probability </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Probability </label>
+</showvalue>
+
+</groupbox>
+
+End

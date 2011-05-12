@@ -1,0 +1,106 @@
+HumMod / Skin
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Skin </name>
+  <label> Skin </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Skin-Circulation </name>
+  <label> Circulation </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> Skin </parent>
+</leaf>
+
+<branch>
+  <name> Skin-Fuel </name>
+  <label> Fuel </label>
+  <parent> Skin </parent>
+</branch>
+
+<leaf>
+  <name> SkinFuel-Selection </name>
+  <label> Selection </label>
+  <parent> Skin-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkinFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> Skin-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkinFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> Skin-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> SkinFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> Skin-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-CO2 </name>
+  <label> CO2 </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Lactate </name>
+  <label> Lactate </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Nerves </name>
+  <label> Nerves </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Function </name>
+  <label> Function </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Structure </name>
+  <label> Structure </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Size </name>
+  <label> Size </label>
+  <parent> Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Skin-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> Skin </parent>
+</leaf>
+
+End

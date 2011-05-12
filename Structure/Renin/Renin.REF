@@ -1,0 +1,34 @@
+HumMod / Renin Reference
+
+Created : 23-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Units for renin are nG AI/Hr or
+   Goldblatt units GU.
+
+                  Renin
+                 ------
+      Free        87000
+      Granules   870000
+      --------   ------
+      Total      957000
+
+   I assume that granules can refill
+   free stores in 100 min.  This is
+   a flow of 870 GU/Min and it defines
+   the rate constants.
+
+   Units for flow are GU/Min.
+
+      To Granules    870
+      From Granules  870
+
+      ToGranK = 0.01 /Min
+      FromGranK = 0.001 /Min
+
+
+End

@@ -1,0 +1,74 @@
+HumMod / Mass
+
+Created : 04-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 12.4 </high>
+   <wide> 30.0 </wide>
+   <title> Mass </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Brain-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Brain-Size.Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 1000 </min><max> 2000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Brain-Size.LiquidMass </name>
+   <format> <integer/> </format>
+   <label> Liquids </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Brain-Size.SolidMass</name>
+   <format> <integer/> </format>
+   <label> Solids </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are G. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Mass = 1550 </line>
+  <line>  </line>
+  <line> Liquids = 1200 </line>
+  <line> Solids = 350 </line>
+</infobutton>
+
+</groupbox>
+
+End

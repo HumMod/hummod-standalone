@@ -1,0 +1,32 @@
+HumMod / Tree.REF
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The tree will eventually be an expanding and
+collapsing tree of nodes and panels displayed
+in a child window on the left side of the main
+window.
+
+But not yet. Currently you can select a panel
+for display from a list of panels displayed on
+a popdown menu (and sub-menus) under the View
+main menu selection.
+
+An addnode element creates a new sub-menu.
+
+QHP 2008 has a lot of panels. Hence, a large
+tree. I broke the tree up into several include
+files representing the highest level sub-menus.
+
+Hint for developers: If you are working on a
+specific part of the model, temporarily move
+the relevant panels up to the top of the tree.
+This will eliminate much repeated and tiresome
+tunneling down into sub-menus.
+
+End

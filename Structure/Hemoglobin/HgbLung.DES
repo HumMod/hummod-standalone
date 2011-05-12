@@ -1,0 +1,69 @@
+HumMod / HgbLung
+
+Created : 28-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HgbLung </name>
+
+<variables>
+
+<var><name> pO2 </name></var>
+<var><name> [O2] </name></var>
+<var><name> pH </name></var>
+<var><name> pCO2 </name></var>
+<var><name> P50 </name></var>
+<var><name> ScaleForSat </name></var>
+
+<var><name> pHEffect </name></var>
+<var><name> pCO2Effect </name></var>
+<var><name> TempEffect </name></var>
+<var><name> COEffect </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Setup </name>
+
+<copy><from> HeatCore.Temp(C) </from><to> HgbProps.Temp </to></copy>
+<copy><from> BloodPh.ArtysPh </from><to> HgbProps.pH </to></copy>
+<copy><from> CO2Artys.Pressure </from><to> HgbProps.pCO2 </to></copy>
+  <call> HgbProps.Setup </call>
+<copy><from> HgbProps.P50 </from><to> P50 </to></copy>
+<copy><from> HgbProps.ScaleForSat </from><to> ScaleForSat </to></copy>
+
+<copy><from> HgbProps.pHEffect </from><to> pHEffect </to></copy>
+<copy><from> HgbProps.pCO2Effect </from><to> pCO2Effect </to></copy>
+<copy><from> HgbProps.TempEffect </from><to> TempEffect </to></copy>
+<copy><from> HgbProps.COEffect </from><to> COEffect </to></copy>
+
+</block>
+
+<block><name> O2ToPO2 </name>
+
+<copy><from> [O2] </from><to> HgbProps.[O2] </to></copy>
+<copy><from> P50 </from><to> HgbProps.P50 </to></copy>
+<copy><from> ScaleForSat </from><to> HgbProps.ScaleForSat </to></copy>
+  <call> HgbProps.O2ToPO2 </call>
+<copy><from> HgbProps.pO2 </from><to> pO2 </to></copy>
+
+</block>
+
+<block><name> PO2ToO2 </name>
+
+<copy><from> pO2 </from><to> HgbProps.pO2 </to></copy>
+<copy><from> P50 </from><to> HgbProps.P50 </to></copy>
+<copy><from> ScaleForSat </from><to> HgbProps.ScaleForSat </to></copy>
+  <call> HgbProps.PO2ToO2 </call>
+<copy><from> HgbProps.[O2] </from><to> [O2] </to></copy>
+
+</block>
+
+</definitions>
+</structure>
+
+End

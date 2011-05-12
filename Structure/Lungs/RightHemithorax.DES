@@ -1,0 +1,69 @@
+HumMod / RightHemithorax
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RightHemithorax </name>
+
+<variables>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+<parm>
+  <name> ChestOpen </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> NormalPressure </name>
+  <val> -4.0 </val>
+</parm>
+
+<var>
+  <name> LungInflation </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<if>
+  <test> ChestOpen </test>
+  <true>
+
+  <def>
+    <name> Pressure </name>
+    <val> 0.0 </val>
+  </def>
+  <def>
+    <name> LungInflation </name>
+    <val> 0.0 </val>
+  </def>
+
+  </true>
+  <false>
+
+  <def>
+    <name> Pressure </name>
+    <val> NormalPressure </val>
+  </def>
+  <def>
+    <name> LungInflation </name>
+    <val> Thorax.PressureOnInflation [ Pressure ] </val>
+  </def>
+
+  </false>
+</if>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,33 @@
+HumMod / LeptinPump
+
+Created : 15-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LeptinPump </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> Setting </name><val> 0.0 </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> Rate </name>
+  <val> Switch * Setting </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

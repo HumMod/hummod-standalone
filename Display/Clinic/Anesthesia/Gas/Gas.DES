@@ -1,0 +1,32 @@
+HumMod / Gas
+
+Created : 15-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<?path Display\Clinic\Anesthesia\Gas\ ?>
+
+<?include Control\Control.DES ?>
+<?include Properties\Properties.DES ?>
+
+<?include Lungs\Lungs.DES ?>
+<?include Arteries\Arteries.DES ?>
+<?include Tissues\Tissues.DES ?>
+<?include Veins\Veins.DES ?>
+
+<?include Bone\Bone.DES ?>
+<?include Brain\Brain.DES ?>
+<?include Fat\Fat.DES ?>
+<?include GITract\GITract.DES ?>
+<?include Kidney\Kidney.DES ?>
+<?include LeftHeart\LeftHeart.DES ?>
+<?include Liver\Liver.DES ?>
+<?include OtherTissue\OtherTissue.DES ?>
+<?include RespiratoryMuscle\RespiratoryMuscle.DES ?>
+<?include RightHeart\RightHeart.DES ?>
+<?include SkeletalMuscle\SkeletalMuscle.DES ?>
+<?include Skin\Skin.DES ?>
+
+End

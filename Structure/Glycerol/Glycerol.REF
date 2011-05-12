@@ -1,0 +1,22 @@
+HumMod / Glycerol
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+M.W. = 92.09  C3H8O3
+
+mG/dL * 0.1086 = mMol/L.
+
+mG/mL * 10.86 = mMol/L.
+
+[Plasma] is about 0.095 mMol/L in brachail artery and 0.020 mMol/L
+in hepatic vein. I'll try a pool of 150 mG.
+
+Typical values are 1.0 mG/dL and 0.1 mMol/L.
+
+End

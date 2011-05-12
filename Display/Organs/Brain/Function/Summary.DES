@@ -1,0 +1,104 @@
+HumMod / Summary
+
+Created : 11-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 20.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BrainInsult.Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> BrainInsult.Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1 </max>
+      
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 9 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> BrainInsult-Ph.Effect </name>
+    <label> pH </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-PO2.Effect </name>
+    <label> pO2 </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-Fuel.Effect </name>
+    <label> Fuel </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-High[Osm].Effect </name>
+    <label> High [Osm] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-Low[Osm].Effect </name>
+    <label> Low [Osm] </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Anesthesia.BrainFunction </name>
+    <label> Anesthetic </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-Temperature.Effect </name>
+    <label> Temp </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> BrainInsult-Structure.Effect </name>
+    <label> Structure </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Partial and totol effects all have </line>
+  <line> a normal value of 1.0 with no units. </line>
+</infobutton>
+
+</groupbox>
+
+End

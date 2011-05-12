@@ -1,0 +1,115 @@
+HumMod / Values-Muscularity
+
+Created : 17-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Values-Muscularity </name>
+
+<variables>
+
+<constant><name> MALE_BELOWNORMAL </name><val> 18.0 </val></constant>
+<constant><name> MALE_NORMAL </name><val> 27.4 </val></constant>
+<constant><name> MALE_ABOVENORMAL </name><val> 40.0 </val></constant>
+<constant><name> MALE_TRAINEDATHLETE </name><val> 58.0 </val></constant>
+
+<constant><name> FEMALE_BELOWNORMAL </name><val> 12.0 </val></constant>
+<constant><name> FEMALE_NORMAL </name><val> 17.9 </val></constant>
+<constant><name> FEMALE_ABOVENORMAL </name><val> 23.0 </val></constant>
+<constant><name> FEMALE_TRAINEDATHLETE </name><val> 34.0 </val></constant>
+
+<var><name> Mass(kG) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<if>
+<test> Descriptors-Gender.IsMale </test>
+<true>
+  <call> Male </call>
+</true>
+<false>
+   <call> Female </call>
+</false>
+</if>
+
+</block>
+
+<block><name> Male </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-Muscularity.IsBelowNormal </test>
+  <def><name> Mass(kG) </name><val> MALE_BELOWNORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsNormal </test>
+  <def><name> Mass(kG) </name><val> MALE_NORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsAboveNormal </test>
+  <def><name> Mass(kG) </name><val> MALE_ABOVENORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsTrainedAthlete </test>
+  <def><name> Mass(kG) </name><val> MALE_TRAINEDATHLETE </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Muscularity trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Female </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-Muscularity.IsBelowNormal </test>
+  <def><name> Mass(kG) </name><val> FEMALE_BELOWNORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsNormal </test>
+  <def><name> Mass(kG) </name><val> FEMALE_NORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsAboveNormal </test>
+  <def><name> Mass(kG) </name><val> FEMALE_ABOVENORMAL </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Muscularity.IsTrainedAthlete </test>
+  <def><name> Mass(kG) </name><val> FEMALE_TRAINEDATHLETE </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Muscularity trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

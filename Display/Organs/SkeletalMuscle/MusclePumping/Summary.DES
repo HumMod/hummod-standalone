@@ -1,0 +1,119 @@
+HumMod / Summary
+
+Created : 04-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 28.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> SkeletalMuscle-MusclePumping </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> IntensityEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Intensity Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 10.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+
+  <xaxis>
+    <name> Exercise-Metabolism.MotionWatts </name>
+    <label> Intensity (W) </label>
+    <scale><min> 0 </min><max> 300 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> IntensityEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 17.8 </row><col> 1.0 </col>
+   <name> Exercise-Metabolism.MotionWatts </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Intensity (W) </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.2 </row><col> 1.0 </col>
+   <name> RateEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Rate Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 20.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+
+  <xaxis>
+    <name> Exercise-Metabolism.ContractionRate </name>
+    <label> Contraction Rate </label>
+    <scale><min> 0 </min><max> 60 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> RateEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 27.2 </row><col> 1.0 </col>
+   <name> Exercise-Metabolism.ContractionRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Contraction Rate </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

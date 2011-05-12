@@ -1,0 +1,39 @@
+HumMod / Exercise.REF
+
+Created : 24-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Exercise type is ennumerated.
+
+  0 - Resting
+  1 - Exercise Bike
+  2 - Treadmill
+
+Motivation is also ennumerated.
+
+  0.03 - Low
+  0.04 - Normal
+  0.05 - High
+  0.06 - Extreme
+
+These values are muscle [Lac-] in mEq/mL.
+
+There are a number of reasons to stop exercise. I'm not sure
+how many will be implemented.
+
+# Skeletal muscle failed. Low pH or no more glycogen are the
+  usual reasons.
+# Respiratory muscle failed. Same reasons as skeletal muscle.
+# Brain function is impaired.
+# Subject is comatose.
+# Subject is dyspnic.
+# Subject has heart pain.
+
+
+
+
+End

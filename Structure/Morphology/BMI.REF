@@ -1,0 +1,28 @@
+HumMod / BMI.REF
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+BODY MASS INDEX
+   
+Originally called Quetelet's index.
+
+  Physique Sociale 2:92, 1869.
+   
+  BMI = W / H^2
+   
+  BMI = Body Mass Index in kG M^2
+  W = Weight in kG
+  H = Height in M
+
+  Typical values are
+
+  BMI = 24.5 kG/M^2
+  W = 77.5 kG
+  H = 1.78 M
+
+End

@@ -1,0 +1,137 @@
+HumMod / Intracellular
+
+Created : 26-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 21.0 </high>
+   <wide> 30.0 </wide>
+   <title> Intracellular </title>
+
+<structurename> OsmCell </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Total </name>
+   <format><integer/></format>
+   <label> Total </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Total </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 8000 </min><max> 9000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Electrolytes </name>
+   <format><integer/></format>
+   <label> Electrolytes </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Cations </name>
+   <format><integer/></format>
+   <label> Cations </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> KCell.Mass </name>
+   <format><integer/></format>
+   <label> K+ </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3 </col>
+   <name> OtherCations </name>
+   <format><integer/></format>
+   <label> Other Cations </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> Anions</name>
+   <format><integer/></format>
+   <label> Anions </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.0 </row><col> 1.0 </col>
+   <name> Non-Electrolytes </name>
+   <format><integer/></format>
+   <label> Non-Electrolytes </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.0 </row><col> 3 </col>
+   <name> UreaCell.Osmoles</name>
+   <format><integer/></format>
+   <label> Urea </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.0 </row><col> 3 </col>
+   <name> UnknownOsmoles</name>
+   <format><integer/></format>
+   <label> Unknown </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.4 </row><col> 1.0 </col>
+   <name> OsmBody.ICFV </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are mOsm. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Total = 7920 </line>
+  <line>  </line>
+  <line> Cations = 4340 </line>
+  <line>  </line>
+  <line> K+ = 3980 </line>
+  <line> Other Cations = 360 </line>
+  <line>  </line>
+  <line> Anions = 3340 </line>
+  <line>  </line>
+  <line> OtherOsmoles = 244 </line>
+  <line>  </line>
+  <line> Urea = 174 </line>
+  <line> Unknown = 70 </line>
+  <line>  </line>
+  <line> Volume = 28.0 L </line>
+</infobutton>
+
+</groupbox>
+
+End

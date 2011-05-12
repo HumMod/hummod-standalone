@@ -1,0 +1,107 @@
+HumMod / AnesthesiaIVLiver
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVLiver </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> [Arty] </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<parm>
+  <name> DegradeK </name>
+  <val> 0.09 </val>
+</parm>
+
+<var>
+  <name> Degrade </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.60 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / Liver-Size.Vol </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> [Tissue] * AnesthesiaIVSolubility.GeneralK </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> [Arty] </name>
+  <test> OrganFlow.HepaticVeinFlow GT 0.0 </test>
+  <true>
+    ( ( AnesthesiaIVBlood.[Blood]
+    * HepaticArty.Flow ) 
+    + ( AnesthesiaIVGITract.[Vein]
+    * GITract-Flow.BloodFlow ) )
+    / OrganFlow.HepaticVeinFlow
+  </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( [Arty] - [Vein] )
+    * OrganFlow.HepaticVeinFlow
+  </val>
+</def>
+
+<def>
+  <name> Degrade </name>
+  <val> DegradeK * Mass </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake - Degrade </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

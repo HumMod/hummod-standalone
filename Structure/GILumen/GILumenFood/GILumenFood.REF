@@ -1,0 +1,49 @@
+HumMod / GILumenFood.REF
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+Foods in the lumen are
+
+   Carbohydrates
+   Fat
+   Protein
+
+Carbohydrates ===================================
+
+Typical lumen mass is 1930 mG on an intake of 0.15 mG/Min.
+
+We postulate good absorption of small amounts of glucose.
+
+Normal values are
+
+   Mass - 1930 mG
+   Absorption - 150 mG/Min
+   Permeability - 0.08 / Min
+
+      
+After an oral load, plasma glucose rises steadily for an hour and
+then insulin kicks in an balances absorption and tissue uptake.
+
+   JCI 78:472, 1986
+
+It appears that absorption of an oral glucose load is slowed by
+the gut's maximum absorption rate.
+
+1 L of 5% glucose adds 50,000 mG and may be absorbed over 100 Min,
+making the maximum 500 mG/Min.
+
+Fat ===================================
+
+Typical lumen mass is 1990 mG on an intake of 0.06 mG/Min.
+
+Protein ===================================
+
+Typical lumen mass is 1600 mG on an intake of 0.08 mG/Min.
+
+End

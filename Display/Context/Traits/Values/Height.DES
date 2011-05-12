@@ -1,0 +1,107 @@
+HumMod / Height
+
+Created : 22-Nov-08
+Last Modified : 01-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 18.6 </row>
+   <col> 1.0 </col>
+   <high> 9.6 </high>
+   <wide> 30.0 </wide>
+   <title> Height </title>
+
+<structurename> Values-Height </structurename>
+
+<showtable>
+<row> 1.4 </row><col> 1.0 </col>
+
+<column>
+<indent> 0 </indent>
+<fieldwidth> 12 </fieldwidth>
+<justify> LEFT </justify>
+
+<textcell> Descriptor </textcell>
+<textcell> ------------------------------ </textcell>
+<textcell> Short </textcell>
+<textcell> Normal </textcell>
+<textcell> Tall </textcell>
+<textcell> Very Tall </textcell>
+
+</column>
+
+<column>
+<indent> 13 </indent>
+<fieldwidth> 6.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Male </textcell>
+<textcell> -------- </textcell>
+
+<valuecell>
+  <name> MALE_SHORT </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_TALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_VERYTALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+<column>
+<indent> 20 </indent>
+<fieldwidth> 7.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Female </textcell>
+<textcell> ------------ </textcell>
+
+<valuecell>
+  <name> FEMALE_SHORT </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_TALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_VERYTALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+</showtable>
+
+<showvalue>
+  <row> 8.0 </row><col> 1.0 </col>
+  <name> Height(cM) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Height (cM) </label>
+</showvalue>
+
+</groupbox>
+
+End

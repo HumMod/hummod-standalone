@@ -1,0 +1,20 @@
+HumMod / Wind
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Wind </name>
+
+<variables>
+
+<parm><name> MPH </name><val> 0.0 </val></parm>
+
+</variables>
+
+</structure>
+
+End

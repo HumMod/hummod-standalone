@@ -1,0 +1,140 @@
+HumMod / SystemicVeins DES
+
+Created : 21-Oct-04
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> SystemicVeins </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> Outflow </name></var>
+<parm><name> V0Basic </name><val> 1700.0 </val></parm>
+<var><name> V0 </name></var>
+<var><name> V0_Alpha_Effect </name></var>
+<var><name> V0_A2_Effect </name></var>
+<var><name> StressedVol </name></var>
+<var><name> Pressure </name></var>
+<var><name> ExternalPressure </name></var>
+<parm><name> Compliance </name><val> 88.6 </val></parm>
+<parm><name> ConductanceBasic </name><val> 692.0 </val></parm>
+<var><name> Conductance </name></var>
+<var><name> Vol </name></var>
+<var><name> Change </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> V0_Alpha_Effect </name>
+  <point><x> 0.0 </x><y> 1.2 </y><slope>  0.0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> -0.30 </slope></point>
+  <point><x> 3.0 </x><y> 0.6 </y><slope>  0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> V0_A2_Effect </name>
+  <point><x> 0.0 </x><y> 1.05 </y><slope>  0.0 </slope></point>
+  <point><x> 1.3 </x><y> 1.00 </y><slope> -0.10 </slope></point>
+  <point><x> 3.0 </x><y> 0.85 </y><slope>  0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> Vol </name>
+  <val>
+      BloodVol.Vol
+    - SystemicArtys.Vol
+    - PulmArty.Vol
+    - PulmCapys.Vol
+    - PulmVeins.Vol
+    - RightAtrium.Vol
+    - RightVentricle.Vol
+    - LeftAtrium.Vol
+    - LeftVentricle.Vol
+    - SplanchnicVeins.Vol
+
+    - BVSeq.Vol
+  </val>
+</def>
+
+</block>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> V0_Alpha_Effect </name>
+  <val> V0_Alpha_Effect [ SystemicVeins-AlphaReceptors.Activity ] </val>
+</def>
+
+<def>
+  <name> V0_A2_Effect </name>
+  <val> V0_A2_Effect [ A2Pool.Log10Conc ] </val>
+</def>
+
+<def>
+  <name> V0 </name>
+  <val> V0Basic * V0_Alpha_Effect * V0_A2_Effect </val>
+</def>
+
+<def>
+  <name> StressedVol </name>
+  <val> ( Vol - V0 ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> ( StressedVol / Compliance ) + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Inflow </name>
+  <val> OrganFlow.PeripheralFlow </val>
+</def>
+
+<def>
+  <name> Conductance </name>
+  <val>
+      ConductanceBasic
+    * BloodVol.CollapsedEffect
+    * Exercise-MusclePump.Effect
+    * Viscosity.ConductanceEffect
+  </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val>
+      Conductance * ( Pressure - RightAtrium.Pressure )
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

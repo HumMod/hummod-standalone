@@ -1,0 +1,125 @@
+HumMod / Ventilation
+
+Created : 09-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 24.8 </high>
+   <wide> 30.0 </wide>
+   <title> Ventilation </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalVentilation(L) </name>
+  <label> Total </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalVentilation(L) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 10 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> RespRate </name>
+  <label> Rate </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> TidalVolume </name>
+  <label> Tidal Volume </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 11.8 </row><col> 3 </col>
+  <name> DeadSpace </name>
+  <label> Dead Space </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 3 </col>
+  <name> AlveolarVolume </name>
+  <label> Alveolar Volume </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 14.2 </row><col> 1.0 </col>
+  <name> AlveolarVentilation(L) </name>
+  <label> Alveolar Ventilation </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 15.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> AlveolarVentilation(L) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 10 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<maplist>
+  <name> Ventilation.Type </name>
+  <map><val> 0 </val><img> Natural </img></map>
+  <map><val> 1 </val><img> CPR </img></map>
+  <map><val> 2 </val><img> Ventilator </img></map>
+</maplist>
+
+<showvalue>
+  <row> 22.8 </row><col> 1.0 </col>
+  <name> Type </name>
+  <label> Type </label>
+  <format><list> Ventilation.Type </list></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Total (or minute) ventilation is typically 5.6 </line>
+  <line> L/Min with a rate of 12 /Min and a tidal volume </line>
+  <line> of 470 mL. Dead space is 150 mL. Alveolar ventilation </line>
+  <line> is 3.9 L/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

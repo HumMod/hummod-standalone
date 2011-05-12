@@ -1,0 +1,52 @@
+HumMod / PostureControl.REF
+
+Created : 25-May-05
+Last Modified : 2010-03-23
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+Posture can be restrained (always honored) or
+requested (honored when reasonable).
+
+Posture restraint is enumerated.
+
+  0 - None
+  1 - Lying
+  2 - Sitting
+  3 - Standing
+  4 - Tilted
+
+Posture request is also enumerated.
+
+  0 - Lying
+  1 - Sitting
+  2 - Standing
+
+DailyPlannerControl calls in from 6 different
+blocks to request posture change. If restraint
+is on, then requests are denied. If subject
+becomes comatose, daily activity stops. Otherwise,
+posture changes in response to the planner
+request.
+
+Calls come from these blocks.
+
+# Stop
+# StartSleep
+# StartWork
+# StartAerobics
+# StartMeals
+# Resting
+
+Posture control sets the status posture value,
+which is then used to do hydostatics.
+
+To do a bed rest study, restrain to tilt table,
+set tilt table angle and turn on daily planner.
+
+Tilt table granularity is now set a 1 degree
+rather than 5 degrees.
+
+End

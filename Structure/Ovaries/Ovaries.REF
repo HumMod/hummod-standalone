@@ -1,0 +1,19 @@
+HumMod / Ovaries Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+The testes in the male and the ovaries in the female
+provide secretion rates for
+
+  Estradiol
+  Progesterone
+  Testosterone
+  Inhibin
+
+End

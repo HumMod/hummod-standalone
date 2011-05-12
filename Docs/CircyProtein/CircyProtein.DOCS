@@ -1,0 +1,193 @@
+QHP 2008 / CircyProtein.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> PlasmaProtein </structurename>
+
+<vardoc>
+<name> PlasmaProtein.[Protein(G/dL)]</name>
+<topic> PlasmaProtein -Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.[Protein] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.Change </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> PlasmaProtein.Gain </seealso>
+<seealso> PlasmaProtein.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.COP </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.COPEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> PlasmaProtein.Degradation </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.DegradationBasic </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.Gain </name>
+<topic> Gain - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.Loss </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.PER_ML_TO_PER_DL </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.ProteinEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.Synthesis </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> PlasmaProtein.SynthesisBasic </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> PlasmaProtein - Overview </name>
+<label> Overview </label>
+<content>
+
+This model assumes that plasma protein (ie. albumin) is
+synthesized and catabolized in the liver and is exchanged
+with the plasma in the liver sinuses.
+
+GAIN
+  Synthesis
+  Systemic Lymph
+  Transfusion
+  Peritoneal Lymph
+  IV Drip
+
+LOSS
+  Catabolism
+  Capillary Leak
+  Hemorrhage
+  Hepatic Effusion
+  Kidney
+
+Guyton says that whole-body protein turnover is 400 G/Day
+and about 3% is plasma protein.
+
+Plasma protein turnover would be 12 G/Day or about 0.01 G/Min.
+
+I'll put 210 G in the plasma.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - Overview </name>
+<label> Overview </label>
+<content>
+
+Plasma Protein levels may be increased by one or more of
+the following: Increased synthesis; increased protein release 
+from the systemic lymph system; by transfusion, by intravenous 
+drip and from the peritoneal lymphatic system. 
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+End

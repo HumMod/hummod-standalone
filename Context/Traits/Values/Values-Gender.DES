@@ -1,0 +1,32 @@
+HumMod / Values-Gender
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Values-Gender </name>
+
+<variables>
+
+<var><name> IsMale </name><val> TRUE </val></var>
+<var><name> IsFemale </name><val> FALSE </val></var>
+
+<var><name> Value </name><val> 0 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+  <def><name> IsMale </name><val> Descriptors-Gender.IsMale </val></def>
+  <def><name> IsFemale </name><val> Descriptors-Gender.IsFemale </val></def>
+  <def><name> Value </name><val> Descriptors-Gender.Value </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

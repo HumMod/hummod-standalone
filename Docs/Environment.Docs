@@ -1,0 +1,23 @@
+Digital Human / Environment
+
+Created : 21-Dec-05
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path docs\Environment\ ?>
+
+<?include Altitude.docs ?>
+<?include AmbientTemperature.docs ?>
+<?include Barometer.docs ?>
+<?include Clothes.docs ?>
+<?include EquivalentAltitude.docs ?>
+<?include RelativeHumidity.docs ?>
+<?include Wind.docs ?>
+
+</docs>
+End

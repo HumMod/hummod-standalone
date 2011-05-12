@@ -1,0 +1,42 @@
+HumMod / Age
+
+Created : 21-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Age </name>
+
+<variables>
+
+<parm><name> InitialAge(Years) </name><val> 37.0 </val></parm>
+<var><name> Age(Years) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialAge(Years) </name>
+  <val> Values-Age.Age(Years) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Age(Years) </name>
+  <val> InitialAge(Years) + ( ( System.X - System.InitialX ) / 525600.0 ) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,40 @@
+HumMod / Ventricles
+
+Created : 28-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> HeartRate-Ventricles </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> ECG </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Heart - Ventricles </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\HeartRate\Ventricles\ ?>
+
+<?include Contraction.DES ?>
+<?include AVBlock.DES ?>
+<?include IntrinsicRate.DES ?>
+<?include Status.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,56 @@
+HumMod / SweatFuel
+
+Created : 2010-05-15
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+   JAP 21:107-110, 1966.
+
+   This data shows sweating decreasing
+   over time as if a fuel or substrate
+   was being exhausted.  Subjects were
+   acclimated.
+
+      Time  mL/Min  Volume
+      ----  ------  ------
+      1 Hr   24.0    1440
+      2 Hr   24.0    1440
+      3 Hr   19.3    1160
+      4 Hr   13.7     820
+      5 Hr   10.3     620
+      -----         ------
+      Total          5480
+      Refill 5*60*10 3000
+      Stores         2480
+
+   We define a fuel mass of 1.0 x
+   Normal as enough fuel to secrete
+   2480 mL of sweat precursor.  The
+   use rate constant (x Normal / mL)
+   is
+               1
+      Use K = ---- or 0.0004
+              2480
+
+   Steady-state use is 10 mL/Min which
+   is equal to the maximum fuel refill
+   rate.  The refill rate constant
+   (/Min) is
+                  10
+      Refill K = ---- or 0.004
+                 2480
+
+   JAP 22:27-30, 1967.
+
+   Average sweat over 4 hours at core
+   temp of 104 deg F.
+
+                      mL/Min
+                      ------
+      Not acclimated   13.3   1.6x
+      Acclimated        8.3
+
+
+End

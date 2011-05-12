@@ -1,0 +1,37 @@
+HumMod / Organs-ScaleConductance
+
+Created : 29-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-ScaleConductance </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> Bone-Flow.Initialize </call>
+<!--
+  <call> Brain-Flow.Initialize </call>
+  <call> Fat-Flow.Initialize </call>
+  <call> GITract-Flow.Initialize </call>
+  <call> Kidney-Flow.Initialize </call>
+  <call> LeftHeart-Flow.Initialize </call>
+  <call> Liver-Flow.Initialize </call>
+  <call> OtherTissue-Flow.Initialize </call>
+  <call> RespiratoryMuscle-Flow.Initialize </call>
+  <call> RightHeart-Flow.Initialize </call>
+  <call> SkeletalMuscle-Flow.Initialize </call>
+  <call> Skin-Flow.Initialize </call>
+-->
+  
+</block>
+
+</definitions>
+</structure>
+
+End

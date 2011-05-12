@@ -1,0 +1,84 @@
+HumMod / OtherTissue-AlphaReceptors
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> OtherTissue-AlphaReceptors </name>
+
+<variables>
+
+<var>
+  <name> Activity </name>
+</var>
+
+<var>
+  <name> TotalAgonism </name>
+</var>
+
+<var>
+  <name> NeuralAgonism </name>
+</var>
+
+<var>
+  <name> HumoralAgonism </name>
+</var>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Setting </name>
+  <val> 0.0 </val>
+</parm>
+
+<constant>
+  <name> NEURALK </name>
+  <val> 0.333 </val>
+</constant>
+
+<constant>
+  <name> HUMORALK </name>
+  <val> 0.5 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> NeuralAgonism </name>
+  <val> GangliaGeneral.NA(Hz) </val>
+</def>
+
+<def>
+  <name> HumoralAgonism </name>
+  <val> AlphaPool.Effect </val>
+</def>
+
+<def>
+  <name> TotalAgonism </name>
+  <val>
+      ( NEURALK * NeuralAgonism )
+    + ( HUMORALK * HumoralAgonism )
+  </val>
+</def>
+
+<conditional>
+  <name> Activity </name>
+  <test> Switch </test>
+  <true> Setting </true>
+  <false> TotalAgonism * AlphaBlockade.Effect </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

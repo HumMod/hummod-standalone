@@ -1,0 +1,101 @@
+HumMod / CapillaryLeak
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 18.6 </high>
+   <wide> 30.0 </wide>
+   <title> Capillary Leak </title>
+
+<structurename> MT_CapillaryWater </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1.0 </max></scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> MT_CapillaryWater.Perm </name>
+  <repeat><reps> 100 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.6 </row><col> 1.0 </col>
+  <name> Perm </name>
+  <listname> MT_CapillaryWater.Perm </listname>
+  <label> Perm </label>
+</slidebar>
+
+<showvalue>
+   <row> 13.0 </row><col> 1.0 </col>
+   <name> Gradient </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure Gradient </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.0 </row><col> 3.0 </col>
+   <name> RegionalPressure.UpperCapy </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Capillary Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.0 </row><col> 3.0 </col>
+   <name> MT_InterstitialWater.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Interstitial Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.0 </row><col> 3.0 </col>
+   <name> MT_InterstitialProtein.COP </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Interstitial COP </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.0 </row><col> 3.0 </col>
+   <name> PlasmaProtein.COP </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Plasma COP </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mmHg and mL/Min. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

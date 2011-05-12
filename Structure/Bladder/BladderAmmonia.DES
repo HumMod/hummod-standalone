@@ -1,0 +1,53 @@
+HumMod / BladderAmmonia
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BladderAmmonia </name>
+<variables>
+
+<var><name> [NH4+] </name></var>
+<var><name> [NH4+(mEq/L)] </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <def><name> Change </name><val> CD_NH4.Outflow </val></def>
+
+</block>
+
+<block><name> Conc </name>
+
+  <def><name> [NH4+] </name><val> Mass / BladderVolume.Mass </val></def>
+  <def><name> [NH4+(mEq/L)] </name><val> 1000.0 * [NH4+] </val></def>
+
+</block>
+
+<block><name> Void </name>
+
+  <def><name> Mass </name><val> Mass - ( BladderVolume.VolumeVoid * [NH4+] ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

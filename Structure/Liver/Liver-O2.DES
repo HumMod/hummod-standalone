@@ -1,0 +1,138 @@
+HumMod / Liver-O2
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Liver-O2 </name>
+
+<variables>
+
+<var>
+  <name> Inflow[O2] </name>
+</var>
+
+<var>
+  <name> InflowPO2 </name>
+</var>
+
+<var>
+  <name> AerobicFraction </name>
+</var>
+
+<var>
+  <name> O2Use </name>
+</var>
+
+<var>
+  <name> [O2] </name>
+</var>
+
+<var>
+  <name> BloodFlow </name>
+</var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> PO2 </name>
+  <startname> PO2 </startname>
+  <initialval> 36.5 </initialval>
+  <endname> PO2End </endname>
+  <errorlim> 0.36 </errorlim>
+  <searchmin> 0.0 </searchmin>
+  <searchmaxname> SearchMax </searchmaxname>
+</impliciteq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PO2OnAerobicFraction </name>
+  <point><x>  2.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 10.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> BloodFlow </name>
+  <val>
+      GITract-Flow.BloodFlow
+    + HepaticArty.Flow
+  </val>
+</def>
+
+<def>
+  <name> Inflow[O2] </name>
+  <val>
+    ( ( GITract-Flow.[O2] * GITract-Flow.BloodFlow )
+    + ( O2Artys.[O2] * HepaticArty.Flow ) )
+    / BloodFlow
+  </val>
+</def>
+
+<copy>
+  <from> Inflow[O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> InflowPO2 </to>
+</copy>
+
+<def>
+  <name> SearchMax </name>
+  <val> InflowPO2 </val>
+</def>
+
+<implicitmath><name> PO2 </name>
+
+<def>
+  <name> AerobicFraction </name>
+  <val> PO2OnAerobicFraction [ PO2 ] </val>
+</def>
+
+<def>
+  <name> O2Use </name>
+  <val> Liver-Metabolism.O2Need * AerobicFraction </val>
+</def>
+
+<conditional>
+  <name> [O2] </name>
+  <test> BloodFlow GT 0.0 </test>
+  <true> Inflow[O2] - ( O2Use / BloodFlow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+<copy>
+  <from> [O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> PO2End </to>
+</copy>
+
+</implicitmath>
+
+</block>
+</definitions>
+</structure>
+
+End

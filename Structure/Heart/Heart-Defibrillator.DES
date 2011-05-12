@@ -1,0 +1,71 @@
+HumMod / Heart-Defibrillator
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Defibrillator </name>
+
+<variables>
+
+<parm><name> Joules </name><val> 100.0 </val></parm>
+<var><name> TotalShocks </name><val> 0 </val></var>
+<var><name> Probability </name><val> UNDEFINED </val></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Joules_Probability </name>
+  <point><x>  50.0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100.0 </x><y> 0.8 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> ShockNow </name>
+
+<if>
+<test> Heart-Asystole.Is_Asystole </test>
+<true>
+  <page> Heart is asystole. It won't restart. </page>
+  <exitblock/>
+</true>
+</if>
+
+<if>
+<test> Heart-Rate.Rate GT 0.0 </test>
+<true>
+  <page> Stow the paddles. Heart is beating. </page>
+  <exitblock/>
+</true>
+</if>
+
+<def><name> TotalShocks </name><val> TotalShocks + 1 </val></def>
+<def><name> Probability </name><val> LeftHeart-Function.Effect * Joules_Probability [ Joules ] </val></def>
+  
+<page> Clear ... </page>
+
+<if>
+<test> System.RANDOM LT Probability </test>
+<true>
+  <page> WHUMP. We have a heartbeat. </page>
+  <call> Heart-VFib.Stop </call>
+</true>
+<false>
+  <page> WHUMP. Nothing. </page>
+</false>
+</if>
+</block>
+
+</definitions>
+</structure>
+
+End

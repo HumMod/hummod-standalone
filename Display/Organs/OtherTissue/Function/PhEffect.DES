@@ -1,0 +1,64 @@
+HumMod / PhEffect
+
+Created : 08-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 8.8 </high>
+   <wide> 30.0 </wide>
+   <title> Ph Effect </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> OtherTissue-Function.PhEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.6 </row><col> 1.0 </col><high> 4 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> OtherTissue-Ph.Ph </name>
+    <label> pH </label>
+    <scale>
+      <min> 6.5 </min><max> 7.2 </max><inc> 0.1 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale>
+      <min> 0 </min><max> 1 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> OtherTissue-Function.PhOnFunction </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 7.2 </row><col> 1.0 </col>
+   <name> OtherTissue-Ph.Ph </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> All effects are normally 1.0. </line>
+  <line>  </line>
+  <line> Cell pH is normally 7.05 pH units. </line>
+</infobutton>
+
+</groupbox>
+
+End

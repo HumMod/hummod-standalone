@@ -1,0 +1,50 @@
+HumMod / AmbientTemperature
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Ambient Temperature </title>
+
+<repeatlist>
+  <name> AmbientTemperature.Temp(F) </name>
+  <firstval> -30 </firstval>
+  <repeat>
+    <reps> 160 </reps>
+    <stepsize> 1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> AmbientTemperature.Temp(F) </name>
+  <listname> AmbientTemperature.Temp(F) </listname>
+  <label> deg F </label>
+</slidebar>
+
+<showvalue>
+   <row> 2.8 </row><col> 3 </col>
+   <name> AmbientTemperature.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> degrees C </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Normal ambient temperature is 72 F </line>
+  <line> and 22.2 C. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,45 @@
+HumMod / Pericardium-TMP
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> Pericardium-TMP </name>
+
+<variables>
+
+<var><name> Pressure </name></var>
+<parm><name> Stiffness </name><val> 0.015 </val></parm>
+<var><name> Vol </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Vol </name>
+  <val> Pericardium.TotalVol </val>
+</def>
+
+<call> CalcTMP </call>
+
+</block>
+
+<block><name> CalcTMP </name>
+
+<conditional><name> Pressure </name>
+<test> Pericardium.IsOpen OR ( Vol LT Pericardium-V0.Vol ) </test>
+<true> 0.0 </true>
+<false> EXP ( Stiffness * ( Vol - Pericardium-V0.Vol ) ) - 1.0 </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

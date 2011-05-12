@@ -1,0 +1,59 @@
+HumMod / InsulinStorage
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> InsulinStorage </name>
+
+<variables>
+
+<var>
+  <name> Gain </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 2000.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 20.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> InsulinSynthesis.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> InsulinSecretion.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

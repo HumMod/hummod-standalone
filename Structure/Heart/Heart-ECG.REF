@@ -1,0 +1,39 @@
+HumMod / Heart-ECG
+
+Created : 01-Mar-08
+Last Modified : 2010-06-02
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The enumerated values for ECG are
+
+0 - OK
+1 - Paced
+2 - STShift
+3 - VFib
+4 - Flat
+
+A changed in state triggers a message.
+
+   The ECG is flat!
+   The ECG shows V-Fib!
+   ECG shows S-T segment shift.
+   ECG shows a pacemaker.
+   ECG now looks OK.
+
+Heart rate may be caused by a beating
+heart, but it may also be caused by
+CPR thumps.
+
+Ventricle rate is caused by a beating heart,
+so it is the variable of interest for the
+ECG.
+
+We can drop down through a <testcase>, testing
+for the most serious conditions first and
+picking OK last.
+
+End

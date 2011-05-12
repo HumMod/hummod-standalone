@@ -1,0 +1,195 @@
+HumMod / Bone-Fuel
+
+Created : 07-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Bone-Fuel </name>
+
+<variables>
+
+<var><name> FADelivered </name></var>
+<var><name> GlucoseDelivered </name></var>
+
+<parm><name> KR </name><val> 0.026 </val></parm>
+<var><name> Ratio </name></var>
+
+<var><name> FAFraction </name></var>
+<var><name> GlucoseFraction </name></var>
+<var><name> FA+GlucoseFraction </name></var>
+<var><name> LacFraction </name></var>
+
+<var><name> FAUsed(Cal/Min) </name></var>
+<var><name> AerobicGlucoseUsed(Cal/Min) </name></var>
+<var><name> AnaerobicGlucoseUsed(Cal/Min) </name></var>
+<var><name> LacUsed(Cal/Min) </name></var>
+
+<var><name> FAUsed(mG/Min) </name></var>
+<var><name> AerobicGlucoseUsed(mG/Min) </name></var>
+<var><name> AnaerobicGlucoseUsed(mG/Min) </name></var>
+<var><name> LacUsed(mG/Min) </name></var>
+
+<var><name> TotalGlucoseUsed(mG/Min) </name></var>
+
+<var><name> AnaerobicGlucoseDelivered </name></var>
+
+<var><name> FAFractionalDelivery </name></var>
+<var><name> AerobicGlucoseFractionalDelivery </name></var>
+<var><name> AnaerobicGlucoseFractionalDelivery </name></var>
+<var><name> MinimumFractionalDelivery </name></var>
+
+</variables>
+
+<equations>
+
+<stabledelay>
+  <name> FractUseDelay </name>
+  <outputname> FractUseDelay </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> FractUse </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> LacFraction </name>
+  <point><x>  10 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100 </x><y> 0.3 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> FADelivered </name>
+  <val> ( FAPool.[FA] * Bone-Flow.PlasmaFlow ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> GlucoseDelivered </name>
+  <val> ( GlucosePool.[Glucose] * Bone-Flow.PlasmaFlow ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> LacFraction </name>
+  <val> LacFraction [ Bone-Lactate.[Lac-(mG/dL)] ] </val>
+</def>
+
+<def>
+  <name> FA+GlucoseFraction </name>
+  <val> 1.0 - LacFraction </val>
+</def>
+
+<def>
+  <name> Ratio </name>
+  <val> FAPool.[FA(mG/dL)] / GlucosePool.[Glucose(mG/dL)] </val>
+</def>
+
+<def>
+  <name> FAFraction </name>
+  <val> FA+GlucoseFraction * ( Ratio / ( Ratio + KR ) ) </val>
+</def>
+
+<def>
+  <name> GlucoseFraction </name>
+  <val> FA+GlucoseFraction - FAFraction </val>
+</def>
+
+<def>
+  <name> FAUsed(Cal/Min) </name>
+  <val> FAFraction * Bone-Metabolism.AerobicCals </val>
+</def>
+
+<def>
+  <name> FAUsed(mG/Min) </name>
+  <val> FAUsed(Cal/Min) * Metabolism-Tools.Fat(mG/Cal) </val>
+</def>
+
+<def>
+  <name> AerobicGlucoseUsed(Cal/Min) </name>
+  <val> GlucoseFraction * Bone-Metabolism.AerobicCals </val>
+</def>
+
+<def>
+  <name> AerobicGlucoseUsed(mG/Min) </name>
+  <val> AerobicGlucoseUsed(Cal/Min) * Metabolism-Tools.CarboAerobic(mG/Cal) </val>
+</def>
+
+<def>
+  <name> LacUsed(Cal/Min) </name>
+  <val> LacFraction * Bone-Metabolism.AerobicCals </val>
+</def>
+
+<def>
+  <name> LacUsed(mG/Min) </name>
+  <val> LacUsed(Cal/Min) * Metabolism-Tools.Lac-(mG/Cal) </val>
+</def>
+
+<def>
+  <name> AnaerobicGlucoseDelivered </name>
+  <val> GlucoseDelivered - AerobicGlucoseUsed(mG/Min) </val>
+</def>
+
+<def>
+  <name> AnaerobicGlucoseUsed(Cal/Min) </name>
+  <val> Bone-Metabolism.AnaerobicCals MIN AnaerobicGlucoseDelivered </val>
+</def>
+
+<def>
+  <name> AnaerobicGlucoseUsed(mG/Min) </name>
+  <val> AnaerobicGlucoseUsed(Cal/Min) * Metabolism-Tools.CarboAnaerobic(mG/Cal) </val>
+</def>
+
+<def>
+  <name> TotalGlucoseUsed(mG/Min) </name>
+  <val> AerobicGlucoseUsed(mG/Min) + AnaerobicGlucoseUsed(mG/Min) </val>
+</def>
+
+<conditional><name> FAFractionalDelivery </name>
+<test> FAUsed(mG/Min) GT 0.0 </test>
+<true> ( FADelivered / FAUsed(mG/Min) ) MIN 1.0 </true>
+<false> 1.0 </false>
+</conditional>
+
+<conditional><name> AerobicGlucoseFractionalDelivery </name>
+<test> AerobicGlucoseUsed(mG/Min) GT 0.0 </test>
+<true> ( GlucoseDelivered / AerobicGlucoseUsed(mG/Min) ) MIN 1.0 </true>
+<false> 1.0 </false>
+</conditional>
+
+<conditional><name> AnaerobicGlucoseFractionalDelivery </name>
+<test> AnaerobicGlucoseUsed(mG/Min) GT 0.0 </test>
+<true> ( AnaerobicGlucoseDelivered / AnaerobicGlucoseUsed(mG/Min) ) MIN 1.0 </true>
+<false> 1.0 </false>
+</conditional>
+
+<def>
+  <name> MinimumFractionalDelivery </name>
+  <val>  FAFractionalDelivery
+     MIN AerobicGlucoseFractionalDelivery
+     MIN AnaerobicGlucoseFractionalDelivery
+  </val>
+</def>
+
+<def><name> K </name><val> 0.5 </val></def>
+<def><name> DxMax </name><val> 1.0 </val></def>
+<def><name> FractUse </name><val> MinimumFractionalDelivery </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

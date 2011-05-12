@@ -1,0 +1,25 @@
+HumMod / Skin
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Organs\Skin\ ?>
+
+<?include AcidBase\AcidBase.DES ?>
+<?include Circulation\Circulation.DES ?>
+<?include Fuel\Fuel.DES ?>
+<?include Function\Function.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include Nerves\Nerves.DES ?>
+<?include Size\Size.DES ?>
+<?include Structure\Structure.DES ?>
+
+<?include CO2\CO2.DES ?>
+<?include Lactate\Lactate.DES ?>
+<?include Vasculature\Vasculature.DES ?>
+
+End

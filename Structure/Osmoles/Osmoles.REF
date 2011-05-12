@@ -1,0 +1,75 @@
+HumMod / Osmoles.REF
+
+Created : 26-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+It appears that CO2 moves so quickly that [HCO3-] is not
+osmotically active. This creates [Osm] total and [Osm]
+active, with the difference being [HCO3-].
+
+Strong salts such NaCl dissociation completely but
+electrical forces make a molecule pair slightly less
+that two osmotic particles. The incomplete dissociation
+constant on average is 0.934. For NaCl, it is 0.90.
+
+Urea diffuses rapidly but can cause transient osmotic
+effects, such a during dialysis.
+
+Nominal values follow.
+
+  [Osm] Total = 288.0
+  [Osm] Active = 264.2
+
+  Total Osmoles = 12170
+    Extracellular = 4250
+    Intracellular = 7920
+
+Nominal volumes are
+
+  Body H2O = 43.0
+    ECFV = 15.0
+    CellH2O = 28.0
+
+Extracellular osmoles break down as follows.
+
+  Total = 4250
+
+  Cations = 2236
+    Na+ = 2170
+    K+ = 66
+
+  Anions = 1637
+    Cl- = 1610
+    Lac- = 23
+    KA- = 1
+    SO4-- = 2
+    PO4-- = 1
+
+  Other Osmoles = 375
+    Glucose = 92
+    Urea = 93
+    Unknown = 190
+
+Cell osmoles break down as follows.
+
+  Total = 7920
+
+  Cations = 4340
+    K+ = 3980
+    Other 360
+
+  Anions = 3340
+
+  Other Osmoles = 244
+    Urea = 174
+    Unknown = 70
+
+Cell anions are not well developed at this time. The many
+proteins are anions but are not really osmotically active.
+I calculate anions as cations minus 1000.
+
+End

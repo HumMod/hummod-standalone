@@ -1,0 +1,63 @@
+HumMod / AldoEffect
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.4 </row>
+   <col> 1.0 </col>
+   <high> 7.0 </high>
+   <wide> 30.0 </wide>
+   <title> Aldo Effect </title>
+
+<structurename> KAldoEffect </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Delayed </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Delayed </label>
+</showvalue>
+
+<repeatlist>
+  <name> KAldoEffect.Tau </name>
+  <repeat><reps> 50 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Tau </name>
+  <listname> KAldoEffect.Tau </listname>
+  <label> Tau </label>
+</slidebar>
+
+<showvalue>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> Immediate </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Immediate </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> AldoPool.[Aldo(pMol/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Aldo] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

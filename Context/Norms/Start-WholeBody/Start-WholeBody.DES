@@ -1,0 +1,33 @@
+HumMod / Start-WholeBody DES
+
+Created : 05-Feb-10
+Last Modified : 05-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\Start-WholeBody ?>
+
+<?include Start-OrganSize.DES ?>
+<?include Start-General.DES ?>
+<?include Start-BloodSize.DES ?>
+<?include Start-BodyH2O.DES ?>
+<?include Start-BodySize.DES ?>
+
+<structure><name> Start-WholeBody </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-OrganSize.Calc </call>
+  <call> Start-General.Calc </call>
+  <call> Start-BloodSize.Calc </call>
+  <call> Start-BodyH2O.Calc </call>
+  <call> Start-BodySize.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,45 @@
+HumMod / Descriptors-Adiposity
+
+Created : 21-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Descriptors-Adiposity </name>
+
+<?path Context\Traits\Descriptors\Descriptors-Adiposity\ ?>
+
+<variables>
+
+<constant><name> UNDERWEIGHT </name><val> 0 </val></constant>
+<constant><name> NORMALWEIGHT </name><val> 1 </val></constant>
+<constant><name> OVERWEIGHT </name><val> 2 </val></constant>
+<constant><name> OBESE </name><val> 3 </val></constant>
+<constant><name> MORBIDLYOBESE </name><val> 4 </val></constant>
+
+<var><name> IsUnderweight </name><val> FALSE </val></var>
+<var><name> IsNormalWeight </name><val> TRUE </val></var>
+<var><name> IsOverweight </name><val> FALSE </val></var>
+<var><name> IsObese </name><val> FALSE </val></var>
+<var><name> IsMorbidlyObese </name><val> FALSE </val></var>
+
+<var><name> Value </name><val> 1 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+  <?if ADIPOSITY-UNDERWEIGHT Underweight.DES ?>
+  <?if ADIPOSITY-NORMALWEIGHT NormalWeight.DES ?>
+  <?if ADIPOSITY-OVERWEIGHT Overweight.DES ?>
+  <?if ADIPOSITY-OBESE Obese.DES ?>
+  <?if ADIPOSITY-MORBIDLYOBESE MorbidlyObese.DES ?>
+</block>
+
+</definitions>
+</structure>
+
+End

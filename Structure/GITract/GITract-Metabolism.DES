@@ -1,0 +1,119 @@
+HumMod / GITract-Metabolism
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GITract-Metabolism </name>
+
+<variables>
+
+<var>
+  <name> TotalCalsUsed </name>
+</var>
+
+<var>
+  <name> NormalCalsUsed </name>
+</var>
+
+<var>
+  <name> InitialNormalCalsUsed </name>
+</var>
+
+<constant>
+  <name> NormalCalsUsed((Cal/Min)/G) </name>
+  <val> 0.0718 </val>
+</constant>
+
+<parm>
+  <name> CalMultiplier </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> AerobicCals </name>
+</var>
+
+<var>
+  <name> AnaerobicCals </name>
+</var>
+
+<var>
+  <name> O2Need </name>
+</var>
+
+<var>
+  <name> O2Lack </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> ScaleCals </name>
+
+<def>
+  <name> InitialNormalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * NormalCalsUsed((Cal/Min)/G)
+     * GITract-Size.InitialMass
+  </val>
+</def>
+
+</block>
+
+<block><name> CalcCals </name>
+
+<def>
+  <name> NormalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * NormalCalsUsed((Cal/Min)/G)
+     * GITract-Size.Mass
+  </val>
+</def>
+
+<def>
+  <name> TotalCalsUsed </name>
+  <val>
+      NormalCalsUsed
+    * Thyroid.Effect
+    * HeatMetabolism.Core
+    * GITract-Structure.Effect
+  </val>
+</def>
+
+<def>
+  <name> O2Need </name>
+  <val> Metabolism-Tools.CalToO2 * TotalCalsUsed </val>
+</def>
+
+</block>
+
+<block><name> SplitCals </name>
+
+<def>
+  <name> O2Lack </name>
+  <val> O2Need - GITract-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * GITract-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AnaerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * O2Lack </val>
+</def>
+
+</block>
+</definitions>
+
+</structure>
+
+End

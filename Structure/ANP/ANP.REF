@@ -1,0 +1,43 @@
+HumMod / ANP Reference
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   ANP is a 28 amino acid protein
+   of molecular weight 3060.
+
+   1 pMol/L = 3 pG/mL
+
+   A typical arterial blood level
+   is 20 pMol/L.
+
+   Data is from Lohmeier, but I don't
+   have the reference.
+
+      RAP    [ANP]
+      mmHg   pG/mL
+      ----   -----
+        1     110
+        6     500
+       10     750
+
+The integral ANPPool.Mass jitters at Dx ~ 9. I'll try a backward
+Euler integral here.
+
+  Change = Gain - Loss
+  Loss = K * Mass
+
+With a backward Euler,
+
+  Change = F1 - F2 * Integral
+
+so
+
+  F1 = Gain
+  F2 = K
+
+End

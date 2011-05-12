@@ -1,0 +1,87 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Function </structurename>
+<vardoc>
+<name> RightHeart-Function.Effect </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Function.PhEffect  </seealso>
+<seealso> RightHeart-Function.ProteinEffect </seealso>
+<seealso> RightHeart-Function.FuelEffect </seealso>
+<seealso> RightHeart-Function.TemperatureEffect </seealso>
+<seealso> RightHeart-Structure.Effect</seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Function.Failed </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Function.FuelEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> OtherTissue-Fuel.FractUseDelay </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Function.PhEffect </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> OtherTissue-Ph.Ph </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Function.ProteinEffect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> CellProtein.Mass(G) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Function.TemperatureEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> HeatCore.Temp(C)</seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label>  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

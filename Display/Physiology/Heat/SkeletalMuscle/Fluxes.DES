@@ -1,0 +1,62 @@
+HumMod / Fluxes
+
+Created : 25-Jun-06
+Last Modified : 18-Mar-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 7.8 </high>
+   <wide> 30.0 </wide>
+   <title> Fluxes </title>
+
+<structurename> HeatSkeletalMuscle </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3.0 </col>
+   <name> Metabolism-CaloriesUsed.SkeletalMuscleHeat(kCal/Min) </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Metabolism </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.2 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.2 </row><col> 3.0 </col>
+   <name> Flux </name>
+   <format><decimal> 3 </decimal></format>
+   <label> To Core </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Physical units are kCal/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

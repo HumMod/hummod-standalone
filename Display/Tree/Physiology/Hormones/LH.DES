@@ -1,0 +1,40 @@
+HumMod / LH
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> LH </name>
+  <label> LH </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> LH-Circulating </name>
+  <label> Circulating </label>
+  <parent> LH </parent>
+</leaf>
+
+<branch>
+  <name> LH-AnteriorPituitary </name>
+  <label> Anterioir Pituitary </label>
+  <parent> LH </parent>
+</branch>
+
+<leaf>
+  <name> LH-Secretion </name>
+  <label> Secretion </label>
+  <parent> LH-AnteriorPituitary </parent>
+</leaf>
+
+<leaf>
+  <name> LH-Stimuli </name>
+  <label> Stimuli </label>
+  <parent> LH-AnteriorPituitary </parent>
+</leaf>
+
+End

@@ -1,0 +1,57 @@
+HumMod / [EPO]Delay
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 21.4 </row>
+   <col> 32.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> [EPO] Delay </title>
+
+<structurename> [EPO]Delay </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Tau </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Tau </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> SteadyState </name>
+   <format><decimal> 2 </decimal></format>
+   <label> SteadyState </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> EPOPool.[EPO] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [EPO] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> A typical [EPO] effect is 1.0  x NormalL. </line>
+  <line> </line>
+  <line> Delay is 3.0 days. </line>
+</infobutton>
+
+</groupbox>
+
+End

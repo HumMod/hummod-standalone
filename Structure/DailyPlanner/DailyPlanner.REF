@@ -1,0 +1,31 @@
+HumMod / DailyPlanner.REF
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center V1.0
+Schema : DES V1.0
+
+Enumerated activities are
+
+   0 = Sleep
+   1 = Rest
+   2 = Work
+   3 = Aerobics
+   4 = Eat Meal
+
+Enumerated control status is
+
+   0 = Inactive
+   1 = Waiting
+   2 = Active
+
+Finally, we enumerate the way in which the daily planner
+is started
+
+   0 = Off
+   1 = Start Now
+   2 = Start At Midnight
+
+End

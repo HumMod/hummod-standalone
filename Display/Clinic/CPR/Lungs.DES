@@ -1,0 +1,78 @@
+HumMod / Lungs
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Lungs </title>
+
+<structurename> CPR-Lungs </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<maplist>
+  <name> CPR-Lungs.Status </name>
+  <map><val> 0  </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Ready </img></map>
+  <map><val> 2  </val><img> Active </img></map>
+</maplist>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Status </name>
+  <format><list> CPR-Lungs.Status </list></format>
+  <label> Status </label>
+</showvalue>
+
+<label>
+  <row> 4.4 </row><col> 1.0 </col>
+  <text> Activate On </text>
+</label>
+
+<checkbox>
+  <row> 5.4 </row><col> 2.0 </col>
+  <name> ActivateOnRespiratoryArrest </name>
+  <label> Respiratory Arrest </label>
+</checkbox>
+
+<repeatlist>
+  <name> CPR-Lungs.Rate </name>
+  <repeat><reps> 20 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 8.2 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <listname> CPR-Lungs.Rate </listname>
+  <label> Rate </label>
+</slidebar>
+
+<repeatlist>
+  <name> CPR-Lungs.Volume </name>
+  <repeat><reps> 100 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.6 </row><col> 1.0 </col>
+  <name> Volume </name>
+  <listname> CPR-Lungs.Volume </listname>
+  <label> Volume </label>
+</slidebar>
+
+</groupbox>
+
+End

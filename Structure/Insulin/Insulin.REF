@@ -1,0 +1,47 @@
+HumMod / Insulin Reference
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Units for insulin pool are mU.
+   Units for [plasma] are uU/mL.
+
+   A international unit (U) is
+   1/24 mG.  Molecular weight is
+   5754.
+
+      uU * 0.04167 = nG
+      uU * 0.007241 = pMol
+
+                Starve Fast Drip Meal Load
+                ------ ---- ---- ---- ----
+      [Insulin]     5    10   20   40  100
+      [Glucose]    60    85  110  130  200
+      [Glucagon]  300   100   70   50   40
+      Liver Net  Empty -100    0  200  200 
+       Uptake
+
+   Units are
+
+      [Insulin] - uU/mL
+      [Glucose] - mG/dL
+      [Glucagon] - pG/mL
+      Uptake - mG/Min
+
+   Drip (continuous feed) is the steady
+   state. [I] = 20 uU/mL.  ECFV = 15000
+   mL.  Mass = 300 mU.
+
+   Secretion = 17 mU/min.
+
+      Clear K = 17 / 300 or 0.057 /Min.
+
+   Mass = 2000 mU
+   Secretion Rate = 17 mU/min
+   Fraction = 17 / 2000 or 0.0085
+
+End

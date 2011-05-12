@@ -1,0 +1,126 @@
+HumMod / Metabolism
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Metabolism </name>
+  <label> Metabolism </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Metabolism_Summary </name>
+  <label> Metabolism Summary </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_RespiratoryQuotient </name>
+  <label> Respiratory Quotient </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_FuelUse </name>
+  <label> Fuel Use </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<separatorbar><parent> Metabolism </parent></separatorbar>
+
+<leaf>
+  <name> Metabolism_AminoAcids </name>
+  <label> Amino Acids </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<branch>
+  <name> MetabolismFattyAcids </name>
+  <label> Fatty Acids </label>
+  <parent> Metabolism </parent>
+</branch>
+
+<leaf>
+  <name> MetabolismFattyAcidsSummary </name>
+  <label> Summary </label>
+  <parent> MetabolismFattyAcids </parent>
+</leaf>
+
+<leaf>
+  <name> MetabolismFattyAcidsOrgans </name>
+  <label> Organs </label>
+  <parent> MetabolismFattyAcids </parent>
+</leaf>
+
+<branch>
+  <name> MetabolismGlucose </name>
+  <label> Glucose </label>
+  <parent> Metabolism </parent>
+</branch>
+
+<leaf>
+  <name> MetabolismGlucoseSummary </name>
+  <label> Summary </label>
+  <parent> MetabolismGlucose </parent>
+</leaf>
+
+<leaf>
+  <name> MetabolismGlucoseOrgans </name>
+  <label> Organs </label>
+  <parent> MetabolismGlucose </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_Ketoacids </name>
+  <label> Ketoacids </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_Triglycerides </name>
+  <label> Triglycerides </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<branch>
+  <name> Urea </name>
+  <label> Urea </label>
+  <parent> Metabolism </parent>
+</branch>
+
+<leaf>
+  <name> UreaPool </name>
+  <label> Pool </label>
+  <parent> Urea </parent>
+</leaf>
+
+<leaf>
+  <name> UreaCell </name>
+  <label> Cells </label>
+  <parent> Urea </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_Creatine </name>
+  <label> Creatine </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_Creatinine </name>
+  <label> Creatinine </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+<leaf>
+  <name> Metabolism_Glycerol </name>
+  <label> Glycerol </label>
+  <parent> Metabolism </parent>
+</leaf>
+
+End

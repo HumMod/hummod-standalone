@@ -1,0 +1,88 @@
+HumMod / KAPool
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> KAPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [KA] </name></var>
+<var><name> [KA(mG/dL)] </name></var>
+<var><name> [KA(mMol/L)] </name></var>
+
+<var><name> Osmoles </name></var>
+
+<constant><name> MG_TO_MOSM </name><val> 0.0098 </val></constant>
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_MMOL </name><val> 9.80 </val></constant>
+
+<var><name> Target[KA] </name><val> 0.0050 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 0.0075 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcOsmoles </name>
+
+<def><name> Osmoles </name><val> MG_TO_MOSM * Mass </val></def>
+
+</block>
+
+<block><name> Init </name>
+  <def><name> InitialMass </name><val> Target[KA] * ECFV.Vol </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [KA] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [KA(mG/dL)] </name><val> PER_ML_TO_PER_DL * [KA] </val></def>
+<def><name> [KA(mMol/L)] </name><val> MG_TO_MMOL * [KA] </val></def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def><name> Gain </name>
+  <val>
+       LM_Ketoacids.Rate
+     + KAPump.Rate
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>
+       Brain-Fuel.KAUsed(mG/Min)
+     + NephronKetoacids.Excretion
+     + KADecomposition.Rate
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

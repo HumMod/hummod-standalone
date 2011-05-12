@@ -1,0 +1,130 @@
+HumMod / AnesthesiaGasBrain
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaGasBrain </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> pTissue </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> pVein </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<var>
+  <name> BrainFunc </name>
+</var>
+
+<var>
+  <name> TidalVol </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.02 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> BrainFunc </name>
+  <point><x>  0 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x>  4 </x><y> 0.4 </y><slope> -0.02 </slope></point>
+  <point><x> 12 </x><y> 0.2 </y><slope> -0.01 </slope></point>
+  <point><x> 16 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TidalVol </name>
+  <point><x>  0 </x><y> 1 </y><slope> 0 </slope></point>
+  <point><x> 12 </x><y> 0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / Brain-Size.Vol </val>
+</def>
+
+<def>
+  <name> pTissue </name>
+  <val> [Tissue] * AnesthesiaGasSolubility.BrainK </val>
+</def>
+
+<def>
+  <name> pVein </name>
+  <val> pTissue </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> pVein / AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+<def>
+  <name> BrainFunc </name>
+  <val> BrainFunc [ pTissue ] </val>
+</def>
+
+<def>
+  <name> TidalVol </name>
+  <val> TidalVol [ pTissue ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaGasArty.[Blood] - [Vein] )
+    * Brain-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

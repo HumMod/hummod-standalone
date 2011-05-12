@@ -1,0 +1,71 @@
+HumMod / DigoxinKidney
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DigoxinKidney </name>
+
+<variables>
+
+<var>
+  <name> UrineLoss </name>
+</var>
+
+<var>
+  <name> FiltLoss </name>
+</var>
+
+<var>
+  <name> SecLoss </name>
+</var>
+
+<constant>
+  <name> FiltK </name>
+  <val> 0.000178 </val>
+</constant>
+
+<constant>
+  <name> SecK </name>
+  <val> 0.000118 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> FiltLoss </name>
+  <val>
+      0.001
+    * DigoxinPool.[Digoxin]
+    * GlomerulusFiltrate.GFR
+  </val>
+</def>
+
+<def>
+  <name> SecLoss </name>
+  <val>
+      SecK
+    * DigoxinPool.Mass
+    * Kidney-NephronCount.Filtering(xNormal)
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+<def>
+  <name> UrineLoss </name>
+  <val> FiltLoss + SecLoss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

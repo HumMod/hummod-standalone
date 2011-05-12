@@ -1,0 +1,42 @@
+HumMod / Blood
+
+Created : 13-Dec-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-Blood</name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Blood </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Startup - Blood </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Blood\ ?>
+
+<?include BloodVolume.DES ?>
+<?include PlasmaVolume.DES ?>
+<?include RedCellVolume.DES ?>
+<?include RBCH2O.DES ?>
+<?include RBCSolids.DES ?>
+
+</panel>
+
+End

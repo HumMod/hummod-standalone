@@ -1,0 +1,158 @@
+HumMod / GlucoseUsed
+
+Created : 28-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.4 </high>
+   <wide> 30.0 </wide>
+   <title> Glucose Used </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Bone-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Bone </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Brain-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Brain </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Fat-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Fat </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> GITract-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Kidney-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> LeftHeart-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.4 </row><col> 1.0 </col>
+  <name> Liver-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Liver </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.4 </row><col> 1.0 </col>
+  <name> OtherTissue-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 1.0 </col>
+  <name> RespiratoryMuscle-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.4 </row><col> 3.0 </col>
+  <name> RespiratoryMuscle-Fuel.AerobicGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.4 </row><col> 3.0 </col>
+  <name> RespiratoryMuscle-Fuel.AnaerobicGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Glycogen </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> RightHeart-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> SkeletalMuscle-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.4 </row><col> 3.0 </col>
+  <name> SkeletalMuscle-Fuel.AerobicGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.4 </row><col> 3.0 </col>
+  <name> SkeletalMuscle-Fuel.AnaerobicGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Glycogen </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.4 </row><col> 1.0 </col>
+  <name> Skin-Fuel.TotalGlucoseUsed(mG/Min) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skin </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.8 </row><col> 1.0 </col>
+  <name> Metabolism-Glucose.TotalBurn </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showvalue>
+  <row> 18.8 </row><col> 3.0 </col>
+  <name> Metabolism-Glucose.GlucoseBurn </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 19.8 </row><col> 3.0 </col>
+  <name> Metabolism-Glucose.GlycogenBurn </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Glycogen </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for glucose used are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

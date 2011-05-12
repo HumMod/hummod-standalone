@@ -1,0 +1,36 @@
+HumMod / KAPump
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> KAPump </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> Setting </name><val> 0.0 </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<conditional>
+  <name> Rate </name>
+  <test> Switch </test>
+  <true> Setting </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,33 @@
+HumMod / Nerves DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Nerves\ ?>
+
+<?include Baroreflex.DES ?>
+<?include CNSTrophicFactor.DES ?>
+<?include CushingResponse.DES ?>
+<?include LowPressureReceptors.DES ?>
+<?include Mechanoreceptors.DES ?>
+<?include SympsChemo.DES ?>
+<?include SympsCNS.DES ?>
+<?include SympsKidy.DES ?>
+<?include GangliaGeneral.DES ?>
+<?include GangliaKidney.DES ?>
+<?include VagusNerve.DES ?>
+<?include AdrenalNerve.DES ?>
+
+<?include Chemoreceptors.DES ?>
+<?include ChemoreceptorAcclimation.DES ?>
+
+<?include ExerciseSymps.DES ?>
+<?include MotorRadiation.DES ?>
+
+<?include SystemicVeins-AlphaReceptors.DES ?>
+
+End

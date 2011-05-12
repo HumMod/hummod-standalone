@@ -1,0 +1,184 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Lactate </structurename>
+
+<vardoc>
+<name> LeftHeart-Lactate.[Lac-(mEq/L)] </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Lactate.[Lac-] </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.[Lac-(mG/dL)]  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.MEQ_ML_TO_MG_DL </seealso>
+<seealso> LeftHeart-Lactate.[Lac-] </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.[Lac-]  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.Mass </seealso>
+<seealso> LeftHeart-Size.LiquidVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Alpha </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Lactate.K </seealso>
+<seealso> System.Dx </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.Made </seealso>
+<seealso> LeftHeart-Lactate.Used </seealso>
+<seealso> LeftHeart-Lactate.Outflux </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.DC </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.GLUCOSE_TO_LACTATE </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.K </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.DC </seealso>
+<seealso> LeftHeart-Size.LiquidVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Made </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.MG_TO_MEQ </seealso>
+<seealso> LeftHeart-Lactate.Made(mG/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Made(mG/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Lactate.GLUCOsE_TO_LACTATE </seealso>
+<seealso> LeftHeart-Fuel.AnaerobicGlucoseUsed(mG/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Mass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.Change </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.MEQ_ML_TO_MG_DL </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.MG_TO_MEQ </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Outflux </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.Alpha </seealso>
+<seealso> LeftHeart-Lactate.Outflux(0) </seealso>
+<seealso> LeftHeart-Lactate.Made </seealso>
+<seealso> LeftHeart-Lactate.Used </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Outflux(0)  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.DC </seealso>
+<seealso> LeftHeart-Lactate.[Lac-] </seealso>
+<seealso> LacPool.[Lac-] </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Used </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Lactate.MG_TO_MEQ</seealso>
+<seealso> LeftHeart-Lactate.Used(mG/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Lactate.Used(mG/Min)</name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Fuel.LacUsed(mG/Min) </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

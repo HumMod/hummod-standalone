@@ -1,0 +1,34 @@
+HumMod / KFluxToPool
+
+Created : 20-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> KFluxToPool </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<parm><name> BasicK </name><val> 7.4e-5 </val></parm>
+<var><name> K </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> K </name><val> BasicK </val></def>
+<def><name> Rate </name><val> K * ( KCell.Mass - KCell.CaptiveMass ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

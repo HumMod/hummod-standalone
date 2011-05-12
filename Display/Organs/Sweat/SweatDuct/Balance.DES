@@ -1,0 +1,176 @@
+HumMod / Balance
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 28.0 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> SweatDuct </structurename>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> H2O </text>
+</label>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> H2OInflow </name>
+  <label> Inflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 3.8 </row><col> 1.0 </col>
+  <name> H2OReab </name>
+  <label> Reabsorption </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> H2OOutflow </name>
+  <label> Outflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<label>
+  <row> 6.2 </row><col> 1.0 </col>
+  <text> Na+ </text>
+</label>
+
+<showvalue>
+  <row> 7.6 </row><col> 1.0 </col>
+  <name> NaInflow </name>
+  <label> Inflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 8.6 </row><col> 1.0 </col>
+  <name> NaReab </name>
+  <label> Reabsorption </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 9.6 </row><col> 1.0 </col>
+  <name> NaOutflow </name>
+  <label> Outflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 11.0 </row><col> 1.0 </col>
+  <name> [Na+In] </name>
+  <label> [Na+ In] </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 12.0 </row><col> 1.0 </col>
+  <name> [Na+Out] </name>
+  <label> [Na+ Out] </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<label>
+  <row> 13.4 </row><col> 1.0 </col>
+  <text> K+ </text>
+</label>
+
+<showvalue>
+  <row> 14.8 </row><col> 1.0 </col>
+  <name> KInflow </name>
+  <label> Inflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 15.8 </row><col> 1.0 </col>
+  <name> KReab </name>
+  <label> Reabsorption </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 16.8 </row><col> 1.0 </col>
+  <name> KOutflow </name>
+  <label> Outflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 18.2 </row><col> 1.0 </col>
+  <name> [K+In] </name>
+  <label> [K+ In] </label>
+  <format><decimal> 4 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> [K+Out] </name>
+  <label> [K+ Out] </label>
+  <format><decimal> 4 </decimal></format>
+</showvalue>
+
+<label>
+  <row> 20.6 </row><col> 1.0 </col>
+  <text> Cl- </text>
+</label>
+
+<showvalue>
+  <row> 22.0 </row><col> 1.0 </col>
+  <name> ClInflow </name>
+  <label> Inflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 23.0 </row><col> 1.0 </col>
+  <name> ClReab </name>
+  <label> Reabsorption </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 24.0 </row><col> 1.0 </col>
+  <name> ClOutflow </name>
+  <label> Outflow </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 25.4 </row><col> 1.0 </col>
+  <name> [Cl-In] </name>
+  <label> [Cl- In] </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 26.4 </row><col> 1.0 </col>
+  <name> [Cl-Out] </name>
+  <label> [Cl- Out] </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

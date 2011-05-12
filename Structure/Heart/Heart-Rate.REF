@@ -1,0 +1,28 @@
+HumMod / Heart-Rate.REF
+
+Created : 16-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Calculating heart rate
+
+# Calculate S-A node rate. Note that rate will not be used if
+  A-V conduction is blocked.
+
+# Calculate intrinsic ventricular rate.
+
+# If heart is fibrillating or in asystole, then the ventricular
+  rate is zero or the thumper rate is CPR is active.
+
+# Otherwise, ventricular rate is S-A node rate or, if A-V block
+  it is ventricular intrinsic rate.
+
+# One final adjustment. If the pacemaker is on and its rate is
+  greater than the ventricular rate, then it paces the
+  ventricle.
+
+End

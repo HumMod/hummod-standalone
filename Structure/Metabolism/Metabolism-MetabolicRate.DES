@@ -1,0 +1,89 @@
+HumMod / Metabolism-MetabolicRate
+
+Created : 23-May-05
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Metabolism-MetabolicRate </name>
+
+<variables>
+
+<var><name> Total(Cal/Min) </name></var>
+<var><name> Total(Cal/Day) </name></var>
+<var><name> Total(kCal/Min) </name></var>
+<var><name> Total(kCal/Day) </name></var>
+
+<var><name> BMRUnits </name></var>
+<parm><name> BMRNormal </name><val> 36.9 </val></parm>
+<var><name> BMR(%) </name></var>
+
+<var><name> Net(Cal/Min) </name></var>
+<var><name> Net(kCal/Day) </name></var>
+
+<var><name> Watts </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Total(Cal/Min) </name>
+  <val> Metabolism-CaloriesUsed.Total </val>
+</def>
+
+<def>
+  <name> Total(kCal/Min) </name>
+  <val> 0.001 * Total(Cal/Min) </val>
+</def>
+
+<def>
+  <name> Total(Cal/Day) </name>
+  <val> 1440.0 * Total(Cal/Min) </val>
+</def>
+
+<def>
+  <name> Total(kCal/Day) </name>
+  <val> 1440.0 * Total(kCal/Min) </val>
+</def>
+
+<def>
+  <name> BMRUnits </name>
+  <val> 60.0 * Total(kCal/Min) / SurfaceArea.Area </val>
+</def>
+
+<def>
+  <name> BMR(%) </name>
+  <val> 100.0 * ( ( BMRUnits / BMRNormal ) - 1.0 ) </val>
+</def>
+
+<def>
+  <name> Watts </name>
+  <val> Metabolism-Tools.KCAL_MIN_TO_WATT * Total(kCal/Min) </val>
+</def>
+
+<def>
+  <name> Net(Cal/Min) </name>
+  <val>
+      DietIntakeNutrition.Total_Cal/Min
+    - Total(Cal/Min)
+  </val>
+</def>
+
+<def>
+  <name> Net(kCal/Day) </name>
+  <val>
+      DietIntakeNutrition.Total_kCal/Day
+    - Total(kCal/Day)
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

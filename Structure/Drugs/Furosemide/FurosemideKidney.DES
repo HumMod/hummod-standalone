@@ -1,0 +1,44 @@
+HumMod / FurosemideKidney
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> FurosemideKidney </name>
+
+<variables>
+
+<var>
+  <name> UrineLoss </name>
+</var>
+
+<constant>
+  <name> K </name>
+  <val> 0.01 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> UrineLoss </name>
+  <val>
+      K
+    * FurosemidePool.Mass
+    * Kidney-NephronCount.Filtering(xNormal)
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End
