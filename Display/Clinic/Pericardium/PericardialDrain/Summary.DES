@@ -1,0 +1,95 @@
+HumMod / Summary
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.6 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> Pericardium-Drain </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<maplist>
+  <name> Conductance </name>
+  <map><val> 0.0  </val><img> None </img></map>
+  <map><val> 0.01 </val><img> Slow </img></map>
+  <map><val> 0.1  </val><img> Moderate </img></map>
+  <map><val> 1.0  </val><img> Fast </img></map>
+</maplist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Conductance </name>
+  <listname> Conductance </listname>
+  <label> Rate </label>
+</slidebar>
+
+<showvalue>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> BloodFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Blood Flow </label>
+</showvalue>
+
+<showgraph>
+  <row> 5.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> BloodFlow </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 12.6 </row><col> 1.0 </col>
+  <name> PressureGradient </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Pressure Gradient </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 3.0 </col>
+  <name> Pericardium-Cavity.Pressure </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Pericardial Pressure </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.6 </row><col> 3.0 </col>
+  <name> ExternalPressure </name>
+  <format><decimal> 1 </decimal></format>
+  <label> External Pressure </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.0 </row><col> 1.0 </col>
+  <name> Conductance </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Conductance </label>
+</showvalue>
+
+</groupbox>
+
+End

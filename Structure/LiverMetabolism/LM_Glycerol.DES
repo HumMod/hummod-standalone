@@ -1,0 +1,46 @@
+HumMod / SkeletalMuscle-Glycogen
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> SkeletalMuscle-Glycogen </name>
+
+<variables>
+
+<var><name> Synthesis </name></var>
+<var><name> Metabolism </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 530.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 5.3 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Synthesis </name><val> 0.0 </val></def>
+<def><name> Metabolism </name><val> 0.0 </val></def>
+
+<def><name> Change </name><val> Synthesis - Metabolism </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

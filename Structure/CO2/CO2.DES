@@ -1,0 +1,48 @@
+HumMod / CO2
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\CO2\ ?>
+
+<?include CO2Tools.DES ?>
+
+<?include CO2Total.DES ?>
+<?include CO2Artys.DES ?>
+<?include CO2Veins.DES ?>
+
+<?include Blood-BaseToGas.DES ?>
+<?include Blood-GasToBase.DES ?>
+<?include Tissue-BaseToGas.DES ?>
+<?include Tissue-GasToBase.DES ?>
+<?include Muscle-BaseToGas.DES ?>
+<?include Muscle-GasToBase.DES ?>
+
+<structure><name> CO2 </name>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+  <call> CO2Artys.CalcConc </call>
+  <call> CO2Veins.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> CO2Total.Dervs </call>
+  <call> CO2Artys.Dervs </call>
+  <call> CO2Veins.Dervs </call>
+
+</block>
+
+</definitions>
+
+</structure>
+
+End

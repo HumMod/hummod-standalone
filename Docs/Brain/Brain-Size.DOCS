@@ -1,0 +1,221 @@
+QHP 2008 / Brain.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Brain-Size
+</structurename>
+
+<vardoc>
+<name> Brain-Size.CellH2O </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.Density </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.FractTotal </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.H2OFractMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.IFV</name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.InitialCellH2O </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.InitialIFV </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> Brain-Size.InitialLiquidVol </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.InitialMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.InitialSolidMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.LiquidDensity </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.LiquidMass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.LiquidVol</name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.Mass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.MassFractBase </name>
+<topic>  </topic>
+<topic>   </topic>
+<seealso>  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.SolidDensity </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.SolidMass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name>Brain-Size.SolidsFractMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.SolidVol </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Brain-Size.Vol </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+
+End

@@ -1,0 +1,33 @@
+HumMod / RightHeartPumping
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<?path Structure\RightHeartPumping\ ?>
+
+<?include RightHeartPumping-Pumping.DES ?>
+<?include RightHeartPumping-Diastole.DES ?>
+<?include RightHeartPumping-Systole.DES ?>
+<?include RightHeartPumping-Valves.DES ?>
+
+
+<structure><name> RightHeartPumping </name>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<!-- <call> RightHeartPumping-Valves.Calc </call> -->
+  <call> RightHeartPumping-Diastole.Calc </call>
+  <call> RightHeartPumping-Systole.Calc </call>
+  <call> RightHeartPumping-Pumping.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

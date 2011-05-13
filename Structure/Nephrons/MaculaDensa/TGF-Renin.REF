@@ -1,0 +1,81 @@
+HumMod / TGF-Renin.REF
+
+Created : 12-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   Josie Briggs showed that macula
+   densa [Na+] flow has a big effect
+   on renin secretion.  Low flow
+   (i.e. low [Na+]) stimulates
+   secretion.
+
+   Science 237:1618-1620 1987.
+
+   Schnermann & Briggs argue that the
+   feedback signal to vasculature and
+   renin are the same.
+
+   Renal Physiol.  9:193-203, 1986.
+
+   This is probably qualitatively true
+   but quantitatively somewhat in error.
+
+   Both macula densa [Na+] and [AII]
+   contribute to the signal.
+
+   We postulate here that [Na+] signal
+   has a stronger influence on renin
+   while [AII] has a stronger effect
+   on vasculature. 
+
+   The TGF renin signal is arbitrary.
+   Here is how renin secretion and
+   synthesis interprets it.
+
+   Signal      Effect
+   ------ ----------------
+      0   Full Stimulation
+      1   Normal
+      2   Full Inhibition
+
+   For [Na+] Effect
+
+   [Na+] TGF signal
+   ----- ----------
+      0      0
+     48      1
+    100      2
+
+   AII is quite good at surpressing
+   renin secretion.  This keeps
+   secretion from running away during
+   low salt intake.
+
+   Oelkers Klin. Wschr. 56:37-41, 1978.
+
+   Oelkers found that 3 (nG/Min)/kG
+   raised [AII] to 70 pG/mL and decreased
+   PRA to 40% of control.  Log10 70 = 1.8.
+
+   Hall AJP 235:F174-F179, 1978.
+   
+   Hall gave 10 (nG/Min)/kG to dogs and
+   completely suppressed PRA.
+
+   For [AII] Effect
+
+   log10   TGF
+   [AII]  Signal
+   -----  ------
+      0    0.9   Renin 2x
+    1.3    1.0   Normal
+    2.5    2.0   Normal full inhib
+    3.5    5.0   Low [Na+] full inhib  */
+
+
+End

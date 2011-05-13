@@ -1,0 +1,306 @@
+QHP 2008 / SkeletalMuscle.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> SkeletalMuscle-Size </structurename>
+
+<vardoc>
+<name> SkeletalMuscle-Size.CellH2O </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.ContractileProteinDensity</name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.ContractileProteinMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.ContractileProteinVol </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.Density </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.FractTotal </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.H2OFractMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.IVF </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialCellH2O </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialIFV </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialLiquidVol </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialMass(kG) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialOtherMass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialProteinMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.InitialSolidMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.LiquidDensity </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.LiquidMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.LiquidVol </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.Mass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.Mass(kG) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.OtherDensity </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.OtherFractSolids </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.OtherMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.OtherVol </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.ProteinFractSolids </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.SolidMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.SolidsFractMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.SolidVol </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SkeletalMuscle-Size.Vol </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

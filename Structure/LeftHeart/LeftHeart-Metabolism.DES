@@ -1,0 +1,120 @@
+HumMod / LeftHeart-Metabolism
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LeftHeart-Metabolism </name>
+
+<variables>
+
+<var>
+  <name> TotalCalsUsed </name>
+</var>
+
+<var>
+  <name> BasalCalsUsed </name>
+</var>
+
+<var>
+  <name> InitialBasalCalsUsed </name>
+</var>
+
+<constant>
+  <name> BasalCalsUsed((Cal/Min)/G) </name>
+  <val> 0.0669 </val>
+</constant>
+
+<parm>
+  <name> CalMultiplier </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> AerobicCals </name>
+</var>
+
+<var>
+  <name> AnaerobicCals </name>
+</var>
+
+<var>
+  <name> O2Need </name>
+</var>
+
+<var>
+  <name> O2Lack </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> ScaleCals </name>
+
+<def>
+  <name> InitialBasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * LeftHeart-Size.InitialMass
+  </val>
+</def>
+
+</block>
+
+<block><name> CalcCals </name>
+
+<def>
+  <name> BasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * LeftHeart-Size.Mass
+  </val>
+</def>
+
+<def>
+  <name> TotalCalsUsed </name>
+  <val>
+    ( BasalCalsUsed
+    * Thyroid.Effect
+    * HeatMetabolism.Core
+    * LeftHeart-Structure.Effect )
+    + LeftHeart-Work.TotalCals
+  </val>
+</def>
+
+<def>
+  <name> O2Need </name>
+  <val> Metabolism-Tools.CalToO2 * TotalCalsUsed </val>
+</def>
+
+</block>
+
+<block><name> SplitCals </name>
+
+<def>
+  <name> O2Lack </name>
+  <val> O2Need - LeftHeart-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * LeftHeart-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AnaerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * O2Lack </val>
+</def>
+
+</block>
+</definitions>
+
+</structure>
+
+End

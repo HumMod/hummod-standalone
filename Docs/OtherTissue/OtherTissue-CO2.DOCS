@@ -1,0 +1,146 @@
+QHP 2008 /OtherTissue.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> OtherTissue-CO2 </structurename>
+
+<vardoc>
+<name> OtherTissue-CO2.[BloodHCO3] </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.[HCO3(mEq/L)] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.[HCO3] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.Alpha </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.InflowBase </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.InflowGas </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.K </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.Outflow(0) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.OutflowBase </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-CO2.PCO2 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

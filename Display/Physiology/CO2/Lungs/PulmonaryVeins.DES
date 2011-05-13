@@ -1,0 +1,67 @@
+HumMod / PulmonaryVeins
+
+Created : 11-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Pulmonary Veins </title>
+
+<structurename> LungVeinCO2 </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> PCO2 </name>
+  <format><decimal> 1 </decimal></format>
+  <label> pCO2 </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> PCO2 </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 40 </min><max> 50 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> [CO2(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [CO2] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> CO2 content is reported at bicarbonate concentration </line>
+  <line> (mEq/L). </line>
+  <line>  </line>
+  <line> Normal pulmonary veins pCO2 is 41 mmHg. Normal [HCO3-] </line>
+  <line> is 26.9 mEq/L </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

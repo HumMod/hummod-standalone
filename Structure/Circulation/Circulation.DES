@@ -1,0 +1,25 @@
+HumMod / Circulation
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Circulation\ ?>
+
+<?include CircyManager.DES ?>
+
+<?include CardiacOutput.DES ?>
+<?include PeripheralResistance.DES ?>
+<?include HepaticArty.DES ?>
+<?include OrganFlow.DES ?>
+<?include Viscosity.DES ?>
+
+<?include ArtysVol.DES ?>
+<?include VeinsVol.DES ?>
+
+<?include CarotidSinus.DES ?>
+
+End

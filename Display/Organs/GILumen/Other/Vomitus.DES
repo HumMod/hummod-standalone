@@ -1,0 +1,64 @@
+HumMod / Vomitus
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> Vomitus </title>
+
+<structurename> GILumenVomitus </structurename>
+
+<repeatlist>
+  <name> GILumenVomitus.H2OTarget </name>
+  <repeat><reps> 20 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> H2OTarget </name>
+  <listname> GILumenVomitus.H2OTarget </listname>
+  <label> H2O Target </label>
+</slidebar>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> H2OLoss </name>
+  <format><decimal> 2 </decimal></format>
+  <label> H2O Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.8 </row><col> 1.0 </col>
+  <name> Cl-Loss </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Cl- Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> HeatLoss </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Heat Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> H2O Target specifies a target rate of fluid </line>
+  <line> loss (mL/Min). </line>
+  <line>  </line>
+  <line> Loss slows when lumen is close to empty. </line>
+</infobutton>
+
+</groupbox>
+
+End

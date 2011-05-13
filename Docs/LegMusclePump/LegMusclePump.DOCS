@@ -1,0 +1,58 @@
+QHP 2008 / LegMusclePump.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LegMusclePump </structurename>
+
+<vardoc>
+<name> LegMusclePump.Effect </name>
+<topic> LegMusclePump - Overview </topic>
+<seealso> RegionalPressure.LowerVein </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> LegMusclePump - Overview </name>
+<label> Overview </label>
+<content>
+
+Intermittent muscular movement causes a pumping action 
+in the veins which is called the muscle pump. Each time 
+a vein is compressed, blood flows out of the compressed 
+segment towards the heart. Venous valves force the blood 
+in the direction of the heart and this pumping action 
+maintains venous pressure at a much lower level than would 
+occur in a standing motionless adult. It also prevents the 
+veins from pooling large volumes of blood. 
+
+The valves of the venous system frequently become incompetent 
+or sometimes are even destroyed. When this occurs, the pressure 
+in the veins of the legs greatly increases because of failure 
+of the venous pump; this further increases the sizes of the 
+veins and finally destroys the function of the valves completely 
+leading to the development of varicose veins.
+
+Whenever people with varicose veins stand for more than a few 
+minutes, the venous and capillary pressures become very high, 
+and leakage of fluid from the capillaries causes constant edema
+in the legs.
+
+Pollack AA, Wood EH. Venous pressure in the saphenous vein at 
+the ankle in man during exercise and changes in posture.
+J. Appl. Physiology 1:649, 1949.
+
+Pollack AA, Taylor BE, Myers TT, Wood EH. The effects of 
+exercise and body position in patients having venous valvular 
+defects. J. Clin Invest. 28: 559, 1949. 
+
+Walker AJ, Longland CJ. Venous pressure measurement in the foot
+in exercise as an aid to investigation of venous disease in
+the leg. Clin Sci 9: 101, 1950. 
+
+</content>
+</topicdoc>
+ 
+End

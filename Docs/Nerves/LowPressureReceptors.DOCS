@@ -1,0 +1,118 @@
+QHP 2008 / Nerves.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LowPressureReceptors </structurename>
+
+<vardoc>
+<name> LowPressureReceptors.AdaptedPressure </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.AvePressure </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.Derv </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.Level </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.NA </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.PressureChange </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.RateConst </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.Switch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LowPressureReceptors.Tau </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

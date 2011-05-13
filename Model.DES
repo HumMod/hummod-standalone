@@ -1,0 +1,38 @@
+Model.DES
+
+Created : 19-Oct-04
+Last Modified : 2011-03-30
+Author : Tom Coleman
+Copyright : 2004-2011
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?xml version = '1.0' ?>
+
+<model>
+
+<title>
+   <basic> Integrative Biomedicine (v1.6.1) </basic>
+   <navigator> HumMod - Integrative Biomedicine (v1.6.2) </navigator>
+</title>
+
+<?include Context\Context.DES ?>
+<?include Structure\Structure.DES ?>
+
+<math>
+
+  <context> Structure.Context </context>
+  <parms> Structure.Parms </parms>
+  <dervs> Structure.Dervs </dervs>
+  <wrapup> Structure.Wrapup </wrapup>
+
+</math>
+
+<?include Control\Control.DES ?>
+<?include Display\Display.DES ?>
+
+<?attach Docs\Docs.DOCS ?>
+
+</model>
+
+End

@@ -1,0 +1,93 @@
+HumMod / Glucagon Reference
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+                Starve Fast Drip Meal Load
+                ------ ---- ---- ---- ----
+      [Insulin]     5    10   20   40  100
+      [Glucose]    60    85  110  130  200
+      [Glucagon]  300   100   70   50   40
+      Liver Net  Empty -100    0  200  200 
+       Uptake
+
+   Units are
+
+      [Insulin] - uU/mL
+      [Glucose] - mG/dL
+      [Glucagon] - pG/mL
+      Uptake - mG/Min
+
+   Diabetes 25:1091, 1976.
+
+   Glucagon infusion at 3 nG/kG/Min
+   increased [Gln] from 100 to 400
+   pG/mL.  From this data, we can
+   calculate that secretion of 0.75
+   nG/Min in 75 kG subject will raise
+   [Glg] 1.0 pG/mL.
+
+   With [Glg] = 70 pG/mL at drip
+   (continuous intake), the glucagon
+   secretion rate is 52.5 nG/Min.
+
+   ECFV mass would be 70 pG/mL *
+   15000 mL ECFV or 1050 nG.
+
+   Degradation K is 52.5 nG/Min
+   divided 1050 nG or 0.05 /Min.
+
+      Status [Glg] [Glu] Sec
+      ------ ----- ----- ----
+      Max     350    50  260
+      Starve  300    60
+      Fast    100    85
+      Drip     70   110   50
+      Meal     50   130
+      Load     40   200
+      Min       0   400    0
+
+   Insulin and glucose both have an
+   effect on glucagon secretion,
+   with both being inhibitory.
+
+   Glucagon does not appear to be
+   involved in day-to-day glucose
+   metabolism.
+
+   Horm. Metab. Res. 7205, 1975.
+
+   Instead, it rises in starvation
+   to stimulate KA synthesis.  It
+   also rises in type I diabetes
+   when there is no insulin to
+   inhibit it.
+
+   JCI 79:777-781, 1987.
+
+      [Glu]  [Glgn]  [Epi]
+      -----  ------  -----
+        90     30      30
+        70     30     120
+        60     35     200
+        50     40     400
+        40     50     700
+
+   These values are at high (120 uU/mL)
+   insulin, so values of [Glgn] are
+   low.  See also
+
+   Diabetes 28:533-536, 1979.
+
+   Secretion also depends on GI
+   tract function.
+
+   When [insulin] drops in Type I diabetes,
+   glucagon secretion rises markedly.
+
+
+End

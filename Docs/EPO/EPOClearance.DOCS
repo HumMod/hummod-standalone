@@ -1,0 +1,201 @@
+QHP 2008 / EPO.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EPOClearance
+ </structurename>
+
+<vardoc>
+<name> EPOClearance.K </name>
+<topic> EPOClearance - Overview </topic>
+<topic> K - Definition </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> EPOClearance.Rate </name>
+<topic> EPOClearance - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> EPOClearance.K </seealso>
+<seealso> EPOPool.Mass </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> EPOClearance - Overview </name>
+<label> Overview </label>
+<content>
+
+EPO Clearance
+Experimentation in rats examining the rapid 
+disappearance phase after a single injection of 
+EPO, suggests a distribution space of twice the 
+plasma volume or 40% of the extracellular fluid 
+volume(ECFV). If we assume an EPO mass is typically
+136U and a volume of distribution of 40% of the ECFV,
+this results in a typical plasma concentration of
+22 mU/ml.There is no evidence that clearance of EPO 
+is subject to any physiological regulation. Thus 
+changes in serum [EPO] result from changes in 
+production. Normal levels of [EPO] range from 10-30mU/mL.
+
+Review
+Eckardt KU & Kurtz A. 
+Regulation of erythropoietin production.
+Eur. J. Clin. Invest. 35 (suppl 3): 13-19, 2005
+
+Rat Data 
+Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+Human Data
+Miller ME, Cronkite EP, Garcia, JF Plasma levels of 
+immunoreactive erythropoietin after acute blood loss in man.
+Br J of Haematology 52:545-549, 1982
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPOPool - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+EPO mass is typically 136 U with a
+volume of distribution of 40% of
+ECFV, yielding a typical conc of 
+22 mU/ml.[EPO] levels range from 10-30mU/mL 
+in humans. Typical secretion and clearance
+rates are 0.75 U/Min.
+
+Plasma Levels in Humans
+1.Milledge JS, Cotes, PM Serum erythropoietin in humans 
+at high altitude and its relation to plasma renin.
+J Appl Physiology 59: 360-364, 1985
+
+2.Miller ME, Cronkite EP, Garcia, JF
+Plasma levels of immunoreactive erythropoietin
+after acute blood loss in man.
+Brit. J. Haematology 52: 545-549, 1982
+
+3.Kokot M, Kokot F, Franek E, Wiecek A, Nowicki M, Dulawa J
+Effect of Isobaric hyperoxemia on erythropoietin secretion
+in hypertensive patients.
+Hypertension 24: 486-490, 1994
+
+4.Koeffler HP, Goldwasser E
+Erythropoietin radioimmunoassay in evaluating patients 
+with polycythemia. Ann Int Med 94: 44-47, 1981
+
+Plasma Levels in Rats
+1.Cahan C, Heokje PL, Goldwasser E, Decker MJ, Strohl KP
+Assessing the characteristic between length of hypoxic 
+exposure and serum erythropoietin levels.
+Am J Physiol 258: R1016 - R1021, 1990
+ 
+2.Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Mass U
+Plasma Concentration  mU/ml
+Fluxes  U/min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> K - Definition </name>
+<label> Definition </label>
+<content>
+
+K is the rate constant.
+Understanding rate constants is an 
+essential tool for all model builders.
+
+There is an irrational number called Euler's number 
+which is often denoted by e (and sometimes exp). 
+The value of e is roughly 2.718.
+
+If e is raised to a power, we have an exponential. 
+A specific example might be e^2. Note that the value 
+of e to a power can be obtained using an infinite series 
+(and e to a power is part of every scientific calculator 
+and computer programming library).
+
+If we raise e to an unspecified power using a variable, 
+we have an exponential function. An example might be e^x.
+
+The exponential function gets attention when is noted 
+that its derivative with respect to x is again the exponential 
+function. This can be denoted as
+
+	d(e^x)/dx = e^x
+
+The exponential function is also used to (inversely) 
+define the natural logarithm, denoted by In. If ex = y 
+then x = ln y.
+
+Note that e^0 = 1 and e^-¥ = 0. (¥ represents infinity).
+
+In models, we often see responses where a variable decays 
+in an exponential fashion from an initial value to a steady 
+state value. Such responses can roughly be represented by
+
+	e^-Kt
+
+where K is a positive constant called the rate constant and 
+t is the independent variable (usually time). This function 
+again has the boundary values of e^K0 = 1 and e^-K¥ = 0. 
+(¥ represents infinity). The importance of K is that it 
+determines the speed (or rate and hence its name) of transition 
+between 1 and 0.
+
+We can now work this backwards and get an estimate of K 
+by looking at the speed or rate of the decay in an 
+appropriate data set.
+
+When t = 1/K, we have e^-1, which has a value of 0.37. 
+This means that the decay is 63% of way to its final value 
+(defined as t0.63). So we observe how long it takes the decay 
+to get to 63% of its final value and then we define K = 1/t0.63.
+
+Another (and comparable) way to find a rate constant is to 
+observe how long it takes a decay to get half way to its final 
+value - this is the half-time. We can denote the half-time 
+as t1/2. The exponential function is then e^-Kt1/2 = 0.5. 
+We can solve this equality for K by taking the natural 
+logarithm of both sides of the equation and rearranging.
+
+	-Kt1/2 = ln (0.5)
+	K = - ln(0.5) / t1/2
+
+Or simply
+
+	K = 0.69 / t1/2
+
+</content>
+</topicdoc>
+
+
+
+End

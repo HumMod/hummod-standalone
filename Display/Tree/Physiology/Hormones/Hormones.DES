@@ -1,0 +1,36 @@
+HumMod / Hormones
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Hormones </name>
+  <label> Hormones </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<?path Display\Tree\Physiology\Hormones\ ?>
+
+<?include ADH.DES ?>
+<?include Aldosterone.DES ?>
+<?include ANP.DES ?>
+<?include EPO.DES ?>
+<?include Estradiol.DES ?>
+<?include FSH.DES ?>
+<?include Glucagon.DES ?>
+<?include GnRH.DES ?>
+<?include hCG.DES ?>
+<?include Inhibin.DES ?>
+<?include Insulin.DES ?>
+<?include Leptin.DES ?>
+<?include LH.DES ?>
+<?include Progesterone.DES ?>
+<?include Renin.DES ?>
+<?include Testosterone.DES ?>
+<?include ThyroidGland.DES ?>
+
+End

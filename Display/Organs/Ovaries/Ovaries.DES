@@ -1,0 +1,21 @@
+HumMod / Ovaries
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Organs\Ovaries\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include Follicle\Follicle.DES ?>
+<?include CorpusLuteum\CorpusLuteum.DES ?>
+
+<?include Estradiol\Estradiol.DES ?>
+<?include Progesterone\Progesterone.DES ?>
+<?include Testosterone\Testosterone.DES ?>
+<?include Inhibin\Inhibin.DES ?>
+
+End

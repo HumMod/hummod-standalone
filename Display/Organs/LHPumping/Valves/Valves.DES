@@ -1,0 +1,14 @@
+HumMod / Valves
+
+Created : 2010-06-07
+Last Modified : 2010-06-07
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Organs\LHPumping\Valves\ ?>
+
+<?include Aortic\Aortic.DES ?>
+<?include Mitral\Mitral.DES ?>
+
+End

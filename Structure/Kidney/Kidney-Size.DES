@@ -1,0 +1,156 @@
+HumMod / Kidney-Size
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Kidney-Size </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> Mass </name></var>
+<var><name> InitialMass </name></var>
+<var><name> Density </name></var>
+<var><name> LiquidMass </name></var>
+
+<constant>
+  <name> LiquidDensity </name>
+  <val> 1.00 </val>
+</constant>
+
+<var><name> LiquidVol </name></var>
+<var><name> InitialLiquidVol </name></var>
+
+<var><name> SolidMass </name></var>
+<var><name> InitialSolidMass </name></var>
+
+<constant>
+  <name> SolidDensity </name>
+  <val> 1.17 </val>
+</constant>
+
+<var><name> SolidVol </name></var>
+
+<var><name> FractTotal </name></var>
+
+<var><name> IFV </name></var>
+<var><name> InitialIFV </name></var>
+
+<var><name> CellH2O </name></var>
+<var><name> InitialCellH2O </name></var>
+
+<constant>
+  <name> MassFractBase </name>
+  <val> 0.0116 </val>
+</constant>
+
+<constant>
+  <name> H2OFractMass </name>
+  <val> 0.67 </val>
+</constant>
+
+<var><name> SolidsFractMass </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialMass </name>
+  <val> MassFractBase * Weight.InitialOtherMass </val>
+</def>
+
+<def>
+  <name> InitialLiquidVol </name>
+  <val> H2OFractMass * InitialMass / LiquidDensity </val>
+</def>
+
+<def>
+  <name> SolidsFractMass </name>
+  <val> 1.0 - H2OFractMass </val>
+</def>
+
+<def>
+  <name> InitialSolidMass </name>
+  <val> SolidsFractMass * InitialMass </val>
+</def>
+
+</block>
+
+<block><name> ScaleH2O </name>
+
+<def>
+  <name> FractTotal </name>
+  <val> InitialLiquidVol / TissueH2O.InitialVol </val>
+</def>
+
+<def>
+  <name> InitialIFV </name>
+  <val> FractTotal * InterstitialWater.InitialVol </val>
+</def>
+
+<def>
+  <name> InitialCellH2O </name>
+  <val> FractTotal * CellH2O.InitialVol </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> IFV </name>
+  <val> FractTotal * InterstitialWater.Vol </val>
+</def>
+
+<def>
+  <name> CellH2O </name>
+  <val> FractTotal * CellH2O.Vol </val>
+</def>
+
+<def>
+  <name> LiquidVol </name>
+  <val> IFV + CellH2O </val>
+</def>
+
+<def>
+  <name> LiquidMass </name>
+  <val> LiquidVol * LiquidDensity </val>
+</def>
+
+<def>
+  <name> SolidMass </name>
+  <val> InitialSolidMass </val>
+</def>
+
+<def>
+  <name> SolidVol </name>
+  <val> SolidMass / SolidDensity </val>
+</def>
+
+<def>
+  <name> Mass </name>
+  <val> LiquidMass + SolidMass </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> LiquidVol + SolidVol </val>
+</def>
+
+<def>
+  <name> Density </name>
+  <val> Mass / Vol </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

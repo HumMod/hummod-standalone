@@ -1,0 +1,107 @@
+HumMod / Muscularity
+
+Created : 22-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 25.0 </row>
+   <col> 32.0 </col>
+   <high> 9.6 </high>
+   <wide> 30.0 </wide>
+   <title> Muscularity </title>
+
+<structurename> Values-Muscularity </structurename>
+
+<showtable>
+<row> 1.4 </row><col> 1.0 </col>
+
+<column>
+<indent> 0 </indent>
+<fieldwidth> 12 </fieldwidth>
+<justify> LEFT </justify>
+
+<textcell> Descriptor </textcell>
+<textcell> -------------------------------- </textcell>
+<textcell> Below Normal </textcell>
+<textcell> Normal </textcell>
+<textcell> Above Normal </textcell>
+<textcell> Trained Athlete </textcell>
+
+</column>
+
+<column>
+<indent> 13 </indent>
+<fieldwidth> 6.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Male </textcell>
+<textcell> -------- </textcell>
+
+<valuecell>
+  <name> MALE_BELOWNORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_ABOVENORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_TRAINEDATHLETE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+<column>
+<indent> 20 </indent>
+<fieldwidth> 7.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Female </textcell>
+<textcell> ------------ </textcell>
+
+<valuecell>
+  <name> FEMALE_BELOWNORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_ABOVENORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_TRAINEDATHLETE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+</showtable>
+
+<showvalue>
+  <row> 8.0 </row><col> 1.0 </col>
+  <name> Mass(kG) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass (kG) </label>
+</showvalue>
+
+</groupbox>
+
+End

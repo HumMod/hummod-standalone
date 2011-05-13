@@ -1,0 +1,15 @@
+HumMod / GasTools
+
+Created : 01-Mar-07
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Lungs\GasTools\ ?>
+
+<?include STPD_To_BTPS.DES ?>
+<?include BTPS_To_STPD.DES ?>
+
+End

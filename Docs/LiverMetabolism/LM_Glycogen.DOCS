@@ -1,0 +1,111 @@
+QHP 2008 / LiverMetabolism.DOCS
+
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LM_Glycogen </structurename>
+
+<vardoc>
+<name> LM_Glycogen.Change </name>
+<topic> Glycogen - Overview </topic>
+<topic> Change - DefinitionGLY </topic>
+<seealso> LM_Glycogenesis.Rate </seealso>
+<seealso> LM_Glycogenolysis.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Glycogen.Gain  </name>
+<topic> Gain - DefinitionGLY </topic>
+<seealso> LM_Glycogenesis.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Glycogen.Loss  </name>
+<topic> Loss - DefinitionGLY </topic>
+<seealso> LM_Glycogenolysis.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Glycogen.Mass </name>
+<topic> Mass - DefinitionGLY </topic>
+</vardoc>
+
+
+
+<topicdoc>
+<name> Glycogen - Overview </name>
+<label> Overview </label>
+<content>
+
+After absorption into a cell, glucose can be used immediately for
+release of energy to the cell, or it can be stored in the form of
+glycogen, a large polymer of glucose. Liver cells and skeletal
+muscle cells can store large amounts of glycogen. The glycogen 
+molecules can be polymerized to almost any molecular weight and 
+most of the glycogen precipitates in the form of solid granules.
+
+The process of glycogen formation is called glycogenesis.
+
+The process of glycogen breakdown is called glycogenolysis. 
+
+The factors that control glycogen synthesis are insulin, blood 
+glucose and the size of the glycogen pool. 
+
+Kruszynska YT. Normal metabolism: the physiology of fuel
+homeostasis. Chapter 9, Textbook of Diabetes edited by
+Pickup JC & Williams G. 2003 Blackwell Science
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - DefinitionGLY </name>
+<label> Defintion </label>
+<content>
+
+Changes in the glycogen mass are a function of both gains and
+losses in glycogen integrated over time.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Mass - DefinitionGLY </name>
+<label> Definition </label>
+<content>
+
+The mass of glycogen is the amount of glycogen present in the 
+liver at a given point. It is a function of gain and loss of 
+glycogen over time.
+  
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Gain - DefinitionGLY </name>
+<label> Definition </label>
+<content>
+
+The gain in glycogen mass is defined as the positive change 
+in glycogen mass and is a function of the rate of glycogenesis. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - DefinitionGLY </name>
+<label> Definition </label>
+<content>
+
+The loss in glycogen mass is defined as the negative change
+in glycogen mass and is a function of rate of glycogenolysis.
+
+</content>
+</topicdoc> 
+
+End

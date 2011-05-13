@@ -1,0 +1,92 @@
+HumMod / AcidTools.REF
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+This reference defines pH and pK and calculates a
+typical pK for blood and tissue.
+
+  pH = -log10 (H+)
+
+where H+ is the hydrogen ion concentration in Eq / L.
+
+When the units nEq / L are used, the formula becomes
+
+  pH = -log10 (H+ * 10^-9) or         (1)
+  pH = 9 - log10 (H+)                 (2)
+
+But H+ is proportional to the ratio of PCO2 and SID.
+Units for HPlus are nEq / L.
+
+  [H+] = K * (pCO2 / SID)             (3)
+  pH = pK + log10 (SID / pCO2)        (4)
+
+Units for SID are mEq/l. For pCO2 are mmHg.
+
+K is about 38.0 in blood.  I think pK here is 9
+minus the log of K.  In any event, we swallow K
+and calculate pK directly using a calibrating data
+set.
+
+The calibrating data set uses venous data.
+
+  pCO2 = 45 mmHg
+  SID  = 40 mEq/L
+  [H+] = 42.6 nEq/L
+  pH = 7.37
+  pK = 7.42
+
+P. Stewart suggests
+
+       ECFV   Cell
+       -----  -----
+  pH    7.4    7.0
+  SID    40    130   mEq/L
+  pCO2   40     50   mmHg
+
+The cell data appears to be off base. I'll use
+
+       ECFV   Cell
+       -----  -----
+  pH    7.4   7.07
+  SID    40     36   mEq/L
+  pCO2   40     43   mmHg
+
+Solving equation (4) for pK yields
+
+  pK = 7.15
+
+[H+]
+
+Rearranging Equation (2) yields
+
+  [H+] = 10 ^ (9 - pH)              (5)
+
+pH AND CELL FUNCTION
+
+Intracellular pH is typically 7.0 to 7.1. We'll
+postulate loss of function beginning a 6.7 and
+loss of structure beginning at 6.6.
+
+Force generation falls quickly where heart
+metabolism goes anaerobic. This is before a
+true loss of function. The heart muscle is
+hibernating. It can be awakened.
+
+   Circ.Res. 47:201-207, 1980.
+   AJP 234:H597-H607, 1978.
+   Amer J. Cardiol. 39:537-543, 1977.
+   J. Physiol. 414:455-472, 1989.
+   Circ. Res. 52:716-729, 1983.
+   JCI 82:86-95, 1988.
+
+   Sarnoff - good paper, one of the
+   first, below.
+
+   Circ. Res. 2:319-325, 1954.
+
+End

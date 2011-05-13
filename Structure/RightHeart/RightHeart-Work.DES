@@ -1,0 +1,50 @@
+HumMod / RightHeart-Work
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RightHeart-Work </name>
+
+<variables>
+
+<var>
+  <name> TotalCals </name>
+</var>
+
+<var>
+  <name> MotionCals </name>
+</var>
+
+<var>
+  <name> HeatCals </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> MotionCals </name>
+  <val> 5.0 </val>
+</def>
+
+<def>
+  <name> HeatCals </name>
+  <val> 17.0 </val>
+</def>
+
+<def>
+  <name> TotalCals </name>
+  <val> MotionCals + HeatCals </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

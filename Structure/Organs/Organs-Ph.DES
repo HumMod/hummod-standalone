@@ -1,0 +1,48 @@
+HumMod / Organs-Ph
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Ph </name>
+
+<definitions>
+
+<block><name> CalcSID </name>
+  <call> Bone-Ph.CalcSID </call>
+  <call> Brain-Ph.CalcSID </call>
+  <call> Fat-Ph.CalcSID </call>
+  <call> GITract-Ph.CalcSID </call>
+  <call> Kidney-Ph.CalcSID </call>
+  <call> LeftHeart-Ph.CalcSID </call>
+  <call> Liver-Ph.CalcSID </call>
+  <call> OtherTissue-Ph.CalcSID </call>
+  <call> RespiratoryMuscle-Ph.CalcSID </call>
+  <call> RightHeart-Ph.CalcSID </call>
+  <call> SkeletalMuscle-Ph.CalcSID </call>
+  <call> Skin-Ph.CalcSID </call>
+</block>
+
+<block><name> CalcPh </name>
+  <call> Bone-Ph.CalcPh </call>
+  <call> Brain-Ph.CalcPh </call>
+  <call> Fat-Ph.CalcPh </call>
+  <call> GITract-Ph.CalcPh </call>
+  <call> Kidney-Ph.CalcPh </call>
+  <call> LeftHeart-Ph.CalcPh </call>
+  <call> Liver-Ph.CalcPh </call>
+  <call> OtherTissue-Ph.CalcPh </call>
+  <call> RespiratoryMuscle-Ph.CalcPh </call>
+  <call> RightHeart-Ph.CalcPh </call>
+  <call> SkeletalMuscle-Ph.CalcPh </call>
+  <call> Skin-Ph.CalcPh </call>
+</block>
+
+</definitions>
+</structure>
+
+End

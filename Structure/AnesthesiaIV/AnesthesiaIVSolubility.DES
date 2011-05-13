@@ -1,0 +1,65 @@
+HumMod / AnesthesiaIVSolubility
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVSolubility </name>
+
+<variables>
+
+<parm>
+  <name> General </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> GeneralK </name>
+</var>
+
+<parm>
+  <name> Brain </name>
+  <val> 1.3 </val>
+</parm>
+
+<var>
+  <name> BrainK </name>
+</var>
+
+<parm>
+  <name> Adipose </name>
+  <val> 13.3 </val>
+</parm>
+
+<var>
+  <name> AdiposeK </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> GeneralK </name>
+  <val> 1.0 / General  </val>
+</def>
+
+<def>
+  <name> BrainK </name>
+  <val> 1.0 / Brain </val>
+</def>
+
+<def>
+  <name> AdiposeK </name>
+  <val> 1.0 / Adipose </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

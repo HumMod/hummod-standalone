@@ -1,0 +1,209 @@
+QHP 2008 / Glucagon.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> GlucagonPool </structurename>
+
+<vardoc>
+<name> GlucagonPool.[Glucagon]</name>
+<topic> Glucagon - Overview </topic>
+<topic> Glucagon - Physical Units </topic>
+<topic> Glucagon - Concentration Units </topic>
+<seealso> GlucagonPool.Mass </seealso>
+<seealso> ECFV.Vol(L) </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.Change </name>
+<topic> Change - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.Gain </name>
+<topic> Gain - Definition1 </topic>
+<seealso> GlucagonSecretion.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.InitialMass </name>
+<topic> InitialMass - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.Loss </name>
+<topic> Loss - Definition1 </topic>
+<seealso> GlucagonClearance.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.Mass </name>
+<topic> Mass - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucagonPool.Target[Glucagon] </name>
+<topic> Target[Glucagon] - Definition </topic>
+</vardoc>
+
+<topicdoc>
+<name> Glucagon - Overview </name>
+<label> Overview </label>
+<content>
+
+Glucagon is a single long-chain polypeptide secreted
+by the alpha cells of the pancreatic islets of Langerhans.
+It plays an important role in glucose homeostasis. 
+It is released into the hepatic portal circulation in 
+response to decreases in plasma glucose levels. 
+Glucagon stimulates gluconeogenesis and glycogenolysis 
+in the liver. Both lead to an enhanced availability of 
+glucose. At the same time, it decreases glycogenesis
+and glycolysis
+
+Glucagon is the main counterregulatory hormone to insulin
+and the insulin to glucagon ratio determines the control 
+of gluconeogenesis and glycogenolysis. Glucagon increases
+the hepatic uptake of precursors, especially amino acids,
+and their conversion into glucose.
+
+Kruszynska YT. Normal metabolism: the physiology of fuel
+homeostasis. Chapter 9, Textbook of Diabetes edited by
+Pickup JC & Williams G. 2003 Blackwell Science
+
+Queseda I, Tuduri E, Ripoll C, Nadal A. Physiology of
+the pancreatic alpha cell and glucagon secretion: role
+in glucose homeostasis and diabetes. 
+J Endocrinology 199:5-19, 2008.
+
+Gromada J, Franklin I, Wollheim CB. Alpha cells of the 
+endocrine pancreas: 35 years of research but the enigma 
+remains. Endocrine reviews 28: 84 -116, 2007.
+        
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucagon - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma Concentration  pG/mL; pMol/L
+1 pG/mL = 0.282 pMol/L
+Mass  pG or nG
+Secretion nG/Min 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucagon - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Molecular Weight (MW) of glucagon is 3550
+
+Typical plasma glucagon concentration [Glucagon] = 70 pG/mL
+The volume of distribution is the ECFV.
+
+Glucagon Mass = ECFV * [Glucagon]
+             = 15000 * 70 = 1,050,000 pG or 1,050 nG
+
+Typical glucagon concentrations under a variety of
+physiological situations
+
+
+Starve      300pG/mL    
+Fast        100pG/mL    
+Drip         70pG/mL       
+Meal         50pG/mL   
+Load         40pG/mL  
+
+Unger RH, Aguilar-Parada E, Muller WA, Eisentrant AM.
+Studies of pancreatic alpha cell function in normal
+and diabetic patients. J. Clin Invest. 49: 837-848, 1970 
+
+Felig P, Wahren J, Sherwin R, Hendler R. Insulin, glucagon,
+and somatostatin in normal physiology and diabetes mellitus   
+Diabetes 25: 1091 - 1099, 1976
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in mass of glucagon
+and is a function of pancreatic secretion rate of glucagon.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - Definition1 </name>
+<label> Definition </label>
+<content>
+
+The rate of change of glucagon mass is the gain of glucagon
+minus the loss of glucagon. The rate is integrated over time
+and divided by the ECFV to calculate plasma concentration
+at any given time.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> InitialMass - Definition1 </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of glucagon.
+It is the initial ECFV * Target[Glucagon]. The initial
+ECFV is affected by body traits (size, adiposity and 
+muscularity). Target[Glucagon] is the starting plasma
+glucagon concentration. 
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as negative changes in mass of glucagon.
+It is a function of glucagon clearance.
+
+</content>
+</topicdoc>
+   
+<topicdoc>
+<name> Mass - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Mass is the amount of glucagon at any given time.  
+It is a function of both gains and losses in 
+glucagon over time. Gain is a function of pancreatic 
+secretion rate and loss is a function of glucagon 
+clearance rate.
+
+</content>
+</topicdoc> 
+<topicdoc>
+<name> Target[Glucagon] - Definition </name>
+<label> Definition </label>
+<content>
+
+Target[Glucagon] is the starting or initial plasma
+glucagon concentration.
+
+</content>
+</topicdoc>  
+
+End

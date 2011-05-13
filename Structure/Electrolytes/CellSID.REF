@@ -1,0 +1,59 @@
+HumMod / CellSID.REF
+
+Created : 13-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The cell SID is estimated to be 0.036. This is a long
+way from Stewart's (1981) estimate of 0.130.
+
+Stewart thought there were plenty of strong cations
+(K+ = 0.144, Na+ = 0.010, Mg++ = 0.010) electrically
+balanced by weak acids (A- = 0.118) creating a large
+SID. The weak acids were presumably proteins.
+
+Guyton thought that a similar mix of strong cations
+was balanced by strong anions, naming phosphates and
+other organic anions. Protein played a lesser role.
+
+Experimental evidence suggests a rather low cell SID.
+The evidence is pH changes when CO2, acid microinjection
+and lactate generation during exercise.
+
+Papers by Thomas.
+
+  J.Physiol. 238:159-180, 1974.
+  J.Physiol. 255:715-735, 1976.
+  J.Physiol. 273:317-338, 1977.
+
+The following benchmarks are postulated.
+
+Cations
+
+  K+    0.142
+  Na+   0.006
+  Mg++  0.006
+        -----
+  Total 0.154
+
+Anions (Weak)
+
+  HCO3-   0.006
+  Protein 0.030
+          -----
+  Total   0.036
+
+Anions strong are 0.117 while [Lac-] is 0.001.
+
+Anions (Total)
+
+  Strong  0.117
+  [Lac-]  0.001
+  Weak    0.036
+          -----
+  Total   0.154
+ 
+End

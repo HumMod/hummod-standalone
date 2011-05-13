@@ -1,0 +1,230 @@
+HumMod / SympsCNS
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SympsCNS </name>
+
+<variables>
+
+<var>
+  <name> NA </name>
+</var>
+
+<var>
+  <name> NA(Hz) </name>
+</var>
+
+<var>
+  <name> A2Effect </name>
+</var>
+
+<var>
+  <name> BaroEffect </name>
+</var>
+
+<parm>
+  <name> BaroSensitivity </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> LowPressureEffect </name>
+</var>
+
+<parm>
+  <name> LowPressureSensitivity </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> MechanoEffect </name>
+</var>
+
+<var>
+  <name> FuelEffect </name>
+</var>
+
+<var>
+  <name> ReflexNA </name>
+</var>
+
+<parm>
+  <name> ClampSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> ClampLevel </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> PituitaryNA </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> A2Effect </name>
+  <point><x> 1.7 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 2.3 </x><y> 1.4 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> BaroEffect </name>
+  <point><x> 0.0 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> -0.5 </slope></point>
+  <point><x> 2.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> LowPressureEffect </name>
+  <point><x> 0.0 </x><y> 1.1 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> -0.1 </slope></point>
+  <point><x> 4.0 </x><y> 0.9 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> MechanoEffect </name>
+  <point><x>  5.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 20.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FuelEffect </name>
+  <point><x> 0.30 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 0.60 </x><y> 3.0 </y><slope> 0 </slope></point>
+  <point><x> 0.80 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> FuelEffect </name>
+  <val> FuelEffect [ Brain-Fuel.FractUseDelay ] </val>
+</def>
+
+<if>
+  <test> Brain-Function.Effect GT 0.1 </test>
+  <true>
+    <def>
+      <name> A2Effect </name>
+      <val> A2Effect [ A2Pool.Log10Conc ] </val>
+    </def>
+
+    <def>
+      <name> BaroEffect </name>
+      <val>
+          1.0
+        + ( BaroSensitivity
+        * ( BaroEffect [ Baroreflex.NA ]
+        - 1.0 ) )
+      </val>
+    </def>
+
+    <def>
+      <name> LowPressureEffect </name>
+      <val>
+          1.0
+        + ( LowPressureSensitivity
+        * ( LowPressureEffect [ LowPressureReceptors.NA ]
+        - 1.0 ) )
+      </val>
+    </def>
+
+    <def>
+      <name> MechanoEffect </name>
+      <val>
+          MechanoEffect
+          [ Mechanoreceptors.FiringRate ]
+      </val>
+    </def>
+
+    <def>
+      <name> ReflexNA </name>
+      <val>
+          BaroEffect
+        * LowPressureEffect
+        * MechanoEffect
+        * SympsChemo.Effect
+      </val>
+    </def>
+
+    <def>
+      <name> NA </name>
+      <val>
+        ( ReflexNA
+        + ExerciseSymps.TotalEffect
+        + CushingResponse.Effect
+        + FuelEffect )
+        * A2Effect
+        * CNSTrophicFactor.Effect
+      </val>
+    </def>
+  </true>
+  <false>
+    <def>
+      <name> A2Effect </name>
+      <val> 0.0 </val>
+    </def>
+
+    <def>
+      <name> BaroEffect </name>
+      <val> 0.0 </val>
+    </def>
+
+    <def>
+      <name> LowPressureEffect </name>
+      <val> 0.0 </val>
+    </def>
+
+    <def>
+      <name> MechanoEffect </name>
+      <val> 0.0 </val>
+    </def>
+
+    <def>
+      <name> ReflexNA </name>
+      <val> 0.0 </val>
+    </def>
+
+    <def>
+      <name> NA </name>
+      <val>
+        ( 1.0
+        + CushingResponse.Effect
+        + FuelEffect )
+        * CNSTrophicFactor.Effect
+      </val>
+    </def>
+  </false>
+</if>
+
+<conditional>
+  <name> NA(Hz) </name>
+  <test> ClampSwitch </test>
+  <true> ClampLevel </true>
+  <false> 1.5 * NA </false>
+</conditional>
+
+<def>
+  <name> PituitaryNA </name>
+  <val> BaroEffect </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

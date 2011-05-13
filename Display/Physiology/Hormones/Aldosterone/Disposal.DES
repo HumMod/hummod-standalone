@@ -1,0 +1,108 @@
+HumMod / Disposal
+
+Created : 06-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 17.2 </row>
+   <col> 32.0 </col>
+   <high> 18.6 </high>
+   <wide> 30.0 </wide>
+   <title> Disposal </title>
+
+<structurename> AldoDisposal </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Disposal Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 300 </min><max> 400 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Clearance </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Clearance </label>
+</showvalue>
+
+<repeatlist>
+  <name> ExtractK </name>
+  <repeat><reps> 100 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.0 </row><col> 3.0 </col>
+  <name> ExtractK </name>
+  <listname> ExtractK </listname>
+  <label> Extraction </label>
+  <fieldwidth> 4 </fieldwidth>
+</slidebar>
+
+<showvalue>
+   <row> 12.2 </row><col> 3.0 </col>
+   <name> AldoPool.[Aldo(pMol/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Aldo (pMol/L)] </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3.0 </col>
+   <name> OrganFlow.HepaticVeinFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Liver Blood Flow </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> Degradation </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Degradation </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.6 </row><col> 3.0 </col>
+   <name> DegradeK </name>
+   <format><decimal> 5 </decimal></format>
+   <label> Degrade K </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.6 </row><col> 3.0 </col>
+   <name> AldoPool.Mass </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Aldo Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> </line>
+</infobutton>
+
+</groupbox>
+
+End

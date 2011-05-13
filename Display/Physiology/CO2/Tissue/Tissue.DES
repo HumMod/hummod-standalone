@@ -1,0 +1,32 @@
+HumMod / Tissue
+
+Created : 27-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> CO2_Tissue </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> CO2 - Tissue </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\CO2\Tissue\ ?>
+
+<?include PCO2.DES ?>
+<?include [HCO3].DES ?>
+
+</panel>
+
+End

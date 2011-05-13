@@ -1,0 +1,42 @@
+HumMod / Seizure.REF
+
+Created : 14-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Seizure is used here as a synonym for colvulsion.
+
+The effect of temperature on brain function is
+as follows.
+
+      deg C  deg F  Event
+      -----  -----  -----------------------
+      37.0    98.6  Normal temp.
+      40.5   104.9  Highest temp in exer.
+      41.0   105.8  Brn func starts down.
+      41.5   106.7  Loosing consciousness.
+      42.0   107.6  Convulsions.
+      44.0   111.2  Convulsions stop.
+      45.0   113.0  Protein denatured.
+      45.0   113.0  Brn func is 0.
+
+We postulate convulsions in the temperature band from
+42.0 C to 44.0 C.
+
+Simlarly, lack of brain fuel will trigger convulsions.
+
+   Effect   Event
+   ------   ----------------------------
+    1.00    Normal.
+    0.80    Convulsions start.
+    0.50    Convulsions stop.
+
+The relevant pages are
+
+  Your patient is convulsing.
+  Your patient has stopped convulsing.
+
+End

@@ -1,0 +1,87 @@
+HumMod / LHPumping
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> LHPumping </name>
+  <label> LH Pumping </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> LHPumping-Output </name>
+  <label> Output </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> LHPumping-Systole </name>
+  <label> Systole </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> LHPumping-Diastole </name>
+  <label> Diastole </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<!--
+<separatorbar>
+  <parent> LHPumping </parent>
+</separatorbar>
+
+<leaf>
+  <name> LHPumping-Contractility </name>
+  <label> Contractility </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> LHPumping-ContractileProtein </name>
+  <label> Contractile Protein </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> LHPumping-Work </name>
+  <label> Work </label>
+  <parent> LHPumping </parent>
+</leaf>
+-->
+
+<separatorbar>
+  <parent> LHPumping </parent>
+</separatorbar>
+
+<leaf>
+  <name> LHPumping-Cardiopathy </name>
+  <label> Cardiopathy </label>
+  <parent> LHPumping </parent>
+</leaf>
+
+<!--
+<branch>
+  <name> LHValves </name>
+  <label> Valves </label>
+  <parent> LHPumping </parent>
+</branch>
+
+<leaf>
+  <name> LHValves-Aortic </name>
+  <label> Aortic </label>
+  <parent> LHValves </parent>
+</leaf>
+
+<leaf>
+  <name> LHValves-Mitral </name>
+  <label> Mitral </label>
+  <parent> LHValves </parent>
+</leaf>
+-->
+
+End

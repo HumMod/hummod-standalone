@@ -1,0 +1,37 @@
+HumMod / Lungs
+
+Created : 21-Oct-04
+Last Modified : 2010-06-04
+Author : Tom Coleman
+Copyright : 2006-2010
+
+<?path Structure\Lungs\ ?>
+
+<?include GasTools\GasTools.DES ?>
+
+<?include Bronchi.DES ?>
+
+<?include Thorax.DES ?>
+<?include RightHemithorax.DES ?>
+<?include LeftHemithorax.DES ?>
+
+<?include ExcessLungWater.DES ?>
+<?include LungBloodFlow.DES ?>
+
+<?include LungArtyO2.DES ?>
+
+<?include Breathing.DES ?>
+<?include PulmonaryMembrane.DES ?>
+
+<?include LungO2.DES ?>
+<?include LungVeinO2.DES ?>
+
+<?include GasExchangeRatio.DES ?>
+
+<?include Ventilator.DES ?>
+
+<?include LungArtyCO2.DES ?>
+<?include LungCO2.DES ?>
+<?include LungVeinCO2.DES ?>
+
+End

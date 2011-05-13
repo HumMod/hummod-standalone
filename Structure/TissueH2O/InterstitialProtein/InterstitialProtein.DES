@@ -1,0 +1,76 @@
+HumMod / InterstitialProtein
+
+Created : 25-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\TissueH2O\InterstitialProtein\ ?>
+
+<?include UT_InterstitialProtein.DES ?>
+<?include MT_InterstitialProtein.DES ?>
+<?include LT_InterstitialProtein.DES ?>
+
+<structure><name> InterstitialProtein </name>
+
+<variables>
+
+<var><name> Mass </name></var>
+<var><name> Change </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<call> UT_InterstitialProtein.Calc </call>
+<call> MT_InterstitialProtein.Calc </call>
+<call> LT_InterstitialProtein.Calc </call>
+
+<def><name> Mass </name>
+  <val>
+      UT_InterstitialProtein.Mass
+    + MT_InterstitialProtein.Mass
+    + LT_InterstitialProtein.Mass
+  </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<call> UT_InterstitialProtein.Dervs </call>
+<call> MT_InterstitialProtein.Dervs </call>
+<call> LT_InterstitialProtein.Dervs </call>
+
+<def><name> Gain </name>
+  <val>
+      UT_InterstitialProtein.Gain
+    + MT_InterstitialProtein.Gain
+    + LT_InterstitialProtein.Gain
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>
+      UT_InterstitialProtein.Loss
+    + MT_InterstitialProtein.Loss
+    + LT_InterstitialProtein.Loss
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

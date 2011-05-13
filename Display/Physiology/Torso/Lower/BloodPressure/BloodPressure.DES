@@ -1,0 +1,41 @@
+HumMod / Pressure
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Torso-Lower-BloodPressure </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Pressure </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Lower Torso - Blood Pressure </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Torso\Lower\BloodPressure\ ?>
+
+<?include Arteries.DES ?>
+<?include Capillaries.DES ?>
+
+<?include Veins.DES ?>
+
+</panel>
+
+End

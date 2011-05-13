@@ -1,0 +1,164 @@
+HumMod / CD_H2O
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CD_H2O </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> FractReab </name>
+</var>
+
+<var>
+  <name> Reab </name>
+</var>
+
+<var>
+  <name> OutflowMin </name>
+</var>
+
+<var>
+  <name> ADHEffect </name>
+</var>
+
+<var>
+  <name> Perm </name>
+</var>
+
+<parm>
+  <name> BasicPerm </name>
+  <val> 1.0 </val>
+</parm>
+
+<parm>
+  <name> PermSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> PermLevel </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> PermEffect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> ADHOnPerm </name>
+  <point><x>  0.0 </x><y> 0.3 </y><slope> 0 </slope></point>
+  <point><x>  2.0 </x><y> 1.0 </y><slope> 0.5 </slope></point>
+  <point><x> 10.0 </x><y> 3.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PermOnOutflow </name>
+  <point><x> 0.3 </x><y> 0.00 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 0.93 </y><slope> 0.1 </slope></point>
+  <point><x> 3.0 </x><y> 1.00 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcInflow </name>
+
+<def>
+  <name> Inflow </name>
+  <val> DT_H2O.Outflow </val>
+</def>
+
+</block>
+
+<block><name> CalcFlux </name>
+
+<def>
+  <name> OutflowMin </name>
+  <val>
+    ( CD_Na.Outflow
+    + CD_K.Outflow
+    + CD_NH4.Outflow
+    + ( 0.5 * CD_Glucose.Outflow ) )
+    / MedullaNa.[Na+]
+  </val>
+</def>
+
+<def>
+  <name> ADHEffect </name>
+  <val> ADHOnPerm [ NephronADH.[ADH] ] </val>
+</def>
+
+<conditional>
+  <name> Perm </name>
+  <test> PermSwitch </test>
+  <true> PermLevel </true>
+  <false>
+      BasicPerm
+    * ADHEffect
+    * CD_H2OChannels.Active
+  </false>
+</conditional>
+
+<def>
+  <name> PermEffect </name>
+  <val> PermOnOutflow [ Perm ] </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val>
+      ( PermEffect * OutflowMin )
+    + ( ( 1.0 - PermEffect ) * Inflow )
+  </val>
+</def>
+
+<def>
+  <name> Reab </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+<conditional>
+  <name> FractReab </name>
+  <test> Inflow GT 0.0 </test>
+  <true> ( Reab / Inflow ) MIN 1.0 </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> NoFlow </name>
+
+<def>
+  <name> Outflow </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> Reab </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

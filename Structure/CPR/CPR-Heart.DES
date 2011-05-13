@@ -1,0 +1,73 @@
+HumMod / CPR-Heart
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CPR-Heart </name>
+
+<variables>
+
+<constant><name> INACTIVE </name><val> 0.0 </val></constant>
+<constant><name> READY </name><val> 1.0 </val></constant>
+<constant><name> ACTIVE </name><val> 2.0 </val></constant>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<var><name> Status </name><val> 0.0 </val></var>
+
+<var><name> Activate </name></var>
+<parm><name> ActivateOnAsystole </name><val> TRUE </val></parm>
+<parm><name> ActivateOnFibrillation </name><val> TRUE </val></parm>
+
+<parm><name> ThumpRate </name><val> 100.0 </val></parm>
+<parm><name> Force </name><val> 300.0 </val></parm>
+
+<var><name> Is_Active </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<onjustchanged><name> Switch </name>
+
+<conditional><name> Status </name>
+  <test> Switch </test>
+  <true> READY </true>
+  <false> INACTIVE </false>
+</conditional>
+
+</onjustchanged>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+  <test> NOT Switch </test>
+  <true><exitblock/></true>
+</if>
+
+<def><name> Activate </name>
+  <val> ( ActivateOnAsystole AND Heart-Asystole.Is_Asystole )
+     OR ( ActivateOnFibrillation AND Heart-VFib.Is_Fibrillating )
+  </val>
+</def>
+
+<conditional><name> Status </name>
+  <test> Activate </test>
+  <true> ACTIVE </true>
+  <false> READY </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

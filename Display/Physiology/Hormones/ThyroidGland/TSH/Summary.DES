@@ -1,0 +1,74 @@
+HumMod / Summary
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> ThyroidTSH </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [TSH] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [TSH] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [TSH] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 10 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 10.0 </row><col> 1.0 </col>
+   <name> [T4-T3]Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [T4-T3] Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.0 </row><col> 1.0 </col>
+   <name> TemperatureEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temperature Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 1.0 </col>
+   <name> Base </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Base </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical [TSH] (uU/mL) is 4.0. </line>
+</infobutton>
+
+</groupbox>
+
+End

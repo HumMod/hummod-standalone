@@ -1,0 +1,281 @@
+QHP 2008 / OtherTissue.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> OtherTissue-Fuel </structurename>
+
+<vardoc>
+<name> OtherTissue-Fuel.AerobicGlucoseFractionalDelivery </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AerobicGlucoseUsed(Cal/Min) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AerobicGlucoseUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AnaerobicGlucoseDelivered </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AnaerobicGlucoseFractionalDelivery </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AnaerobicGlucoseUsed(Cal/Min)  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.AnaerobicGlucoseUsed(mG/Min)</name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.DxMax </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FA+GlucoseFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FADelivered </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FAFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FAFractionalDelivery </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FAUsed(Cal/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FAUsed(mG/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.FractUse </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+<vardoc>
+<name> OtherTissue-Fuel.FractUseDelay </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.GlucoseDelivered </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.GlucoseFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.K </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.KR </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.LacFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.LacUsed(Cal/Min) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.LacUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.MinimumFractionalDelivery </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.Ratio </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OtherTissue-Fuel.TotalGlucoseUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

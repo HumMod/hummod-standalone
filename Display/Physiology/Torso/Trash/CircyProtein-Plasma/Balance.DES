@@ -1,0 +1,111 @@
+HumMod / Gain-Loss
+
+Created : 27-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.4 </high>
+   <wide> 30.0 </wide>
+   <title> Gain - Loss </title>
+
+<structurename> PlasmaProtein </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Synthesis </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Synthesis </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> LymphProtein.Rate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Systemic Lymph </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3 </col>
+   <name> Transfusion.ProteinRate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Transfusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 3 </col>
+   <name> PeritoneumProtein.Loss </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Peritoneal Lymph </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 3 </col>
+   <name> IVDrip.ProteinRate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> IV Drip </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.8 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.8 </row><col> 3 </col>
+   <name> Degradation </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Degradation </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.8 </row><col> 3 </col>
+   <name> CapillaryProtein.Rate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Capillary Leak </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3 </col>
+   <name> Hemorrhage.ProteinRate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Hemorrhage </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 3 </col>
+   <name> PeritoneumProtein.Gain </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Hepatic Effusion </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.8 </row><col> 3 </col>
+   <name> CD_Protein.Outflow </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Urine </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Gain - loss units are G/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

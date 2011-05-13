@@ -1,0 +1,40 @@
+HumMod / Sodium
+
+Created : 18-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> DistalTubuleSodium </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Nephron </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Distal Tubule - Sodium </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Nephrons\DistalTubule\Sodium\ ?>
+
+<?include SodiumMovement.DES ?>
+<?include Na+FractionalReabsorption.DES ?>
+<?include WaterMovement.DES ?>
+
+</panel>
+
+End

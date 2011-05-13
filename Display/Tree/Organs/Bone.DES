@@ -1,0 +1,112 @@
+HumMod / Bone
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Bone </name>
+  <label> Bone </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Bone-Circulation </name>
+  <label> Circulation </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> Bone </parent>
+</leaf>
+
+<branch>
+  <name> Bone-Fuel </name>
+  <label> Fuel </label>
+  <parent> Bone </parent>
+</branch>
+
+<leaf>
+  <name> BoneFuel-Selection </name>
+  <label> Selection </label>
+  <parent> Bone-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BoneFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> Bone-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BoneFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> Bone-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BoneFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> Bone-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-CO2 </name>
+  <label> CO2 </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Lactate </name>
+  <label> Lactate </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Nerves </name>
+  <label> Nerves </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Function </name>
+  <label> Function </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Structure </name>
+  <label> Structure </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Size </name>
+  <label> Size </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Bone-Mineral </name>
+  <label> Mineral </label>
+  <parent> Bone </parent>
+</leaf>
+
+End

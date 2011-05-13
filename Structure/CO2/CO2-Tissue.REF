@@ -1,0 +1,48 @@
+HumMod / CO2-Tissue.REF
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+There is no diffusion barrier for CO2 between
+tissue and an organ's blood. Removal of CO2 is
+flow limited.
+
+With no diffusion barrier, the pCO2's of tissue
+and effluent blood are equal.
+
+The capacity of blood to store HCO3 is greater
+than tissue.
+
+  [HCO3 Blood] = 28.6 mEq/L
+  [HCO3 Tissue] = 16.0 mEq/L
+  pCO2 = 45 mmHg
+
+The benchmark values for organ HCO3 (mEq) and
+organ H2O (mL) are tabulated below.
+
+                   HCO3    H2O
+                  ------  -----
+Bone                56.2   3513
+Brain               19.1   1193
+Fat                 39.8   2487
+GITract             17.6   1102
+Kidney               4.1    257
+LeftHeart            3.5    218
+Liver               22.8   1426
+OtherTissue         50.7   3167
+RespiratoryMuscle   48.1   3006
+RightHeart           0.6     38
+SkeletalMuscle     323.9  20245
+Skin                28.2   1762
+                  ------  -----
+Total              614.6  38414
+
+H2O total should equal the sum of IFV (12000) and
+intracellular fluid volume (28000) less RBC water
+(1600) or 38400.
+
+End

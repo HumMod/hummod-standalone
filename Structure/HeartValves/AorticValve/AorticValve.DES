@@ -1,0 +1,27 @@
+HumMod / AorticValve
+
+Created : 23-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\HeartValves\AorticValve\ ?>
+
+<?include AorticValve-Stenosis.DES ?>
+<?include AorticValve-Regurgitation.DES ?>
+
+<structure><name> AorticValve </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> AorticValve-Stenosis.Parms </call>
+<call> AorticValve-Regurgitation.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

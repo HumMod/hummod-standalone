@@ -1,0 +1,39 @@
+HumMod / BetaBlockade
+
+Created : 18-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BetaBlockade </name>
+
+<variables>
+
+<parm>
+  <name> Block(%) </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def>
+  <name> Effect </name>
+  <val> 1.0 - ( Block(%) / 100.0 ) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

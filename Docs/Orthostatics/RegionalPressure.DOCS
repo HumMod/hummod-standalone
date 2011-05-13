@@ -1,0 +1,152 @@
+QHP 2008 / Orthostatics.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RegionalPressure </structurename>
+
+<vardoc>
+<name> RegionalPressure.Alpha </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.Brain </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> SystemicArtys.Pressure </seealso>
+<seealso> Hydrostatics.BrainGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.Carotid </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> SystemicArtys.Pressure  </seealso>
+<seealso> Hydrostatics.CarotidGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.LowerArty </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> SystemicArtys.Pressure   </seealso>
+<seealso> Hydrostatics.LowerTorsoArtyGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.LowerCapy </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RegionalPressure.Alpha </seealso>
+<seealso> Regional Pressure.LowerArty </seealso>
+<seealso> RegionalPressure.LowerVein </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.LowerVein </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightAtrium.Pressure</seealso>
+<seealso> Hydrostatics.LowerTorsoVeinGradient</seealso>
+<seealso> LegMusclePump.Effect </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.MiddleArty </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> SystemicArtys.Pressure </seealso>
+<seealso> Hydrostatics.MiddleTorsoGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.MiddleCapy </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RegionalPressure.Alpha </seealso>
+<seealso> Regional Pressure.MiddleArty </seealso>
+<seealso> RegionalPressure.MiddleVein </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.MiddleVein </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightAtrium.Pressure </seealso>
+<seealso> Hydrostatics.MiddleTorsoGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.UpperArty </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> SystemicArtys.Pressure </seealso>
+<seealso> Hydrostatics.UpperTorsoGradient </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.UpperCapy </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RegionalPressure.Alpha </seealso>
+<seealso> Regionalpressure.UpperArty </seealso>
+<seealso> Regionalpressure.UpperVein </seealso>
+</vardoc>
+
+<vardoc>
+<name> RegionalPressure.UpperVein </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightAtrium.Pressure </seealso>
+<seealso> Hydrostatics.UpperTorsoGradient </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

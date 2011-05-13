@@ -1,0 +1,31 @@
+HumMod / Metabolism-FuelUse
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Metabolism-FuelUse </name>
+
+<variables>
+
+<var><name> GlycerolTotal </name></var>
+<var><name> GlycerolUptake </name></var>
+<var><name> GlycerolStored </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> GlycerolUptake </name><val> 0.0 </val></def>
+<def><name> GlycerolStored </name><val> 0.0 </val></def>
+<def><name> GlycerolTotal </name><val> GlycerolUptake + GlycerolStored </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

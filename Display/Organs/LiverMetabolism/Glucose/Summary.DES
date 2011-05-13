@@ -1,0 +1,101 @@
+HumMod / Balance
+
+Created : 30-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 18.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> LM_Glucose </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> NetUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Net Uptake </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> NetUptake </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 40 </min><max> 60 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Uptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 3.0 </col>
+  <name> LM_Glycogenesis.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Glycogenesis </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.8 </row><col> 3.0 </col>
+  <name> LM_FA_Glucose.GlucoseUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Fatty Acid Synthesis </label>
+</showvalue>
+
+<label>
+  <row> 13.8 </row><col> 3.0 </col>
+  <text> Fatty Acid Synthesis </text>
+</label>
+
+<showvalue>
+  <row> 15.2 </row><col> 1.0 </col>
+  <name> Release </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Release </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.2 </row><col> 3.0 </col>
+  <name> LM_Glycogenolysis.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Glycogenolysis </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.2 </row><col> 3.0 </col>
+  <name> LM_Gluconeogenesis.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gluconeogenesis </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for glucose movement are mG/Min. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

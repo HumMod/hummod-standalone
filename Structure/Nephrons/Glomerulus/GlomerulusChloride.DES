@@ -1,0 +1,38 @@
+HumMod / GlomerulusChloride
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlomerulusChloride </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [Cl-] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [Cl-] </name><val> ClPool.[Cl-] * GlomerulusFiltrate.AnionAdjustment </val></def>
+<def><name> Rate </name><val> [Cl-] * GlomerulusFiltrate.GFR </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [Cl-] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

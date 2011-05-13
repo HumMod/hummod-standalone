@@ -1,0 +1,93 @@
+HumMod / Summary
+
+Created : 23-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 16.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> VagusNerve </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> NA(Hz) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Post-nucleus NA (Hz) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> NA(Hz) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 1 </min><max> 3 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Stimulator </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> VagusNerve.Setting </name>
+  <repeat><reps> 29 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  7 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Setting </name>
+  <listname> VagusNerve.Setting </listname>
+  <label> Setting </label>
+</slidebar>
+
+<slidebar>
+  <row> 12.8 </row><col> 1.0 </col>
+  <name> Block(%) </name>
+  <listname> Common.Percent </listname>
+  <label> Block (%) </label>
+</slidebar>
+
+<showvalue>
+   <row> 14.4 </row><col> 1.0 </col>
+   <name> SympsCNS.NA(Hz) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Pre-nucleus NA (Hz) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Pre-nucleus nerve activity is </line>
+  <line> typically 1.5 Hz. </line>
+  <line> </line>
+  <line> Post-nucleus nerve activity is </line>
+  <line> typically 2.0 Hz. </line>
+</infobutton>
+
+</groupbox>
+
+End

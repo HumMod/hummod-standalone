@@ -1,0 +1,70 @@
+HumMod / GnRH
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GnRH </name>
+
+<variables>
+
+<parm><name> BasicPeriod(Min) </name><val> 80.0 </val></parm>
+
+<var><name> Pulses(/Day) </name></var>
+
+<var><name> Period(Min) </name></var>
+<var><name> Period(Hr) </name></var>
+
+<var><name> TestosteroneEffect </name></var>
+<var><name> EstradiolEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> TestosteroneEffect </name>
+  <point><x>  5.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 20.0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> EstradiolEffect </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 1.0 </x><y> 1.5 </y><slope> 0.0 </slope></point>
+  <point><x> 2.0 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> TestosteroneEffect </name>
+  <val> TestosteroneEffect [ Testosterone.[Conc(nMol/L)] ] </val>
+</def>
+
+<def>
+  <name> EstradiolEffect </name>
+  <val> EstradiolEffect [ Estradiol.[Conc(nMol/L)] ] </val>
+</def>
+
+<def>
+  <name> Period(Min) </name>
+  <val> BasicPeriod(Min) * TestosteroneEffect * EstradiolEffect </val>
+</def>
+
+<def><name> Period(Hr) </name><val> Period(Min) / 60.0 </val></def>
+<def><name> Pulses(/Day) </name><val> 24.0 / Period(Hr) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

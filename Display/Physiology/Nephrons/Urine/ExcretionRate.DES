@@ -1,0 +1,169 @@
+HumMod / ExcretionRate
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 29.8 </high>
+   <wide> 30.0 </wide>
+   <title> Excretion Rate </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> CD_H2O.Outflow </name>
+  <format><decimal> 2 </decimal></format>
+  <label> H2O </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> CD_H2O.Outflow </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> CD_Na.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Na+ </label>
+</showvalue>
+
+<showgraph>
+  <row> 10.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> CD_Na.Outflow </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 0.2 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 18.2 </row><col> 1.0 </col>
+  <name> CD_Cl.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Cl- </label>
+</showvalue>
+
+<showvalue>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> CD_Creatinine.Outflow </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Creatinine </label>
+</showvalue>
+
+<showvalue>
+  <row> 20.2 </row><col> 1.0 </col>
+  <name> CD_Glucose.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Glucose </label>
+</showvalue>
+
+<showvalue>
+  <row> 21.2 </row><col> 1.0 </col>
+  <name> CD_HCO3.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> HCO3- </label>
+</showvalue>
+
+<showvalue>
+  <row> 22.2 </row><col> 1.0 </col>
+  <name> CD_K.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> K+ </label>
+</showvalue>
+
+<showvalue>
+  <row> 23.2 </row><col> 1.0 </col>
+  <name> CD_KA.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> KA- </label>
+</showvalue>
+
+<showvalue>
+  <row> 24.2 </row><col> 1.0 </col>
+  <name> CD_NH4.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> NH4+ </label>
+</showvalue>
+
+<showvalue>
+  <row> 25.2 </row><col> 1.0 </col>
+  <name> CD_PO4.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> PO4-- </label>
+</showvalue>
+
+<showvalue>
+  <row> 26.2 </row><col> 1.0 </col>
+  <name> CD_Protein.Outflow </name>
+  <format><decimal> 4 </decimal></format>
+  <label> Protein </label>
+</showvalue>
+
+<showvalue>
+  <row> 27.2 </row><col> 1.0 </col>
+  <name> CD_SO4.Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> SO4-- </label>
+</showvalue>
+
+<showvalue>
+  <row> 28.2 </row><col> 1.0 </col>
+  <name> CD_Urea.Outflow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Urea </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> H2O = 0.70 mL/Min </line>
+  <line> Na+ = 0.125 mEq/Min </line>
+  <line> Cl- = 0.140 mEq/Min </line>
+  <line> Creatinine = 1.20 mG/Min </line>
+  <line> Glucose = ~0 mMol/Min </line>
+  <line> HCO3- = 0.008 mEq/Min </line>
+  <line> K+ = 0.050 mEq/Min </line>
+  <line> KA- = ~0 mMol/Min </line>
+  <line> NH4+ = 0.010 mEq/Min </line>
+  <line> PO4-- = 0.021 mEq/Min </line>
+  <line> Protein = ~0 G/Min </line>
+  <line> SO4-- = 0.035 mEq/Min </line>
+  <line> Urea = 14 mG/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

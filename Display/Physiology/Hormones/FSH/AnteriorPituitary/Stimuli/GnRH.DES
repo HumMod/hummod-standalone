@@ -1,0 +1,60 @@
+HumMod / GnRH
+
+Created : 03-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.0 </high>
+   <wide> 30.0 </wide>
+   <title> GnRH </title>
+
+<structurename> FSH-AnteriorPituitary </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> GnRHEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> GnRH Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> GnRH.Period(Min) </name>
+    <label> GnRH Period </label>
+    <scale><min> 0 </min><max> 200 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> GnRHEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> GnRH.Period(Min) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> GnRH Period (Min) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

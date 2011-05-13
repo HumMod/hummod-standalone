@@ -1,0 +1,44 @@
+HumMod / Environment
+
+Created : 24-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> LifestyleEnvironment </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Environment </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Environment </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Lifestyle\Environment\ ?>
+
+<?include Altitude.DES ?>
+<?include Barometer.DES ?>
+
+<?include AmbientTemperature.DES ?>
+<?include RelativeHumidity.DES ?>
+<?include Wind.DES ?>
+<?include Clothes.DES ?>
+
+</panel>
+
+End

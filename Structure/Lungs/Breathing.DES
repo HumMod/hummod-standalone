@@ -1,0 +1,131 @@
+HumMod / Breathing
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+We need both BTPS and STPD volumes.
+
+<structure><name> Breathing </name>
+
+<variables>
+
+<constant><name> NATURAL </name><val> 0 </val></constant>
+<constant><name> CPR </name><val> 1 </val></constant>
+<constant><name> VENTILATOR </name><val> 2 </val></constant>
+
+<var><name> Type </name></var>
+<var><name> TotalVentilation </name></var>
+<var><name> TotalVentilation(L) </name></var>
+<var><name> AlveolarVentilation </name></var>
+<var><name> AlveolarVentilation(L) </name></var>
+<var><name> RespRate </name></var>
+<var><name> TidalVolume </name></var>
+<var><name> TidalVolumeBasic </name></var>
+<var><name> DeadSpace </name></var>
+<var><name> DeadSpaceFract </name></var>
+<parm><name> DeadSpaceSlope </name><val> 0.20 </val></parm>
+<parm><name> DeadSpaceMin </name><val> 60.0 </val></parm>
+<var><name> AlveolarVolume </name></var>
+<var><name> TotalVentilation(L-STPD) </name></var>
+<var><name> AlveolarVentilation(L-STPD) </name></var>
+<var><name> TotalVentilation(STPD) </name></var>
+<var><name> AlveolarVentilation(STPD) </name></var>
+<var><name> TidalVolume(STPD) </name></var>
+<var><name> DeadSpace(STPD) </name></var>
+<var><name> AlveolarVolume(STPD) </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> DriveOnTidalVolume </name>
+  <point><x>  0 </x><y>    0 </y><slope>   0 </slope></point>
+  <point><x>  1 </x><y>  550 </y><slope> 400 </slope></point>
+  <point><x> 10 </x><y> 2630 </y><slope>   0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<testcase>
+
+<case><test> Ventilator.Switch </test>
+
+<def><name> Type </name><val> VENTILATOR </val></def>
+<def><name> RespRate </name><val> Ventilator.Rate </val></def>
+<def><name> TidalVolumeBasic </name><val> Ventilator.TidalVolume </val></def>
+<def><name> TidalVolume </name><val> TidalVolumeBasic </val></def>
+
+</case>
+
+<case><test> CPR-Lungs.Status EQ CPR-Lungs.ACTIVE </test>
+
+<def><name> Type </name><val> CPR </val></def>
+
+<def><name> RespRate </name><val> CPR-Lungs.Rate </val></def>
+<def><name> TidalVolumeBasic </name><val> CPR-Lungs.Volume </val></def>
+
+<def><name> TidalVolume </name><val> TidalVolumeBasic </val></def>
+
+</case>
+
+<case><test> TRUE </test>
+
+<def><name> Type </name><val> NATURAL </val></def>
+<def><name> RespRate </name><val> RespiratoryCenter-Output.Rate </val></def>
+<def><name> TidalVolumeBasic </name>
+  <val>
+      DriveOnTidalVolume [ RespiratoryCenter-Output.MotorNerveActivity ]
+    * Thorax.LungInflation
+    * RespiratoryMuscle-Function.Effect
+  </val>
+</def>
+
+<def><name> TidalVolume </name><val> ( TidalVolumeBasic - ExcessLungWater.Volume ) MAX 0.0 </val></def>
+
+</case>
+
+</testcase>
+
+<def><name> DeadSpace </name><val> DeadSpaceSlope * TidalVolume + DeadSpaceMin </val></def>
+
+<conditional>
+  <name> DeadSpaceFract </name>
+  <test> TidalVolume GT 0.0 </test>
+  <true> DeadSpace / TidalVolume </true>
+  <false> UNDEFINED </false>
+</conditional>
+
+<def><name> AlveolarVolume </name><val> TidalVolume - DeadSpace </val></def>
+<def><name> TotalVentilation </name><val> RespRate * TidalVolume </val></def>
+<def><name> TotalVentilation(L) </name><val> TotalVentilation / 1000.0 </val></def>
+<def><name> AlveolarVentilation </name><val> RespRate * AlveolarVolume </val></def>
+<def><name> AlveolarVentilation(L) </name><val> AlveolarVentilation / 1000.0 </val></def>
+
+<copy><from> TidalVolume </from><to> BTPS_To_STPD.V1 </to></copy>
+  <call> BTPS_To_STPD.Calc </call>
+<copy><from> BTPS_To_STPD.V2 </from><to> TidalVolume(STPD) </to></copy>
+
+<copy><from> DeadSpace </from><to> BTPS_To_STPD.V1 </to></copy>
+  <call> BTPS_To_STPD.Calc </call>
+<copy><from> BTPS_To_STPD.V2 </from><to> DeadSpace(STPD) </to></copy>
+
+<def><name> AlveolarVolume(STPD) </name><val> TidalVolume(STPD) - DeadSpace(STPD) </val></def>
+<def><name> TotalVentilation(STPD) </name><val> RespRate * TidalVolume(STPD) </val></def>
+<def><name> TotalVentilation(L-STPD) </name><val> TotalVentilation(STPD) / 1000.0 </val></def>
+<def><name> AlveolarVentilation(STPD) </name><val> RespRate * AlveolarVolume(STPD) </val></def>
+<def><name> AlveolarVentilation(L-STPD) </name><val> AlveolarVentilation(STPD) / 1000.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

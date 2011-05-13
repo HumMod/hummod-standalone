@@ -1,0 +1,76 @@
+HumMod / Appetite
+
+Created : 15-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.6 </row>
+   <col> 1.0 </col>
+   <high> 14.6 </high>
+   <wide> 30.0 </wide>
+   <title> Appetite</title>
+
+<structurename> DietAppetite </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> LeptinEffect  </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Leptin Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> [Leptin-Receptor] </name>
+    <label> [Leptin-Receptor] </label>
+    <scale>
+      <min> 0 </min><max> 50 </max><inc> 10 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 3 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> LeptinEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> [Leptin-Receptor] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [Leptin-Receptor] </label>
+</showvalue>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Block(%) </name>
+  <listname> Common.Percent </listname>
+  <label> Block (%) </label>
+</slidebar>
+
+<showvalue>
+   <row> 12.6 </row><col> 1.0 </col>
+   <name> LeptinPool.[Leptin(nG/mL)] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [Leptin (nG/mL)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Thirst is typically ~2 L/Day. </line>
+</infobutton>
+
+</groupbox>
+
+End

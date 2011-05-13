@@ -1,0 +1,50 @@
+HumMod / Diet
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Diet\ ?>
+
+<?include DietGoalNutrition.DES ?>
+<?include DietGoalElectrolytes.DES ?>
+<?include DietGoalH2O.DES ?>
+
+<?include DietIntakeNutrition.DES ?>
+<?include DietIntakeElectrolytes.DES ?>
+<?include DietIntakeH2O.DES ?>
+
+<?include DietThirst.DES ?>
+<?include DietFeeding.DES ?>
+<?include DietAppetite.DES ?>
+
+<structure><name> Diet </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> DietGoalNutrition.Parms </call>
+  <call> DietGoalH2O.Parms </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> DietThirst.Dervs </call>
+  <call> DietFeeding.Dervs </call>
+  <call> DietAppetite.Dervs </call>
+
+  <call> DietIntakeNutrition.Dervs </call>
+  <call> DietIntakeElectrolytes.Dervs </call>
+  <call> DietIntakeH2O.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

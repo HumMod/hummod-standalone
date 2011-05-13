@@ -1,0 +1,101 @@
+HumMod / EpiPool
+
+
+Created : 28-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> EpiPool </name>
+
+<variables>
+
+<var><name> [Epi] </name></var>
+<var><name> [Epi(pG/mL)] </name></var>
+<var><name> [Epi(nMol/L)] </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Target[Epi] </name><val> 0.040 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<backwardeuler>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <f1name> F1 </f1name>
+  <f2name> F2 </f2name>
+  <dervname> Change </dervname>
+  <errorlim> 6.0 </errorlim>
+</backwardeuler>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialMass </name><val> Target[Epi] * ECFV.Vol </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Epi] </name>
+  <val> Mass / ECFV.Vol </val>
+</def>
+
+<def>
+  <name> [Epi(pG/mL)] </name>
+  <val> 1000.0 * [Epi] </val>
+</def>
+
+<def>
+  <name> [Epi(nMol/L)] </name>
+  <val> 0.00546 * [Epi(pG/mL)] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val>
+       EpiSecretion.Rate
+     + EpiPump.Rate
+     + Pheochromocytoma.EpiRate
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> EpiClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+<def>
+  <name> F1 </name>
+  <val> Gain </val>
+</def>
+
+<def>
+  <name> F2 </name>
+  <val> 1000.0 * EpiClearance.K / ECFV.Vol </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

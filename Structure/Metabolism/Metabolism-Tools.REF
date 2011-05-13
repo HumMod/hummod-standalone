@@ -1,0 +1,198 @@
+HumMod / Metabolism-Tools
+
+Created : 2010-05-28
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+EnergyTools.REF
+
+The following is extracted from a chapter titled Units in a
+monograph that I wrote and self published title Exercise
+Physiology : Data - Male. So the focus is exercise, but much
+of this stuff applies to metabolism.
+
+Background =================================================
+
+The field of exercise physiology sees data published using
+more than one set of physical units to represent force, work
+and power. There are a variety of units used in the older
+English system and there is the newer international system
+(Dybkaer 1969, Kappagoda and Linden 1976).
+
+The English system has been with us a long time. It has its
+roots in the inch, foot, yard, pound, and so forth.
+
+The international system, defined in 1954, is known formally
+as Système International d'Unités or simply SI. This system
+has its roots in the formal definition of the meter (or
+metre) in France in 1800.
+
+Basic SI Units =============================================
+
+The unit for length is the meter (M). The unit for time is
+the second (Sec). Velocity is then meters/second (M/Sec).
+Acceleration is meters/second^2 (M/Sec^2).
+
+The unit for mass is kilogram (kG).
+
+Force ======================================================
+
+Force is mass multiplied by acceleration, so the units are 
+kG·M/Sec2. The Newton (N) is used as a unit of force in
+honor of the English physicist, Isaac Newton (1642 - 1727).
+
+  1 kG·M/Sec^2 = 1 N
+
+Now we go back to the good old days. The pound was defined
+by a metal cylinder stored in London. While we normally
+think of the pound as a measure of weight, it was also
+thought of as a measure of force. One pound of force is the 
+force generated when the standard pound weight is
+accelerated by earth's normal gravity (Gz).
+
+  Gz = 9.8 M/Sec^2
+
+Now it gets trickier. The pound weight was replaced by a one
+kilogram mass. The replacement force, called a kilopond (kP),
+is the force generated when the kilogram mass is accelerated
+by earth's normal gravity. This force can be converted to 
+Newtons.
+
+  1 kP = 9.8 N
+
+Sometimes the kilopond is referred to as a kilogram-force.
+
+While the kilopond and kilogram-force have been declared
+obsolete, they are ubiquitous in the exercise literature.
+
+Work =======================================================
+
+Work is force applied over a distance, or force multiplied
+by distance. The units are N·M. The Joule (J) is used as a
+unit of work in honor of the Englishman James Prescott Joule
+(1818 - 1889), one of the founders of thermodynamics.
+
+  1 N·M = 1 J
+
+When the English pound of force is used to describe work, it
+is called foot-pounds (FP) with the expected units.
+
+  1 FP = 1.36 J
+
+When the English kilopond is used to describe work, the units
+are kilopond-meter (kP·M).
+
+  1 kP·M = 9.8 J
+
+Sometimes the kilopond-meter is referred to as a
+kilogram-meter (kG·M).
+
+Work is one of the forms of energy.
+
+Another form of energy is the calorie (Cal). A calorie is the
+amount of heat needed to raise the temperature of one gram of 
+water one degree C (from 14.5° C to 15.5° C).
+
+  1 Cal = 4.19 J
+
+The British thermal unit (BTU) also describes the energy
+needed to heat water, but it uses pounds of water and degrees
+F.
+
+  1 BTU = 252 Cal
+
+Power ======================================================
+
+Power is work divided by time. The unit is J/Sec. The Watt
+(W) is used as a unit of power in honor of James Watt (1736
+- 1819) the Scottish inventor of a practical steam engine.
+
+  1 J/Sec = 1 W
+
+Returning to the old English system, we come to the units
+for power. The units are kP·M/Min.
+
+  1 kP·M/Min = 0.163 W
+
+These units are often used to describe the intensity of
+exercise.
+
+A useful conversion is Watts to Cal/Min.
+
+  14.3 Cal/Min = 1 W
+
+There is also the horsepower (HP).
+
+  1 HP = 746 W
+
+Pressure ===================================================
+
+Pressure measurements are an important part of exercise
+physiology.
+
+Historically, pressure is defined in terms of mmHg, the
+pressure that will lift a column of mercury 1 mM in a
+mercury manometer.
+
+A Torr is a formal definition of a mmHg and is named in 
+honor of Evangelista Torricelli (1608 - 1647), a follower
+of Galileo who invented the mercury manometer. Torr and
+mmHg are synonymous.
+
+Air pressure at sea level is nominally 760 Torr or 1
+Atmosphere.
+
+Inches of mercury are used to describe big pressures, most
+notably barometric pressure.
+
+For lower pressures, such as pressures in veins, cM H2O are
+sometimes used in lieu of mmHg.
+
+  1 mmHg = 1.359 cM H2O
+
+This is based on the densities of mercury and water.
+
+Pressure is force per unit area. In the SI system, the 
+units for pressure are N/M^2. The Pascal (Pa) is used as a
+unit of pressure in honor of Blaise Pascal (1623 - 1662),
+a French mathematician who contributed to the development
+of the barometer.
+
+  1 mmHg = 133.3224 Pa
+
+A Pa is a little big for arterial pressure values. So the
+kiloPascal (kPa) is recommended.
+
+  1 mmHg = 0.133 kPa
+
+A kPa is a little small for arterial pressure values, but
+that is what we've got.
+
+One other unit of pressure that is getting some attention
+is the millibar.
+
+  1 bar = 100,000 Pa
+
+So
+
+  1 millibar = 100 Pa
+
+This is a pretty good unit for  arterial blood pressure.
+
+  1 mmHg = 1.333224 millibars
+
+References =================================================
+
+Dybkaer, R. International recommendation for nomenclature of
+quantities and units in clinical chemistry. Amer. J. Clin.
+Path. 52:637-642, 1969.
+ 
+Kappagoda, C.T. and R.J. Linden. The use of SI units in
+cardiovascular studies. Cardiovas. Res. 10:141-148, 1976.
+
+End
+
+
+End

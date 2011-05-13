@@ -1,0 +1,119 @@
+HumMod / BetaReceptors
+
+Created : 18-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 19.6 </high>
+   <wide> 30.0 </wide>
+   <title> Beta Receptors </title>
+
+<structurename> Kidney-BetaReceptors </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Activity </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Activity </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Clamp </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> Kidney-BetaReceptors.Level </name>
+  <repeat>
+    <reps> 50 </reps>
+    <stepsize> 0.1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Setting </name>
+  <listname> Kidney-BetaReceptors.Level </listname>
+  <label> Level </label>
+</slidebar>
+
+<showvalue>
+   <row> 12.6 </row><col> 1.0 </col>
+   <name> BetaBlockade.Block(%) </name>
+   <format><integer/></format>
+   <label> Receptor Blockade (%) </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.0 </row><col> 1.0 </col>
+   <name> TotalAgonism </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Total Agonism </label>
+</showvalue>
+
+<showbargraph>
+  <row> 15.0 </row><col> 1.0 </col><high> 4 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <title> Agonism </title>
+  <showinitialvalues/>
+  <bar>
+    <name> NeuralAgonism </name>
+    <label> Neural </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> HumoralAgonism </name>
+    <label> Humoral </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    
+  </scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Activity is typically 1.0 x Normal. </line>
+  <line>  </line>
+  <line> Activity can be locally clamped </line>
+  <line> and whole-body receptor blocked. </line>
+  <line>  </line>
+  <line> Total agonism is typically 1.0 </line>
+  <line> x Normal with both neural and </line>
+  <line> humoral contributions. </line>
+</infobutton>
+
+</groupbox>
+
+End

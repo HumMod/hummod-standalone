@@ -1,0 +1,31 @@
+HumMod / FADecomposition
+
+Created : 27-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> FADecomposition </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> K </name><val> 0.0007 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Rate </name><val> K * FAPool.Mass </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

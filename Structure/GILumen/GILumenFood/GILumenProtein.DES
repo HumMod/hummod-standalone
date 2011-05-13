@@ -1,0 +1,54 @@
+HumMod / GILumenProtein
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GILumenProtein </name>
+
+<variables>
+
+<var><name> Intake </name></var>
+<var><name> Absorption </name></var>
+
+<var><name> [Protein] </name></var>
+
+<parm><name> Perm </name><val> 0.05 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 1600.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 16.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Conc </name>
+
+<def><name> [Protein] </name><val> Mass / GILumenVolume.Mass </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Intake </name><val> DietIntakeNutrition.Protein_mG/Min </val></def>
+<def><name> Absorption </name><val> Mass * Perm </val></def>
+<def><name> Change </name><val> Intake - Absorption </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

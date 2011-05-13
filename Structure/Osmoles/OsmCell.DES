@@ -1,0 +1,40 @@
+HumMod / OsmCell
+
+Created : 26-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> OsmCell </name>
+
+<variables>
+
+<var><name> Total </name></var>
+<var><name> Electrolytes </name></var>
+<var><name> Anions </name></var>
+<var><name> Cations </name></var>
+<parm><name> OtherCations </name><val> 692.0 </val></parm>
+<var><name> Non-Electrolytes </name></var>
+<parm><name> UnknownOsmoles </name><val> 354.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> Cations </name><val> KCell.Mass + OtherCations </val></def>
+<def><name> Anions </name><val> Cations - 1000.0 </val></def>
+<def><name> Non-Electrolytes </name><val> UreaCell.Osmoles + UnknownOsmoles </val></def>
+<def><name> Electrolytes </name><val> Cations + Anions </val></def>
+<def><name> Total </name><val> Electrolytes + Non-Electrolytes </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

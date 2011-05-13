@@ -1,0 +1,39 @@
+HumMod / LH
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\LH\ ?>
+
+<?include LH-Circulating.DES ?>
+<?include LH-AnteriorPituitary.DES ?>
+
+<structure><name> LH </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> LH-AnteriorPituitary.Parms </call>
+</block>
+
+<block><name> Initialize </name>
+  <call> LH-Circulating.Initialize </call>
+</block>
+
+<block><name> Conc </name>
+  <call> LH-Circulating.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> LH-AnteriorPituitary.Dervs </call>
+  <call> LH-Circulating.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

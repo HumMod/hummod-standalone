@@ -1,0 +1,107 @@
+HumMod / Organs
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<branch>
+  <name> LeftHeart </name>
+  <label> Left Heart </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> LeftHeart-Circulation </name>
+  <label> Circulation </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<branch>
+  <name> LeftHeart-Fuel </name>
+  <label> Fuel </label>
+  <parent> LeftHeart </parent>
+</branch>
+
+<leaf>
+  <name> LeftHeartFuel-Selection </name>
+  <label> Selection </label>
+  <parent> LeftHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeartFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> LeftHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeartFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> LeftHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeartFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> LeftHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-CO2 </name>
+  <label> CO2 </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Lactate </name>
+  <label> Lactate </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Nerves </name>
+  <label> Nerves </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Function </name>
+  <label> Function </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Structure </name>
+  <label> Structure </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Size </name>
+  <label> Size </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> LeftHeart-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> LeftHeart </parent>
+</leaf>
+
+End

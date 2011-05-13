@@ -1,0 +1,34 @@
+HumMod / Wind
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Wind </title>
+
+<repeatlist>
+  <name> Wind.MPH </name>
+  <repeat>
+    <reps> 50 </reps>
+    <stepsize> 1 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Wind.MPH </name>
+  <listname> Wind.MPH </listname>
+  <label> MPH </label>
+</slidebar>
+
+</groupbox>
+
+End

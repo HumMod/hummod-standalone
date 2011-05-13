@@ -1,0 +1,24 @@
+HumMod / Settings.REF
+
+Created : 2010-05-26
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+The molecular weight of sodium chloride is about
+58. So here are some concentrations (mMol/L) of
+some clinical salines.
+
+<maplist><name> ClinicalSaline </name>
+  <map><val>   0 </val><img> None </img></map>
+  <map><val>  40 </val><img> 1/4 Normal </img></map>
+  <map><val>  80 </val><img> 1/2 Normal </img></map>
+  <map><val> 154 </val><img> Normal (0.9%) </img></map>
+  <map><val> 170 </val><img> 1% </img></map>
+  <map><val> 345 </val><img> 2% </img></map>
+  <map><val> 520 </val><img> 3% </img></map>
+  <map><val> 860 </val><img> 5% </img></map>
+</maplist>
+
+End

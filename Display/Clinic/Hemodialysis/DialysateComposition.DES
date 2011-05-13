@@ -1,0 +1,70 @@
+HumMod / DialysateComposition
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 19.2 </row>
+   <col> 1.0 </col>
+   <high> 7.2 </high>
+   <wide> 30.0 </wide>
+   <title> Dialysate Composition </title>
+
+<structurename> DialysateComposition </structurename>
+
+<repeatlist>
+  <name> DialysateComposition.[Na+] </name>
+  <repeat><reps> 20 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [Na+] </name>
+  <listname> DialysateComposition.[Na+] </listname>
+  <label> [Na+] </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialysateComposition.[K+] </name>
+  <repeat><reps> 10 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> [K+] </name>
+  <listname> DialysateComposition.[K+] </listname>
+  <label> [K+] </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialysateComposition.[Cl-] </name>
+  <repeat><reps> 20 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> [Cl-] </name>
+  <listname> DialysateComposition.[Cl-] </listname>
+  <label> [Cl-] </label>
+</slidebar>
+
+<repeatlist>
+  <name> DialysateComposition.[Urea] </name>
+  <repeat><reps> 10 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> [Urea] </name>
+  <listname> DialysateComposition.[Urea] </listname>
+  <label> [Urea] </label>
+</slidebar>
+
+</groupbox>
+
+End

@@ -1,0 +1,44 @@
+HumMod / PortalVein
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\SplanchnicCirculation\PortalVein\ ?>
+
+<?include PortalVein-Insulin.DES ?>
+<?include PortalVein-Glucagon.DES ?>
+<?include PortalVein-Glucose.DES ?>
+<?include PortalVein-FattyAcid.DES ?>
+
+<structure><name> PortalVein </name>
+
+<variables>
+
+<var><name> BloodFlow </name></var>
+<var><name> PlasmaFlow </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> BloodFlow </name><val> GITract-Flow.BloodFlow </val></def>
+<def><name> PlasmaFlow </name><val> BloodVol.PVCrit * BloodFlow </val></def>
+
+<call> PortalVein-Insulin.Calc </call>
+<call> PortalVein-Glucagon.Calc </call>
+<call> PortalVein-Glucose.Calc </call>
+<call> PortalVein-FattyAcid.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

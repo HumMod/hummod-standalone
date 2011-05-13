@@ -1,0 +1,35 @@
+HumMod / PericardialHemorrhage
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<panel><name> PericardialHemorrhage </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Heart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Pericardial Hemorrhage </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<?path Display\Clinic\Pericardium\PericardialHemorrhage\?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

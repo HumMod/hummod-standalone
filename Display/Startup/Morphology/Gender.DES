@@ -1,0 +1,42 @@
+HumMod / Gender
+
+Created : 06-Feb-10
+Last Modified : 06-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Gender </title>
+
+<structurename> Gender </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Value </name>
+   <format><integer/></format>
+   <label> Value </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Gender is determined by conditional includes </line>
+  <line> presented to the parser. It subsequently </line>
+  <line> cannot be changed. </line>
+  <line>  </line>
+  <line> Ennumerated values are </line>
+  <line>  </line>
+  <line> 0 = Male </line>
+  <line> 1 = Female </line>
+</infobutton>
+
+</groupbox>
+
+End

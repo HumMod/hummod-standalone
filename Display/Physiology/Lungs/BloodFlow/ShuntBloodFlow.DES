@@ -1,0 +1,86 @@
+HumMod / ShuntBloodFlow
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 14.8 </row>
+   <col> 32.0 </col>
+   <high> 15.2 </high>
+   <wide> 30.0 </wide>
+   <title> Shunt Blood Flow </title>
+
+<structurename> LungBloodFlow </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalShunt </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 5000 </min><max> 6000 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> RightLungShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Right Lung </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> LeftLungShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Left Lung </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> Right-LeftShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Right - Left Shunt </label>
+</showvalue>
+
+<repeatlist>
+  <name> BasicR-LShunt </name>
+  <repeat><reps> 50 </reps><stepsize>  10 </stepsize></repeat>
+  <repeat><reps> 45 </reps><stepsize> 100 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> BasicR-LShunt </name>
+  <listname> BasicR-LShunt </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,24 @@
+HumMod / Metabolism
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Metabolism\ ?>
+
+<?include Metabolism-Tools.DES ?>
+<?include Thyroid.DES ?>
+
+<?include Metabolism-FuelUse.DES ?>
+
+<?include Metabolism-MetabolicRate.DES ?>
+<?include Metabolism-RespiratoryQuotient.DES ?>
+<?include Metabolism-CaloriesUsed.DES ?>
+
+<?include Metabolism-Glucose.DES ?>
+<?include Metabolism-FattyAcid.DES ?>
+
+End

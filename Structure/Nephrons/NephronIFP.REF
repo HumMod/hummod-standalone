@@ -1,0 +1,56 @@
+HumMod / NephronInterstitium
+
+Created : 08-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   The renal interstitial pressure
+   is proportional to the renal
+   perfusion pressure (arcuate
+   artery).
+
+   Normal interstitial pressure is
+   4.0 mmHg.  Normal arcuate artery
+   pressure is 94 mmHg.
+
+        4
+   K = -- or 0.042
+       94
+
+   Nakamura. Nephron 78:104-111, 1998.
+
+   Olsen. AJP 249:F299-F307, 1985.
+
+   Olsen's data suggests a pressure
+   natriuresis that is prominent at
+   high pressures.
+
+       BP  Na+Ex  IFP
+      ---  -----  ---
+      100    80    4
+      125    90
+      138   100
+      152   140
+      165   220    7
+
+   Fractional Na+ and Li+ reabsorption
+   decrease together, indicating a
+   proximal site of action.  Downstream
+   segments would then also decrease
+   fraction due to increased Na+ flow.
+
+   If the site of action is inside the
+   TGF loop, it would be blunted by
+   adjustments in filtration.  And
+   in fact, pressure natriuresis only
+   becomes evident when AII infusion
+   has no additional effect -- that is,
+   the TGF effect has reached its upper
+   limit and can make no additional
+   adjustments. 
+
+End

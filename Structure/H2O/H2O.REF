@@ -1,0 +1,139 @@
+HumMod / H2O Reference
+
+Created : 26-Jun-06
+Last Modified : 2010-04-16
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+Basic Distribution ==========================================
+
+The total amount of water in the body (BodyH2O.TotalVol)
+is the sum of the following components
+
+# Tissue H2O (TissueH2O.Vol, aka Extravascular H2O)
+# Plasma (PlasmaVol.Vol)
+# Red Cell H2O (RBCH2O.Vol)
+# External H2O (ExternalH2O.Vol)
+
+External H2O is the sum of
+
+# GI Lumen H2O (GILumenVolume.Mass)
+# Peritoneal H2O (PeritoneumSpace.Volume)
+# Excess Lung H2O (ExcessLungWater.Volume)
+
+Peritoneal and lung H2O are known as external core -- they
+participate in whole-body osmolarity calculations. GI lumen
+H2O is known as external other - it has its own osmolarity.
+
+Tissue H2O ==================================================
+
+There are three postural regions of the body
+
+# Upper Torso (UT)
+# Middle Torso (MT)
+# Lower Torso (LT)
+
+Each region has an integrated volume (defined in the
+TissueH2O  folder).
+
+# UT_H2O.Vol
+# MT_H2O.Vol
+# LT_H2O.Vol
+
+These three volumes are summed in the TissueH2O structure
+to get TissueH2O.Vol.
+
+Body H2O ====================================================
+
+Body H2O (BodyH2O.Vol) exclusive of external other H2O
+(gut lumen) is the sum of
+
+# Tissue H2O (above)
+# Plasma H2O
+# Red Cell H2O
+# Peritoneum H2O
+# Lung Excess H2O
+
+We are going to use this to partition H2O into intracellular
+and extracellular components. Note that red cell H2O is part
+of the intracellular component while plasma, peritoneum and
+excess lung are part of the extracellular component.
+
+ICFV & ECFV =================================================
+
+In OsmBody, we use intracellular osmoles and extracellular
+osmoles to calculate whole-body osmoles
+
+Whole-body osmoles and body H2O (excluding gut) yield
+osmolarity.
+
+osmolarity and osmoles yield ICFV (including red cell H2O)
+and ECFV (including peritoneum and lung H2O).
+
+Then OsmBody.ICFV is passed to ICFV.Vol while OsmBody.ECFV
+is passed to ECFV.Vol. This is purely ornamental.
+
+But there is still some tidying up to do.
+
+Cell H2O ====================================================
+
+Cell H2O is cell H2O for all cells except red cells -- we
+need this for distribution to the upper, middle and lower
+torso.
+
+In CellH2O (in the TissueH2O folder) we calculate CellH2O.Vol
+by taking ICFV and subtracting red cell H2O. We then
+distribute this value to
+
+# CellH2O.UT_Vol
+# CellH2O.MT_Vol
+# CellH2O.LT_Vol
+
+IFV =========================================================
+
+The ECFV has contributions from the interstitium, plasma,
+peritoneal space and excess lung H2O, so we need to be
+careful here.
+
+The UT, MT and LT have three integrals to track H2O volume.
+And now we've distributed the cell H2O for each region.
+So we subtract to get the IFV for each region.
+
+We then add these three up (in InterstitalWater in the
+TissueH2O folder) to get the IFV for the whole body.
+
+Intravascular & Extravascular Volume ========================
+
+Intravascular and extravascular volumes are calculated in
+BodyH2O. This is a late calculation and is purely
+ornamental.
+
+
+More ========================================================
+
+Go to Physiology | H2O | Distribution | Spaces info
+button for some typical values.
+
+Units are L. Typical values are
+
+Total H2O = 41.8
+Intravascular = 4.6
+Extravascular = 37.3
+
+Intracellular = 26.5
+Cells (less RBC's) = 24.9
+RBC's = 1.6
+
+Extracellular = 14.4
+Plasma = 3.0
+Interstitium = 11.3
+Excess Lung H2O = 0.0
+Peritoneum = 0.0
+
+External Other = 1.0
+
+External other is the gut lumen.
+
+
+End

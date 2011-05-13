@@ -1,0 +1,24 @@
+HumMod / RHPumping
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Organs\RHPumping\ ?>
+
+<?include Output\Output.DES ?>
+<?include Systole\Systole.DES ?>
+<?include Diastole\Diastole.DES ?>
+
+<!--
+<?include ContractileProtein\ContractileProtein.DES ?>
+<?include Contractility\Contractility.DES ?>
+<?include Work\Work.DES ?>
+-->
+
+<?include Cardiopathy\Cardiopathy.DES ?>
+<!-- <?include Valves\Valves.DES ?> -->
+
+End

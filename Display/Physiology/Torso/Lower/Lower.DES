@@ -1,0 +1,17 @@
+HumMod / Lower
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Physiology\Torso\Lower\ ?>
+
+<?include BloodPressure\BloodPressure.DES ?>
+<?include H2O\H2O.DES ?>
+<?include Capillaries-Lymph\Capillaries-Lymph.DES ?>
+<?include InterstitialProtein\InterstitialProtein.DES ?>
+
+
+End

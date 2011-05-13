@@ -1,0 +1,154 @@
+HumMod / TempTools
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> TempTools </name>
+
+<variables>
+
+<var><name> DegF </name></var>
+<var><name> DegC </name></var>
+<var><name> DegK </name></var>
+<var><name> Pres </name></var>
+<var><name> Temp </name></var>
+
+<constant>
+  <name> Vapor(Cal/G) </name>
+  <val> 580.0 </val>
+</constant>
+
+<constant>
+  <name> Vapor(kCal/G) </name>
+  <val> 0.580 </val>
+</constant>
+
+<constant>
+  <name> A </name>
+  <val> 18.6686 </val>
+</constant>
+
+<constant>
+  <name> B </name>
+  <val> 4030.183 </val>
+</constant>
+
+<constant>
+  <name> C </name>
+  <val> 235.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> FromF </name>
+
+<def>
+  <name> DegC  </name>
+  <val> ( 5 / 9 ) * ( DegF - 32 ) </val>
+</def>
+
+<def>
+  <name> DegK </name>
+  <val> DegC + 273.15 </val>
+</def>
+
+</block>
+
+<block><name> FromC </name>
+
+<def>
+  <name> DegF </name>
+  <val> ( 9 / 5 ) * ( DegC + 32 ) </val>
+</def>
+
+<def>
+  <name> DegK </name>
+  <val> DegC + 273.15 </val>
+</def>
+
+</block>
+
+<block><name> FromK </name>
+
+<def>
+  <name> DegC  </name>
+  <val> DegK - 273.15 </val>
+</def>
+
+<def>
+  <name> DegF </name>
+  <val> ( 9 / 5 ) * ( DegC + 32 ) </val>
+</def>
+
+</block>
+
+<block><name> TempToSatPres </name>
+<testcase>
+
+<case>
+<test> Temp GT 100.0 </test>
+<def>
+  <name> Pres </name>
+  <val> 760.0 </val>
+</def>
+</case>
+
+<case>
+<test> Temp LT -273.15 </test>
+<def>
+  <name> Pres </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> Pres </name>
+  <val> EXP ( A - ( B / ( Temp + C ) ) ) </val>
+</def>
+</case>
+
+</testcase>
+</block>
+
+<block><name> SatPresToTemp </name>
+<testcase>
+
+<case>
+<test> Pres GT 760.0 </test>
+<def>
+  <name> Temp </name>
+  <val> 100.0 </val>
+</def>
+</case>
+
+<case>
+<test> Pres LT 0 </test>
+<def>
+  <name> Temp </name>
+  <val> -273.15 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> Temp </name>
+  <val> B / ( A - LOG ( Pres ) ) - C </val>
+</def>
+</case>
+
+</testcase>
+</block>
+
+</definitions>
+</structure>
+
+End

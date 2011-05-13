@@ -1,0 +1,45 @@
+HumMod / CaloriesUsed.REF
+
+Created : 17-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+                   Cals Used
+                   ---------
+Bone                    90
+Brain                  240
+Fat                     30
+GI Tract               119
+Kidney                 102
+Left Heart             131
+  Basal             20
+  Contraction      111
+    Motion          24
+    Heat            87
+Liver                  189
+Other Tissue            50
+Respiratory Muscle      30
+  Basal              9
+  Contraction       21
+    Motion           5
+    Heat            16
+  Shivering          0
+Right Heart             25
+  Basal              3
+  Contraction       22
+    Motion           5
+    Heat            17
+Skeletal Muscle        143
+  Basal            143
+  Contraction        0
+    Motion           0
+    Heat             0
+  Shivering          0
+Skin                    43
+                     -----
+Total                 1196
+
+End

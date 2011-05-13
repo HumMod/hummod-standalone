@@ -1,0 +1,119 @@
+HumMod / Chemoreceptors
+
+Created : 07-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Chemoreceptors </name>
+
+<variables>
+
+<var><name> FiringRate </name></var>
+<var><name> BasicFiringRate </name></var>
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+<var><name> PO2Effect </name></var>
+<var><name> PhEffect </name></var>
+<var><name> SympsEffect </name></var>
+<var><name> AlphaAgonism </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PO2Effect </name>
+  <point><x>  30 </x><y> 10.0 </y><slope> 0 </slope></point>
+  <point><x>  60 </x><y>  2.0 </y><slope> -0.05 </slope></point>
+  <point><x>  94 </x><y>  0.5 </y><slope> -0.005 </slope></point>
+  <point><x> 400 </x><y>  0.2 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PhEffect </name>
+  <point><x> 7.10 </x><y> 2.0 </y><slope> 0 </slope></point>
+  <point><x> 7.44 </x><y> 0.4 </y><slope> -3.0 </slope></point>
+  <point><x> 7.70 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SympsEffect </name>
+  <point><x> 0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 1 </x><y> 0.1 </y><slope> 0.2 </slope></point>
+  <point><x> 4 </x><y> 0.6 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PO2Effect </name>
+  <val> PO2Effect [ PO2Artys.Pressure ] </val>
+</def>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhEffect [ BloodPh.ArtysPh ] </val>
+</def>
+
+<def>
+  <name> AlphaAgonism </name>
+  <val>
+      AlphaBlockade.Effect
+    * ( ( 0.5 * GangliaGeneral.NA )
+    + ( 0.5 * AlphaPool.Effect ) )
+  </val>
+</def>
+
+<def>
+  <name> SympsEffect </name>
+  <val> SympsEffect [ AlphaAgonism ] </val>
+</def>
+
+<def>
+  <name> BasicFiringRate </name>
+  <val> PO2Effect + PhEffect + SympsEffect </val>
+</def>
+
+<testcase>
+
+<case>
+<test> Clamp </test>
+<def>
+  <name> FiringRate </name>
+  <val> Level </val>
+</def>
+</case>
+
+<case>
+<test> OtherTissue-Function.Failed </test>
+<def>
+  <name> FiringRate </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> FiringRate </name>
+  <val>
+      BasicFiringRate
+    * ChemoreceptorAcclimation.Effect
+  </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

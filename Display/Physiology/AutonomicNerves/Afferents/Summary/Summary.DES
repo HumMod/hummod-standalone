@@ -1,0 +1,43 @@
+HumMod / Summary
+
+Created : 27-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> AutonomicNerves-Afferents-Summary </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> NerveAfferents </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Afferents - Summary </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\AutonomicNerves\Afferents\Summary\ ?>
+
+<?include BaroreceptorReflex.DES ?>
+<?include Metaboreflex.DES ?>
+<?include HeartMechanoreceptors.DES ?>
+
+<?include LowPressureReceptors.DES ?>
+<?include CarotidChemoreceptors.DES ?>
+
+</panel>
+
+End

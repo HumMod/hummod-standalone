@@ -1,0 +1,152 @@
+HumMod / RegionalPressure
+
+Created : 18-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RegionalPressure </name>
+
+<variables>
+
+<parm><name> Alpha </name><val> 0.1667 </val></parm>
+
+<var><name> Brain </name></var>
+<var><name> Carotid </name></var>
+
+<var><name> UpperArty </name></var>
+<var><name> UpperCapy </name></var>
+<var><name> UpperVein </name></var>
+
+<var><name> MiddleArty </name></var>
+<var><name> MiddleCapy </name></var>
+<var><name> MiddleVein </name></var>
+
+<var><name> LowerArty </name></var>
+<var><name> LowerCapy </name></var>
+<var><name> LowerVein </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Brain </name>
+  <val>
+    ( SystemicArtys.Pressure
+    + Hydrostatics.BrainGradient
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+<def>
+  <name> Carotid </name>
+  <val>
+    ( SystemicArtys.Pressure
+    + Hydrostatics.CarotidGradient
+    )
+    MAX 0.0
+  </val>
+</def>
+
+<def>
+  <name> UpperArty </name>
+  <val>
+    ( SystemicArtys.Pressure
+    + Hydrostatics.UpperTorsoGradient
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+<def>
+  <name> MiddleArty </name>
+  <val>
+    ( SystemicArtys.Pressure
+    + Hydrostatics.MiddleTorsoGradient
+    )
+    MAX 0.0
+  </val>
+</def>
+
+<def>
+  <name> LowerArty </name>
+  <val>
+    ( SystemicArtys.Pressure
+    + Hydrostatics.LowerTorsoArtyGradient
+    )
+    MAX 0.0
+  </val>
+</def>
+
+<def>
+  <name> UpperVein </name>
+  <val>
+    ( RightAtrium.Pressure
+    + Hydrostatics.UpperTorsoGradient
+    )
+    MAX 0.0
+  </val>
+</def>
+
+<def>
+  <name> MiddleVein </name>
+  <val>
+    ( RightAtrium.Pressure
+    + Hydrostatics.MiddleTorsoGradient
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+<def>
+  <name> LowerVein </name>
+  <val>
+    ( RightAtrium.Pressure
+    + ( Hydrostatics.LowerTorsoVeinGradient * LegMusclePump.Effect )
+    )
+    MAX 0.0
+  </val>
+</def>
+
+<def>
+  <name> UpperCapy </name>
+  <val>
+    ( ( Alpha * UpperArty )
+    + ( ( 1.0 - Alpha ) * UpperVein )
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+<def>
+  <name> MiddleCapy </name>
+  <val>
+    ( ( Alpha * MiddleArty )
+    + ( ( 1.0 - Alpha ) * MiddleVein )
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+<def>
+  <name> LowerCapy </name>
+  <val>
+    ( ( Alpha * LowerArty )
+    + ( ( 1.0 - Alpha ) * LowerVein )
+    )
+    MAX 0.0 
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

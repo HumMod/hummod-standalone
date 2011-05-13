@@ -1,0 +1,50 @@
+HumMod / Switch
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> Switch </title>
+
+<structurename> DailyPlannerControl </structurename>
+
+<maplist>
+  <name> Switch </name>
+  <map><val> 0 </val><img> Off </img></map>
+  <map><val> 1 </val><img> Start Now </img></map>
+  <map><val> 2 </val><img> Start At Midnight </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Switch </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<maplist>
+  <name> DailyPlannerControl.Status </name>
+  <map><val> 0 </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Waiting </img></map>
+  <map><val> 2 </val><img> Active </img></map>
+</maplist>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> Status </name>
+  <format><list> DailyPlannerControl.Status </list></format>
+  <label> Status </label>
+</showvalue>
+
+</groupbox>
+
+End

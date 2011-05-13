@@ -1,0 +1,48 @@
+HumMod / Midodrine
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Drugs\Midodrine\ ?>
+
+<?include MidodrinePool.DES ?>
+<?include DesglymidodrinePool.DES ?>
+
+<?include DesglymidodrineKidney.DES ?>
+<?include MidodrineGILumen.DES ?>
+<?include MidodrineSingleDose.DES ?>
+<?include MidodrineDailyDose.DES ?>
+
+<structure><name> Midodrine </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> MidodrineDailyDose.Parms </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> MidodrineGILumen.CalcConc </call>
+  <call> MidodrinePool.CalcConc </call>
+  <call> DesglymidodrinePool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> MidodrineGILumen.Dervs </call>
+  <call> DesglymidodrineKidney.Dervs </call>
+  <call> MidodrinePool.Dervs </call>
+  <call> DesglymidodrinePool.Dervs </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> MidodrineDailyDose.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,154 @@
+HumMod / Kidney-Metabolism
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Kidney-Metabolism </name>
+
+<variables>
+
+<var>
+  <name> TotalCalsUsed </name>
+</var>
+
+<var>
+  <name> BasalCalsUsed </name>
+</var>
+
+<var>
+  <name> InitialBasalCalsUsed </name>
+</var>
+
+<constant>
+  <name> BasalCalsUsed((Cal/Min)/G) </name>
+  <val> 0.1420 </val>
+</constant>
+
+<parm>
+  <name> CalMultiplier </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> ProximalTubuleCals </name>
+</var>
+
+<var>
+  <name> LoopOfHenleCals </name>
+</var>
+
+<var>
+  <name> DistalTubuleCals </name>
+</var>
+
+<constant>
+  <name> CalPerNa+(Meq/Min) </name>
+  <val> 3.6 </val>
+</constant>
+
+<var>
+  <name> AerobicCals </name>
+</var>
+
+<var>
+  <name> AnaerobicCals </name>
+</var>
+
+<var>
+  <name> O2Need </name>
+</var>
+
+<var>
+  <name> O2Lack </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> ScaleCals </name>
+
+<def>
+  <name> InitialBasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * Kidney-Size.InitialMass
+  </val>
+</def>
+
+</block>
+
+<block><name> CalcCals </name>
+
+<def>
+  <name> BasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * Kidney-Size.Mass
+  </val>
+</def>
+
+<def>
+  <name> ProximalTubuleCals </name>
+  <val> CalPerNa+(Meq/Min) * PT_Na.Reab </val>
+</def>
+
+<def>
+  <name> LoopOfHenleCals </name>
+  <val> CalPerNa+(Meq/Min) * LH_Na.Reab </val>
+</def>
+
+<def>
+  <name> DistalTubuleCals </name>
+  <val> CalPerNa+(Meq/Min) * DT_Na.Reab </val>
+</def>
+
+<def>
+  <name> TotalCalsUsed </name>
+  <val>
+    ( BasalCalsUsed
+    * Thyroid.Effect
+    * HeatMetabolism.Core
+    * Kidney-Structure.Effect )
+    + ProximalTubuleCals
+    + LoopOfHenleCals
+    + DistalTubuleCals
+  </val>
+</def>
+
+<def>
+  <name> O2Need </name>
+  <val> Metabolism-Tools.CalToO2 * TotalCalsUsed </val>
+</def>
+
+</block>
+
+<block><name> SplitCals </name>
+
+<def>
+  <name> O2Lack </name>
+  <val> O2Need - Kidney-O2.O2Use </val>
+</def>
+
+<def>
+  <name> AerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * Kidney-O2.O2Use </val>
+</def>
+
+<def>
+  <name> AnaerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * O2Lack </val>
+</def>
+
+</block>
+</definitions>
+
+</structure>
+
+End

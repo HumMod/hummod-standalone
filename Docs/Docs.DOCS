@@ -1,0 +1,119 @@
+Digital Human / Docs.docs
+
+Created : 21-Oct-04
+Last Modified : 14-Dec-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : docs V1.0
+
+<?path Docs\ ?>
+<?include ADH.docs ?>
+
+<?include CO2.docs ?>
+<?include Hemoglobin.docs ?>
+
+<?include AcidBase.docs ?>
+<?include AirSupply.docs ?>
+<?include Aldosterone.docs ?>
+<?include AminoAcid.docs ?>
+<?include Anesthesia.docs ?>
+<?include ANP.docs ?>
+<?include Bladder.docs ?>
+<?include BloodVolume.docs ?>
+<?include BloodIons.docs ?>
+<?include Bone.docs ?>
+<?include Brain.docs ?>
+<?include CardiacCycle.docs ?>
+<?include Catechols.docs ?>
+<?include CellProtein.docs ?>
+<?include Circulation.docs ?>
+<?include CircyProtein.docs ?>
+<?include CoronarySinus.docs ?>
+<?include CPR.docs ?>
+<?include Creatine.docs ?>
+<?include Creatinine.docs ?>
+<?include DailyPlanner.docs ?>
+<?include Diagnosis.docs ?>
+<?include Diet.docs ?>
+<?include Drugs.docs ?>
+<?include Electrolytes.docs ?>
+<?include Environment.docs ?>
+<?include EPO.docs ?>
+<?include Estradiol.docs ?>
+<?include Exercise.docs ?>
+<?include Fat.docs ?>
+<?include FattyAcid.docs ?>
+<?include FSH.docs ?>
+<?include GILumen.docs ?>
+<?include GITract.docs ?>
+<?include Glucagon.docs ?>
+<?include Glucose.docs ?>
+<?include Glycerol.docs ?>
+<?include GnRH.docs ?>
+<?include Gravity.docs ?>
+<?include H2O.docs ?>
+<?include hCG.docs ?>
+<?include Heart.docs ?>
+<?include HeartValves.docs ?>
+<?include Heat.docs ?>
+<?include Hemodialysis.docs ?>
+<?include Hemorrhage.docs ?>
+<?include HepaticFunction.docs ?>
+<?include Hypothalamus.docs ?>
+<?include Inhibin.docs ?>
+<?include Infusions.docs ?>
+<?include Insulin.docs ?>
+<?include InsulinInjection.docs ?>
+<?include IVDrip.docs ?>
+<?include IVEpinephrineInjection.docs ?>
+<?include Ketoacid.docs ?>
+<?include Kidney.docs ?>
+<?include Lactate.docs ?>
+<?include LeftHeart.docs ?>
+<?include LegMusclePump.docs ?>
+<?include Leptin.docs ?>
+<?include LH.docs ?>
+<?include LipidDeposits.docs ?>
+<?include Liver.docs ?>
+<?include LiverMetabolism.docs ?>
+<?include LowerExternalPressure.docs ?>
+<?include Lungs.docs ?>
+<?include Metabolism.docs ?>
+<?include Morphology.docs ?>
+<?include Nephrons.docs ?>
+<?include Nerves.docs ?>
+<?include O2.docs ?>
+<?include OralH2OGlucoseLoad.docs ?>
+<?include Organs.docs ?>
+<?include Orthostatics.docs ?>
+<?include Osmoles.docs ?>
+<?include OtherTissue.docs ?>
+<?include Pericardium.docs ?>
+<?include Peritoneum.docs ?>
+<?include Posture.docs ?>
+<?include Progesterone.docs ?>
+<?include Renin.docs ?>
+<?include RespiratoryCenter.docs ?>
+<?include RespiratoryMuscle.docs ?>
+<?include RightHeart.docs ?>
+<?include SequesteredBlood.docs ?>
+<?include SkeletalMuscle.docs ?>
+<?include Skin.docs ?>
+<?include SplanchnicCirculation.docs ?>
+<?include Startup.docs ?>
+<?include Status.docs ?>
+<?include Sweat.docs ?>
+<?include Testosterone.docs ?>
+<?include ThyroidGland.docs ?>
+<?include TiltTable.docs ?>
+<?include TissueH2O.docs ?>
+<?include Transfusion.docs ?>
+<?include Triglyceride.docs ?>
+<?include Urea.docs ?>
+<?include Uterus.docs ?>
+<?include VascularCompartments.docs ?>
+
+
+End

@@ -1,0 +1,18 @@
+HumMod / Pericardium-V0.REF
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+The size of the pericardium can slowly change
+using changes in the unstressed volume (V0).
+
+It there is outward transmural pressure (TMP),
+the volume increases, and vice versa.
+
+If the TMP is off by 2 mmHg, I figure V0 adds
+about 10 mL/day.
+
+End

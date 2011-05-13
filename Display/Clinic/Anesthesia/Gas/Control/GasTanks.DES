@@ -1,0 +1,96 @@
+HumMod / GasTanks
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.6 </high>
+   <wide> 30.0 </wide>
+   <title> Gas Tanks </title>
+
+<structurename> AirSupply-GasTanks </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> O2Valve(%) </name>
+  <listname> Common.Percent </listname>
+  <label> O2 (%) </label>
+</slidebar>
+
+<slidebar>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> N2Valve(%) </name>
+  <listname> Common.Percent </listname>
+  <label> N2 (%) </label>
+</slidebar>
+
+<repeatlist>
+  <name> AnesthesiaGasTanks.CO2Valve(%) </name>
+  <repeat><reps> 50 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps> 15 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> CO2Valve(%) </name>
+  <listname> AnesthesiaGasTanks.CO2Valve(%) </listname>
+  <label> CO2 (%) </label>
+</slidebar>
+
+<repeatlist>
+  <name> AnesthesiaGasTanks.COValve(PPM) </name>
+  <repeat><reps> 10 </reps><stepsize> 10 </stepsize></repeat>
+  <repeat><reps> 9 </reps><stepsize> 100 </stepsize></repeat>
+  <repeat><reps> 9 </reps><stepsize> 1000 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> COValve(PPM) </name>
+  <listname> AnesthesiaGasTanks.COValve(PPM) </listname>
+  <label> CO (PPM) </label>
+</slidebar>
+
+<showvalue>
+   <row> 8.4 </row><col> 12 </col>
+   <name> COValve(%) </name>
+   <format><decimal> 3 </decimal></format>
+   <label> CO (%) </label>
+</showvalue>
+
+<repeatlist>
+  <name> AnesthesiaGasTanks.AnestheticValve(%) </name>
+  <repeat><reps> 50 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps> 95 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> AnestheticValve(%) </name>
+  <listname> AnesthesiaGasTanks.AnestheticValve(%) </listname>
+  <label> Anesthetic (%) </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26 </col>
+  <line> Inspired % may be a bit different </line>
+  <line> than the gas tank settings. </line>
+</infobutton>
+
+</groupbox>
+
+End

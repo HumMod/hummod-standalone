@@ -1,0 +1,82 @@
+HumMod / Status
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 12.8 </high>
+   <wide> 30.0 </wide>
+   <title> Status </title>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> Request </text>
+</label>
+
+<maplist>
+  <name> Exercise-Control.Request </name>
+  <map><val> 0 </val><img> Resting </img></map>
+  <map><val> 3 </val><img> Exercise Bike </img></map>
+  <map><val> 4 </val><img> Treadmill </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 2.6 </row><col> 1.0 </col>
+  <name> Exercise-Control.Request </name>
+  <listname> Exercise-Control.Request </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<label>
+  <row> 6.0 </row><col> 1.0 </col>
+  <text> Status </text>
+</label>
+
+<checkmark>
+   <row> 7.2 </row><col> 1.0 </col>
+   <name> Status.Resting </name>
+   <label> Resting </label>
+</checkmark>
+
+<checkmark>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> Status.Working </name>
+   <label> Working </label>
+</checkmark>
+
+<checkmark>
+   <row> 9.2 </row><col> 1.0 </col>
+   <name> Status.Aerobics </name>
+   <label> Aerobics </label>
+</checkmark>
+
+<checkmark>
+   <row> 10.2 </row><col> 1.0 </col>
+   <name> Status.ExerciseBike </name>
+   <label> ExerciseBike </label>
+</checkmark>
+
+<checkmark>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Status.Treadmill </name>
+   <label> Treadmill </label>
+</checkmark>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> A request for exercise is not executed </line>
+  <line> when exercise is being controlled by the daily </line>
+  <line> planner or when the subject is comatose. </line>
+</infobutton>
+
+</groupbox>
+
+End

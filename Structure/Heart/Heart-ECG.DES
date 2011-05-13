@@ -1,0 +1,137 @@
+HumMod / Heart-ECG
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-ECG </name>
+
+<variables>
+
+<var><name> Index </name><val> 0 </val></var>
+<var><name> Now </name></var>
+
+<constant><name> NORMAL  </name><val> 0 </val></constant>
+<constant><name> PACED   </name><val> 1 </val></constant>
+<constant><name> STSHIFT </name><val> 2 </val></constant>
+<constant><name> VFIB    </name><val> 3 </val></constant>
+<constant><name> FLAT    </name><val> 4 </val></constant>
+
+<var><name> Is_OK </name><val> TRUE </val></var>
+<var><name> Is_Paced </name><val> FALSE </val></var>
+<var><name> Is_STShift </name><val> FALSE </val></var>
+<var><name> Is_VFib </name><val> FALSE </val></var>
+<var><name> Is_Flat </name><val> FALSE </val></var>
+
+<var><name> R-RInterval </name></var>
+<var><name> Q-TInterval </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<def><name> R-RInterval </name><val> Heart-Intervals.R-R </val></def>
+<def><name> Q-TInterval </name><val> Heart-Intervals.Systolic </val></def>
+
+<def><name> Now </name><val> NORMAL </val></def>
+
+<testcase>
+
+<case>
+<test> Heart-Pacemaker.Switch </test>
+  <def><name> Now </name><val> PACED </val></def>
+</case>
+
+<case>
+<test> Heart-Pain.HasPain </test>
+  <def><name> Now </name><val> STSHIFT </val></def>
+</case>
+
+<case>
+<test> Heart-VFib.Is_Fibrillating </test>
+  <def><name> Now </name><val> VFIB </val></def>
+</case>
+
+<case>
+<test> Heart-Asystole.Is_Asystole </test>
+  <def><name> Now </name><val> FLAT </val></def>
+</case>
+
+</testcase>
+
+<testcase>
+
+<case>
+<test> ( Index NE FLAT ) AND ( Now EQ FLAT ) </test>
+  <def><name> Index </name><val> FLAT </val></def>
+
+  <call> Reset </call>
+  <def><name> Is_Flat </name><val> TRUE </val></def>
+
+  <page> The ECG is flat! </page>
+</case>
+
+<case>
+<test> ( Index NE VFIB ) AND ( Now EQ VFIB ) </test>
+  <def><name> Index </name><val> VFIB </val></def>
+
+  <call> Reset </call>
+  <def><name> Is_VFib </name><val> TRUE </val></def>
+
+  <page> The ECG shows V-Fib! </page>
+</case>
+
+<case>
+<test> ( Index NE STSHIFT ) AND ( Now EQ STSHIFT ) </test>
+  <def><name> Index </name><val> STSHIFT </val></def>
+
+  <call> Reset </call>
+  <def><name> Is_STShift </name><val> TRUE </val></def>
+
+  <page> ECG shows S-T segment shift. </page>
+</case>
+
+<case>
+<test> ( Index NE PACED ) AND ( Now EQ PACED ) </test>
+  <def><name> Index </name><val> PACED </val></def>
+
+  <call> Reset </call>
+  <def><name> Is_Paced </name><val> TRUE </val></def>
+
+  <page> ECG shows a pacemaker. </page>
+</case>
+
+<case>
+<test> ( Index NE NORMAL ) AND ( Now EQ NORMAL ) </test>
+  <def><name> Index </name><val> NORMAL </val></def>
+
+  <call> Reset </call>
+  <def><name> Is_OK </name><val> TRUE </val></def>
+
+  <page> ECG now looks OK. </page>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Reset </name>
+
+<def><name> Is_OK </name><val> FALSE </val></def>
+<def><name> Is_Paced </name><val> FALSE </val></def>
+<def><name> Is_STShift </name><val> FALSE </val></def>
+<def><name> Is_VFib </name><val> FALSE </val></def>
+<def><name> Is_Flat </name><val> FALSE </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

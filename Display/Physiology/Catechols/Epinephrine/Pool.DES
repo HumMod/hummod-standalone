@@ -1,0 +1,104 @@
+HumMod / Pool
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 16.2 </high>
+   <wide> 30.0 </wide>
+   <title> Pool </title>
+
+<structurename> EpiPool </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [Epi(pG/mL)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [ Epi (pG/mL) ] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Epi(pG/mL)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 100 </max><inc> 100 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> [Epi(nMol/L)] </name>
+   <format><decimal> 3 </decimal></format>
+   <label> [ Epi (nMol/L) ] </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.6 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> A typical [Epi] is 40 pG/mL or 0.22 nM/L. </line>
+  <line> </line>
+  <line> Epinephrine (C9 H13 N O3) has a molecular weight </line>
+  <line> of 183. </line>
+  <line> </line>
+  <line> Epi uG * 5.46 = nMol </line>
+  <line> </line>
+  <line> Multiply by 0.00546 to convert pG/mL to nMol/L. </line>
+  <line> </line>
+  <line> Volume of distribution for catechols is ECFV or </line>
+  <line> 15,000 mL. </line>
+  <line> </line>
+  <line> Typical circulating pool is 600 nG or 600000 pG. </line>
+  <line> </line>
+  <line> Typical secretion and clearance is 375 nG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

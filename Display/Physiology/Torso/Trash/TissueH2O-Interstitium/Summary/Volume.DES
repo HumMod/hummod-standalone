@@ -1,0 +1,77 @@
+HumMod / Volume
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.8 </high>
+   <wide> 30.0 </wide>
+   <title> Volume </title>
+
+<structurename> TissueH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Vol </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 38000 </min><max> 40000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1 </col>
+   <name> Gain </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 1 </col>
+   <name> Loss </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for volume, change, gain and loss </line>
+  <line> are mL/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,107 @@
+HumMod / ECFV
+
+Created : 04-Jun-06
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 18.4 </high>
+   <wide> 30.0 </wide>
+   <title> ECFV </title>
+
+<structurename> DigoxinPool </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [Digoxin] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [Digoxin] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Digoxin] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1.0 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 10.0 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.0 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.4 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.4 </row><col> 3 </col>
+   <name> DigoxinKidney.FiltLoss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Filtered </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.4 </row><col> 3 </col>
+   <name> DigoxinKidney.SecLoss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Secreted </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.8 </row><col> 1.0 </col>
+   <name> VolDist </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume Distribution </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are </line>
+  <line> </line>
+  <line> [Conc] = nG/mL </line>
+  <line> Mass = uG </line>
+  <line> Various Rates = uG/Min </line>
+  <line> Volume Distribution = L </line>
+</infobutton>
+
+</groupbox>
+
+End

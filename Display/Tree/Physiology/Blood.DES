@@ -1,0 +1,64 @@
+HumMod / Blood
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Blood </name>
+  <label> Blood </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Blood_Volume </name>
+  <label> Volume </label>
+  <parent> Blood </parent>
+</leaf>
+
+<leaf>
+  <name> Blood_Plasma </name>
+  <label> Plasma </label>
+  <parent> Blood </parent>
+</leaf>
+
+<leaf>
+  <name> Blood_RedCells </name>
+  <label> Red Cells </label>
+  <parent> Blood </parent>
+</leaf>
+
+<leaf>
+  <name> Blood_Chemistry </name>
+  <label> Chemistry </label>
+  <parent> Blood </parent>
+</leaf>
+
+<leaf>
+  <name> Blood_Electrolytes </name>
+  <label> Electrolytes </label>
+  <parent> Blood </parent>
+</leaf>
+
+<branch>
+  <name> Blood_Hemoglobin </name>
+  <label> Hemoglobin </label>
+  <parent> Blood </parent>
+</branch>
+
+<leaf>
+  <name> Hemoglobin_Properties </name>
+  <label> Properties </label>
+  <parent> Blood_Hemoglobin </parent>
+</leaf>
+
+<leaf>
+  <name> Hemoglobin_Loading </name>
+  <label> Loading </label>
+  <parent> Blood_Hemoglobin </parent>
+</leaf>
+
+End

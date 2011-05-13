@@ -1,0 +1,21 @@
+HumMod / Start-Age DES
+
+Created : 21-Aug-09
+Last Modified : 06-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-Age </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Age.Initialize </call>
+</block>
+
+</definitions>
+</structure>
+
+End

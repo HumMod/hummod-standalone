@@ -1,0 +1,38 @@
+HumMod / Function
+
+Created : 24-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-OtherTissue-Function </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> OtherTissue </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Other Tissue - Function </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Organ-OtherTissue\Function\ ?>
+
+<?include Calories.DES ?>
+
+</panel>
+
+End

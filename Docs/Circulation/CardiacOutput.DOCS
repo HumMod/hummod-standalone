@@ -1,0 +1,129 @@
+`QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> CardiacOutput </structurename>
+
+<vardoc>
+<name> CardiacOutput.CardiacIndex </name>
+<topic> CardiacOutput - Overview </topic>
+<topic> CardiacOutput - Physical Units </topic>
+<topic> CardiacOutput - Normal Values</topic>
+<seealso> SurfaceArea.Area </seealso>
+<seealso> CardiacOutput.Flow(L/Min)</seealso>
+</vardoc>
+
+<vardoc>
+<name> CardiacOutput.Flow </name>
+<topic> CardiacOutput - Overview </topic>
+<topic> CardiacOutput - Physical Units </topic>
+<topic> CardiacOutput - Normal Values </topic>
+<seealso> LeftVentricle-Pumping.BloodFlow </seealso>
+</vardoc>
+
+<vardoc>
+<name> CardiacOutput.Flow(L/Min) </name>
+<topic> CardiacOutput - Overview </topic>
+<topic> CardiacOutput - Physical Units </topic>
+<topic> CardiacOutput - Normal Values </topic>
+<seealso> CardiacOutput.Flow </seealso>
+</vardoc>
+
+<vardoc>
+<name> CardiacOutput.StrokeVolume </name>
+<topic> StrokeVolume - Overview </topic>
+<topic> StrokeVolume - Normal Values </topic>
+<seealso> LeftVentricle-Pumping.StrokeVolume </seealso>
+</vardoc>
+
+<topicdoc>
+<name> CardiacOutput - Overview </name>
+<label> Overview </label>
+<content>
+
+Cardiac Output is the quantity of blood pumped into the 
+aorta each minute by the heart. 
+Cardiac Ouput = heart rate*stroke volume. 
+Cardiac Index is cardiac output expressed as a 
+function of body surface area
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> CardiacOutput - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Cardiac output may be expressed in mL/Min or as 
+a function of body surface area.
+Cardiac Index mL/min/m^2 
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> CardiacOutput - Normal Values </name>
+<label> Normal Values </label>
+<content>
+
+Resting CO: 5400mL/Min
+Normal Average Cardiac Index 3000mL/min/m^2 
+(Assuming a body weight of 70KG and a surface 
+area of 1.73 square meters).
+
+Stead EA Jr., Myers JD, Scheinberg P, Cargill H,
+Hickham JB, Levitan BA. Studies of cardiac output
+and of blood flow and metabolism of splanchnic area,
+brain, and kidney.
+Trans Assoc. Amer. Physicians 63:241, 1950.
+
+DuBois D, DuBois EF A formula to estimate the 
+approximate surface area if height and weight 
+be known. Arch Int Med 17:863-871, 1916
+
+DuBois EF. Basal metabolism in health and disease.
+Philadelphia:Lea and Febiger, 1936.
+
+Brandfonbrener M, Landowne M and Shock NW. Changes
+in cardiac output with age.
+Circulation 12:557, 1955.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> StrokeVolume - Overview </name>
+<label> Overview </label>
+<content>
+
+Stroke volume(SV) is the difference between 
+end-diastolic volume(EDV) and the end-systolic 
+volume(ESV). EDV is the filled volume of the 
+left ventricle prior to contraction and the 
+ESV is the residual volume of blood remaining 
+after ejection. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> StrokeVolume - Normal Values </name>
+<label> Normal Values </label>
+<content>
+
+In a typical heart, the EDV is about 120mL 
+of blood and the ESV about 50mL of blood. 
+The difference of these two volumes, 70mL, 
+represents the SV.
+
+</content>
+</topicdoc>
+
+
+
+End

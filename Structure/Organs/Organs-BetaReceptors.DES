@@ -1,0 +1,25 @@
+HumMod / Organs-BetaReceptors
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-BetaReceptors </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Kidney-BetaReceptors.Calc </call>
+  <call> LeftHeart-BetaReceptors.Calc </call>
+  <call> RightHeart-BetaReceptors.Calc </call>
+  <call> SANode-BetaReceptors.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

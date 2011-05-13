@@ -1,0 +1,65 @@
+HumMod / Electrolytes
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<branch>
+  <name> Electrolytes </name>
+  <label> Electrolytes </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Electrolytes_Na </name>
+  <label> Na+ </label>
+  <parent> Electrolytes </parent>
+</leaf>
+
+<branch>
+  <name> K+ </name>
+  <label> K+ </label>
+  <parent> Electrolytes </parent>
+</branch>
+
+<leaf>
+  <name> K+ECFV </name>
+  <label> ECFV </label>
+  <parent> K+ </parent>
+</leaf>
+
+<leaf>
+  <name> K+Membrane </name>
+  <label> Membrane </label>
+  <parent> K+ </parent>
+</leaf>
+
+<leaf>
+  <name> K+Cell </name>
+  <label> Cell </label>
+  <parent> K+ </parent>
+</leaf>
+
+<leaf>
+  <name> Electrolytes_Cl </name>
+  <label> Cl- </label>
+  <parent> Electrolytes </parent>
+</leaf>
+
+<leaf>
+  <name> Electrolytes_PO4 </name>
+  <label> PO4-- </label>
+  <parent> Electrolytes </parent>
+</leaf>
+
+<leaf>
+  <name> Electrolytes_SO4 </name>
+  <label> SO4-- </label>
+  <parent> Electrolytes </parent>
+</leaf>
+
+End

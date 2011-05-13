@@ -1,0 +1,54 @@
+HumMod / Pain
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> Pain </title>
+
+<structurename> RightHeart-Pain </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> HasPain </name>
+  <format><boolean/></format>
+  <label> Has Pain </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> IsIschemic </name>
+  <format><boolean/></format>
+  <label> Is Ischemic </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> IsAcidic </name>
+  <format><boolean/></format>
+  <label> Is Acidic </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> RightHeart-Lactate.[Lac-(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Lac- (mEq/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

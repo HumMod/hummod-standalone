@@ -1,0 +1,42 @@
+HumMod / Kidney-MyogenicDelay DES
+
+Created : 13-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Kidney-MyogenicDelay </name>
+
+<equations>
+
+<stabledelay>
+  <name> PressureChange </name>
+  <outputname> PressureChange </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> PressureChange(Steady-State) </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.1 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> K </name><val> 2.0 </val></def>
+<def><name> DxMax </name><val> 0.2 </val></def>
+
+<def><name> PressureChange(Steady-State) </name><val> Kidney-Myogenic.PressureChange(Steady-State) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

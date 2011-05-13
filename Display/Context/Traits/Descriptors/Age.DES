@@ -1,0 +1,65 @@
+HumMod / Age
+
+Created : 20-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 7.6 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Age </title>
+
+<structurename> Descriptors-Age </structurename>
+
+<checkmark>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> IsYoung </name>
+   <label> Young </label>
+</checkmark>
+
+<checkmark>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> IsYoungish </name>
+   <label> Youngish </label>
+</checkmark>
+
+<checkmark>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> IsMiddleaged </name>
+   <label> Middleaged </label>
+</checkmark>
+
+<checkmark>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> IsOld </name>
+   <label> Old </label>
+</checkmark>
+
+<checkmark>
+   <row> 5.4 </row><col> 1.0 </col>
+   <name> IsVeryOld </name>
+   <label> Very Old </label>
+</checkmark>
+
+<showvalue>
+   <row> 6.8 </row><col> 1.0 </col>
+   <name> Value </name>
+   <format><integer/></format>
+   <label> Value </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

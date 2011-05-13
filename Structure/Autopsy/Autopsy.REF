@@ -1,0 +1,77 @@
+HumMod / Autopsy.REF
+
+Created : 2010-05-19
+Last Modified : 2010-05-19
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+StillAlive boolean is set to TRUE at start up
+while IsDead is initialized to FALSE. IsDead
+is set to TRUE on Brain-Function.IsReally Dead.
+
+Here are the triggers for the autopsy report items.
+
+Lung Disease. Right to left shunt > 800.
+
+Pulmonary Edema. Extra lung water > 400.
+
+Cardiac Tamponade. Pericardial volume > 30.
+
+Nephron Loss. Nephron count (x Normal) < 0.7
+
+Right Heart Infarction. Infarct area > 10%.
+
+Right Heart Hypertrophy. Hypertrophy is TRUE.
+
+Left Heart Infarction. Infarct area > 10%.
+
+Left Heart Hypertrophy. Hypertrophy is TRUE.
+
+Pulmonic Valve Stenosis. Open area < 2.0.
+
+Pulmonic Valve Regurgitation. Regurgitation fraction > 0.
+
+Aortic Valve Stenosis. Open area < 2.0.
+
+Aortic Valve Regurgitation. Regurgitation fraction > 0.
+
+Tricuspid Valve Stenosis. Open area < 2.0.
+
+Tricuspid Valve Regurgitation. Regurgitation fraction > 0.
+
+Mitral Valve Stenosis. Open area < 3.0.
+
+Mitral Valve Regurgitation. Regurgitation fraction > 0.
+
+Blood Loss. Blood volume < 4400.
+
+Anemia. Hematocrit < 0.36
+
+Polycythemia. Hematocrit > 0.52
+
+Dehydration. IFV < 11,000.
+
+Peripheral Edema. Upper, middle or lower torso show an
+edema greater than or equal to 1+.
+
+Ascites. Ascites volume > 500.
+
+Vascular Damage. Maybe an A-V fistula has a conductance
+> 0.
+
+Aortic Rupture. Boolean is TRUE.
+
+Vena Cava Rupture. Boolean is TRUE.
+
+CO Poisoning. Carboxyhemoglobin > 20%
+
+
+
+
+
+
+
+
+
+End

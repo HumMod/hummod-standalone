@@ -1,0 +1,95 @@
+HumMod / Glycerol
+
+Created : 29-Mar-08
+Last Modified : 2010-05-30
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<structure><name> GlycerolPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [Glycerol] </name></var>
+<var><name> [Glycerol(mG/dL)] </name></var>
+<var><name> [Glycerol(mMol/L)] </name></var>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_MMOL </name><val> 10.86 </val></constant>
+
+<constant><name> FFA_TO_GLY </name><val> 0.13 </val></constant>
+
+<var><name> Synthesis </name></var>
+<var><name> [Glycerol]Effect </name></var>
+<parm><name> BasicSynthesis </name><val> 1.5 </val></parm>
+
+<var><name> AdiposeFFAUptake </name></var>
+
+<var><name> Degradation </name></var>
+<parm><name> K </name><val> 0.001 </val></parm>
+
+<var><name> GutFAAbsorption </name></var>
+<var><name> LiverFARelease </name></var>
+<var><name> TriglycerideHydrolysis </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 1500.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 15.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> [Glycerol]Effect </name>
+  <point><x> 0.0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x> 0.1 </x><y> 1.0 </y><slope> -20.0 </slope></point>
+  <point><x> 0.2 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcConc </name>
+
+<def><name> [Glycerol] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [Glycerol(mG/dL)] </name><val> PER_ML_TO_PER_DL * [Glycerol] </val></def>
+<def><name> [Glycerol(mMol/L)] </name><val> MG_TO_MMOL * [Glycerol] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> [Glycerol]Effect </name><val> [Glycerol]Effect [ [Glycerol] ] </val></def>
+<def><name> Synthesis </name><val> BasicSynthesis * [Glycerol]Effect </val></def>
+
+<def><name> Degradation </name><val> K * Mass </val></def>
+
+
+<def><name> GutFAAbsorption </name><val> FFA_TO_GLY * GILumenFat.Absorption </val></def>
+<def><name> LiverFARelease </name><val> FFA_TO_GLY * LM_FattyAcids.Release </val></def>
+
+<def><name> TriglycerideHydrolysis </name><val> TriglycerideHydrolysis.GlycerolRate </val></def>
+
+<def><name> Gain </name><val> Synthesis + TriglycerideHydrolysis </val></def>
+<def><name> Loss </name><val> Degradation + GutFAAbsorption + LiverFARelease </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

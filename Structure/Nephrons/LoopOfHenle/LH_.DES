@@ -1,0 +1,37 @@
+HumMod / X
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> X </name>
+
+<variables>
+
+<parm>
+  <name>  </name>
+  <val>  </val>
+</parm>
+
+<var>
+  <name>  </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name>  </name>
+  <val>  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

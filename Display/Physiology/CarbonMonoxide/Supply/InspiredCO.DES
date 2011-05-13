@@ -1,0 +1,58 @@
+HumMod / InspiredCO
+
+Created : 2010-06-05
+Last Modified : 2010-06-05
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Inspired CO </title>
+
+<structurename> AirSupply-InspiredAir </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> CO(%) </name>
+   <format><decimal> 3 </decimal></format>
+   <label> CO (%) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> CO(%) </name>
+      <label> CO(%) </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0.0 </min><max> 0.1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> PCO </name>
+   <format><decimal> 3 </decimal></format>
+   <label> pCO </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

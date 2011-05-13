@@ -1,0 +1,60 @@
+HumMod / DietFeeding
+
+Created : 11-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietFeeding </name>
+
+<variables>
+
+<var><name> Time </name></var>
+<var><name> Fraction </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<testcase>
+
+<case>
+<test> Status.Nutrition EQ 2 </test>
+  <def><name> Time </name><val> 1440.0 </val></def>
+  <def><name> Fraction </name><val> INVERT Time </val></def>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 0 </test>
+  <def><name> Time </name><val> DailyPlannerSchedule.MealCount * DailyPlannerControl.MealsDuration </val></def>
+
+  <conditional><name> Fraction </name>
+  <test> Time EQ 0.0 </test>
+  <true> 0.0 </true>
+  <false> INVERT Time </false>
+</conditional>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 1 </test>
+  <def><name> Time </name><val> DailyPlannerSchedule.MealCount * DailyPlannerControl.MealsDuration </val></def>
+  <def><name> Fraction </name><val> 0.0 </val></def>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 3 </test>
+  <def><name> Time </name><val> 0.0 </val></def>
+  <def><name> Fraction </name><val> 0.0 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

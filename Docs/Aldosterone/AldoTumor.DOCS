@@ -1,0 +1,53 @@
+QHP 2008 / Aldosterone.DOCS
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AldoTumor </structurename>
+
+<vardoc>
+<name> AldoTumor.SecretionRate </name>
+<topic> AldoTumor - Overview </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> AldoTumor - Overview </name>
+<label> Overview </label>
+<content>
+
+Primary aldosteronism or "Conn's syndrome" occurs when a 
+small tumor of the zona glomerulosa cells develops and 
+secretes large amounts of aldosterone. The most important 
+effects are hypokalemia, a slight increase in extracellular 
+fluid volume and blood volume, a very slight increase in 
+plasma sodium concentration and hypertension. 
+
+Patients with primary aldosteronism often exhibit occasional 
+periods of muscle paralysis caused by hypokalemia. The 
+paralysis is caused by a depressant effect of low extracellular
+potassium concentration on action potential transmission by 
+nerve fibers.
+
+The model user can set secretion rates of an aldosterone 
+secreting tumor. Normal secretion rate of aldosterone 
+is 330.0 pMol/Min
+
+JW Conn. Primary aldosteronism, a new clinical syndrome. 
+J Lab Clin Invest 45:3 - 17, 1955.
+
+NM Kaplan. Primary aldosteronism with malignant hypertension.
+New England Journal of Medicine 269:1282 - 1286, 1963.
+
+RC Tarazi, MM ibrahim, EL Bravo, HP Dustan. Hemodynamic
+characteristics of primary aldosteronism.
+New England Journal of Medicine 289: 1330 -1335, 1973.
+
+ 
+</content>
+</topicdoc>
+
+
+
+End

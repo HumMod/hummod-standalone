@@ -1,0 +1,110 @@
+HumMod / H2O
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 17.4 </high>
+   <wide> 30.0 </wide>
+   <title> H2O </title>
+
+<structurename> DietIntakeH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate(L/Day) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Intake (L/Day) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate(L/Day) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 3 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<maplist>
+  <name> Fixed? </name>
+  <map><val> 0 </val><img> Intake Controlled By Thirst </img></map>
+  <map><val> 1 </val><img> Fixed Intake </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Fixed? </name>
+  <listname> Fixed? </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<structurename> DietGoalH2O</structurename>
+
+<repeatlist>
+  <name> Rate(L/Day) </name>
+  <repeat><reps> 100 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> Rate(L/Day) </name>
+  <listname> Rate(L/Day) </listname>
+  <label> Fixed Intake </label>
+</slidebar>
+
+<repeatlist>
+  <name> DegF </name>
+  <firstval> 40.0 </firstval>
+  <repeat><reps> 14 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> DegF </name>
+  <listname> DegF </listname>
+  <label> Temp (F) </label>
+</slidebar>
+
+<showvalue>
+  <row> 14.8 </row><col> 3.0 </col>
+  <name> DegC </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Temp (C) </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.8 </row><col> 3.0 </col>
+  <name> DegK </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Temp (K) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical value for H2O intake is 2.0 L/Day </line>
+</infobutton>
+
+</groupbox>
+
+End

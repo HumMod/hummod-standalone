@@ -1,0 +1,18 @@
+HumMod / Catechols
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Catechols\ ?>
+
+<?include Norepinephrine\Norepinephrine.DES ?>
+<?include Epinephrine\Epinephrine.DES ?>
+<?include AlphaPool\AlphaPool.DES ?>
+<?include BetaPool\BetaPool.DES ?>
+<?include Pheochromocytoma\Pheochromocytoma.DES ?>
+
+End

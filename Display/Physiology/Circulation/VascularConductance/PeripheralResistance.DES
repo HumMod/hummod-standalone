@@ -1,0 +1,76 @@
+HumMod / PeripheralResistance
+
+Created : 05-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 13.8 </high>
+   <wide> 30.0 </wide>
+   <title> Peripheral Resistance </title>
+
+<structurename> PeripheralResistance </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TPR </name>
+   <format><decimal> 4 </decimal></format>
+   <label> TPR </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TPR </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0.015 </min><max> 0.020 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> SystemicArtys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Arterial Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> RightAtrium.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Atrial Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> CardiacOutput.Flow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Cardiac Output </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> TPR = (AP - RAP) / CO </line>
+  <line>  </line>
+  <line> A typical value is 0.017 mmHg/(mL/Min). </line>
+</infobutton>
+
+</groupbox>
+
+End

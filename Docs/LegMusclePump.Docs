@@ -1,0 +1,15 @@
+Digital Human / LegMusclePump
+
+Created : 02-Apr-05
+Last Modified : 02-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\LegMusclePump\ ?>
+
+<?include LegMusclePump.docs ?>
+</docs>
+End

@@ -1,0 +1,49 @@
+HumMod / Height
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 6.6 </row>
+   <col> 32.0 </col>
+   <high> 4.2 </high>
+   <wide> 30.0 </wide>
+   <title> Height </title>
+
+<structurename> Height </structurename>
+
+<repeatlist>
+  <name> Height </name>
+  <firstval> 120.0 </firstval>
+  <repeat><reps> 120 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col><wide> 8.0 </wide>
+  <name> Height </name>
+  <listname> Height </listname>
+  <label> Height (cM) </label>
+</slidebar>
+
+<showvalue>
+   <row> 2.6 </row><col> 3 </col>
+   <name> Height.Height(In) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Height (In) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Height is typically assigned a value in context, </line>
+  <line> but you can tweak it here if you want to. </line>
+</infobutton>
+
+</groupbox>
+
+End

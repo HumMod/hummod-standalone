@@ -1,0 +1,17 @@
+HumMod / Torso
+
+Created : 2010-04-17
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Physiology\Torso\ ?>
+
+<?include Summary\Summary.DES ?>
+
+<?include Lower\Lower.DES ?>
+<?include Middle\Middle.DES ?>
+<?include Upper\Upper.DES ?>
+
+End

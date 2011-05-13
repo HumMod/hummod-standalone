@@ -1,0 +1,48 @@
+HumMod / GILumenH2O.REF
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+Volume ========================================
+
+Typical lumen volume is 1000 mL on an intake of 1.4 mL/Min.
+This number is based on lumen volume being 1.4% body weight
+from
+
+   JCI 36:289-296, 1957.
+
+Data suggests a 1L oral load is nearly all absorbed in
+1 Hr.  Average rate would be 17 mL/Hr with a peak rate
+of about 30.
+
+   Baldes & Smirk. J.Physiol. 82:62,1934.
+
+Osmolar gradient is assumed to be 0.200 mOsm/mL.
+
+   Rate = Perm * Grad
+   30 = Perm * 0.200
+   Perm = 150
+
+Temperature ===================================
+
+Typical lumen heat content is 155 kCal.
+
+Specific heat (SH) of H2O is 0.001 (kCal/G)/DegK.
+
+To get temperature from heat
+
+   DegK = 1000.0 * kCal/G (or mL)
+   DegC = DegK - 273.15
+   DegF = ( 9 / 5 ) * DegC + 32
+
+To get heat from temperature
+
+   kCal = 0.001 * DegK * mL
+   kCal/Min = 0.001 * DegK * mL/Min
+
+End

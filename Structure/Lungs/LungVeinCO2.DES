@@ -1,0 +1,67 @@
+HumMod / LungVeinCO2
+
+Created : 10-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LungVeinCO2 </name>
+
+<variables>
+
+<var>
+  <name> [CO2] </name>
+</var>
+
+<var>
+  <name> [CO2(mEq/L)] </name>
+</var>
+
+<var>
+  <name> PCO2 </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> [CO2] </name>
+  <test> LungBloodFlow.Total GT 0.0 </test>
+  <true>
+      ( ( LungBloodFlow.AlveolarVentilated
+    * LungCO2.[Capy] )
+    + ( LungBloodFlow.TotalShunt
+    * LungArtyCO2.[CO2] ) )
+    / LungBloodFlow.Total
+  </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> [CO2(mEq/L)] </name><val> 1000.0 * [CO2] </val></def>
+
+<copy>
+  <from> [CO2] </from>
+  <to> Blood-BaseToGas.[HCO3] </to>
+</copy>
+
+<copy>
+  <from> BloodIons.[SID] </from>
+  <to> Blood-BaseToGas.[SID] </to>
+</copy>
+
+<call> Blood-BaseToGas.Calc </call>
+
+<copy>
+  <from> Blood-BaseToGas.pCO2 </from>
+  <to> PCO2 </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,95 @@
+HumMod / AnesthesiaIVOtherTissue
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVOtherTissue </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<var>
+  <name> VascCond </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 2.40 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> VascCond </name>
+  <point><x> 0.000 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 0.045 </x><y> 1.8 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / OtherTissue-Size.Vol </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> [Tissue] * AnesthesiaIVSolubility.GeneralK </val>
+</def>
+
+<def>
+  <name> VascCond </name>
+  <val> VascCond [ [Tissue] ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaIVBlood.[Blood] - [Vein] )
+    * OtherTissue-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

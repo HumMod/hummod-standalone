@@ -1,0 +1,70 @@
+HumMod / Inhibin Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+M.W. ~ 32,000
+
+Inhibin is a dimer of 32 KDa. There are two main variants,
+named A and B. The alpha chains are identical while the beta
+chains differ.
+
+Both seem to have the same potency in inhibiting FSH and
+LH secretion by the anterior pituitary, but I need some
+more info on this.
+
+The B variant comes from the follicle in proportion to
+follicle mass. The A variant comes from the corpus luteum
+also in proportion to mass.
+
+I'll use a generic inhibin (representing both variants) to
+get started.
+
+Dinge et.al. Clin. Chem. 50:767-769, 2004.
+
+They suggest 1.0 IU = 13.4 pG. Some use pG/mL while others
+use nG/L.
+
+Units are IU/L and pG/mL for us.
+
+1 IU/L = 13.4 pG/L = 0.0134 pG/mL
+
+Groome et.al. J. Clin. Endocrinol. Metab. 81:1401-1405, 1996.
+
+This paper has terrific menstrual cycle data.
+
+[Conc] = 3 pG/mL at start of cycle, 85 pG/mL at surge, and
+66 pG/mL mid-luteal. Multiply by 74.6 to get IU/L.
+
+The B variant goes to zero during pregnancy while the A
+variant surges. Might be up 50x at week 36.
+
+[Conc] = 8.0 IU/L in men. This may be too low. Check on it.
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+I've seen estimates of 1/2 life from 70 Min to 4 hours. Let's
+use 120 Min.
+
+3 pG/mL is 224 IU/L. Initial mass will be 2175 IU. Degradation
+rate constant is 1/120 or 0.008. Initial secretion and
+degradation are 18.1 IU/Min.
+
+In men, secretion rate is 1.0 IU/Min for a concentration of 8 IU/L.
+
+Peak follicular and mid-luteal secretion rates are just less
+than 30 x baseline.
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

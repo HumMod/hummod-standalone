@@ -1,0 +1,40 @@
+HumMod / GlomerulusProtein
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlomerulusProtein </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [Protein] </name></var>
+
+<parm><name> Perm </name><val> 0.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [Protein] </name><val> PlasmaProtein.[Protein] </val></def>
+<def><name> Rate </name><val> [Protein] * Perm </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [Protein] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

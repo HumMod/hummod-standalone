@@ -1,0 +1,74 @@
+HumMod / Voiding
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.2 </high>
+   <wide> 30.0 </wide>
+   <title> Voiding </title>
+
+<structurename> BladderVolume </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<label>
+  <row> 9.8 </row><col> 1.0 </col>
+  <text> Last Void </text>
+</label>
+
+<showvalue>
+  <row> 10.8 </row><col> 3.0 </col>
+  <name> Bladder.TimeLastVoid </name>
+  <format><timestamp/><fieldwidth> 20 </fieldwidth></format>
+  <label> Time </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.8 </row><col> 3.0 </col>
+  <name> VolumeVoid </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Volume </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

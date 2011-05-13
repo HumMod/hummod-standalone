@@ -1,0 +1,135 @@
+QHP 2008 / AnesthesiaGas.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AnesthesiaGasLung
+ </structurename>
+
+<vardoc>
+<name> AnesthesiaGasLung.[Alv] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.[Capy] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.D </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.N </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.pAlv </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.pCapy </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AnesthesiaGasLung.Uptake </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label>  </label>
+<content>
+
+We assume no diffusion barrier.
+Thus, gas uptake is flow limited,
+with the flows being alveolar
+ventilation and ventilated blood
+flow.
+
+   [B] - Bronchial Conc
+   [Alv] - Alveolar Conc
+   [Cap] - Capillary Conc
+   [V] - Pulmonary Vein Conc
+
+   pB - Bronchial pGas
+   pAlv - Alveolar pGas
+   pCap - Capillary pGas
+
+   Uptake = AlvVent * ([B] - [Alv])
+   Uptake = VentFlow * ([Cap] - [V])
+
+   pAlv = 760 * [Alv]
+   pCap = BloodK * [Cap]
+
+   pAlv = pCap
+
+Solving for pAlv yields
+
+          AvlVent * [B] + VentFlow * [V]
+   pAlv = ------------------------------
+            AlvVent / 760 + VentFlow / BloodK
+
+Trap for vent and flow both 0.  If so,
+pAlv will be 0.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label>  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

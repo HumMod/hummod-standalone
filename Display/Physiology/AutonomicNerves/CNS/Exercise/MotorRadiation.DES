@@ -1,0 +1,81 @@
+HumMod / MotorRadiation
+
+Created : 26-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 18.8 </high>
+   <wide> 30.0 </wide>
+   <title> Motor Radiation </title>
+
+<structurename> MotorRadiation </structurename>
+
+<showvalue>
+   <row> 1.4 </row>
+   <col> 1.0 </col>
+   <name> TotalEffect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalEffect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showcurve>
+  <row> 9.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> Exercise-Metabolism.TotalWatts </name>
+    <label> Exercise (W) </label>
+    <scale><min> 0 </min><max> 1000 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 3 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> TotalEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 17.2 </row><col> 1.0 </col>
+   <name> Exercise-Metabolism.TotalWatts </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Exercise (W) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effects are additive with units of x Normal. </line>
+  <line>  </line>
+  <line> Resting effect is 0.0. </line>
+</infobutton>
+
+</groupbox>
+
+End

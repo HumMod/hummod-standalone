@@ -1,0 +1,102 @@
+QHP 2008 / BloodVolume.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RBCSolids </structurename>
+
+<vardoc>
+<name> RBCSolids.FractSolids </name>
+<topic> FractSolids - RBCS1Definition </topic>
+<topic> RBCSolids - Physical Units </topic>
+<topic> RBCSolids - Concentration Units </topic>
+<topic> RBCSolids - Overview </topic>
+</vardoc>
+
+<vardoc>
+<name> RBCSolids.InitialMass </name>
+<topic> InitialMass - RBCS2Definition </topic>
+<topic> RBCSolids - Physical Units </topic>
+<topic> RBCSolids - Concentration Units </topic>
+<topic> RBCSolids - Overview </topic>
+<seealso> RBCSolids.FractSolids </seealso>
+<seealso> RBCVol.InitialVol</seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCSolids.Mass </name>
+<topic> Mass - RBCS3Definition </topic>
+<topic> RBCSolids - Physical Units </topic>
+<topic> RBCSolids - Concentration Units </topic>
+<topic> RBCSolids - Overview </topic>
+<seealso> RBCSolids.FractSolids </seealso>
+<seealso> RBCVol.Vol</seealso>
+</vardoc>
+
+<topicdoc>
+<name> FractSolids - RBCS1Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialMass - RBCS2Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name>  Mass - RBCS3Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCSolids - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+mL
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCSolids - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+RBC solids are typically 820mL or 0.34 as expressed 
+as a fraction of total RBC volume.
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCSolids - Overview </name>
+<label> Overview </label>
+<content>
+
+Each red blood cell is comprised of water and solids, 
+the latter in the form of hemoglobin. Red cells have 
+the ability to concentrate hemoglobin in the cell fluid 
+up to 34grams in each 100mL of cells. In certain clinical 
+conditions (hypochromic anemia), inadequate quantities of 
+transferrin result in red cells that contain much less 
+hemoglobin than normal.
+
+</content>
+</topicdoc>
+
+End

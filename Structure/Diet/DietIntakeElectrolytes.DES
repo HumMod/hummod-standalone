@@ -1,0 +1,74 @@
+HumMod / DietIntakeElectrolytes
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietIntakeElectrolytes </name>
+
+<variables>
+
+<var><name> Na+_mEq/Min </name></var>
+<var><name> Cl-_mEq/Min </name></var>
+<var><name> K+_mEq/Min </name></var>
+<var><name> PO4--mEq/Min </name></var>
+<var><name> SO4--mEq/Min </name></var>
+
+<var><name> Intake(xGoal) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<if>
+<test> Brain-Function.IsReallyDead </test>
+<true>
+  <def><name> Na+_mEq/Min </name><val> 0.0 </val></def>
+  <def><name> Cl-_mEq/Min </name><val> 0.0 </val></def>
+  <def><name> K+_mEq/Min </name><val> 0.0 </val></def>
+  <def><name> PO4--mEq/Min </name><val> 0.0 </val></def>
+  <def><name> SO4--mEq/Min </name><val> 0.0 </val></def>
+  <exitblock/>  
+</true>
+</if>
+
+<def>
+  <name> Intake(xGoal) </name>
+  <val> DietIntakeNutrition.Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> Na+_mEq/Min </name>
+  <val> DietFeeding.Fraction * DietGoalElectrolytes.Na+_mEq/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> Cl-_mEq/Min </name>
+  <val> DietFeeding.Fraction * DietGoalElectrolytes.Cl-_mEq/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> K+_mEq/Min </name>
+  <val> DietFeeding.Fraction * DietGoalElectrolytes.K+_mEq/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> PO4--mEq/Min </name>
+  <val> DietFeeding.Fraction * DietGoalElectrolytes.PO4--mEq/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> SO4--mEq/Min </name>
+  <val> DietFeeding.Fraction * DietGoalElectrolytes.SO4--mEq/Day * Intake(xGoal) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

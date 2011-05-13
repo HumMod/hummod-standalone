@@ -1,0 +1,86 @@
+HumMod / BVSeqVeins
+
+Created : 19-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BVSeqVeins </name>
+
+<variables>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+<var>
+  <name> TMP </name>
+</var>
+
+<parm>
+  <name> Conductance </name>
+  <val> 10.0 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 150.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.50 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> VolOnPressure </name>
+  <point><x>   0 </x><y> -100 </y><slope> 2.00 </slope></point>
+  <point><x> 150 </x><y>   11 </y><slope> 0.11 </slope></point>
+  <point><x> 600 </x><y>   50 </y><slope> 0.15 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> TMP </name>
+  <val> VolOnPressure [ Vol ] </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> TMP + LowerExternalPressure.Pressure </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> DxMax </name>
+  <val> 0.8 </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Conductance * ( RegionalPressure.LowerVein - Pressure ) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

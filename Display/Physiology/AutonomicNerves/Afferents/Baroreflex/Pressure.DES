@@ -1,0 +1,63 @@
+HumMod / Pressure
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Carotid Perfusion </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> CarotidSinus.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sinus Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Hydrostatics.CarotidGradient </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Hydrostatic Gradient </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> SystemicArtys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Arterial Pressure </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Carotid sinus pressure is aortic </line>
+  <line> pressure plus the hydrostatic </line>
+  <line> gradient. </line>
+  <line>  </line>
+  <line> Units are mmHg. </line>
+  <line>  </line>
+  <line> In the recumbent position </line>
+  <line>  </line>
+  <line> Sinus = 97.0 </line>
+  <line> Gradient = 0.0 </line>
+  <line> Aorta = 97.0 </line>
+  <line>  </line>
+  <line> In the upright position </line>
+  <line>  </line>
+  <line> Sinus = 82.0 </line>
+  <line> Gradient = -15.0 </line>
+  <line> Aorta = 97.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

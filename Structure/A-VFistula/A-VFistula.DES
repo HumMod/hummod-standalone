@@ -1,0 +1,14 @@
+HumMod / A-VFistula
+
+Created : 2010-05-20
+Last Modified : 2010-05-20
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<?path Structure\A-VFistula\ ?>
+
+<?include A-VFistula-Pressure.DES ?>
+<?include A-VFistula-Flow.DES ?>
+
+End

@@ -1,0 +1,32 @@
+HumMod / LeptinClearance
+
+Created : 15-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LeptinClearance </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> K </name><val> 0.01 </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> K * LeptinPool.Mass </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

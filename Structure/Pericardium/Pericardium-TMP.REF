@@ -1,0 +1,43 @@
+HumMod / Pericardium-TMP.REF
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+The transmural pressure (TMP) - volume 
+relationship has an unstressed volume and
+an exponential shape.
+
+The math is also used in ventricular EDP
+-EDV relationships.
+
+Isaacs, Am. Heart J. 48:66, 1954
+has a nifty pericardial P-V curve.
+
+The pressure-volume relationship implemented
+here is an exponential.
+
+  Vol = Stressed Volume
+  Comp = Compliance
+
+  TMP = exp (Stiffness * Vol) - 1
+  Vol = ln (TMP + 1) / Stiffness
+                    1
+  Comp = -------------------------
+         Stiff * exp (Stiff * Vol)
+
+If the pericardium has been ripped open, the
+TMP is always zero.
+
+Notice the goofy way in which TMP is calculated.
+This will allow up to use the showmap element
+to display the entire P-V relationship.
+
+
+
+
+End
+
+

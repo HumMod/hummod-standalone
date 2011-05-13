@@ -1,0 +1,28 @@
+HumMod / OtherTissure-CO2.REF
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The other tissue CO2 compartment is quite stable
+compared to other compartments.  Flow is 373 and
+volume is 3167 for a Tau of 8.5 minutes.
+
+But flow is straight through. I'm going to insert a
+flow predictor as a warmup for other, stiffer CO2
+compartments.
+
+  Output = Alpha * Output(0) + (1-Alpha) * Input  (1)
+  Alpha = EXP(-Dx/Tau)                            (2)
+
+It's better to use K = 1/Tau, since this prevents
+divide by zero problems. Equation (2) becomes
+
+  Alpha = EXP(-K * Dx)                            (3)
+
+  K = Flow / Volume                               (4)
+
+End

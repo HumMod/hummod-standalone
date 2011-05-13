@@ -1,0 +1,54 @@
+HumMod / Ovaries-Progesterone
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Ovaries-Progesterone </name>
+
+<variables>
+
+<var><name> Secretion </name></var>
+
+<parm><name> BasicSecretion </name><val> 20.0 </val></parm>
+
+<var><name> MassEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x>    0.0 </x><y>  0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 4000.0 </x><y> 10.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> MassEffect </name>
+  <val> MassEffect [ Ovaries-CorpusLuteum.Mass ] </val>
+</def>
+
+<def>
+  <name> Secretion </name>
+  <val>
+      BasicSecretion
+    * MassEffect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

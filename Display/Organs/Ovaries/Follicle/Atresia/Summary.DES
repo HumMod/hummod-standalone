@@ -1,0 +1,104 @@
+HumMod / Summary
+
+Created : 06-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 22.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> Follicle-Atresia </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> MassEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Mass Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 10.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Ovaries-Follicle.Mass </name>
+    <label> Mass </label>
+    <scale><min> 0 </min><max> 3000 </max><inc> 1000 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> MassEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 17.8 </row><col> 1.0 </col>
+   <name> Ovaries-Follicle.Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass - Follicle </label>
+</showvalue>
+
+<repeatlist>
+  <name> K </name>
+  <repeat><reps> 100 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 19.2 </row><col> 1.0 </col>
+  <name> K </name>
+  <listname> K </listname>
+  <label> K </label>
+</slidebar>
+
+<showvalue>
+   <row> 20.8 </row><col> 1.0 </col>
+   <name> IsAtretic </name>
+   <format><list> Common.NoYes </list></format>
+   <label> Is Atretic? </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

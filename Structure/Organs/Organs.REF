@@ -1,0 +1,33 @@
+HumMod / Organs.REF
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+These structures are a bridge between the main structure and the
+major individual organs.
+
+Main structure calls here and organs passes the call on to all
+of the relevant organs. This takes some of the busyness out of
+the main structure.
+
+The major organs (12) are
+
+   Bone
+   Brain
+   Fat
+   GITract
+   Kidney
+   LeftHeart
+   Liver
+   OtherTissue
+   RespiratoryMuscle
+   RightHeart
+   SkeletalMuscle
+   Skin
+
+End

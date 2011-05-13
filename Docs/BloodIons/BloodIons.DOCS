@@ -1,0 +1,278 @@
+2QHP 2008 / BloodIons.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BloodIons </structurename>
+
+<vardoc>
+<name> BloodIons.[SID(mEq/L)]</name>
+<topic> SID - DefinitionBI1 </topic>
+<topic> [SID] - Physical Units </topic>
+<topic> [SID] - Concentration Units </topic>
+
+</vardoc>
+
+<vardoc>
+<name> BloodIons.[SID] </name>
+<topic> SID - DefinitionBI1 </topic>
+<topic> [SID] - Physical Units </topic>
+<topic> [SID] - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.Anions </name>
+<topic> Anions - DefinitionBI2 </topic>
+<topic> Anions - Physical Units </topic>
+<topic> Anions - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.AnionsLessProtein </name>
+<topic> AnionsLessProtein - DefinitionBI3 </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.Cations </name>
+<topic> Cations - DefinitionBI4 </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.Protein </name>
+<topic> Protein - DefinitionBI6 </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.StrongAnions </name>
+<topic> StrongAnions - DefinitionBI7</topic>
+</vardoc>
+
+<vardoc>
+<name> BloodIons.WeakAnions </name>
+<topic> WeakAnions - DefinitionBI8 </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> SID - DefinitionBI1 </name>
+<label> Definition </label>
+<content>
+
+Peter Stewart was a Canadian physiologist who introduced 
+the term "strong ion difference" or [SID] to mean the 
+concentration of strongly dissociating cations minus 
+the concentration of strongly dissociating anions. Strong
+cations are Na+, K+ and strong anions are Cl- and lactate.  
+
+The concentrations of anions and cations in both plasma
+and cells must be equal to maintain electrical neutrality.
+
+His equation is:
+
+[SID] + [H+] = [HCO3-] + [A-] + [CO2] + [OH-]
+
+where [A-] is the concentration of dissociated weak acids.
+
+In HumMod, SID is calculated from the cations [Na+] and [K+].
+The anions used are [Cl-], [Lac-]. Additionally the following 
+strong anions are included: Ketoacids [KA-], [SO4--] and [PO--]. 
+Under normal physiological conditions the contribution of the 
+latter three anions is small. 
+ 
+Stewart PA. Independent and dependent variables of acid-base 
+control. Respir Physiol 33: 9–26, 1978.
+
+Stewart PA. How to Understand Acid-Based: A Quantitative 
+Acid-Base Primer for Biology and Medicine. New York: Elsevier, 1981.
+
+Stewart PA. Modern quantitative acid-base chemistry. 
+Can J Physiol Pharmacol 61: 1444–1461, 1983.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [SID] - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[SID] is expressed in mEq/mL
+[SID] = 0.001 * [SID(mEq/L)]
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [SID] - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Under normal physiological conditions [SID] = 40mEq/L
+or 0.04mEq/mL
+
+Stewart PA. Independent and dependent variables of acid-base 
+control. Respir Physiol 33: 9–26, 1978.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Anions - DefinitionBI2 </name>
+<label>  Definition </label>
+<content>
+
+Many substances dissociate into ions when dissolved
+in water. Such substances are called electrolytes.
+Negatively charged electrolytes are called anions and
+can be divided into strong and weak anions. Strong
+anions are always completely dissociated in solution
+and the resulting anions are considered strong anions.
+Weak anions are only partially dissociated into ions
+when they are dissolved in water.
+
+Strong anions are chloride (Cl-), ketoacids (KA-), 
+lactate (Lac-), sulphate (SO4--) and phosphate (PO --).
+Bicarbonate (HCO3-) is a weak anion. Proteins are considered 
+weak anions because of their negative electric charge. 
+
+Stewart PA. Independent and dependent variables of acid-base 
+control. Respir Physiol 33: 9–26, 1978.
+
+Stewart PA. How to Understand Acid-Based: A Quantitative 
+Acid-Base Primer for Biology and Medicine. New York: Elsevier, 1981.
+
+Stewart PA. Modern quantitative acid-base chemistry. 
+Can J Physiol Pharmacol 61: 1444–1461, 1983.
+
+Figge J, Rossing TH, Fencl V. The role of serum proteins in 
+acid-base equilibria. J. Lab Clin Med 117: 453 - 467, 1991.
+
+Figge J, Mydosh T, Fencl V. Serum proteins and acid -base 
+equilibria: a follow-up. J. Lab Clin Med 120: 713 - 719, 1992.
+
+Corey HE. Stewart and beyond: New models of acid-base balance.
+Kidney International 64: 777 - 787, 2003.
+
+Shuck O, Matousovic K. Relation between pH and teh strong ion
+difference (SID) in body fluids. Biomed Papers 149: 69 - 73, 2005.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Anions - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Anions are expressed in mEq/L
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Anions - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Normal values in mEq/L are:
+[Cl-]  107.0
+[KA-]    0.0
+[Lac-]   1.0
+[SO4--]  0.3
+[PO4--]  0.2
+[HCO3-]  28.0
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> AnionsLessProtein - DefinitionBI3 </name>
+<label> Definition </label>
+<content>
+
+Proteins in the body function as bases and have 
+negative charges that readily accept hydrogen ions. 
+Proteins are considered weak anions. 
+
+The concentrations of anions and cations in both plasma
+and cells must be equal to maintain electrical neutrality.
+
+Total Cation Concentration = Total Anion Concentration
+= 148.5 mEq/L
+
+Total Anion Concentration = Weak + Strong Anions + Protein
+Total (148.5 mEq/L) = Weak Anions (28 mEq/L) + Strong Anions (108.5
+mEq/L) + Protein (12.0 mEq/L)
+
+Anions Less Protein = Weak + Strong Anions
+148.5 mEq/L - 12.0 mEq/L = 28.0 mEq/L + 108.5 mEq/L
+
+Figge J, Rossing TH, Fencl V. The role of serum proteins in 
+acid-base equilibria. J. Lab Clin Med 117: 453 - 467, 1991.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Cations - DefinitionBI4 </name>
+<label> Definition </label>
+<content>
+
+Many substances dissociate into ions when dissolved 
+in water. Such substances are called electrolytes.
+Positively charged electrolytes are called cations 
+Strong electrolytes are always completely dissociated 
+in solution and the resulting ions are considered 
+strong cations. 
+
+in HumMod, cations are sodium [Na+], potassium [K+]
+and magnesium 
+
+Normal values are 144 mEq/L for sodium and 4.4 mEq/L
+for potassium.
+
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Protein - DefinitionBI6 </name>
+<label> Definition </label>
+<content>
+
+Proteins in the body function as bases. They have negative 
+charges that readily accept hydrogen ions. Together with
+weak anions and strong anions they contribute to the total
+anion concentration. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> StrongAnions - DefinitionBI7 </name>
+<label> Definition </label>
+<content>
+
+Negatively charged anions which completely dissociate in 
+solution are known as strong anions. Strong anions are 
+chloride, ketoacids, lactate, phosphate and sulphate. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> WeakAnions - DefinitionBI8 </name>
+<label> Definition </label>
+<content>
+
+Negatively charged electrolytes which only partially 
+dissociate in solution are called weak anions. Bicarbonate
+is a weak anion. 
+
+</content>
+</topicdoc>
+
+     
+End

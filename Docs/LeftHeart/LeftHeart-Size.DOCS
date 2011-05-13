@@ -1,0 +1,278 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Size </structurename>
+
+<vardoc>
+<name> LeftHeart-Size.CellH2O </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+
+<vardoc>
+<name> LeftHeart-Size.ContractileProteinDensity </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.ContractileProteinMass  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-ContractileProtein.Mass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.ContractileProteinVol  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.ContractileProteinMass </seealso>
+<seealso> LeftHeart-Size.ContractileProteinDensity </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.Density </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.Mass </seealso>
+<seealso> LeftHeart-Size.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.FractTotal </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.H2OFractMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.IFV  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.FractIFV </seealso>
+<seealso> InterstitialWater.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialCellH2O </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialIFV </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialLiquidVol  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.H2OFractMass </seealso>
+<seealso> LeftHeart-Size.InitialMass </seealso>
+<seealso> LeftHeart-Size.LiquidDensity </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.MassFractBase </seealso>
+<seealso> Weight.InitialBaseMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialOtherMass  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.OtherFractSolids </seealso>
+<seealso> LeftHeart-Size.InitialSolidMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size>InitialProteinMass  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.ProteinFractSolids </seealso>
+<seealso> LeftHeart-Size.InitialSolidMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.InitialSolidMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.SolidsFractMass </seealso>
+<seealso> LeftHeart-Size.initialMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.LiquidDensity  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.LiquidMass  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.LiquidVol </seealso>
+<seealso> LeftHeart-Size.LiquidDensity </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.LiquidVol </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.IFV </seealso>
+<seealso> LeftHeart-Size.OrganH2O </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.Mass  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.LiquidMass </seealso>
+<seealso> LeftHeart-Size.SolidMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.MassFractBase  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.OtherDensity  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.OtherFractSolids  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.OtherMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.InitialOtherMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.OtherVol </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.OtherMass </seealso>
+<seealso> LeftHeart-Size.OtherDensity </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.ProteinFractSolids </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.OtherFractSolids </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.SolidMass </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Size.ContractileProteinMass </seealso>
+<seealso> LeftHeart-Size.OtherMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.SolidsFractMass  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.H2OFractMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.SolidVol  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.ContractileProteinVol </seealso>
+<seealso> LeftHeart-Size.OtherVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Size.Vol  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Size.LiquidVol </seealso>
+<seealso> LeftHeart-Size.SolidVol </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

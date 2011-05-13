@@ -1,0 +1,46 @@
+HumMod / GILumen.REF
+
+Created : 03-May-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Edelman and colleagues (in San Francisco) did four studies of the contents of the GI tract
+lumen. The 4 species measured were
+
+   H2O
+   Na+
+   K+
+   Cl-
+
+Each study used isotope dilution in rabbits. This data is probably not appropriate. Each
+study also did human at autopsy. I'll cite the autopsy data.
+
+Edelman, I.S. and N.J. Sweet. Gastrointestinal water and electrolytes. I. The equilibration
+of radiosodium in gastrointestinal contents and the proportion of exchangeable sodium (Nae)
+in the gastrointestinal tract. J.C.I. 35:502-511, 1956.
+
+Nadell, J., N.J. Sweet and I.S. Edelman. Gastrointestinal water and electrolytes. II. The equilibration
+of radiopotassium in gastrointestinal contents and the proportion of exchangeable potassium (Ke)
+in the gastrointestinal tract. J.C.I. 35:512-521, 1956.
+
+Sweet, N.J., J. Nadell and I.S. Edelman. Gastrointestinal water and electrolytes. III. The equilibration
+of radiobromide in gastrointestinal contents and the proportion of exchangeable chloride (Cle)
+in the gastrointestinal tract. J.C.I. 36:279-288, 1957.
+
+Gotch, F., J. Nadell and I.S. Edelman. Gastrointestinal water and electrolytes. IV. The equilibration
+of deuterium oxide (D2O) in gastrointestinal contents and the proportion of total body water (T.B.W.)
+in the gastrointestinal tract. J.C.I. 36:289-296, 1957.
+
+         mEq     mEq/kG    %
+H2O   407       7.40      1.40   (mL in place of mEq)
+Na+   35.1       0.54      1.60
+K+     25.3       0.44      1.26
+Cl-     31.7       0.57      1.89
+
+QHP is pretty close to these values, but some adjustments might be beneficial.
+
+End

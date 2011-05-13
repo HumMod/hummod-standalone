@@ -1,0 +1,62 @@
+HumMod / Start-OrganSize DES
+
+Created : 03-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-OrganSize </name>
+
+<variables>
+
+<var><name> SumMassFractBase </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> Fat-Size.Initialize </call>
+  <call> LipidDeposits.Initialize </call>
+  <call> Bone-Size.Initialize </call>
+  <call> Bone-Mineral.Initialize </call>
+  <call> Brain-Size.Initialize </call>
+  <call> GITract-Size.Initialize </call>
+  <call> Kidney-Size.Initialize </call>
+  <call> LeftHeart-Size.Initialize </call>
+  <call> LeftHeart-ContractileProtein.Initialize </call>
+  <call> Liver-Size.Initialize </call>
+  <call> OtherTissue-Size.Initialize </call>
+  <call> RespiratoryMuscle-Size.Initialize </call>
+  <call> RespiratoryMuscle-ContractileProtein.Initialize </call>
+  <call> RightHeart-Size.Initialize </call>
+  <call> RightHeart-ContractileProtein.Initialize </call>
+  <call> SkeletalMuscle-Size.Initialize </call>
+  <call> SkeletalMuscle-ContractileProtein.Initialize </call>
+  <call> Skin-Size.Initialize </call>
+
+  <def>
+    <name> SumMassFractBase </name>
+    <val>
+        Bone-Size.MassFractBase
+      + Brain-Size.MassFractBase
+      + GITract-Size.MassFractBase
+      + Kidney-Size.MassFractBase
+      + LeftHeart-Size.MassFractBase
+      + Liver-Size.MassFractBase
+      + OtherTissue-Size.MassFractBase
+      + RespiratoryMuscle-Size.MassFractBase
+      + RightHeart-Size.MassFractBase
+      + Skin-Size.MassFractBase
+    </val>
+  </def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

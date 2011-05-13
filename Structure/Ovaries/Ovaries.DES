@@ -1,0 +1,93 @@
+HumMod / Ovaries
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Ovaries\ ?>
+
+<?include Ovaries-Follicle.DES ?>
+<?include Ovaries-Ovulation.DES ?>
+<?include Ovaries-CorpusLuteum.DES ?>
+
+<?include Ovaries-Estradiol.DES ?>
+<?include Ovaries-Progesterone.DES ?>
+<?include Ovaries-Testosterone.DES ?>
+<?include Ovaries-Inhibin.DES ?>
+
+<structure><name> Ovaries </name>
+
+<variables>
+
+<var><name> Cycling? </name><val> FALSE </val></var>
+<parm><name> BlockCycling </name><val> FALSE </val></parm>
+
+<parm><name> Menarche(Years) </name><val> 12.5 </val></parm>
+<parm><name> Menopause(Years) </name><val> 45.0 </val></parm>
+
+<var><name> Phase </name><val> 0 </val></var>
+
+<var><name> Idle? </name><val> FALSE </val></var>
+<var><name> Follicular? </name><val> FALSE </val></var>
+<var><name> Ovulatory? </name><val> FALSE </val></var>
+<var><name> Luteal? </name><val> FALSE </val></var>
+
+<constant><name> IS_IDLE  </name><val> 0 </val></constant>
+<constant><name> IS_FOLLICULAR </name><val> 1 </val></constant>
+<constant><name> IS_OVULATORY </name><val> 2 </val></constant>
+<constant><name> IS_LUTEAL </name><val> 3 </val></constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+</block>
+
+<block><name> Dervs </name>
+
+  <call> Ovaries-Follicle.Dervs </call>
+  <call> Ovaries-CorpusLuteum.Dervs </call>
+
+  <call> Ovaries-Estradiol.Dervs </call>
+  <call> Ovaries-Progesterone.Dervs </call>
+  <call> Ovaries-Testosterone.Dervs </call>
+  <call> Ovaries-Inhibin.Dervs </call>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+  <test>
+       ( Age.Age(Years) LT Menarche(Years) )
+    OR ( Age.Age(Years) GT Menopause(Years) )
+    OR ( BlockCycling )
+  </test>
+  <true>
+    <def><name> Cycling? </name><val> FALSE </val></def>
+    <def><name> Phase </name><val> IS_IDLE </val></def>
+  </true>
+  <false>
+    <def><name> Cycling? </name><val> TRUE </val></def>
+  </false>
+</if>
+
+<call> Ovaries-Follicle.Wrapup </call>
+<call> Ovaries-Ovulation.Wrapup </call>
+<call> Ovaries-CorpusLuteum.Wrapup </call>
+
+<def><name> Idle? </name><val> Phase EQ IS_IDLE </val></def>
+<def><name> Follicular? </name><val> Phase EQ IS_FOLLICULAR </val></def>
+<def><name> Ovulatory? </name><val> Phase EQ IS_OVULATORY </val></def>
+<def><name> Luteal? </name><val> Phase EQ IS_LUTEAL </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

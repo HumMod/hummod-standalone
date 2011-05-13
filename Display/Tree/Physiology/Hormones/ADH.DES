@@ -1,0 +1,28 @@
+HumMod / ADH
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> ADH </name>
+  <label> ADH </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> ADH_Pool </name>
+  <label> Pool </label>
+  <parent> ADH </parent>
+</leaf>
+
+<leaf>
+  <name> ADH_Formation </name>
+  <label> Formation </label>
+  <parent> ADH </parent>
+</leaf>
+
+End

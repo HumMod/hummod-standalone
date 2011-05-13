@@ -1,0 +1,248 @@
+HumMod / Tree-Anesthesia
+
+Created : 08-Dec-05
+Last Modified : 2010-05-21
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Anesthesia </name>
+  <label> Anesthesia </label>
+  <parent> CLINIC </parent>
+</branch>
+
+<branch>
+  <name> IVAnesthesia </name>
+  <label> IV </label>
+  <parent> Anesthesia </parent>
+</branch>
+
+<leaf>
+  <name> IVAnesthesiaControl </name>
+  <label> Control </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaProperties </name>
+  <label> Properties </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<separatorbar>
+  <parent> IVAnesthesia </parent>
+</separatorbar>
+
+<leaf>
+  <name> IVAnesthesiaBlood </name>
+  <label> Blood </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaTissues </name>
+  <label> Tissues </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<separatorbar>
+  <parent> IVAnesthesia </parent>
+</separatorbar>
+
+<leaf>
+  <name> IVAnesthesiaBone </name>
+  <label> Bone </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaBrain </name>
+  <label> Brain </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaFat </name>
+  <label> Fat </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaGITract </name>
+  <label> GI Tract </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaKidney </name>
+  <label> Kidney </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaLeftHeart </name>
+  <label> Left Heart </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaLiver </name>
+  <label> Liver </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaOtherTissue </name>
+  <label> Other Tissue </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaRespiratoryMuscle </name>
+  <label> Respiratory Muscle </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaRightHeart </name>
+  <label> Right Heart </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaSkeletalMuscle </name>
+  <label> Skeletal Muscle </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaSkin </name>
+  <label> Skin </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<branch>
+  <name> GasAnesthesia </name>
+  <label> Gas </label>
+  <parent> Anesthesia </parent>
+</branch>
+
+<leaf>
+  <name> GasAnesthesiaControl </name>
+  <label> Control </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaProperties </name>
+  <label> Properties </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<separatorbar>
+  <parent> GasAnesthesia </parent>
+</separatorbar>
+
+<leaf>
+  <name> GasAnesthesiaLungs </name>
+  <label> Lungs </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaArteries </name>
+  <label> Arteries </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaTissues </name>
+  <label> Tissues </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaVeins </name>
+  <label> Veins </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<separatorbar>
+  <parent> GasAnesthesia </parent>
+</separatorbar>
+
+<leaf>
+  <name> GasAnesthesiaBone </name>
+  <label> Bone </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaBrain </name>
+  <label> Brain </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaFat </name>
+  <label> Fat </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaGITract </name>
+  <label> GI Tract </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaKidney </name>
+  <label> Kidney </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaLeftHeart </name>
+  <label> Left Heart </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaLiver </name>
+  <label> Liver </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaOtherTissue </name>
+  <label> Other Tissue </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaRespiratoryMuscle </name>
+  <label> Respiratory Muscle </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaRightHeart </name>
+  <label> Right Heart </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaSkeletalMuscle </name>
+  <label> Skeletal Muscle </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaSkin </name>
+  <label> Skin </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+End

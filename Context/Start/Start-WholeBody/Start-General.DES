@@ -1,0 +1,73 @@
+HumMod / Start-General
+
+Created : 21-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-General </name>
+
+<variables>
+
+<var><name> X-Textbook </name></var>
+
+<var><name> InitialLeanMass </name></var>
+<var><name> InitialFatMass </name></var>
+
+<var><name> LeanPart </name></var>
+<constant><name> LeanFraction </name><val> 0.0000182 </val></constant>
+
+<var><name> FatPart </name></var>
+<constant><name> FatFraction </name><val> 0.0000060 </val></constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> InitialLeanMass </name>
+  <val>
+      Bone-Size.InitialMass
+    + Brain-Size.InitialMass
+    + GITract-Size.InitialMass
+    + Kidney-Size.InitialMass
+    + LeftHeart-Size.InitialMass
+    + Liver-Size.InitialMass
+    + OtherTissue-Size.InitialMass
+    + RespiratoryMuscle-Size.InitialMass
+    + RightHeart-Size.InitialMass
+    + SkeletalMuscle-Size.InitialMass
+    + Skin-Size.InitialMass
+  </val>
+</def>
+
+<def>
+  <name> InitialFatMass </name>
+  <val> Fat-Size.InitialMass </val>
+</def>
+
+<def>
+  <name> LeanPart </name>
+  <val> LeanFraction * InitialLeanMass </val>
+</def>
+
+<def>
+  <name> FatPart </name>
+  <val> FatFraction * InitialFatMass </val>
+</def>
+
+<def>
+  <name> X-Textbook </name>
+  <val> LeanPart + FatPart </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

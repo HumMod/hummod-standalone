@@ -1,0 +1,69 @@
+HumMod / Uptake
+
+Created : 30-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.4 </high>
+   <wide> 30.0 </wide>
+   <title> Uptake </title>
+
+<structurename> LM_AminoAcids </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Uptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Uptake </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 50 </min><max> 70 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> LM_Gluconeogenesis.AminoAcidUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gluconeogenesis </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 1.0 </col>
+  <name> LM_FA_AminoAcids.AminoAcidUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Fatty Acid Synthesis </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for amino acid uptake are mG/Min. </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

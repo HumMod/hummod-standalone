@@ -1,0 +1,64 @@
+QHP 2008 / Insulin.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> InsulinClearance </structurename>
+
+<vardoc>
+<name> InsulinClearance.K </name>
+<topic> InsulinClearance - Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinClearance.Rate </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> InsulinClearance - Overview </name>
+<label> Overview </label>
+<content>
+
+Insulin has a plasma half life of about 6 minutes. 
+Except for the portion of insulin which binds with 
+receptors in target cells, the remainder is degraded
+by the enzyme insulinase mainly in the liver, to a
+lesser extent in the kidneys and muscles and slightly
+in most other tissues.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

@@ -1,0 +1,92 @@
+HumMod / EPOPool
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> EPOPool </name>
+
+<variables>
+
+<var><name> [EPO] </name></var>
+<var><name> Log10Conc </name></var>
+
+<constant><name> VOLDIST </name><val> 0.40 </val></constant>
+
+<var><name> VolDist </name></var>
+<var><name> InitialVolDist </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Target[EPO] </name><val> 20.0 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 1.20 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialVolDist </name><val> VOLDIST * ECFV.InitialVol(L) </val></def>
+  <def><name> InitialMass </name><val> Target[EPO] * InitialVolDist </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> VolDist </name>
+  <val> VOLDIST * ECFV.Vol(L) </val>
+</def>
+
+<def>
+  <name> [EPO] </name>
+  <val> Mass / VolDist </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [EPO] GT 1.0 </test>
+  <true> LOG10 [EPO] </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> EPOSecretion.Rate + EPOPump.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> EPOClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

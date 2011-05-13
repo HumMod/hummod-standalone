@@ -1,0 +1,75 @@
+HumMod / LipidDeposits-Release
+
+Created : 30-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LipidDeposits-Release </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<parm><name> Fraction </name><val> 0.0075 </val></parm>
+<var><name> BasicRate </name></var>
+
+<var><name> InsulinEffect </name></var>
+<var><name> GlucagonEffect </name></var>
+<var><name> EpinephrineEffect </name></var>
+<var><name> FattyAcidEffect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x>  20 </x><y> 1.0 </y><slope> -0.04 </slope></point>
+  <point><x> 100 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucagonEffect </name>
+  <point><x> 120 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 200 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> EpinephrineEffect </name>
+  <point><x>   0 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+  <point><x>  40 </x><y> 1.0 </y><slope> 0.013 </slope></point>
+  <point><x> 400 </x><y> 4.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> FattyAcidEffect </name>
+  <point><x>   0 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+  <point><x>  15 </x><y> 1.0 </y><slope> -0.04 </slope></point>
+  <point><x> 100 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> BasicRate </name><val> Fraction * LipidDeposits.Mass </val></def>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ InsulinPool.[Insulin] ] </val></def>
+<def><name> GlucagonEffect </name><val> GlucagonEffect [ GlucagonPool.[Glucagon] ] </val></def>
+<def><name> EpinephrineEffect </name><val> EpinephrineEffect [ EpiPool.[Epi(pG/mL)] ] </val></def>
+<def><name> FattyAcidEffect </name><val> FattyAcidEffect [ FAPool.[FA(mG/dL)] ] </val></def>
+
+<def><name> Rate </name><val> BasicRate * InsulinEffect * GlucagonEffect * EpinephrineEffect * FattyAcidEffect </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

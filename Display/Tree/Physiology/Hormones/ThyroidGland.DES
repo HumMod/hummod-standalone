@@ -1,0 +1,28 @@
+HumMod / ThyroidGland
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Hormones_Thyroid </name>
+  <label> Thyroid Gland </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_Thyroid_T4-T3 </name>
+  <label> T4-T3 </label>
+  <parent> Hormones_Thyroid </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Thyroid_TSH </name>
+  <label> TSH </label>
+  <parent> Hormones_Thyroid </parent>
+</leaf>
+
+End

@@ -1,0 +1,117 @@
+HumMod / O2
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.8 </high>
+   <wide> 30.0 </wide>
+   <title> O2 </title>
+
+<structurename> Kidney-O2 </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> VeinPO2 </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Renal Vein pO2 </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> TubulePO2 </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Renal Tubule pO2 </label>
+</showvalue>
+
+<showgraph>
+  <row> 3.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TubulePO2 </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 30 </min><max> 40 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> O2Perm </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Permeability </label>
+</showvalue>
+
+<repeatlist>
+  <name> Kidney-O2.O2PermBasic </name>
+  <firstval> 0.1 </firstval>
+  <repeat><reps> 19 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.4 </row><col> 3 </col>
+  <name> O2PermBasic </name>
+  <listname> Kidney-O2.O2PermBasic </listname>
+  <label> Basic </label>
+</slidebar>
+
+<showbargraph>
+  <row> 14.0 </row><col> 1.0 </col><high> 4 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <title> O2 (mL/Min) </title>
+  <showinitialvalues/>
+  <bar>
+    <name> Kidney-Metabolism.O2Need </name>
+    <label> Need </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> Kidney-O2.O2Use </name>
+    <label> Use </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 15 </max><inc> 5 </inc>
+    
+  </scale>
+</showbargraph>
+
+<showvalue>
+   <row> 18.4 </row><col> 1.0 </col>
+   <name> Kidney-O2.O2Use </name>
+   <format><decimal> 1 </decimal></format>
+   <label> O2Use </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Renal vein pO2 is typically 60 mmHg. </line>
+  <line>  </line>
+  <line> Renal tubule pO2 is typically 36 mmHg. </line>
+  <line>  </line>
+  <line> Permeability is 0.9 (mL/Min)/mmHg. </line>
+  <line>  </line>
+  <line> O2 need and use are typically 22 </line>
+  <line> mL/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,78 @@
+HumMod / HeatMetabolism
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatMetabolism </name>
+
+<variables>
+
+<var>
+  <name> Core </name>
+</var>
+
+<var>
+  <name> Skin </name>
+</var>
+
+<var>
+  <name> SkeletalMuscle </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Core </name>
+  <point><x> 10 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 37 </x><y> 1.0 </y><slope> 0.12 </slope></point>
+  <point><x> 40 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 46 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> Skin </name>
+  <point><x> 10.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 29.5 </x><y> 1.0 </y><slope> 0.12 </slope></point>
+  <point><x> 40.0 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 46.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SkeletalMuscle </name>
+  <point><x> 10.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 37.1 </x><y> 1.0 </y><slope> 0.12 </slope></point>
+  <point><x> 40.0 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 46.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Core </name>
+  <val> Core [ HeatCore.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> Skin </name>
+  <val> Skin [ HeatSkin.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> SkeletalMuscle </name>
+  <val> SkeletalMuscle [ HeatSkeletalMuscle.Temp(C) ] </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

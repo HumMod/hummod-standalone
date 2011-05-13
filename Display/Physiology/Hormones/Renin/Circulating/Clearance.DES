@@ -1,0 +1,42 @@
+HumMod / Clearance
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 18.8 </row>
+   <col> 1.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Clearance </title>
+
+<structurename> ReninClearance </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> K </name>
+   <format><decimal> 5 </decimal></format>
+   <label> K </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> ReninPool.Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+</groupbox>
+
+End

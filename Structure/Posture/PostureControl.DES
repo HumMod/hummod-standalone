@@ -1,0 +1,104 @@
+HumMod / PostureControl
+
+Created : 25-May-05
+Last Modified : 2010-01-26
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PostureControl </name>
+
+<variables>
+
+<constant><name> NONE     </name><val> 0.0 </val></constant>
+<constant><name> LYING    </name><val> 1.0 </val></constant>
+<constant><name> SITTING  </name><val> 2.0 </val></constant>
+<constant><name> STANDING </name><val> 3.0 </val></constant>
+<constant><name> TILTED   </name><val> 4.0 </val></constant>
+
+<parm>
+  <name> Restraint </name>
+  <val> 0 </val>
+</parm>
+
+<parm>
+  <name> Request </name>
+  <val> 1 </val>
+</parm>
+
+<var>
+  <name> LastValidRequest </name>
+  <val> 1 </val>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<onjustchanged><name> Restraint </name>
+
+  <if>
+  <test> Restraint EQ NONE </test>
+  <true>
+    <def><name> Status.Posture </name><val> LastValidRequest </val></def>
+  </true>
+  <false>
+    <def><name> Status.Posture </name><val> Restraint </val></def>
+  </false>
+  </if>
+
+</onjustchanged>
+
+<onjustchanged><name> Request </name>
+
+  <if>
+  <test> Restraint NE NONE </test>
+  <true>
+    <exitblock/>
+  </true>
+  </if>
+
+  <if>
+  <test> DailyPlannerControl.Switch </test>
+  <true>
+    <message> The daily planner is controlling posture now. </message>
+    <def><name> Request </name><val> LastValidRequest </val></def>
+    <exitblock/>
+  </true>
+  </if>
+
+  <if>
+  <test> Brain-Function.Comatose </test>
+  <true>
+    <message> Subject is comatose and can't change posture. </message>
+    <def><name> Request </name><val> LastValidRequest </val></def>
+    <exitblock/>
+  </true>
+  </if>
+
+  <def><name> Status.Posture </name><val> Request </val></def>
+  <def><name> LastValidRequest </name><val> Request </val></def>
+
+</onjustchanged>
+
+</block>
+
+<block><name> RequestChange </name>
+
+  <if>
+  <test> Restraint EQ NONE </test>
+  <true>
+    <def><name> Status.Posture </name><val> Request </val></def>
+    <def><name> LastValidRequest </name><val> Request </val></def>
+  </true>
+  </if>
+
+</block>
+
+</definitions>
+</structure>
+
+End

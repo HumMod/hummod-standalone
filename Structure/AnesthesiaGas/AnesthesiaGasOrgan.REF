@@ -1,0 +1,96 @@
+HumMod / AnesthesiaGasOrgan Reference
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Each tissue has
+
+   Mass      mL
+   Derv      mL/Min
+   Uptake    mL/Min
+   [Tissue]  mL/mL
+   pTissue   mmHg
+   [Vein]    mL/mL
+   pVein     mmHg
+
+From mass balance,
+
+   Uptake = ([A] - [V]) * Flow   (1)
+
+The model is flow limited uptake,
+which means that there is no
+barrier to diffusion.  With no
+diffusion barrier
+
+   pV = pT                       (2)
+
+p refers to partial pressure.
+
+We use a solubility coefficient
+
+   SolubleK = 760.0 / Solubility (3)
+
+   pT = SolubleTissueK * [T]     (4)
+   pV = SolubleBloodK * [V]      (5)
+
+         SolubleTissueK
+   [V] = -------------- * [T]    (6)
+         SolubleBloodK
+
+Brain and fat have their own solubilities.
+
+Liver has 2 inflows, so we apply some
+mass balance.
+
+MAC = Minimum Anesthetic Concentration
+
+Other tissue gas pressure determines vascular
+conductance.
+
+Anest. Analg. 73:156, 1991.
+
+   MAC  TPR
+   ---  ----
+    0   100%
+    1    80%
+    2    50%
+
+Left heart gas pressure determines
+cardiac contractility.
+
+Anest. Analg. 73:156, 1991.
+
+   MAC   CI   CVP   AP    HR
+   ---  ----  ---  ----  ----
+    0   100%   3    90    72
+    1    90%   4    65    80
+    2    60%   8    45    90
+
+Decreased AP and increased CVP
+and HR will all tend to increase
+CO, yet CO is falling -- evidence
+of decreased contractility.
+
+Anest. 69:451, 1988.
+
+Direct measurement of force in
+papillary muscle shows:
+
+   MAC  Force
+   ---  -----
+    0    100%
+    1     50%
+    2     15%
+
+Cardiac output falls a little bit
+slower than ventilation.
+
+Anest. 38:251, 1973.
+Anest. 54:107, 1981.
+Anest. 27:716, 1966.
+
+End

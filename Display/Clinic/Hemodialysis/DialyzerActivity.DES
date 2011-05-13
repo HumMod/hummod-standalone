@@ -1,0 +1,139 @@
+HumMod / DialyzerActivity
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 28.6 </high>
+   <wide> 30.0 </wide>
+   <title> Dialyzer Activity </title>
+
+<structurename> DialyzerActivity </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Scheduled? </name>
+  <format><list> Common.NoYes </list></format>
+  <label> Scheduled? </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Active? </name>
+  <format><list> Common.NoYes </list></format>
+  <label> Active? </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.8 </row><col> 1.0 </col>
+  <name> BloodFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Blood Flow </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> DialysateFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Dialysate Flow </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.2 </row><col> 1.0 </col>
+  <name> TotalDialysateUsed </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total Dialysate Used </label>
+</showvalue>
+
+<showgraph>
+  <row> 7.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalDialysateUsed </name>
+      <label> Volume </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 14.6 </row><col> 1.0 </col>
+  <name> UltrafiltrationRate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Ultrafiltration Rate </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.6 </row><col> 1.0 </col>
+  <name> TotalUltrafiltration </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total Ultrafiltration </label>
+</showvalue>
+
+<showgraph>
+  <row> 16.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalUltrafiltration </name>
+      <label> Volume </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 24.0 </row><col> 1.0 </col>
+  <name> Na+Flux </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Na+ Flux </label>
+</showvalue>
+
+<showvalue>
+  <row> 25.0 </row><col> 1.0 </col>
+  <name> K+Flux </name>
+  <format><decimal> 2 </decimal></format>
+  <label> K+ Flux </label>
+</showvalue>
+
+<showvalue>
+  <row> 26.0 </row><col> 1.0 </col>
+  <name> Cl-Flux </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Cl- Flux </label>
+</showvalue>
+
+<showvalue>
+  <row> 27.0 </row><col> 1.0 </col>
+  <name> UreaFlux </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Urea Flux </label>
+</showvalue>
+
+</groupbox>
+
+End

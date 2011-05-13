@@ -1,0 +1,22 @@
+Digital Human / Startup
+
+Created : 23-Nov-08
+Last Modified : 14-Dec-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path Docs\Startup\ ?>
+
+<?include Startup-GetValues.docs ?>
+<?include Startup-OrganSize.docs ?>
+<?include Startup-BloodSize.docs ?>
+<?include Startup-BodyH2O.docs ?>
+<?include Startup-BodySize.docs ?>
+<?include Startup-Heat.docs ?>
+
+</docs>
+End

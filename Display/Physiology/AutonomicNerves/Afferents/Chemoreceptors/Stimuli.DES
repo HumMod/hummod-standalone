@@ -1,0 +1,133 @@
+HumMod / Stimuli
+
+Created : 08-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structurename> Chemoreceptors </structurename>
+
+<groupbox>
+   <row> 8.2 </row>
+   <col> 32.0 </col>
+   <high> 31.2 </high>
+   <wide> 30.0 </wide>
+   <title> Stimuli </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> BasicFiringRate </name>
+  <label> Basic Rate </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> PO2Effect </name>
+  <label> PO2 Effect  </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showcurve>
+  <row> 3.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> PO2Artys.Pressure </name>
+    <label> Arterial pO2 </label>
+    <scale><min> 0 </min><max> 100 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 10 </max></scale>
+  </yaxis>
+
+  <curvename> PO2Effect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> PO2Artys.Pressure </name>
+  <label> Arterial pO2 </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 12.2 </row><col> 1.0 </col>
+  <name> PhEffect</name>
+  <label> Ph Effect  </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showcurve>
+  <row> 13.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> BloodPh.ArtysPh </name>
+    <label> Arterial pH </label>
+    <scale><min> 7.1 </min><max> 7.7 </max><inc> 0.1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> PhEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 20.2 </row><col> 1.0 </col>
+  <name> BloodPh.ArtysPh </name>
+  <label> Arterial pH </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 21.6 </row><col> 1.0 </col>
+  <name> SympsEffect</name>
+  <label> Sympathetics Effect  </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showcurve>
+  <row> 22.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> AlphaAgonism </name>
+    <label> Alpha Agonism  </label>
+    <scale><min> 0 </min><max> 4 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> SympsEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 29.6 </row><col> 1.0 </col>
+  <name> AlphaAgonism </name>
+  <label> Alpha Agonism </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> The basic firing rate is typically 1.0 </line>
+  <line> Hz, but it will go much higher with </line>
+  <line> stimuli. </line>
+</infobutton>
+
+</groupbox>
+
+End

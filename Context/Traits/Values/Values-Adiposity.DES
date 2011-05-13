@@ -1,0 +1,127 @@
+HumMod / Values-Adiposity
+
+Created : 23-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Values-Adiposity </name>
+
+<variables>
+
+<constant><name> MALE_UNDERWEIGHT </name><val> 10.0 </val></constant>
+<constant><name> MALE_NORMALWEIGHT </name><val> 16.6 </val></constant>
+<constant><name> MALE_OVERWEIGHT </name><val> 26.0 </val></constant>
+<constant><name> MALE_OBESE </name><val> 44.0 </val></constant>
+<constant><name> MALE_MORBIDLYOBESE </name><val> 110.0 </val></constant>
+
+<constant><name> FEMALE_UNDERWEIGHT </name><val> 14.0 </val></constant>
+<constant><name> FEMALE_NORMALWEIGHT </name><val> 20.2 </val></constant>
+<constant><name> FEMALE_OVERWEIGHT </name><val> 32.0 </val></constant>
+<constant><name> FEMALE_OBESE </name><val> 46.0 </val></constant>
+<constant><name> FEMALE_MORBIDLYOBESE </name><val> 110.0 </val></constant>
+
+<var><name> Mass(kG) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<if>
+<test> Descriptors-Gender.IsMale </test>
+<true>
+  <call> Male </call>
+</true>
+<false>
+   <call> Female </call>
+</false>
+</if>
+
+</block>
+
+<block><name> Male </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-Adiposity.IsUnderweight </test>
+  <def><name> Mass(kG) </name><val> MALE_UNDERWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsNormalWeight </test>
+  <def><name> Mass(kG) </name><val> MALE_NORMALWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsOverweight </test>
+  <def><name> Mass(kG) </name><val> MALE_OVERWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsObese </test>
+  <def><name> Mass(kG) </name><val> MALE_OBESE </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsMorbidlyObese </test>
+  <def><name> Mass(kG) </name><val> MALE_MORBIDLYOBESE </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Adiposity trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> Female </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-Adiposity.IsUnderweight </test>
+  <def><name> Mass(kG) </name><val> FEMALE_UNDERWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsNormalWeight </test>
+  <def><name> Mass(kG) </name><val> FEMALE_NORMALWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsOverweight </test>
+  <def><name> Mass(kG) </name><val> FEMALE_OVERWEIGHT </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsObese </test>
+  <def><name> Mass(kG) </name><val> FEMALE_OBESE </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Adiposity.IsMorbidlyObese </test>
+  <def><name> Mass(kG) </name><val> FEMALE_MORBIDLYOBESE </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> Adiposity trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,208 @@
+QHP 2008 / ANP.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> ANPPool </structurename>
+
+<vardoc>
+<name> ANPPool.[ANP(pG/mL)] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> ANPPool.[ANP] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.Change </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.Derv </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.F1 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.F2 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> ANPPool.Gain </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.InitialMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> ANPPool.Log10Conc </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.Loss </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> ANPPool.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.PGMOLTOPG </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ANPPool.Target[ANP] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> ANP - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]    pG/mL or pMol/L
+Fluxes      pMol/Min
+
+
+Notice that pico (10^-12)
+gram/Mol units are used.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ANP - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+ANP concentrations have been expressed in
+
+   pG/mL
+   pMol/L
+
+ANP is a 28 amino acid protein
+of molecular weight 3060.
+
+   1 pMol/L = 3 pG/mL
+
+   A typical arterial blood level
+   is 20 pMol/L.
+  
+
+Normal ANP secretion rate is 67pMol/min. The right heart secretes 41pMol/Min and the left heart 26pMol/min
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ANP - Overview </name>
+<label> Overview </label>
+<content>
+
+ANP is a potent natriuretic peptide involved in hormonal regulation of extracellular fluid volume and blood pressure homeostasis. It is secreted by the atrial walls of the heart in response to stretch, which can occur from excess blood volume.
+ANP acts on the kidneys to cause small increases in glomerular filtration rate (GFR) and decreases in in sodium reabsorption by the collecting ducts. 
+
+ Data is from Lohmeier, but I don't
+ have the reference.
+
+      RAP    [ANP]
+      mmHg   pG/mL
+      ----   -----
+        1     110
+        6     500
+       10     750
+
+The integral ANPPool.Mass jitters at Dx ~ 9. I'll try a backward
+Euler integral here.
+
+  Change = Gain - Loss
+  Loss = K * Mass
+
+With a backward Euler,
+
+  Change = F1 - F2 * Integral
+
+so
+
+  F1 = Gain
+  F2 = K
+
+</content>
+</topicdoc>
+
+   
+     
+
+End

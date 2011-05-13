@@ -1,0 +1,38 @@
+HumMod / H2O
+
+Created : 18-Apr-05
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> GILumenH2O </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> GILumen </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> GI Lumen - H2O </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\GILumen\H2O\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

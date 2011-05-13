@@ -1,0 +1,24 @@
+HumMod / SkeletalMuscle-MusclePumping.REF
+
+Created : 04-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Skeletal muscle contractions pump blood through the muscle,
+which is represented as a increase in vascular conductance.
+
+Sheriff, Rowell and Scher. AJP 265:H1227-H1234, 1993.
+
+We'll use both intesity (motion watts) and contraction rate
+to determine the pumping effect.
+
+  Effect = 1.0 + f(Watts) * f(Rate)
+
+Minimum effect is 1.0 at rest. Maximum effect is 2.0 at
+maximum exertion.
+
+End

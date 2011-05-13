@@ -1,0 +1,52 @@
+HumMod / ExerciseSymps DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ExerciseSymps </name>
+
+<variables>
+
+<var>
+  <name> TotalEffect </name>
+</var>
+
+<var>
+  <name> RadiationEffect </name>
+</var>
+
+<var>
+  <name> MetaboreflexEffect </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> RadiationEffect </name>
+  <val> MotorRadiation.TotalEffect </val>
+</def>
+
+<def>
+  <name> MetaboreflexEffect </name>
+  <val> 0.32 * SkeletalMuscle-Metaboreflex.NerveActivity </val>
+</def>
+
+<def>
+  <name> TotalEffect </name>
+  <val> RadiationEffect + MetaboreflexEffect </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

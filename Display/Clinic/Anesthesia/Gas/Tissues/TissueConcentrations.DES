@@ -1,0 +1,63 @@
+HumMod / TissueConcentrations
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.0 </high>
+   <wide> 30.0 </wide>
+   <title> Tissue Concentrations </title>
+
+<showgraph>
+  <row> 1.4 </row><col> 1.0 </col><high> 12 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+
+    <yvar>
+      <name> AnesthesiaGasArty.[Blood] </name>
+      <label> Arteries </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> AnesthesiaGasBrain.[Tissue] </name>
+      <label> Brain </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> AnesthesiaGasFat.[Tissue] </name>
+      <label> Fat </label>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> AnesthesiaGasLeftHeart.[Tissue] </name>
+      <label> L. Heart </label>
+      <linecolor> GREEN </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> AnesthesiaGasVein.[Blood] </name>
+      <label> Veins </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+
+    <scale><min> 0 </min><max> 0.01 </max></scale>
+  </yaxis>
+</showgraph>
+
+</groupbox>
+
+End

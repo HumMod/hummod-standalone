@@ -1,0 +1,58 @@
+HumMod / SurfaceArea
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.6 </row>
+   <col> 32.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Surface Area </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> SurfaceArea.Area </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Surface Area </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Weight.Weight(kG) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Weight (kG) </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> Height.Height </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Height </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> DuBois and DuBois, Arch.Int.Med. </line>
+  <line> 17:863-871, 1916. </line>
+  <line>  </line>
+  <line> A = W^0.425 * H^0.725 * C </line>
+  <line>  </line>
+  <line> A = Area in cM^2 </line>
+  <line> W = Weight in kG </line>
+  <line> H = Height in cM </line>
+  <line> C = Constant 71.84 </line>
+  <line>  </line>
+  <line> Reduce C to 0.007184 to get area </line>
+  <line> in M^2. </line>
+</infobutton>
+
+</groupbox>
+
+End

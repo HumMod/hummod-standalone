@@ -1,0 +1,99 @@
+HumMod / Balance
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 19.4 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> CellProtein </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 5000000 </min><max> 7000000 </max><inc> 1000000 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.4 </row><col> 3.0 </col>
+  <name> Inflow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Inflow </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.8 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.8 </row><col> 3.0 </col>
+  <name> Outflow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Outflow </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.8 </row><col> 3.0 </col>
+  <name> Degradation </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Degradation </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> A typical protein mass is 6000000.0 mG or 6000.0 G. </line>
+  <line>  </line>
+  <line> Units for protein movement are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

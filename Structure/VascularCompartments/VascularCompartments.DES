@@ -1,0 +1,58 @@
+HumMod / Compartments
+
+Created : 16-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\VascularCompartments\ ?>
+
+<?include LeftAtrium.DES ?>
+<?include LeftVentricle.DES ?>
+<?include PulmArty.DES ?>
+<?include PulmCapys.DES ?>
+<?include PulmVeins.DES ?>
+<?include RightAtrium.DES ?>
+<?include RightVentricle.DES ?>
+<?include SplanchnicVeins.DES ?>
+<?include SystemicArtys.DES ?>
+<?include SystemicVeins.DES ?>
+
+<structure><name> VascularCompartments </name>
+
+<definitions>
+
+<block><name> CalcPressure(1) </name>
+  <call> RightAtrium.CalcPressure </call>
+  <call> LeftAtrium.CalcPressure </call>
+  <call> SystemicArtys.CalcPressure </call>
+</block>
+
+<block><name> CalcPressure(2) </name>
+  <call> SystemicVeins.CalcPressure </call>
+  <call> SplanchnicVeins.CalcPressure </call>
+  <call> PulmArty.CalcPressure </call>
+  <call> PulmCapys.CalcPressure </call>
+  <call> PulmVeins.CalcPressure </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> RightVentricle.Dervs </call>
+  <call> LeftVentricle.Dervs </call>
+
+  <call> SystemicVeins.Dervs </call>
+  <call> SplanchnicVeins.Dervs </call>
+  <call> RightAtrium.Dervs </call>
+  <call> PulmArty.Dervs </call>
+  <call> PulmCapys.Dervs </call>
+  <call> PulmVeins.Dervs </call>
+  <call> LeftAtrium.Dervs </call>
+  <call> SystemicArtys.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

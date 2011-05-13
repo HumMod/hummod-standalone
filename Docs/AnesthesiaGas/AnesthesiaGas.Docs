@@ -1,0 +1,35 @@
+Digital Human / AnesthesiaGas
+
+Created : 21-Oct-04
+Last Modified : 03-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+
+<?path docs\AnesthesiaGas\ ?>
+
+<?include AnesthesiaGasSolubility.docs ?>
+
+<?include AnesthesiaGasBone.docs ?>
+<?include AnesthesiaGasBrain.docs ?>
+<?include AnesthesiaGasFat.docs ?>
+<?include AnesthesiaGasGITract.docs ?>
+<?include AnesthesiaGasKidney.docs ?>
+<?include AnesthesiaGasLeftHeart.docs ?>
+<?include AnesthesiaGasLiver.docs ?>
+<?include AnesthesiaGasOtherTissue.docs ?>
+<?include AnesthesiaGasRespiratoryMuscle.docs ?>
+<?include AnesthesiaGasRightHeart.docs ?>
+<?include AnesthesiaGasSkeletalMuscle.docs ?>
+<?include AnesthesiaGasSkin.docs ?>
+
+<?include AnesthesiaGasArty.docs ?>
+<?include AnesthesiaGasVein.docs ?>
+<?include AnesthesiaGasLung.docs ?>
+
+</docs>
+
+End

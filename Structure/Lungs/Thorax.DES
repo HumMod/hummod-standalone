@@ -1,0 +1,98 @@
+HumMod / Thorax
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Thorax </name>
+
+<variables>
+
+<var><name> AvePressure </name></var>
+<var><name> LungInflation </name></var>
+<var><name> PressureGradientRightLeft </name></var>
+<var><name> LeftLungFlowFract </name></var>
+<var><name> RightLungFlowFract </name></var>
+
+</variables>
+
+<functions>
+
+Fractional lung inflation as a function of thoracic pressure.
+
+<curve>
+  <name> PressureOnInflation  </name>
+  <point>
+    <x> -4.0 </x><y> 1.0 </y><slope> 0 </slope>
+  </point>
+  <point>
+    <x>  4.0 </x><y> 0.0 </y><slope> 0 </slope>
+  </point>
+</curve>
+
+Give this curve the right-left pleural pressure gradient and
+it returns the fraction of alveolar blood flow in the left
+lung.
+
+<curve>
+  <name> PressureGradientOnFlowDist  </name>
+  <point>
+    <x> -25 </x><y> 0.0 </y><slope> 0 </slope>
+  </point>
+  <point>
+    <x>   0 </x><y> 0.5 </y><slope> 0.03 </slope>
+  </point>
+  <point>
+    <x>  25 </x><y> 1.0 </y><slope> 0 </slope>
+  </point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> AvePressure </name>
+  <val>
+      0.5
+    * ( RightHemithorax.Pressure
+    + LeftHemithorax.Pressure )
+  </val>
+</def>
+
+<def>
+  <name> LungInflation </name>
+  <val>
+      0.5
+    * ( RightHemithorax.LungInflation
+    + LeftHemithorax.LungInflation )
+  </val>
+</def>
+
+<def>
+  <name> PressureGradientRightLeft </name>
+  <val> 
+      RightHemithorax.Pressure
+    - LeftHemithorax.Pressure
+  </val>
+</def>
+
+<def>
+  <name> LeftLungFlowFract </name>
+  <val> PressureGradientOnFlowDist [ PressureGradientRightLeft ] </val>
+</def>
+
+<def>
+  <name> RightLungFlowFract </name>
+  <val> 1.0 - LeftLungFlowFract </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

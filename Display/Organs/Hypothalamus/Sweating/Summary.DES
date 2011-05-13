@@ -1,0 +1,121 @@
+HumMod / Summary
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 25.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> HypothalamusSweating </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> NerveActivity </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Nerve Activity </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> TemperatureDifference </name>
+    <label> Difference </label>
+    <scale><min> -2 </min><max> 2 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> NA </label>
+    <scale>
+      <min> 0 </min><max> 4 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+
+  <curvename> NerveActivity </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.6 </row><col> 1.0 </col>
+   <name> TemperatureDifference </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temperature Difference </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.0 </row><col> 1.0 </col>
+   <name> HeatCore.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Core Temperature </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.0 </row><col> 1.0 </col>
+   <name> SetPoint </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Set Point </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.0 </row><col> 3 </col>
+   <name> SkinTempOffset </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Skin Temp Offset </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.0 </row><col> 3 </col>
+   <name> HypothalamusSweatingAcclimation.Offset </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Acclimation Offset </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.0 </row><col> 3 </col>
+   <name> Base </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Base </label>
+</showvalue>
+
+<showcurve>
+  <row> 16.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> HeatSkin.Temp(C) </name>
+    <label> Skin Temp </label>
+    <scale><min> 25 </min><max> 35 </max><inc> 5 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Offset </label>
+    <scale>
+      <min> 0 </min><max> 1 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+
+  <curvename> SkinTempOffset </curvename>
+</showcurve>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> The nerve activity is typically </line>
+  <line> 0.0 normal units. </line>
+  <line> </line>
+  <line> Temperature difference is core </line>
+  <line> temperature minus setpoint. </line>
+</infobutton>
+
+</groupbox>
+
+End

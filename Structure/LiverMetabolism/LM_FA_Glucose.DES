@@ -1,0 +1,68 @@
+HumMod / LM_FA_Glucose
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_FA_Glucose </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<var><name> InsulinEffect </name></var>
+<var><name> GlucoseEffect </name></var>
+
+<var><name> GlucoseUptake </name></var>
+<parm><name> BasicUptake </name><val> 70.0 </val></parm>
+
+<constant><name> GLU_TO_FA </name><val> 0.42 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  50 </x><y> 1.0 </y><slope> 0.06 </slope></point>
+  <point><x> 200 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucoseEffect </name>
+  <point><x> 120 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 130 </x><y> 1.0 </y><slope> 0.05 </slope></point>
+  <point><x> 200 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ LM_Insulin.[InsulinDelayed] ] </val></def>
+<def><name> GlucoseEffect </name><val> GlucoseEffect [ PortalVein-Glucose.[Glucose(mG/dL)] ] </val></def>
+
+<def><name> GlucoseUptake </name>
+  <val>
+      BasicUptake
+    * InsulinEffect
+    * GlucoseEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+<def><name> Rate </name><val> GlucoseUptake * GLU_TO_FA </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

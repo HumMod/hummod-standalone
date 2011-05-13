@@ -1,0 +1,32 @@
+Digital Human / AnesthesiaIV
+
+Created : 21-Oct-04
+Last Modified : 04-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<?path docs\AnesthesiaIV\ ?>
+
+<?include AnesthesiaIVSolubility.docs ?>
+
+<?include AnesthesiaIVBone.docs ?>
+<?include AnesthesiaIVBrain.docs ?>
+<?include AnesthesiaIVFat.docs ?>
+<?include AnesthesiaIVGITract.docs ?>
+<?include AnesthesiaIVKidney.docs ?>
+<?include AnesthesiaIVLeftHeart.docs ?>
+<?include AnesthesiaIVLiver.docs ?>
+<?include AnesthesiaIVOtherTissue.docs ?>
+<?include AnesthesiaIVRespiratoryMuscle.docs ?>
+<?include AnesthesiaIVRightHeart.docs ?>
+<?include AnesthesiaIVSkeletalMuscle.docs ?>
+<?include AnesthesiaIVSkin.docs ?>
+
+<?include AnesthesiaIVBlood.docs ?>
+
+<?include AnesthesiaIVInjection.docs ?>
+<?include AnesthesiaIVInfusion.docs ?>
+
+End

@@ -1,0 +1,32 @@
+HumMod / Mechanoreceptors DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Mechanoreceptors </name>
+
+<variables>
+
+<var>
+  <name> FiringRate </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+<def>
+  <name> FiringRate </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,383 @@
+5400QHP 2008 / BloodVolume.DOCS
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BloodVol </structurename>
+
+<vardoc>
+<name> BloodVol.Change </name>
+<topic> Change - BV1Definition </topic>
+<topic> BloodVol - Overview </topic>
+<topic> BloodVol - Physical Units </topic>
+<seealso> BloodVol.Gain </seealso>
+<seealso> BloodVol.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Collapsed  </name>
+<topic> Collapsed - BV2Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.CollapsedEffect </name>
+<topic> CollapsedEffect - BV3Definition </topic>
+<seealso> SystemicVeins.Conductance </seealso>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Gain </name>
+<topic> Gain - BV4Definition </topic>
+<seealso> RBCVol.Gain </seealso>
+<seealso> PlasmaVol.Gain </seealso>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Hct </name>
+<topic> Hct - BV5Definition </topic>
+<seealso> BloodVol.Vol </seealso>
+<seealso> RBCVol.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Hct(%) </name>
+<topic> Hct(%) - BV6Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.InitialHct </name>
+<topic> InitialHct - BV7Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.InitialHct-Female </name>
+<topic> InitialHct-Female - BV8Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.InitialHct-Male </name>
+<topic> InitialHct-Male - BV9Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.InitialPVCrit </name>
+<topic> InitialPVCrit - BV10Definition  </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.InitialVol </name>
+<topic> InitialVol - BV11Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Loss </name>
+<topic> Loss - BV12Definition </topic>
+<seealso> RBCVol.Loss </seealso>
+<seealso> PlasmaVol.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.PVcrit </name>
+<topic> PVCrit - BV13Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.StressedVol </name>
+<topic> StressedVol - BV14Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.TextbookVolume </name>
+<topic> TextbookVolume - BV15Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.VO </name>
+<topic> VO - BV16Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Vol </name>
+<topic> Vol - BV17Definition  </topic>
+</vardoc>
+
+<vardoc>
+<name> BloodVol.Vol(L) </name>
+<topic> Vol - BV17Definition  </topic>
+</vardoc>
+
+<topicdoc>
+<name> BloodVol - Overview </name>
+<label> Overview </label>
+<content>
+
+Blood contains both extracellular fluid (fluid in plasma) 
+and intracellular fluid (the fluid in the red blood cells). 
+The average blood volume of adults is about 7% of body 
+weight or 5400mL. About 60% of the blood is plasma (3000mL)
+and 40% is red blood cells (2400mL).
+
+Changes in blood volume can result from either gains or losses 
+of one or both RBC volume and plasma volume.
+
+Guyton AC, Hall JE Textbook of Medical Physiology. 
+Eleventh Edition 2006
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> BloodVol - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Volume mL or L
+Hct % 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Change - BV1Definition</name>
+<label> Definition </label>
+<content>
+
+Changes in blood volume can result from either gains or 
+losses of one or both RBC volume and plasma volume.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Collapsed - BV2Definition </name>
+<label> Definition </label>
+<content>
+
+Blood vessels tend to collapse at low volumes. This 
+occurs when the internal pressure in the vessel is 
+equal to or less than the external pressure. This collapse affects 
+conductance and hence venous blood flow. In HumMod, collapsed is 
+a conditional variable used to define the collapsed effect,a multiplier 
+used to calculate systemic venous conductance and hence venous outflow. 
+If blood volume is less than the unstressed volume, then the collapsed
+effect is true and it's value is BloodVolume/unstressed volume, a 
+value less than 1.0. If blood volume is greater than or equal to 
+the unstressed volume, then collapsed is false and the collapsed 
+effect is 1.0.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> CollapsedEffect - BV3Definition </name>
+<label> Definition </label>
+<content>
+
+The collapsed effect is a multiplier used in the calculation of 
+systemic venous conductance. if blood volume is greater than
+unstressed volume, then the collapsed effect is 1.0. If blood volume 
+is less than the unstressed volume, then the collapsed effect is 
+blood volume/unstressed volume, a value less than 1.0.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - BV4Definition </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in blood volume from gains in 
+the volume of red blood cells and/or plasma volume respectively.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Hct - BV5Definition </name>
+<label> Definition </label>
+<content>
+
+The hematocrit is the amount of blood volume
+comprised of red blood cells expressed as a
+fraction, where total volume is 1.0.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Hct(%) - BV6Definition </name>
+<label> Definition </label>
+<content>
+
+Hct(%) is the Hct expressed as a percentage.
+Hct(%) = Hct * 100
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialHct - BV7Definition </name>
+<label> Definition </label>
+<content>
+
+The InitialHct is the starting Hct value 
+
+</content>
+</topicdoc>
+
+<topicdoc> 
+<name> InitialHct-Female - BV8Definition </name>
+<label> Definition  </label>
+<content>
+
+The InitialHct-Female is a constant used at start-up 
+to define the female hematocrit. The value is 0.40. 
+
+</content>
+</topicdoc>
+
+<topicdoc> 
+<name> InitialHct-Male - BV9Definition </name>
+<label> Definition  </label>
+<content>
+
+The InitialHct-Male is a constant used at start-up 
+to define the male hematocrit. The value is 0.44. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialPVCrit - BV10Definition </name>
+<label> Definition </label>
+<content>
+
+InitialPVCrit = 1.0 - InitialHct 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialVol - BV11Definition </name>
+<label> Definition </label>
+<content>
+
+The InitialVol is the starting blood volume and is defined
+by Start-GeneralX-Textbook*TextbookVolume.
+
+The general scaler (X-Textbook) is designed to have a value of
+1.0 when body size is textbook (male with all traits set to
+normal). The value is weighted much more to lean tissue mass
+than fat mass. This is important for blood volume since blood 
+volume is correlated with body weight. This correlation,
+however, diminishes as the amount of fat mass in the body 
+increases due to the relative paucity of vascularization 
+of adipose tissue. Blood volume is therefore more closely 
+related to lean body mass than actual weight. 
+
+Sjostrand T. Volume and distribution of blood and their
+significance in regulating the circulation. 
+Physiol Rev 33:202 - 228, 1953. 
+
+Kohrt WM, Malley MT, Dalsky GP, Holloszy JO. Body composition
+of healthy sedentary and trained, young and older men and women.
+Med Sci Sports Exerc 24(7):832 - 837, 1992.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - BV12Definition </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as negative changes in blood volume due to
+loss in volume of red blood cells and or plasma volume. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PVCrit - BV13Definition </name>
+<label> Definition </label>
+<content>
+
+PVCrit = 1.0 - Hct
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> StressedVol - BV14Definition </name>
+<label> Definition </label>
+<content>
+
+Blood vessels can be filled part-way with no increase in 
+pressure. The volume that marks the transition between no 
+pressure and a pressure increase is called the unstressed 
+volume and is designated by V0. Additional volume in excess 
+of V0 which causes any increase in pressure  is the stressed 
+volume. The sum of stressed and unstressed volumes is the 
+total blood volume.
+Stressed volume = Blood volume - unstressed volume. 
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TextbookVolume - BV15Definition </name>
+<label> Definition </label>
+<content>
+
+Textbook volume is a constant and has value 5400mL
+
+Guyton AC, Hall JE. Textbook of Medical Physiology. 11th Edition.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> V0 - BV16Definiton </name>
+<label> Definition </label>
+<content>
+
+Blood vessels can be filled part-way with no increase in 
+pressure. The volume that marks the transition between no 
+pressure and a pressure increase is called the unstressed 
+volume and is designated by V0. Additional volume in excess 
+of V0 which causes any increase in pressure  is the stressed 
+volume. The sum of stressed and unstressed volumes is the 
+total blood volume.
+Stressed volume = Blood volume - unstressed volume. 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Vol - BV17Definition </name>
+<label> Definition </label>
+<content>
+
+Vol is the calculated blood volume. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Vol(L) - BV18Definition </name>
+<label> Definition </label>
+<content>
+
+Vol(L) is the calculated blood volume expressed in Liters.
+Vol(L) = Vol/1000.0
+
+</content>
+</topicdoc>
+
+ 
+End

@@ -1,0 +1,78 @@
+HumMod / LungPCO2
+
+Created : 10-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 12.2 </row>
+   <col> 32.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Lung pCO2 </title>
+
+<structurename> LungCO2 </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> AirSupply-InspiredAir.PCO2 </name>
+  <label> Inspired </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Bronchi.PCO2 </name>
+  <label> Bronchi Inspired </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> PAlveolar </name>
+  <label> Alveoli </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> LungArtyCO2.PCO2 </name>
+  <label> Pulmonary Artery </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 1.0 </col>
+  <name> PCapy </name>
+  <label> Capillaries </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 1.0 </col>
+  <name> LungVeinCO2.PCO2 </name>
+  <label> Pulmonary Veins </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Normal Values (mmHg) </line>
+  <line>  </line>
+  <line> Inspired = 0 </line>
+  <line> Bronchi = 0 </line>
+  <line> Alveoli = 40 </line>
+  <line>  </line>
+  <line> Pulmonary Artery = 46 </line>
+  <line> Capillaries = 40 </line>
+  <line> Pulmonary Veins = 41 </line>
+</infobutton>
+
+</groupbox>
+
+End

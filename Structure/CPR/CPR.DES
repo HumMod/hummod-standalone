@@ -1,0 +1,33 @@
+HumMod / CPR DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2004-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\CPR\ ?>
+
+<?include CPR-Heart.DES ?>
+<?include CPR-Lungs.DES ?>
+
+<structure><name> CPR </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> CPR-Heart.Parms </call>
+  <call> CPR-Lungs.Parms </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> CPR-Heart.Wrapup </call>
+  <call> CPR-Lungs.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

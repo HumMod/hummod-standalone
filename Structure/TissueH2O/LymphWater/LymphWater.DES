@@ -1,0 +1,46 @@
+HumMod / LymphWater
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\TissueH2O\LymphWater\ ?>
+
+<?include UT_LymphWater.DES ?>
+<?include MT_LymphWater.DES ?>
+<?include LT_LymphWater.DES ?>
+
+<structure><name> LymphWater </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> UT_LymphWater.Dervs </call>
+<call> MT_LymphWater.Dervs </call>
+<call> LT_LymphWater.Dervs </call>
+
+<def><name> Rate </name>
+  <val>
+      UT_LymphWater.Rate
+    + MT_LymphWater.Rate
+    + LT_LymphWater.Rate
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

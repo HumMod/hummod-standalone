@@ -1,0 +1,23 @@
+HumMod / AldoTumor
+
+Created : 06-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AldoTumor </name>
+
+<variables>
+
+<parm>
+  <name> SecretionRate </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

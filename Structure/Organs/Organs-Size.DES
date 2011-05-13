@@ -1,0 +1,33 @@
+HumMod / Organs-Size
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Size </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Bone-Size.Calc </call>
+  <call> Brain-Size.Calc </call>
+  <call> Fat-Size.Calc </call>
+  <call> GITract-Size.Calc </call>
+  <call> Kidney-Size.Calc </call>
+  <call> LeftHeart-Size.Calc </call>
+  <call> Liver-Size.Calc </call>
+  <call> OtherTissue-Size.Calc </call>
+  <call> RespiratoryMuscle-Size.Calc </call>
+  <call> RightHeart-Size.Calc </call>
+  <call> SkeletalMuscle-Size.Calc </call>
+  <call> Skin-Size.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

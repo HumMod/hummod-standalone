@@ -1,0 +1,40 @@
+HumMod / Urea
+
+Created : 28-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Urea\ ?>
+
+<?include UreaPool.DES ?>
+<?include UreaCell.DES ?>
+
+<structure><name> Urea </name>
+
+<definitions>
+
+<block><name> CalcOsmoles </name>
+  <call> UreaCell.CalcOsmoles </call>
+  <call> UreaPool.CalcOsmoles </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> UreaCell.CalcConc </call>
+  <call> UreaPool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> UreaCell.Dervs </call>
+  <call> UreaPool.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End
+
+
+End

@@ -1,0 +1,47 @@
+HumMod / Summary
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Kidney-NephronCount.Total </name>
+   <format><integer/></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Kidney-NephronCount.Total(xNormal) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> x Normal </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> Kidney-NephronCount.Filtering(%) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Filtering (%) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> A typical nephron count is 2400000. </line>
+</infobutton>
+
+</groupbox>
+
+End

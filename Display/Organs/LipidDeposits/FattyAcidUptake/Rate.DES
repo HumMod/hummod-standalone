@@ -1,0 +1,88 @@
+HumMod / Rate
+
+Created : 31-Mar-08
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.8 </high>
+   <wide> 30.0 </wide>
+   <title> Rate </title>
+
+<structurename> LipidDeposits-Uptake </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 200 </max><inc> 100 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 9.8 </row><col> 1.0 </col><high> 4.0 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> InsulinEffect </name>
+    <label> [Insulin] </label>
+    <color> BLUE </color>
+  </bar>
+
+  <bar>
+    <name> FattyAcidEffect </name>
+    <label> [Fatty Acid] </label>
+    <color> BLUE </color>
+  </bar>
+  <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+</showbargraph>
+
+<repeatlist>
+  <name> LipidDeposits-Uptake.Basic </name>
+  <repeat><reps> 30 </reps><stepsize>  10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 14.2 </row><col> 1.0 </col>
+  <name> Basic </name>
+  <listname> LipidDeposits-Uptake.Basic </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Typical values are </line>
+  <line>  </line>
+  <line> Rate = 100.0 mG/Min </line>
+  <line>  </line>
+  <line> Effects are about 1.0 xNormal. </line>
+</infobutton>
+
+</groupbox>
+
+End

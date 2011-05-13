@@ -1,0 +1,42 @@
+HumMod / Structure
+
+Created : 11-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BrainInsult-Structure </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Structure </name>
+  <point><x> 0.5 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 0.8 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Effect </name>
+  <val> Structure [ Brain-Structure.Effect ] </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,28 @@
+HumMod / CirculatoryProtein
+
+Created : 16-Aug-08
+Last Modified : 2010-04-17
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> CirculatoryProtein </name>
+  <label> Circulatory Protein </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> PlasmaProtein </name>
+  <label> Plasma </label>
+  <parent> CirculatoryProtein </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialProtein </name>
+  <label> Interstitium </label>
+  <parent> CirculatoryProtein </parent>
+</leaf>
+
+End

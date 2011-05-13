@@ -1,0 +1,71 @@
+HumMod / PhBlood
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PhBlood </name>
+
+<variables>
+
+<var>
+  <name> pH </name>
+</var>
+
+<constant>
+  <name> pK </name>
+  <val> 7.42 </val>
+</constant>
+
+<var>
+  <name> pCO2 </name>
+</var>
+
+<var>
+  <name> SID </name>
+</var>
+
+<var>
+  <name> H+ </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<copy>
+  <from> pK </from>
+  <to> PhGeneral.pK </to>
+</copy>
+
+<copy>
+  <from> pCO2 </from>
+  <to> PhGeneral.pCO2 </to>
+</copy>
+
+<copy>
+  <from> SID </from>
+  <to> PhGeneral.SID </to>
+</copy>
+
+<call> PhGeneral.Calc </call>
+
+<copy>
+  <from> PhGeneral.pH </from>
+  <to> pH </to>
+</copy>
+
+<copy>
+  <from> PhGeneral.H+ </from>
+  <to> H+ </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

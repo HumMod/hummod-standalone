@@ -1,0 +1,46 @@
+HumMod / CapillaryWater
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\TissueH2O\CapillaryWater\ ?>
+
+<?include UT_CapillaryWater.DES ?>
+<?include MT_CapillaryWater.DES ?>
+<?include LT_CapillaryWater.DES ?>
+
+<structure><name> CapillaryWater </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> UT_CapillaryWater.Dervs </call>
+<call> MT_CapillaryWater.Dervs </call>
+<call> LT_CapillaryWater.Dervs </call>
+
+<def><name> Rate </name>
+  <val>
+      UT_CapillaryWater.Rate
+    + MT_CapillaryWater.Rate
+    + LT_CapillaryWater.Rate
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

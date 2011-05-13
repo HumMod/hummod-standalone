@@ -1,0 +1,35 @@
+HumMod / GILumenElectrolytes
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\GILumen\GILumenElectrolytes\ ?>
+
+<?include GILumenChloride.DES ?>
+<?include GILumenPotassium.DES ?>
+<?include GILumenSodium.DES ?>
+
+<structure><name> GILumenElectrolytes </name>
+
+<definitions>
+
+<block><name> Conc </name>
+  <call> GILumenChloride.Conc </call>
+  <call> GILumenPotassium.Conc </call>
+  <call> GILumenSodium.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> GILumenChloride.Dervs </call>
+  <call> GILumenPotassium.Dervs </call>
+  <call> GILumenSodium.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

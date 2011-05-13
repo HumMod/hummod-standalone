@@ -1,0 +1,57 @@
+HumMod / Technical
+
+Created : 11-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 6.0 </high>
+   <wide> 30.0 </wide>
+   <title> Technical </title>
+
+<structurename> Kidney-MyogenicDelay </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> PressureChange </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Pressure Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> K </name>
+   <format><decimal> 1 </decimal></format>
+   <label> K </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> PressureChange(Steady-State) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change (Steady-State) </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> DxMax </name>
+   <format><decimal> 2 </decimal></format>
+   <label> DxMax </label>
+</showvalue>
+
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

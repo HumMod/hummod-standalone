@@ -1,0 +1,50 @@
+HumMod / CD_Creatinine
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CD_Creatinine </name>
+
+<variables>
+
+<var><name> Outflow </name></var>
+
+<var><name> [Creatinine] </name></var>
+<var><name> [Creatinine(mG/dL)] </name></var>
+
+<var><name> Secretion </name></var>
+<parm><name> K </name><val> 22.0 </val></parm>
+<parm><name> Block </name><val> 0.0 </val></parm>
+
+<var><name> Osmolarity </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcFlux </name>
+  <def><name> Secretion </name><val> ( 1.0 - ( Block / 100.0 ) ) * K * CreatininePool.[Creatinine] </val></def>
+  <def><name> Outflow </name><val> GlomerulusCreatinine.Rate + Secretion </val></def>
+</block>
+
+<block><name> CalcConc </name>
+  <def><name> [Creatinine] </name><val> Outflow / CD_H2O.Outflow </val></def>
+  <def><name> [Creatinine(mG/dL)] </name><val> 100.0 * [Creatinine] </val></def>
+  <def><name> Osmolarity </name><val> 8.84 * [Creatinine] </val></def>
+</block>
+
+<block><name> NoFlow </name>
+  <def><name> Outflow </name><val> 0.0 </val></def>
+  <def><name> [Creatinine] </name><val> UNDEFINED </val></def>
+  <def><name> [Creatinine(mG/dL)] </name><val> UNDEFINED </val></def>
+  <def><name> Osmolarity </name><val> 0.0 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

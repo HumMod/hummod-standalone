@@ -1,0 +1,155 @@
+HumMod / General
+
+Created : 26-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 30 </high>
+   <wide> 30.0 </wide>
+   <title> General Nerve Activity </title>
+
+<showvalue>
+   <row> 1.4 </row>
+   <col> 1.0 </col>
+   <name> SympsCNS.NA(Hz) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Nerve Activity (Hz) </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> SympsCNS.NA(Hz) </name>
+      <label> NA </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> SympsCNS.ClampSwitch </name>
+  <listname> Common.Switch </listname>
+  <label> Clamp </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> SympsCNS.ClampLevel </name>
+  <repeat><reps> 29 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  7 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> SympsCNS.ClampLevel </name>
+  <listname> SympsCNS.ClampLevel </listname>
+  <label> Level </label>
+</slidebar>
+
+<showvalue>
+   <row> 12.6 </row><col> 1.0 </col>
+   <name> CNSTrophicFactor.Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Trophic Factor </label>
+</showvalue>
+
+<showbargraph>
+  <row> 14.0 </row><col> 1.0 </col><high> 6 </high><wide> 28 </wide>
+  <leftmargin> 10 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> SympsCNS.ReflexNA </name>
+    <label> Reflex </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> ExerciseSymps.TotalEffect </name>
+    <label> Exercise </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsCNS.FuelEffect </name>
+    <label> Brain Fuel </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> CushingResponse.Effect </name>
+    <label> Cushing </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<showvalue>
+   <row> 20.6 </row><col> 1.0 </col>
+   <name> SympsCNS.A2Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [AII] Effect </label>
+</showvalue>
+
+<showbargraph>
+  <row> 22.0 </row><col> 1.0 </col><high> 6 </high><wide> 28 </wide>
+  <leftmargin> 10 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar>
+    <name> SympsCNS.BaroEffect </name>
+    <label> Baro's </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsCNS.LowPressureEffect </name>
+    <label> Low Pres </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsCNS.MechanoEffect </name>
+    <label> Mechano's </label>
+    <color> BLUE </color>
+  </bar>
+  <bar>
+    <name> SympsChemo.Effect </name>
+    <label> Chemo's </label>
+    <color> BLUE </color>
+  </bar>
+  <scale>
+    <min> 0 </min><max> 2 </max><inc> 1 </inc>
+  </scale>
+</showbargraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Most multiplicative effects are 1.0 </line>
+  <line> x Normal. </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

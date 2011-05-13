@@ -1,0 +1,31 @@
+HumMod / Heart-Rhythm
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Rhythm </name>
+
+<variables>
+
+<var><name> Is_Sinus </name><val> TRUE </val></var>
+<var><name> Is_Ventricle </name><val> FALSE </val></var>
+<var><name> Is_Paced </name><val> FALSE </val></var>
+<var><name> Is_CPRThumper </name><val> FALSE </val></var>
+<var><name> Is_None </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+</block>
+
+</definitions>
+</structure>
+
+End

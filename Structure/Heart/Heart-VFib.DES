@@ -1,0 +1,102 @@
+HumMod / Heart-VFib
+
+Created : 15-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-VFib </name>
+
+<variables>
+
+<var><name> Is_Fibrillating </name><val> FALSE </val></var>
+<timervar><name> ElapsedTime </name><val> UNDEFINED </val></timervar>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<if>
+<test> Heart-Asystole.Is_Asystole </test>
+<true>
+  <andif>
+  <test> Is_Fibrillating </test>
+  <true><call> Stop </call></true>
+  </andif>
+</true>
+<false>
+  <call> TestStart </call>
+</false>
+</if>
+
+</block>
+
+<block><name> TestStart </name>
+
+<testcase>
+
+<case>
+  <test> LeftHeart-Function.Effect LT 0.30 </test>
+  <call> Start </call>
+</case>
+
+<case>
+  <test> KPool.[K+(mEq/L)] GT 10.0 </test>
+  <call> Start </call>
+</case>
+
+<case>
+  <test> KPool.[K+(mEq/L)] LT 2.4 </test>
+  <call> Start </call>
+</case>
+
+<case>
+  <test> DigoxinPool.[Digoxin] GT 2.5 </test>
+  <call> Start </call>
+</case>
+
+</testcase>
+
+</block>
+
+<block><name> RequestStart </name>
+
+<if>
+<test> Heart-Asystole.Is_Asystole </test>
+<true>
+  <page> Heart is asystole. It can't fibrillate. </page>
+  <exitblock/>
+</true>
+</if>
+
+<call> Start </call>
+
+</block>
+
+<block><name> Start </name>
+
+<def><name> Is_Fibrillating </name><val> TRUE </val></def>
+<timer><name> ElapsedTime </name><val> 0.0 </val><state> UP </state></timer>
+
+</block>
+
+<block><name> Stop </name>
+
+<def><name> Is_Fibrillating </name><val> FALSE </val></def>
+<timer><name> ElapsedTime </name><state> OFF </state></timer>
+
+</block>
+
+<block><name> ResetElapsedTime </name>
+  <timer><name> ElapsedTime </name><val> 0.0 </val></timer>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,94 @@
+HumMod / AnesthesiaGasSkin
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaGasSkin </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> pTissue </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> pVein </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.02 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / Skin-Size.Vol </val>
+</def>
+
+<def>
+  <name> pTissue </name>
+  <val> [Tissue] * AnesthesiaGasSolubility.GeneralK </val>
+</def>
+
+<def>
+  <name> pVein </name>
+  <val> pTissue </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> pVein / AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaGasArty.[Blood] - [Vein] )
+    * Skin-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

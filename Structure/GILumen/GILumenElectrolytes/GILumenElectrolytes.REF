@@ -1,0 +1,34 @@
+HumMod / GILumenElwctrolytes.REF
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+The three dietary electrolytes coming into the GI lumen
+are
+
+   Sodium
+   Chloride
+   Potassium
+
+PO4-- and SO4-- are also in the diet, but they go directly
+into the ECFV.
+
+Sodium ==================================
+
+Typical lumen mass is 80 mEq on an intake of o.125 mEq/min.
+
+Chloride ==================================
+
+Typical lumen mass is 90 mEq on an intake of o.138 mEq/min.
+
+Potassium ==================================
+
+Typical lumen mass is 25 mEq on an intake of o.048 mEq/min.
+
+
+End

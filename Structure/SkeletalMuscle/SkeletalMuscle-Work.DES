@@ -1,0 +1,64 @@
+HumMod / SkeletalMuscle-Work
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-Work </name>
+
+<variables>
+
+<parm>
+  <name> MechanicalEfficiency(%) </name>
+  <val> 30.0 </val>
+</parm>
+
+<var>
+  <name> MechanicalEfficiency </name>
+</var>
+
+<var>
+  <name> TotalCals </name>
+</var>
+
+<var>
+  <name> MotionCals </name>
+</var>
+
+<var>
+  <name> HeatCals </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> MechanicalEfficiency </name>
+  <val> MechanicalEfficiency(%) / 100.0 </val>
+</def>
+
+<def>
+  <name> MotionCals </name>
+  <val> Exercise-Metabolism.MotionCals </val>
+</def>
+
+<def>
+  <name> TotalCals </name>
+  <val> MotionCals / MechanicalEfficiency </val>
+</def>
+
+<def>
+  <name> HeatCals </name>
+  <val> TotalCals - MotionCals </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

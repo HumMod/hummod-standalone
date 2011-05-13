@@ -1,0 +1,43 @@
+HumMod / General
+
+Created : 22-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-Hormones-General </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Hormones - General </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Hormones\General\ ?>
+
+<?include ADH.DES ?>
+<?include Aldosterone.DES ?>
+<?include ANP.DES ?>
+<?include EPO.DES ?>
+<?include Renin.DES ?>
+<?include ThyroidHormone.DES ?>
+
+</panel>
+
+End

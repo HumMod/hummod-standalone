@@ -1,0 +1,46 @@
+HumMod / ThyroidGland
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\ThyroidGland\ ?>
+
+<?include ThyroidPool.DES ?>
+<?include ThyroidPump.DES ?>
+<?include ThyroidClearance.DES ?>
+<?include ThyroidSecretion.DES ?>
+<?include ThyroidTSH.DES ?>
+
+<structure><name> ThyroidGland </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> ThyroidPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ThyroidPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ThyroidTSH.Dervs </call>
+  <call> ThyroidSecretion.Dervs </call>
+  <call> ThyroidClearance.Dervs </call>
+  <call> ThyroidPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

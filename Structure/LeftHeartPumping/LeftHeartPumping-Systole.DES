@@ -1,0 +1,71 @@
+HumMod / LeftHeartPumping-Systole
+
+Created : 2010-05-25
+Last Modified : 2011-04-22
+Author : Tom Coleman and Radu Iliescu
+Copyright : 2010-2011
+By : University of Mississippi Medical Center
+
+<structure><name> LeftHeartPumping-Systole </name>
+
+<variables>
+
+<var><name> ESV </name></var>
+<var><name> ESP </name></var>
+<var><name> TMP </name></var>
+
+<parm><name> A-Basic </name><val> 17.39 </val></parm>
+<var><name> A </name></var>
+<parm><name> n </name><val> 0.5 </val></parm>
+
+<parm><name> Contractility-Basic </name><val> 1.0 </val></parm>
+<var><name> Contractility </name></var>
+
+<parm><name> Switch </name><val> 0 </val></parm>
+<var><name> Failure </name></var>
+<parm><name> Degree </name><val> 1 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> ESP </name><val> SystemicArtys.Pressure + 24.0 </val></def>
+<def><name> TMP </name><val> ESP - Pericardium-Cavity.Pressure </val></def>
+
+<if>
+<test> Switch </test>
+<true>
+  <def><name> Failure </name><val> System.X </val></def>
+</true>
+<false>
+  <def><name> Failure </name><val> 0 </val></def>
+</false>
+</if>
+
+<def><name> Contractility </name>
+ <val>
+     ( Contractility-Basic * LeftHeart-BetaReceptors.Activity )
+     - ( Failure * Degree / 144000 )
+ </val>
+</def>
+
+<def><name> A </name><val> Contractility * A-Basic </val></def>
+
+<call> V=f(P) </call>
+
+</block>
+
+<block><name> P=f(V) </name>
+  <def><name> TMP </name><val> A * ( ESV ^ n ) </val></def>
+</block>
+
+<block><name> V=f(P) </name>
+  <def><name> ESV </name><val> ( TMP / A ) ^ ( 1.0 / n ) </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

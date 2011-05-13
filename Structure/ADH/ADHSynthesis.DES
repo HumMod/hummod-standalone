@@ -1,0 +1,59 @@
+HumMod / ADHSynthesis
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ADHSynthesis </name>
+
+<variables>
+
+<parm>
+  <name> Base </name>
+  <val> 3.2 </val>
+</parm>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<var>
+  <name> Feedback </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Feedback </name>
+  <point><x>     0 </x><y> 4.0 </y><slope> 0 </slope></point>
+  <point><x> 17000 </x><y> 1.0 </y><slope> -0.0003 </slope></point>
+  <point><x> 20000 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Feedback </name>
+  <val> Feedback [ ADHSlowMass.Mass ] </val>
+</def>
+
+<def>
+  <name> Rate </name>
+  <val> Base * Feedback </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

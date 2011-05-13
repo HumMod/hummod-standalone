@@ -1,0 +1,53 @@
+HumMod / LeftHeart-Pain DES
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> LeftHeart-Pain </name>
+
+<variables>
+
+<var><name> HasPain </name><val> FALSE </val></var>
+
+<var><name> IsIschemic </name><val> FALSE </val></var>
+<var><name> IsAcidic </name><val> FALSE </val></var>
+
+<var><name> [Lac-]-NoPain </name><val> 0.03 </val></var>
+<var><name> [Lac-]-Pain </name><val> 0.05 </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<def>
+  <name> IsIschemic </name>
+  <val> LeftHeart-Infarction.IsIschemic </val>
+</def>
+
+<conditional><name> IsAcidic </name>
+<test> LeftHeart-Lactate.[Lac-] LT [Lac-]-NoPain </test>
+<true> FALSE </true>
+</conditional>
+
+<conditional><name> IsAcidic </name>
+<test> LeftHeart-Lactate.[Lac-] GT [Lac-]-Pain </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> HasPain </name>
+<test> IsIschemic OR IsAcidic </test>
+<true> TRUE </true>
+<false> FALSE </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,125 @@
+HumMod / BloodVol
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BloodVol </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+<var><name> Vol(L) </name></var>
+<var><name> Change </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Hct </name></var>
+<var><name> InitialHct </name></var>
+<var><name> Hct(%) </name></var>
+
+<constant>
+  <name> InitialHct-Male </name>
+  <val> 0.44 </val>
+</constant>
+
+<constant>
+  <name> InitialHct-Female </name>
+  <val> 0.40 </val>
+</constant>
+
+<var><name> PVCrit </name></var>
+<var><name> InitialPVCrit </name></var>
+
+<var><name> StressedVol </name></var>
+<var><name> V0 </name></var>
+<var><name> Collapsed </name></var>
+<var><name> CollapsedEffect </name></var>
+
+<constant>
+  <name> TextbookVolume </name>
+  <val> 5400.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialVol </name>
+  <val> Start-General.X-Textbook * TextbookVolume </val>
+</def>
+
+<conditional>
+  <name> InitialHct </name>
+  <test> Gender.IsMale </test>
+  <true> InitialHct-Male </true>
+  <false> InitialHct-Female </false>
+</conditional>
+
+<def>
+  <name> InitialPVCrit </name>
+  <val> 1.0 - InitialHct </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def><name> Vol </name><val> RBCVol.Vol + PlasmaVol.Vol </val></def>
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+<def><name> Hct </name><val> RBCVol.Vol / Vol </val></def>
+<def><name> Hct(%) </name><val> Hct * 100.0 </val></def>
+<def><name> PVCrit </name><val> 1.0 - Hct </val></def>
+
+</block>
+
+<block><name> CalcV0 </name>
+
+<def>
+  <name> V0 </name>
+  <val>
+      PulmArty.V0
+    + PulmCapys.V0
+    + PulmVeins.V0
+    + SystemicArtys.V0
+    + SystemicVeins.V0
+    + SplanchnicVeins.V0
+  </val>
+</def>
+
+<def><name> StressedVol </name><val> Vol - V0 </val></def>
+
+<if>
+  <test> Vol LE V0 </test>
+  <true>
+    <def><name> Collapsed </name><val> TRUE </val></def>
+    <def><name> CollapsedEffect </name><val> Vol / V0 </val></def>
+  </true>
+  <false>
+    <def><name> Collapsed </name><val> FALSE </val></def>
+    <def><name> CollapsedEffect </name><val> 1.0 </val></def>
+  </false>
+</if>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name><val> RBCVol.Gain + PlasmaVol.Gain </val></def>
+<def><name> Loss </name><val> RBCVol.Loss + PlasmaVol.Loss </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

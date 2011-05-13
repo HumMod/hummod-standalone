@@ -1,0 +1,107 @@
+HumMod / RightHeart
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<branch>
+  <name> RightHeart </name>
+  <label> Right Heart </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> RightHeart-Circulation </name>
+  <label> Circulation </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<branch>
+  <name> RightHeart-Fuel </name>
+  <label> Fuel </label>
+  <parent> RightHeart </parent>
+</branch>
+
+<leaf>
+  <name> RightHeartFuel-Selection </name>
+  <label> Selection </label>
+  <parent> RightHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeartFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> RightHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeartFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> RightHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeartFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> RightHeart-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-CO2 </name>
+  <label> CO2 </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Lactate </name>
+  <label> Lactate </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Nerves </name>
+  <label> Nerves </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Function </name>
+  <label> Function </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Structure </name>
+  <label> Structure </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Size </name>
+  <label> Size </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> RightHeart-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> RightHeart </parent>
+</leaf>
+
+End

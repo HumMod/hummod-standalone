@@ -1,0 +1,33 @@
+HumMod / Uterus
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Uterus </name>
+
+<variables>
+
+<!--
+<var><name>  </name></var>
+-->
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<!--
+<def><name>  </name><val> 0.0 </val></def>
+-->
+
+</block>
+
+</definitions>
+</structure>
+
+End

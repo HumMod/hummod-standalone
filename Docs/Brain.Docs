@@ -1,0 +1,32 @@
+Digital Human / Brain DES
+
+Created : 21-Oct-04
+Last Modified : 16-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+<docs>
+
+<?path Docs\Brain\ ?>
+
+<?include Brain-Flow.docs ?>
+<?include Brain-Fuel.docs ?>
+<?include Brain-Function.docs ?>
+<?include Brain-Ph.docs ?>
+<?include Brain-Pressure.docs ?>
+<?include Brain-Structure.docs ?>
+<?include Brain-Size.docs ?>
+
+<?include BrainInsult\BrainInsult.docs ?>
+
+<?include GlasgowComaScale.docs ?>
+<?include Seizure.docs ?>
+
+<?include Brain-CO2.docs ?>
+<?include Brain-Lactate.docs ?>
+
+<?include Brain-Metabolism.docs ?>
+<?include Brain-Vasculature.docs ?>
+</docs>
+End

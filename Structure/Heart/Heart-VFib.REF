@@ -1,0 +1,30 @@
+HumMod / Heart-VFib.REF
+
+Created : 15-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The heart will not fibrillate when the left heart has failed. In
+this case we have cardiac arrest.
+
+Otherwise, we get fibrillation when
+
+# Left heart function (Effect) < 0.30
+# [K+] > 10.0
+# [K+] < 2.4
+# [Digoxin] > 2.5
+
+Here is my current take on hyperkalemia.
+
+    [K+]        Effect
+----------- ---------------------------------
+ 4.0 -  6.5  Aymtomatic
+ 6.5 -  7.5  Peaked T-Wave
+ 7.5 -  8.0  QRS and T abnormalities
+10.0 - 12.0  Sine wave ECG or fibrillation
+
+End

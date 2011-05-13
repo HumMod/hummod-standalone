@@ -1,0 +1,103 @@
+HumMod / [HCO3]
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.0 </high>
+   <wide> 30.0 </wide>
+   <title> [HCO3 (mEq/L)] </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Bone-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Bone </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Brain-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Brain </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Fat-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Fat </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> GITract-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Kidney-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> LeftHeart-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.4 </row><col> 1.0 </col>
+  <name> Liver-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Liver </label>
+</showvalue>
+
+<showvalue>
+  <row> 8.4 </row><col> 1.0 </col>
+  <name> OtherTissue-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 9.4 </row><col> 1.0 </col>
+  <name> RespiratoryMuscle-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.4 </row><col> 1.0 </col>
+  <name> RightHeart-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.4 </row><col> 1.0 </col>
+  <name> SkeletalMuscle-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> Skin-CO2.[HCO3(mEq/L)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Skin </label>
+</showvalue>
+
+</groupbox>
+
+End

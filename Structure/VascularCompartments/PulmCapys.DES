@@ -1,0 +1,118 @@
+HumMod / PulmCapys DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> PulmCapys </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<parm>
+  <name> V0 </name>
+  <val> 140.0 </val>
+</parm>
+
+<var>
+  <name> StressedVol </name>
+</var>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+<var>
+  <name> ExternalPressure </name>
+</var>
+
+<parm>
+  <name> Compliance </name>
+  <val> 4.6 </val>
+</parm>
+
+<parm>
+  <name> Conductance </name>
+  <val> 1800 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 200.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> StressedVol </name>
+  <val> ( Vol - V0 ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> Thorax.AvePressure </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> ( StressedVol / Compliance ) + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> CalcOutflow </name>
+
+<def>
+  <name> Outflow </name>
+  <val> Conductance * ( Pressure - PulmVeins.Pressure ) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> DxMax </name>
+  <test> Conductance GT 0.0 </test>
+  <true> 0.5 * Compliance / Conductance </true>
+  <false> INFINITY </false>
+</conditional>
+
+<def>
+  <name> Inflow </name>
+  <val> PulmArty.Outflow </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

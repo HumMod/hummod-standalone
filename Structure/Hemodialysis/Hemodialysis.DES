@@ -1,0 +1,45 @@
+HumMod / Hemodialysis
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Hemodialysis\ ?>
+
+<?include DialysisShunt.DES ?>
+<?include DialyzerControl.DES ?>
+<?include DialysateComposition.DES ?>
+<?include DialyzerActivity.DES ?>
+
+<structure><name> Hemodialysis </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> DialyzerControl.Parms </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> DialysisShunt.Dervs </call>
+  <call> DialyzerActivity.Dervs </call>
+
+</block>
+
+<block><name> Wrapup </name>
+
+  <call> DialyzerActivity.Wrapup </call>
+
+</block>
+
+</definitions>
+
+</structure>
+
+End

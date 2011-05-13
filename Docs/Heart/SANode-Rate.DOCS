@@ -1,0 +1,84 @@
+QHP 2008 / Heart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> SANode-Rate </structurename>
+
+<vardoc>
+<name> SANode-Rate.BasicRate</name>
+<topic> SANode-Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-Rate.Is_SinusRhythm </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-Rate.ParasympatheticEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> VagusNerve.NA(Hz) </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-Rate.Rate </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SANode-Rate.SympatheticEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> SANode-BetaReceptors.Activity </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> SANode-Overview </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label>  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

@@ -1,0 +1,73 @@
+HumMod / VagusNerve
+
+Created : 23-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> VagusNerve </name>
+
+<variables>
+
+<var>
+  <name> NA(Hz) </name>
+</var>
+
+<var>
+  <name> NA </name>
+</var>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Setting </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm>
+  <name> Block(%) </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> NA(Hz) </name>
+  <point><x> 0.0 </x><y> 8.0 </y><slope> 0 </slope></point>
+  <point><x> 1.5 </x><y> 2.0 </y><slope> -2.0 </slope></point>
+  <point><x> 4.5 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<conditional>
+  <name> NA(Hz) </name>
+  <test> Switch </test>
+  <true> Setting </true>
+  <false>
+      NA(Hz) [ SympsCNS.NA(Hz) ]
+    * ( 1.0 - ( Block(%) / 100.0 ) )
+  </false>
+</conditional>
+
+<def>
+  <name> NA </name>
+  <val> 0.667 * NA(Hz) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

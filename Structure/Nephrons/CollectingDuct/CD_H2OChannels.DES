@@ -1,0 +1,66 @@
+HumMod / CD_H2OChannels
+
+Created : 09-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CD_H2OChannels </name>
+
+<variables>
+
+<var>
+  <name> Active </name>
+</var>
+
+<constant>
+  <name> InactivateK </name>
+  <val> 0.000125 </val>
+</constant>
+
+<constant>
+  <name> ReactivateK </name>
+  <val> 0.0004 </val>
+</constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Inactive </name>
+  <integralname> Inactive </integralname>
+  <initialval> 1.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> CalcActive </name>
+
+<def>
+  <name> Active </name>
+  <val> 2.0 - Inactive </val>
+</def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def>
+  <name> Change </name>
+  <val>
+      ( InactivateK * CD_H2O.Reab )
+    - ( ReactivateK * Inactive )
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

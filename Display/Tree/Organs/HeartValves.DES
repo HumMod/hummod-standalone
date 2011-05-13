@@ -1,0 +1,43 @@
+HumMod / HeartValves
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<branch>
+  <name> HeartValves </name>
+  <label> Heart Valves </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> HeartValves-Aortic </name>
+  <label> Aortic </label>
+  <parent> HeartValves </parent>
+</leaf>
+
+<leaf>
+  <name> HeartValves-Mitral </name>
+  <label> Mitral </label>
+  <parent> HeartValves </parent>
+</leaf>
+
+<separatorbar>
+  <parent> HeartValves </parent>
+</separatorbar>
+
+<leaf>
+  <name> HeartValves-Pulmonic </name>
+  <label> Pulmonic </label>
+  <parent> HeartValves </parent>
+</leaf>
+
+<leaf>
+  <name> HeartValves-Tricuspid </name>
+  <label> Tricuspid </label>
+  <parent> HeartValves </parent>
+</leaf>
+
+End

@@ -1,0 +1,68 @@
+HumMod / Values-Age
+
+Created : 22-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Values-Age </name>
+
+<variables>
+
+<constant><name> YOUNG </name><val> 19.0 </val></constant>
+<constant><name> YOUNGISH </name><val> 28.0 </val></constant>
+<constant><name> MIDDLEAGED </name><val> 37.0 </val></constant>
+<constant><name> OLD </name><val> 65.0 </val></constant>
+<constant><name> VERYOLD </name><val> 89.0 </val></constant>
+
+<var><name> Age(Years) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+  <test> Descriptors-Age.IsYoung </test>
+  <def><name> Age(Years) </name><val> YOUNG </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Age.IsYoungish </test>
+  <def><name> Age(Years) </name><val> YOUNGISH </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Age.IsMiddleaged </test>
+  <def><name> Age(Years) </name><val> MIDDLEAGED </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Age.IsOld </test>
+  <def><name> Age(Years) </name><val> OLD </val></def>
+</case>
+
+<case>
+  <test> Descriptors-Age.IsVeryOld </test>
+  <def><name> Age(Years) </name><val> VERYOLD </val></def>
+</case>
+
+<case>
+  <test> TRUE </test>
+  <message> The age trait is not valid. </message>
+  <stop/>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

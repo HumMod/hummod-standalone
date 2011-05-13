@@ -1,0 +1,72 @@
+HumMod / Temperature
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 12.4 </high>
+   <wide> 30.0 </wide>
+   <title> Temperature </title>
+
+<structurename> HeatCore </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Temp(F) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> deg F </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Temp(F) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 98 </min><max> 99 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> deg C </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Temp(K) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> deg K </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical core temperatures are </line>
+  <line>  </line>
+  <line> 98.6 deg F </line>
+  <line> 37.0 deg C </line>
+  <line> 310.2 deg K </line>
+</infobutton>
+
+</groupbox>
+
+End

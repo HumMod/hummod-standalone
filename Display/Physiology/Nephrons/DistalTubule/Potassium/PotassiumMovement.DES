@@ -1,0 +1,75 @@
+HumMod / PotassiumMovement
+
+Created : 18-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.2 </high>
+   <wide> 30.0 </wide>
+   <title> Potassium Movement </title>
+
+<structurename> DT_K </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Outflow </name>
+  <format><decimal> 3 </decimal></format>
+  <label> Secretion </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name><label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar><name> Outflow </name><nolabel/><linecolor> BLUE </linecolor></yvar>
+    <scale><min> 0 </min><max> 0.1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showbargraph>
+  <row> 11.8 </row><col> 1.0 </col><high> 7.0 </high><wide> 28 </wide>
+  <leftmargin> 8 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar><name> AldoEffect </name><label> [Aldo] </label><color> BLUE </color></bar>
+  <bar><name> KEffect </name><label> [K+] </label><color> BLUE </color></bar>
+  <bar><name> NaEffect </name><label> Na+ Load </label><color> BLUE </color></bar>
+  <bar><name> ThiazideEffect </name><label> Thiazide </label><color> BLUE </color></bar>
+  <bar><name> Kidney-Function.Effect </name><label> Function </label><color> BLUE </color></bar>
+  <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+</showbargraph>
+
+<repeatlist>
+  <name> DT_K.BasicOutflow </name>
+  <repeat><reps> 20 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 19.4 </row><col> 1.0 </col>
+  <name> BasicOutflow </name>
+  <listname> DT_K.BasicOutflow </listname>
+  <label> Normal </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical secretion is 0.050 mEq/Min. </line>
+  <line>  </line>
+  <line> Typical effects are 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

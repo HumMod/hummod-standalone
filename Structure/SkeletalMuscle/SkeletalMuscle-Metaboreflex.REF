@@ -1,0 +1,19 @@
+HumMod / SkeletalMuscle-Metaboreflex
+
+Created : 17-Jan-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+This structure turns on skeletal muscle afferent
+nerve activity as a function of skeletal muscle
+pH.
+
+Victor et.al. J. Clin. Invest. 82:1301-1305,
+1988.
+
+Reflex threshold is 6.9 with full effect at 6.5.
+
+End

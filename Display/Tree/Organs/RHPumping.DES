@@ -1,0 +1,86 @@
+HumMod / RHPumping
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<branch>
+  <name> RHPumping </name>
+  <label> RH Pumping </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> RHPumping-Output </name>
+  <label> Output </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> RHPumping-Systole </name>
+  <label> Systole </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> RHPumping-Diastole </name>
+  <label> Diastole </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<!--
+<separatorbar>
+  <parent> RHPumping </parent>
+</separatorbar>
+
+<leaf>
+  <name> RHPumping-Contractility </name>
+  <label> Contractility </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> RHPumping-ContractileProtein </name>
+  <label> Contractile Protein </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<leaf>
+  <name> RHPumping-Work </name>
+  <label> Work </label>
+  <parent> RHPumping </parent>
+</leaf>
+-->
+
+<separatorbar>
+  <parent> RHPumping </parent>
+</separatorbar>
+
+<leaf>
+  <name> RHPumping-Cardiopathy </name>
+  <label> Cardiopathy </label>
+  <parent> RHPumping </parent>
+</leaf>
+
+<!--
+<branch>
+  <name> RHValves </name>
+  <label> Valves </label>
+  <parent> RHPumping </parent>
+</branch>
+
+<leaf>
+  <name> RHPumping-Pulmonic </name>
+  <label> Pulmonic </label>
+  <parent> RHValves </parent>
+</leaf>
+
+<leaf>
+  <name> RHPumping-Tricuspid </name>
+  <label> Tricuspid </label>
+  <parent> RHValves </parent>
+</leaf>
+-->
+End

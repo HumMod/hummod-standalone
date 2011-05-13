@@ -1,0 +1,19 @@
+HumMod / GILumenFood.REF
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+Parietal cells have a pH of 0.8 with a [H+] of 160 mEq/L as HCl.
+
+Vomitus has a [H+] of around 80.
+
+H2O and Cl- are lost in vomit to create an alkalosis.
+
+
+
+End

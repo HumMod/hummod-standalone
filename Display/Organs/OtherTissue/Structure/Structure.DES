@@ -1,0 +1,17 @@
+HumMod / Structure
+
+Created : 2010-05-31
+Last Modified : 2010-05-31
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<?path Display\Organs\OtherTissue\Structure\ ?>
+
+<?include Summary\Summary.DES ?>
+
+<?include PhEffect\PhEffect.DES ?>
+<?include FuelEffect\FuelEffect.DES ?>
+<?include TemperatureEffect\TemperatureEffect.DES ?>
+
+End

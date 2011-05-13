@@ -1,0 +1,46 @@
+HumMod / DietIntakeH2O
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietIntakeH2O </name>
+
+<variables>
+
+<var><name> Rate(L/Day) </name></var>
+<var><name> Rate(mL/Min) </name></var>
+<parm><name> Fixed? </name><val> FALSE </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<if>
+<test> Brain-Function.IsReallyDead </test>
+<true>
+  <def><name> Rate(L/Day) </name><val> 0.0 </val></def>
+  <def><name> Rate(mL/Min) </name><val> 0.0 </val></def>
+  <exitblock/>  
+</true>
+</if>
+
+<conditional>
+  <name> Rate(L/Day) </name>
+  <test> Fixed? </test>
+  <true> DietGoalH2O.Rate(L/Day)  </true>
+  <false> DietThirst.Rate(L/Day) </false>
+</conditional>
+
+<def><name> Rate(mL/Min) </name><val> 1000.0 * Rate(L/Day) * DietFeeding.Fraction </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

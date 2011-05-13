@@ -1,0 +1,41 @@
+HumMod / Sweat
+
+Created : 25-Mar-07
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Sweat\ ?>
+
+<?include SweatGland.DES ?>
+<?include SweatDuct.DES ?>
+<?include SweatAcclimation.DES ?>
+<?include SweatFuel.DES ?>
+
+<structure><name> Sweat </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> SweatAcclimation.Parms </call>
+  <call> SweatDuct.Parms </call>
+</block>
+
+<block><name> Calc </name>
+  <call> SweatGland.Calc </call>
+  <call> SweatDuct.Calc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> SweatAcclimation.Dervs </call>
+  <call> SweatFuel.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End
+End

@@ -1,0 +1,26 @@
+Digital Human / Metabolism
+
+Created : 21-Oct-04
+Last Modified : 11-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\Metabolism\ ?>
+
+<?include Metabolism-Tools.docs ?>
+<?include Thyroid.docs ?>
+
+<?include Metabolism-FuelUse.docs ?>
+
+<?include Metabolism-MetabolicRate.docs ?>
+<?include Metabolism-RespiratoryQuotient.docs ?>
+<?include Metabolism-CaloriesUsed.docs ?>
+
+<?include Metabolism-Glucose.docs ?>
+<?include Metabolism-FattyAcid.docs ?>
+
+</docs>
+End

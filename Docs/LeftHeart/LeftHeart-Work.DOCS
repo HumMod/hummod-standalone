@@ -1,0 +1,61 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Work </structurename>
+
+<vardoc>
+<name> LeftHeart-Work.HeatCals </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Work.MotionCals </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Work.TotalCals </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Work.MotionCals </seealso>
+<seealso> LeftHeart-Work.HeatCals </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

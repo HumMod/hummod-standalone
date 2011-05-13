@@ -1,0 +1,35 @@
+HumMod / GlasgowComaScale
+
+Created : 15-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The Glasgow Coma Scale runs from 15 down to 3.
+
+  Eye Opening
+     Spontaneous             4
+     To speech               3
+     To pain                 2
+     None                    1
+
+  Best Motor Response
+     Obeys                   6
+     Localizes               5
+     Withdraws               4
+     Abnormal flexion        3
+     Extensor response       2
+     None                    1
+
+  Verbal Response
+     Oriented                5
+     Confused conversion     4
+     Inappropriate words     3
+     Incomprehensible sounds 2
+     None                    1
+
+  Teasdale and Jennett. Lancet 2:81-84, 1974.
+
+End

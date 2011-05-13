@@ -1,0 +1,51 @@
+HumMod / Clearance
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.2 </row>
+   <col> 1.0 </col>
+   <high> 5.0 </high>
+   <wide> 30.0 </wide>
+   <title> Clearance </title>
+
+<structurename> RBCClearance </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Tau </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Tau </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> RBCVol.Vol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> A typical red cell clearance rate </line>
+  <line> is 0.014 mL/Min. </line>
+  <line> </line>
+  <line> Tau is 120.0 days. </line>
+</infobutton>
+
+</groupbox>
+
+End

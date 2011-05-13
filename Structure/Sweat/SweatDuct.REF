@@ -1,0 +1,37 @@
+HumMod / SweatDuct
+
+Created : 2010-05-15
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+Units for H2O rate are mL/Min.
+
+Units for electrolyes are
+
+   Rate - mEq/Min
+   [Conc] - mEq/L
+
+Reabsorption applies to sodium
+and cloride.  There is an aldo
+effect.
+
+Fractional reabsorption depends
+on water flow.  It is 1 at zero
+flow and 0 at infinite flow.
+This is an exponential function
+
+   F = exp (K * Flow / Modulators)
+
+where K is negative.  We define
+K at a flow of 15 mL/Min.  Normal
+fractional reabsorption is 0.8
+at this flow.
+
+   ln 0.8 = K * 15 / 1
+   K = ln 0.8 / 15 or -0.015
+
+
+
+End

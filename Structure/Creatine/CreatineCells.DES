@@ -1,0 +1,34 @@
+HumMod / CreatineCells
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CreatineCells </name>
+
+<variables>
+
+<var><name> TotalMass </name></var>
+<parm><name> OtherMass </name><val> 17.0 </val></parm>
+<var><name> CreatineToCreatinine </name></var>
+<parm><name> K </name><val> 0.010 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> TotalMass </name><val> CreatineSkeletalMuscle.Mass + OtherMass </val></def>
+<def><name> CreatineToCreatinine </name><val> K * TotalMass </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

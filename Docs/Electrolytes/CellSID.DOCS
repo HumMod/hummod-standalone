@@ -1,0 +1,131 @@
+QHP 2008 / Electrolytes.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> CellSID </structurename>
+
+<vardoc>
+<name> CellSID.LessLac </name>
+<topic> CellSID - Overview </topic>
+<topic> CellSID - Concentration Units </topic>
+<seealso> KCell.[K+] </seealso>
+<seealso> PhCells.SID </seealso>
+</vardoc>
+
+<vardoc>
+<name> CellSID.OtherCations </name>
+<topic> OtherCations - DefinitionCS1 </topic>
+</vardoc>
+
+<vardoc>
+<name> CellSID.StrongAnions </name>
+<topic> StrongAnions - DefinitionCS2 </topic>
+</vardoc>
+
+<vardoc>
+<name> CellSID.WeakAnions </name>
+<topic> WeakAnions - DefinitionCS3 </topic>
+</vardoc>
+
+<topicdoc>
+<name> CellSID - Overview </name>
+<label> Overview </label>
+<content>
+
+Peter Stewart was a Canadian physiologist who introduced 
+the term "strong ion difference" or [SID]. SID in any 
+solution is defined as the sum of all the strong cation 
+concentrations minus the sum of all the strong anion 
+concentrations. 
+
+The strong cations in cells are mainly potassium (K+), 
+with small amounts of sodium(Na+) and magnesium (Mg++).
+Strong anions are phosphate ions and other inorganic ions. 
+
+Stewart's original estimate of of cell SID at 0.130 is 
+rather high.  Experimental evidence suggests a rather 
+low cell SID. This evidence is the pH changes which occur
+when CO2 and acid microinjection have been used to acidify
+the cell. Additionally, the pH changes due to lactate
+generation during exercise support a low cell SID.  
+
+Stewart PA. Independent and dependent variables of acid-base 
+control. Respir Physiol 33: 9–26, 1978.
+
+Stewart PA. How to Understand Acid-Based: A Quantitative 
+Acid-Base Primer for Biology and Medicine. New York: Elsevier, 1981.
+
+Stewart PA. Modern quantitative acid-base chemistry. 
+Can J Physiol Pharmacol 61: 1444–1461, 1983.
+
+Thomas RC. Intracellular pH of snail neurones measured with
+a new pH-sensitive glass microelectrode. 
+J Physiol 238: 159 - 180, 1974.
+
+Thomas RC. The effect of carbon dioxide on the intracellular
+pH and buffering power of snail neurones.
+J Physiol 255: 715 - 735, 1976.
+
+Thomas RC. The role of bicarbonate, chloride and sodium ions
+in tehr egulation of intracellular pH in snail neurones.
+J Physiol 273: 317 - 338, 1977.
+
+Guyton AC , Hall JE. Textbook of Medical Physiology. 
+Eleventh Edition 2006. Elsevier Saunders. 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> CellSID - Concentration Units </name>
+<label> Concentration Units  </label>
+<content>
+
+Cell SID is estimated to be 36mEq/L
+
+Thomas RC. Intracellular pH of snail neurones measured with
+a new pH-sensitive glass microelectrode. 
+J Physiol 238: 159 - 180, 1974.
+
+Thomas RC. The effect of carbon dioxide on the intracellular
+pH and buffering power of snail neurones.
+J Physiol 255: 715 - 735, 1976.
+
+Thomas RC. The role of bicarbonate, chloride and sodium ions
+in the regulation of intracellular pH in snail neurones.
+J Physiol 273: 317 - 338, 1977.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> OtherCations - DefinitionCS2 </name>
+<label> Definition </label>
+<content>
+
+The main cation contributing to cell SID is potassium.
+All other cations are defined as other cations and include
+magnesium and sodium. The contribution of these latter two 
+cations to CellSID is rather small - 0.012mEq/L.
+
+SID = KCell.[K+] + OtherCations - StrongAnions
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> StrongAnions - DefinitionCS3 </name>
+<label> Definition </label>
+<content>
+
+
+
+</content>
+</topicdoc>
+   
+
+End

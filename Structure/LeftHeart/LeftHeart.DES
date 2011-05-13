@@ -1,0 +1,32 @@
+HumMod / LeftHeart
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\LeftHeart\ ?>
+
+<?include LeftHeart-Flow.DES ?>
+<?include LeftHeart-Pressure.DES ?>
+<?include LeftHeart-ContractileProtein.DES ?>
+<?include LeftHeart-Size.DES ?>
+<?include LeftHeart-Function.DES ?>
+
+<?include LeftHeart-CO2.DES ?>
+<?include LeftHeart-Lactate.DES ?>
+<?include LeftHeart-Ph.DES ?>
+
+<?include LeftHeart-Fuel.DES ?>
+<?include LeftHeart-Metabolism.DES ?>
+<?include LeftHeart-AlphaReceptors.DES ?>
+<?include LeftHeart-BetaReceptors.DES ?>
+<?include LeftHeart-Structure.DES ?>
+<?include LeftHeart-Vasculature.DES ?>
+
+<?include LeftHeart-Work.DES ?>
+<?include LeftHeart-Infarction.DES ?>
+
+End

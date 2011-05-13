@@ -1,0 +1,23 @@
+HumMod / LowerExternalPressure
+
+Created : 19-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LowerExternalPressure </name>
+
+<variables>
+
+<parm>
+  <name> Pressure </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

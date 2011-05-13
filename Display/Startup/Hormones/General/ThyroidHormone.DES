@@ -1,0 +1,70 @@
+HumMod / ThyroidHormone
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 19.6 </row>
+   <col> 32.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Thyroid Hormone </title>
+
+<structurename> ThyroidPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Target[Total_T4-T3] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Initial [Total T4-T3] </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 3.0 </col>
+  <name> InitialMass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 3.0 </col>
+  <name> ECFV.InitialVol </name>
+  <format><decimal> 0 </decimal></format>
+  <label> ECFV </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> [Total_T4-T3] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Current [Total T4-T3] </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 3.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 6.8 </row><col> 3.0 </col>
+  <name> ECFV.Vol </name>
+  <format><decimal> 0 </decimal></format>
+  <label> ECFV </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Target [Total T4-T3(mG/dL)] is 8.0 </line>
+</infobutton>
+
+</groupbox>
+
+End

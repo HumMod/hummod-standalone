@@ -1,0 +1,44 @@
+HumMod / HumMod.DES
+
+Created : 06-Sep-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<!-- <?create GENDER-MALE ?> -->
+<!-- <?create GENDER-FEMALE ?> -->
+
+<!-- <?create AGE-YOUNG ?> -->
+<!-- <?create AGE-YOUNGISH ?> -->
+<!-- <?create AGE-MIDDLEAGED ?> -->
+<!-- <?create AGE-OLD ?> -->
+<!-- <?create AGE-VERYOLD ?> -->
+
+<!-- <?create BODYSIZE-SMALL ?> -->
+<!-- <?create BODYSIZE-NORMAL ?> -->
+<!-- <?create BODYSIZE-LARGE ?> -->
+<!-- <?create BODYSIZE-VERYLARGE ?> -->
+
+<!-- <?create ADIPOSITY-UNDERWEIGHT ?> -->
+<!-- <?create ADIPOSITY-NORMALWEIGHT ?> -->
+<!-- <?create ADIPOSITY-OVERWEIGHT ?> -->
+<!-- <?create ADIPOSITY-OBESE ?> -->
+<!-- <?create ADIPOSITY-MORBIDLYOBESE ?> -->
+
+<!-- <?create MUSCULARITY-BELOWNORMAL ?> -->
+<!-- <?create MUSCULARITY-NORMAL ?> -->
+<!-- <?create MUSCULARITY-ABOVENORMAL ?> -->
+<!-- <?create MUSCULARITY-TRAINEDATHLETE ?> -->
+
+Comment out this next token to make the Context
+menu disappear. Result will be suitable for
+student use.
+
+<?create SHOWCONTEXT ?>
+<?create SHOWSTARTUP ?>
+
+<?include Model.DES ?>
+
+End

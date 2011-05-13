@@ -1,0 +1,26 @@
+HumMod / OtherTissue-Lactate.REF
+
+Created : 28-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Lactate is a little tricky because it is both a fuel and a strong
+anion.
+
+We use mEq for acid-base and mG for fuel.
+
+A lactate is one-half of a glucose molecule less a H+.
+
+On a weight-weight basis, one mG of glucose produces 0.99
+mG of lactate.
+
+Glucose M.W. = 180
+Lactate M.W. = 89
+
+Using molecular weights, 1 mG lactate = 0.0112 mEq.
+
+End

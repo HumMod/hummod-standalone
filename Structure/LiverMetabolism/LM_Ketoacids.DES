@@ -1,0 +1,68 @@
+HumMod / LM_Ketoacids
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_Ketoacids </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<var><name> FattyAcidEffect </name></var>
+<var><name> GlucagonEffect </name></var>
+
+<var><name> FattyAcidUptake </name></var>
+<parm><name> BasicUptake </name><val> 2.2 </val></parm>
+
+<constant><name> FA_TO_KA </name><val> 1.02 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> FattyAcidEffect </name>
+  <point><x>  0 </x><y> 0.5 </y><slope> 0.0 </slope></point>
+  <point><x> 15 </x><y> 1.0 </y><slope> 0.05 </slope></point>
+  <point><x> 75 </x><y> 5.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucagonEffect </name>
+  <point><x>   0 </x><y>  0.5 </y><slope> 0.0 </slope></point>
+  <point><x> 170 </x><y>  1.0 </y><slope> 0.01 </slope></point>
+  <point><x> 340 </x><y> 10.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> FattyAcidEffect </name><val> FattyAcidEffect [ FAPool.[FA(mG/dL)] ] </val></def>
+<def><name> GlucagonEffect </name><val> GlucagonEffect [ PortalVein-Glucagon.[Glucagon] ] </val></def>
+
+<def><name> FattyAcidUptake </name>
+  <val>
+      BasicUptake
+    * FattyAcidEffect
+    * GlucagonEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+<def><name> Rate </name><val> FA_TO_KA * FattyAcidUptake </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,77 @@
+HumMod / BMR
+
+Created : 2010-05-28
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 1.0 </col>
+   <high> 12.8 </high>
+   <wide> 30.0 </wide>
+   <title> BMR </title>
+
+<structurename> Metabolism-MetabolicRate </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BMRUnits </name>
+   <format><decimal> 1 </decimal></format>
+   <label> BMR Units </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> BMRUnits </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 30 </min><max> 40 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> BMR(%) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> % </label>
+</showvalue>
+
+<repeatlist>
+  <name> BMRNormal </name>
+  <firstval> 1.0 </firstval>
+  <repeat><reps>  29 </reps><stepsize> 1.0 </stepsize></repeat>
+  <repeat><reps> 100 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  60 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> BMRNormal </name>
+  <listname> BMRNormal </listname>
+  <label> Normal </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> BMR Units = 36.9 (kCal/Hr)/M^2 </line>
+  <line> % ~ 0 </line>
+</infobutton>
+
+</groupbox>
+
+End

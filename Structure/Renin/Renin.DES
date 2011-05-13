@@ -1,0 +1,62 @@
+HumMod / Renin
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Renin\ ?>
+
+<?include ReninPool.DES ?>
+<?include ReninSecretion.DES ?>
+<?include ReninSynthesis.DES ?>
+<?include ReninClearance.DES ?>
+<?include ReninTumor.DES ?>
+
+<?include A2Pool.DES ?>
+<?include A2Pump.DES ?>
+
+<?include ReninFree.DES ?>
+<?include ReninGranules.DES ?>
+
+<structure><name> Renin </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> A2Pump.Parms </call>
+  <call> ReninTumor.Parms </call>
+  <call> ReninSynthesis.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ReninPool.CalcConc </call>
+  <call> A2Pool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ReninFree.Flux </call>
+  <call> ReninGranules.Flux </call>
+
+  <call> ReninSecretion.Dervs </call>
+  <call> ReninSynthesis.Dervs </call>
+
+  <call> ReninFree.Dervs </call>
+  <call> ReninGranules.Dervs </call>
+
+  <call> ReninClearance.Dervs </call>
+  <call> ReninPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

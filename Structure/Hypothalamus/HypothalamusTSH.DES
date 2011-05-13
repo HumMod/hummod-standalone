@@ -1,0 +1,61 @@
+HumMod / HypothalamusTSH
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HypothalamusTSH </name>
+
+<variables>
+
+<var>
+  <name> TemperatureEffect </name>
+</var>
+
+<var>
+  <name> TemperatureDifference </name>
+</var>
+
+<parm>
+  <name> SetPoint </name>
+  <val> 37.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> TemperatureEffect </name>
+  <point><x> -2.0 </x><y> 4.0 </y><slope> 0 </slope></point>
+  <point><x>  0.0 </x><y> 1.0 </y><slope> -1.0 </slope></point>
+  <point><x>  2.0 </x><y> 0.2 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcEffect </name>
+
+<def>
+  <name> TemperatureDifference </name>
+  <val> HeatCore.Temp(C) - SetPoint </val>
+</def>
+
+<def>
+  <name> TemperatureEffect </name>
+  <val>
+       Brain-Function.Effect
+     * TemperatureEffect [ TemperatureDifference ]
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

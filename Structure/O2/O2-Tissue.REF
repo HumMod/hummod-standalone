@@ -1,0 +1,31 @@
+HumMod / O2-Tissue.REF
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+This reference tabulates expected organ O2 use.
+Units are mL/Min.
+
+                  O2 Use
+                  ------
+Bone               18.8
+Brain              50.1
+Fat                 6.2
+GITract            25.0
+Kidney             21.3
+LeftHeart          27.4
+Liver              39.6
+OtherTissue        10.4
+RespiratoryMuscle   6.3
+RightHeart          5.1
+SkeletalMuscle     30.0
+Skin                9.0
+                  ------
+Total             249.2
+
+
+End

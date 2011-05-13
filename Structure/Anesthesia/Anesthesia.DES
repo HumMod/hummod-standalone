@@ -1,0 +1,91 @@
+HumMod / Anesthesia
+
+Created : 01-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\ ?>
+
+<?include AnesthesiaGas\AnesthesiaGas.DES ?>
+<?include AnesthesiaIV\AnesthesiaIV.DES ?>
+
+<structure><name> Anesthesia </name>
+
+<variables>
+
+<var>
+  <name> BrainFunction </name>
+</var>
+
+<var>
+  <name> TidalVolume </name>
+</var>
+
+<var>
+  <name> HeartContractility </name>
+</var>
+
+<var>
+  <name> VascularConductance </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> AnesthesiaGas.Parms </call>
+  <call> AnesthesiaIV.Parms </call>
+</block>
+
+<block><name> Calc </name>
+
+<call> AnesthesiaGas.CalcConc </call>
+<call> AnesthesiaIV.CalcConc </call>
+
+<def>
+  <name> BrainFunction </name>
+  <val>
+    AnesthesiaGasBrain.BrainFunc
+    * AnesthesiaIVBrain.BrainFunc
+  </val>
+</def>
+
+<def>
+  <name> TidalVolume </name>
+  <val>
+    AnesthesiaGasBrain.TidalVol
+    * AnesthesiaIVBrain.TidalVol
+  </val>
+</def>
+
+<def>
+  <name> HeartContractility </name>
+  <val>
+    AnesthesiaGasLeftHeart.HrtCont
+    * AnesthesiaIVLeftHeart.HrtCont
+  </val>
+</def>
+
+<def>
+  <name> VascularConductance </name>
+  <val>
+    AnesthesiaGasOtherTissue.VascCond
+    * AnesthesiaIVOtherTissue.VascCond
+  </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+  <call> AnesthesiaGas.Dervs </call>
+  <call> AnesthesiaIV.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

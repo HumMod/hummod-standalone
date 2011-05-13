@@ -1,0 +1,68 @@
+HumMod / HypothalamusShiveringAcclimation
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HypothalamusShiveringAcclimation </name>
+
+<variables>
+
+<parm>
+  <name> Tau </name>
+  <val> 7.0 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Offset </name>
+  <outputname> Offset </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.003 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> SteadyState </name>
+  <point><x> 20 </x><y>  0.3 </y><slope> 0 </slope></point>
+  <point><x> 28 </x><y>  0.0 </y><slope> -0.04 </slope></point>
+  <point><x> 39 </x><y> -0.3 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT ( 1440.0 * Tau ) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> SteadyState </name>
+  <val> SteadyState [ HeatSkin.Temp(C) ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

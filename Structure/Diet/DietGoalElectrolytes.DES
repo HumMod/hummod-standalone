@@ -1,0 +1,44 @@
+HumMod / DietGoalElectrolytes
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietGoalElectrolytes </name>
+
+<variables>
+
+<parm>
+  <name> Na+_mEq/Day </name>
+  <val> 180.0 </val>
+</parm>
+
+<parm>
+  <name> Cl-_mEq/Day </name>
+  <val> 200.0 </val>
+</parm>
+
+<parm>
+  <name> K+_mEq/Day </name>
+  <val> 70.0 </val>
+</parm>
+
+<parm>
+  <name> PO4--mEq/Day </name>
+  <val> 30.0 </val>
+</parm>
+
+<parm>
+  <name> SO4--mEq/Day </name>
+  <val> 50.0 </val>
+</parm>
+
+
+</variables>
+
+</structure>
+
+End

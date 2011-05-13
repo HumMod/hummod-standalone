@@ -1,0 +1,50 @@
+HumMod / Urea.REF
+
+Created : 28-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+The basic mass units for urea are mMol. We
+can then use the mass in osmoles calculations with
+no modification.
+
+Urea has a molecular weight of 60 and a formula of
+CH4N2O.
+
+  1 mMol/L = 6.0 mG/dL
+
+Brenner has normal blood urea concentration of
+6.2 mMol/L.
+
+There are two compartments, pool and cell, with diffusion
+between them. The diffusion coefficient can be inferred
+from the blood urea rebound seen immediately after
+hemodialysis.
+
+The pool volume of distribution is ECFV or 15.0 L. Thus,
+the nominal pool urea mass is 93 mMol.
+
+The cell volume of distribution is cell H2O or 28.0L.
+Nominal cell urea mass is 174 mMol.
+
+The idea here is that urea is formed by the liver and
+dumped into the pool. The kidney then filters the urea
+from the pool. Cell urea is generally a big buffer.
+
+I changed back to mG as the principal physical unit.
+
+Canaud et.al. Urea as a marker of adequacy ... Kid.Int. 58:S28-S40, 2000.
+
+They used a 2 compartment model for parameter estimation and found
+
+   ICFV = 29.2 L
+   ECFV = 9.0 L (a little small)
+   Vol.Dist. = 38.1 L (approx. body H2O)
+   Diff.Coeff. = 912 mL/Min
+
+
+End

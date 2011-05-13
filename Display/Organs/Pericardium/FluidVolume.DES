@@ -1,0 +1,66 @@
+HumMod / FluidVolume
+
+Created : 2010-05-24
+Last Modified : 2010-05-24
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 20.6 </row>
+   <col> 32.0 </col>
+   <high> 13.4 </high>
+   <wide> 30.0 </wide>
+   <title> Fluid Volume </title>
+
+<structurename> Pericardium-Cavity </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Vol </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Vol </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 100 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 3.0 </col>
+  <name> Pericardium-Hemorrhage.BloodFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Hemorrhage </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.8 </row><col> 3.0 </col>
+  <name> Pericardium-Drain.BloodFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Drain </label>
+</showvalue>
+
+</groupbox>
+
+End

@@ -1,0 +1,21 @@
+HumMod / CNS
+
+Created : 24-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\AutonomicNerves\CNS\ ?>
+
+<?include Baroreflex\Baroreflex.DES ?>
+<!-- <?include Chemoreceptors\Chemoreceptors.DES ?> -->
+<!-- <?include Cushing\Cushing.DES ?> -->
+<?include Exercise\Exercise.DES ?>
+<?include Integration\Integration.DES ?>
+<?include LowPressureReceptors\LowPressureReceptors.DES ?>
+<?include PituitaryNerve\PituitaryNerve.DES ?>
+<!-- <?include TrophicFactor\TrophicFactor.DES ?> -->
+
+End

@@ -1,0 +1,42 @@
+HumMod / RedCells
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Blood_RedCells </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> Blood </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Blood - Red Cells </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Blood\RedCells\ ?>
+
+<?include Summary.DES ?>
+<?include Clearance.DES ?>
+<?include Balance.DES ?>
+
+<?include Composition.DES ?>
+<?include Secretion.DES ?>
+<?include [EPO]Delay.DES ?>
+
+</panel>
+
+End

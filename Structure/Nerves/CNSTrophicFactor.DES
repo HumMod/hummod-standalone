@@ -1,0 +1,36 @@
+HumMod / CNSTrophicFactor DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CNSTrophicFactor </name>
+
+<equations>
+
+<diffeq>
+  <name> Effect </name>
+  <integralname> Effect </integralname>
+  <initialval> 1.0 </initialval>
+  <dervname> EffectChange </dervname>
+  <errorlim> 0.01 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+<def>
+  <name> EffectChange </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,54 @@
+HumMod / Organs DES
+
+Created : 14-Oct-04
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> ORGANS </name>
+  <label> Organs </label>
+  <parent> MAINMENU </parent>
+</branch>
+
+<?path Display\Tree\Organs\ ?>
+
+<?include AdiposeTissue.DES ?>
+<?include Bladder.DES ?>
+<?include Bone.DES ?>
+<?include Brain.DES ?>
+<!-- <?include CoronarySinus.DES ?> -->
+<?include GILumen.DES ?>
+<?include GITract.DES ?>
+<?include HeartValves.DES ?>
+<?include Hypothalamus.DES ?>
+<?include Kidney.DES ?>
+<?include LeftHeart.DES ?>
+<?include LHPumping.DES ?>
+<?include LipidDeposits.DES ?>
+<?include Liver.DES ?>
+<?include LiverMetabolism.DES ?>
+<?include OtherTissue.DES ?>
+
+<?if GENDER-FEMALE Ovaries.DES ?>
+
+<?include Pericardium.DES ?>
+<?include Peritoneum.DES ?>
+<?include RespiratoryCenter.DES ?>
+<?include RespiratoryMuscle.DES ?>
+<?include RightHeart.DES ?>
+<?include RHPumping.DES ?>
+<?include SkeletalMuscle.DES ?>
+<?include Skin.DES ?>
+<?include SplanchnicCirculation.DES ?>
+<?include Sweat.DES ?>
+
+<!--
+<?ifnot GENDER-FEMALE Testes.DES ?>
+-->
+
+<?if GENDER-FEMALE Uterus.DES ?>
+
+End

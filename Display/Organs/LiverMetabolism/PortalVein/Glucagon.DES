@@ -1,0 +1,89 @@
+HumMod / Glucagon
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 16.8 </high>
+   <wide> 30.0 </wide>
+   <title> Glucagon </title>
+
+<structurename> PortalVein-Glucagon </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [Glucagon] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glucagon] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [Glucagon] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 40 </min><max> 60 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> [Increment] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Increment] </label>
+</showvalue>
+
+<showvalue>
+  <row> 12.8 </row><col> 3.0 </col>
+  <name> GlucagonSecretion.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Secretion </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.8 </row><col> 3.0 </col>
+  <name> GITract-Flow.PlasmaFlow </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Plasma Flow </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.2 </row><col> 1.0 </col>
+  <name> GlucagonPool.[Glucagon] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [Glucagon Pool] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Note the scale change. Glucagon secretion is reported in </line>
+  <line> nG/Min while glucagon pool concentration is reported in </line>
+  <line> pG/mL. </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

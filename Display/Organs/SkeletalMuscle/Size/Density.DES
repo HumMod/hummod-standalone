@@ -1,0 +1,63 @@
+HumMod / Density
+
+Created : 05-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 17.2 </row>
+   <col> 32.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> Density </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> SkeletalMuscle-Size.Density </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Organ </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 3 </col>
+   <name> SkeletalMuscle-Size.LiquidDensity </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Liquids </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3 </col>
+   <name> SkeletalMuscle-Size.ContractileProteinDensity</name>
+   <format><decimal> 3 </decimal></format>
+   <label> Contractile Protein </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 3 </col>
+   <name> SkeletalMuscle-Size.OtherDensity</name>
+   <format><decimal> 3 </decimal></format>
+   <label> Other Solids </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are G/mL. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Organ = </line>
+  <line>  </line>
+  <line> Liquids = 1.000 </line>
+  <line> Contractile Protein = 1.170 </line>
+  <line> Other Solids = 1.170 </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,54 @@
+HumMod / Kidney-ArcuateArtery
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Kidney-ArcuateArtery </name>
+
+<variables>
+
+<var><name> Pressure </name></var>
+<var><name> Conductance </name></var>
+<parm><name> BasicConductance </name>
+  <val> 600.0 </val>
+</parm>
+
+<parm>
+  <name> Stenosis </name>
+  <val> 1.0 </val>
+</parm>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcConductance </name>
+
+<def>
+  <name> Conductance </name>
+  <val> BasicConductance / Stenosis </val>
+</def>
+
+</block>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> Pressure </name>
+  <val>
+      Kidney-Pressure.ArtyPressure
+    - ( Kidney-Flow.BloodFlow / Conductance )
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

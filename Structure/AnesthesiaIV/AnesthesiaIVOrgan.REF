@@ -1,0 +1,51 @@
+HumMod / AnesthesiaIVOrgan Reference
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Each tissue has
+
+      Mass      mG
+      Change    mG/Min
+      Uptake    mG/Min
+      [Tissue]  mG/mL
+      [Vein]    mG/mL
+
+   This table estimates anesthetic
+   mass at 0.040 mG/mL which I think
+   is 1 MAC.  Use mass values to
+   specify integration error.
+
+      Organ       Volume  Mass
+      ----------  ------  ----
+      Bone          6000   240
+      Brain         1500    60
+      Fat          16000   640
+      GI Tract      2700   108
+      Kidney         330    13
+      L.Heart        270    11
+      Liver         1500    60
+      Skel.Muscle  27700  1108
+      Other Tiss.   6000   240
+      R.Heart         60     2
+      Resp.Muscle   4000   160
+      Skin          4030   161
+
+      Blood         5400   216
+
+   Thiopental has a 1/2 life of 9 Hrs
+   or 540 Min.  This is a rate constant
+   of 0.00185.
+
+   But the liver, volume 1.5 L, is
+   clearing for the whole body, 75 L.
+   Increase the rate constant by
+   75/1.5 or 50.
+
+      K = 0.09
+
+End

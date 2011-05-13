@@ -1,0 +1,18 @@
+Digital Human / CPR DES
+
+Created : 21-Oct-04
+Last Modified : 13-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\CPR\ ?>
+
+<?include CPR-Heart.docs ?>
+<?include CPR-Lungs.docs ?>
+</docs>
+
+End

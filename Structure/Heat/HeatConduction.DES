@@ -1,0 +1,104 @@
+HumMod / HeatConduction
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatConduction </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+<var>
+  <name> ClothesEffect </name>
+</var>
+
+<var>
+  <name> BloodFlowEffect </name>
+</var>
+
+<var>
+  <name> WindEffect </name>
+</var>
+
+<var>
+  <name> TemperatureDifference </name>
+</var>
+
+<parm>
+  <name> K </name>
+  <val> 0.034 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> ClothesEffect </name>
+  <point><x> 0.0 </x><y> 4.0 </y><slope> 0 </slope></point>
+  <point><x> 2.0 </x><y> 1.0 </y><slope> -1.2 </slope></point>
+  <point><x> 4.0 </x><y> 0.2 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> BloodFlowEffect </name>
+  <point><x>    0 </x><y> 0.8 </y><slope> 0 </slope></point>
+  <point><x>  250 </x><y> 1.0 </y><slope> 1.0E-3 </slope></point>
+  <point><x> 8000 </x><y> 8.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> WindEffect </name>
+  <point><x>  0.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 20.0 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Flux </name>
+
+<def>
+  <name> ClothesEffect </name>
+  <val> ClothesEffect [ Clothes.Weight ] </val>
+</def>
+
+<def>
+  <name> BloodFlowEffect </name>
+  <val> BloodFlowEffect [ Skin-Flow.BloodFlow ] </val>
+</def>
+
+<def>
+  <name> WindEffect </name>
+  <val> WindEffect [ Wind.MPH ] </val>
+</def>
+
+<def>
+  <name> TemperatureDifference </name>
+  <val> HeatSkin.Temp(K) - AmbientTemperature.Temp(K) </val>
+</def>
+
+<def>
+  <name> Flux </name>
+  <val>
+      K
+    * ClothesEffect
+    * BloodFlowEffect
+    * WindEffect
+    * TemperatureDifference
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

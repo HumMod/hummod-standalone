@@ -1,0 +1,49 @@
+HumMod / RightHeartPumping-Pumping
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> RightHeartPumping-Pumping </name>
+
+<variables>
+
+<var><name> BloodFlow </name></var>
+<var><name> StrokeVolume </name></var>
+<var><name> EjectionFraction </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> StrokeVolume </name>
+  <val>
+      RightHeartPumping-Diastole.EDV
+    - RightHeartPumping-Systole.ESV
+  </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> Heart-Ventricles.Rate * StrokeVolume </val>
+</def>
+
+<def>
+  <name> EjectionFraction </name>
+  <val>
+      StrokeVolume
+    / RightHeartPumping-Diastole.EDV
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

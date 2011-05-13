@@ -1,0 +1,71 @@
+HumMod / InspiredAir
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 9.4 </high>
+   <wide> 30.0 </wide>
+   <title> Inspired Air </title>
+
+<structurename> AirSupply-InspiredAir </structurename>
+
+<showtable>
+<row> 1.4 </row><col> 1 </col>
+
+<column>
+<indent> 0 </indent>
+<fieldwidth> 10 </fieldwidth>
+<justify> LEFT </justify>
+
+<emptycell/>
+<textcell> O2 </textcell>
+<textcell> N2 </textcell>
+<textcell> CO2 </textcell>
+<textcell> CO </textcell>
+<textcell> Anesthetic </textcell>
+<textcell> Total </textcell>
+
+</column>
+
+<column>
+<indent> 11.0 </indent>
+<fieldwidth> 5.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> % </textcell>
+<valuecell><name> O2(%) </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> N2(%) </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> CO2(%) </name><format><decimal> 2 </decimal></format></valuecell>
+<valuecell><name> CO(%) </name><format><decimal> 3 </decimal></format></valuecell>
+<valuecell><name> Anesthetic(%) </name><format><decimal> 2 </decimal></format></valuecell>
+<textcell> 100 </textcell>
+
+</column>
+
+<column>
+<indent> 21.0 </indent>
+<fieldwidth> 5.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> mmHg </textcell>
+<valuecell><name> PO2 </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> PN2 </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> PCO2 </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> PCO </name><format><decimal> 2 </decimal></format></valuecell>
+<valuecell><name> PAnesthetic </name><format><decimal> 1 </decimal></format></valuecell>
+<valuecell><name> Pressure </name><format> <integer/> </format></valuecell>
+
+</column>
+
+</showtable>
+
+</groupbox>
+
+End

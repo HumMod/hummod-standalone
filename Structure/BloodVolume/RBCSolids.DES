@@ -1,0 +1,44 @@
+HumMod / RBCSolids
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RBCSolids </name>
+
+<variables>
+
+<var><name> Mass </name></var>
+<var><name> InitialMass </name></var>
+
+<parm><name> FractSolids </name><val> 0.34 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialMass </name>
+  <val> FractSolids * RBCVol.InitialVol </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> Mass </name>
+  <val> FractSolids * RBCVol.Vol </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

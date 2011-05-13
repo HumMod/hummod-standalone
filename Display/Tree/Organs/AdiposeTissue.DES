@@ -1,0 +1,106 @@
+HumMod / Organs
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Fat </name>
+  <label> Adipose Tissue </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Fat-Circulation </name>
+  <label> Circulation </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> Fat </parent>
+</leaf>
+
+<branch>
+  <name> Fat-Fuel </name>
+  <label> Fuel </label>
+  <parent> Fat </parent>
+</branch>
+
+<leaf>
+  <name> FatFuel-Selection </name>
+  <label> Selection </label>
+  <parent> Fat-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> FatFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> Fat-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> FatFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> Fat-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> FatFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> Fat-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-CO2 </name>
+  <label> CO2 </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Lactate </name>
+  <label> Lactate </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Nerves </name>
+  <label> Nerves </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Function </name>
+  <label> Function </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Structure </name>
+  <label> Structure </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Size </name>
+  <label> Size </label>
+  <parent> Fat </parent>
+</leaf>
+
+<leaf>
+  <name> Fat-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> Fat </parent>
+</leaf>
+
+End

@@ -1,0 +1,29 @@
+HumMod / Nephrons
+
+Created : 15-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\Nephrons\ ?>
+
+<?include Balances\Balances.DES ?>
+<?include CollectingDuct\CollectingDuct.DES ?>
+<?include Creatinine\Creatinine.DES ?>
+<?include DistalTubule\DistalTubule.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Glomerulus\Glomerulus.DES ?>
+<?include Glucose\Glucose.DES ?>
+<?include Interstitium\Interstitium.DES ?>
+<?include Ketoacids\Ketoacids.DES ?>
+<?include LoopOfHenle\LoopOfHenle.DES ?>
+<?include MaculaDensa\MaculaDensa.DES ?>
+<?include Medulla\Medulla.DES ?>
+<?include NephronHormones\NephronHormones.DES ?>
+<?include ProximalTubule\ProximalTubule.DES ?>
+<?include Urine\Urine.DES ?>
+<?include VasaRecta\VasaRecta.DES ?>
+
+End

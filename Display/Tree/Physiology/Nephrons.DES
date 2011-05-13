@@ -1,0 +1,274 @@
+HumMod / Tree-Nephrons
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Nephrons </name>
+  <label> Nephrons </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<branch>
+  <name> NephronGlomerulus </name>
+  <label> Glomerulus </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> GlomerulusFiltrate </name>
+  <label> Filtrate </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusSodium </name>
+  <label> Sodium </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusChloride </name>
+  <label> Chloride </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusBicarbonate </name>
+  <label> Bicarbonate </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusKetoacid </name>
+  <label> Ketoacid </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusPhosphate </name>
+  <label> Phosphate </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusSulphate </name>
+  <label> Sulphate </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusProtein </name>
+  <label> Protein </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusGlucose </name>
+  <label> Glucose </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusCreatinine </name>
+  <label> Creatinine </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> GlomerulusUrea </name>
+  <label> Urea </label>
+  <parent> NephronGlomerulus </parent>
+</leaf>
+
+<leaf>
+  <name> NephronProximalTubule </name>
+  <label> Proximal Tubule </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronLoopOfHenle </name>
+  <label> Loop Of Henle </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<branch>
+  <name> MaculaDensa </name>
+  <label> Macula Densa </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> MaculaDensa-Summary </name>
+  <label> Summary </label>
+  <parent> MaculaDensa </parent>
+</leaf>
+
+<leaf>
+  <name> MaculaDensa-TGF-Vascular </name>
+  <label> TGF-Vascular </label>
+  <parent> MaculaDensa </parent>
+</leaf>
+
+<leaf>
+  <name> MaculaDensa-TGF-Renin </name>
+  <label> TGF-Renin </label>
+  <parent> MaculaDensa </parent>
+</leaf>
+
+<branch>
+  <name> NephronDistalTubule </name>
+  <label> Distal Tubule </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> DistalTubuleSodium </name>
+  <label> Sodium </label>
+  <parent> NephronDistalTubule </parent>
+</leaf>
+
+<leaf>
+  <name> DistalTubulePotassium </name>
+  <label> Potassium </label>
+  <parent> NephronDistalTubule </parent>
+</leaf>
+
+<leaf>
+  <name> DistalTubuleAldosterone </name>
+  <label> Aldosterone </label>
+  <parent> NephronDistalTubule </parent>
+</leaf>
+
+<branch>
+  <name> NephronCollectingDuct </name>
+  <label> Collecting Duct </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> CDSummary </name>
+  <label> Summary </label>
+  <parent> NephronCollectingDuct </parent>
+</leaf>
+
+<leaf>
+  <name> CDWater </name>
+  <label> Water </label>
+  <parent> NephronCollectingDuct </parent>
+</leaf>
+
+<leaf>
+  <name> CDSodium </name>
+  <label> Sodium </label>
+  <parent> NephronCollectingDuct </parent>
+</leaf>
+
+<leaf>
+  <name> CDUrea </name>
+  <label> Urea </label>
+  <parent> NephronCollectingDuct </parent>
+</leaf>
+
+<leaf>
+  <name> NephronUrine </name>
+  <label> Urine </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronMedulla </name>
+  <label> Medulla </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronVasaRecta </name>
+  <label> Vasa Recta </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronInterstitium </name>
+  <label> Interstitium </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronSegmentBalances </name>
+  <label> Segment Balances </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<branch>
+  <name> NephronOtherElectrolytes </name>
+  <label> Other Electrolytes </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> NephronAmmonia </name>
+  <label> Ammonia </label>
+  <parent> NephronOtherElectrolytes </parent>
+</leaf>
+
+<leaf>
+  <name> NephronChloride </name>
+  <label> Chloride </label>
+  <parent> NephronOtherElectrolytes </parent>
+</leaf>
+
+<leaf>
+  <name> NephronBicarbonate </name>
+  <label> Bicarbonate </label>
+  <parent> NephronOtherElectrolytes </parent>
+</leaf>
+
+<leaf>
+  <name> NephronCreatinine </name>
+  <label> Creatinine </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronGlucose </name>
+  <label> Glucose </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<leaf>
+  <name> NephronKetoacids </name>
+  <label> Ketoacids </label>
+  <parent> Nephrons </parent>
+</leaf>
+
+<branch>
+  <name> NephronHormones </name>
+  <label> Nephron Hormones </label>
+  <parent> Nephrons </parent>
+</branch>
+
+<leaf>
+  <name> NephronHormones-Aldosterone </name>
+  <label> Aldosterone </label>
+  <parent> NephronHormones </parent>
+</leaf>
+
+<leaf>
+  <name> NephronHormones-ADH </name>
+  <label> ADH </label>
+  <parent> NephronHormones </parent>
+</leaf>
+
+<leaf>
+  <name> NephronHormones-ANP </name>
+  <label> ANP </label>
+  <parent> NephronHormones </parent>
+</leaf>
+
+End

@@ -1,0 +1,58 @@
+HumMod / Lungs
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Lungs </name>
+  <label> Lungs </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Lungs_Bronchi </name>
+  <label> Bronchi </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Breathing </name>
+  <label> Breathing </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_PulmonaryMembrane </name>
+  <label> Pulmonary Membrane </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_GasExchange </name>
+  <label> Gas Exchange </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_BloodFlow </name>
+  <label> Blood Flow </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Thorax </name>
+  <label> Thorax </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Fluids </name>
+  <label> Lung Fluids </label>
+  <parent> Lungs </parent>
+</leaf>
+
+End

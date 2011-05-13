@@ -1,0 +1,134 @@
+HumMod / Autopsy
+
+Created : 21-May-05
+Last Modified : 2010-05-19
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> Autopsy </name>
+
+<variables>
+
+<var><name> StillAlive </name><val> TRUE </val></var>
+<var><name> IsDead </name><val> FALSE </val></var>
+
+<var><name> LungDisease </name><val> FALSE </val></var>
+<var><name> PulmonaryEdema </name><val> FALSE </val></var>
+
+<var><name> CardiacTamponade </name><val> FALSE </val></var>
+
+<var><name> NephronLoss </name><val> FALSE </val></var>
+
+<var><name> RightHeartInfarction </name><val> FALSE </val></var>
+<var><name> RightHeartHypertrophy </name><val> FALSE </val></var>
+
+<var><name> LeftHeartInfarction </name><val> FALSE </val></var>
+<var><name> LeftHeartHypertrophy </name><val> FALSE </val></var>
+
+<var><name> PulmonicValveStenosis </name><val> FALSE </val></var>
+<var><name> PulmonicValveRegurgitation </name><val> FALSE </val></var>
+
+<var><name> AorticValveStenosis </name><val> FALSE </val></var>
+<var><name> AorticValveRegurgitation </name><val> FALSE </val></var>
+
+<var><name> TricuspidValveStenosis </name><val> FALSE </val></var>
+<var><name> TricuspidValveRegurgitation </name><val> FALSE </val></var>
+
+<var><name> MitralValveStenosis </name><val> FALSE </val></var>
+<var><name> MitralValveRegurgitation </name><val> FALSE </val></var>
+
+<var><name> BloodLoss </name><val> FALSE </val></var>
+<var><name> Anemia </name><val> FALSE </val></var>
+<var><name> Polycythemia </name><val> FALSE </val></var>
+
+<var><name> Dehydration </name><val> FALSE </val></var>
+<var><name> PeripheralEdema </name><val> FALSE </val></var>
+<var><name> Ascites </name><val> FALSE </val></var>
+
+<var><name> VascularDamage </name><val> FALSE </val></var>
+<var><name> AorticRupture </name><val> FALSE </val></var>
+<var><name> VenaCavaRupture </name><val> FALSE </val></var>
+
+<var><name> COPoisoning </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<if>
+<test> NOT Brain-Function.IsReallyDead </test>
+<true><exitblock/></true>
+</if>
+
+<def><name> StillAlive </name><val> FALSE </val></def>
+<def><name> IsDead </name><val> TRUE </val></def>
+
+<conditional><name> PulmonaryEdema </name>
+<test> ExcessLungWater.Volume GT 200.0 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> CardiacTamponade </name>
+<test> Pericardium-Cavity.Vol GT 100.0 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> NephronLoss </name>
+<test> Kidney-NephronCount.Total(xNormal) LT 0.40 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> RightHeartInfarction </name>
+<test> RightHeart-Infarction.Area% GT 15.0 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> LeftHeartInfarction </name>
+<test> LeftHeart-Infarction.Area% GT 15.0 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> BloodLoss </name>
+<test> ( BloodVol.Vol / BloodVol.InitialVol ) LT 0.85 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> Anemia </name>
+<test> BloodVol.Hct LT 0.34 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> Polycythemia </name>
+<test> BloodVol.Hct GT 0.55 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> Dehydration </name>
+<test> ( ECFV.Vol / ECFV.InitialVol ) LT 0.90 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> PeripheralEdema </name>
+<test> ( ECFV.Vol / ECFV.InitialVol ) GT 1.20 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> Ascites </name>
+<test> PeritoneumSpace.Volume GT 100.0 </test>
+<true> TRUE </true>
+</conditional>
+
+<conditional><name> COPoisoning </name>
+<test> HgbConc.CarboxyPercent GT 25.0 </test>
+<true> TRUE </true>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

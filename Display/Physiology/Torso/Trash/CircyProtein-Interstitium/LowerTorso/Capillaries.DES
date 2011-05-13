@@ -1,0 +1,87 @@
+HumMod / Capillaries
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 21.0 </row>
+   <col> 1.0 </col>
+   <high> 16.6 </high>
+   <wide> 30.0 </wide>
+   <title> Capillaries </title>
+
+<structurename> LT_CapillaryProtein </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 0.02 </max><inc> 0.01 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> Perm </name>
+  <repeat><reps> 100 </reps><stepsize>  0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.6 </row><col> 1.0 </col>
+  <name> Perm </name>
+  <listname> Perm </listname>
+  <label> Perm </label>
+</slidebar>
+
+<showvalue>
+   <row> 13.0 </row><col> 1.0 </col>
+   <name> Gradient </name>
+   <format><decimal> 4 </decimal></format>
+   <label> [Protein] Gradient </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.0 </row><col> 3.0 </col>
+   <name> PlasmaProtein.[Protein] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Capillary [Protein] </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.0 </row><col> 3.0 </col>
+   <name> LT_InterstitialProtein.[Protein] </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Interstitial [Protein] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

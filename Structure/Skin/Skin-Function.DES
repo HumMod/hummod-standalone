@@ -1,0 +1,129 @@
+HumMod / Skin-Function
+
+Created : 31-Mar-05
+Last Modified : 25-Jun-06
+
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Skin-Function </name>
+
+<variables>
+
+<var>
+  <name> Failed </name>
+  <val> FALSE </val>
+</var>
+
+<var>
+  <name> Effect </name>
+</var>
+
+<var>
+  <name> PhEffect </name>
+</var>
+
+<var>
+  <name> ProteinEffect </name>
+</var>
+
+<var>
+  <name> FuelEffect </name>
+</var>
+
+<var>
+  <name> TemperatureEffect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PhOnFunction </name>
+  <point><x> 6.6 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 6.7 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ProteinOnFunction </name>
+  <point><x> 3000.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 5200.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FuelOnFunction </name>
+  <point><x> 0.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 0.9 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TemperatureOnFunction </name>
+  <point><x> 10.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 29.5 </x><y> 1.0 </y><slope> 0.12 </slope></point>
+  <point><x> 40.0 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 46.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhOnFunction [ Skin-Ph.Ph ] </val>
+</def>
+
+<def>
+  <name> ProteinEffect </name>
+  <val> ProteinOnFunction [ CellProtein.Mass(G) ] </val>
+</def>
+
+<def>
+  <name> FuelEffect </name>
+  <val> FuelOnFunction [ Skin-Fuel.FractUseDelay ] </val>
+</def>
+
+<def>
+  <name> TemperatureEffect </name>
+  <val> TemperatureOnFunction [ HeatSkin.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> Effect </name>
+  <val>
+      PhEffect
+    * ProteinEffect
+    * FuelEffect
+    * TemperatureEffect
+    * Skin-Structure.Effect
+  </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<testcase>
+
+<case>
+<test> NOT Failed AND ( Effect LT 0.2 ) </test>
+<def><name> Failed </name><val> TRUE </val></def>
+</case>
+
+<case>
+<test> Failed AND ( Effect GT 0.4 ) </test>
+<def><name> Failed </name><val> FALSE </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

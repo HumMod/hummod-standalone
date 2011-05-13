@@ -1,0 +1,66 @@
+HumMod / PhEffect
+
+Created : 08-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 9.8 </high>
+   <wide> 30.0 </wide>
+   <title> Ph Effect </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Brain-Structure.PhEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.6 </row><col> 1.0 </col><high> 5 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> Brain-Ph.Ph </name>
+    <label> pH </label>
+    <scale>
+      <min> 6.4 </min><max> 7.2 </max><inc> 0.1 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale>
+      <min> 0 </min><max> 0.1 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> Brain-Structure.PhOnStructure </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> Brain-Ph.Ph </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effects are normally 0.0, but can </line>
+  <line> increase to 0.05 and 0.1 /Min with </line>
+  <line> insult. </line>
+  <line>  </line>
+  <line> Cell pH is normally 7.05 pH units. </line>
+</infobutton>
+
+</groupbox>
+
+End

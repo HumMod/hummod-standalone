@@ -1,0 +1,121 @@
+HumMod / Symptoms
+
+Created : 21-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Symptoms </name>
+
+<variables>
+
+<var><name> Number </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<testcase>
+
+  <!-- Not Responding -->
+  <case>
+  <test> Brain-Function.NotResponding </test>
+    <def><name> Number </name><val> 1 </val></def>
+  </case>
+
+  <!-- Chest Pain -->
+  <case>
+  <test> Heart-Pain.HasPain </test>
+    <def><name> Number </name><val> 2 </val></def>
+  </case>
+
+  <!-- Can't Get Air -->
+  <case>
+  <test> FALSE </test>
+    <def><name> Number </name><val> 3 </val></def>
+  </case>
+
+  <!-- Tired  -->
+  <case>
+  <test> BloodVol.Hct LT 0.34 </test>
+    <def><name> Number </name><val> 4 </val></def>
+  </case>
+
+  <!-- Confused -->
+  <case>
+  <test> Brain-Function.Confused </test>
+    <def><name> Number </name><val> 5 </val></def>
+  </case>
+
+  <!-- Dizzy -->
+  <case>
+  <test> Brain-Function.Impaired </test>
+    <def><name> Number </name><val> 6 </val></def>
+  </case>
+
+  <!-- Swelled Head -->
+  <case>
+  <test> FALSE </test>
+    <def><name> Number </name><val> 7 </val></def>
+  </case>
+
+  <!-- Swelled Gut -->
+  <case>
+  <test> FALSE </test>
+    <def><name> Number </name><val> 8 </val></def>
+  </case>
+
+  <!-- Swelled Feet -->
+  <case>
+  <test> FALSE </test>
+    <def><name> Number </name><val> 9 </val></def>
+  </case>
+
+  <!-- Kidney Disease -->
+  <case>
+  <test> Kidney-NephronCount.Total(xNormal) LT 0.40 </test>
+    <def><name> Number </name><val> 10 </val></def>
+  </case>
+
+  <!-- At Work -->
+  <case>
+  <test> Status.Working </test>
+    <def><name> Number </name><val> 11 </val></def>
+  </case>
+
+  <!-- In Aerobics -->
+  <case>
+  <test> Status.Aerobics </test>
+    <def><name> Number </name><val> 12 </val></def>
+  </case>
+
+  <!-- On The Bike -->
+  <case>
+  <test> Status.ExerciseBike </test>
+    <def><name> Number </name><val> 13 </val></def>
+  </case>
+
+  <!-- On Treadmill -->
+  <case>
+  <test> Status.Treadmill </test>
+    <def><name> Number </name><val> 14 </val></def>
+  </case>
+
+  <!-- OK -->
+  <case>
+  <test> TRUE </test>
+    <def><name> Number </name><val> 0 </val></def>
+  </case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

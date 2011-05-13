@@ -1,0 +1,62 @@
+HumMod / NephronGlucose
+
+Created : 11-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> NephronGlucose </name>
+
+<variables>
+
+<parm>
+  <name> TubularMax </name>
+  <val> 250.0 </val>
+</parm>
+
+<var>
+  <name> Reab </name>
+</var>
+
+<var>
+  <name> Spillover </name>
+</var>
+
+<var>
+  <name> Spillover(mMol/Min) </name>
+</var>
+
+<constant>
+  <name> MG_TO_MMOL </name>
+  <val>     0.00555 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> CalcSpillover </name>
+
+<conditional>
+  <name> Reab </name>
+  <test> GlomerulusGlucose.Rate GT TubularMax </test>
+  <true> TubularMax </true>
+  <false> GlomerulusGlucose.Rate </false>
+</conditional>
+
+<def>
+  <name> Spillover </name>
+  <val> GlomerulusGlucose.Rate - Reab </val>
+</def>
+
+<def>
+  <name> Spillover(mMol/Min) </name>
+  <val> MG_TO_MMOL * Spillover </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,108 @@
+HumMod / Pool
+
+Created : 26-Jun-05
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 16.2 </high>
+   <wide> 30.0 </wide>
+   <title> Pool </title>
+
+<structurename> NEPool </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [NE(pG/mL)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [ NE (pG/mL) ] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [NE(pG/mL)] </name>
+      <label> [NE] </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 200 </min><max> 300 </max><inc> 100 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> [NE(nMol/L)] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [ NE (nMol/L) ] </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.6 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> A typical [NE] is 240 pG/mL or 1.42 nMol/L. </line>
+  <line> </line>
+  <line> Norepinephrine (C8 H11 N O3) has a molecular </line>
+  <line> weight of 169. </line>
+  <line> </line>
+  <line> NE  uG * 5.92 = nMol </line>
+  <line> </line>
+  <line> Multiply by 0.00592 to convert pG/mL to nMol/L. </line>
+  <line> </line>
+  <line> Volume of distribution for catechols is ECFV or </line>
+  <line> 15,000 mL. </line>
+  <line> </line>
+  <line> Typical circulating pool is 3600 nG. </line>
+  <line> </line>
+  <line> Typical sources and disposal are </line>
+  <line> </line>
+  <line> Secretion = 220 nG/Min </line>
+  <line> Spillover = 860 nG/Min </line>
+  <line> Clearance = 1080 nG/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

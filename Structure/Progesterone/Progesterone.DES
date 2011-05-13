@@ -1,0 +1,91 @@
+HumMod / Progesterone
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Progesterone\ ?>
+
+<structure><name> Progesterone </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Secretion </name></var>
+<var><name> Degradation </name></var>
+
+<parm><name> TargetConcFemale </name><val> 0.1 </val></parm>
+<parm><name> TargetConcMale </name><val> 1.0 </val></parm>
+
+<var><name> TargetConc </name></var>
+<var><name> InitialMass </name></var>
+
+<var><name> [Conc(nMol/L)] </name></var>
+<var><name> [Conc(nG/mL)] </name></var>
+
+<constant><name> NMOL/L_TO_NG/ML </name><val> 0.3145 </val></constant>
+
+<parm><name> PumpSwitch </name><val> FALSE </val></parm>
+<parm><name> PumpSetting </name><val> 0.0 </val></parm>
+
+<parm><name> K </name><val> 0.16 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 0.3 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+
+<conditional><name> TargetConc </name>
+  <test> Gender.IsFemale </test>
+  <true> TargetConcFemale </true>
+  <false> TargetConcMale </false>
+</conditional>
+
+<def><name> InitialMass </name><val> TargetConc * ECFV.InitialVol(L) </val></def>
+<def><name> Mass </name><val> InitialMass </val></def>
+
+</block>
+
+<block><name> Conc </name>
+  <def><name> [Conc(nMol/L)] </name><val> Mass / ECFV.Vol(L) </val></def>
+  <def><name> [Conc(nG/mL)] </name><val> [Conc(nMol/L)] * NMOL/L_TO_NG/ML </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+  <conditional><name> Secretion </name>
+  <test> Gender.IsFemale </test>
+  <true> Ovaries-Progesterone.Secretion </true>
+  <false> Testes-Progesterone.Secretion </false>
+  </conditional>
+
+  <def><name> Degradation </name><val> K * Mass </val></def>
+
+  <def><name> Gain </name><val> Secretion + ( PumpSetting * PumpSwitch ) </val></def>
+  <def><name> Loss </name><val> Degradation </val></def>
+
+  <def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

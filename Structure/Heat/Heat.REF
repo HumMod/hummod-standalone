@@ -1,0 +1,74 @@
+HumMod / Heat Reference
+
+Created : 18-Mar-10
+Last Modified : 18-Mar-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+There are three main thermal compartments
+
+# Core (most organs)
+# Skeletal Muscle
+# Skin
+
+And a minor compartment
+
+# GI Lumen
+
+Heat units for these compartments are kCal.
+
+Each compartment has a heat change equal to gain
+minus loss. Note that gains and losses can be
+negative in some instances.
+
+GI Lumen ===========================================
+
+Gain
+# Food intake
+
+Loss
+# Convection and conduction to core
+# Vomitus
+# Diarrhea
+
+Skin ===============================================
+
+Gain
+# Metabolism
+# Convection from core
+
+Loss
+# Radiation
+# Conduction
+# Skin Insensible
+# Sweating
+  # Evaporation
+  # Dripping
+
+Skeletal Muscle ====================================
+
+Gain
+# Metabolism
+
+Loss
+# Convection to core
+
+Core ===============================================
+
+Gain
+# Metabolism
+# Convection from skeletal muscle
+# Uptake from GI lumen
+# Drips and pumps (ignore pumps for now)
+# Transfusion
+
+Loss
+# Convection to skin
+# Insensible respiratory loss
+# Urine
+# Dialysis ultrafiltrate
+# Hemorrhage
+
+
+End

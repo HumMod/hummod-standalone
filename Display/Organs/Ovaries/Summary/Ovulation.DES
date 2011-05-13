@@ -1,0 +1,41 @@
+HumMod / Ovulation
+
+Created : 03-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Ovulation </title>
+
+<structurename> Ovaries-Ovulation </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> LastOvulation </name>
+   <format><timestamp/><fieldwidth> 20 </fieldwidth></format>
+   <label> Last </label>
+</showvalue>
+
+<checkbox>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name>  AnnounceOvulation </name>
+   <label> Announce Ovulation </label>
+</checkbox>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

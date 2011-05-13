@@ -1,0 +1,137 @@
+HumMod / OsmBody
+
+Created : 31-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> OsmBody </name>
+
+<variables>
+
+<var><name> Total </name></var>
+<var><name> Electrolytes </name></var>
+<var><name> Non-Electrolytes </name></var>
+
+<var><name> [Osm]-CellWall </name></var>
+<var><name> [Osm(mOsm/L)]-CellWall </name></var>
+
+<var><name> [Osm]-Osmoreceptors </name></var>
+<var><name> [Osm(mOsm/L)]-Osmoreceptors </name></var>
+
+<parm><name> Dissociation </name><val> 0.890 </val></parm>
+
+<var><name> ECFVActiveElectrolytes </name></var>
+<var><name> ICFVActiveElectrolytes </name></var>
+<var><name> ActiveElectrolytes </name></var>
+
+<var><name> ECFVActiveOsmoles </name></var>
+<var><name> ICFVActiveOsmoles </name></var>
+<var><name> ActiveOsmoles </name></var>
+
+<var><name> ECFV </name></var>
+<var><name> ECFV(L) </name></var>
+
+<var><name> ICFV </name></var>
+<var><name> ICFV(L) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Electrolytes </name>
+  <val> OsmECFV.Electrolytes + OsmCell.Electrolytes </val>
+</def>
+
+<def>
+  <name> Non-Electrolytes </name>
+  <val> OsmECFV.Non-Electrolytes + OsmCell.Non-Electrolytes </val>
+</def>
+
+<def>
+  <name> Total </name>
+  <val> Electrolytes + Non-Electrolytes </val>
+</def>
+
+<def>
+  <name> ECFVActiveElectrolytes </name>
+  <val> Dissociation * OsmECFV.Electrolytes </val>
+</def>
+
+<def>
+  <name> ICFVActiveElectrolytes </name>
+  <val> Dissociation * OsmCell.Electrolytes </val>
+</def>
+
+<def>
+  <name> ActiveElectrolytes </name>
+  <val> ECFVActiveElectrolytes + ICFVActiveElectrolytes </val>
+</def>
+
+<def>
+  <name> ECFVActiveOsmoles </name>
+  <val> ECFVActiveElectrolytes + OsmECFV.Non-Electrolytes </val>
+</def>
+
+<def>
+  <name> ICFVActiveOsmoles </name>
+  <val> ICFVActiveElectrolytes + OsmCell.Non-Electrolytes </val>
+</def>
+
+<def>
+  <name> ActiveOsmoles </name>
+  <val> ECFVActiveOsmoles + ICFVActiveOsmoles </val>
+</def>
+
+<def>
+  <name> [Osm]-CellWall </name>
+  <val> ActiveOsmoles / BodyH2O.Vol </val>
+</def>
+
+<def>
+  <name> [Osm(mOsm/L)]-CellWall </name>
+  <val> 1000.0 * [Osm]-CellWall </val>
+</def>
+
+<def>
+  <name> [Osm]-Osmoreceptors </name>
+  <val> ActiveElectrolytes / BodyH2O.Vol </val>
+</def>
+
+<def>
+  <name> [Osm(mOsm/L)]-Osmoreceptors </name>
+  <val> 1000.0 * [Osm]-Osmoreceptors </val>
+</def>
+
+<def>
+  <name> ICFV </name>
+  <val> ( ICFVActiveOsmoles / ActiveOsmoles ) * BodyH2O.Vol </val>
+</def>
+
+<def>
+  <name> ICFV(L) </name>
+  <val> ICFV / 1000.0 </val>
+</def>
+
+<def>
+  <name> ECFV </name>
+  <val> BodyH2O.Vol - ICFV </val>
+</def>
+
+<def>
+  <name> ECFV(L) </name>
+  <val> ECFV / 1000.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,38 @@
+HumMod / GoTo
+
+   Created : 12-Mar-07
+   Last Modified : 2010-05-28
+   Author : Tom Coleman
+   Copyright : 2006-2010
+   By : University of Mississippi Medical Center
+
+<gobar/>
+
+<goto>
+  <solutionint> 60.0 </solutionint>
+  <displayint> 10.0 </displayint>
+  <menuitem> To Next Hour </menuitem>
+</goto>
+
+<goto>
+  <solutionint> 1440.0 </solutionint>
+  <displayint> 120.0 </displayint>
+  <storageint> 60.0 </storageint>
+  <menuitem> To Next Day </menuitem>
+</goto>
+
+<goto>
+  <solutionint> 10080.0 </solutionint>
+  <displayint> 1440 </displayint>
+  <storageint> 360 </storageint>
+  <menuitem> To Next Week </menuitem>
+</goto>
+
+<goto>
+  <solutionint> 43200.0 </solutionint>
+  <displayint> 2880 </displayint>
+  <storageint> 1440 </storageint>
+  <menuitem> To Next 30 Days </menuitem>
+</goto>
+
+End

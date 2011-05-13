@@ -1,0 +1,40 @@
+HumMod / AnesthesiaIV Reference
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Solubility for tissue is a multiple of solubility
+for blood.
+
+Default values describe thiopental.
+
+Thiopental has a 1/2 life of 9 Hrs
+or 540 Min.  This is a rate constant
+of 0.00185.
+
+But the liver, volume 1.5 L, is
+clearing for the whole body, 75 L.
+Increase the rate constant by
+75/1.5 or 50.
+
+  K = 0.09
+
+This table estimates anesthetic
+mass at 0.040 mG/mL which I think
+is 1 MAC.  Use mass values to
+specify integration error.
+
+Units are mG for mass and mG/mL
+for concentration.  Use mG/L
+for blood and tissue display.
+
+For thiopental, prime with 2.0
+- 2.5 mG/kG or 160 mG.  Maintain
+with 1.0 - 1.5 (mG/kG)/Min or
+90 mG/Min.
+
+End

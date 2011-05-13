@@ -1,0 +1,115 @@
+HumMod / Summary
+
+Created : 05-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> Bone-Vasculature </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max>
+      
+    </scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> Bone-Vasculature.Tau </name>
+  <firstval> 1.0 </firstval>
+  <repeat>
+    <reps> 99 </reps>
+    <stepsize> 1.0 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Tau </name>
+  <listname> Bone-Vasculature.Tau </listname>
+  <label> Delay (Days) </label>
+</slidebar>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Stimulus </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Stimulus </label>
+</showvalue>
+
+<showcurve>
+  <row> 12.6 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Bone-Flow.PO2 </name>
+    <label> Use </label>
+    <scale>
+      <min> 30 </min><max> 70 </max>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Stim </label>
+    <scale>
+      <min> 0.5 </min><max> 1.5 </max><inc> 0.5 </inc>
+    </scale>
+  </yaxis>
+
+  <curvename> PO2OnStimulus </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 20.2 </row><col> 1.0 </col>
+   <name> Bone-Flow.PO2 </name>
+   <format><decimal> 1 </decimal></format>
+   <label> pO2 </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effect and stimulus are typically </line>
+  <line> 1.0 x Normal. </line>
+  <line>  </line>
+  <line> Time constant of delay in changes </line>
+  <line> is 30 days. </line>
+  <line>  </line>
+  <line> Tissue pO2 drives the vasculature </line>
+  <line> stimulus. </line>
+</infobutton>
+
+</groupbox>
+
+End

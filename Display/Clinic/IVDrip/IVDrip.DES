@@ -1,0 +1,31 @@
+HumMod / IVDrip
+
+Created : 24-Apr-05
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+
+<panel><name> Clinic_IVDrip </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Clinic - IV Drip </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\IVDrip\ ?>
+
+<?include Settings.DES ?>
+<?include Accumulation.DES ?>
+
+</panel>
+
+End

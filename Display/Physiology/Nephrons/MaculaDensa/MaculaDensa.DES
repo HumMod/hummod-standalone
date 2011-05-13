@@ -1,0 +1,18 @@
+HumMod / MaculaDensa
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\Nephrons\MaculaDensa\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include TGF-Vascular\TGF-Vascular.DES ?>
+<?include TGF-Renin\TGF-Renin.DES ?>
+
+
+End

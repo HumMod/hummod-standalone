@@ -1,0 +1,136 @@
+HumMod / Kidney-O2
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Kidney-O2 </name>
+
+<variables>
+
+<var>
+  <name> Vein[O2] </name>
+</var>
+
+<var>
+  <name> VeinPO2 </name>
+</var>
+
+<var>
+  <name> O2Perm </name>
+</var>
+
+<parm>
+  <name> O2PermBasic </name>
+  <val> 0.9 </val>
+</parm>
+
+<var>
+  <name> AerobicFraction </name>
+</var>
+
+<var>
+  <name> HgbOnPerm </name>
+</var>
+
+<var>
+  <name> O2Use </name>
+</var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> TubulePO2 </name>
+  <startname> TubulePO2 </startname>
+  <initialval> 35.0 </initialval>
+  <endname> TubulePO2End </endname>
+  <errorlim> 0.35 </errorlim>
+  <searchmin> 0.0 </searchmin>
+  <searchmaxname> SearchMax </searchmaxname>
+</impliciteq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> HgbOnPerm </name>
+  <point><x> 0.00 </x><y> 0.4 </y><slope> 0 </slope></point>
+  <point><x> 0.15 </x><y> 1.0 </y><slope> 8.0 </slope></point>
+  <point><x> 0.25 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PO2OnAerobicFraction </name>
+  <point><x>  2.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 20.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> HgbOnPerm </name>
+  <val> HgbOnPerm [ HgbConc.[Free] ] </val>
+</def>
+
+<def>
+  <name> O2Perm </name>
+  <val> HgbOnPerm * O2PermBasic </val>
+</def>
+
+<def>
+  <name> SearchMax </name>
+  <val> PO2Artys.Pressure </val>
+</def>
+
+<implicitmath><name> TubulePO2 </name>
+
+<def>
+  <name> AerobicFraction </name>
+  <val> PO2OnAerobicFraction [ TubulePO2 ] </val>
+</def>
+
+<def>
+  <name> O2Use </name>
+  <val> Kidney-Metabolism.O2Need * AerobicFraction </val>
+</def>
+
+<conditional>
+  <name> Vein[O2] </name>
+  <test> Kidney-Flow.BloodFlow GT 0.0 </test>
+  <true> O2Artys.[O2] - ( O2Use / Kidney-Flow.BloodFlow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+<copy>
+  <from> Vein[O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> VeinPO2 </to>
+</copy>
+
+<def>
+  <name> TubulePO2End </name>
+  <val> VeinPO2 - ( O2Use / O2Perm ) </val>
+</def>
+
+</implicitmath>
+
+</block>
+</definitions>
+</structure>
+
+End

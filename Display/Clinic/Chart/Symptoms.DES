@@ -1,0 +1,39 @@
+HumMod / Symptoms
+
+Created : 02-Apr-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<maplist>
+  <name> Symptoms.Number </name>
+  <map><val>  0 </val><img> "I'm feeling OK." </img></map>
+  <map><val>  1 </val><img> Your patient is not responding. </img></map>
+  <map><val>  2 </val><img> "I've got a bad chest pain." </img></map>
+  <map><val>  3 </val><img> "I can't get enough air." </img></map>
+  <map><val>  4 </val><img> "I get tired real easy." </img></map>
+  <map><val>  5 </val><img> "I'm confused." </img></map>
+  <map><val>  6 </val><img> "I'm dizzy" </img></map>
+  <map><val>  7 </val><img> "I've got swelling in my head." </img></map>
+  <map><val>  8 </val><img> "I've got swelling in my gut." </img></map>
+  <map><val>  9 </val><img> "I've got swelling in my feet." </img></map>
+  <map><val> 10 </val><img> "My urine gives me trouble." </img></map>
+  <map><val> 11 </val><img> "I'm at work." </img></map>
+  <map><val> 12 </val><img> "I'm in aerobics." </img></map>
+  <map><val> 13 </val><img> "I'm on the bike." </img></map>
+  <map><val> 14 </val><img> "I'm on the treadmill." </img></map>
+</maplist>
+
+<showvalue>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> Symptoms.Number </name>
+  <nolabel/>
+  <format>
+    <list> Symptoms.Number </list>
+    <fieldwidth> 34 </fieldwidth>
+  </format>
+</showvalue>
+
+End

@@ -1,0 +1,144 @@
+HumMod / SweatAcclimation
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 26.2 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> SweatAcclimation </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Effect </name>
+  <label> Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col>
+  <high> 7 </high><wide> 28 </wide>
+
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1.0 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> K </name>
+  <label> K </label>
+  <format><decimal> 5 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> Tau </name>
+  <firstval> 1 </firstval>
+  <repeat><reps> 9 </reps><stepsize>  1 </stepsize></repeat>
+  <repeat><reps> 9 </reps><stepsize> 10 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.0 </row><col> 3.0 </col>
+  <name> Tau </name>
+  <listname> Tau </listname>
+  <label> Tau </label>
+</slidebar>
+
+<showvalue>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> SteadyState </name>
+  <label> Steady-State </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 3.0 </col>
+  <name> TemperatureEffect </name>
+  <label> Temp. Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> BasicEffect </name>
+  <repeat><reps> 20 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  3 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 14.8 </row><col> 3.0 </col>
+  <name> BasicEffect </name>
+  <listname> BasicEffect </listname>
+  <label> Basic </label>
+</slidebar>
+
+<showvalue>
+  <row> 16.2 </row><col> 1.0 </col>
+  <name> TemperatureEffect </name>
+  <label> Temp. Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showcurve>
+  <row> 17.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> HeatSkin.Temp(F) </name>
+    <label> Skin (degF) </label>
+    <scale><min> 60 </min><max> 100 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </yaxis>
+
+  <curvename> TemperatureEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 24.6 </row><col> 1.0 </col>
+  <name> HeatSkin.Temp(F) </name>
+  <label> Skin (degF) </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> K is the delay rate constant (in Min). </line>
+  <line>  </line>
+  <line> Tau is the delay time constant, typically </line>
+  <line> 6 days. </line>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

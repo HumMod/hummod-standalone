@@ -1,0 +1,30 @@
+HumMod / EquivalentAltitude.REF
+
+Created : 20-Sep-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Oxygen partial pressure (pO2) at the alveoli will be altered by a change
+in altitude, inspired O2 concentration or both.
+
+Sometimes when inspired O2 concentration is changed (especially to
+hypoxia) we wonder what an equivalent increase in altitude is. This
+module makes the calculation.
+
+The equivalent pressure (EQP) is the barometric pressure adjusted up
+or down by the O2 mixture.
+
+  EQP = ( O2(%) / 21.0 ) * Barometric Pressure
+
+The we use the P = f(Altitude) equation backwards. That is, altitude
+equals a function of pressure.
+
+  Feet = K * LOG ( EQP / 760.0 ) MAX 0.0
+
+MAX 0.0 limits the altitude to greater than or equal to zero.
+
+End

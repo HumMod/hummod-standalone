@@ -1,0 +1,50 @@
+HumMod / LungArtyCO2
+
+Created : 10-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LungArtyCO2 </name>
+
+<variables>
+
+<var>
+  <name> [CO2] </name>
+</var>
+
+<var>
+  <name> [CO2(mEq/L)] </name>
+</var>
+
+<var>
+  <name> PCO2 </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> [CO2] </name>
+  <val> CO2Veins.[HCO3] </val>
+</def>
+
+<def>
+  <name> [CO2(mEq/L)] </name>
+  <val> CO2Veins.[HCO3(mEq/L)] </val>
+</def>
+
+<def>
+  <name> PCO2 </name>
+  <val> CO2Veins.Pressure </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

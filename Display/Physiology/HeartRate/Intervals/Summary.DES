@@ -1,0 +1,106 @@
+HumMod / Summary
+
+Created : 17-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 26.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> Heart-Intervals </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> R-R </name>
+   <format><decimal> 2 </decimal></format>
+   <label> R-R </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> R-R </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Systolic </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Systolic </label>
+</showvalue>
+
+<showgraph>
+  <row> 10.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Systolic </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 18.2 </row><col> 1.0 </col>
+   <name> Diastolic </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Diastolic </label>
+</showvalue>
+
+<showgraph>
+  <row> 19.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Diastolic </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+</showgraph>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line> Typical intervals (in seconds) are </line>
+  <line>  </line>
+  <line> R-R = 0.83 </line>
+  <line> Systole = 0.31 </line>
+  <line> Diastole = 0.52 </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

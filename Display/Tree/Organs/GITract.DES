@@ -1,0 +1,106 @@
+HumMod / GITract
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> GITract </name>
+  <label> GI Tract </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> GITract-Circulation </name>
+  <label> Circulation </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> GITract </parent>
+</leaf>
+
+<branch>
+  <name> GITract-Fuel </name>
+  <label> Fuel </label>
+  <parent> GITract </parent>
+</branch>
+
+<leaf>
+  <name> GITractFuel-Selection </name>
+  <label> Selection </label>
+  <parent> GITract-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> GITractFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> GITract-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> GITractFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> GITract-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> GITractFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> GITract-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-CO2 </name>
+  <label> CO2 </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Lactate </name>
+  <label> Lactate </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Nerves </name>
+  <label> Nerves </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Function </name>
+  <label> Function </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Structure </name>
+  <label> Structure </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Size </name>
+  <label> Size </label>
+  <parent> GITract </parent>
+</leaf>
+
+<leaf>
+  <name> GITract-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> GITract </parent>
+</leaf>
+
+End

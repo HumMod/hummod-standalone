@@ -1,0 +1,150 @@
+HumMod / OrganFlow
+
+Created : 24-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 17.4 </high>
+   <wide> 30.0 </wide>
+   <title> Organ Flow </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> OrganFlow.PeripheralFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Peripheral </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> A-VFistula-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> A-V Fistula </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> Bone-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Bone </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3 </col>
+   <name> Brain-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Brain </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 3 </col>
+   <name> Fat-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Fat </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 3 </col>
+   <name> Kidney-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 3 </col>
+   <name> LeftHeart-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.4 </row><col> 3 </col>
+   <name> OtherTissue-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.4 </row><col> 3 </col>
+   <name> RespiratoryMuscle-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.4 </row><col> 3 </col>
+   <name> RightHeart-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.4 </row><col> 3 </col>
+   <name> SkeletalMuscle-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 3 </col>
+   <name> Skin-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Skin </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.8 </row><col> 1.0 </col>
+   <name> OrganFlow.HepaticVeinFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Splanchnic </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.8 </row><col> 3 </col>
+   <name> GITract-Flow.BloodFlow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.8 </row><col> 3 </col>
+   <name> HepaticArty.Flow </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Hepatic Artery </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mL/Min. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Peripheral = 4150.0 </line>
+  <line>  </line>
+  <line> Bone = 420 </line>
+  <line> Brain = 820 </line>
+  <line> Fat = 240 </line>
+  <line> Kidney = 1200 </line>
+  <line> Left Heart = 190 </line>
+  <line> Other Tissue = 380 </line>
+  <line> Resp Muscle = 100 </line>
+  <line> Right Heart = 40 </line>
+  <line> Skeletal Muscle = 650 </line>
+  <line> Skin = 140 </line>
+  <line>  </line>
+  <line> Splanchnic = 1250 </line>
+  <line>  </line>
+  <line> GI Tract = 1000 </line>
+  <line> Hepatic Artery = 250 </line>
+</infobutton>
+
+</groupbox>
+
+End

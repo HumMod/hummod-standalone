@@ -1,0 +1,28 @@
+HumMod / Bone
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Bone\ ?>
+
+<?include Bone-Flow.DES ?>
+<?include Bone-Pressure.DES ?>
+<?include Bone-Mineral.DES ?>
+<?include Bone-Size.DES ?>
+
+<?include Bone-CO2.DES ?>
+<?include Bone-Ph.DES ?>
+<?include Bone-Lactate.DES ?>
+
+<?include Bone-Fuel.DES ?>
+<?include Bone-Function.DES ?>
+<?include Bone-Metabolism.DES ?>
+<?include Bone-AlphaReceptors.DES ?>
+<?include Bone-Structure.DES ?>
+<?include Bone-Vasculature.DES ?>
+
+End

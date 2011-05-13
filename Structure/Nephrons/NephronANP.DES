@@ -1,0 +1,65 @@
+HumMod / NephronANP
+
+Created : 09-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> NephronANP </name>
+
+<variables>
+
+<var><name> [ANP] </name></var>
+<parm><name> Tau </name><val> 20.0 </val></parm>
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+<var><name> Log10Conc </name></var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> [ANPDelayed] </name>
+  <outputname> [ANPDelayed] </outputname>
+  <initialval> 20.0 </initialval>
+  <inputname> [ANPPool] </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+</delay>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT Tau </val></def>
+</block>
+
+<block><name> Calc </name>
+
+<conditional>
+  <name> [ANP] </name>
+  <test> Clamp </test>
+  <true> Level </true>
+  <false> [ANPDelayed] </false>
+</conditional>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ANP] GT 1.0 </test>
+  <true> LOG10 [ANP] </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def><name> [ANPPool] </name><val> ANPPool.[ANP] </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

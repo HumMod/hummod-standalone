@@ -1,0 +1,62 @@
+HumMod / SweatFuel
+
+Created : 25-Mar-07
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> SweatFuel </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<parm><name> UseK </name><val> 0.0004 </val></parm>
+<parm><name> RefillK </name><val> 0.004 </val></parm>
+
+<var><name> MassEffect </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 1.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x> 0.9 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 1.0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> MassEffect </name><val> MassEffect [ Mass ] </val></def>
+
+<def><name> Gain </name><val> RefillK * MassEffect </val></def>
+<def><name> Loss </name><val> UseK * SweatGland.H2ORateBasic </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+
+EndEnd

@@ -1,0 +1,35 @@
+HumMod / CardiacOutput DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CardiacOutput </name>
+
+<variables>
+
+<var><name> Flow </name></var>
+<var><name> StrokeVolume </name></var>
+<var><name> Flow(L/Min) </name></var>
+<var><name> CardiacIndex </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> StrokeVolume </name><val> LeftHeartPumping-Pumping.StrokeVolume </val></def>
+<def><name> Flow </name><val> LeftHeartPumping-Pumping.BloodFlow </val></def>
+<def><name> Flow(L/Min) </name><val> Flow / 1000.0 </val></def>
+<def><name> CardiacIndex </name><val> Flow(L/Min) / SurfaceArea.Area </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

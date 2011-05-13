@@ -1,0 +1,40 @@
+HumMod / LM_AminoAcids
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_AminoAcids </name>
+
+<variables>
+
+<var><name> NetUptake </name></var>
+
+<var><name> Uptake </name></var>
+<var><name> Release </name></var>
+
+<var><name> Urea </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> Uptake </name><val> LM_Gluconeogenesis.AminoAcidUptake + LM_FA_AminoAcids.AminoAcidUptake </val></def>
+<def><name> Release </name><val> 0.0 </val></def>
+
+<def><name> NetUptake </name><val> Uptake - Release </val></def>
+
+<def><name> Urea </name><val> 0.3 * Uptake </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

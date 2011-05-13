@@ -1,0 +1,42 @@
+HumMod / BVSeq.REF
+
+Created : 19-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+This curve comes from Musgrove and several other
+considerations.  Leg volume while recumbent will
+give up about 200 more mL when squeezed.  Leg
+volume in space is lower and the transmural
+pressure is lower also (3 vs. 13).
+
+Pull -20 mmHg and leg (both legs) volume increases
+by 446 mL.  Pull -40 and it increases by 614 mL.
+
+Take a little bit of this volume and put it into the
+artery.
+
+  TMP  Vol
+  ---- ----
+  -100    0
+     0   50
+    13  200
+    30  650
+    50  800
+ 
+Target about 75% of sequestered volume in the veins
+and 25% in the arteries.
+
+Target lower torso venous pressures of 11 mmHg when
+lying and 50 mmHg when standing.
+
+  Posture  P-Vein Vol P-Arty Vol
+  -------- ------ --- ------ ---
+  Lying     11    150   97    50
+  Standing  50    600  147   200
+
+
+End

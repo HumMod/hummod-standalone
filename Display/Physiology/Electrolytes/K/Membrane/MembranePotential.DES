@@ -1,0 +1,38 @@
+HumMod / MembranePotential
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.4 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Membrane Potential </title>
+
+<structurename> KMembrane </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> MembranePotential </name>
+  <format><decimal> 1 </decimal></format>
+  <label> V (mV) </label>
+</showvalue>
+
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> From the Nernst equation </line>
+  <line>  </line>
+  <line> V = -61.0 * LOG10 ( [K+ In] / [K+ Out] ) </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

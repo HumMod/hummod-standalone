@@ -1,0 +1,48 @@
+HumMod / Organs-Lactate
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Lactate </name>
+
+<definitions>
+
+<block><name> CalcConc </name>
+  <call> Bone-Lactate.CalcConc </call>
+  <call> Brain-Lactate.CalcConc </call>
+  <call> Fat-Lactate.CalcConc </call>
+  <call> GITract-Lactate.CalcConc </call>
+  <call> Kidney-Lactate.CalcConc </call>
+  <call> LeftHeart-Lactate.CalcConc </call>
+  <call> Liver-Lactate.CalcConc </call>
+  <call> OtherTissue-Lactate.CalcConc </call>
+  <call> RespiratoryMuscle-Lactate.CalcConc </call>
+  <call> RightHeart-Lactate.CalcConc </call>
+  <call> SkeletalMuscle-Lactate.CalcConc </call>
+  <call> Skin-Lactate.CalcConc </call>
+</block>
+
+<block><name> CalcDervs </name>
+  <call> Bone-Lactate.CalcDervs </call>
+  <call> Brain-Lactate.CalcDervs </call>
+  <call> Fat-Lactate.CalcDervs </call>
+  <call> GITract-Lactate.CalcDervs </call>
+  <call> Kidney-Lactate.CalcDervs </call>
+  <call> LeftHeart-Lactate.CalcDervs </call>
+  <call> Liver-Lactate.CalcDervs </call>
+  <call> OtherTissue-Lactate.CalcDervs </call>
+  <call> RespiratoryMuscle-Lactate.CalcDervs </call>
+  <call> RightHeart-Lactate.CalcDervs </call>
+  <call> SkeletalMuscle-Lactate.CalcDervs </call>
+  <call> Skin-Lactate.CalcDervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

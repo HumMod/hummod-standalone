@@ -1,0 +1,120 @@
+HumMod / LH-AnteriorPituitary
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LH-AnteriorPituitary </name>
+
+<variables>
+
+<var><name> Secretion </name></var>
+
+<parm><name> BasicSecretion </name><val> 0.6 </val></parm>
+
+<var><name> GnRHEffect </name></var>
+<var><name> InhibinEffect </name></var>
+<var><name> TestosteroneEffect </name></var>
+
+<parm><name> Delay(Hrs) </name><val> 24.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> EstradiolEffectDelayed </name>
+  <outputname> EstradiolEffectDelayed </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> EstradiolEffect </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+  <errorlim> 0.01 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> GnRHEffect </name>
+  <point><x>   0.0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x>  80.0 </x><y> 1.0 </y><slope> -0.01 </slope></point>
+  <point><x> 200.0 </x><y> 0.2 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> EstradiolEffect </name>
+  <point><x> 0.0 </x><y>  1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 0.4 </x><y>  0.5 </y><slope> 0.0 </slope></point>
+  <point><x> 1.5 </x><y>  0.5 </y><slope> 0.0 </slope></point>
+  <point><x> 2.0 </x><y> 20.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> InhibinEffect </name>
+  <point><x>    0.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 7000.0 </x><y> 0.4 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> TestosteroneEffect </name>
+  <point><x>  0.0 </x><y> 0.999 </y><slope> 0.0 </slope></point>
+  <point><x> 50.0 </x><y> 0.2 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT ( 60.0 * Delay(Hrs) ) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> GnRHEffect </name>
+  <val> GnRHEffect [ GnRH.Period(Min) ] </val>
+</def>
+
+<def>
+  <name> EstradiolEffect </name>
+  <val> EstradiolEffect [ Estradiol.[Conc(nMol/L)] ] </val>
+</def>
+
+<def>
+  <name> InhibinEffect </name>
+  <val> InhibinEffect [ Inhibin.[Conc(IU/L)] ] </val>
+</def>
+
+<def>
+  <name> TestosteroneEffect </name>
+  <val> TestosteroneEffect [ Testosterone.[Conc(nMol/L)] ] </val>
+</def>
+
+<def>
+  <name> Secretion </name>
+  <val>
+      BasicSecretion
+    * GnRHEffect
+    * EstradiolEffectDelayed
+    * InhibinEffect
+    * TestosteroneEffect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

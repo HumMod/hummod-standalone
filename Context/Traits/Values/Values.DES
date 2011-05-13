@@ -1,0 +1,37 @@
+HumMod / Values DES
+
+Created : 03-Apr-05
+Last Modified : 01-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Traits\Values\ ?>
+
+<?include Values-Gender.DES ?>
+<?include Values-Age.DES ?>
+<?include Values-Height.DES ?>
+<?include Values-Adiposity.DES ?>
+<?include Values-OtherMass.DES ?>
+<?include Values-Muscularity.DES ?>
+
+<structure><name> Values </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> Values-Gender.Calc </call>
+  <call> Values-Age.Calc </call>
+  <call> Values-Height.Calc </call>
+  <call> Values-Adiposity.Calc </call>
+  <call> Values-OtherMass.Calc </call>
+  <call> Values-Muscularity.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

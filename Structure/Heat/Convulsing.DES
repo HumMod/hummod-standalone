@@ -1,0 +1,73 @@
+HumMod / Convulsing
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Convulsing </name>
+
+<variables>
+
+<var>
+  <name> Temp </name>
+</var>
+
+<var>
+  <name> NowConvulsing </name>
+</var>
+
+<var>
+  <name> StoppedConvulsing </name>
+</var>
+
+<var>
+  <name> PastConvulsing </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> NowConvulsing </name>
+
+<conditional>
+  <name> NowConvulsing </name>
+  <test>
+    ( Temp GT 42.0 )
+    AND
+    ( Temp LT 44.0 )
+  </test>
+  <true> TRUE </true>
+  <false> FALSE </false>
+</conditional>
+
+</block>
+
+<block><name> StoppedConvulsing </name>
+
+<conditional>
+  <name> StoppedConvulsing </name>
+  <test> Temp LT 41.5 </test>
+  <true> TRUE </true>
+  <false> FALSE </false>
+</conditional>
+
+</block>
+
+<block><name> PastConvulsing </name>
+
+<conditional>
+  <name> PastConvulsing </name>
+  <test> Temp GT 44.5 </test>
+  <true> TRUE </true>
+  <false> FALSE </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

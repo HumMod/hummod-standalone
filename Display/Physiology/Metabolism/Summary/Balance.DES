@@ -1,0 +1,68 @@
+HumMod / Balance
+
+Created : 17-Dec-05
+Last Modified : 2010-05-28
+Author : Tom Coleman
+Copyright : 2006-2010
+Schema : DES V1.0
+
+<groupbox>
+   <row> 27.0 </row>
+   <col> 1.0 </col>
+   <high> 8.4 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Metabolism-MetabolicRate.Net(kCal/Day) </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Net (kCal/Day) </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3.0 </col>
+   <name> DietIntakeNutrition.Total_kCal/Day </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Intake </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3.0 </col>
+   <name> Metabolism-MetabolicRate.Total(kCal/Day) </name>
+   <format><decimal> 0 </decimal></format>
+   <label> Burned </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> Metabolism-CaloriesUsed.Total </name>
+   <format> <integer/> </format>
+   <label> Burn (Cal/Min) </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 3.0 </col>
+   <name> Metabolism-CaloriesUsed.TotalHeat </name>
+   <format> <integer/> </format>
+   <label> Heat </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.8 </row><col> 3.0 </col>
+   <name> Metabolism-CaloriesUsed.TotalMotion </name>
+   <format> <integer/> </format>
+   <label> Motion </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are kCal/Day and Cal/Min. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

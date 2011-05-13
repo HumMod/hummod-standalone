@@ -1,0 +1,82 @@
+HumMod / InsulinSythesis
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> InsulinSynthesis </name>
+
+<variables>
+
+<parm>
+  <name> Tau </name>
+  <val> 20.0 </val>
+</parm>
+
+<var>
+  <name> MassEffect </name>
+</var>
+
+<parm>
+  <name> Base </name>
+  <val> 0.67 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Rate </name>
+  <outputname> Rate </outputname>
+  <initialval> 17.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.17 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> MassEffect </name>
+  <point><x>    0 </x><y> 200 </y><slope> 0 </slope></point>
+  <point><x> 2000 </x><y>  17 </y><slope> -0.02 </slope></point>
+  <point><x> 3000 </x><y>   0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT Tau </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> MassEffect </name>
+  <val> MassEffect [ InsulinStorage.Mass ] </val>
+</def>
+
+<def>
+  <name> SteadyState </name>
+  <val> MassEffect </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

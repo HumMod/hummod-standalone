@@ -1,0 +1,31 @@
+HumMod / HeartValves
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\HeartValves\ ?>
+
+<?include AorticValve\AorticValve.DES ?>
+<?include MitralValve\MitralValve.DES ?>
+<?include PulmonicValve\PulmonicValve.DES ?>
+<?include TricuspidValve\TricuspidValve.DES ?>
+
+<structure><name> HeartValves </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> AorticValve.Parms </call>
+<call> MitralValve.Parms </call>
+<call> PulmonicValve.Parms </call>
+<call> TricuspidValve.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

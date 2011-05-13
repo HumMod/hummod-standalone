@@ -1,0 +1,48 @@
+HumMod / Follicle-Growth REF
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Gougeon Human Repro. 1:81-87, 1986.
+
+Gougeon describes follicle size. Growth requires a
+total of 85 days over 3 cycles.
+
+Early on, the follicle that will eventually ovulate
+is larger than the other. But that is the one we are
+interested in and it is reflected in the numbers.
+
+Initial diameter is 0.12 mm. By the end of the
+previous luteal phase diameter has increased to
+5 mm. At ovulation, diameter is 19 mm.
+
+Primordial Follicle - Not growing.
+Primary Follicle - Starting to grow.
+Preantral Follicle - Does not yet have an antrum.
+Antral Follicle - Now has an antrum.
+Vesicular Follicle - Developed antral follicle.
+Mature Follicle - The single follicle that will
+  ovulate.
+
+We begin at the start of the 14 day period that
+completes follicle growth.
+
+V = (4/3) Pi * r^3
+
+            Day 0   Day 14
+           -------  -------
+Diameter (mm) 5.0      19
+Radius (mm)   2.5       9.5
+Volume (mm^3)  65    3590
+Mass (mG)      65    3590
+
+So the increase is 55 x.
+
+Note that 1 mm^3 is a uL and weighs 1 mG.
+
+End

@@ -1,0 +1,41 @@
+HumMod / Start-OrganConductance.REF
+
+Created : 30-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+The basic vascular conductance (Organ-Flow.BasicConductance) is the
+product of organ weight (Organ-Size.Mass) and the normal
+conducance per gram of organ weight (Conductance(/G)).
+
+Organ               Conductance  Weight   Conductance(/G)
+------------------  -----------  -------  ---------------
+Bone                   4.7         8560      0.000549
+Brain                  9.1         1160      0.00784
+Fat                    2.7        16600      0.000163
+GITract               10.0         1270      0.00787
+Kidney                13.9          260
+  Arcuate            600.0                   2.31
+  Afferent            37.3                   0.143
+  Efferent            23.0                   0.0885
+LeftHeart              2.1          230
+  Large Vessel        50.0                   0.217
+  Small Vessel         2.2                   0.00956
+Liver                  N/A         1540      
+  Hepatic Artery       2.8                   0.00182
+  Portal Vein       Infinite
+  Hepatic Vein       178.0                   0.1156
+OtherTissue            4.2         3630      0.00116
+RespiratoryMuscle      1.1         3080      0.000357
+RightHeart             0.39          40
+  Large Vessel        10.0                   0.250
+  Small Vessel         0.4                   0.01
+SkeletalMuscle         7.2        27400      0.000263
+Skin                   1.6         2240      0.000714
+------------------  -----------  -------  ---------------
+Total                             66000
+
+End

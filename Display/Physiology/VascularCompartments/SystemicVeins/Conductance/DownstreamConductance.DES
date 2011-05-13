@@ -1,0 +1,91 @@
+HumMod / DownstreamConductance
+
+Created : 25-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.2 </high>
+   <wide> 30.0 </wide>
+   <title> Downstream Conductance </title>
+
+<structurename> SystemicVeins </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Conductance </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Conductance </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 600 </min><max> 700 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> BloodVol.CollapsedEffect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Collapse Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Exercise-MusclePump.Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Muscle Pump </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> Viscosity.ConductanceEffect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Viscosity Effect </label>
+</showvalue>
+
+<repeatlist>
+  <name> SystemicVeins.ConductanceBasic </name>
+  <firstval> 100 </firstval>
+  <repeat><reps> 58 </reps><stepsize> 10.0 </stepsize></repeat>
+  <repeat><reps> 30 </reps><stepsize> 1.0 </stepsize></repeat>
+  <repeat><reps> 29 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> ConductanceBasic </name>
+  <listname> SystemicVeins.ConductanceBasic </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

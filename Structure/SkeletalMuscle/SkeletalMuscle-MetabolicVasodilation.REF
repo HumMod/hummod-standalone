@@ -1,0 +1,22 @@
+HumMod / SkeletalMuscle-MetabolicVasodilation.REF
+
+Created : 03-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+There are many determinants of skeletal muscle vascular
+conductance, but this one is special because it is very
+powerful and not much is known about the mediators.
+
+This module uses a delay with two rate constants: One for
+increasing input and one for decreasing input.
+
+My feeling is that the onset of vasodilation is much
+quicker than the offset.
+
+
+End

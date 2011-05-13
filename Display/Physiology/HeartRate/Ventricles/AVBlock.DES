@@ -1,0 +1,35 @@
+HumMod / AVBlock
+
+Created : 17Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 14.4 </row>
+   <col> 1.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> A-V Block </title>
+
+<structurename> Heart-Ventricles </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> AVBlock </name>
+  <listname> Common.NoYes </listname>
+  <label> Blocked? </label>
+</radiobuttons>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line> Click yes to block the S-A node from </line>
+  <line> being the ventricular pacemaker. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,67 @@
+QHP 2008 /  Morphology.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> SurfaceArea </structurename>
+
+<vardoc>
+<name> SurfaceArea.Area </name>
+<topic> SurfaceArea - Overview </topic>
+<topic> SurfaceArea - Calculation </topic>
+<seealso> CardiacOutput.CardiacIndex </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> SurfaceArea - Overview </name>
+<label> Overview </label>
+<content>
+
+Cardiac output increases approximately in proportion to
+the surface area of the body. It is frequently expressed
+as the cardiac index which is the cardiac output per 
+square meter of body surface area. It is important therefore
+to be able to calculate body surface area based on height 
+and weight.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> SurfaceArea - Calculation </name>
+<label> Calculation </label>
+<content>
+
+A = Area in cM^2
+W = Weight in kG
+H = Height in cM
+C = Constant 71.84
+
+Reduce C to 0.007184 to get area in M^2
+
+A = C*H^0.725*W^0.425
+
+DuBois D, DuBois EF A formula to estimate the 
+approximate surface area if height and weight 
+be known. Arch Int Med 17:863-871, 1916
+
+Wang Y, Moss J, Thisted R. Predictors of body 
+surface area. J. Clin Anesth 4(1):4-10,1992
+
+Haycock GB, Schwartz GJ, Wisotsky DH. Geometric 
+method for measuring body surface area: A height 
+weight formula validated in infants, children and
+adults. The Journal of Pediatrics 93:1:62-66, 1978
+
+Sendroy J, Cecchini LP. Determination of human body
+surface area from height and weight. 
+J. Appl Physiol 7:1-12, 1954 
+
+
+</content>
+</topicdoc>
+
+End

@@ -1,0 +1,64 @@
+HumMod / BloodFlow
+
+Created : 24-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Blood Flow </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BloodFlow </name>
+   <format> <integer/> </format>
+   <label> Flow </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> BloodFlow </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 200 </min><max> 300 </max><inc> 100 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Fat-Pressure.PressureGradient </name>
+   <format> <integer/> </format>
+   <label> Pressure Gradient </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Fat blood flow is normally </line>
+  <line> 240 mL/Min. </line>
+  <line>  </line>
+  <line> Normal pressure gradient is </line>
+  <line> 90 mmHg. </line>
+</infobutton>
+
+</groupbox>
+
+End

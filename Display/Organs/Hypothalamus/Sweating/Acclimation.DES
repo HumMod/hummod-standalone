@@ -1,0 +1,78 @@
+HumMod / Acclimation
+
+Created : 28-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 15.6 </high>
+   <wide> 30.0 </wide>
+   <title> Acclimation </title>
+
+<structurename> HypothalamusSweatingAcclimation </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Offset </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Offset </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Tau </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Delay </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.2 </row><col> 1.0 </col>
+   <name> SteadyState </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Steady State </label>
+</showvalue>
+
+<showcurve>
+  <row> 5.2 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> HeatSkin.Temp(C) </name>
+    <label> Skin Temp (C) </label>
+    <scale>
+      <min> 20 </min><max> 40 </max><inc> 10 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale>
+      <min> -0.3 </min><max> 0.3 </max><inc> 0.1 </inc>
+    </scale>
+  </yaxis>
+
+  <curvename> SteadyState </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 14.2 </row><col> 1.0 </col>
+   <name> HeatSkin.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Skin Temp (C) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for time delay are days. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,35 @@
+HumMod / Technical
+
+Created : 11-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 32.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> Technical </title>
+
+<structurename> DietFeeding </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Time </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Time </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Fraction </name>
+   <format><decimal> 6 </decimal></format>
+   <label> Fraction </label>
+</showvalue>
+
+</groupbox>
+
+End

@@ -1,0 +1,98 @@
+HumMod / Pressure-Volume
+
+Created : 11-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 25.8 </high>
+   <wide> 30.0 </wide>
+   <title> Pressure - Volume </title>
+
+<structurename> RightHeartPumping-Diastole </structurename>
+
+<showvalue>
+   <row> 1.4 </row>
+   <col> 1.0 </col>
+   <name> EDP </name>
+   <format><decimal> 1 </decimal></format>
+   <label> EDP </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> EDP </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showmap>
+  <row> 9.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+
+  <xaxis>
+    <name> EDV </name>
+    <label> EDV </label>
+    <scale><min> 0 </min><max> 150 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <name> TMP </name>
+    <label> TMP </label>
+    <scale><min> 0 </min><max> 6 </max><inc> 2 </inc></scale>
+  </yaxis>
+
+  <blockname> P=f(V) </blockname>
+</showmap>
+
+<showvalue>
+   <row> 17.2 </row><col> 1.0 </col>
+   <name> EDV </name>
+   <format><decimal> 1 </decimal></format>
+   <label> EDV </label>
+</showvalue>
+
+<showgraph>
+  <row> 18.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> EDV </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 150 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

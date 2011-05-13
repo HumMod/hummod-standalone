@@ -1,0 +1,216 @@
+HumMod / Pheochromocytoma
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Pheochromocytoma </name>
+
+<variables>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<var>
+  <name> EpiRate </name>
+</var>
+
+<var>
+  <name> NERate </name>
+</var>
+
+<parm>
+  <name> Epi(%) </name>
+  <val> 80.0 </val>
+</parm>
+
+<var>
+  <name> EpiFract </name>
+</var>
+
+<var>
+  <name> NEFract </name>
+</var>
+
+<var>
+  <name> FractSec </name>
+  <val> 0.0 </val>
+</var>
+
+<constant>
+  <name> FRACTSEC </name>
+  <val> 0.004 </val>
+</constant>
+
+<parm>
+  <name> Severity </name>
+  <val> 0.0 </val>
+</parm>
+
+<whitenoise>
+  <name> Noise </name>
+  <lowerlim> 0.5 </lowerlim>
+  <upperlim> 1.0 </upperlim>
+</whitenoise>
+
+<timervar>
+  <name> Timer </name>
+</timervar>
+
+<var>
+  <name> Period </name>
+  <val> 0.0 </val>
+</var>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<var>
+  <name> LastState </name>
+  <val> FALSE </val>
+</var>
+
+<var>
+  <name> InEpisode </name>
+  <val> FALSE </val>
+</var>
+
+<constant>
+  <name> MAXEPISODE </name>
+  <val> 240.0 </val>
+</constant>
+
+<constant>
+  <name> MAXPAUSE </name>
+  <val> 480.0 </val>
+</constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 50000.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> FractSec * Mass </val>
+</def>
+
+<def>
+  <name> EpiFract </name>
+  <val> Epi(%) / 100.0 </val>
+</def>
+
+<def>
+  <name> NEFract </name>
+  <val> 1.0 - EpiFract </val>
+</def>
+
+<def>
+  <name> EpiRate </name>
+  <val> EpiFract * Rate </val>
+</def>
+
+<def>
+  <name> NERate </name>
+  <val> NEFract * Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Switch * Severity - Rate </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+  <test> Switch </test>
+  <false><exitblock/></false>
+</if>
+
+<if>
+  <test> Timer LT Period </test>
+  <true><exitblock/></true>
+</if>
+
+<if>
+  <test> InEpisode </test>
+  <true><call> TurnOff </call></true>
+  <false><call> TurnOn </call></false>
+</if>
+
+</block>
+
+<block><name> TurnOff </name>
+
+<def>
+  <name> InEpisode </name>
+  <val> FALSE </val>
+</def>
+
+<def>
+  <name> FractSec </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> Period </name>
+  <val> Noise * MAXPAUSE </val>
+</def>
+
+<timer>
+  <name> Timer </name>
+  <val> 0.0 </val>
+  <state> UP </state>
+</timer>
+
+</block>
+
+<block><name> TurnOn </name>
+
+<def>
+  <name> InEpisode </name>
+  <val> TRUE </val>
+</def>
+
+<def>
+  <name> FractSec </name>
+  <val> FRACTSEC </val>
+</def>
+
+<def>
+  <name> Period </name>
+  <val> Noise * MAXEPISODE </val>
+</def>
+
+<timer>
+  <name> Timer </name>
+  <val> 0.0 </val>
+  <state> UP </state>
+</timer>
+
+</block>
+
+</definitions>
+</structure>
+
+End

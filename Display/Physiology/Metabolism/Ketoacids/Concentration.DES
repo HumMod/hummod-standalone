@@ -1,0 +1,69 @@
+HumMod / Concentration
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.4 </high>
+   <wide> 30.0 </wide>
+   <title> Concentration </title>
+
+<structurename> KAPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [KA(mG/dL)] </name>
+  <format><decimal> 2 </decimal></format>
+  <label> [Ketoacid (mG/dL)] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [KA(mG/dL)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 10 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> [KA(mMol/L)] </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [Ketoacid (mMol/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> I've assumed that plasma ketoacids have, on average, </line>
+  <line> a molecular weight of 102. </line>
+  <line>  </line>
+  <line> Plasma ketoacid concentration is typically 0.5 mG/dL </line>
+  <line> or 0.05 mMol/L. </line>
+  <line>  </line>
+  <line> To convert mG/dL ketoacid to mMol/L ketoacid, </line>
+  <line> multiply by 0.0980. </line>
+</infobutton>
+
+</groupbox>
+
+End

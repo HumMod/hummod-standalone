@@ -1,0 +1,35 @@
+HumMod / HeartValves.REF
+
+Created : 17-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+There are 4 heart valves:
+
+Left Heart
+  Aortic or Semilunar
+  Mitral or Left A-V
+
+Right Heart
+  Pulmonic or Semilunar
+  Tricuspid or Right A-V
+
+We can simulate stenosis and regurgitation in each of the valves.
+
+Each valve has an open (stenosis) area and a closed (regurgitation)
+area. Units are cM^2. Typical values
+
+                  Stenosis  Regurgitation
+                  --------------  ----------------------
+  Aortic          3.3               0.0
+  Mitral          5.0               0.0
+  Pulmonic    3.3               0.0
+  Tricuspid    7.4               0.0
+
+
+
+End

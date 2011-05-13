@@ -1,0 +1,71 @@
+HumMod / ECFV
+
+Created : 06-Apr-05
+Created : 24-Nov-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ECFV </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+
+<var><name> Vol(L) </name></var>
+<var><name> InitialVol(L) </name></var>
+
+<constant>
+  <name> FractBodyH2O </name>
+  <val> 0.35 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> InitialVol </name>
+  <val> FractBodyH2O * BodyH2O.InitialVol </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> InitialVol </val>
+</def>
+
+<def>
+  <name> InitialVol(L) </name>
+  <val> InitialVol / 1000.0 </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> InitialVol(L) </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> Vol </name>
+  <val> OsmBody.ECFV </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

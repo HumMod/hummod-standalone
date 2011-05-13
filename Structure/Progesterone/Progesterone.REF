@@ -1,0 +1,44 @@
+HumMod / Progesterone Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+C21-H30-O2   M.W. = 314.5
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+Units are nMol/L (basic) or nG/mL. Multiply nMol/L by
+0.3145 to get nG/mL.
+
+[Conc] in the luteal phase is ~ 35 nMol/L. Otherwise
+it is low (~3.0 nMol/L).
+
+[Conc] in the male is close to 0.
+
+Clearance is 2000 L/Day or 1389 mL/Min.
+
+Secretion at 35 nMol/L is 53 nMol/Min. Secretion at 3
+nMol/L is 4.8 nMol/Min. Initial mass is 29.2 nMol in
+the female and a lesser amount in the male.
+
+The clearance rate constant comes from
+
+  Degradation = Secretion = K * Mass
+
+  K = 4.8 (nMol/Min) / 29.2 nMol or 0.164 /Min
+
+Or a tau of 6.1 Min.
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+End

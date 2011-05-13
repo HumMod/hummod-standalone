@@ -1,0 +1,48 @@
+HumMod / LeftHeartPumping-Diastole
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> LeftHeartPumping-Diastole </name>
+
+<variables>
+
+<var><name> EDV </name></var>
+<var><name> EDP </name></var>
+<var><name> TMP </name></var>
+
+<parm><name> A-Basic </name><val> 0.00051 </val></parm>
+<var><name> A </name></var>
+<parm><name> n </name><val> 2.0 </val></parm>
+
+<parm><name> Stiffness </name><val> 1.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> EDP </name><val> LeftAtrium.Pressure </val></def>
+<def><name> TMP </name><val> EDP - Pericardium-Cavity.Pressure </val></def>
+<def><name> A </name><val> Stiffness * A-Basic </val></def>
+
+<call> V=f(P) </call>
+
+</block>
+
+<block><name> P=f(V) </name>
+  <def><name> TMP </name><val> A * ( EDV ^ n ) </val></def>
+</block>
+
+<block><name> V=f(P) </name>
+  <def><name> EDV </name><val> ( TMP / A ) ^ ( 1.0 / n ) </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

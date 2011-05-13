@@ -1,0 +1,133 @@
+HumMod / HgbProperties.REF
+
+Created : 15-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Blood oxygen content is a non-linear function of
+blood pO2.
+
+  Dill, D.B., H.T. Edwards, M. Florkin and R.W.
+  Campbell. Properties of dog blood. J.Biol.Chem.
+  95:143-152, 1932.
+
+This relationship is described using the sigmoidal
+Hill equation.
+
+  J.Physiol. 40:iv-vii, 1910.
+
+  S = A^n / 1 + A^n
+
+where S is the fraction saturation, n is an exponent
+which we'll call the Hill constant.
+
+  A = P / P50
+
+where P is the pO2 and P50 is the pO2 that produces
+a saturation of 1/2 or 50%.
+
+Hill thought that n might mean something, but it is
+now clear that a n of 2.6 gives a good fit to the
+data at midrange while an n of 2 is better at the top.
+
+I use a compromise value of 2.3.
+
+The Hill equation has an inverse.
+
+  P = P50 * (S / 1 - S)^1/n
+
+Severinghaus quantitated the effects of temperature,
+pH and CO2 on dissociation.  All affect the P50.
+
+  J.Appl.Physiol. 21:1108, 1966.
+
+  A = 10 ^ 0.024 * (TCent - 37)
+  B = 10 ^ -0.40 * (pH - 7.40)
+  C = 10 ^ 0.06 * (log pCO2 - log 40)
+
+J.B.S. Haldane described the effect of CO on
+dissociation. Thus, it's the Haldane effect.
+
+  J.Physiol. 45:xxii, 1912-1913.
+
+These first data are pretty good. Roughton and Darling
+confirmed Haldane's data.
+
+  Amer.J.Physiol. 141:17, 1944.
+
+Okada's data can be used to adjust the P50.
+
+  Amer.J.Physiol. 230:471, 1976.
+
+  D = 10 ^ -0.0067 * COHb (%)
+
+Hill liked his equation because once n was determined
+the entire curve was defined by a single P50.  This
+makes computation easy.
+
+  P50 = P50 Basic * A * B * C * D
+
+Hgb is assumed to be saturated at a pO2 of 120 mmHg.
+Above this, O2 is added as a function of its solubility
+in blood of
+
+  0.00003 (mL STPD/mL)/mmHg
+
+CALCULATION SEQUENCE
+
+The correct calculation sequence is
+   
+BloodVol calculates the fractional hematocrit.
+   
+Hgb_Conc calculates
+
+  # [Total Hgb] from Hct
+  # [CO Hgb] from [CO] and [Total Hgb]
+  # [Free Hgb] from [Total] and [CO Hgb] 
+  # [Max O2 Content] from [Free Hgb]
+ 
+Regionals like HgbLung and HgbTissue setup
+dissociation by calculating P50 and [O2@120] for
+their region.
+
+This class (HgbProperties) supplies callins for
+the temperature, pH, pCO2 and CO effects.
+
+Finally, this class supplies callins for the forward
+and inverse Hill equations.
+
+We also have a function converts O2 content to pO2.
+It assumes that max O2 content is greater than 0 and
+does a naked divide.
+
+Another function calculates a scale factor that yields
+a saturation of 1.0 at a pressure of PO2_SAT.
+
+  S = K * An / (1 + An)
+
+If S = 1.0,
+
+  K = (1 + An) / An
+
+This function implements the Hill equation with one
+additional feature.
+
+The original Hill equation returned at saturation of
+1.0 only at an infinite pressure and the approach
+rate depended on P50.
+
+This equation is scaled to return a saturation of
+1.0 at a specified high pressure.
+
+  S = K * An / (1 + An)
+
+This is the inverse Hill equation with the scaling
+described above.
+
+  S = Sat / K
+  P = P50 * (S / 1 - S)^1/n
+
+End

@@ -1,0 +1,120 @@
+HumMod / AnesthesiaGasVein
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaGasVein </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [Blood] </name></var>
+<var><name> pBlood </name></var>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.10 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Blood] </name>
+  <val> Mass / VeinsVol.Vol </val>
+</def>
+
+<def>
+  <name> pBlood </name>
+  <val> [Blood] * AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> DxMax </name>
+  <test> RightAtrium.Inflow GT 0.0 </test>
+  <true> VeinsVol.Vol / RightAtrium.Inflow </true>
+  <false> 0.5 </false>
+</conditional>
+
+<def>
+  <name> Gain </name>
+  <val>
+
+      ( AnesthesiaGasArty.[Blood]
+    * A-VFistula-Flow.BloodFlow )
+
+    + ( AnesthesiaGasBone.[Vein]
+    * Bone-Flow.BloodFlow )
+
+    + ( AnesthesiaGasBrain.[Vein]
+    * Brain-Flow.BloodFlow )
+
+    + ( AnesthesiaGasFat.[Vein]
+    * Fat-Flow.BloodFlow )
+
+    + ( AnesthesiaGasGITract.[Vein]
+    * GITract-Flow.BloodFlow )
+
+    + ( AnesthesiaGasKidney.[Vein]
+    * Kidney-Flow.BloodFlow )
+
+    + ( AnesthesiaGasLeftHeart.[Vein]
+    * LeftHeart-Flow.BloodFlow )
+
+    + ( AnesthesiaGasLiver.[Vein]
+    * OrganFlow.HepaticVeinFlow )
+
+    + ( AnesthesiaGasOtherTissue.[Vein]
+    * OtherTissue-Flow.BloodFlow )
+
+    + ( AnesthesiaGasRespiratoryMuscle.[Vein]
+    * RespiratoryMuscle-Flow.BloodFlow )
+
+    + ( AnesthesiaGasRightHeart.[Vein]
+    * RightHeart-Flow.BloodFlow )
+
+    + ( AnesthesiaGasSkeletalMuscle.[Vein]
+    * SkeletalMuscle-Flow.BloodFlow )
+
+    + ( AnesthesiaGasSkin.[Vein]
+    * Skin-Flow.BloodFlow )
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> PulmArty.Outflow * [Blood] </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

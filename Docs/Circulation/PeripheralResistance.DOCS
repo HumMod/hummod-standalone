@@ -1,0 +1,61 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> PeripheralResistance </structurename>
+
+<vardoc>
+<name> PeripheralResistance.TPR </name>
+<topic> PeripheralResistance - Overview </topic>
+<topic> PeripheralResistance - Physical Units </topic>
+<topic> PeripheralResistance - Concentration Units </topic>
+<seealso> CardiacOutput.Flow </seealso>
+<seealso> RightAtrium.Pressure </seealso>
+<seealso> SystemicArtys.Pressure </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> PeripheralResistance - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Total Peripheral Resistance(TPR) = Systemic Arterial Pressure(AP)
+minus Right Atrial Pressure(RAP) divided by Cardiac Cutput(CO)
+TPR = (AP - RAP)/CO
+
+Units are mmHg/(mL/Min).
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PeripheralResistance - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+A typical value is 0.017mmHg/(ml/Min)
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PeripheralResistance - Overview </name>
+<label> Overview </label>
+<content>
+
+Resistance is the impediment to blood flow in a 
+vessel. Total peripheral resistance is the 
+resistance to flow of the entire systemic circulation.
+
+</content>
+</topicdoc>
+
+   
+
+End

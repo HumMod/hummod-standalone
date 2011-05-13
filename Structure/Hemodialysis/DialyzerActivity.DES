@@ -1,0 +1,177 @@
+HumMod / DialyzerActivity
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> DialyzerActivity </name>
+
+<variables>
+
+<var><name> Scheduled? </name><val> 0.0 </val></var>
+<var><name> Active? </name><val> 0.0 </val></var>
+
+<var><name> BloodFlow </name></var>
+<var><name> DialysateFlow </name></var>
+<var><name> UltrafiltrationRate </name></var>
+
+<var><name> Alpha </name></var>
+
+<var><name> Na+Flux </name></var>
+<var><name> K+Flux </name></var>
+<var><name> Cl-Flux </name></var>
+<var><name> UreaFlux </name></var>
+
+<timervar><name> IntervalTimer </name></timervar>
+<timervar><name> DurationTimer </name></timervar>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> TotalDialysateUsed </name>
+  <integralname> TotalDialysateUsed </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> DialysateChange </dervname>
+</diffeq>
+
+<diffeq>
+  <name> TotalUltrafiltration </name>
+  <integralname> TotalUltrafiltration </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> UltrafiltrationChange </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<if>
+<test> Active? </test>
+<true>
+  <def>
+    <name> BloodFlow </name>
+    <val> 0.01 * DialyzerControl.BloodFlow(%) * DialysisShunt.BloodFlow </val>
+  </def>
+
+  <def>
+    <name> DialysateFlow </name>
+    <val> DialyzerControl.DialysateFlow </val>
+  </def>
+
+  <def>
+    <name> UltrafiltrationRate </name>
+    <val> DialyzerControl.Ultrafiltration </val>
+  </def>
+
+  <def>
+    <name> Alpha </name>
+    <val> ( BloodFlow * DialysateFlow ) / ( BloodFlow + DialysateFlow ) </val>
+  </def>
+
+  <def>
+    <name> Na+Flux </name>
+    <val> 0.001 * Alpha * ( NaPool.[Na+(mEq/L)] - DialysateComposition.[Na+] ) </val>
+  </def>
+
+  <def>
+    <name> K+Flux </name>
+    <val> 0.001 * Alpha * ( KPool.[K+(mEq/L)] - DialysateComposition.[K+] ) </val>
+  </def>
+
+  <def>
+    <name> Cl-Flux </name>
+    <val> 0.001 * Alpha * ( ClPool.[Cl-(mEq/L)] - DialysateComposition.[Cl-] ) </val>
+  </def>
+
+  <def>
+    <name> UreaFlux </name>
+    <val> 0.001 * Alpha * ( UreaPool.[Urea(mG/dL)] - DialysateComposition.[Urea] ) </val>
+  </def>
+</true>
+<false>
+  <def><name> BloodFlow </name><val> 0.0 </val></def>
+  <def><name> DialysateFlow </name><val> 0.0 </val></def>
+  <def><name> UltrafiltrationRate </name><val> 0.0 </val></def>
+  <def><name> Alpha </name><val> 0.0 </val></def>
+  <def><name> Na+Flux </name><val> 0.0 </val></def>
+  <def><name> K+Flux </name><val> 0.0 </val></def>
+  <def><name> Cl-Flux </name><val> 0.0 </val></def>
+  <def><name> UreaFlux </name><val> 0.0 </val></def>
+</false>
+</if>
+
+<def><name> DialysateChange </name><val> DialysateFlow </val></def>
+<def><name> UltrafiltrationChange </name><val> UltrafiltrationRate </val></def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+  <test> Scheduled? </test>
+  <false><exitblock/></false>
+</if>
+
+<ontimedout><name> IntervalTimer </name>
+  <call> Start </call>
+</ontimedout>
+
+<if>
+  <test> Active? </test>
+  <false><exitblock/></false>
+</if>
+
+<ontimedout><name> DurationTimer </name>
+  <call> StopDuration </call>
+</ontimedout>
+
+</block>
+
+<block><name> Start </name>
+  <call> StartSchedule </call>
+  <call> StartDuration </call>
+</block>
+
+<block><name> Stop </name>
+  <call> StopSchedule </call>
+  <call> StopDuration </call>
+</block>
+
+<block><name> StartSchedule </name>
+  <def><name> Scheduled? </name><val> TRUE </val></def>
+  <timer><name> IntervalTimer </name>
+     <val> 1440.0 * DialyzerControl.Interval(Days) </val>
+     <state> DOWN </state>
+  </timer>
+</block>
+
+<block><name> StopSchedule </name>
+  <def><name> Scheduled? </name><val> FALSE </val></def>
+  <timer><name> IntervalTimer </name><state> OFF </state></timer>
+</block>
+
+<block><name> StartDuration </name>
+  <def><name> Active? </name><val> TRUE </val></def>
+  <timer><name> DurationTimer </name>
+     <val> 60.0 * DialyzerControl.Duration(Hrs) </val>
+     <state> DOWN </state>
+  </timer>
+</block>
+
+<block><name> StopDuration </name>
+  <def><name> Active? </name><val> FALSE </val></def>
+  <timer><name> DurationTimer </name><state> OFF </state></timer>
+</block>
+
+</definitions>
+</structure>
+
+End

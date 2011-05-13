@@ -1,0 +1,68 @@
+HumMod / Fat-Vasculature
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Fat-Vasculature </name>
+
+<variables>
+
+<parm>
+  <name> Tau </name>
+  <val> 30.0 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Effect </name>
+  <outputname> Effect </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> Stimulus </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PO2OnStimulus </name>
+  <point><x> 41 </x><y> 1.2 </y><slope> 0 </slope></point>
+  <point><x> 51 </x><y> 1.0 </y><slope> -0.03 </slope></point>
+  <point><x> 61 </x><y> 0.8 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> 1.0 / ( Tau * 1440.0 ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<conditional>
+  <name> Stimulus </name>
+  <test> Fat-Function.Failed </test>
+  <true> 0.0 </true>
+  <false> PO2OnStimulus [ Fat-Flow.PO2 ] </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

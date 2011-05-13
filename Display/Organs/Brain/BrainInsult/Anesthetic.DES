@@ -1,0 +1,108 @@
+HumMod / Anesthetic
+
+Created : 11-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 22.4 </row>
+   <col> 32.0 </col>
+   <high> 20.0 </high>
+   <wide> 30.0 </wide>
+   <title> Anesthetic </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Anesthesia.BrainFunction </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.6 </row><col> 1.0 </col>
+   <name> AnesthesiaGasBrain.BrainFunc </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gas Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 3.8 </row><col> 1.0 </col><high> 5.6 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> AnesthesiaGasBrain.pTissue </name>
+    <label> Brain Pressure </label>
+    <scale>
+      <min> 0 </min><max> 20 </max><inc> 1 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale>
+      <min> 0 </min><max> 1.0 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> AnesthesiaGasBrain.BrainFunc </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.6 </row><col> 1.0 </col>
+   <name> AnesthesiaGasBrain.pTissue </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Brain Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> AnesthesiaIVBrain.BrainFunc </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 12.4 </row><col> 1.0 </col><high> 5.6 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> AnesthesiaIVBrain.[Tissue] </name>
+    <label> [Brain] </label>
+    <scale>
+      <min> 0 </min><max> 0.1 </max><inc> 1 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale>
+      <min> 0 </min><max> 1.0 </max>
+    </scale>
+  </yaxis>
+
+  <curvename> AnesthesiaIVBrain.BrainFunc </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 18.2 </row><col> 1.0 </col>
+   <name> AnesthesiaIVBrain.[Tissue] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [Brain] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> All effects are normally 1.0. </line>
+  <line>  </line>
+  <line> Brain anesthetic concentrations </line>
+  <line> and pressures are typically 0.0. </line>
+</infobutton>
+
+</groupbox>
+
+End

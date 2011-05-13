@@ -1,0 +1,94 @@
+HumMod / Inhibin
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Inhibin\ ?>
+
+<structure><name> Inhibin </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Secretion </name></var>
+<var><name> Degradation </name></var>
+
+<parm><name> InitialConcFemale </name><val> 224.0 </val></parm>
+<parm><name> InitialConcMale </name><val> 8.0 </val></parm>
+
+<parm><name> TargetConcFemale </name><val> 224.0 </val></parm>
+<parm><name> TargetConcMale </name><val> 8.0 </val></parm>
+
+<var><name> TargetConc </name></var>
+<var><name> InitialMass </name></var>
+
+<constant><name> IU/L_TO_PG/ML </name><val> 0.0134 </val></constant>
+
+<var><name> [Conc(IU/L)] </name></var>
+<var><name> [Conc(pG/mL)] </name></var>
+
+<parm><name> PumpSwitch </name><val> FALSE </val></parm>
+<parm><name> PumpSetting </name><val> 0.0 </val></parm>
+
+<parm><name> K </name><val> 0.008 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 0.8 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+
+<conditional><name> TargetConc </name>
+  <test> Gender.IsFemale </test>
+  <true> TargetConcFemale </true>
+  <false> TargetConcMale </false>
+</conditional>
+
+<def><name> InitialMass </name><val> TargetConc * ECFV.InitialVol(L) </val></def>
+<def><name> Mass </name><val> InitialMass </val></def>
+
+</block>
+
+<block><name> Conc </name>
+  <def><name> [Conc(IU/L)] </name><val> Mass / ECFV.Vol(L) </val></def>
+  <def><name> [Conc(pG/mL)] </name><val> IU/L_TO_PG/ML * [Conc(IU/L)] </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+  <conditional><name> Secretion </name>
+  <test> Gender.IsFemale </test>
+  <true> Ovaries-Inhibin.Secretion </true>
+  <false> Testes-Inhibin.Secretion </false>
+  </conditional>
+
+  <def><name> Degradation </name><val> K * Mass </val></def>
+
+  <def><name> Gain </name><val> Secretion + ( PumpSetting * PumpSwitch ) </val></def>
+  <def><name> Loss </name><val> Degradation </val></def>
+
+  <def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

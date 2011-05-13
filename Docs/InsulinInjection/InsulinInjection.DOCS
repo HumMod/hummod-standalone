@@ -1,0 +1,114 @@
+QHP 2008 / InsulinInjection.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> InsulinInjection </structurename>
+
+<vardoc>
+<name> InsulinInjection.Dose </name>
+<topic> InsulinInjection - Overview </topic>
+<topic> InsulinInjection - Physical Units </topic>
+<topic> InsulinInjection - Concentration Units </topic>
+<seealso> InsulinPool.[Insulin] </seealso>
+<seealso> InsulinPump.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinInjection.TotalDose </name>
+<topic> InsulinInjection - Overview </topic>
+<topic> InsulinInjection - Physical Units </topic>
+<topic> InsulinInjetion - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> InsulinInjection.TotalInjections </name>
+<topic> InsulinInjection - Overview </topic>
+<topic> InsulinInjection - Physical Units </topic>
+<topic> InsulinInjection - Concentration Units </topic>
+<seealso> InsulinPump.Rate </seealso> 
+</vardoc>
+
+<vardoc>
+<name> InsulinInjection.Type </name>
+<topic> InsulinInjection - Overview </topic>
+<topic> InsulinInjection - Physical Units </topic>
+<topic> InsulinInjection - Concentration Units </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> InsulinInjection - Overview </name>
+<label> Overview </label>
+<content> 
+
+Insulin can be administered in two ways for the treatment
+of diabetes. The first is by multiple daily injections 
+(MDI); the second by continuous subcutaneous insulin 
+infusion. In the model, the latter method of administration 
+is the InsulinPump.
+
+Multiple daily injections (MDI) occurs under the structure
+name "Insulin Injection" and is not yet functional in the 
+current model. Diabetic patients usually inject four or more
+times daily using a combination of short- and long-acting 
+insulins. Injections are given subcutaneously   
+
+Ginsberg S, Block MB, Mako ME, Rubenstein AH.
+Serum insulin levels following administration of 
+exogenous insulin. 
+J Clin Endocrinol Metab. 36:1175 - 1179, 1973
+
+Galloway JA, Spradlin CT, Nelson RL, Wentworth SM, 
+Davidson JA, Swarner JL. Factors influencing the 
+absorption, serum insulin concentration, and blood 
+glucose responses after injections of regular insulin 
+and various insulin mixtures.
+Diabetes Care 4:366 - 376, 1981.
+
+Forlani G, Santacroce G, Ciaverella A, Capelli M, 
+Mattioli L, Vannini P. Effects of mixing short- and
+intermediate-acting insulins on absorption course 
+and bilogic effect of short-acting preparation.
+Diabetes Care 9: 587 - 590, 1986. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InsulinInjection - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Units for insulin pool are mU.
+Units for [plasma] are uU/mL.
+
+An international unit (U) is
+1/24 mG. 
+Molecular weight of Insulin is 5754.
+
+uU * 0.04167 = nG
+uU * 0.007241 = pMol
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> InsulinInjection - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+A typical maintenance dose of insulin is 40U/day
+The insulin can have three different durations of action:
+rapid (4 hours); intermediate (10 hours) and long acting
+(18 hours). This is InsulinInjection.Type.
+               
+</content>
+</topicdoc>
+
+  
+
+End

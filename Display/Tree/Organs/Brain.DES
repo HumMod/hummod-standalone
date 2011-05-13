@@ -1,0 +1,112 @@
+HumMod / Brain
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Brain </name>
+  <label> Brain </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Brain-Circulation </name>
+  <label> Circulation </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-SmoothMuscle </name>
+  <label> Smooth Muscle </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> Brain </parent>
+</leaf>
+
+<branch>
+  <name> Brain-Fuel </name>
+  <label> Fuel </label>
+  <parent> Brain </parent>
+</branch>
+
+<leaf>
+  <name> BrainFuel-Selection </name>
+  <label> Selection </label>
+  <parent> Brain-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BrainFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> Brain-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BrainFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> Brain-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> BrainFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> Brain-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-CO2 </name>
+  <label> CO2 </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Lactate </name>
+  <label> Lactate </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Function </name>
+  <label> Function </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Structure </name>
+  <label> Structure </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Size </name>
+  <label> Size </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Brain-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> Brain </parent>
+</leaf>
+
+<leaf>
+  <name> BrainInsult </name>
+  <label> Brain Insult </label>
+  <parent> Brain </parent>
+</leaf>
+
+End

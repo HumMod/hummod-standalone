@@ -1,0 +1,52 @@
+HumMod / Muscle-BaseToGas
+
+Created : 13-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Muscle-BaseToGas </name>
+
+<variables>
+
+<var>
+  <name> pCO2 </name>
+</var>
+
+<var>
+  <name> [SID] </name>
+</var>
+
+<var>
+  <name> [HCO3] </name>
+</var>
+
+<constant>
+  <name> C </name>
+  <val> -413.34 </val>
+</constant>
+
+<constant>
+  <name> D </name>
+  <val> 5988.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> pCO2 </name>
+  <test> ( [HCO3] GT 0.0 ) AND ( [SID] GT 0.0 ) </test>
+  <true> ( ( C * [SID] ) + ( D * [HCO3] ) ) MAX 0.0001 </true>
+  <false> 0.0001 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

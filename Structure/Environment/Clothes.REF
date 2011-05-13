@@ -1,0 +1,18 @@
+HumMod / Clothes.REF
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The enumeration for Clothes.Weight is
+
+0 - None
+1 - Summer
+2 - Normal
+3 - Winter
+4 - Artic
+
+End

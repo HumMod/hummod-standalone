@@ -1,0 +1,135 @@
+QHP 2008 / Osmoles.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> OsmECFV </structurename>
+
+<vardoc>
+<name> OsmECFV.Anions </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.Cations </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.Electrolytes </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.Non-Electrolytes </name>
+<topic> OsmECFV - Definition </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.OtherAnions </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.Total </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> OsmECFV.UnknownOsmoles </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Osmolarity - Overview </name>
+<label> Overview </label> 
+<content>
+
+Osmolarity is the osmolal concentration of a solution
+expressed as osmoles (osm) per liter of solution. One 
+osmole  equal to one mole (mol)(6.02 * 10^23) of solute
+particles. Therefore a solution containing 1 mole of
+glucose in each liter has a concentration of 1 osm/L.
+In general, the osmole is too large a unit for expressing
+osmotic activity of solutes in body fluids. The term 
+milliosmole (mOsm), which equals 1/1000 osmole, is
+commonly used. 
+
+A normal plasma concentration of glucose is 100mG/dL.
+100mG/dL = 1000mG/L. The MW of glucose is 180
+Therefore 100mG/dL = 1000/180 = 5.55 mOsm/L.
+
+In patients with diabetes, plasma glucose levels can
+rise to dangerously high levels. This can exert a 
+large amount of osmotic pressure in the extracellular 
+fluid and result in cellular dehydration. Increased 
+excretion of glucose in the urine can also cause osmotic
+diuresis and a depletion of body fluids. 
+
+Guyton AC, Hall JE. Textbook of medical physiology.
+Eleventh Edition. Elsevier Saunders.
+
+</content>
+</topicdoc> 
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

@@ -1,0 +1,88 @@
+HumMod / CD_KA
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CD_KA </name>
+
+<variables>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> [KA] </name>
+</var>
+
+<var>
+  <name> [KA(mMol/L)] </name>
+</var>
+
+<var>
+  <name> Osmolarity </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> CalcFlux </name>
+
+<def>
+  <name> Outflow </name>
+  <val> NephronKetoacids.Excretion(mMol/Min) </val>
+</def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [KA] </name>
+  <val> Outflow / CD_H2O.Outflow </val>
+</def>
+
+<def>
+  <name> [KA(mMol/L)] </name>
+  <val> 1000.0 * [KA] </val>
+</def>
+
+<def>
+  <name> Osmolarity </name>
+  <val> [KA(mMol/L)] </val>
+</def>
+
+</block>
+
+<block><name> NoFlow </name>
+
+<def>
+  <name> Outflow </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> [KA] </name>
+  <val> UNDEFINED </val>
+</def>
+
+<def>
+  <name> [KA(mMol/L)] </name>
+  <val> UNDEFINED </val>
+</def>
+
+<def>
+  <name> Osmolarity </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

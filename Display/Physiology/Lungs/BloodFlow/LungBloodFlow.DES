@@ -1,0 +1,122 @@
+HumMod / LungBloodFlow
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 21.6 </high>
+   <wide> 30.0 </wide>
+   <title> Lung Blood Flow </title>
+
+<structurename> LungBloodFlow </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Total </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Total </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 5000 </min><max> 6000 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Alveolar </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Alveolar </label>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 3.0 </col>
+  <name> AlveolarVentilated </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Ventilated </label>
+</showvalue>
+
+<showvalue>
+  <row> 11.8 </row><col> 3.0 </col>
+  <name> AlveolarShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Shunt </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.2 </row><col> 1.0 </col>
+  <name> Right-LeftShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Right - Left Shunt </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.6 </row><col> 1.0 </col>
+  <name> RightLungTotal </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Right Lung </label>
+</showvalue>
+
+<showvalue>
+  <row> 15.6 </row><col> 3.0 </col>
+  <name> RightLungVentilated </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Ventilated </label>
+</showvalue>
+
+<showvalue>
+  <row> 16.6 </row><col> 3.0 </col>
+  <name> RightLungShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Shunt </label>
+</showvalue>
+
+<showvalue>
+  <row> 18.0 </row><col> 1.0 </col>
+  <name> LeftLungTotal </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Left Lung </label>
+</showvalue>
+
+<showvalue>
+  <row> 19.0 </row><col> 3.0 </col>
+  <name> LeftLungVentilated </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Ventilated </label>
+</showvalue>
+
+<showvalue>
+  <row> 20.0 </row><col> 3.0 </col>
+  <name> LeftLungShunt </name>
+  <format><decimal> 0 </decimal></format>
+  <label> Shunt </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> </line>
+</infobutton>
+
+</groupbox>
+
+End

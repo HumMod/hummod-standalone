@@ -1,0 +1,86 @@
+HumMod / SkeletalMuscle-MetabolicVasodilation
+
+Created : 03-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-MetabolicVasodilation </name>
+
+<variables>
+
+<parm><name> OnTau </name><val> 0.2 </val></parm>
+<var><name> OnK </name></var>
+
+<parm><name> OffTau </name><val> 1.0 </val></parm>
+<var><name> OffK </name></var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Effect </name>
+  <outputname> Effect </outputname>
+  <initialval> 1.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.01 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> SteadyState </name>
+  <point><x>   50 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 1000 </x><y> 3.5 </y><slope> 0.003 </slope></point>
+  <point><x> 3000 </x><y> 5.5 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<conditional><name> OnK </name>
+<test> OnTau GT 0.0 </test>
+<true> INVERT OnTau </true>
+<false> INFINITE </false>
+</conditional>
+
+<conditional><name> OffK </name>
+<test> OffTau GT 0.0 </test>
+<true> INVERT OffTau </true>
+<false> INFINITE </false>
+</conditional>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> SteadyState </name>
+  <val> SteadyState [ SkeletalMuscle-Metabolism.O2Need ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional><name> K </name>
+<test> Effect LE SteadyState </test>
+<true> OnK </true>
+<false> OffK </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,47 @@
+HumMod / BladderVolume
+
+Created : 16-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BladderVolume </name>
+<variables>
+
+<var><name> VolumeVoid </name><val> 0.0 </val></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 200.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <def><name> Change </name><val> CD_H2O.Outflow </val></def>
+
+</block>
+
+<block><name> Void </name>
+
+  <def><name> VolumeVoid </name><val> Mass - 300.0 </val></def>
+  <def><name> Mass </name><val> 300.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

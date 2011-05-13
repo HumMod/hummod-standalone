@@ -1,0 +1,130 @@
+QHP 2008 / Aldosterone.DOCS
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+
+<vardoc>
+<name> AldoDisposal.Clearance </name>
+<topic> AldoDisposal - Overview </topic>
+<topic> Clearance - AD1Definition </topic>
+<seealso> OrganFlow.HepaticVeinFlow </seealso>
+</vardoc>
+
+<vardoc>
+<name> AldoDisposal.Degradation </name>
+<topic> Degradation - AD2Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> AldoDisposal.DegradeK </name>
+<topic> DegradeK - AD3Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> AldoDisposal.ExtractK </name>
+<topic> ExtractK - AD4Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> AldoDisposal.Rate </name>
+<topic> Rate - AD5Definition </topic>
+</vardoc>
+
+<topicdoc>
+<name> AldoDisposal - Overview </name>
+<label> Overview  </label>
+<content>
+
+The liver is the main site of biological inactivation
+of aldosterone. Aldosterone is degraded mainly 
+in the liver and conjugated especially to glucuronic 
+acid and, to a lesser extent, sulfates. About 25 per 
+cent of these conjugates are excreted in the bile and 
+then in the feces. The remaining conjugates formed 
+by the liver enter the circulation but are not 
+bound to plasma proteins, are highly soluble in 
+the plasma, and are therefore filtered readily 
+by the kidneys and excreted in the urine. 
+
+The metabolic clearance of aldosterone is about 
+1620L/day in a normal supine man, a figure quite 
+similar to hepatic blood flow. When hepatic
+blood flow is reduced there is a marked increase 
+in the plasma level of aldosterone. Postural changes 
+have an effect on the rate of aldosterone
+removal because they also affect splanchnic blood 
+flow. The metabolic clearance rate in the upright 
+position is half that in the supine. 
+
+The half life of aldosterone is 30 minutes.
+
+Coppage WS Jr., Island DP, Cooner AE, Liddle GW.
+The metabolism of aldosterone in normal subjects and 
+in patients with hepatic cirrhosis. 
+J Clin Invest. 41: 1672 - 1680, 1962.
+
+Tait JF, Little B, Tait SAS, Flood C. The metabolic 
+clearance rate of aldosterone in pregnant and 
+non-pregnant subjects, estimated by both single injections 
+and constant infusion methods.
+J. Clin Invest. 41: 2093 - 2100, 1962.
+
+Tait JF, Tait SAS, Little B, Laumas KR. The disappearance 
+of 7-H^3-d-aldosterone in the plasma of normal subjects. 
+J Clin Invest. 40: 72 - 80, 1961.  
+    
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Clearance - AD1Definition </name>
+<label> Definition </label>
+<content>
+
+Clearance is defined as the rate of removal of aldosterone
+from the circulation in a single passage through the liver. 
+It is dependent on the ExtractK, the rate constant of 
+liver extraction
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Degradation - AD2Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> DegradeK - AD3Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> ExtractK - AD4Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Rate - AD5Definition </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+End

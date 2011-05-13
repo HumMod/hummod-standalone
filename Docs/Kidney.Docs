@@ -1,0 +1,39 @@
+Digital Human / Kidney
+
+Created : 21-Oct-04
+Last Modified : 11-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\Kidney\ ?>
+
+<?include Kidney-EfferentArtery.docs ?>
+<?include Kidney-AfferentArtery.docs ?>
+<?include Kidney-ArcuateArtery.docs ?>
+
+<?include Kidney-Pressure.docs ?>
+<?include Kidney-Flow.docs ?>
+<?include Kidney-Size.docs ?>
+<?include Kidney-Function.docs ?>
+<?include Kidney-Alpha.docs ?>
+
+<?include Kidney-CO2.docs ?>
+<?include Kidney-Lactate.docs ?>
+<?include Kidney-Ph.docs ?>
+
+<?include Kidney-Fuel.docs ?>
+<?include Kidney-Metabolism.docs ?>
+<?include Kidney-AlphaReceptors.docs ?>
+<?include Kidney-BetaReceptors.docs ?>
+<?include Kidney.docs ?>
+
+<?include Kidney-NephronCount.docs ?>
+<?include Kidney-O2.docs ?>
+
+<?include Kidney-Myogenic.docs ?>
+</docs>
+End

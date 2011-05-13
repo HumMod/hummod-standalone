@@ -1,0 +1,64 @@
+HumMod / Metabolism-Glucose
+
+Created : 01-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Metabolism-Glucose </name>
+
+<variables>
+
+<var><name> TotalBurn </name></var>
+<var><name> GlucoseBurn </name></var>
+<var><name> GlycogenBurn </name></var>
+
+<var><name> TotalUptake </name></var>
+<var><name> GlucoseUptake </name></var>
+<var><name> GlycogenUptake </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> GlucoseBurn </name>
+  <val>
+       Bone-Fuel.TotalGlucoseUsed(mG/Min)
+     + Brain-Fuel.TotalGlucoseUsed(mG/Min)
+     + Fat-Fuel.TotalGlucoseUsed(mG/Min)
+     + GITract-Fuel.TotalGlucoseUsed(mG/Min)
+     + Kidney-Fuel.TotalGlucoseUsed(mG/Min)
+     + LeftHeart-Fuel.TotalGlucoseUsed(mG/Min)
+     + Liver-Fuel.TotalGlucoseUsed(mG/Min)
+     + OtherTissue-Fuel.TotalGlucoseUsed(mG/Min)
+     + RespiratoryMuscle-Fuel.AerobicGlucoseUsed(mG/Min)
+     + RightHeart-Fuel.TotalGlucoseUsed(mG/Min)
+     + SkeletalMuscle-Fuel.AerobicGlucoseUsed(mG/Min)
+     + Skin-Fuel.TotalGlucoseUsed(mG/Min)
+  </val>
+</def>
+<def><name> GlycogenBurn </name>
+  <val>
+      RespiratoryMuscle-Glycogen.Metabolism 
+    + SkeletalMuscle-Glycogen.Metabolism 
+  </val>
+</def>
+<def><name> TotalBurn </name><val> GlucoseBurn + GlycogenBurn </val></def>
+
+<def><name> GlucoseUptake </name><val> GlucoseBurn </val></def>
+<def><name> GlycogenUptake </name>
+  <val>
+      RespiratoryMuscle-Glycogen.Synthesis 
+    + SkeletalMuscle-Glycogen.Synthesis 
+  </val>
+</def>
+<def><name> TotalUptake </name><val> GlucoseUptake + GlycogenUptake </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

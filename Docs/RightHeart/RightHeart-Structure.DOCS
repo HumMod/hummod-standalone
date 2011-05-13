@@ -1,0 +1,95 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Structure </structurename>
+
+<vardoc>
+<name> RightHeart-Structure.Change </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Structure.F1 </seealso>
+<seealso> RightHeart-Structure.F2 </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.F1 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.F2 </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Structure.PhEffect </seealso>
+<seealso> RightHeart-Structure.TemperatureEffect </seealso>
+<seealso> RightHeart-Structure.FuelEffect </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.FuelEffect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.FractUseDelay </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.PhEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-pH.pH </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Structure.TemperatureEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> HeatCore.Temp(C) </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

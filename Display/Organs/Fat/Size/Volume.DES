@@ -1,0 +1,92 @@
+HumMod / Volume
+
+Created : 05-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.8 </high>
+   <wide> 30.0 </wide>
+   <title> Volume </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Fat-Size.Vol </name>
+   <format> <integer/> </format>
+   <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Fat-Size.Vol </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 17000 </min><max> 18000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Fat-Size.LiquidVol </name>
+   <format> <integer/> </format>
+   <label> Liquids </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Fat-Size.SolidVol</name>
+   <format> <integer/> </format>
+   <label> Solids </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> Fat-Size.LipidVol</name>
+   <format> <integer/> </format>
+   <label> Lipids </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3 </col>
+   <name> Fat-Size.OtherVol</name>
+   <format> <integer/> </format>
+   <label> Other Solids </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units are mL. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Volume = 17766 </line>
+  <line>  </line>
+  <line> Liquids = 240 </line>
+  <line>  </line>
+  <line> Solids = 15275 </line>
+  <line>  </line>
+  <line> Lipids = 14674 </line>
+  <line> Other Solids = 601 </line>
+</infobutton>
+
+</groupbox>
+
+End

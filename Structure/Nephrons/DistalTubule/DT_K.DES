@@ -1,0 +1,123 @@
+HumMod / DT_K
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DT_K </name>
+
+<variables>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<parm>
+  <name> BasicOutflow </name>
+  <val> 0.05 </val>
+</parm>
+
+<var>
+  <name> AldoEffect </name>
+</var>
+
+<var>
+  <name> KEffect </name>
+</var>
+
+<var>
+  <name> NaEffect </name>
+</var>
+
+<var>
+  <name> ThiazideEffect </name>
+</var>
+
+<parm>
+  <name> AldoSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> AldoLevel </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> AldoOnOutflow </name>
+  <point><x>  0.0 </x><y> 0.3 </y><slope> 0 </slope></point>
+  <point><x> 12.0 </x><y> 1.0 </y><slope> 0.06 </slope></point>
+  <point><x> 50.0 </x><y> 3.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> KOnOutflow </name>
+  <point><x> 0.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 4.4 </x><y> 1.0 </y><slope> 0.5 </slope></point>
+  <point><x> 5.5 </x><y> 3.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> NaOnOutflow </name>
+  <point><x> 0.0 </x><y> 0.3 </y><slope> 0 </slope></point>
+  <point><x> 0.4 </x><y> 1.0 </y><slope> 1.5 </slope></point>
+  <point><x> 4.0 </x><y> 3.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ThiazideOnOutflow </name>
+  <point><x> 0.0 </x><y> 1.0 </y><slope> 2.0 </slope></point>
+  <point><x> 0.6 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> AldoEffect </name>
+  <test> AldoSwitch </test>
+  <true> AldoLevel </true>
+  <false> AldoOnOutflow [ NephronAldo.[Aldo(nG/dL)] ] </false>
+</conditional>
+
+<def>
+  <name> KEffect </name>
+  <val> KOnOutflow [ KPool.[K+(mEq/L)] ] </val>
+</def>
+
+<def>
+  <name> NaEffect </name>
+  <val> NaOnOutflow [ DT_Na.Outflow ] </val>
+</def>
+
+<def>
+  <name> ThiazideEffect </name>
+  <val> ThiazideOnOutflow [ ThiazidePool.[Thiazide] ] </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val>
+      BasicOutflow
+    * AldoEffect
+    * KEffect
+    * NaEffect
+    * ThiazideEffect
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

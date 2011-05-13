@@ -1,0 +1,44 @@
+HumMod / LM_Insulin
+
+Created : 31-Mar-08
+Last Modified : 2010-06-03
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<structure><name> LM_Insulin </name>
+
+<variables>
+
+<parm><name> Tau </name><val> 40.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> [InsulinDelayed] </name>
+  <outputname> [InsulinDelayed] </outputname>
+  <initialval> 50.0 </initialval>
+  <inputname> [Insulin] </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.50 </errorlim>
+</delay>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT Tau </val></def>
+</block>
+
+<block><name> Dervs </name>
+  <def><name> [Insulin] </name><val> PortalVein-Insulin.[Insulin] </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

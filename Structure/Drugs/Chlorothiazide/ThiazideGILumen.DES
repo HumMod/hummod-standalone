@@ -1,0 +1,75 @@
+HumMod / ThiazideGILumen
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ThiazideGILumen </name>
+
+<variables>
+
+<constant>
+  <name> BIOAVAIL </name>
+  <val> 0.20 </val>
+</constant>
+
+<constant>
+  <name> PERM </name>
+  <val> 0.01 </val>
+</constant>
+
+<var>
+  <name> [Thiazide] </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Thiazide] </name>
+  <val> Mass / GILumenVolume.Mass(L) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Loss </name>
+  <val> BIOAVAIL * PERM * Mass
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

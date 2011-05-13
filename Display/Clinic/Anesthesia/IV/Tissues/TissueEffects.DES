@@ -1,0 +1,111 @@
+HumMod / TissueEffects
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.0 </high>
+   <wide> 30.0 </wide>
+   <title> Tissue Effects </title>
+
+<structurename> Anesthesia </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BrainFunction </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Brain Function </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> AnesthesiaGasBrain.BrainFunc </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gas </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> AnesthesiaIVBrain.BrainFunc </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 1.0 </col>
+   <name> TidalVolume </name>
+   <format><decimal> 2 </decimal></format>
+   <label> TidalVolume </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 3 </col>
+   <name> AnesthesiaGasBrain.TidalVol </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gas </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.4 </row><col> 3 </col>
+   <name> AnesthesiaIVBrain.TidalVol </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.4 </row><col> 1.0 </col>
+   <name> HeartContractility </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Heart Contractility </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.4 </row><col> 3 </col>
+   <name> AnesthesiaGasLeftHeart.HrtCont </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gas </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.4 </row><col> 3 </col>
+   <name> AnesthesiaIVLeftHeart.HrtCont </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.4 </row><col> 1.0 </col>
+   <name> VascularConductance </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Vascular Conductance </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.4 </row><col> 3 </col>
+   <name> AnesthesiaGasOtherTissue.VascCond </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gas </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.4 </row><col> 3 </col>
+   <name> AnesthesiaIVOtherTissue.VascCond </name>
+   <format><decimal> 2 </decimal></format>
+   <label> IV </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Effects are x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

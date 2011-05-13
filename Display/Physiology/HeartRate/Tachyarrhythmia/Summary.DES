@@ -1,0 +1,59 @@
+HumMod / Summary
+
+Created : 17-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.4 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> Heart-Tachyarrhythmia </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Heart-Rate.Rate </name>
+    <label> Heart Rate </label>
+    <scale><min> 0 </min><max> 300 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label>  </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> Effect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Heart-Rate.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Heart Rate </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line> Typical intervals (in seconds) are </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

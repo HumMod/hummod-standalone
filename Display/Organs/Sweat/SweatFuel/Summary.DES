@@ -1,0 +1,148 @@
+HumMod / Summary
+
+Created : 2010-05-15
+Last Modified : 2010-05-15
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 28.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> SweatFuel </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <label> Mass </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 1 </max><inc> 1.0 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <label> Change </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <label> Refill Rate </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> RefillK </name>
+  <repeat><reps> 9 </reps><stepsize> 0.001 </stepsize></repeat>
+  <repeat><reps> 9 </reps><stepsize> 0.010 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.4 </row><col> 3.0 </col>
+  <name> RefillK </name>
+  <listname> RefillK </listname>
+  <label> K </label>
+</slidebar>
+
+<showvalue>
+  <row> 13.6 </row><col> 3.0 </col>
+  <name> MassEffect </name>
+  <label> Mass Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 15.0 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <label> Use Rate </label>
+  <format><decimal> 2 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> UseK </name>
+  <repeat><reps> 9 </reps><stepsize> 0.0001 </stepsize></repeat>
+  <repeat><reps> 9 </reps><stepsize> 0.0010 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 16.2 </row><col> 3.0 </col>
+  <name> UseK </name>
+  <listname> UseK </listname>
+  <label> K </label>
+</slidebar>
+
+<showvalue>
+  <row> 17.4 </row><col> 3.0 </col>
+  <name> SweatGland.H2ORateBasic </name>
+  <label> Basic Sweat Rate </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 18.8 </row><col> 1.0 </col>
+  <name> MassEffect </name>
+  <label> Mass Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showcurve>
+  <row> 20.0 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Mass </name>
+    <label> Skin (degF) </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> MassEffect </curvename>
+</showcurve>
+
+<showvalue>
+  <row> 27.2 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <label> Mass </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

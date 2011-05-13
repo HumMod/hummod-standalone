@@ -1,0 +1,17 @@
+HumMod / CoronarySinus
+
+Created : 10-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<leaf>
+  <name> CoronarySinus </name>
+  <label> Coronary Sinus </label>
+  <parent> ORGANS </parent>
+</leaf>
+
+End

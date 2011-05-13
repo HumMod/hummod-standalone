@@ -1,0 +1,33 @@
+HumMod / Organs-Structure
+
+Created : 02-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Structure </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Bone-Structure.Calc </call>
+  <call> Brain-Structure.Calc </call>
+  <call> Fat-Structure.Calc </call>
+  <call> GITract-Structure.Calc </call>
+  <call> Kidney-Structure.Calc </call>
+  <call> LeftHeart-Structure.Calc </call>
+  <call> Liver-Structure.Calc </call>
+  <call> OtherTissue-Structure.Calc </call>
+  <call> RespiratoryMuscle-Structure.Calc </call>
+  <call> RightHeart-Structure.Calc </call>
+  <call> SkeletalMuscle-Structure.Calc </call>
+  <call> Skin-Structure.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

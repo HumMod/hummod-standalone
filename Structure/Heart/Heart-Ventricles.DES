@@ -1,0 +1,73 @@
+HumMod / Heart-Ventricles
+
+Created : 01-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Ventricles </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> NotPacedRate </name></var>
+
+<parm><name> AVBlock </name><val> FALSE </val></parm>
+
+<var><name> IntrinsicRate </name></var>
+<parm><name> BasicRate </name><val> 45.0 </val></parm>
+
+<var><name> Is_VentricularRhythm </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> IntrinsicRate </name><val> BasicRate * LeftHeart-Function.Effect </val></def>
+
+<def><name> SANode-Rate.Is_SinusRhythm </name><val> FALSE </val></def>
+<def><name> Is_VentricularRhythm </name><val> FALSE </val></def>
+
+
+<if>
+<test> Heart-Asystole.Is_Asystole OR Heart-VFib.Is_Fibrillating </test>
+<true>
+  <conditional><name> Rate </name>
+    <test> CPR-Heart.Status EQ CPR-Heart.ACTIVE </test>
+    <true> CPR-Heart.ThumperRate </true>
+    <false> 0.0 </false>
+  </conditional>
+  <exitblock/>
+</true>
+</if>
+
+
+<if>
+<test> AVBlock </test>
+<true>
+  <def><name> NotPacedRate </name><val> IntrinsicRate </val></def>
+  <def><name> Is_VentricularRhythm </name><val> TRUE </val></def>
+</true>
+<false>
+  <def><name> NotPacedRate </name><val> SANode-Rate.Rate </val></def>
+  <def><name> SANode-Rate.Is_SinusRhythm </name><val> TRUE </val></def>
+</false>
+</if>
+
+<conditional><name> Rate </name>
+  <test> Heart-Pacemaker.Switch </test>
+  <true> NotPacedRate MAX Heart-Pacemaker.Rate </true>
+  <false> NotPacedRate </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

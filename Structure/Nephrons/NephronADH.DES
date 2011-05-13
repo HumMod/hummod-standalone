@@ -1,0 +1,88 @@
+HumMod / NephronADH
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> NephronADH </name>
+
+<variables>
+
+<var>
+  <name> [ADH] </name>
+</var>
+
+<parm>
+  <name> Tau </name>
+  <val> 20.0 </val>
+</parm>
+
+<parm>
+  <name> Clamp </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Level </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> Log10Conc </name>
+</var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> [ADHDelayed] </name>
+  <outputname> [ADHDelayed] </outputname>
+  <initialval> 2.0 </initialval>
+  <inputname> [ADHPool] </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+</delay>
+
+</equations>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> K </name>
+  <val> INVERT Tau </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<conditional>
+  <name> [ADH] </name>
+  <test> Clamp </test>
+  <true> Level </true>
+  <false> [ADHDelayed] </false>
+</conditional>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ADH] GT 1.0 </test>
+  <true> LOG10 [ADH] </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> [ADHPool] </name>
+  <val> ADHPool.[ADH] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

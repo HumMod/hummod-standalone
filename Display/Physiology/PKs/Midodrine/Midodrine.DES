@@ -1,0 +1,41 @@
+HumMod / Midodrine
+
+Created : 15-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> PKsMidodrine </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> PillPK </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Pharmacokinetics - Midodrine </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\PKs\Midodrine\ ?>
+
+<?include GILumen.DES ?>
+<?include MidodrinePool.DES ?>
+
+<?include DesglymidodrinePool.DES ?>
+
+</panel>
+
+End

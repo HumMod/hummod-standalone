@@ -1,0 +1,67 @@
+HumMod / Summary
+
+Created : 06-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 12.2 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> CorpusLuteum-Growth </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Growth </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Growth </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Follicle-Atresia.K </name>
+   <format><decimal> 5 </decimal></format>
+   <label> K </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8</row><col> 1.0 </col>
+   <name> Ovaries-Follicle.Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Follicle Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

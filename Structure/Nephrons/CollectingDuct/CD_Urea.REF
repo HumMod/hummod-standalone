@@ -1,0 +1,17 @@
+HumMod / CD_Urea.REF
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : QHP 2008
+Schema : DES V1.0
+
+M.W. = 60.0
+
+1 mG = 0.01667 mMol.
+
+1 mG/mL of urea produces an osmolarity of 16.67 mOsm/L.
+
+
+End

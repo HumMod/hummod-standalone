@@ -1,0 +1,88 @@
+HumMod / LeftAtrium
+
+Created : 16-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LeftAtrium </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> Outflow </name></var>
+<parm><name> V0 </name><val> 0.0 </val></parm>
+<var><name> StressedVol </name></var>
+<var><name> Pressure </name></var>
+<var><name> TMP </name></var>
+<var><name> ExternalPressure </name></var>
+<parm><name> Compliance </name><val> 6.25 </val></parm>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 51.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> StressedVol </name>
+  <val> Vol - V0 </val>
+</def>
+
+<def>
+  <name> TMP </name>
+  <val> StressedVol / Compliance </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> Pericardium-Cavity.Pressure </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> TMP + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> DxMax </name><val> 0.00005 * Compliance </val></def>
+
+<def>
+  <name> Inflow </name>
+  <val> PulmVeins.Outflow </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> LeftVentricle.Outflow </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

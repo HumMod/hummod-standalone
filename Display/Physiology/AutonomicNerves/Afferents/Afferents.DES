@@ -1,0 +1,19 @@
+HumMod / Afferents
+
+Created : 24-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Physiology\AutonomicNerves\Afferents\ ?>
+
+<?include Baroreflex\Baroreflex.DES ?>
+<?include Chemoreceptors\Chemoreceptors.DES ?>
+<?include LowPressureReceptors\LowPressureReceptors.DES ?>
+<?include Mechanoreceptors\Mechanoreceptors.DES ?>
+<!-- <?include Metaboreflex\Metaboreflex.DES ?> -->
+<?include Summary\Summary.DES ?>
+
+End

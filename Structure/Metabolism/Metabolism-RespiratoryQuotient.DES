@@ -1,0 +1,21 @@
+HumMod / Metabolism-RespiratoryQuotient
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Metabolism-RespiratoryQuotient </name>
+
+<variables>
+
+<parm><name> RQ </name><val> 0.8 </val></parm>
+
+</variables>
+
+</structure>
+
+End

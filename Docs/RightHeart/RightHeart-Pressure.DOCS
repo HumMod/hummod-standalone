@@ -1,0 +1,77 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Pressure </structurename>
+
+<vardoc>
+<name> RightHeart-Pressure.ArtyPressure </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Pressure.PumpSetting </seealso>
+<seealso> SystemicArtys.Pressure </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Pressure.PressureGradient </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Pressure.ArtyPressure </seealso>
+<seealso> RightHeart-Pressure.VeinPressure </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Pressure.PumpSetting </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Pressure.PumpSwitch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Pressure.VeinPressure </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> SystemicVeins.Pressure </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

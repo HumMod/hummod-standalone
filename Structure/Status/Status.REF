@@ -1,0 +1,58 @@
+HumMod / Status.REF
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : DES V1.0
+
+This structure maintains status properties for display but also advises
+other modules about what they can do and what they should do.
+
+Status has several properties and each property has exclusive states. One
+reason for the exclusive states is to support the display of the current
+state in a list of possibilities. Properties and exclusive states can be
+expanded and contracted.
+
+Activity
+   Sleeping (0)
+   Awake (1)
+   Unconscious (2)
+   Not Defined (3, D)
+
+Exertion
+   Resting (0, D)
+   Working (1)
+   Aerobics (2)
+   Exercise Bike (3)
+   Treadmill (4)
+
+Posture
+   Lying (0, D)
+   Sitting (1)
+   Standing (2)
+   Tilting (3)
+
+Nutrition
+   Eating (0)
+   Between Meals (1)
+   Continuous (2, D)
+   Can't Eat (3)
+
+Daily Planner : Off (D) | On
+
+Enumerated values are shown as (#). Default has the Daily Plannner = Off and
+default state denoted with a (D).
+
+I think it is best if we change and update the status only in WraapUp
+to avoid making changes in a trial integral that fails.
+
+We will call Dervs right after brain function is specified to assess the
+effect of consciousness on status.
+
+Set the exclusive states in wrapup -- to be used only in the display of the
+status.
+
+End

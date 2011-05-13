@@ -1,0 +1,74 @@
+HumMod / Heart-Pain DES
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> Heart-Pain </name>
+
+<variables>
+
+<var><name> HasPain </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<call> RightHeart-Pain.Wrapup </call>
+<call> LeftHeart-Pain.Wrapup </call>
+
+<if>
+<test> HasPain </test>
+<true>
+  <andif>
+  <test> ( NOT RightHeart-Pain.HasPain ) AND ( NOT LeftHeart-Pain.HasPain ) </test>
+  <true>
+    <def><name> HasPain </name><val> FALSE </val></def>
+    <call> ShowOK </call>
+  </true>
+  </andif>
+</true>
+
+<false>
+  <andif>
+  <test> ( RightHeart-Pain.HasPain ) OR ( LeftHeart-Pain.HasPain ) </test>
+  <true>
+    <def><name> HasPain </name><val> TRUE </val></def>
+    <call> ShowPain </call>
+  </true>
+  </andif>
+</false>
+</if>
+
+</block>
+
+<block><name> ShowPain </name>
+
+<if>
+<test> NOT Brain-Function.Comatose </test>
+<true>
+  <page> I have a very BAD pain in my chest. </page>  
+</true>
+</if>
+
+</block>
+
+<block><name> ShowOK </name>
+
+<if>
+<test> NOT Brain-Function.Comatose </test>
+<true>
+  <page> My chest pain is gone. </page>  
+</true>
+</if>
+
+</block>
+
+</definitions>
+</structure>
+
+End

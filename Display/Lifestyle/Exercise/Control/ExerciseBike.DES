@@ -1,0 +1,116 @@
+HumMod / ExerciseBike
+
+Created : 24-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 12.6 </high>
+   <wide> 30.0 </wide>
+   <title> Exercise Bike </title>
+
+<structurename> Exercise-Bike </structurename>
+
+<maplist>
+  <name> Exercise-Bike.Level </name>
+  <map><val>   0 </val><img> Resting </img></map>
+  <map><val>  50 </val><img> Warmup </img></map>
+  <map><val> 100 </val><img> 100 </img></map>
+  <map><val> 150 </val><img> Moderate </img></map>
+  <map><val> 200 </val><img> 200 </img></map>
+  <map><val> 250 </val><img> Heavy </img></map>
+  <map><val> 300 </val><img> 300 </img></map>
+  <map><val> 350 </val><img> Maximum </img></map>
+</maplist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <wide> 8.0 </wide>
+  <name> Power(W) </name>
+  <listname> Exercise-Bike.Level </listname>
+  <label> Level </label>
+  <fieldwidth> 10 </fieldwidth>
+</slidebar>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> Power(W) </name>
+   <format> <integer/> </format>
+   <label> Power (Watts) </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3 </col>
+   <name> Power(kPM/Min) </name>
+   <format> <integer/> </format>
+   <label> kP M/Min </label>
+</showvalue>
+
+<repeatlist>
+  <name> Exercise-Bike.RPM </name>
+  <repeat><reps> 100 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 5.2 </row><col> 1.0 </col>
+  <name> RPM </name>
+  <listname> Exercise-Bike.RPM </listname>
+  <label> RPM </label>
+</slidebar>
+
+<showvalue>
+   <row> 6.6 </row><col> 1.0 </col>
+   <name> ElapsedTime </name>
+   <format>
+     <timer/>
+     <fieldwidth> 10 </fieldwidth>
+   </format>
+   <label> Elapsed Time </label>
+</showvalue>
+
+<actionbutton>
+   <row> 8.0 </row><col> 1.0 </col>
+   <blockname> ResetElapsedTime </blockname>
+   <label> Reset Elapsed Time </label>
+</actionbutton>
+
+<repeatlist>
+  <name> Exercise-Bike.Efficiency(%) </name>
+  <firstval> 1 </firstval>
+  <repeat><reps> 99 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.6 </row><col> 1.0 </col>
+  <name> Efficiency(%) </name>
+  <listname> Exercise-Bike.Efficiency(%) </listname>
+  <label> Efficiency (%) </label>
+  <fieldwidth> 5 </fieldwidth>
+</slidebar>
+
+<showvalue>
+   <row> 11.0 </row><col> 1.0 </col>
+   <name> TotalWatts </name>
+   <format> <integer/> </format>
+   <label> Total Watts </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Select bike in exercise type </line>
+  <line> to start the bike. </line>
+  <line> </line>
+  <line> kP M/Min is the very British </line>
+  <line> kiloPound-Meters/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

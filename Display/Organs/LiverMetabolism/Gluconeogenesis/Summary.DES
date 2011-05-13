@@ -1,0 +1,88 @@
+HumMod / Gluconeogenesis
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 20.2 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> LM_Gluconeogenesis </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 10 </min><max> 30 </max><inc> 10 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> AminoAcidUptake </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Amino Acid Uptake </label>
+</showvalue>
+
+<showbargraph>
+  <row> 11.0 </row><col> 1.0 </col><high> 7.0 </high><wide> 28 </wide>
+  <leftmargin> 11 </leftmargin>
+  <title> Effect </title>
+  <showinitialvalues/>
+  <bar><name> InsulinEffect </name><label> [Insulin] </label><color> BLUE </color></bar>
+  <bar><name> GlucagonEffect </name><label> [Glucagon] </label><color> BLUE </color></bar>
+  <bar><name> GlucoseEffect </name><label> [Glucose] </label><color> BLUE </color></bar>
+  <bar><name> AminoAcidEffect </name><label> [Amino Acids] </label><color> BLUE </color></bar>
+  <bar><name> Liver-Function.Effect </name><label> Liver Function </label><color> BLUE </color></bar>
+  <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+</showbargraph>
+
+<repeatlist>
+  <name> LM_Gluconeogenesis.BasicUptake </name>
+  <repeat><reps> 100 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 18.6 </row><col> 1.0 </col>
+  <name> BasicUptake </name>
+  <listname> LM_Gluconeogenesis.BasicUptake </listname>
+  <label> Basic </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

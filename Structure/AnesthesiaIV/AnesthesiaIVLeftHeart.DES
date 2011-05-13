@@ -1,0 +1,95 @@
+HumMod / AnesthesiaIVLeftHeart
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaIVLeftHeart </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<var>
+  <name> HrtCont </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.11 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> HrtCont </name>
+  <point><x> 0.000 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 0.045 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / LeftHeart-Size.Vol </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> [Tissue] * AnesthesiaIVSolubility.GeneralK </val>
+</def>
+
+<def>
+  <name> HrtCont </name>
+  <val> HrtCont [ [Tissue] ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaIVBlood.[Blood] - [Vein] )
+    * LeftHeart-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

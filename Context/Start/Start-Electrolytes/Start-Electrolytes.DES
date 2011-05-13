@@ -1,0 +1,35 @@
+HumMod / Start-Electrolytes DES
+
+Created : 03-Feb-10
+Last Modified : 03-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\Start-Electrolytes\ ?>
+
+<?include Start-ExtracellularSodium.DES ?>
+<?include Start-ExtracellularChloride.DES ?>
+<?include Start-ExtracellularPhosphate.DES ?>
+<?include Start-ExtracellularPotassium.DES ?>
+<?include Start-CellularPotassium.DES ?>
+<?include Start-ExtracellularSulphate.DES ?>
+
+<structure><name> Start-Electrolytes </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-ExtracellularSodium.Calc </call>
+  <call> Start-ExtracellularChloride.Calc </call>
+  <call> Start-ExtracellularPhosphate.Calc </call>
+  <call> Start-ExtracellularPotassium.Calc </call>
+  <call> Start-CellularPotassium.Calc </call>
+  <call> Start-ExtracellularSulphate.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

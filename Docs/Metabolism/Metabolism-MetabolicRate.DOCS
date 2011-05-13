@@ -1,0 +1,146 @@
+QHP 2008 / Metabolism.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Metabolism-MetabolicRate  </structurename>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.BMR(%) </name>
+<topic> Metabolic rate - Overview  </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.BMRNormal  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.BMRUnits </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Net(Cal/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Net(kCal/Day)  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Total(Cal/Day)  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Total(Cal/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Total(kCal/Day)  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Total(kCal/Min)  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Metabolism-MetabolicRate.Watts </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> Metabolic Rate - Overview </name>
+<label> Overview </label>
+<content>
+
+Energy requirements are determined by body size and composition, 
+age and physical activity. Total energy expenditure consists of 
+basal metabolic rate, which accounts for 50 -70% of the total in
+an average adult, plus variable components due to physical activity
+and thermogenesis. 
+The main determinant of resting metabolic rate (BMR) is the mass
+of metabolically active tissue, of which lean, fat-free tissue is
+the most important.
+
+Kruszynska YT. Normal metabolism: the physiology of fuel
+homeostasis. Textbook of Diabetes. Chapter 9. Edited by 
+Pickup JC & Willams G. Third Edition 2003. Blackwell Science.
+   
+Ravussin E, Burnand B, Schutz Y, Jequier E. Twenty-four-hour
+energy expenditure and resting metabolic rate in obese,
+moderately obese, and control subjects.
+Am J Clin Nutr 35:566 -573, 1982.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

@@ -1,0 +1,82 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> VeinsVol </structurename>
+
+<vardoc>
+<name> VeinsVol.Vol </name>
+<topic> VeinsVol - Overview </topic>
+<topic> VeinsVol - Physical Units </topic>
+<topic> VeinsVol - Concentration Units </topic>
+<seealso>SystemicVeins.Vol</seealso>
+<seealso>SplanchnicVeins.Vol</seealso>
+<seealso>RightAtrium.Vol</seealso>
+<seealso>RightVentricle-Compartment.Vol</seealso>
+<seealso>PulmArty.Vol </seealso>
+<seealso>BVSeqVeins.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> VeinsVol.Vol(L) </name>
+<topic> VeinsVol - Overview </topic>
+<topic> VeinsVol - Physical Units  </topic>
+<topic> VeinsVol - Concentration Units  </topic>
+<seealso>VeinsVol.Vol</seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> VeinsVol - Overview </name>
+<label> Overview </label>
+<content>
+
+The blood volume contained within the venous side 
+of the circulation is the sum of the volumes contained 
+within various venous compartments. These compartments are:
+systemic veins, splanchnic veins, pulmonary artery, the 
+right atrium, the right ventricle, and the sequestered 
+venous volume.
+
+For reference about sequestered blood volume see:
+Thornton WE, Moore TP, Pool SL Fluid Shifts in Weightlessness
+Aviat. Space Environ Med 58(9, Suppl.):A86-90, 1987
+
+Moore TP, Thornton WE Space shuttle inflight and postflight 
+fluid shifts measured by leg volume changes. Aviat Space
+Environ. Med 58(9, Suppl.):A91-96, 1987
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> VeinsVol - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Volumes are expressed in L or mL
+   
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> VeinsVol - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Systemic Veins: 2312.7mL
+Splanchnic Veins: 983.3mL
+Pulmonary Artery: 198.6mL
+Right Atrium: 48.7mL
+Right Ventricle: 85.3mL
+Sequestered Venous Volume: 148.2
+
+Total Venous Volume: 3777.7mL
+
+</content>
+</topicdoc>
+
+End

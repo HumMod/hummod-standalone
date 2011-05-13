@@ -1,0 +1,23 @@
+HumMod / Norms
+
+Created : 24-Nov-08
+Last Modified : 10-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> NORMS </name>
+  <label> Norms </label>
+  <parent> CONTEXT </parent>
+</branch>
+
+<leaf>
+  <name> Norms-OrganSize </name>
+  <label> Start </label>
+  <parent> NORMS </parent>
+</leaf>
+
+
+End

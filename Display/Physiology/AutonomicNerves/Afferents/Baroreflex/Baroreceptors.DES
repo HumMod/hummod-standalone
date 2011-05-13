@@ -1,0 +1,144 @@
+HumMod / Baroreceptors
+
+Created : 26-Jun-05
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 27.2 </high>
+   <wide> 30.0 </wide>
+   <title> Baroreceptors </title>
+
+<structurename> Baroreflex </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> NA </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Nerve Activity </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> NA </name>
+      <label> NA </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<radiobuttons>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> Clamp </name>
+  <listname> Common.Switch </listname>
+  <label> Clamp </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> Level </name>
+  <repeat><reps> 30 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Level </name>
+  <listname> Level </listname>
+  <label> Level </label>
+</slidebar>
+
+<showvalue>
+   <row> 12.6 </row><col> 1.0 </col>
+   <name> TissueFunctionEffect </name>
+   <format><list> Common.Failed </list></format>
+   <label> Tissue Function Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.0 </row><col> 1.0 </col>
+   <name> PressureEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Pressure Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 15.0 </row><col> 1.0 </col><high> 7 </high><wide> 27 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> PressureChange </name>
+    <label> Change </label>
+    <scale><min> -50 </min><max> 50 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> PressureEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 22.0 </row><col> 1.0 </col>
+   <name> PressureChange </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 23.2 </row><col> 3.0 </col>
+   <name> CarotidSinus.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Sinus Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 24.2 </row><col> 3.0 </col>
+   <name> AdaptedPressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Adapted Pressure </label>
+</showvalue>
+
+<repeatlist>
+  <name> Baroreflex.Tau </name>
+  <firstval> 1.0 </firstval>
+  <repeat><reps> 19 </reps><stepsize>   1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize>  10 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize> 100 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 25.4 </row><col> 5.0 </col>
+  <name> Tau </name>
+  <listname> Baroreflex.Tau </listname>
+  <label> Tau </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Nerve Activity = 1.0 x Normal </line>
+  <line> Pressure Change = ~0 mmHg </line>
+  <line> Adapted Pressure = 97.0 mmHg </line>
+  <line> Time Constant = 10.0 Hrs </line>
+</infobutton>
+
+</groupbox>
+
+End

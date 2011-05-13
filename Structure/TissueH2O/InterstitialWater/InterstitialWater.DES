@@ -1,0 +1,62 @@
+HumMod / InterstitialWater
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\TissueH2O\InterstitialWater\ ?>
+
+<?include UT_InterstitialWater.DES ?>
+<?include MT_InterstitialWater.DES ?>
+<?include LT_InterstitialWater.DES ?>
+
+<structure><name> InterstitialWater </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+
+<var><name> Vol(L) </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> InitialVol </name>
+  <val>
+      ECFV.InitialVol
+    - PlasmaVol.InitialVol
+    - ExternalH2O.InitialCore
+  </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<call> UT_InterstitialWater.Calc </call>
+<call> MT_InterstitialWater.Calc </call>
+<call> LT_InterstitialWater.Calc </call>
+
+<def><name> Vol </name>
+  <val>
+      UT_InterstitialWater.Vol
+    + MT_InterstitialWater.Vol
+    + LT_InterstitialWater.Vol
+  </val>
+</def>
+
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

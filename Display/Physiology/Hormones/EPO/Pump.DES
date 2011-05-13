@@ -1,0 +1,59 @@
+HumMod / Pump
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 17.4 </row>
+   <col> 1.0 </col>
+   <high> 6.2 </high>
+   <wide> 30.0 </wide>
+   <title> Pump </title>
+
+<structurename> EPOPump </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> EPOPump.Setting </name>
+  <repeat><reps> 10 </reps><stepsize>    0.1 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>    1.0 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>   10.0 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>  100.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> Setting </name>
+  <listname> EPOPump.Setting </listname>
+  <label> Setting </label>
+</slidebar>
+
+<showvalue>
+   <row> 4.6 </row><col> 1.0 </col>
+   <name> Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Pump infusion rate is U/Min. </line>
+  <line> </line>
+  <line> Normal EPO secretion rate is 0.670 U/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

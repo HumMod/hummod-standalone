@@ -1,0 +1,58 @@
+HumMod / RightVentricle-Compartment
+
+Created : 16-May-05
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<structure><name> RightVentricle </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> Outflow </name></var>
+
+</variables>
+
+<equations>
+
+<stabledelay>
+  <name> Vol </name>
+  <outputname> Vol </outputname>
+  <initialval> 87.5 </initialval>
+  <inputname> Vol-SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.9 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+  <def>
+    <name> Inflow </name>
+    <val> RightHeartPumping-Pumping.BloodFlow </val>
+  </def>
+
+  <def>
+    <name> Outflow </name>
+    <val> RightHeartPumping-Pumping.BloodFlow </val>
+  </def>
+
+  <def>
+    <name> Vol-SteadyState </name>
+    <val> ( RightHeartPumping-Diastole.EDV + RightHeartPumping-Systole.ESV ) / 2.0 </val>
+  </def>
+
+  <def><name> K </name><val> 1.0 </val></def>
+  <def><name> DxMax </name><val> 1.0 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,46 @@
+HumMod / CellH2O
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CellH2O </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+<var><name> Vol(L) </name></var>
+
+<var><name> UT_Vol </name></var>
+<var><name> MT_Vol </name></var>
+<var><name> LT_Vol </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> InitialVol </name><val> ICFV.InitialVol - RBCH2O.InitialVol </val></def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def><name> Vol </name><val> ICFV.Vol - RBCH2O.Vol </val></def>
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+<def><name> UT_Vol </name><val> TissueH2O.UT_SizeFract * Vol </val></def>
+<def><name> MT_Vol </name><val> TissueH2O.MT_SizeFract * Vol </val></def>
+<def><name> LT_Vol </name><val> TissueH2O.LT_SizeFract * Vol </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

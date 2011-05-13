@@ -1,0 +1,34 @@
+HumMod / ThyroidGland Reference
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   Thyroxine is modeled here by the
+   sum of T4 and T3.
+
+   Normal mass is 1200 uG.  [Total]
+   is 8 uG/mL.  [Free] is 4 nG/dL.
+
+   MW T4 = 777.  T3 is lighter by 1
+   iodine. MW T3 = 650.
+
+   Multiply uG/dL by 12.87 to get
+   nMol/L.
+
+   Secretion rate is 0.05 uG/Min.
+
+   Removeal time constant is 17 days.
+
+   [TSH] is 4 uU/mL.  Metabolism is
+   much faster than thyroxine and so
+   a pool was not defined.
+
+   TSH is also called thyrotropin.
+   MW ~ 28,000.
+
+
+End

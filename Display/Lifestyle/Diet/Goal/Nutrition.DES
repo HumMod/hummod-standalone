@@ -1,0 +1,99 @@
+HumMod / Nutrition
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.4 </high>
+   <wide> 30.0 </wide>
+   <title> Nutrition </title>
+
+<structurename> DietGoalNutrition </structurename>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> kCal / Day </text>
+</label>
+
+<repeatlist>
+  <name> DietGoalNutrition.Rate </name>
+  <repeat><reps> 200 </reps><stepsize>   10.0 </stepsize></repeat>
+  <repeat><reps>  40 </reps><stepsize>  100.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Carbo_kCal/Day </name>
+  <listname> DietGoalNutrition.Rate </listname>
+  <label> Carbo's </label>
+</slidebar>
+
+<slidebar>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> Fat_kCal/Day </name>
+  <listname> DietGoalNutrition.Rate </listname>
+  <label> Fat </label>
+</slidebar>
+
+<slidebar>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> Protein_kCal/Day </name>
+  <listname> DietGoalNutrition.Rate </listname>
+  <label> Protein </label>
+</slidebar>
+
+<showvalue>
+   <row> 7.0 </row><col> 1.0 </col>
+   <name> Total_kCal/Day </name>
+   <format><integer/></format>
+   <label> Total </label>
+</showvalue>
+
+<label>
+  <row> 8.4 </row><col> 1.0 </col>
+  <text> G / Day </text>
+</label>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Carbo_G/Day </name>
+   <format><integer/></format>
+   <label> Carbo's </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Fat_G/Day </name>
+   <format><integer/></format>
+   <label> Fat </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> Protein_G/Day </name>
+   <format><integer/></format>
+   <label> Protein </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical values for kCal/Day are </line>
+  <line> </line>
+  <line> Carbo's = 900 </line>
+  <line> Fat = 800 </line>
+  <line> Protein = 500 </line>
+  <line> </line>
+  <line> Total = 2200 </line>
+</infobutton>
+
+</groupbox>
+
+End

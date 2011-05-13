@@ -1,0 +1,23 @@
+HumMod / KetoAcid.REF
+
+Created : 28-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The basic mass units for ketoacids are mMol. We
+can then use the mass in osmoles calculations with
+no modification.
+
+I assure an average molecular weight of 102.
+
+  1 mMol/L = 10.2 mG/dL
+
+Normal [KA-] is 0.05 mMol/L.
+
+The volume of distribution is ECFV or 15.0 L. Thus,
+the nominal KA mass is 0.75 mMol.
+
+End

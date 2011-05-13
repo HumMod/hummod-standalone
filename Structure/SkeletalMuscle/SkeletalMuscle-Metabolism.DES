@@ -1,0 +1,140 @@
+HumMod / SkeletalMuscle-Metabolism
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-Metabolism </name>
+
+<variables>
+
+<var>
+  <name> TotalCalsUsed </name>
+</var>
+
+<var>
+  <name> BasalCalsUsed </name>
+</var>
+
+<var>
+  <name> InitialBasalCalsUsed </name>
+</var>
+
+<constant>
+  <name> BasalCalsUsed((Cal/Min)/G) </name>
+  <val> 0.0052 </val>
+</constant>
+
+<parm>
+  <name> CalMultiplier </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> PostureCals </name>
+</var>
+
+<var>
+  <name> ShiveringCals </name>
+</var>
+
+<var>
+  <name> AerobicCals </name>
+</var>
+
+<var>
+  <name> AnaerobicCals </name>
+</var>
+
+<var>
+  <name> O2Need </name>
+</var>
+
+<var>
+  <name> O2Lack </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> ScaleCals </name>
+
+<def>
+  <name> InitialBasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * SkeletalMuscle-Size.InitialMass
+  </val>
+</def>
+
+</block>
+
+<block><name> CalcCals </name>
+
+<def>
+  <name> BasalCalsUsed </name>
+  <val>
+       CalMultiplier
+     * BasalCalsUsed((Cal/Min)/G)
+     * SkeletalMuscle-Size.Mass
+  </val>
+</def>
+
+<def>
+  <name> PostureCals </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> ShiveringCals </name>
+  <val> HeatShivering.Cals </val>
+</def>
+
+<def>
+  <name> TotalCalsUsed </name>
+  <val>
+    ( BasalCalsUsed
+    * Thyroid.Effect
+    * HeatMetabolism.SkeletalMuscle
+    * SkeletalMuscle-Structure.Effect )
+    + SkeletalMuscle-Work.TotalCals
+    + PostureCals
+    + ShiveringCals
+  </val>
+</def>
+
+<def>
+  <name> O2Need </name>
+  <val> Metabolism-Tools.CalToO2 * TotalCalsUsed </val>
+</def>
+
+</block>
+
+<block><name> SplitCals </name>
+
+<def>
+  <name> O2Lack </name>
+  <val> O2Need - SkeletalMuscle-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * SkeletalMuscle-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AnaerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * O2Lack </val>
+</def>
+
+</block>
+</definitions>
+
+</structure>
+
+End

@@ -1,0 +1,35 @@
+HumMod / Age
+
+Created : 06-Feb-10
+Last Modified : 06-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 5.6 </row>
+   <col> 1.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> Age </title>
+
+<structurename> Age </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> InitialAge(Years) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Initial Age (Years) </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Age(Years) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Current Age (Years) </label>
+</showvalue>
+
+</groupbox>
+
+End

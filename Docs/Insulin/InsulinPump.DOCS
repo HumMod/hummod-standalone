@@ -1,0 +1,113 @@
+QHP 2008 / Insulin.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> InsulinPump </structurename>
+
+<vardoc>
+<name> InsulinPump.Rate </name>
+<topic> InsulinPump - Overview </topic>
+<topic> Insulin - Physical Units </topic>
+<topic> Insulin - Concentration Units </topic>
+<seealso> InsulinInjection.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPump.Setting </name>
+<topic> InsulinPump - Overview </topic>
+<topic> Insulin - Physical Units </topic>
+<topic> Insulin - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> InsulinPump.Switch </name>
+<topic> InsulinPump - Overview </topic>
+<topic> Insulin - Physical Units </topic>
+<topic> Insulin - Concentration Units </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> InsulinPump -Overview </name>
+<label> Overview </label>
+<content>
+
+Insulin can be administered in two ways for the treatment
+of diabetes. The first is by multiple daily injections; 
+the second by continuous subcutaneous insulin infusion.
+The latter method of administration is the InsulinPump.
+
+Multiple daily injections will be added to Hummod at a 
+later date under the structure name InsulinInjection. 
+
+A small programmable pump with a reservoir of 
+short-acting insulin is connected to a cannula under 
+the skin by a narrow tube. The pump is set to deliver 
+insulin at slow rates appropriate to the time of day, 
+and can be adjusted by the user to accommodate reduced 
+insulin needs during and after exercise, and to deliver 
+a higher infusion rate to cover food intake. The rate 
+can be changed at any time by the user. For example, 
+mealtime doses are delivered by activation of a booster 
+dose by the user.
+
+Continuous subcutaneous insulin infusion provides a 
+form of intensified insulin therapy, and is part of 
+a system of self-care that also includes home testing 
+of blood glucose, self-adjustment of insulin dose, 
+and care with diet. It is an alternative to multiple 
+daily injection (MDI) of a combination of long- and 
+short-acting insulins, usually involving four or more 
+injections per day.
+
+The Insulin Pump enables the model user to change 
+[Insulin] levels by infusing insulin subcutaneously 
+at different rates. Data is taken from a variety of 
+human studies relating infusion rates to plasma 
+concentrations of insulin.
+
+Schwartz NS, Clutter WE, Shah SD, Cryer PE. Glycemic 
+thresholds for activation of glucose counterregulatory
+systems are higher than the thresholds for symptoms.
+J Clin Invest. 79: 777 - 781, 1987.
+Insulin infused at 1.0 mU/kG/Min
+
+Ginsberg S, Block MB, Mako ME, Ruben stein AH. Serum 
+insulin levels following administration of exogenous
+insulin. J Clin Endo Met 36: 1175 - 1179, 1973.
+
+Forlani G, Santacroce G, Ciaverella A, Capelli M, 
+Mattioli L, Vannini P. Effects of mixing short- and
+intermediate-acting insulins on absorption course 
+and bilogic effect of short-acting preparation.
+Diabetes Care 9: 587 - 590, 1986. 
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Insulin - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Insulin - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

@@ -1,0 +1,39 @@
+HumMod / GlomerulusCreatinine
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> GlomerulusCreatinine </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [Creatinine] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [Creatinine] </name><val> CreatininePool.[Creatinine] </val></def>
+<def><name> Rate </name><val> [Creatinine] * GlomerulusFiltrate.GFR </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [Creatinine] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

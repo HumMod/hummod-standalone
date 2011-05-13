@@ -1,0 +1,27 @@
+HumMod / Exercise - Maximum
+
+Created : 01-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+This would be maximum exertion exercise - which consumes glycogen,
+makes lactic acid and stops when the muscles give out. Oxygen uptake
+will be maximal.
+
+Watch out for data sets that use trained athletes. They show much
+better performance than sedentary people.
+
+Maximum O2 uptake for sedentary middle-aged male appears to be
+3100 mL/Min. At 75 kG, this is 41 (mL/Min)/kG.
+
+Using
+
+  Power(W) = 0.090 * O2 Uptake (mL/Min) - 22.6
+
+I get 256 W.
+
+End

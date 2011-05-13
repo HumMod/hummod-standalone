@@ -1,0 +1,169 @@
+QHP 2008 / BloodVolume.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> [EPO]Delay </structurename>
+
+<vardoc>
+<name> [EPO]Delay.Derv </name>
+<topic> Derv - Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> [EPO]Delay.Effect </name>
+<topic> EPO Delay - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> [EPO]Delay.SteadyState </seealso>
+<seealso> [EPO]Delay.K </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> [EPO]Delay.K </name>
+<topic> K - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> [EPO]Delay.Tau </seealso>
+</vardoc>
+
+<vardoc>
+<name> [EPO]Delay.SteadyState </name>
+<topic> Steady State - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> EPOPool.Log10Conc </seealso>
+</vardoc>
+
+<vardoc>
+<name> [EPO]Delay.Tau </name>
+<topic> Tau - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> EPO Delay - Overview </name>
+<label> Overview </label>
+<content>
+
+EPO Delay
+Erythropoietin (EPO) is a glycoprotein 
+which increases red blood cell (RBC) 
+production in response to decreases in 
+tissue oxygenation. Although increased secretion 
+of erythropoietin occurs within minutes of a 
+decrease in tissue oxygenation ,it takes several 
+days before there is an increase in the red blood 
+cell concentration - this is the EPO delay.
+EPO increases erythrocyte production by retarding 
+DNA breakdown and preventing apoptosis in erythroid 
+progenitor cells.
+
+Erslev, A.J. Erythropoietin. 
+Leukemia Research Volume 14, No. 8: 683-688, 1990
+
+Relationship between blood loss, EPO concentration 
+and effect on reticulocyte concentration
+Miller Me, Cronkite EP, Garcia JF
+ 
+Plasma levels of immunoreactive erythropoietin
+after acute blood loss in man.
+Brit J Haematology 52: 545-549, 1982
+
+Effect of EPO infusion on reticulocyte concentration.
+Escbach JW, Egrie JC, Downing MR, Browne JK, Adamson JW
+correction of the anemia of end-stage renal disease 
+with recombinant human erythropoietin
+New Eng J Med 316:73-78, 1987
+
+Winearls CG, Oliver DO, Pippard MJ, Reid C,
+Downing MR, Cotes PM. Effect of human erythropoietin
+derived from recombinant DNA on the anaemia of patients 
+maintained by chronic haemodialysis.
+Lancet 2:1175-1178, 1986
+
+Koury MJ, Bondurant MC.
+Erythropoietin retards DNA breakdown and prevents
+programmed death in erythroid progenitor cells.
+Science Vol 248: 378-381, 1990
+
+K is the rate constant
+and is 1/Tau, (Tau = the time constant). 
+A steady state is achieved when red blood cell 
+volume reaches constant levels. 
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma] mU/mL
+Flux  U/min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Typical [EPO] is 20mU/mL at a secretion rate of 0.67U/min
+Tau = 3days. K =1/Tau  
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> K - Overview </name>
+<label> Overview </label>
+<content>
+
+K is the rate constant
+and is 1/Tau, (Tau = the time constant). 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Steady State - Overview </name>
+<label> Overview </label>
+<content>
+
+A steady state is achieved when red blood cell 
+volume reaches constant levels. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Tau - Overview </name>
+<label> Overview </label>
+<content>
+
+K is the rate constant
+and is 1/Tau, (Tau = the time constant). 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Derv - Defintion </name> 
+<label> Defintion </label>
+<content>
+
+
+</content>
+</topicdoc>
+ 
+End

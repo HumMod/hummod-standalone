@@ -1,0 +1,124 @@
+HumMod / RespiratoryMuscle
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> RespiratoryMuscle </name>
+  <label> Respiratory Muscle </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> RespiratoryMuscle-Circulation </name>
+  <label> Circulation </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<branch>
+  <name> RespiratoryMuscle-Fuel </name>
+  <label> Fuel </label>
+  <parent> RespiratoryMuscle </parent>
+</branch>
+
+<leaf>
+  <name> RespiratoryMuscleFuel-Selection </name>
+  <label> Selection </label>
+  <parent> RespiratoryMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscleFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> RespiratoryMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscleFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> RespiratoryMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscleFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> RespiratoryMuscle-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Glycogen </name>
+  <label> Glycogen </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Insulin </name>
+  <label> Insulin </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-CO2 </name>
+  <label> CO2 </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Lactate </name>
+  <label> Lactate </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Nerves </name>
+  <label> Nerves </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Function </name>
+  <label> Function </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Structure </name>
+  <label> Structure </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Size </name>
+  <label> Size </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryMuscle-ContractileProtein </name>
+  <label> Contractile Protein </label>
+  <parent> RespiratoryMuscle </parent>
+</leaf>
+
+End

@@ -1,0 +1,80 @@
+HumMod / Catechols
+
+Created : 28-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Catechols\ ?>
+
+<?include NEPool.DES ?>
+<?include EpiPool.DES ?>
+
+<?include NEPump.DES ?>
+<?include EpiPump.DES ?>
+
+<?include NESecretion.DES ?>
+<?include EpiSecretion.DES ?>
+
+<?include NEClearance.DES ?>
+<?include EpiClearance.DES ?>
+
+<?include AlphaPool.DES ?>
+<?include BetaPool.DES ?>
+
+<?include AlphaBlockade.DES ?>
+<?include BetaBlockade.DES ?>
+
+<?include Pheochromocytoma.DES ?>
+
+<structure><name> Catechols </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> AlphaBlockade.Parms </call>
+  <call> BetaBlockade.Parms </call>
+
+  <call> NEPump.Parms </call>
+  <call> EpiPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> EpiPool.CalcConc </call>
+  <call> NEPool.CalcConc </call>
+
+  <call> AlphaPool.Calc </call>
+  <call> BetaPool.Calc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> EpiSecretion.Dervs </call>
+  <call> NESecretion.Dervs </call>
+
+  <call> NEClearance.Dervs </call>
+  <call> EpiClearance.Dervs </call>
+
+  <call> Pheochromocytoma.Dervs </call>
+
+  <call> EpiPool.Dervs </call>
+  <call> NEPool.Dervs </call>
+
+</block>
+
+<block><name> Wrapup </name>
+
+  <call> Pheochromocytoma.Wrapup </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

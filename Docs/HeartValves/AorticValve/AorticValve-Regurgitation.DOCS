@@ -1,0 +1,63 @@
+QHP 2008 / AorticValve.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AorticValve-Regurgitation </structurename>
+
+<vardoc>
+<name> AorticValve-Regurgitation.Area </name>
+<topic> AorticValve-Regurgitation - Overview  </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> AorticValve-Regurgitation.Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> AorticValve-Regurgitation - Overview </name>
+<label> Overview </label>
+<content>
+
+Valvular lesions can affect the ability of the aortic valve to 
+function. Valvular lesions can occur as a result of rheumatic 
+fever and less frequently as a congenital defect. When the edges 
+of the aortic valve are destroyed so that they cannot close as 
+the ventricles contract, regurgitation or backflow of blood occurs. 
+This results in a decrease in the net stroke volume output of 
+the heart.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

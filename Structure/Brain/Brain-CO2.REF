@@ -1,0 +1,21 @@
+HumMod / Brain-CO2.REF
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+Here are some values that seem to get brain pH
+started close to steady state.
+
+CO2 Mass = 14.3 (This is actually HCO3- mEq)
+Volume = 780 (Volume of distribution in mL)
+
+[HCO3-] = 18.4 mEq/L
+pCO2 = 47 mmHG
+pH = 7.12
+SID = 0.044
+
+
+End

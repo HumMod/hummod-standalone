@@ -1,0 +1,33 @@
+HumMod / Chlorothiazide Reference
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Tabs are 250 and 500 mG.  Typical
+dose is 500 - 2000 mG/Day.
+
+MW = 295.73
+
+Mass is mG. Conc is uG/mL.  So
+divide by a volume of distribution
+of L to get conc, since
+
+  mG/L = uG/mL
+
+J. Pharm. Biopharm. 8:553-571, 1980.
+
+Volume of distribution is 200 mL/kG,
+which is ECFV.
+
+Bioavailability is 20%.  We'll take
+the rest out in the GI lumen.
+
+Secreted by proximal tubule.
+Loss rate constant is (/Min) 0.008.
+
+
+End

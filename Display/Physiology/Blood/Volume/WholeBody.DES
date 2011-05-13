@@ -1,0 +1,149 @@
+HumMod / WholeBody
+
+Created : 10-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 24.2 </high>
+   <wide> 30.0 </wide>
+   <title> Whole-Body </title>
+
+<structurename> BloodVol </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Vol </name>
+   <format> <integer/> </format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> RBCVol.Vol </name>
+   <format> <integer/> </format>
+   <label> Red Cells </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> PlasmaVol.Vol </name>
+   <format> <integer/> </format>
+   <label> Plasma </label>
+</showvalue>
+
+<showgraph>
+  <row> 4.6 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Vol </name>
+      <label> BV </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> PlasmaVol.Vol </name>
+      <label> PV </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <yvar>
+      <name> RBCVol.Vol </name>
+      <label> RBC </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 6000 </max><inc> 1000 </inc>
+      
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 14.0 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.4 </row><col> 1.0 </col>
+   <name> Gain </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.4 </row><col> 1.0 </col>
+   <name> Loss </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.8 </row><col> 1.0 </col>
+   <name> BloodVol.Hct(%) </name>
+   <format> <integer/> </format>
+   <label> Hematocrit (%) </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.2 </row><col> 1.0 </col>
+   <name> BloodVol.V0 </name>
+   <format> <integer/> </format>
+   <label> Unstressed Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.2 </row><col> 1.0 </col>
+   <name> BloodVol.StressedVol </name>
+   <format> <integer/> </format>
+   <label> Stressed Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.6 </row><col> 1.0 </col>
+   <name> ArtysVol.Vol </name>
+   <format> <integer/> </format>
+   <label> Arterial Side Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 22.6 </row><col> 1.0 </col>
+   <name> VeinsVol.Vol </name>
+   <format> <integer/> </format>
+   <label> Venous Side Volume </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are mL. </line>
+  <line>  </line>
+  <line> NORMAL VALUES </line>
+  <line>  </line>
+  <line> Blood Volume - 5400 </line>
+  <line> Red Cells - 2400 </line>
+  <line> Plasma - 3000 </line>
+  <line>  </line>
+  <line> Hematocrit (%) - 44 </line>
+  <line>  </line>
+  <line> Unstressed Volume - 3600 </line>
+  <line> Stressed Volume - 1800 </line>
+  <line>  </line>
+  <line> Arterial Side Volume - 1000 </line>
+  <line> Venous Side Volume - 4400 </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,16 @@
+Digital Human / RightVentricle
+
+Created : 16-May-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<?path Docs\VascularCompartments\RightVentricle\ ?>
+
+<?include RightVentricle.docs ?>
+
+
+End

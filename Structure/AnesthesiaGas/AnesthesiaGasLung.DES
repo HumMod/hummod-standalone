@@ -1,0 +1,82 @@
+HumMod / AnesthesiaGasLung
+
+Created : 01-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> AnesthesiaGasLung </name>
+
+<variables>
+
+<var><name> [Alv] </name></var>
+<var><name> pAlv </name></var>
+<var><name> [Capy] </name></var>
+<var><name> pCapy </name></var>
+<var><name> Uptake </name></var>
+<var><name> N </name></var>
+<var><name> D </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> N </name>
+  <val>
+    ( Breathing.AlveolarVentilation(STPD)
+    * Bronchi.[Anesthetic] )
+
+    + ( LungBloodFlow.AlveolarVentilated
+    * AnesthesiaGasVein.[Blood] )
+  </val>
+</def>
+
+<def>
+  <name> D </name>
+  <val>
+    ( Breathing.AlveolarVentilation(STPD)
+    / 760.0 )
+
+    + ( LungBloodFlow.AlveolarVentilated
+    / AnesthesiaGasSolubility.BloodK )
+  </val>
+</def>
+
+<conditional>
+  <name> pAlv </name>
+  <test> D GT 0.0 </test>
+  <true> N / D </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> [Alv] </name>
+  <val> pAlv / 760.0 </val>
+</def>
+
+<def>
+  <name> pCapy </name>
+  <val> pAlv </val>
+</def>
+
+<def>
+  <name> [Capy] </name>
+  <val> pCapy / AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    Breathing.AlveolarVentilation(STPD)
+    * ( Bronchi.[Anesthetic] - [Alv] )
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

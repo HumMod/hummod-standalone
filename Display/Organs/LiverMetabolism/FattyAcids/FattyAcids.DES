@@ -1,0 +1,18 @@
+HumMod / FattyAcids
+
+Created : 2010-06-06
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Organs\LiverMetabolism\FattyAcids\ ?>
+
+<?include FABalance\FABalance.DES ?>
+
+<!--
+<?include AminoAcidsToFA\AminoAcidsToFA.DES ?>
+<?include GlucoseToFA\GlucoseToFA.DES ?>
+-->
+
+End

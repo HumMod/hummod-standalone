@@ -1,0 +1,42 @@
+Digital Human / Lungs
+
+Created : 21-Oct-04
+Last Modified : 01-Mar-07
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\Lungs\ ?>
+
+<?include GasTools.docs ?>
+
+<?include Bronchi.docs ?>
+
+<?include Thorax.docs ?>
+<?include RightHemithorax.docs ?>
+<?include LeftHemithorax.docs ?>
+
+<?include ExcessLungWater.docs ?>
+<?include LungBloodFlow.docs ?>
+
+<?include LungArtyO2.docs ?>
+
+<?include Breathing.docs ?>
+
+<?include LungO2.docs ?>
+<?include LungVeinO2.docs ?>
+
+<?include GasExchangeRatio.docs ?>
+
+<?include Ventilator.docs ?>
+<?include CO.docs ?>
+
+<?include LungArtyCO2.docs ?>
+<?include LungCO2.docs ?>
+<?include LungVeinCO2.docs ?>
+
+</docs>
+End

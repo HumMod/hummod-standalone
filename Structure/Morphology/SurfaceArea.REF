@@ -1,0 +1,21 @@
+HumMod / SurfaceArea.REF
+
+Created : 06-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+DuBois and DuBois, Arch.Int.Med. 17:863-871, 1916.
+
+  A = W^0.425 * H^0.725 * C
+
+  A = Area in cM^2
+  W = Weight in kG
+  H = Height in cM
+  C = Constant 71.84
+
+Reduce C to 0.007184 to get area in M^2.
+   
+End

@@ -1,0 +1,211 @@
+HumMod / RespiratoryMuscle-Flow
+
+Created : 23-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RespiratoryMuscle-Flow </name>
+
+<variables>
+
+<var>
+  <name> Conductance </name>
+</var>
+
+<parm>
+  <name> BasicConductance </name>
+  <val> 1.1 </val>
+</parm>
+
+<var>
+  <name> A2Effect </name>
+</var>
+
+<var>
+  <name> SympsEffect </name>
+</var>
+
+<var>
+  <name> ADHEffect </name>
+</var>
+
+<var>
+  <name> PO2Effect </name>
+</var>
+
+<var>
+  <name> MetabolismEffect </name>
+</var>
+
+<var>
+  <name> AerobicFraction </name>
+</var>
+
+<var>
+  <name> O2Use </name>
+</var>
+
+<var>
+  <name> [O2] </name>
+</var>
+
+<var>
+  <name> BloodFlow </name>
+</var>
+<var><name> PlasmaFlow </name></var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> PO2 </name>
+  <startname> PO2 </startname>
+  <initialval> 33.6 </initialval>
+  <endname> PO2End </endname>
+  <errorlim> 0.34 </errorlim>
+  <searchmin> 0.0 </searchmin>
+  <searchmaxname> SearchMax </searchmaxname>
+</impliciteq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> A2OnConductance </name>
+  <point><x> 0.0 </x><y> 1.05 </y><slope> 0 </slope></point>
+  <point><x> 1.3 </x><y> 1.00 </y><slope> -0.08 </slope></point>
+  <point><x> 3.5 </x><y> 0.50 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SympsOnConductance </name>
+  <point><x> 0.0 </x><y> 1.3 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> -0.3 </slope></point>
+  <point><x> 5.0 </x><y> 0.1 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PO2OnConductance </name>
+  <point><x> 10 </x><y> 2.0 </y><slope> 0 </slope></point>
+  <point><x> 30 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ADHOnConductance </name>
+  <point><x> 0.8 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x> 3.0 </x><y> 0.1 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> MetabolismOnConductance </name>
+  <point><x>   6 </x><y>  1.0 </y><slope> 0 </slope></point>
+  <point><x>  12 </x><y>  1.3 </y><slope> 0.08 </slope></point>
+  <point><x> 400 </x><y> 24.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PO2OnAerobicFraction </name>
+  <point><x>  2.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 10.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> A2Effect </name>
+  <val> A2OnConductance [ A2Pool.Log10Conc ] </val>
+</def>
+
+<def>
+  <name> SympsEffect </name>
+  <val> SympsOnConductance [ RespiratoryMuscle-AlphaReceptors.Activity ] </val>
+</def>
+
+<def>
+  <name> ADHEffect </name>
+  <val> ADHOnConductance [ ADHPool.Log10Conc ] </val>
+</def>
+
+<def>
+  <name> MetabolismEffect </name>
+  <val> MetabolismOnConductance [ RespiratoryMuscle-Metabolism.O2Need ] </val>
+</def>
+
+<def>
+  <name> SearchMax </name>
+  <val> PO2Artys.Pressure </val>
+</def>
+
+<implicitmath><name> PO2 </name>
+
+<def>
+  <name> PO2Effect </name>
+  <val> PO2OnConductance [ PO2 ] </val>
+</def>
+
+<def>
+  <name> Conductance </name>
+  <val>
+      BasicConductance
+    * A2Effect
+    * SympsEffect
+    * PO2Effect
+    * ADHEffect
+    * MetabolismEffect
+    * Viscosity.ConductanceEffect
+    * Anesthesia.VascularConductance
+    * RespiratoryMuscle-Vasculature.Effect
+  </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> ( RespiratoryMuscle-Pressure.PressureGradient * Conductance ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> AerobicFraction </name>
+  <val> PO2OnAerobicFraction [ PO2 ] </val>
+</def>
+
+<def>
+  <name> O2Use </name>
+  <val> RespiratoryMuscle-Metabolism.O2Need * AerobicFraction </val>
+</def>
+
+<conditional>
+  <name> [O2] </name>
+  <test> BloodFlow GT 0.0 </test>
+  <true> O2Artys.[O2] - ( O2Use / BloodFlow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+<copy>
+  <from> [O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> PO2End </to>
+</copy>
+
+</implicitmath>
+
+<def><name> PlasmaFlow </name><val> BloodFlow * BloodVol.PVCrit </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,185 @@
+HumMod / SkeletalMuscle-CO2
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-CO2 </name>
+
+<variables>
+
+<var>
+  <name> [HCO3] </name>
+</var>
+
+<var>
+  <name> [HCO3(mEq/L)] </name>
+</var>
+
+<var>
+  <name> PCO2 </name>
+</var>
+
+<var>
+  <name> InflowGas </name>
+</var>
+
+<var>
+  <name> InflowBase </name>
+</var>
+
+<var>
+  <name> OutflowBase </name>
+</var>
+
+<var>
+  <name> [BloodHCO3] </name>
+</var>
+
+<var>
+  <name> Outflow(0) </name>
+</var>
+
+<var>
+  <name> K </name>
+</var>
+
+<var>
+  <name> Alpha </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 323.9 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 3.24 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> CalcConc </name>
+
+<def>
+  <name> [HCO3] </name>
+  <val> Mass / SkeletalMuscle-Size.LiquidVol </val>
+</def>
+
+<def>
+  <name> [HCO3(mEq/L)] </name>
+  <val> 1000.0 * [HCO3] </val>
+</def>
+
+<copy>
+  <from> [HCO3] </from>
+  <to> Tissue-BaseToGas.[HCO3] </to>
+</copy>
+
+<copy>
+  <from> SkeletalMuscle-Ph.[SID] </from>
+  <to> Tissue-BaseToGas.[SID] </to>
+</copy>
+
+<call> Tissue-BaseToGas.Calc </call>
+
+<copy>
+  <from> Tissue-BaseToGas.pCO2 </from>
+  <to> PCO2 </to>
+</copy>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def>
+  <name> K </name>
+  <val> SkeletalMuscle-Flow.BloodFlow / SkeletalMuscle-Size.LiquidVol </val>
+</def>
+
+<testcase>
+
+<case>
+<test> System.Dx GE UNDEFINED </test>
+<def>
+  <name> Alpha </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> ( K * System.Dx ) GE 100.0 </test>
+<def>
+  <name> Alpha </name>
+  <val> 4E-44 </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> Alpha </name>
+  <val> EXP ( -  K * System.Dx ) </val>
+</def>
+</case>
+
+</testcase>
+
+<def>
+  <name> InflowGas </name>
+  <val> Metabolism-RespiratoryQuotient.RQ * SkeletalMuscle-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> InflowBase </name>
+  <val> CO2Tools.LitersToMols * InflowGas </val>
+</def>
+
+<copy>
+  <from> PCO2 </from>
+  <to> Blood-GasToBase.pCO2 </to>
+</copy>
+
+<copy>
+  <from> BloodIons.[SID] </from>
+  <to> Blood-GasToBase.[SID] </to>
+</copy>
+
+<call> Blood-GasToBase.Calc </call>
+
+<copy>
+  <from> Blood-GasToBase.[HCO3] </from>
+  <to> [BloodHCO3] </to>
+</copy>
+
+<def>
+  <name> Outflow(0) </name>
+  <val> SkeletalMuscle-Flow.BloodFlow * ( [BloodHCO3] - CO2Artys.[HCO3] ) </val>
+</def>
+
+<def>
+  <name> OutflowBase </name>
+  <val>
+        ( Alpha * Outflow(0) )
+    + ( ( 1 - Alpha ) * InflowBase )
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> InflowBase - OutflowBase </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

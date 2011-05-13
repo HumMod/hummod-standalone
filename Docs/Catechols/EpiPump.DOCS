@@ -1,0 +1,115 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EpiPump </structurename>
+
+<vardoc>
+<name> EpiPump.Rate </name>
+<topic> EpiPump - Overview </topic>
+<topic> Epi - Physical Units </topic>
+<topic> Epi - Concentration Units </topic>
+<seealso> EpiPool.[Epi] </seealso>
+</vardoc>
+
+<vardoc>
+<name> EpiPump.Setting </name>
+<topic> EpiPump - Overview </topic>
+<topic> Epi - Physical Units  </topic>
+<topic> Epi - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiPump.Switch </name>
+<topic> EpiPump - Overview  </topic>
+<topic> Epi - Physical Units  </topic>
+<topic> Epi - Concentration Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> EpiPump - Overview </name>
+<label> Overview</label>
+<content>
+
+The Epi Pump enables the model user to change 
+[Epi] levels by infusing Epi at different rates. 
+Data is taken from a variety of human studies 
+relating infusion rates to plasma concentrations 
+of epinephrine.
+
+When the switch is turned on by the model user,
+the rate is the level which is set using the 
+sliding bar in the pump edit box.
+
+Human Data
+Cohen G, Holland B, Sha J and Goldenberg M
+Plasma concentrations of epinephrine and norepinephrine
+during intravenous infusions in man.
+J Clin Invest 38:1935-1941, 1959
+
+Clutter WE, Bier DM, Shah SD and Cryer PE
+Epinephrine plasma metabolic clearance rates and 
+physiologic thresholds for metabolic and hemodynamic 
+actions in man.
+J Clin Invest 66: 94-101, 1980
+
+Stratton JR, Pfeifer MA, Ritchie LJ and Halter JB
+Hemodynamic effects of epinephrine: concentration-effect
+study in humans.
+J Appl Physiol 58(4):1199-1206, 1985
+
+Tidgren B and Hjemdahl P. Renal responses to mental
+stress and epinephrine in humans.
+Am J Physiol 257:F682-F689, 1989
+
+Goldstein DS, Eisenhofer GF, Kopin IJ
+Sources and significance of plasma levels of catechols 
+and their metabolites in humans.
+J Pharmacol Exp Ther 305(3):800-811, 2003
+
+Fitzgerald GA, Barnes P, Hamilton CA, Dollery CT
+Circulating adrenaline and blood pressure: the
+metabolic effects and kinetics of infused adrenaline
+in man. Eur J Clin Invest 10: 401-406, 1980 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Epi - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]  pG/mL or nMol/L
+Plasma Mass  nG or pG
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+Pump units are nG/Min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Epi - Concentration Units  </name>
+<label> Concentration Units </label>
+<content>
+
+Epinephrine (C9 H13 N O3) has a molecular weight
+of 183.
+
+Typical plasma concentration of epinephrine is 
+40pG/mL or 0.22nMol/L. (Multiply by 0.00546 to 
+convert pG/mL to nMol/L).
+
+</content>
+</topicdoc>
+
+   
+End

@@ -1,0 +1,35 @@
+HumMod / Clothes
+
+Created : 21-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 17.4 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Clothes </title>
+
+<maplist>
+  <name> Clothes.Weight </name>
+  <map><val> 0 </val><img> None </img></map>
+  <map><val> 1 </val><img> Summer </img></map>
+  <map><val> 2 </val><img> Normal </img></map>
+  <map><val> 3 </val><img> Winter </img></map>
+  <map><val> 4 </val><img> Artic </img></map>
+</maplist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Clothes.Weight </name>
+  <listname> Clothes.Weight </listname>
+  <nolabel/>
+</slidebar>
+
+</groupbox>
+
+End

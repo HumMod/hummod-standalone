@@ -1,0 +1,41 @@
+HumMod / hCG Reference
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Human Chorionic Gondadotropin
+
+M.W. ~ 36.7 kDa  244 A.A.
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+Units are IU/L.
+
+Concentrations are low outside of pregnancy, so mIU
+are often the units used.
+
+Structure is similar to LH.
+
+Yen et.al. J. Clin. Endocr. 28:1763-1767, 1968.
+
+This may be the definitive paper on half-life. Data
+from surgical females.
+
+LH and hCG showed double exponentials. hCG had half
+lives of 11 hours (660 min) and 23 hours (1380 min).
+
+So to get things started, I'll use
+
+[Conc] = 1.0 IU/L
+Mass ~ 10.0 IU
+k = 0.0009 (1100 Min)
+Secretion = 0.009 IU/Min
+
+End

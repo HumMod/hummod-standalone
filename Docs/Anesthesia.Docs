@@ -1,0 +1,15 @@
+Digital Human / Anesthesia
+
+Created : 01-Apr-05
+Last Modified : 01-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<?path docs\AnesthesiaGas\ ?>
+
+<?include AnesthesiaGas.docs ?>
+
+
+End

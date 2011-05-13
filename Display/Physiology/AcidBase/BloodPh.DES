@@ -1,0 +1,44 @@
+HumMod / BloodPh
+
+Created : 10-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 8.2 </row>
+   <col> 1.0 </col>
+   <high> 12 </high>
+   <wide> 30.0 </wide>
+   <title> Blood pH </title>
+
+<showgraph>
+  <row> 1.4 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> BloodPh.ArtysPh </name>
+      <label> A </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> BloodPh.VeinsPh </name>
+      <label> V </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 7.35 </min><max> 7.45 </max><inc> 0.05 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+</groupbox>
+
+End

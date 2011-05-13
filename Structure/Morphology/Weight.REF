@@ -1,0 +1,68 @@
+HumMod / Weight.REF
+
+Created : 29-Aug-09
+Last Modified : 03-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+From traits, we get 3 masses
+
+# Adipose Tissue (Fat) Mass
+# Skeletal Muscle Mass
+# Other Mass (10 other organs)
+
+The sum of these three masses plus fluids gives us body weight.
+Fluids is blood plus external (mainly gut lumen) H2O.
+
+For heat dynamics, we need three different compartments
+
+# Core Mass (10 organs + Fluids but not Skin & Muscle).
+  Note that the 10 organs are not the 10 organs that constitute
+  other mass. Skin has been excluded and fat has been added.
+# Skeletal Muscle Mass (A big heat generator when active)
+# Skin Mass (the temperature controller)
+
+For initializing blood volume, we need
+
+# Lean Mass (11 organs, not fat)
+# Fat Mass
+
+These two masses are developed independently in Start-General.
+
+So in Weight, we start by calculating the initial mass of
+the 12 major organs. Fat and muscle are independent while
+the 10 other organ split up the Other Mass value.
+
+Then we can sum to get initial organ mass.
+
+Initial Organ Mass
+  Bone
+  Brain
+  Fat
+  GITract
+  Kidney
+  LeftHeart
+  Liver
+  OtherTissue
+  RespiratoryMuscle
+  RightHeart
+  SkeletalMuscle
+  Skin
+
+Fat and lean organ masses are used to calculate initial
+blood volume and external H2O is assumed to be independent
+of body size.
+
+Then initial weight is initial organ mass plus initial
+fluids.
+
+Initial Core for heat is initial organ mass minus muscle
+and skin plus initial fluids.
+
+During a solution, the sums are similar except that no
+initializing is needed -- we just sum.
+
+
+End

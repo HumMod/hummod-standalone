@@ -1,0 +1,85 @@
+HumMod / Contractility
+
+Created : 13-Aug-08
+Last Modified : 2011-04-22
+Author : Tom Coleman and Radu Iliescu
+Copyright : 2008-2011
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 15.8 </high>
+   <wide> 30.0 </wide>
+   <title> Contractility </title>
+
+<structurename> LeftHeartPumping-Systole </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Contractility</name>
+   <format><decimal> 2 </decimal></format>
+   <label> Contractility </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Contractility </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> LeftHeart-BetaReceptors.Activity </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Beta Effect </label>
+</showvalue>
+
+<repeatlist>
+  <name> Contractility-Basic </name>
+  <repeat><reps> 50 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 1.0 </col>
+  <name> Contractility-Basic </name>
+  <listname> Contractility-Basic </listname>
+  <label> Basic </label>
+</slidebar>
+
+<radiobuttons>
+  <row> 12.8 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.NoYes </listname>
+  <label> Progressive Failure? </label>
+</radiobuttons>
+
+<slidebar>
+  <row> 14.2 </row><col> 1.0 </col>
+  <name> Degree </name>
+  <listname> Common.Percent </listname>
+  <label> Rate (% Per Day) </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

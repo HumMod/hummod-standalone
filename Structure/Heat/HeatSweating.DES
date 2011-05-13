@@ -1,0 +1,33 @@
+HumMod / HeatSweating
+
+Created : 27-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> HeatSweating </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Flux </name>
+
+<def>
+  <name> Flux </name>
+  <val> HeatSweatEvaporation.Flux + HeatSweatConvection.Flux </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

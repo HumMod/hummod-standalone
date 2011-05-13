@@ -1,0 +1,20 @@
+HumMod / PeripheralResistance.REF
+
+Created : 05-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+  TPR = (AP - RAP) / CO
+
+Units are mmHg/(mL/Min).
+
+A typical value is 0.017.
+
+So far, TPR is used for display only, so we'll calculate its value
+in wrapup.
+
+End

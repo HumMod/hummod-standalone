@@ -1,0 +1,84 @@
+HumMod / AirSupply-GasTanks
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AirSupply-GasTanks </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+
+<parm><name> O2Valve(%) </name><val> 21.0 </val></parm>
+<var><name> O2(%) </name></var>
+
+<parm><name> N2Valve(%) </name><val> 79.0 </val></parm>
+<var><name> N2(%) </name></var>
+
+<parm><name> CO2Valve(%) </name><val> 0.0 </val></parm>
+<var><name> CO2(%) </name></var>
+
+<parm><name> COValve(PPM) </name><val> 0.0 </val></parm>
+<var><name> COValve(%) </name></var>
+<var><name> CO(%) </name></var>
+
+<parm><name> AnestheticValve(%) </name><val> 0.0 </val></parm>
+<var><name> Anesthetic(%) </name></var>
+
+<var><name> SumValves </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> COValve(%) </name>
+  <val> COValve(PPM) / 1e4  </val>
+</def>
+
+<def>
+  <name> SumValves </name>
+  <val>
+      O2Valve(%)
+    + N2Valve(%)
+    + CO2Valve(%)
+    + COValve(%)
+    + AnestheticValve(%)
+  </val>
+</def>
+
+<def>
+  <name> O2(%) </name>
+  <val> ( 100.0 * O2Valve(%) ) / SumValves </val>
+</def>
+
+<def>
+  <name> N2(%) </name>
+  <val> ( 100.0 * N2Valve(%) ) / SumValves </val>
+</def>
+
+<def>
+  <name> CO2(%) </name>
+  <val> ( 100.0 * CO2Valve(%) ) / SumValves </val>
+</def>
+
+<def>
+  <name> CO(%) </name>
+  <val> ( 100.0 * COValve(%) ) / SumValves </val>
+</def>
+
+<def>
+  <name> Anesthetic(%) </name>
+  <val> ( 100.0 * AnestheticValve(%) ) / SumValves </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

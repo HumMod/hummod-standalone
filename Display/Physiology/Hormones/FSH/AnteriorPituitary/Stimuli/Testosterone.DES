@@ -1,0 +1,60 @@
+HumMod / Testosterone
+
+Created : 03-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.4 </row>
+   <col> 32.0 </col>
+   <high> 11.0 </high>
+   <wide> 30.0 </wide>
+   <title> Testosterone </title>
+
+<structurename> FSH-AnteriorPituitary </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> TestosteroneEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Testosterone Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Testosterone.[Conc(nMol/L)] </name>
+    <label> [Testosterone] </label>
+    <scale><min> 0 </min><max> 50 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 1 </max></scale>
+  </yaxis>
+
+  <curvename> TestosteroneEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 9.4 </row><col> 1.0 </col>
+   <name> Testosterone.[Conc(nMol/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Testosterone(nMol/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

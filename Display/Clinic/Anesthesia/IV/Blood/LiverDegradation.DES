@@ -1,0 +1,67 @@
+HumMod / LiverDegradation
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.8 </high>
+   <wide> 30.0 </wide>
+   <title> Liver Degradation </title>
+
+<structurename> AnesthesiaIVLiver </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Degrade </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Degrade  </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 1.0 </max></scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> AnesthesiaIVLiver.DegradeK </name>
+  <repeat><reps> 50 </reps><stepsize> 0.01 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 10.0 </row><col> 1.0 </col>
+  <name> DegradeK </name>
+  <listname> AnesthesiaIVLiver.DegradeK </listname>
+  <label> Rate Const </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for degradation rate constant </line>
+  <line> are /Min. </line>
+  <line>  </line>
+  <line> Normal value is 0.09. </line>
+</infobutton>
+
+</groupbox>
+
+End

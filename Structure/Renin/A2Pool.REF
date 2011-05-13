@@ -1,0 +1,48 @@
+HumMod / A2Pool Reference
+
+Created : 22-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   The slope of [AII] vs. AII infusion
+   rate is defined here.
+
+   AJP 243:R82-R91, 1982.
+
+   Ian Reid has a slope of 22 for dogs.
+
+   Circ. Res. 34:69-77, 1974.
+
+   Oelkers has a slope of 27 in humans,
+   supported by a large data set.
+
+   AJP 249:F299-F307, 1985.
+
+   Olsen has a slope of around 10.  I
+   initially used this slope and it
+   wasn't satisfactory.
+
+   PRA = 2.0 (Ambilatory)
+   [AII] = 20 pG/mL
+   Slope = 25
+   Body Weight = 77 kG
+   Normal Formation = 0.8 (nG/Min)/kG
+      or 60 nG/Min
+
+   These values are the basis for
+   A2CONC.
+
+   A normal PRA of 2.0 (nG AI/Hr)/mL
+   produces endogenous AII at a rate
+   of 60 nG/Min.  This is the basis
+   for a CE activity of 30.
+
+   MW AII = 1046.  Thus,
+
+      1.046 pG/mL = 1.0 pMol/L
+
+
+End

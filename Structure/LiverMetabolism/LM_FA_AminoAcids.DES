@@ -1,0 +1,68 @@
+HumMod / LM_FA_AminoAcids
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_FA_AminoAcids </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<var><name> InsulinEffect </name></var>
+<var><name> AminoAcidEffect </name></var>
+
+<var><name> AminoAcidUptake </name></var>
+<parm><name> BasicUptake </name><val> 20.0 </val></parm>
+
+<constant><name> AA_TO_FA </name><val> 0.437 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>  0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 50 </x><y> 1.0 </y><slope> 0.05 </slope></point>
+  <point><x> 80 </x><y> 4.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> AminoAcidEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  50 </x><y> 1.0 </y><slope> 0.02 </slope></point>
+  <point><x> 200 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ LM_Insulin.[InsulinDelayed] ] </val></def>
+<def><name> AminoAcidEffect </name><val> AminoAcidEffect [ AAPool.[AA(mG/dL)] ] </val></def>
+
+<def><name> AminoAcidUptake </name>
+  <val>
+      BasicUptake
+    * InsulinEffect
+    * AminoAcidEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+<def><name> Rate </name><val> AminoAcidUptake * AA_TO_FA </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

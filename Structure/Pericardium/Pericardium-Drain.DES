@@ -1,0 +1,44 @@
+HumMod / Pericardium-Drain
+
+Created : 29-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Pericardium-Drain </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> Conductance </name><val> 0.0 </val></parm>
+
+<var><name> BloodFlow </name></var>
+<var><name> PressureGradient </name></var>
+
+<parm><name> ExternalPressure </name><val> 0.0 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> PressureGradient </name>
+  <val> Pericardium-Cavity.Pressure - ExternalPressure </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> ( PressureGradient * Conductance ) MAX 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

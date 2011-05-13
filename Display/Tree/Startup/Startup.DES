@@ -1,0 +1,397 @@
+HumMod / Startup
+
+Created : 23-Nov-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> STARTUP </name>
+  <label> Startup </label>
+  <parent> MAINMENU </parent>
+</branch>
+
+<?path Display\Tree\Startup\ ?>
+
+<leaf>
+  <name> Startup-Morphology </name>
+  <label> Morphology </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-BodySize </name>
+  <label> Body Size </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-BodyH2O </name>
+  <label> Body H2O </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Blood </name>
+  <label> Blood </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Heat </name>
+  <label> Heat </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Electrolytes </name>
+  <label> Electrolytes </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Hormones </name>
+  <label> Hormones </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Hormones-General </name>
+  <label> General </label>
+  <parent> Startup-Hormones </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Hormones-Metabolic </name>
+  <label> Metabolic </label>
+  <parent> Startup-Hormones </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Hormones-Catechols </name>
+  <label> Catechols </label>
+  <parent> Startup-Hormones </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Hormones-Gender </name>
+  <label> Gender </label>
+  <parent> Startup-Hormones </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<!--
+<branch>
+  <name> Startup-VascularCompartments </name>
+  <label> Vascular Compartments </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-VascularCompartments-SystemicArteries </name>
+  <label> Systemic Arteries </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-SystemicVeins </name>
+  <label> Systemic Veins </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-SplanchnicVeins </name>
+  <label> Splanchnic Veins </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-RightAtrium </name>
+  <label> Right Atrium </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-RightVentricle </name>
+  <label> Right Ventricle </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-PulmonaryArtery </name>
+  <label> Pulmonary Artery </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-PulmonaryCapillaries </name>
+  <label> Pulmonary Capillaries </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-PulmonaryVeins </name>
+  <label> Pulmonary Veins </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-LeftAtrium </name>
+  <label> Left Atrium </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-VascularCompartments-LeftVentricle </name>
+  <label> Left Ventricle </label>
+  <parent> Startup-VascularCompartments </parent>
+</leaf>
+-->
+
+<separatorbar>
+  <parent> STARTUP </parent>
+</separatorbar>
+
+<branch>
+  <name> Startup-AdiposeTissue </name>
+  <label> Adipose Tissue </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-AdiposeTissue-Size </name>
+  <label> Size </label>
+  <parent> Startup-AdiposeTissue </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-AdiposeTissue-Function </name>
+  <label> Function </label>
+  <parent> Startup-AdiposeTissue </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Bone </name>
+  <label> Bone </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Bone-Size </name>
+  <label> Size </label>
+  <parent> Startup-Bone </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Bone-Function </name>
+  <label> Function </label>
+  <parent> Startup-Bone </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Brain </name>
+  <label> Brain </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Brain-Size </name>
+  <label> Size </label>
+  <parent> Startup-Brain </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Brain-Function </name>
+  <label> Function </label>
+  <parent> Startup-Brain </parent>
+</leaf>
+
+<branch>
+  <name> Startup-GITract </name>
+  <label> GI Tract </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-GITract-Size </name>
+  <label> Size </label>
+  <parent> Startup-GITract </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-GITract-Function </name>
+  <label> Function </label>
+  <parent> Startup-GITract </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Kidney </name>
+  <label> Kidney </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Kidney-Size </name>
+  <label> Size </label>
+  <parent> Startup-Kidney </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Kidney-Function </name>
+  <label> Function </label>
+  <parent> Startup-Kidney </parent>
+</leaf>
+
+<branch>
+  <name> Startup-LeftHeart </name>
+  <label> Left Heart </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-LeftHeart-Size </name>
+  <label> Size </label>
+  <parent> Startup-LeftHeart </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-LeftHeart-Function </name>
+  <label> Function </label>
+  <parent> Startup-LeftHeart </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Liver </name>
+  <label> Liver </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Liver-Size </name>
+  <label> Size </label>
+  <parent> Startup-Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Liver-Function </name>
+  <label> Function </label>
+  <parent> Startup-Liver </parent>
+</leaf>
+
+<branch>
+  <name> Startup-OtherTissue </name>
+  <label> Other Tissue </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-OtherTissue-Size </name>
+  <label> Size </label>
+  <parent> Startup-OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-OtherTissue-Function </name>
+  <label> Function </label>
+  <parent> Startup-OtherTissue </parent>
+</leaf>
+
+<branch>
+  <name> Startup-RespiratoryMuscle </name>
+  <label> Respiratory Muscle </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-RespiratoryMuscle-Size </name>
+  <label> Size </label>
+  <parent> Startup-RespiratoryMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-RespiratoryMuscle-Function </name>
+  <label> Function </label>
+  <parent> Startup-RespiratoryMuscle </parent>
+</leaf>
+
+<branch>
+  <name> Startup-RightHeart </name>
+  <label> Right Heart </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-RightHeart-Size </name>
+  <label> Size </label>
+  <parent> Startup-RightHeart </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-RightHeart-Function </name>
+  <label> Function </label>
+  <parent> Startup-RightHeart </parent>
+</leaf>
+
+<branch>
+  <name> Startup-SkeletalMuscle </name>
+  <label> Skeletal Muscle </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-SkeletalMuscle-Size </name>
+  <label> Size </label>
+  <parent> Startup-SkeletalMuscle </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-SkeletalMuscle-Function </name>
+  <label> Function </label>
+  <parent> Startup-SkeletalMuscle </parent>
+</leaf>
+
+<branch>
+  <name> Startup-Skin </name>
+  <label> Skin </label>
+  <parent> STARTUP </parent>
+</branch>
+
+<leaf>
+  <name> Startup-Skin-Size </name>
+  <label> Size </label>
+  <parent> Startup-Skin </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Skin-Function </name>
+  <label> Function </label>
+  <parent> Startup-Skin </parent>
+</leaf>
+
+<separatorbar>
+  <parent> STARTUP </parent>
+</separatorbar>
+
+<leaf>
+  <name> Startup-Technical </name>
+  <label> Technical </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+<leaf>
+  <name> Startup-Miscellaneous </name>
+  <label> Miscellaneous </label>
+  <parent> STARTUP </parent>
+</leaf>
+
+
+
+
+End

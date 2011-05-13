@@ -1,0 +1,26 @@
+HumMod / LiverMetabolism
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Organs\LiverMetabolism\ ?>
+
+<?include AminoAcids\AminoAcids.DES ?>
+<?include FattyAcids\FattyAcids.DES ?>
+<?include Gluconeogenesis\Gluconeogenesis.DES ?>
+<?include Glucose\Glucose.DES ?>
+<!-- <?include Glycerol\Glycerol.DES ?> -->
+<?include Glycogen\Glycogen.DES ?>
+<?include Ketoacids\Ketoacids.DES ?>
+<!-- <?include Lactate\Lactate.DES ?> -->
+
+<?include PortalVein\PortalVein.DES ?>
+
+<?include Insulin\Insulin.DES ?>
+
+End

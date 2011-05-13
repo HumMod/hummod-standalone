@@ -1,0 +1,50 @@
+HumMod / Midodrine Reference
+
+Created : 06-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Midodrine comes with an HCL that it may
+lose in the gut.  Then in the ECFV it
+loses a glycine to become the active
+desglymidodrine.
+
+   MidodrineHCL    290.74
+   HCl              34.46
+   Midodrine       254.30
+   Glycine          75.07
+   Desglymidodrine 179.23
+
+Tabs are 2.5 and 5.0 mG.  Typical dose
+is 10 - 30 mG/Day.
+
+Best units for mass is probably uG.  [Conc]
+is usually reported in nG/mL which is also
+uG/L.
+
+Volume of distribution is quite large at
+308 L. But I used smaller values in the
+model -- must have found a better reference.
+
+Three things happen when the tabs go into
+the gut.
+
+# Physical units go from mG to uG.
+# The bioavailability (93%) is dialed in.
+# Midodrine HCl (290.74) loses its HCl (34.46)
+  to become Midodrine (254.3).                 */
+
+NIPHCL 254.3 / 290.74 or 0.875
+
+Total scale is 1000.0 * 0.93 * (254.3 / 290.74)
+or 1000 * BIOVAIL * NIPHCL.
+
+When midodrine (254.3) goes across to desglymidodrine
+(179.23) a glycine gets nipped (75.07).
+
+NIPGLYCINE = 179.23 / 254.3 or 0.705
+
+End

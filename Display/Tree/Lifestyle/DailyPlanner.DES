@@ -1,0 +1,28 @@
+HumMod / DailyPlanner
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> DailyPlanner </name>
+  <label> Daily Planner </label>
+  <parent> LIFESTYLE </parent>
+</branch>
+
+<leaf>
+  <name> DailyPlannerControl </name>
+  <label> Control </label>
+  <parent> DailyPlanner </parent>
+</leaf>
+
+<leaf>
+  <name> DailyPlannerSchedule </name>
+  <label> Schedule </label>
+  <parent> DailyPlanner </parent>
+</leaf>
+
+End

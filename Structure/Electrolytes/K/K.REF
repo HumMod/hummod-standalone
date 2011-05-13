@@ -1,0 +1,82 @@
+HumMod / K
+
+Created : 20-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   From depletion studies, it appears
+   that 55% of cell K+ is captive.
+
+   Medicine 60:339-354, 1981.
+   Acta Med. Scand. Suppl 647:67, 1981.
+
+      Free For Flux 1784 (45%)
+      Captive K+    2180 (55%)
+                    ----
+      Total         3964
+
+   An injection of K+ isotope shows
+   10% not exchanged at 20 hours.
+
+   JCI 29:1280, 1950.
+
+   I fit an exponential to fractional
+   ECFV decay.
+
+      ECFV = exp (-K * Hr)
+
+
+      0.10 = exp (-K * 20)
+
+      K = 0.115 /Hr or
+          0.002 /Min for ECFV turnover.
+
+              Q      K    [K+]  Flux    K'
+            ----  ------ ------ ----- -----
+      ECFV    66  0.002  0.0044 0.132 30.0  ToCells
+      Cell  1784  7.4E-5 0.142  0.132 2.066 FmCells
+
+   Primary aldosteronism decreases [K+],
+   but cell K+ loss is tempered somewhat
+   by an [aldo] induced increase in the
+   K+ influx rate constant.
+
+               Disease  Post Op.
+               -------  --------
+      [Aldo]     44.8      9.2
+      [K+]        2.9      4.3
+      Body K+    2374     2625
+
+   Brit. Med. J. 1:135-138, 1975.
+
+   An increase in the influx rate
+   constant to 1.1X will explain this
+   data.
+
+   Young saw a stronger effect in dogs,
+   but only at higher plasma [K+].
+
+   Young. AJP 243:R526-R530, 1982.
+
+   An [aldo] of 5X increases total cell
+   K by about 20% when plasma [K+] is
+   4 - 6.  I don't know how to model
+   this.
+
+   The Nernst equation is
+
+                      [K+] Inside
+   V (mV) = -61 * log ------------
+                      [K+] Outside
+
+
+
+
+
+
+
+End

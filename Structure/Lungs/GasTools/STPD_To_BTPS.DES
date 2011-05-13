@@ -1,0 +1,82 @@
+HumMod / STPD_To_BTPS
+
+Created : 01-Mar-07
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+Copy in V1. Copy out V2.
+
+<structure><name> STPD_To_BTPS </name>
+
+<variables>
+
+<var>
+  <name> V1 </name>
+</var>
+
+<var>
+  <name> V2 </name>
+</var>
+
+<var>
+  <name> P1 </name>
+</var>
+
+<constant>
+  <name> P2 </name>
+  <val> 760.0 </val>
+</constant>
+
+<var>
+  <name> T1 </name>
+</var>
+
+<constant>
+  <name> T2 </name>
+  <val> 273.2 </val>
+</constant>
+
+<var>
+  <name> VaporPres </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<copy>
+  <from> HeatCore.Temp(C) </from>
+  <to> TempTools.Temp </to>
+</copy>
+
+<call> TempTools.TempToSatPres </call>
+
+<copy>
+  <from> TempTools.Pres</from>
+  <to> VaporPres </to>
+</copy>
+
+<def>
+  <name> P1 </name>
+  <val> AirSupply-InspiredAir.Pressure - VaporPres </val>
+</def>
+
+<def>
+  <name> T1 </name>
+  <val> HeatCore.Temp(K) </val>
+</def>
+
+<def>
+  <name> V2 </name>
+  <val> V1 * ( P2 / P1 ) * ( T1 / T2 ) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

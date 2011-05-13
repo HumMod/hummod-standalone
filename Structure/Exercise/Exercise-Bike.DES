@@ -1,0 +1,94 @@
+HumMod / Exercise-Bike
+
+Created : 24-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Exercise-Bike </name>
+
+<variables>
+
+<parm>
+  <name> Power(W) </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> Power(kPM/Min) </name>
+</var>
+
+<parm>
+  <name> RPM </name>
+  <val> 50.0 </val>
+</parm>
+
+<timervar>
+  <name> ElapsedTime </name>
+  <val> 0.0 </val>
+</timervar>
+
+<constant>
+  <name> WattToKPMM </name>
+  <val> 6.12 </val>
+</constant>
+
+<parm>
+  <name> Efficiency(%) </name>
+  <val> 30.0 </val>
+</parm>
+
+<var>
+  <name> Efficiency </name>
+</var>
+
+<var>
+  <name> TotalWatts </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Power(kPM/Min) </name>
+  <val> WattToKPMM * Power(W) </val>
+</def>
+
+<def>
+  <name> Efficiency </name>
+  <val> 0.01 * Efficiency(%) </val>
+</def>
+
+<def>
+  <name> TotalWatts </name>
+  <val> Power(W) / Efficiency </val>
+</def>
+
+<if><test> Status.Exertion EQ 3 </test>
+<true>
+  <timer><name> ElapsedTime </name><state> UP </state></timer>
+</true>
+<false>
+  <timer><name> ElapsedTime </name><state> OFF </state></timer>
+</false>
+</if>
+
+</block>
+
+<block><name> ResetElapsedTime </name>
+
+<timer>
+  <name> ElapsedTime </name>
+  <val> 0.0 </val>
+</timer>
+
+</block>
+
+</definitions>
+</structure>
+
+End

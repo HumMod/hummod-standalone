@@ -1,0 +1,318 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EpiPool </structurename>
+
+<vardoc>
+<name> EpiPool.[Epi(nMol/L)]</name>
+<topic> Epinephrine - Overview </topic>
+<topic> [Epi] - Physical Units </topic>
+<topic> [Epi] - Concentration Units </topic>
+<seealso> AlphaPool.Effect </seealso>
+<seealso> EpiPool.Change </seealso>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.[Epi(pG/mL)] </name>
+<topic> Epinephrine - Overview </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units  </topic>
+</vardoc>
+
+
+<vardoc>
+<name> EpiPool.[Epi] </name>
+<topic> Epinephrine - Overview </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.Change </name>
+<topic> Change - EP1Definition </topic>
+<topic> [Epi] - Physical Units </topic>
+<topic> [Epi] - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.F1 </name>
+<topic> F1 - EP2Definition </topic>
+<topic> Epinephrine - Overview </topic>
+<topic> [Epi] - Physical Units </topic>
+<topic> [Epi] - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.F2 </name>
+<topic> F2 - EP3Definition </topic>
+<topic> Epinephrine - Overview  </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units  </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.Gain </name>
+<topic> Gain - EP4Definition </topic>
+<seealso> EpiSecretion.Rate </seealso>
+<seealso> EpiPump.Rate </seealso>
+<seealso> Pheochromocytoma.EpiRate </seealso>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.InitialMass </name>
+<topic> InitialMass - EP5Definition </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units  </topic>
+<seealso> EpiPool.Mass </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> EpiPool.Loss </name>
+<topic> Loss - EP6Definition </topic>
+<seealso> EpiClearance.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.Mass </name>
+<topic> Mass - EP7Definition  </topic>
+<topic> Epinephrine - Overview </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units  </topic>
+<seealso> ECFV.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> EpiPool.Target[Epi] </name>
+<topic> Target[Epi] - EP8Definition </topic>
+</vardoc>
+
+<topicdoc>
+<name> Epinephrine - Overview </name>
+<label> Overview </label>
+<content> 
+
+In 1895, Oliver and Schaefer first showed that a substance 
+present in the adrenal gland was pressor. This substance was 
+subsequently shown to be epinephrine.
+
+Oliver G, Schaefer EA. The physiologic effects of extracts
+from the suprarenal capsules. J Physiol 18:230-276, 1895
+
+Barger G, Dale HH. Chemical structure and sympathomimetic
+action of amines. J Physiol 41:19-59, 1910.
+ 
+Stimulation of the sympathetic nerves to the adrenal 
+medullae causes release of both epinephrine and 
+norepinephrine into the circulation. Catecholamines 
+exert their effects by stimulating specific protein 
+receptor sites known as adrenergic receptors. There are 
+two types of adrenergic receptors, alpha and beta receptors.
+Epinephrine excites both types of receptors.
+
+The epinephrine pool or mass is a function of epinephrine 
+secretion, epinephrine clearance and the volume of distribution
+which is the ECFV.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Epi] - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]  pG/mL or nMol/L
+Mass  nG or pG
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> [Epi] - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Epinephrine (C9 H13 N O3) has a molecular weight
+of 183. Typical plasma concentration is 40pG/mL.
+or 0.22nMol/L (Multiply by 0.00546 to convert pG/mL
+to nMol/L).
+
+Fitzgerald GA, Barnes P, Hamilton CA, Dollery CT
+Circulating adrenaline and blood pressure: the
+metabolic effects and kinetics of infused adrenaline
+in man. Eur J Clin Invest 10: 401-406, 1980
+
+Cohen G, Holland B, Sha J and Goldenberg M
+Plasma concentrations of epinephrine and norepinephrine
+during intravenous infusions in man.
+J Clin Invest 38:1935-1941, 1959
+
+Clutter WE, Bier DM, Shah SD and Cryer PE
+Epinephrine plasma metabolic clearance rates and 
+physiologic thresholds for metabolic and hemodynamic 
+actions in man.
+J Clin Invest 66: 94-101, 1980
+
+Stratton JR, Pfeifer MA, Ritchie LJ and Halter JB
+Hemodynamic effects of epinephrine: concentration-effect
+study in humans.
+J Appl Physiol 58(4):1199-1206, 1985
+
+Tidgren B and Hjemdahl P. Renal responses to mental
+stress and epinephrine in humans.
+Am J Physiol 257:F682-F689, 1989
+
+Goldstein DS, Eisenhofer GF, Kopin IJ
+Sources and significance of plasma levels of catechols 
+and their metabolites in humans.
+J Pharmacol Exp Ther 305(3):800-811, 2003 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - EP1Definition </name>
+<label> Definition </label>
+<content>
+
+Changes in the Epi pool or mass are a function of both 
+gains and losses in epinephrine over time. Gains may 
+occur from increased secretion due to increased sympathetic 
+nerve stimulation; from infusion of epinephrine
+using the epi pump feature of the model and/or increases 
+from a pheochromocytoma.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> F1 - EP2Definition </name>
+<label> Definition </label>
+<content>
+
+F1 is a mathematical variable used in the calculation of 
+the mass of Epi. F1 is the gain in Epi over time and is 
+a function of  Epi secretion rate, Epi pump rate and
+pheochromocytoma Epi rate. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> F2 - EP3Definition </name>
+<label> Definition </label>
+<content>
+
+F2 is a mathematical variable used in the calculation of 
+the mass of Epi. F2 is the loss in Epi over time and is 
+a function of  Epi clearance rate. 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Gain - EP4Definition </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in mass of epinephrine 
+and is a function of epinephrine secretion rate, 
+epinephrine from infusion (using the Epi pump feature) and
+any epinephrine secretion from a possible pheochromocytoma.
+The model user may create a pheochromocytoma and 
+define different levels of severity.
+   
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - EP6Definition </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as a negative change in mass of epinephrine
+and is a function of clearance rate and ECFV.
+
+Goldstein DS, Eisenhofer G, Kopin IJ. Sources and
+significance of plasma levels of catechols and their
+metabolites in humans. 
+J Pharmacol Exp Ther 305(3):800-811, 2003 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialMass - EP5Definition </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of Epi. Since the 
+plasma concentration is 40pG/mL (the target[Epi]) and the
+volume of distribution is the ECFV (15,000mL), then the 
+initial mass or circulating pool is 600nG or 600,000pG.
+
+Initial Mass = Target[Epi]*ECFV.Vol
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Mass - EP7Definition </name>
+<label> Definition </label>
+<content>
+
+EpiPOOL
+The Epi Pool or mass is a function of Epi Secretion, 
+Epi Clearance and the volume of distribution. 
+Since the volume of distribution for epinephrine is 
+the ECFV (15,000 mL), the typical circulating pool
+is 600nG or 600,000pG. This is the initial mass of Epi.
+
+Changes in the Epi pool or mass are a function of both 
+gains and losses in epinephrine over time. Gains may 
+occur from increased secretion due to increased sympathetic 
+nerve stimulation; from infusion of epinephrine
+using the epi pump feature of the model and/or increases 
+from a pheochromocytoma.  
+Changes in the pool are calculated in the model using two 
+mathematical variables, F1 and F2, which integrate gains and 
+losses over time.
+
+Fitzgerald GA, Barnes P, Hamilton CA, Dollery CT.
+Circulating Adrenaline and blood pressure: the
+metabolic effects and kinetics of infused adrenaline
+in man. Eur J Clin Invest 10: 401-406, 1980.
+
+Goldstein DS, Eisenhofer G, Kopin IJ. Sources and
+significance of plasma levels of catechols and their
+metabolites in humans. 
+J Pharmacol Exp Ther 305(3):800-811, 2003 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Target[Epi] - EP8Definition </name>
+<label> Definition </label>
+<content>
+
+The target[Epi] is the plasma concentration of epinephrine
+and under normal conditions is 40pG/mL.
+
+</content>
+</topicdoc>
+
+   
+End

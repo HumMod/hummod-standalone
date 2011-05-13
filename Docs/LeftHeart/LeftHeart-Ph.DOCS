@@ -1,0 +1,65 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Ph </structurename>
+
+<vardoc>
+<name> LeftHeart-Ph.[SID(mEq/L)] </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Ph.[SID] </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Ph.[SID] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> KCell.[K+] </seealso>
+<seealso> CellSID.OtherCations </seealso>
+<seealso> CellSID.StrongAnions </seealso>
+<seealso> LeftHeart-Lactate.[Lac-] </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Ph.Ph </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> PhCells.pH </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

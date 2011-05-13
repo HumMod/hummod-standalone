@@ -1,0 +1,87 @@
+HumMod / Ovaries-Follicle
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Ovaries\ ?>
+
+<?include Follicle-Growth.DES ?>
+<?include Follicle-Atresia.DES ?>
+
+<structure><name> Ovaries-Follicle </name>
+
+<variables>
+
+<var><name> Growth </name></var>
+<var><name> Atresia </name></var>
+
+<var><name> Radius(mM) </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 65 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> Follicle-Growth.Dervs </call>
+<call> Follicle-Atresia.Dervs </call>
+
+<def><name> Growth </name><val> Follicle-Growth.Growth </val></def>
+<def><name> Atresia </name><val> Follicle-Atresia.Rate </val></def>
+<def><name> Change </name><val> Growth - Atresia </val></def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+<test>
+       ( Ovaries.Cycling? )
+   AND ( Ovaries.Phase NE Ovaries.IS_FOLLICULAR )
+   AND ( ( Mass + Ovaries-CorpusLuteum.Mass ) LE 400.0 )
+   AND ( FSH-Circulating.[Conc(IU/L)] GT 3.0 )
+</test>
+<true>
+  <def><name> Ovaries.Phase </name><val> Ovaries.IS_FOLLICULAR </val></def>
+  <def><name> Mass </name><val> 65 </val></def>
+</true>
+</if>
+
+<if>
+<test>
+       ( LH-Circulating.[Conc(IU/L)] GT 20.0 )
+   AND ( Mass GT 2800.0 )
+   AND ( Ovaries.Phase EQ Ovaries.IS_FOLLICULAR )
+</test>
+<true>
+  <def><name> Ovaries.Phase </name><val> Ovaries.IS_OVULATORY </val></def>
+</true>
+</if>
+
+<def>
+  <name> Radius(mM) </name>
+  <val> ( 0.239 * Mass ) ^ 0.333 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

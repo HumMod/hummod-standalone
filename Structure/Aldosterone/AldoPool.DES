@@ -1,0 +1,86 @@
+HumMod / AldoPool
+
+Created : 07-Apr-05
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> AldoPool </name>
+
+<variables>
+
+<var><name> [Aldo] </name></var>
+<var><name> [Aldo(pMol/L)] </name></var>
+<var><name> [Aldo(nG/dL)] </name></var>
+
+<constant><name> PMOLTONG </name><val> 0.0360 </val></constant>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Target[Aldo] </name><val> 0.330 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 142.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialMass </name><val> Target[Aldo] * BodyH2O.InitialVol </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Aldo] </name>
+  <val> Mass / BodyH2O.Vol </val>
+</def>
+
+<def>
+  <name> [Aldo(pMol/L)] </name>
+  <val> 1000.0 * [Aldo] </val>
+</def>
+
+<def>
+  <name> [Aldo(nG/dL)] </name>
+  <val> PMOLTONG * [Aldo(pMol/L)] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> AldoSecretion.Rate + AldoPump.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> AldoDisposal.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

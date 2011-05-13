@@ -1,0 +1,40 @@
+HumMod / Clinic
+
+Created : 15-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Clinic\ ?>
+
+<?include A-VFistula\A-VFistula.DES ?>
+<?include Anesthesia\Anesthesia.DES ?>
+<?include Autopsy\Autopsy.DES ?>
+<?include Blockers\Blockers.DES ?>
+<?include CardiacPacemaker\CardiacPacemaker.DES ?>
+<?include CPR\CPR.DES ?>
+<?include Defibrillator\Defibrillator.DES ?>
+<?include Drugs\Drugs.DES ?>
+<?include ECG\ECG.DES ?>
+<?include Evaluation\Evaluation.DES ?>
+<?include Hemodialysis\Hemodialysis.DES ?>
+<?include Hemorrhage\Hemorrhage.DES ?>
+<!-- <?include InfusionPumps\InfusionPumps.DES ?> -->
+<?include InsulinInjection\InsulinInjection.DES ?>
+<?include IVDrip\IVDrip.DES ?>
+<?include IVEpinephrineInjection\IVEpinephrineInjection.DES ?>
+<?include Morphology\Morphology.DES ?>
+<?include MyocardialInfarction\MyocardialInfarction.DES ?>
+<?include OralH2OGlucoseLoad\OralH2OGlucoseLoad.DES ?>
+<?include Pericardium\Pericardium.DES ?>
+<?include Pneumothorax\Pneumothorax.DES ?>
+<!-- <?include Stimulators\Stimulators.DES ?> -->
+<?include Transfusion\Transfusion.DES ?>
+<?include Ventilator\Ventilator.DES ?>
+<?include VentricularFibrillation\VentricularFibrillation.DES ?>
+
+
+End

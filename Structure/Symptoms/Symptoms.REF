@@ -1,0 +1,34 @@
+HumMod / Symptoms.REF
+
+Created : 21-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Symptoms are ennumerated. The messages
+originally were longer since they were
+displayed in a message box that supported
+word wrap. Now the messages are in a
+list used for formatting. Maximum length
+is about 33 characters. Longer messages
+will be truncated.
+
+ 0 - "I'm feeling OK."
+ 1 - Your patient is not responding.
+ 2 - "I've got a bad chest pain."
+ 3 - "I can't get enough air."
+ 4 - "I get tired real easy."
+ 5 - "I'm confused."
+ 6 - "I'm dizzy"
+ 7 - "I've got swelling in my head."
+ 8 - "I've got swelling in my gut."
+ 9 - "I've got swelling in my feet."
+10 - "My urine gives me trouble."
+11 - "I'm at work."
+12 - "I'm in aerobics."
+13 - "I'm on the bike."
+14 - "I'm on the treadmill."
+
+End

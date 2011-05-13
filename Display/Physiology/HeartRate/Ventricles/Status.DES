@@ -1,0 +1,71 @@
+HumMod / Status
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 9.2 </high>
+   <wide> 30.0 </wide>
+   <title> Status </title>
+
+<structurename> Heart-Ventricles </structurename>
+
+<checkmark>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> SANode-Rate.Is_SinusRhythm </name>
+  <label> Sinus Rhythm </label>
+</checkmark>
+
+<checkmark>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> AVBlock </name>
+  <label> A-V Block </label>
+</checkmark>
+
+<checkmark>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Is_VentricularRhythm </name>
+  <label> Ventricular Rhythm </label>
+</checkmark>
+
+<checkmark>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> Heart-Pacemaker.Switch </name>
+  <label> Heart Pacemaker </label>
+</checkmark>
+
+<checkmark>
+  <row> 5.4 </row><col> 1.0 </col>
+  <name> Heart-VFib.Is_Fibrillating </name>
+  <label> Ventricular Fibrillation </label>
+</checkmark>
+
+<checkmark>
+  <row> 6.4 </row><col> 1.0 </col>
+  <name> Heart-Asystole.Is_Asystole </name>
+  <label> ASystole </label>
+</checkmark>
+
+<maplist><name> CPR-Heart.Status(1) </name>
+  <map><val> 0 </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Ready </img></map>
+  <map><val> 2 </val><img> Active </img></map>
+</maplist>
+
+<showvalue>
+  <row> 7.6 </row><col> 1.0 </col>
+  <name> CPR-Heart.Status </name>
+  <format><list> CPR-Heart.Status(1) </list></format>
+  <label> CPR is </label>
+  <noequals/>
+</showvalue>
+
+</groupbox>
+
+End

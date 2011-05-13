@@ -1,0 +1,61 @@
+HumMod / LT_InterstitialProtein
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LT_InterstitialProtein </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [Protein] </name></var>
+<var><name> [Protein(G/dL)] </name></var>
+
+<var><name> COP </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 75.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.75 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> [Protein] </name><val> Mass / LT_InterstitialWater.Vol </val></def>
+<def><name> [Protein(G/dL)] </name><val> 100.0 * [Protein] </val></def>
+
+<copy><from> [Protein] </from><to> Colloids.[Prot] </to></copy>
+  <call> Colloids.GetPres </call>
+<copy><from> Colloids.Pres </from><to> COP </to></copy>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name><val> LT_CapillaryProtein.Rate </val></def>
+<def><name> Loss </name><val> LT_LymphProtein.Rate </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

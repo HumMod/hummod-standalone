@@ -1,0 +1,38 @@
+HumMod / AorticValve-Stenosis
+
+Created : 23-Aug-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AorticValve-Stenosis </name>
+
+<variables>
+
+<parm><name> Area </name><val> 3.3 </val></parm>
+<var><name> Effect </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Effect </name>
+  <point><x> 0.0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 3.3 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Parms </name>
+
+<def><name> Effect </name><val> Effect [ Area ] </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

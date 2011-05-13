@@ -1,0 +1,62 @@
+HumMod / SegmentalConductance
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.8 </row>
+   <col> 32.0 </col>
+   <high> 6.0 </high>
+   <wide> 30.0 </wide>
+   <title> Segmental Conductance </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Kidney-Flow.Conductance </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Total </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> Kidney-ArcuateArtery.Conductance </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Arcuate Arteries </label>
+</showvalue>
+
+<showvalue>
+  <row> 3.4 </row><col> 1.0 </col>
+  <name> Kidney-AfferentArtery.Conductance </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Afferent Arteries </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.4 </row><col> 1.0 </col>
+  <name> Kidney-EfferentArtery.Conductance </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Efferent Arteries </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Normal Values </line>
+  <line>  </line>
+  <line> Total = 13.3 </line>
+  <line> Arcuate Arteries = 600.0 </line>
+  <line> Afferent Arteries = 34.3 </line>
+  <line> Efferent Arteries = 22.6 </line>
+  <line>  </line>
+  <line> Units for conductance are </line>
+  <line> (mL/Min)/mmHg. </line>
+</infobutton>
+
+</groupbox>
+
+End

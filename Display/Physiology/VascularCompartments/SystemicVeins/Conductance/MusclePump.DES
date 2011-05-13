@@ -1,0 +1,79 @@
+HumMod / Summary
+
+Created : 26-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 18.4 </high>
+   <wide> 30.0 </wide>
+   <title> Muscle Pump </title>
+
+<structurename> Exercise-MusclePump </structurename>
+
+<showvalue>
+   <row> 1.4 </row>
+   <col> 1.0 </col>
+   <name> Effect </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Effect </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Effect </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showcurve>
+  <row> 9.8 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+
+  <xaxis>
+    <name> Exercise-Metabolism.TotalWatts </name>
+    <label> Exercise (W) </label>
+    <scale><min> 0 </min><max> 1600 </max><inc> 100 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <nolabel/>
+    <scale><min> 0 </min><max> 5 </max></scale>
+  </yaxis>
+
+  <curvename> Effect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 16.8 </row><col> 1.0 </col>
+   <name> Exercise-Metabolism.TotalWatts </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Exercise (W) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Effect is typically 1.0 x Normal. </line>
+</infobutton>
+
+</groupbox>
+
+End

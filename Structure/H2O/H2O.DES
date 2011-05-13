@@ -1,0 +1,51 @@
+HumMod / H2O
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\H2O\ ?>
+
+<?include BodyH2O.DES ?>
+<?include ECFV.DES ?>
+<?include ICFV.DES ?>
+<?include MetabolicH2O.DES ?>
+<?include ExternalH2O.DES ?>
+
+<structure><name> H2O </name>
+
+<definitions>
+
+<block><name> CalcVol </name>
+
+  <call> BodyH2O.CalcTotal </call>
+
+</block>
+
+<block><name> Calc </name>
+
+  <call> ECFV.CalcVol </call>
+  <call> ICFV.CalcVol </call>
+
+</block>
+
+<block><name> EarlyDervs </name>
+
+  <call> MetabolicH2O.Dervs </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ExternalH2O.Dervs </call>
+  <call> BodyH2O.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

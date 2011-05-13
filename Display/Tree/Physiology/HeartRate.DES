@@ -1,0 +1,40 @@
+HumMod / HeartRate
+
+Created : 10-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> HeartRate </name>
+  <label> Heart Rate </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> HeartRate-Atria </name>
+  <label> Atria </label>
+  <parent> HeartRate </parent>
+</leaf>
+
+<leaf>
+  <name> HeartRate-Ventricles </name>
+  <label> Ventricles </label>
+  <parent> HeartRate </parent>
+</leaf>
+
+<leaf>
+  <name> HeartRate-Intervals </name>
+  <label> Intervals </label>
+  <parent> HeartRate </parent>
+</leaf>
+
+<leaf>
+  <name> HeartRate-Tachyarrhythmia </name>
+  <label> Tachyarrhythmia </label>
+  <parent> HeartRate </parent>
+</leaf>
+
+End

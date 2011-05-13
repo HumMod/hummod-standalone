@@ -1,0 +1,15 @@
+HumMod / CarbonMonoxide
+
+Created : 2010-06-06
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<?path Display\Physiology\CarbonMonoxide\ ?>
+
+<?include Supply\Supply.DES ?>
+<?include Uptake\Uptake.DES ?>
+<?include Distribution\Distribution.DES ?>
+
+End

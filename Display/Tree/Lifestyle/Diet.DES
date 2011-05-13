@@ -1,0 +1,34 @@
+HumMod / Diet
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Diet </name>
+  <label> Diet </label>
+  <parent> LIFESTYLE </parent>
+</branch>
+
+<leaf>
+  <name> Diet_Goal </name>
+  <label> Goal </label>
+  <parent> Diet </parent>
+</leaf>
+
+<leaf>
+  <name> Diet_Appetite-Thirst </name>
+  <label> Appetite | Thirst </label>
+  <parent> Diet </parent>
+</leaf>
+
+<leaf>
+  <name> Diet_Intake </name>
+  <label> Intake </label>
+  <parent> Diet </parent>
+</leaf>
+
+End

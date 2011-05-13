@@ -1,0 +1,134 @@
+HumMod / SystemicArtys DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SystemicArtys </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> Outflow </name></var>
+<parm><name> V0 </name><val> 850.0 </val></parm>
+<var><name> StressedVol </name></var>
+<var><name> Pressure </name></var>
+<var><name> ExternalPressure </name></var>
+<parm><name> Compliance </name><val> 1.55 </val></parm>
+<parm><name> Conductance </name><val> 60 </val></parm>
+
+<constant><name> MMHG_TO_KPA </name><val> 0.133 </val></constant>
+
+<constant><name> KS </name><val> 0.475 </val></constant>
+<constant><name> KD </name><val> 0.351 </val></constant>
+
+<var><name> SBP </name></var>
+<var><name> DBP </name></var>
+
+<var><name> SBP(kPa) </name></var>
+<var><name> MeanBP(kPa) </name></var>
+<var><name> DBP(kPa) </name></var>
+
+</variables>
+
+<equations>
+
+<stablediffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 999.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stablediffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> StressedVol </name>
+  <val> ( Vol - V0 ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> ( StressedVol / Compliance ) + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> DxMax </name>
+  <test> Conductance GT 0.0 </test>
+  <true> 0.4 * Compliance / Conductance </true>
+  <false> INFINITY </false>
+</conditional>
+
+<def>
+  <name> Inflow </name>
+  <val> LeftVentricle.Outflow </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val>
+      OrganFlow.HepaticVeinFlow
+    + OrganFlow.PeripheralFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Inflow - Outflow </val>
+</def>
+
+</block>
+
+<block><name> PulsatilePressure </name>
+
+<def><name> SBP </name>
+  <val> Pressure + ( KS * ( CardiacOutput.StrokeVolume / Compliance ) ) </val>
+</def>
+
+<def><name> DBP </name>
+  <val> Pressure - ( KD * ( CardiacOutput.StrokeVolume / Compliance ) ) </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<def>
+  <name> SBP(kPa) </name>
+  <val> MMHG_TO_KPA * SBP </val>
+</def>
+
+<def>
+  <name> MeanBP(kPa) </name>
+  <val> MMHG_TO_KPA * Pressure </val>
+</def>
+
+<def>
+  <name> DBP(kPa) </name>
+  <val> MMHG_TO_KPA * DBP </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

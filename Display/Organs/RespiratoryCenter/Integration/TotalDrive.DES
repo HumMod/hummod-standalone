@@ -1,0 +1,89 @@
+HumMod / TotalDrive
+
+Created : 08-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.4 </high>
+   <wide> 30.0 </wide>
+   <title> Total Drive </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalDrive </name>
+  <label> Total Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalDrive </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> RespiratoryCenter-Chemical.TotalDrive </name>
+  <label> Chemical Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 1.0 </col>
+  <name> RespiratoryCenter-Exercise.TotalDrive </name>
+  <label> Exercise Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<radiobuttons>
+  <row> 12.4 </row><col> 1.0 </col>
+  <name> Clamp </name>
+  <listname> Common.Switch </listname>
+  <label> Clamp </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> RespiratoryCenter-Total.Level </name>
+  <repeat><reps> 20 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 13.8 </row><col> 1.0 </col>
+  <name> Level </name>
+  <listname> RespiratoryCenter-Total.Level </listname>
+  <label> Level </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Total drive is normally 1.0 x Normal, </line>
+  <line> with chemical drive at 1.0 and </line>
+  <line> exercise drive at 0.0. </line>
+</infobutton>
+
+</groupbox>
+
+End

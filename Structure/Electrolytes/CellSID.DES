@@ -1,0 +1,51 @@
+HumMod / CellSID
+
+Created : 13-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CellSID </name>
+
+<variables>
+
+<parm>
+  <name> WeakAnions </name>
+  <val> 0.036 </val>
+</parm>
+
+<parm>
+  <name> StrongAnions </name>
+  <val> 0.117 </val>
+</parm>
+
+<parm>
+  <name> OtherCations </name>
+  <val> 0.012 </val>
+</parm>
+
+<var>
+  <name> LessLac </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> LessLac </name>
+  <val>
+      KCell.[K+]
+    + OtherCations
+    - StrongAnions
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

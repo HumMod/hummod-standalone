@@ -1,0 +1,45 @@
+HumMod / Metabolism
+
+Created : 21-Aug-09
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> Startup-Metabolism </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Startup - Metabolism </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Startup\Metabolism\ ?>
+
+<?include Glucose.DES ?>
+<?include FattyAcids.DES ?>
+<?include AminoAcids.DES ?>
+<?include KetoAcids.DES ?>
+<?include Triglycerides.DES ?>
+<?include Urea.DES ?>
+<?include Creatine.DES ?>
+<?include Creatinine.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,150 @@
+HumMod / LungO2
+
+Created : 30-Mar-05
+Last Modified : 2010-06-04
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> LungO2 </name>
+
+<variables>
+
+<var><name> [Alveolar] </name></var>
+<var><name> PAlveolar </name></var>
+
+<var><name> MembraneGradient </name></var>
+
+<var><name> [Capy] </name></var>
+<var><name> PCapy </name></var>
+
+<var><name> CapySat </name></var>
+
+</variables>
+
+<equations>
+
+<impliciteq>
+  <name> Uptake </name>
+  <startname> Uptake </startname>
+  <initialval> 250.0 </initialval>
+  <endname> EndUptake </endname>
+  <errorlim> 2.5 </errorlim>
+</impliciteq>
+
+</equations>
+
+<definitions>
+<block><name> Calc </name>
+
+<if>
+  <test> Breathing.AlveolarVentilation(STPD) GT 0.0 </test>
+  <true>
+
+  <call> CalcUptake </call>
+
+  </true>
+  <false> Not breathing
+  <def>
+    <name> Uptake </name>
+    <val> 0.0 </val>
+  </def>
+
+  <def>
+    <name> [Capy] </name>
+    <val> LungArtyO2.[O2] </val>
+  </def>
+
+  <copy>
+    <from> [Capy] </from>
+    <to> HgbLung.[O2] </to>
+  </copy>
+
+  <call> HgbLung.O2ToPO2 </call>
+
+  <copy>
+    <from> HgbLung.pO2 </from>
+    <to> PCapy </to>
+  </copy>
+
+  <def>
+    <name> PAlveolar </name>
+    <val> PCapy </val>
+  </def>
+
+  <def>
+    <name> [Alveolar] </name>
+    <val> PAlveolar / 760.0 </val>
+  </def>
+
+  </false>
+</if>
+
+<copy>
+  <from> [Capy] </from>
+  <to> HgbConc.[O2] </to>
+</copy>
+
+<call> HgbConc.Sat(%) </call>
+
+<copy>
+  <from> HgbConc.Sat(%) </from>
+  <to> CapySat </to>
+</copy>
+
+</block>
+
+<block><name> CalcUptake </name>
+  <implicitmath><name> Uptake </name>
+
+  <def>
+    <name> [Alveolar] </name>
+    <val>
+        Bronchi.[O2]
+      - ( Uptake / Breathing.AlveolarVentilation(STPD) )
+    </val>
+  </def>
+
+  <def>
+    <name> PAlveolar </name>
+    <val> [Alveolar] * Barometer.Pressure
+    </val>
+  </def>
+
+  <def>
+    <name> MembraneGradient </name>
+    <val> Uptake / PulmonaryMembrane.Permeability </val>
+  </def>
+
+  <def>
+    <name> PCapy </name>
+    <val> PAlveolar - MembraneGradient </val>
+  </def>
+
+  <copy>
+    <from> PCapy </from>
+    <to> HgbLung.pO2 </to>
+  </copy>
+
+  <call> HgbLung.PO2ToO2 </call>
+
+  <copy>
+    <from> HgbLung.[O2] </from>
+    <to> [Capy] </to>
+  </copy>
+
+  <def>
+    <name> EndUptake </name>
+    <val>
+        LungBloodFlow.AlveolarVentilated
+      * ( [Capy] - LungArtyO2.[O2] )
+    </val>
+  </def>
+
+  </implicitmath>
+</block>
+
+</definitions>
+</structure>
+
+End

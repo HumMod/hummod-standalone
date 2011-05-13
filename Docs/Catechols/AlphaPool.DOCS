@@ -1,0 +1,221 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AlphaPool </structurename>
+
+<vardoc>
+<name> AlphaPool.Effect </name>
+<topic> AlphaPool - Definition </topic>
+<topic> Receptor Dynamics Overview1 </topic>
+<topic> Adrenergic Receptors Overview1 </topic>
+<seealso> MidodrinePool.[Midodrine] </seealso>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.EpiPart </name>
+<topic> EpiPart - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.EPISCALE </name>
+<topic> EPISCALE - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.MidoPart</name>
+<topic> MidoPart - Definition1 </topic>
+<seealso> MidodrinePool.[Midodrine] </seealso>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.MIDOSCALE </name>
+<topic> MIDOSCALE - Definition1 </topic>
+<seealso> MidodrinePool.[Midodrine] </seealso>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.NEPart</name>
+<topic> NEPart - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.NESCALE </name>
+<topic> NESCALE - Definition1 </topic>
+</vardoc>
+
+<vardoc>
+<name> AlphaPool.Total</name>
+<topic> Total - Definition1 </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> AlphaPool - Definition </name>
+<label> Definition </label>
+<content>
+
+The alpha pool is the quantity of stimulated alpha receptors.
+Under resting conditions the effect of alpha pool stimulation
+is 1.0 and norepinephrine and epinephrine make roughly equal
+contributions to the alpha pool. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Adrenergic Receptors Overview1 </name>
+<label> Adrenergic Receptors Overview </label>
+<content>
+
+There are two major types of adrenergic receptors, alpha 
+receptors and beta receptors. Alpha receptors can be subdivided 
+into alpha 1  and alpha 2 receptors. Beta receptors can be 
+subdivided into beta 1 receptors and beta 2 receptors. 
+Norepinephrine and epinephrine have slightly different effects 
+in exciting the alpha and beta receptors. Norepinephrine excites 
+mainly alpha receptors but excites beta receptors to a lesser 
+extent as well. Epinephrine excites both types of receptors 
+approximately equally. Therefore the relative effects of 
+norepinephrine and epinephrine on different effector
+organs are determined by the types of receptors in the organs.
+Furthermore certain alpha functions are excitatory, whereas 
+others are inhibitory. Likewise certain beta functions are 
+excitatory and others are inhibitory. Therefore, alpha and beta 
+receptors are not necessarly associated with excitation or 
+inhibition but simply with the affinity of the hormone for the 
+receptors in the given effector organ.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Receptor Dynamics Overview1  </name>
+<label> Receptor Dynamics Overview </label>
+<content>
+
+Besse J, Furchgott R. Dissociation constants and relative 
+efficacies of agonists acting on adrenergic alpha-receptors. 
+Fed Proc 26: 410, 1967
+
+Clark JW, Leff P. Operational models of pharmacological
+agonism. Proc R. Soc Lond 220: 141-162, 1983.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NESCALE - Definition1 </name>
+<label> Definition </label>
+<content> 
+
+NESCALE is a constant which relates plasma levels of 
+norepinephrine to alpha agonism. Together with EPISCALE,
+normal plasma levels of epinephrine and NE are mapped to
+an alpha agonism of 1.0. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NEPart - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Since alpha receptors see both epinephrine and norepinephrine, 
+the blood concentration of Epi and NE do not quantitate their
+effect on alpha receptors. In the model NE and Epi contribute 
+equally to alpha agonism and normal plasma concentrations of 
+NE and Epi are mapped to an alpha agonism of 1.0. This is done 
+by using two constants NESCALE and EPISCALE to calculate NEPart 
+and EpiPart respectively. 
+
+Besse J, Furchgott R. Dissociation constants and relative efficacies 
+of agonists acting on adrenergic alpha-receptors. Fed Proc 26: 410, 1967
+ 
+NEPart = NESCALE*[NE] 
+EpiPart = EPISCALE*[Epi]
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPISCALE - Definition1 </name>
+<label> Definition </label>
+<content>
+
+The EPISCALE is a constant which relates plasma levels of 
+epinephrine to alpha agonism. Together with NESCALE, 
+normal plasma levels of epinephrine and NE are mapped to 
+an alpha agonism of 1.0.    
+ 
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> EpiPart - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Since alpha receptors see both epinephrine and 
+norepinephrine, the blood concentration of epinephrine 
+and norepinephrine do not quantitate either's effect on 
+alpha receptors. In the model NE and Epi contribute equally 
+to alpha agonism and normal plasma concentrations of NE and 
+Epi are mapped to an alpha agonism of 1.0. 
+This is done by using two constants NESCALE and EPISCALE to 
+calculate NEPart & EpiPart respectively. 
+ 
+NEPart = NEScale*[NE] 
+EpiPart = EPISCALE*[Epi]
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> MidoPart - Definition1 </name>
+<label> Definition </label>
+<content>
+
+MidoPart is used to calculate the effect of the alpha agonist
+midodrine on the alpha pool. It is a function of the amount of
+the active metabolite of midodrine, desglymidodrine and is 
+calculated using the following formula:
+ 
+MidoPart = DesglymidodrinePool.[Desglymidodrine]*MIDOSCALE
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> MIDOSCALE - Definition1 </name>
+<label> Definition </label>
+<content>
+
+The MIDOSCALE is a constant which relates plasma levels of 
+the active metabolite of midodrine, desglymidodrine, to alpha 
+agonism. 
+ 
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Total - Definition1 </name>
+<label> Definition </label>
+<content>
+
+Total alpha pool is the sum of the effects of epinephrine, 
+norepinephrine and midodrine on alpha receptors. 
+
+</content>
+</topicdoc>
+ 
+End

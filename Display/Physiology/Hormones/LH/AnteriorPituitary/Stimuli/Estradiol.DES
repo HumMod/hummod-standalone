@@ -1,0 +1,79 @@
+HumMod / Estradiol
+
+Created : 03-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 13.4 </row>
+   <col> 1.0 </col>
+   <high> 13.8 </high>
+   <wide> 30.0 </wide>
+   <title> Estradiol </title>
+
+<structurename> LH-AnteriorPituitary </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> EstradiolEffectDelayed </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Effect Delayed </label>
+</showvalue>
+
+<repeatlist>
+  <name> Delay(Hrs) </name>
+  <repeat><reps> 100 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Delay(Hrs)  </name>
+  <listname> Delay(Hrs)  </listname>
+  <label> Delay (Hrs)  </label>
+</slidebar>
+
+<showvalue>
+   <row> 4.2 </row><col> 1.0 </col>
+   <name> EstradiolEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Estradiol Effect </label>
+</showvalue>
+
+<showcurve>
+  <row> 5.2 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 5 </leftmargin>
+
+  <xaxis>
+    <name> Estradiol.[Conc(nMol/L)] </name>
+    <label> [Estradiol (nMol/L)] </label>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> Effect </label>
+    <scale><min> 0 </min><max> 20 </max></scale>
+  </yaxis>
+
+  <curvename> EstradiolEffect </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> Estradiol.[Conc(nMol/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Estradiol (nMol/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

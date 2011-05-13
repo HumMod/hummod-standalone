@@ -1,0 +1,134 @@
+HumMod / IVDrip
+
+Created : 03-Mar-08
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<structure><name> IVDrip </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+
+<parm><name> H2OSetting </name><val> 0.0 </val></parm>
+<var><name> H2ORate </name></var>
+
+<parm><name> ClinicalSaline </name><val> 0.0 </val></parm>
+<var><name> ClinicalSalineRate </name></var>
+
+<parm><name> [NaCl] </name><val> 0.0 </val></parm>
+<var><name> NaClRate </name></var>
+
+<parm><name> [Bicarb] </name><val> 0.0 </val></parm>
+<var><name> BicarbRate </name></var>
+
+<parm><name> [NH4Cl] </name><val> 0.0 </val></parm>
+<var><name> NH4ClRate </name></var>
+
+<parm><name> [KCl] </name><val> 0.0 </val></parm>
+<var><name> KClRate </name></var>
+
+<parm><name> [Protein] </name><val> 0.0 </val></parm>
+<var><name> ProteinRate </name></var>
+
+<var><name> NaRate </name></var>
+<var><name> KRate </name></var>
+<var><name> ClRate </name></var>
+
+<var><name> [Osm] </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> TotalH2O </name>
+  <integralname> TotalH2O </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> H2OChange </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<conditional><name> H2ORate </name>
+  <test> Switch </test>
+  <true> H2OSetting </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> ClinicalSalineRate </name>
+  <val> 0.001 * ClinicalSaline * H2ORate </val>
+</def>
+
+<def>
+  <name> NaClRate </name>
+  <val> 0.001 * [NaCl] * H2ORate </val>
+</def>
+
+<def>
+  <name> BicarbRate </name>
+  <val> 0.001 * [Bicarb] * H2ORate </val>
+</def>
+
+<def>
+  <name> NH4ClRate </name>
+  <val> 0.001 * [NH4Cl] * H2ORate </val>
+</def>
+
+<def>
+  <name> KClRate </name>
+  <val> 0.001 * [KCl] * H2ORate </val>
+</def>
+
+<def>
+  <name> ProteinRate </name>
+  <val> 0.01 * [Protein] * H2ORate </val>
+</def>
+
+<def>
+  <name> NaRate </name>
+  <val> ClinicalSalineRate + NaClRate + BicarbRate </val>
+</def>
+
+<def>
+  <name> KRate </name>
+  <val> KClRate </val>
+</def>
+
+<def>
+  <name> ClRate </name>
+  <val> ClinicalSalineRate + NaClRate + NH4ClRate + KClRate </val>
+</def>
+
+<def>
+  <name> [Osm] </name>
+  <val>
+      ( 2 * ClinicalSaline )
+    + ( 2 * [NaCl] )
+    + ( 2 * [Bicarb] )
+    + ( 2 * [NH4Cl] )
+    + ( 2 * [KCl] )
+  </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+  <def><name> H2OChange </name><val> H2ORate </val></def>
+</block>
+
+<block><name> Reset </name>
+  <def><name> TotalH2O </name><val> 0.0 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

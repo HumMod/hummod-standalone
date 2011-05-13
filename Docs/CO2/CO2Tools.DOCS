@@ -1,0 +1,176 @@
+QHP 2008 / CO2.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> CO2Tools </structurename>
+
+<vardoc>
+<name> CO2Tools.LitersToMols</name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> CO2Tools.MolsToLiters </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+The first study of solubility of CO2 in blood was
+
+   Christiansen, Douglas and Haldane, J.Physiol.
+   48:244, 1914.
+
+This study also has very good data for blood CO2
+content as a function of pCO2.
+
+       pCO2     Content
+      (mmHg)     (Vol%)     
+      ------    -------
+         0          0
+        40         50
+        80         70
+       120         80
+
+   Bauer Resp. Physiol. 10:10-19, 1970.
+
+Good data on blood (actually Hgb) CO2 content as a
+function of pH. Content is Mol CO2 / Mol Hgb.
+
+        pH    CO2
+       ----  ----
+        6.6    2
+        7.0    3
+        7.2    4
+        7.4   10
+        7.6   20
+
+We need a relationship for [HCO3-], SID and pCO2.
+This is tricky stuff because we can get a bad fit
+and/or a useless form.
+
+Stewart's analysis (p. 114 and elsewhere) shows that
+[HCO3-] is approximately a linear function of SID and
+pCO2.  The effects appear to be additive.
+
+  [HCO3] = A * SID + B * pCO2     (1)
+
+The inverse is
+
+  pCO2 = C * SID + D * [HCO3]     (2)
+
+where
+         A           1
+  C = - --- and D = ---
+         B           B
+
+The units are
+
+  [HCO3], SID - mEq/mL
+  pCO2 - mmHg
+
+We exhale 200 mL/Min of CO2 as 5000 mL of blood pass
+through the lungs.  Each mL of blood loses 0.040 mL
+of CO2.  1 mEq of HCO3 is equal to 22.4 mL of gas.
+Thus, the change in CO2 across the lungs is 0.0018
+mEq/mL.
+
+pCO2 decreases about 5 mmHg across the lungs. When
+we model the Haldane effect, pCO decreases about
+2 1/2 mmHg due to HCO3 loss and 2 1/2 mmHg due to
+the increase in O2 saturation. For pulmonary
+capillary blood
+
+   B is 0.0018 / 5 or 0.00036.
+
+The rest of the fit for equation (1) uses venous blood.
+
+   [HCO3-] = 0.0255 mEq/mL
+   pCO2 = 45 mmHg
+   SID = 0.040 mEq/mL
+
+   A = 0.2325
+
+   C = -645.8
+   D = 2777.8
+
+TISSUE
+
+Tissue is qualitatively the same as blood but
+quantitatively different due to different SID's
+and intrinsic [HCO3]. The two cases are tissue in
+general and skeletal muscle.
+
+Tissue In General
+
+  [HCO3-] = 0.016 mEq/mL
+  pCO2 = 45 mmHg
+  SID = 0.036 mEq/mL (see CellSID)
+
+  [HCO3] from Raichle. Brain Res. 166:413-417, 1979.
+
+  B = 0.000167 (from Stewart, p. 139)
+
+  A = 0.2357 (substitution in Eq. 1)
+
+  C = -1411.4
+  D = 5988.0
+
+Skeletal Muscle
+
+Sahlin JAP 45:474-480, 1978.
+Sahlin Clin.Sci.Mol.Med. 53:459-466, 1977.
+
+  [HCO3-] = 0.010 mEq/mL
+  pCO2 = 45 mmHg
+  SID = 0.036mEq/mL
+
+  B = 0.000167 (from Stewart, p. 139)
+
+  A = 0.0690 (substitution in Eq. 1)
+
+  C = -413.34
+  D = 5988.0
+
+To convert Mol to L, multiply by 22.4. Same scale
+applies when converting mMol to mL.
+
+To convert L to Mol, multiply by 0.0446. Same scale
+applies when converting mL to mMol.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

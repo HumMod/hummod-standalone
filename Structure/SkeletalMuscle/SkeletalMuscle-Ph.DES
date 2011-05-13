@@ -1,0 +1,70 @@
+HumMod / SkeletalMuscle-Ph
+
+Created : 31-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> SkeletalMuscle-Ph </name>
+
+<variables>
+
+<var>
+  <name> Ph </name>
+</var>
+
+<var>
+  <name> [SID] </name>
+</var>
+
+<var>
+  <name> [SID(mEq/L)] </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> CalcSID </name>
+
+<def>
+  <name> [SID] </name>
+  <val>
+      KCell.[K+]
+    + CellSID.OtherCations
+    - CellSID.StrongAnions
+    - SkeletalMuscle-Lactate.[Lac-] </val>
+</def>
+
+<def>
+  <name> [SID(mEq/L)] </name>
+  <val> 1000.0 * [SID] </val>
+</def>
+
+</block>
+
+<block><name> CalcPh </name>
+
+<copy>
+  <from> SkeletalMuscle-CO2.PCO2 </from>
+  <to> PhCells.pCO2 </to>
+</copy>
+
+<copy>
+  <from> [SID(mEq/L)] </from>
+  <to> PhCells.SID </to>
+</copy>
+
+<call> PhCells.Calc </call>
+
+<copy>
+  <from> PhCells.pH </from>
+  <to> Ph </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

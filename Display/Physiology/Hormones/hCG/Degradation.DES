@@ -1,0 +1,75 @@
+HumMod / Degradation
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 12.8 </high>
+   <wide> 30.0 </wide>
+   <title> Degradation </title>
+
+<structurename> hCG </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Degradation </name>
+   <format><decimal> 4 </decimal></format>
+   <label> Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Degradation </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 0.1 </max><inc> 0.1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<repeatlist>
+  <name> K </name>
+  <repeat><reps> 20 </reps><stepsize> 0.0001 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> K </name>
+  <listname> K </listname>
+  <label> K </label>
+</slidebar>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Degradation = K * Mass. </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

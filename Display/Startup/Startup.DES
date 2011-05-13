@@ -1,0 +1,38 @@
+HumMod / Startup
+
+Created : 24-Nov-08
+Last Modified : 2010-04-15
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Startup\ ?>
+
+<?include Morphology\Morphology.DES ?>
+<?include BodySize\BodySize.DES ?>
+<?include BodyH2O\BodyH2O.DES ?>
+<?include Blood\Blood.DES ?>
+<?include Heat\Heat.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Hormones\Hormones.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include VascularCompartments\VascularCompartments.DES ?>
+
+<?include Organ-AdiposeTissue\Organ-AdiposeTissue.DES ?>
+<?include Organ-Bone\Organ-Bone.DES ?>
+<?include Organ-Brain\Organ-Brain.DES ?>
+<?include Organ-GITract\Organ-GITract.DES ?>
+<?include Organ-Kidney\Organ-Kidney.DES ?>
+<?include Organ-LeftHeart\Organ-LeftHeart.DES ?>
+<?include Organ-Liver\Organ-Liver.DES ?>
+<?include Organ-OtherTissue\Organ-OtherTissue.DES ?>
+<?include Organ-RespiratoryMuscle\Organ-RespiratoryMuscle.DES ?>
+<?include Organ-RightHeart\Organ-RightHeart.DES ?>
+<?include Organ-SkeletalMuscle\Organ-SkeletalMuscle.DES ?>
+<?include Organ-Skin\Organ-Skin.DES ?>
+
+<?include Technical\Technical.DES ?>
+<?include Miscellaneous\Miscellaneous.DES ?>
+
+End

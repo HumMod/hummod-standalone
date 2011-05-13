@@ -1,0 +1,265 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Pheochromocytoma </structurename>
+
+<vardoc>
+<name> Pheochromocytoma.Change </name>
+<topic> Pheochromocytoma - Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> EpiPool.[Epi] </seealso>
+<seealso> NEPool.[NE] </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Epi(%) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.EpiFract </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.EpiRate </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.FractSec </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.FRACTSEC </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.InEpisode </name>
+<topic> InEpisode - Definition </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.LastState </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.MAXEPISODE </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.MAXPAUSE </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.NEFract </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.NERate </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Noise </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Rate </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Severity </name>
+<topic> Severity - Definition </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Switch </name>
+<topic> Switch - Definiton </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Pheochromocytoma.Timer </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+
+<topicdoc>
+<name> Pheochromocytoma - Overview </name>
+<label> Overview </label>
+<content>
+
+Pheochromocytomas are rare catecholamine-secreting tumors 
+derived from the chromaffin cells of the embryonic neural
+crest. In 1912, the pathologist Ludwig Pick formulated the 
+term pheochromocytoma, which decribes the colorful reaction 
+of tumor cells in response to the addition of fixatives 
+containing chromic acid salts. 
+Ninety percent of tumors occur in the adrenal medulla; 
+the remainder are extrarenal and are known as secreting 
+paragangliomas. In most patients with pheochromocytomas, 
+plasma catecholamine concentrations are elevated. Unlike the 
+healthy adrenal medulla, however, pheochromocytomas are not 
+innervated, and catecholamine release is not precipitated by 
+neural stimulation.
+
+Most pheochromocytomas secrete both norepinephrine and 
+epinephrine although norepinephrine predominates. Tumors 
+can be both only norepinephrine or epinephrine secreting, 
+although the latter is very rare. An increase in the production 
+of catecholamines causes symptoms which include hypertension, 
+severe headaches, palpitations and excess sweating. These 
+symptoms reflect the effects of epinephrine and norepinephrine 
+on alpha and beta adrenergic receptors respectively.
+Some pheochromocytomas secrete catecholamines intermittently
+and cause paroxysmal hypertension; others cause sustained 
+hypertension by constantly secreting catecholamines.
+
+Manger WM, Gifford Jr. RW. Pheochromocytoma: A clinical overview
+Hypertension: Pathophysiology, Diagnosis & Management
+Laragh JH, Brenner BM (Editors) 2nd Edition Raven Press Ltd, 1995
+ 
+Page LB, Raker JW, Berberish FR. Pheochromocytoma with predominant
+epinephrine secretion. Am J Med 47:648-652, 1969.
+
+Louis WJ, Doyle AE, Anavekar SN. Plasma noradrenaline concentration
+and blood pressure in essential hypertension, phaeochromocytoma
+and depression. Clin Sci Mol Med 48:239s-242s, 1975
+
+Plouin PF, Gimenez-Roqueplo AP. Pheochromocytomas and secreting
+paragangliomas. Orpanet J Rare Dis 1:49-  ,2006.
+
+Bravo EL, Tagle R. Pheochromocytoma:State-of-the-Art and future
+prospects. Endocrine Reviews 24(4): 539-553, 2003
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Severity - Definition </name>
+<label> Definition </label>
+<content>
+
+In the model, pheochromocytomas are classified as ranging in 
+size from small to moderate to large and to extreme. The rate 
+of growth of the tumor is a function of the severity. The tumor
+grows at a faster rate as the severity increases. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InEpisode - Definition </name>
+<label> Definition </label>
+<content>
+
+The model is set up with an intermittently secreting tumor.
+The tumor secretes catecholamines several times a day. 
+InEpisode refers to whether the tumor is actually secreting
+catecholamines or not. If InEpisode is false, then the
+tumor is non-secreting at that particular time. If it is true 
+then the tumor is secreting.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Switch - Definition </name>
+<label> Definition </label>
+<content>
+
+The switch enables the model user to create the tumor. 
+The switch must be on for the tumor to exist and become 
+active. 
+ 
+</content>
+</topicdoc>
+   
+End

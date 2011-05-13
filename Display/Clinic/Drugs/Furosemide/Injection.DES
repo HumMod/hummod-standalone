@@ -1,0 +1,89 @@
+HumMod / Injection
+
+Created : 04-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 11.8 </high>
+   <wide> 30.0 </wide>
+   <title> Injection </title>
+
+<structurename> FurosemideSingleDose </structurename>
+
+<actionbutton>
+  <row> 1.4 </row><col> 1.0 </col>
+  <blockname> InjectNow </blockname>
+  <label> Inject Now </label>
+</actionbutton>
+
+<repeatlist>
+  <name> FurosemideSingleDose.Dose </name>
+  <repeat><reps> 8 </reps><stepsize> 10 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.2 </row><col> 1.0 </col>
+  <name> Dose </name>
+  <listname> FurosemideSingleDose.Dose </listname>
+  <label> Dose </label>
+</slidebar>
+
+<repeatlist>
+  <name> FurosemideSingleDose.Timespan </name>
+  <firstval> 5.0 </firstval>
+  <repeat><reps> 11 </reps><stepsize> 5.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.6 </row><col> 1.0 </col>
+  <name> Timespan </name>
+  <listname> FurosemideSingleDose.Timespan </listname>
+  <label> Timespan (Sec) </label>
+</slidebar>
+
+<showvalue>
+   <row> 6.2 </row><col> 1.0 </col>
+   <name> TimeLastDose </name>
+   <format>
+      <timestamp/>
+      <fieldwidth> 14 </fieldwidth>
+   </format>
+   <label> Last Dose </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.2 </row><col> 1.0 </col>
+   <name> TotalDoses </name>
+   <format> <integer/> </format>
+   <label> Total Doses </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> CumulativeDose </name>
+   <format> <integer/> </format>
+   <label> Cumulative Dose </label>
+</showvalue>
+
+<actionbutton>
+  <row> 9.8 </row><col> 1.0 </col>
+  <blockname> FurosemideSingleDose.Reset </blockname>
+  <label> Reset </label>
+</actionbutton>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Typical dose is 20 - 40 mG. </line>
+  <line> Repeat after 2 hours if necessary. </line>
+</infobutton>
+
+</groupbox>
+
+End

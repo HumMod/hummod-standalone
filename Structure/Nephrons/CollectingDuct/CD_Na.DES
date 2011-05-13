@@ -1,0 +1,102 @@
+HumMod / CD_Na
+
+Created : 10-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CD_Na </name>
+
+<variables>
+
+<var><name> Inflow </name></var>
+<var><name> FractReab </name></var>
+<parm><name> BasicFract </name><val> 0.75 </val></parm>
+<var><name> Reab </name></var>
+<var><name> Outflow </name></var>
+<var><name> [Na+] </name></var>
+<var><name> [Na+(mEq/L)] </name></var>
+<var><name> Osmolarity </name></var>
+<var><name> TotalEffect </name></var>
+<var><name> LoadEffect </name></var>
+<var><name> ANPEffect </name></var>
+<parm><name> MaxReab </name><val> 0.7 </val></parm>
+<parm><name> ANPClamp </name><val> FALSE </val></parm>
+<parm><name> ANPLevel </name><val> 0.0 </val></parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> LoadOnFract </name>
+  <point><x> 0.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+  <point><x> 0.4 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ANPOnFract </name>
+  <point><x> 0.0 </x><y> 1.2 </y><slope> 0 </slope></point>
+  <point><x> 1.3 </x><y> 1.0 </y><slope> -0.4 </slope></point>
+  <point><x> 2.7 </x><y> 0.2 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcFlux </name>
+
+<def><name> Inflow </name><val> DT_Na.Outflow </val></def>
+<def><name> LoadEffect </name><val> LoadOnFract [ Inflow ] </val></def>
+
+<conditional>
+  <name> ANPEffect </name>
+  <test> ANPClamp </test>
+  <true> ANPLevel </true>
+  <false> ANPOnFract [ NephronANP.Log10Conc ] </false>
+</conditional>
+
+<def>
+  <name> TotalEffect </name>
+  <val>
+      LoadEffect
+    * ANPEffect
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+<copy><from> BasicFract </from><to> FractReab.Normal </to></copy>
+<copy><from> TotalEffect </from><to> FractReab.Effects </to></copy>
+  <call> FractReab.GetFract </call>
+<copy><from> FractReab.Fract </from><to> FractReab </to></copy>
+
+<def><name> Reab </name><val> ( FractReab * Inflow ) MIN MaxReab </val></def>
+<def><name> Outflow </name><val> Inflow - Reab </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [Na+] </name><val> Outflow / CD_H2O.Outflow </val></def>
+<def><name> [Na+(mEq/L)] </name><val> 1000.0 * [Na+] </val></def>
+<def><name> Osmolarity </name><val> [Na+(mEq/L)] </val></def>
+
+</block>
+
+<block><name> NoFlow </name>
+
+<def><name> Inflow </name><val> 0.0 </val></def>
+<def><name> Reab </name><val> 0.0 </val></def>
+<def><name> Outflow </name><val> 0.0 </val></def>
+<def><name> [Na+] </name><val> UNDEFINED </val></def>
+<def><name> [Na+(mEq/L)] </name><val> UNDEFINED </val></def>
+<def><name> Osmolarity </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

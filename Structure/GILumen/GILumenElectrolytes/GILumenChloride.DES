@@ -1,0 +1,59 @@
+HumMod / GILumenChloride
+
+Created : 05-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GILumenChloride </name>
+
+<variables>
+
+<var><name> Intake </name></var>
+<var><name> Absorption </name></var>
+<var><name> Vomitus </name></var>
+
+<var><name> [Cl-] </name></var>
+<var><name> [Cl-(mEq/L)] </name></var>
+
+<parm><name> Perm </name><val> 0.0015 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 90.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.90 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Conc </name>
+
+<def><name> [Cl-] </name><val> Mass / GILumenVolume.Mass </val></def>
+<def><name> [Cl-(mEq/L)] </name><val> 1000.0 * [Cl-] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Intake </name><val> DietIntakeElectrolytes.Cl-_mEq/Min </val></def>
+<def><name> Absorption </name><val> Perm * Mass </val></def>
+<def><name> Vomitus </name><val> GILumenVomitus.Cl-Loss </val></def>
+
+<def><name> Change </name><val> Intake - Absorption - Vomitus </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

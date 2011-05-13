@@ -1,0 +1,274 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> NEPool </structurename>
+
+<vardoc>
+<name> NEPool.[NE(nMol/L)] </name>
+<topic> NE - Overview </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+<seealso> AlphaBlockade.Block(%) </seealso>
+<seealso> Pheochromocytoma.Change </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPool.[NE(pG/mL)] </name>
+<topic> NE - Overview </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+</vardoc>
+
+<vardoc>
+<name> NEPool.[NE]</name>
+<topic> NE - Overview </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+<seealso> NEPool.Mass </seealso>
+<seealso> ECFV.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name>  NEPool.Change </name>
+<topic> Change - NEPDefinition1 </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+<seealso> NEPool.Gain </seealso>
+<seealso> NEPool.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPool.F1 </name>
+<topic> F1 - NEPDefinition2 </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+</vardoc>
+
+<vardoc>
+<name> NEPool.F2 </name>
+<topic> F2 - NEPDefinition3  </topic>
+<topic> NE - Physical Units9 </topic>
+<topic> NE - Concentration Units10 </topic>
+</vardoc>
+
+<vardoc>
+<name> NEPool.Gain </name>
+<topic> Gain - NEPDefinition4 </topic>
+<seealso> NESecretion.Rate </seealso>
+<seealso> NESecretion.Spillover </seealso>
+<seealso> NEpump.Rate </seealso>
+<seealso> Pheochromocytoma.NERate </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPool.InitialMass </name>
+<topic> InitialMass - NEPDefinition6 </topic>
+<topic> NE - Physical Units </topic>
+<topic> NE - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> NEPool.Loss </name>
+<topic> Loss - NEPDefinition5 </topic>
+<seealso> NEClearance.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPool.Mass </name>
+<topic> Mass - NEPDefinition7 </topic>
+<topic> NE - Overview </topic>
+<topic> NE - Physical Units </topic>
+<topic> NE - Concentration Units </topic>
+<seealso> ECFV.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPool.Target[NE] </name>
+<topic> Target[NE] - NEPDefinition8 </topic>
+</vardoc>
+
+<topicdoc>
+<name> NE - Overview </name>
+<label> Overview </label>
+<content>
+
+Norepinephrine (NE) is the neurotransmitter released 
+from axon terminals of sympathetic postganglionic neurons. 
+Norepinephrine is also released from the adrenal medullae 
+in response to sympathetic nerve stimulation. 
+Under resting conditions, only a few percent of the NE 
+entering the plasma represents adrenal medullary secretion. 
+The remainder has its source in the neurotransmitter released 
+by sympathetic nerve varicosities. This NE is referred to 
+as spillover. Total body spillover can be measured using a 
+tracer kinetic method based on dilution of [3H]NE by endogenous NE.
+
+Esler M, Jennings G, Lambert G, Meredith I, Horne M, Eisenhofer G.
+Overflow of catecholeamine neurotransmitters to the circulation:
+Source, fate and Functions. Physiol Rev 70:963-985, 1990
+
+Goldstein DS, Eisenhofer G, Kopin IJ. Sources and significance
+of plasma levels of catechols and their metabolites in humans.
+J Pharmacol Exp Ther 305(3): 800-811, 2003.
+
+NE excites both alpha and beta adrenergic receptors and causes
+a range of different effects in different effector organs 
+depending on the plasma concentration and the density and types 
+of receptors present. In patients with pheochromocytoma, an 
+increase in plasma NE causes symptoms which include 
+hypertension, severe headaches, palpitations and excess sweating. 
+These symptoms reflect the effects of norepinephrine 
+on alpha and beta adrenergic receptors respectively.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NE - Physical Units9 </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]    pG/mL or nMol/L  
+pG/mL * 0.00592 = nMol/L
+nMol * 0.1692 = ug
+Mass nG or pG
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NE - Concentration Units10 </name>
+<label> Concentration Units </label>
+<content>
+
+Norepinephrine (C8 H11 N O3) has a molecular
+weight of 169. Typical plasma concentration of 
+NE is 240pG/mL or 1.42nMol/L (Multiply by 0.00592
+to convert pG/mL to nMol/L)
+
+The NE Pool or mass is a function of NE Secretion, 
+NE Clearance and the volume of distribution. 
+Since the volume of distribution for epinephrine is 
+the ECFV (15,000 mL), the typical circulating pool
+is 3600 nG
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - NEPDefinition1 </name>
+<label> Definition </label>
+<content>
+
+Changes in the NE pool or mass are a function of both
+gains and losses in NE over time. Gains may occur from
+increased secretion due to sympathetic nerve stimulation;
+from infusion of NE using the NE pump feature of the
+model and/or increases from a NE secreting pheochromocytoma.
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> F1 - NEPDefinition2 </name>
+<label> Definition </label>
+<content>
+
+F1 is a mathematical variable used in the calculation of
+the mass or pool of NE. F1 is the gain in NE over time and
+is a function of NE secretion rate, NE spillover rate, NE 
+pump rate and pheochromocytoma NE rate
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> F2 - NEPDefinition3 </name>
+<label> Definition </label>
+<content>
+
+F2 is a mathematical variable used in the calculation of 
+the mass of NE. F2 is the loss in NE over time and is
+a function of NE clearance rate. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - NEPDefinition4 </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in mass of NE 
+and is a function of NE secretion rate, NE spillover,
+NE from infusion (using the NE pump feature) and
+any NE secretion from a possible pheochromocytoma.
+The model user may create a pheochromocytoma and 
+define different levels of severity.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - NEPDefinition5 </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as a negative change in mass of NE
+and is a function of clearance rate and ECFV.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialMass - NEPDefinition6 </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of NE.
+Since the plasma concentration of NE (the target[NE])is 
+240pG/mL and the volume of distribution for epinephrine is 
+the ECFV (15,000 mL), the typical initial mass
+is 3600 nG (0.24*15,000).
+
+Initial Mass = Target[NE]*ECFV.Vol
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> Mass - NEPDefinition7 </name>
+<label> Definition </label>
+<content>
+
+Mass or pool is the calculated amount of circulating
+NE. Gains and losses in NE are integrated over time
+to calculate the NE Pool or mass.
+
+</content>
+</topicdoc>  
+
+<topicdoc>
+<name> Target[NE] - NEPDefinition8 </name>
+<label> Definition </label>
+<content>
+
+The Target[NE] is the starting plasma concentration of
+norepinephrine. Under normal physiological
+conditions Target[NE] is 240pG/mL
+
+</content>
+</topicdoc> 
+  
+End

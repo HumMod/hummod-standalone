@@ -1,0 +1,47 @@
+HumMod / Lactate-Tissue.REF
+
+Created : 11-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+Lactate is the anion of lactic acid.
+It is 1/2 of a glucose minus a H+,
+or C3 H5 O3, with a molecular weight
+of 89.
+
+A typical blood concentration is
+1 mEq/L or 9 mG/dL.
+
+To convert mEq/L to mG/dL, multiply
+by 8.9
+
+Tissue [Lac-] is about 1 mEq/L.
+
+The benchmark values for organ Lac- (mEq) and
+organ H2O (mL) are tabulated below.
+
+                    Lac-    H2O
+                  ------  -----
+Bone                3.51   3513
+Brain               1.19   1193
+Fat                 2.49   2487
+GITract             1.10   1102
+Kidney              0.26    257
+LeftHeart           0.22    218
+Liver               1.43   1426
+OtherTissue         3.17   3167
+RespiratoryMuscle   3.01   3006
+RightHeart          0.04     38
+SkeletalMuscle     20.24  20245
+Skin                1.76   1762
+                  ------  -----
+Total              38.42  38414
+
+H2O total should equal the sum of IFV (12000) and
+intracellular fluid volume (28000) less RBC water
+(1600) or 38400.
+
+End

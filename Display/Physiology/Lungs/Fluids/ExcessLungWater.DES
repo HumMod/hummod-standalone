@@ -1,0 +1,107 @@
+HumMod / ExcessLungWater
+
+Created : 19-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 20.6 </high>
+   <wide> 30.0 </wide>
+   <title> Excess Lung Water </title>
+
+<structurename> ExcessLungWater </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Volume </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Volume </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Volume </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 100 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 11.8 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1 </col>
+   <name> Flux </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Capillary Filtration </label>
+</showvalue>
+
+<repeatlist>
+  <name> ExcessLungWater.Perm </name>
+  <repeat><reps> 10 </reps><stepsize>  0.1 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 14.4 </row><col>3.0 </col>
+  <name> Perm </name>
+  <listname> ExcessLungWater.Perm </listname>
+  <label> Perm </label>
+</slidebar>
+
+<showvalue>
+   <row> 15.6 </row><col> 3.0 </col>
+   <name> Grad </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Gradient </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.6 </row><col> 5.0 </col>
+   <name> PulmCapys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Capillary Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.6 </row><col> 5.0 </col>
+   <name> PlasmaProtein.COP </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Plasma COP </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.0 </row><col> 1 </col>
+   <name> Lymph </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Lymph </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,27 @@
+HumMod / Start-BloodSize DES
+
+Created : 13-Dec-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Start-BloodSize </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+  <call> BloodVol.Initialize </call>
+  <call> PlasmaVol.Initialize </call>
+  <call> RBCVol.Initialize </call>
+  <call> RBCSolids.Initialize </call>
+  <call> RBCH2O.Initialize </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

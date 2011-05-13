@@ -1,0 +1,16 @@
+HumMod / Hemoglobin
+
+Created : 27-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\Blood\Hemoglobin\ ?>
+
+<?include Properties\Properties.DES ?>
+<?include Loading\Loading.DES ?>
+
+End

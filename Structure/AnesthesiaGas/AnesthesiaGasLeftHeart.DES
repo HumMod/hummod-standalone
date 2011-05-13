@@ -1,0 +1,114 @@
+HumMod / AnesthesiaGasLeftHeart
+
+Created : 03-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> AnesthesiaGasLeftHeart </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> pTissue </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> pVein </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+<var>
+  <name> HrtCont </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.02 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> HrtCont </name>
+  <point><x>  0 </x><y> 1.0 </y><slope> 0 </slope></point>
+  <point><x>  4 </x><y> 0.5 </y><slope> -0.2 </slope></point>
+  <point><x> 12 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / LeftHeart-Size.Vol </val>
+</def>
+
+<def>
+  <name> pTissue </name>
+  <val> [Tissue] * AnesthesiaGasSolubility.GeneralK </val>
+</def>
+
+<def>
+  <name> pVein </name>
+  <val> pTissue </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> pVein / AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+<def>
+  <name> HrtCont </name>
+  <val> HrtCont [ pTissue ] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaGasArty.[Blood] - [Vein] )
+    * LeftHeart-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

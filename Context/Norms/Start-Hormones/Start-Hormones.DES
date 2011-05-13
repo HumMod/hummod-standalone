@@ -1,0 +1,61 @@
+HumMod / Start-Hormones DES
+
+Created : 03-Feb-10
+Last Modified : 03-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\Start-Hormones\ ?>
+
+<?include Start-Epinephrine.DES ?>
+<?include Start-Norepinephrine.DES ?>
+
+<?include Start-ADH.DES ?>
+<?include Start-Aldosterone.DES ?>
+<?include Start-ANP.DES ?>
+<?include Start-EPO.DES ?>
+<?include Start-Estradiol.DES ?>
+<?include Start-FSH.DES ?>
+<?include Start-Glucagon.DES ?>
+<?include Start-hCG.DES ?>
+<?include Start-Inhibin.DES ?>
+<?include Start-Insulin.DES ?>
+<?include Start-Leptin.DES ?>
+<?include Start-LH.DES ?>
+<?include Start-Progesterone.DES ?>
+<?include Start-Renin.DES ?>
+<?include Start-Testosterone.DES ?>
+<?include Start-ThyroidHormone.DES ?>
+
+<structure><name> Start-Hormones </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-Epinephrine.Calc </call>
+  <call> Start-Norepinephrine.Calc </call>
+  
+  <call> Start-ADH.Calc </call>
+  <call> Start-Aldosterone.Calc </call>
+  <call> Start-ANP.Calc </call>
+  <call> Start-EPO.Calc </call>
+  <call> Start-Estradiol.Calc </call>
+  <call> Start-FSH.Calc </call>
+  <call> Start-Glucagon.Calc </call>
+  <call> Start-hCG.Calc </call>
+  <call> Start-Inhibin.Calc </call>
+  <call> Start-Insulin.Calc </call>
+  <call> Start-Leptin.Calc </call>
+  <call> Start-LH.Calc </call>
+  <call> Start-Progesterone.Calc </call>
+  <call> Start-Renin.Calc </call>
+  <call> Start-Testosterone.Calc </call>
+  <call> Start-ThyroidHormone.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

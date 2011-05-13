@@ -1,0 +1,90 @@
+HumMod / RespiratoryCenter-Chemical
+
+Created : 23-Jan-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RespiratoryCenter-Chemical </name>
+
+<variables>
+
+<var>
+  <name> TotalDrive </name>
+</var>
+
+<var>
+  <name> CentralDrive </name>
+</var>
+
+<var>
+  <name> PhEffect </name>
+</var>
+
+<var>
+  <name> PeripheralDrive </name>
+</var>
+
+<var>
+  <name> ChemoreceptorEffect </name>
+</var>
+
+<parm>
+  <name> CentralBase </name>
+  <val> 0.6 </val>
+</parm>
+
+<parm>
+  <name> PeripheralBase </name>
+  <val> 0.4 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PhOnCentralDrive </name>
+  <point><x> 6.60 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x> 6.87 </x><y> 10.0 </y><slope> 0 </slope></point>
+  <point><x> 7.12 </x><y>  1.0 </y><slope> -8.0 </slope></point>
+  <point><x> 7.50 </x><y>  0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhOnCentralDrive [ Brain-Ph.Ph ] </val>
+</def>
+
+<def>
+  <name> CentralDrive </name>
+  <val> PhEffect * CentralBase </val>
+</def>
+
+<def>
+  <name> ChemoreceptorEffect </name>
+  <val> Chemoreceptors.FiringRate </val>
+</def>
+
+<def>
+  <name> PeripheralDrive </name>
+  <val> ChemoreceptorEffect * PeripheralBase </val>
+</def>
+
+<def>
+  <name> TotalDrive </name>
+  <val> CentralDrive + PeripheralDrive </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

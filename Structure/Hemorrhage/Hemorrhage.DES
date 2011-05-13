@@ -1,0 +1,70 @@
+HumMod / Hemorrhage
+
+Created : 30-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Hemorrhage </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> TargetRate </name><val> 0.0 </val></parm>
+<var><name> PlasmaRate </name></var>
+<var><name> ProteinRate </name></var>
+<var><name> RBCRate </name></var>
+<var><name> NaRate </name></var>
+<var><name> KRate </name></var>
+<var><name> ClRate </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Volume </name>
+  <integralname> Volume </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Rate </dervname>
+  <errorlim> 10.0  </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<conditional>
+  <name> Rate </name>
+  <test> Switch </test>
+  <true> TargetRate </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> PlasmaRate </name><val> BloodVol.PVCrit * Rate </val></def>
+<def><name> ProteinRate </name><val> PlasmaProtein.[Protein] * PlasmaRate </val></def>
+<def><name> RBCRate </name><val> BloodVol.Hct * Rate </val></def>
+<def><name> NaRate </name><val> NaPool.[Na+] * Rate </val></def>
+<def><name> KRate </name><val> KPool.[K+] * Rate </val></def>
+<def><name> ClRate </name><val> ClPool.[Cl-] * Rate </val></def>
+
+</block>
+
+<block><name> ResetVolume </name>
+
+<def><name> Volume </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

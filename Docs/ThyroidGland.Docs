@@ -1,0 +1,21 @@
+Digital Human / ThyroidGland
+
+Created : 21-Oct-04
+Last Modified : 21-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path Docs\ThyroidGland\ ?>
+
+<?include ThyroidPool.docs ?>
+<?include ThyroidPump.docs ?>
+<?include ThyroidClearance.docs ?>
+<?include ThyroidSecretion.docs ?>
+<?include ThyroidTSH.docs ?>
+
+</docs>
+
+End

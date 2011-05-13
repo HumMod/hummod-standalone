@@ -1,0 +1,71 @@
+HumMod / Colloids
+
+Created : 07-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Colloids </name>
+
+<variables>
+
+<var>
+  <name> Pres </name>
+</var>
+
+<var>
+  <name> [Prot] </name>
+</var>
+
+<constant>
+  <name> C1 </name>
+  <val> 320.0 </val>
+</constant>
+
+<constant>
+  <name> C2 </name>
+  <val> 1160.0 </val>
+</constant>
+
+<constant>
+  <name> K1 </name>
+  <val> 0.138 </val>
+</constant>
+
+<constant>
+  <name> K2 </name>
+  <val> 0.019 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> GetPres </name>
+
+<conditional>
+  <name> Pres </name>
+  <test> [Prot] GT 0.0 </test>
+  <true> ( C1 * [Prot] ) + ( C2 * [Prot] * [Prot] ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> Get[Prot] </name>
+
+<conditional>
+  <name> [Prot] </name>
+  <test> Pres GT 0.0 </test>
+  <true> SQRT ( K2 + ( Pres / C2 ) ) - K1
+  </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+
+</structure>
+
+End

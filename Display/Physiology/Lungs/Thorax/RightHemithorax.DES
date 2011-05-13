@@ -1,0 +1,60 @@
+HumMod / RightHemithorax
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.2 </high>
+   <wide> 30.0 </wide>
+   <title> Right Hemithorax </title>
+
+<structurename> RightHemithorax </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Pressure </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Pressure </label>
+</showvalue>
+
+<repeatlist>
+  <name> NormalPressure(2) </name>
+  <firstval> -10 </firstval>
+  <repeat><reps> 30 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> NormalPressure </name>
+  <listname> NormalPressure(2) </listname>
+  <label> Normal </label>
+</slidebar>
+
+<maplist>
+  <name> ChestOpen(2) </name>
+  <map><val> 0 </val><img> Closed </img></map>
+  <map><val> 1 </val><img> Open </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> ChestOpen </name>
+  <listname> ChestOpen(2) </listname>
+  <label> Chest </label>
+</radiobuttons>
+
+<showvalue>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> LungInflation </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Lung Inflation </label>
+</showvalue>
+
+</groupbox>
+
+End

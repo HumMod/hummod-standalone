@@ -1,0 +1,48 @@
+HumMod / O2
+
+Created : 10-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\O2\ ?>
+
+<?include O2Total.DES ?>
+<?include O2Artys.DES ?>
+<?include O2Veins.DES ?>
+
+<?include PO2Artys.DES ?>
+<?include PO2Veins.DES ?>
+
+<structure><name> O2 </name>
+
+<definitions>
+<block><name> CalcConc </name>
+
+  <call> O2Artys.CalcConc </call>
+  <call> O2Veins.CalcConc </call>
+
+</block>
+
+<block><name> CalcPO2 </name>
+
+  <call> PO2Artys.Calc </call>
+  <call> PO2Veins.Calc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> O2Total.Dervs </call>
+  <call> O2Artys.Dervs </call>
+  <call> O2Veins.Dervs </call>
+
+</block>
+
+</definitions>
+
+</structure>
+
+End

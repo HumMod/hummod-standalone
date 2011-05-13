@@ -1,0 +1,73 @@
+HumMod / ArteryO2
+
+Created : 15-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 14.4 </high>
+   <wide> 30.0 </wide>
+   <title> Artery O2 </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> PO2Artys.Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> pO2 </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> O2Artys.[O2] </name>
+   <format><decimal> 3 </decimal></format>
+   <label> [O2] </label>
+</showvalue>
+
+<showmap>
+  <row> 3.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+
+  <xaxis>
+    <name> PO2Artys.Pressure </name>
+    <label> pO2 </label>
+    <scale>
+      <min> 0 </min><max> 120 </max><inc> 10 </inc>
+    </scale>
+  </xaxis>
+
+  <yaxis>
+    <name> O2Artys.[O2] </name>
+    <label> [O2] </label>
+    <scale>
+      <min> 0 </min><max> 0.22 </max><inc> 0.02 </inc>
+    </scale>
+  </yaxis>
+
+  <blockname> PO2Artys.ForDisplay </blockname>
+</showmap>
+
+<showvalue>
+   <row> 12.8 </row><col> 1.0 </col>
+   <name> PO2Artys.Sat(%)</name>
+   <format><decimal> 1 </decimal></format>
+   <label> Saturation(%) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> pO2 = 98 mmHg </line>
+  <line> [O2] = 0.20 mL/mL </line>
+  <line> Saturation = 97% </line>
+</infobutton>
+
+</groupbox>
+
+End

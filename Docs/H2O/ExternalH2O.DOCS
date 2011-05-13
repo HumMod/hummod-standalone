@@ -1,0 +1,52 @@
+QHP 2008 / H2O.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> ExternalH2O </structurename>
+
+<vardoc>
+<name> ExternalH2O.InitialVol</name>
+<topic> ExternalH2O -Overview </topic>
+<topic> ExternalH2O - Concentration Units </topic>
+<topic> XXXX </topic>
+<seealso> GILumenVolume.Mass </seealso>
+<seealso> PeritoneumSpace.Volume </seealso>
+<seealso> ExcessLungWater.InitialVolume </seealso>
+</vardoc>
+
+<vardoc>
+<name> ExternalH2O.Vol</name>
+<topic> ExternalH2O -Overview </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> ExternalH2O - Overview </name>
+<label> Overview </label>
+<content>
+
+Water may be added to the body in three ways: 
+Via the GI lumen; from the peritoneal space 
+and from the lungs.
+
+</content>
+</topicdoc>
+
+  
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+
+End

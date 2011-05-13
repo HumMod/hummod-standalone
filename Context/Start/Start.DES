@@ -1,0 +1,42 @@
+HumMod / Start DES
+
+Created : 03-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\ ?>
+
+<?include Start-Morphology\Start-Morphology.DES ?>
+<?include Start-WholeBody\Start-WholeBody.DES ?>
+<?include Start-Heat\Start-Heat.DES ?>
+<?include Start-Electrolytes\Start-Electrolytes.DES ?>
+<?include Start-Metabolism\Start-Metabolism.DES ?>
+<?include Start-Hormones\Start-Hormones.DES ?>
+
+<?include Start-OrganCalories.DES ?>
+<?include Start-OrganConductance.DES ?>
+
+<structure><name> Start </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-Morphology.Calc </call>
+  <call> Start-WholeBody.Calc </call>
+  <call> Start-Heat.Calc </call>
+  <call> Start-Electrolytes.Calc </call>
+  <call> Start-Metabolism.Calc </call>
+  <call> Start-Hormones.Calc </call>
+
+  <call> Start-OrganCalories.Calc </call>
+  <call> Start-OrganConductance.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

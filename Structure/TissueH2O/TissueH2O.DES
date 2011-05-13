@@ -1,0 +1,206 @@
+HumMod / TissueH2O
+
+Created : 24-Mar-08
+Last Modified : 2010-04-18
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+
+<?path Structure\TissueH2O\ ?>
+
+<?include UT_H2O.DES ?>
+<?include MT_H2O.DES ?>
+<?include LT_H2O.DES ?>
+
+<?include CapillaryWater\CapillaryWater.DES ?>
+<?include CapillaryProtein\CapillaryProtein.DES ?>
+
+<?include InterstitialWater\InterstitialWater.DES ?>
+<?include InterstitialProtein\InterstitialProtein.DES ?>
+
+<?include LymphWater\LymphWater.DES ?>
+<?include LymphProtein\LymphProtein.DES ?>
+
+<?include CellH2O\CellH2O.DES ?>
+
+<structure><name> TissueH2O </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+<var><name> Vol(L) </name></var>
+
+<var><name> Change </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<constant>
+  <name> LT_SizeFract </name>
+  <val> 0.30 </val>
+</constant>
+
+<constant>
+  <name> MT_SizeFract </name>
+  <val> 0.50 </val>
+</constant>
+
+<constant>
+  <name> UT_SizeFract </name>
+  <val> 0.20 </val>
+</constant>
+
+<constant>
+  <name> LT_CalsFract </name>
+  <val> 0.20 </val>
+</constant>
+
+<constant>
+  <name> MT_CalsFract </name>
+  <val> 0.50 </val>
+</constant>
+
+<constant>
+  <name> UT_CalsFract </name>
+  <val> 0.30 </val>
+</constant>
+
+<constant>
+  <name> LT_SweatFract </name>
+  <val> 0.33 </val>
+</constant>
+
+<constant>
+  <name> MT_SweatFract </name>
+  <val> 0.34 </val>
+</constant>
+
+<constant>
+  <name> UT_SweatFract </name>
+  <val> 0.33 </val>
+</constant>
+
+<constant>
+  <name> LT_SkinFract </name>
+  <val> 0.33 </val>
+</constant>
+
+<constant>
+  <name> MT_SkinFract </name>
+  <val> 0.34 </val>
+</constant>
+
+<constant>
+  <name> UT_SkinFract </name>
+  <val> 0.33 </val>
+</constant>
+
+<constant>
+  <name> LT_LungFract </name>
+  <val> 0.0 </val>
+</constant>
+
+<constant>
+  <name> MT_LungFract </name>
+  <val> 1.0 </val>
+</constant>
+
+<constant>
+  <name> UT_LungFract </name>
+  <val> 0.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def><name> InitialVol </name>
+  <val>
+      Bone-Size.InitialLiquidVol
+    + Brain-Size.InitialLiquidVol
+    + Fat-Size.InitialLiquidVol
+    + GITract-Size.InitialLiquidVol
+    + Kidney-Size.InitialLiquidVol
+    + LeftHeart-Size.InitialLiquidVol
+    + Liver-Size.InitialLiquidVol
+    + OtherTissue-Size.InitialLiquidVol
+    + RespiratoryMuscle-Size.InitialLiquidVol
+    + RightHeart-Size.InitialLiquidVol
+    + SkeletalMuscle-Size.InitialLiquidVol
+    + Skin-Size.InitialLiquidVol
+  </val>
+</def>
+
+<call> UT_H2O.Initialize </call>
+<call> MT_H2O.Initialize </call>
+<call> LT_H2O.Initialize </call>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<call> UT_H2O.Calc </call>
+<call> MT_H2O.Calc </call>
+<call> LT_H2O.Calc </call>
+
+<def><name> Vol </name>
+  <val>
+      UT_H2O.Vol
+    + MT_H2O.Vol
+    + LT_H2O.Vol
+  </val>
+</def>
+
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+</block>
+
+<block><name> Calc </name>
+
+<call> CellH2O.Calc </call>
+<call> InterstitialWater.Calc </call>
+<call> InterstitialProtein.Calc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+<call> CapillaryProtein.Dervs </call>
+<call> CapillaryWater.Dervs </call>
+
+<call> LymphWater.Dervs </call>
+<call> LymphProtein.Dervs </call>
+
+<call> InterstitialProtein.Dervs </call>
+
+<call> UT_H2O.Dervs </call>
+<call> MT_H2O.Dervs </call>
+<call> LT_H2O.Dervs </call>
+
+<def><name> Gain </name>
+  <val>
+      UT_H2O.Gain
+    + MT_H2O.Gain
+    + LT_H2O.Gain
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>
+      UT_H2O.Loss
+    + MT_H2O.Loss
+    + LT_H2O.Loss
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

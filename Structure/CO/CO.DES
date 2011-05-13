@@ -1,0 +1,140 @@
+HumMod / CO
+
+Created : 29-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CO </name>
+
+<variables>
+
+<var><name> [CO] </name></var>
+<var><name> pCO </name></var>
+
+<parm>
+  <name> HaldaneFactor </name>
+  <val> 230.0 </val>
+</parm>
+
+<parm>
+  <name> EndogenousProduction </name>
+  <val> 0.007 </val>
+</parm>
+
+<parm>
+  <name> ExtravascularSpaceFraction </name>
+  <val> 0.16 </val>
+</parm>
+
+<var><name> ExtravascularSpace </name></var>
+<var><name> VolumeDistribution </name></var>
+
+<var><name> Permeability </name></var>
+<parm>
+  <name> CO_O2Ratio </name>
+  <val> 0.81 </val>
+</parm>
+
+<var><name> Gradient </name></var>
+
+<var><name> [CO-Lung] </name></var>
+<var><name> pCO-Lung </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 4.9 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 10.0 </errorlim>
+</diffeq>
+
+<impliciteq>
+  <name> Uptake </name>
+  <startname> Uptake </startname>
+  <initialval> -0.007 </initialval>
+  <endname> EndUptake </endname>
+  <errorlim> 0.01 </errorlim>
+</impliciteq>
+
+</equations>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> ExtravascularSpace </name>
+  <val> ExtravascularSpaceFraction * BloodVol.Vol </val>
+</def>
+
+<def>
+  <name> VolumeDistribution </name>
+  <val> BloodVol.Vol + ExtravascularSpace </val>
+</def>
+
+<def>
+  <name> [CO] </name>
+  <val> Mass / VolumeDistribution </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> pCO </name>
+  <val>
+      ( [CO] * LungO2.PCapy )
+    / ( HaldaneFactor * LungO2.[Capy] )
+  </val>
+</def>
+
+<def>
+  <name> Permeability </name>
+  <val> CO_O2Ratio * PulmonaryMembrane.Permeability </val>
+</def>
+
+<implicitmath><name> Uptake </name>
+
+<conditional>
+  <name> [CO-Lung] </name>
+  <test> Breathing.AlveolarVentilation(STPD) GT 0.0 </test>
+  <true> Bronchi.[CO] - ( Uptake / Breathing.AlveolarVentilation(STPD) ) </true>
+  <false> [CO] </false>
+</conditional>
+
+<def>
+  <name> pCO-Lung </name>
+  <val> [CO-Lung] * Barometer.Pressure </val>
+</def>
+
+<def>
+  <name> Gradient </name>
+  <val> pCO-Lung - pCO </val>
+</def>
+
+<def>
+  <name> EndUptake </name>
+  <val> Gradient * Permeability </val>
+</def>
+
+</implicitmath>
+
+<def>
+  <name> Change </name>
+  <val> Uptake + EndogenousProduction </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

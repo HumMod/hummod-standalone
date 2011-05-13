@@ -1,0 +1,36 @@
+Digital Human / Nerves DES
+
+Created : 21-Oct-04
+Last Modified : 25-Jul-07
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\Nerves\ ?>
+
+<?include Baroreflex.docs ?>
+<?include CNSTrophicFactor.docs ?>
+<?include CushingResponse.docs ?>
+<?include LowPressureReceptors.docs ?>
+<?include Mechanoreceptors.docs ?>
+<?include SympsChemo.docs ?>
+<?include SympsCNS.docs ?>
+<?include SympsKidy.docs ?>
+<?include GangliaGeneral.docs ?>
+<?include GangliaKidney.docs ?>
+<?include VagusNerve.docs ?>
+<?include AdrenalNerve.docs ?>
+
+<?include Chemoreceptors.docs ?>
+<?include ChemoreceptorAcclimation.docs ?>
+
+<?include ExerciseSymps.docs ?>
+<?include MotorRadiation.docs ?>
+
+<?include SystemicVeins-AlphaReceptors.docs ?>
+
+</docs>
+End

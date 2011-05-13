@@ -1,0 +1,36 @@
+HumMod / LeftVentricle
+
+Created : 16-May-05
+Last Modified : 2010-05-26
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<panel><name> VascularCompartments_LeftVentricle </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Compartment </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Left Ventricle </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<?path Display\Physiology\VascularCompartments\LeftVentricle\ ?>
+
+<?include BloodVolume.DES ?>
+<?include BloodFlow.DES ?>
+
+</panel>
+
+End

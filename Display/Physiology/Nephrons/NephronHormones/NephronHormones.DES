@@ -1,0 +1,17 @@
+HumMod / NephronHormones
+
+Created : 17-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\Nephrons\NephronHormones\ ?>
+
+<?include ADH\ADH.DES ?>
+<?include Aldosterone\Aldosterone.DES ?>
+<?include ANP\ANP.DES ?>
+
+End

@@ -1,0 +1,105 @@
+HumMod / BloodIons
+
+Created : 09-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> BloodIons </name>
+
+<variables>
+
+<var>
+  <name> Cations </name>
+</var>
+
+<var>
+  <name> Anions </name>
+</var>
+
+<var>
+  <name> StrongAnions </name>
+</var>
+
+<var>
+  <name> WeakAnions </name>
+</var>
+
+<var>
+  <name> Protein </name>
+</var>
+
+<var>
+  <name> AnionsLessProtein </name>
+</var>
+
+<var>
+  <name> [SID] </name>
+</var>
+
+<var>
+  <name> [SID(mEq/L)] </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> CalcSID </name>
+
+<def>
+  <name> Cations </name>
+  <val> NaPool.[Na+(mEq/L)] + KPool.[K+(mEq/L)] </val>
+</def>
+
+<def>
+  <name> Anions </name>
+  <val> Cations </val>
+</def>
+
+<def>
+  <name> StrongAnions </name>
+  <val>
+      ClPool.[Cl-(mEq/L)]
+    + LacPool.[Lac-(mEq/L)]
+    + KAPool.[KA(mMol/L)]
+    + SO4Pool.[SO4--(mEq/L)]
+    + PO4Pool.[PO4--(mEq/L)]
+  </val>
+</def>
+
+<def>
+  <name> [SID(mEq/L)] </name>
+  <val> Cations - StrongAnions </val>
+</def>
+
+<def>
+  <name> [SID] </name>
+  <val> 0.001 * [SID(mEq/L)] </val>
+</def>
+
+</block>
+
+<block><name> FinishSums </name>
+
+<def>
+  <name> WeakAnions </name>
+  <val> Anions - StrongAnions </val>
+</def>
+
+<def>
+  <name> Protein </name>
+  <val> WeakAnions - CO2Veins.[HCO3(mEq/L)] </val>
+</def>
+
+<def>
+  <name> AnionsLessProtein </name>
+  <val> Anions - Protein </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

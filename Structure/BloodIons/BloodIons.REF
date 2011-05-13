@@ -1,0 +1,55 @@
+HumMod / BloodIons.REF
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+These sums use mEq/L.
+
+The cations are all strong ions.
+
+  [Na+] 144.0
+  [K+]    4.5
+        -----
+  Total 148.5
+
+The anions are mostly strong ions.
+
+  [CL-]   107.0
+  [KA-]     0.0
+  [Lac-]    1.0
+  [SO4--]   0.3
+  [PO4--]   0.2
+          -----
+  Total   108.5
+
+The weak anion is [HCO3] at 28.
+
+  Strong  108.5
+  [HCO3-]  28.0
+          -----
+  Total   136.5
+
+The remainder of the anion gap is filled with
+protein at 12.0
+
+  Strong  108.5
+  Weak     28.0
+  Protein  12.0
+          -----
+  Total   148.5
+
+The SID is strong cation minus strong anion. We also
+need a SID value in mEq/mL.
+
+CALCULATION SEQUENCE
+
+We can't calculate all of the ion sums at once.
+Calculate SID first. It's value is then used to
+calculate [HCO3]. Then return here to finish sums.
+
+
+End

@@ -1,0 +1,32 @@
+HumMod / RightHeart
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\RightHeart\ ?>
+
+<?include RightHeart-Flow.DES ?>
+<?include RightHeart-Pressure.DES ?>
+<?include RightHeart-ContractileProtein.DES ?>
+<?include RightHeart-Size.DES ?>
+<?include RightHeart-Function.DES ?>
+
+<?include RightHeart-CO2.DES ?>
+<?include RightHeart-Lactate.DES ?>
+<?include RightHeart-Ph.DES ?>
+
+<?include RightHeart-Fuel.DES ?>
+<?include RightHeart-Metabolism.DES ?>
+<?include RightHeart-AlphaReceptors.DES ?>
+<?include RightHeart-BetaReceptors.DES ?>
+<?include RightHeart-Structure.DES ?>
+<?include RightHeart-Vasculature.DES ?>
+
+<?include RightHeart-Work.DES ?>
+<?include RightHeart-Infarction.DES ?>
+
+End

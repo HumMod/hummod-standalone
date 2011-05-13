@@ -1,0 +1,15 @@
+HumMod / DailyPlanner
+
+Created : 27-Feb-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Display\Lifestyle\DailyPlanner\ ?>
+
+<?include Control\Control.DES ?>
+<?include Schedule\Schedule.DES ?>
+
+End

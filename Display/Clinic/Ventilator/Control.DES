@@ -1,0 +1,68 @@
+HumMod / Control
+
+Created : 02-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.2 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Ventilator </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<repeatlist>
+  <name> Ventilator.Rate </name>
+  <repeat><reps> 50 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <listname> Ventilator.Rate </listname>
+  <label> Rate </label>
+</slidebar>
+
+<repeatlist>
+  <name> Ventilator.TidalVolume </name>
+  <repeat><reps> 200 </reps><stepsize> 10.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> TidalVolume </name>
+  <listname> Ventilator.TidalVolume </listname>
+  <label> Tidal Volume </label>
+</slidebar>
+
+<showvalue>
+  <row> 5.6 </row><col> 1.0 </col>
+  <name> MinuteVolume(L) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Minute Volume (L) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Rate = mL/Min </line>
+  <line> Tidal Volume = mL </line>
+  <line> Minute Volume = L </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,33 @@
+HumMod / CarbonMonoxide
+
+Created : 2010-06-05
+Last Modified : 2010-06-06
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<branch>
+  <name> CarbonMonoxide </name>
+  <label> Carbon Monoxide </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> CarbonMonoxide-Supply </name>
+  <label> Supply </label>
+  <parent> CarbonMonoxide </parent>
+</leaf>
+
+<leaf>
+  <name> CarbonMonoxide-Uptake </name>
+  <label> Uptake </label>
+  <parent> CarbonMonoxide </parent>
+</leaf>
+
+<leaf>
+  <name> CarbonMonoxide-Distribution </name>
+  <label> Distribution </label>
+  <parent> CarbonMonoxide </parent>
+</leaf>
+
+End

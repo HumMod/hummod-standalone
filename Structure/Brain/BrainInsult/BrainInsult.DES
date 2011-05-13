@@ -1,0 +1,59 @@
+HumMod / BrainInsult
+
+Created : 08-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\Brain\BrainInsult\ ?>
+
+<?include BrainInsult-Ph.DES ?>
+<?include BrainInsult-Fuel.DES ?>
+<?include BrainInsult-Temperature.DES ?>
+<?include BrainInsult-Low[Osm].DES ?>
+<?include BrainInsult-High[Osm].DES ?>
+<?include BrainInsult-PO2.DES ?>
+<?include BrainInsult-Structure.DES ?>
+
+<structure><name> BrainInsult </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<call> BrainInsult-Ph.Calc </call>
+<call> BrainInsult-Fuel.Calc </call>
+<call> BrainInsult-Temperature.Calc </call>
+<call> BrainInsult-Low[Osm].Calc </call>
+<call> BrainInsult-High[Osm].Calc </call>
+<call> BrainInsult-PO2.Calc </call>
+<call> BrainInsult-Structure.Calc </call>
+
+<def>
+  <name> Effect </name>
+  <val>
+        BrainInsult-Ph.Effect
+    MIN BrainInsult-Fuel.Effect
+    MIN BrainInsult-Temperature.Effect
+    MIN Anesthesia.BrainFunction
+    MIN BrainInsult-Low[Osm].Effect
+    MIN BrainInsult-High[Osm].Effect
+    MIN BrainInsult-PO2.Effect
+    MIN BrainInsult-Structure.Effect
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,50 @@
+HumMod / CorpusLuteum-Involution
+
+Created : 05-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> CorpusLuteum-Involution </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<var><name> [hCG]Effect </name></var>
+
+<var><name> K </name></var>
+<parm><name> BasicK </name><val> 0.0001 </val></parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> [hCG]Effect </name>
+  <point><x>   0.0 </x><y>  1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100.0 </x><y> -0.5 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> [hCG]Effect </name>
+  <val> [hCG]Effect [ hCG.[Conc(IU/L)] ] </val>
+</def>
+
+<def><name> K </name><val> BasicK * [hCG]Effect </val></def>
+<def><name> Rate </name><val> K * Ovaries-CorpusLuteum.Mass </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

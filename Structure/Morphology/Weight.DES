@@ -1,0 +1,186 @@
+HumMod / Weight
+
+Created : 21-May-05
+Last Modified : 2010-03-24
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Weight </name>
+
+<variables>
+
+<var><name> Weight </name></var>
+<var><name> InitialWeight </name></var>
+
+<var><name> Weight(kG) </name></var>
+<var><name> Weight(Lb) </name></var>
+
+<var><name> OrganMass </name></var>
+<var><name> InitialOrganMass </name></var>
+
+<var><name> Core </name></var>
+<var><name> InitialCore </name></var>
+
+<var><name> Core(kG) </name></var>
+
+<var><name> OtherMass </name></var>
+<var><name> InitialOtherMass </name></var>
+
+<var><name> FatMass </name></var>
+<var><name> InitialFatMass </name></var>
+
+<var><name> MuscleMass </name></var>
+<var><name> InitialMuscleMass </name></var>
+
+<var><name> SkinMass </name></var>
+<var><name> InitialSkinMass </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> InitializeOtherMass </name>
+
+<def>
+  <name> InitialOtherMass </name>
+  <val> Values-OtherMass.Mass </val>
+</def>
+
+</block>
+
+<block><name> Initialize </name>
+
+<call> Weight-Fluids.Initialize </call>
+
+<def>
+  <name> InitialFatMass </name>
+  <val> Fat-Size.InitialMass </val>
+</def>
+
+<def>
+  <name> InitialMuscleMass </name>
+  <val> SkeletalMuscle-Size.InitialMass </val>
+</def>
+
+<def>
+  <name> InitialSkinMass </name>
+  <val> Skin-Size.InitialMass </val>
+</def>
+
+<def>
+  <name> InitialOrganMass </name>
+  <val>
+      Bone-Size.InitialMass
+    + Brain-Size.InitialMass
+    + GITract-Size.InitialMass
+    + Kidney-Size.InitialMass
+    + LeftHeart-Size.InitialMass
+    + Liver-Size.InitialMass
+    + OtherTissue-Size.InitialMass
+    + RespiratoryMuscle-Size.InitialMass
+    + RightHeart-Size.InitialMass
+
+    + InitialFatMass
+    + InitialMuscleMass
+    + InitialSkinMass
+  </val>
+</def>
+
+<def>
+  <name> InitialCore </name>
+  <val>
+      InitialOrganMass
+    - InitialMuscleMass
+    - InitialSkinMass
+    + Weight-Fluids.InitialCore
+
+  </val>
+</def>
+
+<def>
+  <name> InitialWeight </name>
+  <val> InitialOrganMass + Weight-Fluids.InitialTotal </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<call> Weight-Fluids.Calc </call>
+
+<def>
+  <name> FatMass </name>
+  <val> Fat-Size.Mass </val>
+</def>
+
+<def>
+  <name> MuscleMass </name>
+  <val> SkeletalMuscle-Size.Mass </val>
+</def>
+
+<def>
+  <name> SkinMass </name>
+  <val> Skin-Size.Mass </val>
+</def>
+
+<def>
+  <name> OrganMass </name>
+  <val>
+      Bone-Size.Mass
+    + Brain-Size.Mass
+    + GITract-Size.Mass
+    + Kidney-Size.Mass
+    + LeftHeart-Size.Mass
+    + Liver-Size.Mass
+    + OtherTissue-Size.Mass
+    + RespiratoryMuscle-Size.Mass
+    + RightHeart-Size.Mass
+
+    + FatMass
+    + MuscleMass
+    + SkinMass
+  </val>
+</def>
+
+<def>
+  <name> OtherMass </name>
+  <val> OrganMass - FatMass - MuscleMass </val>
+</def>
+
+<def>
+  <name> Core </name>
+  <val>
+      OrganMass
+    - MuscleMass
+    - SkinMass
+    + Weight-Fluids.Core
+  </val>
+</def>
+
+<def>
+  <name> Core(kG) </name>
+  <val> Core / 1000.0 </val>
+</def>
+
+<def>
+  <name> Weight </name>
+  <val> OrganMass + Weight-Fluids.Total </val>
+</def>
+
+<def>
+  <name> Weight(kG) </name>
+  <val> Weight / 1000.0 </val>
+</def>
+
+<def>
+  <name> Weight(Lb) </name>
+  <val> 2.2 * Weight(kG) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

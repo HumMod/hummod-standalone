@@ -1,0 +1,59 @@
+HumMod / DietGoalNutrition
+
+Created : 24-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> DietGoalNutrition </name>
+
+<variables>
+
+<constant><name> CARBO_KCAL/G </name><val> 4.10 </val></constant>
+<constant><name> FAT_KCAL/G </name><val> 9.30 </val></constant>
+<constant><name> PROTEIN_KCAL/G </name><val> 4.35 </val></constant>
+<parm><name> Carbo_kCal/Day </name><val> 900.0 </val></parm>
+<parm><name> Fat_kCal/Day </name><val> 800.0 </val></parm>
+<parm><name> Protein_kCal/Day </name><val> 500.0 </val></parm>
+<var><name> Total_kCal/Day </name></var>
+<var><name> Carbo_G/Day </name></var>
+<var><name> Fat_G/Day </name></var>
+<var><name> Protein_G/Day </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> Total_kCal/Day </name>
+  <val>
+      Carbo_kCal/Day
+    + Fat_kCal/Day
+    + Protein_kCal/Day
+  </val>
+</def>
+
+<def>
+  <name> Carbo_G/Day </name>
+  <val> Carbo_kCal/Day / CARBO_KCAL/G </val>
+</def>
+
+<def>
+  <name> Fat_G/Day </name>
+  <val> Fat_kCal/Day / FAT_KCAL/G </val>
+</def>
+
+<def>
+  <name> Protein_G/Day </name>
+  <val> Protein_kCal/Day / PROTEIN_KCAL/G </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

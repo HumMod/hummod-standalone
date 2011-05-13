@@ -1,0 +1,80 @@
+HumMod / MidodrineGILumen
+
+Created : 06-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> MidodrineGILumen </name>
+
+<variables>
+
+<constant>
+  <name> BIOAVAIL </name>
+  <val> 0.93 </val>
+</constant>
+
+<constant>
+  <name> NIPHCL </name>
+  <val> 0.875 </val>
+</constant>
+
+<constant>
+  <name> PERM </name>
+  <val> 0.060 </val>
+</constant>
+
+<var>
+  <name> [Midodrine] </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 5.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Midodrine] </name>
+  <val> Mass / GILumenVolume.Mass(L) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Loss </name>
+  <val> BIOAVAIL * NIPHCL * PERM * Mass
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

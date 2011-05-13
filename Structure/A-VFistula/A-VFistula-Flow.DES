@@ -1,0 +1,50 @@
+HumMod / A-VFistula-Flow
+
+Created : 2010-05-20
+Last Modified : 2010-05-20
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<structure><name> A-VFistula-Flow </name>
+
+<variables>
+
+<var><name> Conductance </name></var>
+
+<parm>
+  <name> BasicConductance </name>
+  <val> 0.0 </val>
+</parm>
+
+<var><name> BloodFlow </name></var>
+<var><name> PlasmaFlow </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Conductance </name>
+  <val>
+      BasicConductance
+    * Viscosity.ConductanceEffect
+  </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> ( A-VFistula-Pressure.PressureGradient * Conductance ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> PlasmaFlow </name>
+  <val> BloodFlow * BloodVol.PVCrit </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

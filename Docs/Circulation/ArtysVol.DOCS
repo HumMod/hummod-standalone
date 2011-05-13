@@ -1,0 +1,91 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> ArtysVol</structurename>
+
+<vardoc>
+<name> ArtysVol.Vol </name>
+<topic> ArtysVol - Overview </topic>
+<topic> ArtysVol - Physical Units </topic>
+<topic> ArtysVol - Concentration Units </topic>
+<seealso> PulmCapys.Vol</seealso>
+<seealso> PulmVeins.Vol </seealso>
+<seealso> KeftAtrium.Vol </seealso>
+<seealso> Leftventricle-Compartment.Vol </seealso>
+<seealso> SystemicArtys.Vol </seealso>
+<seealso> BVSeqArtys.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> ArtysVol.Vol(L)</name>
+<topic> ArtysVol - Overview </topic>
+<topic> ArtysVol - Physical Units  </topic>
+<topic> ArtysVol - Concentration Units  </topic>
+<seealso> ArtysVol.Vol</seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> ArtysVol - Overview </name>
+<label> Overview </label>
+<content>
+
+The blood volume contained within the arterial side 
+of the circulation is the sum of the volumes contained 
+within various arterial compartments. These compartments 
+are:pulmonary capillaries, pulmonary Veins, the left atrium,
+the left ventricle, systemic arteries and the sequestered 
+arterial volume.
+
+Leggett RW, Williams LR. Suggested reference values for 
+regional blood volumes in humans. 
+Health Physics 60(2):139-154, 1991.
+
+Leggett RW, Williams LR. A proposed blood circulation model 
+for reference man. Health Physics 69(2):187-201; 1995 
+
+For reference about sequestered blood volume see:
+Thornton WE, Moore TP, Pool SL. Fluid Shifts in Weightlessness
+Aviat. Space Environ Med 58(9, Suppl.):A86-90, 1987
+
+Moore TP, Thornton WE Space shuttle inflight and postflight 
+fluid shifts measured by leg volume changes. Aviat Space
+Environ. Med 58(9, Suppl.):A91-96, 1987
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ArtysVol - Physical Units  </name>
+<label> Physical Units </label>
+<content>
+
+mL or L
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ArtysVol - Concentration Units   </name>
+<label> Concentration Units </label>
+<content>
+
+Systemic arteries: 997.9mL
+Pulmonary capillaries: 198.6mL
+Pulmonary Veins: 208.4mL
+Left atrium: 48.4mL
+Left Ventricle: 85.9mL
+Sequestered arterial volume: 48.6mL
+
+Total Arterial Volume: 1587.8mL 
+
+</content>
+</topicdoc>
+
+   
+End

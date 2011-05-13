@@ -1,0 +1,15 @@
+HumMod / SkeletalMuscle-Insulin.REF
+
+Created : 31-Jul-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Insulin has a strong, positive effect on glycogen synthesis, but
+the effect builds slowly. So I use a delay and delayed [insulin].
+The tau is 40 minutes.
+
+End

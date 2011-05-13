@@ -1,0 +1,119 @@
+HumMod / Anions
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 14.2 </high>
+   <wide> 30.0 </wide>
+   <title> Anions </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> BloodIons.Anions </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> BloodIons.StrongAnions </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Strong </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 3 </col>
+   <name> ClPool.[Cl-(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Cl-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 3 </col>
+   <name> LacPool.[Lac-(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Lac-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 3 </col>
+   <name> KAPool.[KA(mMol/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [KA-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.8 </row><col> 3 </col>
+   <name> SO4Pool.[SO4--(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [SO4--] </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.8 </row><col> 3 </col>
+   <name> PO4Pool.[PO4--(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [PO4--] </label>
+</showvalue>
+
+<showvalue>
+   <row> 9.2 </row><col> 1.0 </col>
+   <name> BloodIons.WeakAnions </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Weak </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.2 </row><col> 3 </col>
+   <name> CO2Veins.[HCO3(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [HCO3-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 3 </col>
+   <name> BloodIons.Protein </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [Protein-] </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.6 </row><col> 1.0 </col>
+   <name> BloodIons.AnionsLessProtein </name>
+   <format><decimal> 1 </decimal></format>
+   <label> All But Protein </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> Total = 148.5 mEq/L </line>
+  <line>  </line>
+  <line> Strong = 108.5 mEq/L </line>
+  <line>  </line>
+  <line> [Cl-] = 107.0 mEq/L </line>
+  <line> [Lac-] = 1.0 mEq/L </line>
+  <line> [KA-] = 0.0 mEq/L </line>
+  <line> [SO4--] = 0.3 mEq/L </line>
+  <line> [PO4--] = 0.2 mEq/L </line>
+  <line>  </line>
+  <line> Weak = 40.0 mEq/L </line>
+  <line>  </line>
+  <line> [HCO3-] = 28.0 mEq/L </line>
+  <line> [Protein-] = 12.0 mEq/L </line>
+  <line>  </line>
+  <line> All But Protein = 136.5 mEq/L </line>
+</infobutton>
+
+</groupbox>
+
+End

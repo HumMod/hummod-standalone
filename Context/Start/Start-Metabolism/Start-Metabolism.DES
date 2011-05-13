@@ -1,0 +1,39 @@
+HumMod / Start-Metabolism DES
+
+Created : 03-Feb-10
+Last Modified : 03-Feb-10
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Context\Start\Start-Metabolism\ ?>
+
+<?include Start-Glucose.DES ?>
+<?include Start-FattyAcid.DES ?>
+<?include Start-AminoAcid.DES ?>
+<?include Start-KetoAcid.DES ?>
+<?include Start-Triglyceride.DES ?>
+<?include Start-Urea.DES ?>
+<?include Start-Creatine.DES ?>
+<?include Start-Creatinine.DES ?>
+
+<structure><name> Start-Metabolism </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Start-Glucose.Calc </call>
+  <call> Start-FattyAcid.Calc </call>
+  <call> Start-AminoAcid.Calc </call>
+  <call> Start-KetoAcid.Calc </call>
+  <call> Start-Triglyceride.Calc </call>
+  <call> Start-Urea.Calc </call>
+  <call> Start-Creatine.Calc </call>
+  <call> Start-Creatinine.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,15 @@
+HumMod / Glycerol
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Glycerol\ ?>
+
+<?include GlycerolPool.DES ?>
+
+End

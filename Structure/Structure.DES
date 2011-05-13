@@ -1,0 +1,646 @@
+HumMod / Structure.DES
+
+Created : 21-Oct-04
+Last Modified : 2011-03-13
+Author : Tom Coleman
+Copyright : 2008-2011
+By : University of Mississippi Medical Center
+
+<?path Structure\ ?>
+
+<?include CO2\CO2.DES ?>
+<?include Hemoglobin\Hemoglobin.DES ?>
+
+<?include A-VFistula\A-VFistula.DES ?>
+<?include AcidBase\AcidBase.DES ?>
+<?include ADH\ADH.DES ?>
+<?include AirSupply\AirSupply.DES ?>
+<?include Aldosterone\Aldosterone.DES ?>
+<?include AminoAcid\AminoAcid.DES ?>
+<?include Anesthesia\Anesthesia.DES ?>
+<?include ANP\ANP.DES ?>
+<?include Autopsy\Autopsy.DES ?>
+<?include Bladder\Bladder.DES ?>
+<?include BloodVolume\BloodVolume.DES ?>
+<?include BloodIons\BloodIons.DES ?>
+<?include Bone\Bone.DES ?>
+<?include Brain\Brain.DES ?>
+<?include CardiacCycle\CardiacCycle.DES ?>
+<?include Catechols\Catechols.DES ?>
+<?include CellProtein\CellProtein.DES ?>
+<?include Circulation\Circulation.DES ?>
+<?include CircyProtein\CircyProtein.DES ?>
+<?include CO\CO.DES ?>
+<?include CoronarySinus\CoronarySinus.DES ?>
+<?include CPR\CPR.DES ?>
+<?include Creatine\Creatine.DES ?>
+<?include Creatinine\Creatinine.DES ?>
+<?include DailyPlanner\DailyPlanner.DES ?>
+<?include Diet\Diet.DES ?>
+<?include Drugs\Drugs.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Environment\Environment.DES ?>
+<?include EPO\EPO.DES ?>
+<?include Estradiol\Estradiol.DES ?>
+<?include Exercise\Exercise.DES ?>
+<?include Fat\Fat.DES ?>
+<?include FattyAcid\FattyAcid.DES ?>
+<?include FSH\FSH.DES ?>
+<?include GILumen\GILumen.DES ?>
+<?include GITract\GITract.DES ?>
+<?include Glucagon\Glucagon.DES ?>
+<?include Glucose\Glucose.DES ?>
+<?include Glycerol\Glycerol.DES ?>
+<?include GnRH\GnRH.DES ?>
+<?include Gravity\Gravity.DES ?>
+<?include H2O\H2O.DES ?>
+<?include hCG\hCG.DES ?>
+<?include Heart\Heart.DES ?>
+<?include HeartValves\HeartValves.DES ?>
+<?include Heat\Heat.DES ?>
+<?include Hemodialysis\Hemodialysis.DES ?>
+<?include Hemorrhage\Hemorrhage.DES ?>
+<?include HepaticFunction\HepaticFunction.DES ?>
+<?include Hypothalamus\Hypothalamus.DES ?>
+<?include Inhibin\Inhibin.DES ?>
+<?include Infusions\Infusions.DES ?>
+<?include Insulin\Insulin.DES ?>
+<?include InsulinInjection\InsulinInjection.DES ?>
+<?include IVDrip\IVDrip.DES ?>
+<?include IVEpinephrineInjection\IVEpinephrineInjection.DES ?>
+<?include Ketoacid\Ketoacid.DES ?>
+<?include Kidney\Kidney.DES ?>
+<?include Lactate\Lactate.DES ?>
+<?include LeftHeart\LeftHeart.DES ?>
+<?include LeftHeartPumping\LeftHeartPumping.DES ?>
+<?include LegMusclePump\LegMusclePump.DES ?>
+<?include Leptin\Leptin.DES ?>
+<?include LH\LH.DES ?>
+<?include LipidDeposits\LipidDeposits.DES ?>
+<?include Liver\Liver.DES ?>
+<?include LiverMetabolism\LiverMetabolism.DES ?>
+<?include LowerExternalPressure\LowerExternalPressure.DES ?>
+<?include Lungs\Lungs.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include Morphology\Morphology.DES ?>
+<?include Nephrons\Nephrons.DES ?>
+<?include Nerves\Nerves.DES ?>
+<?include O2\O2.DES ?>
+<?include OralH2OGlucoseLoad\OralH2OGlucoseLoad.DES ?>
+<?include Organs\Organs.DES ?>
+<?include Orthostatics\Orthostatics.DES ?>
+<?include Osmoles\Osmoles.DES ?>
+<?include OtherTissue\OtherTissue.DES ?>
+<?include Pericardium\Pericardium.DES ?>
+<?include Peritoneum\Peritoneum.DES ?>
+<?include Posture\Posture.DES ?>
+<?include Progesterone\Progesterone.DES ?>
+<?include Renin\Renin.DES ?>
+<?include RespiratoryCenter\RespiratoryCenter.DES ?>
+<?include RespiratoryMuscle\RespiratoryMuscle.DES ?>
+<?include RightHeart\RightHeart.DES ?>
+<?include RightHeartPumping\RightHeartPumping.DES ?>
+<?include SequesteredBlood\SequesteredBlood.DES ?>
+<?include SkeletalMuscle\SkeletalMuscle.DES ?>
+<?include Skin\Skin.DES ?>
+<?include SplanchnicCirculation\SplanchnicCirculation.DES ?>
+<?include Status\Status.DES ?>
+<?include Sweat\Sweat.DES ?>
+<?include Symptoms\Symptoms.DES ?>
+<?include Testosterone\Testosterone.DES ?>
+<?include ThyroidGland\ThyroidGland.DES ?>
+<?include TiltTable\TiltTable.DES ?>
+<?include TissueH2O\TissueH2O.DES ?>
+<?include Transfusion\Transfusion.DES ?>
+<?include Triglyceride\Triglyceride.DES ?>
+<?include Urea\Urea.DES ?>
+<?include VascularCompartments\VascularCompartments.DES ?>
+
+<?if GENDER-FEMALE Ovaries\Ovaries.DES ?>
+<?if GENDER-FEMALE Uterus\Uterus.DES ?>
+<?ifnot GENDER-FEMALE Testes\Testes.DES ?>
+
+<structure><name> Structure </name>
+
+<definitions>
+
+<block><name> Context </name>
+  <call> Context.Calc </call>
+</block>
+
+<block><name> Parms </name>
+
+  <call> Environment.Parms </call>
+  <call> Morphology.Parms </call>
+  <call> AirSupply-PressureChamber.Calc </call>
+  <call> AirSupply-GasTanks.Calc </call>
+  <call> AirSupply-InspiredAir.Calc </call>
+  <call> Bronchi.Calc </call>
+  <call> Environment.FinishParms </call>
+
+  <call> Exercise-Bike.Calc </call>
+  <call> Exercise-Treadmill.Parms </call>
+
+  <call> RightHemithorax.Calc </call>
+  <call> LeftHemithorax.Calc </call>
+  <call> Thorax.Calc </call>
+
+  <call> Ventilator.Calc </call>
+
+  <call> Organs-Vasculature.Parms </call>
+  
+  <call> LacPool.Parms </call>
+  <call> PT_NH3.Parms </call>
+  <call> NephronAldo.Parms </call>
+  <call> NephronADH.Parms </call>
+  <call> NephronANP.Parms </call>
+
+  <call> MedullaNa.Parms </call>
+  <call> MedullaUrea.Parms </call>
+
+  <call> Baroreflex.Parms </call>
+  <call> LowPressureReceptors.Parms </call>
+
+  <call> LeftHeart-Infarction.Parms </call>
+  <call> RightHeart-Infarction.Parms </call>
+
+  <call> Transfusion.Parms </call>
+  <call> Hemorrhage.Parms </call>
+  <call> BloodVolume.Parms </call>
+  <call> ChemoreceptorAcclimation.Parms </call>
+
+  <call> Anesthesia.Parms </call>
+
+  <call> Drugs.Parms </call>
+  <call> ADH.Parms </call>
+  <call> ANP.Parms </call>
+  <call> EPO.Parms </call>
+  <call> Insulin.Parms </call>
+  <call> ThyroidGland.Parms </call>
+  <call> Renin.Parms </call>
+  <call> Catechols.Parms </call>
+  <call> Diet.Parms </call>
+  <call> Hypothalamus.Parms </call>
+  <call> DailyPlannerSchedule.Parms </call>
+  <call> DailyPlannerControl.Parms </call>
+  <call> OralH2OGlucoseLoad.Parms </call>
+  <call> IVDrip.Parms </call>
+  <call> Hemodialysis.Parms </call>
+  <call> PostureControl.Parms </call>
+  <call> Exercise-Control.Parms </call>
+  <call> Exercise-Metabolism.Parms </call>
+  <call> K.Parms </call>
+  <call> GlucosePump.Parms </call>
+  <call> KAPump.Parms </call>
+  <call> LiverMetabolism.Parms </call>
+  <call> RespiratoryMuscle-Insulin.Parms </call>
+  <call> SkeletalMuscle-Insulin.Parms </call>
+  <call> Kidney-Myogenic.Parms </call>
+  <call> CPR.Parms </call>
+  <call> SkeletalMuscle-MetabolicVasodilation.Parms </call>
+  <call> Leptin.Parms </call>
+  <call> HeartValves.Parms </call>
+  <call> LH.Parms </call>
+  <call> FSH.Parms </call>
+
+  <if>
+    <test> Gender.IsFemale </test>
+    <true><call> Ovaries.Parms </call></true>
+  </if>
+
+  <call> Heart-Pacemaker.Parms </call>
+  <call> Sweat.Parms </call>
+</block>
+
+<block><name> Dervs </name>
+
+  <call> BloodVolume.CalcVol </call>
+  <call> Transfusion.CalcVol </call>
+  <call> TissueH2O.CalcVol </call>
+  <call> ExternalH2O.CalcVol </call>
+  <call> H2O.CalcVol </call>
+
+  <call> SO4Pool.CalcOsmoles </call>
+  <call> PO4Pool.CalcOsmoles </call>
+  <call> GlucosePool.CalcOsmoles </call>
+  <call> Urea.CalcOsmoles </call>
+  <call> KAPool.CalcOsmoles </call>
+
+  <call> BVSeq.Calc </call>
+  <call> SystemicVeins.CalcVol </call>
+
+  <call> OsmCell.Calc </call>
+  <call> OsmECFV.Calc </call>
+  <call> OsmBody.Calc </call>
+
+  <call> H2O.Calc </call>
+  <call> TissueH2O.Calc </call>
+
+  <call> Organs-Size.Calc </call>
+  <call> Weight.Calc </call>
+  <call> BMI.Calc </call>
+  <call> SurfaceArea.Calc </call>
+
+  <call> Estradiol.Conc </call>
+  <call> FSH.Conc </call>
+  <call> hCG.Conc </call>
+  <call> Inhibin.Conc </call>
+  <call> LH.Conc </call>
+  <call> Progesterone.Conc </call>
+  <call> Testosterone.Conc </call>
+
+  <call> Kidney-NephronCount.Calc </call>
+
+  <call> Heat.CalcTemp </call>
+
+  <call> CellProtein.CalcConc </call>
+
+  <call> Viscosity.Calc </call>
+  <call> ArtysVol.Calc </call>
+  <call> VeinsVol.Calc </call>
+
+  <call> GILumen.Conc </call>
+
+  <call> Drugs.CalcConc </call>
+
+  <call> NaPool.CalcConc </call>
+  <call> K.Conc </call>
+  <call> ClPool.CalcConc </call>
+  <call> SO4Pool.CalcConc </call>
+  <call> PO4Pool.CalcConc </call>
+
+  <call> CellSID.Calc </call>
+
+  <call> Aldosterone.CalcConc </call>
+  <call> ADH.CalcConc </call>
+  <call> Insulin.CalcConc </call>
+  <call> Glucagon.CalcConc </call>
+  <call> EPO.CalcConc </call>
+  <call> ThyroidGland.CalcConc </call>
+  <call> Thyroid.CalcEffect </call>
+  <call> Leptin.Conc </call>
+
+  <call> DesglymidodrinePool.CalcConc </call>
+  <call> Catechols.CalcConc </call>
+
+  <call> PlasmaProtein.CalcConc </call>
+
+  <call> LacPool.CalcConc </call>
+
+  <call> KAPool.CalcConc </call>
+  <call> FAPool.CalcConc </call>
+  <call> Triglyceride.Conc </call>
+  <call> Triglyceride.Rate </call>
+  <call> GlucosePool.CalcConc </call>
+  <call> AAPool.CalcConc </call>
+  <call> Urea.CalcConc </call>
+  <call> Creatine.Calc </call>
+  <call> Creatinine.Conc </call>
+  <call> GlycerolPool.CalcConc </call>
+
+  <call> BloodIons.CalcSID </call>
+
+  <call> O2.CalcConc </call>
+  <call> CO2.CalcConc </call>
+  <call> BloodIons.FinishSums </call>
+  <call> BloodPh.Calc </call>
+
+  <call> Organs-Lactate.CalcConc </call>
+  <call> Organs-Ph.CalcSID </call>
+  <call> Organs-CO2.CalcConc </call>
+  <call> Organs-Ph.CalcPh </call>
+
+  <call> Exercise-Treadmill.Calc </call>
+  <call> Exercise-Metabolism.Dervs </call>
+  <call> SkeletalMuscle-Metaboreflex.Calc </call>
+  <call> MotorRadiation.Calc </call>
+  <call> ExerciseSymps.Calc </call>
+
+  <call> Exercise-MusclePump.Calc </call>
+  <call> SkeletalMuscle-MusclePumping.Calc </call>
+
+  <call> Anesthesia.Calc </call>
+
+  <call> BrainInsult.Calc </call>
+  <call> Brain-Function.Calc </call>
+  <call> GlasgowComaScale.Calc </call>
+
+  <call> Organs-Function.Calc </call>
+
+  <call> Hypothalamus.CalcEffect </call>
+  <call> Heat.Cals </call>
+  <call> Sweat.Calc </call>
+  <call> Diet.Dervs </call>
+
+  <call> ANP.CalcConc </call>
+
+  <call> Hydrostatics.Calc </call>
+  <call> Pericardium.Calc </call>
+
+  <call> VascularCompartments.CalcPressure(1) </call>
+
+  <call> LegMusclePump.Calc </call>
+  <call> RegionalPressure.Calc </call>
+
+  <call> CarotidSinus.Calc </call>
+  <call> Baroreflex.Calc </call>
+  <call> LowPressureReceptors.Calc </call>
+  <call> Mechanoreceptors.Calc </call>
+  <call> SympsChemo.Calc </call>
+  <call> CushingResponse.Calc </call>
+
+  <call> Renin.CalcConc </call>
+
+  <call> SympsCNS.Calc </call>
+  <call> SympsKidy.Calc </call>
+  <call> GangliaGeneral.Calc </call>
+  <call> GangliaKidney.Calc </call>
+  <call> VagusNerve.Calc </call>
+  <call> AdrenalNerve.Calc </call>
+  <call> SystemicVeins-AlphaReceptors.Calc </call>
+
+  <call> VascularCompartments.CalcPressure(2) </call>
+
+  <call> BVSeqArtys.CalcPressure </call>
+  <call> BVSeqVeins.CalcPressure </call>
+
+  <call> Peritoneum.Dervs </call>
+  <call> Hemodialysis.Dervs </call>
+
+  <call> CO.Calc </call>
+
+  <call> HgbConc.Calc </call>
+  <call> HgbTissue.Setup </call>
+  <call> HgbLung.Setup </call>
+
+  <call> O2.CalcPO2 </call>
+
+  <call> CD_H2OChannels.CalcActive </call>
+
+  <call> Organs-AlphaReceptors.Calc </call>
+  <call> Organs-BetaReceptors.Calc </call>
+
+  <call> BloodVolume.CalcV0 </call>
+
+  <call> Heart.Calc </call>
+
+  <call> LeftHeartPumping.Dervs </call>
+  <call> RightHeartPumping.Dervs </call>
+
+  <call> CardiacOutput.Calc </call>
+
+  <call> SystemicArtys.PulsatilePressure </call>
+  <call> PulmArty.PulsatilePressure </call>
+
+  <call> PulmArty.CalcOutflow </call>
+  <call> PulmCapys.CalcOutflow </call>
+
+  <call> LungBloodFlow.Calc </call>
+  <call> LungArtyO2.Calc </call>
+  <call> LungArtyCO2.Calc </call>
+
+  <call> Chemoreceptors.Calc </call>
+
+  <call> RespiratoryCenter.Calc </call>
+  <call> Breathing.Calc </call>
+  <call> PulmonaryMembrane.Calc </call>
+  <call> LungO2.Calc </call>
+  <call> LungVeinO2.Calc </call>
+  <call> LungCO2.Calc </call>
+  <call> LungVeinCO2.Calc </call>
+  <call> GasExchangeRatio.Calc </call>
+
+  <call> Organs-Pressure.Calc </call>
+
+  <call> Kidney-ArcuateArtery.CalcConductance </call>
+  <call> Kidney-AfferentArtery.Dervs </call>
+  <call> Kidney-EfferentArtery.Dervs </call>
+
+  <call> Kidney-Flow.Calc </call>
+
+  <call> Kidney-ArcuateArtery.CalcPressure </call>
+  <call> NephronIFP.Calc </call>
+
+  <call> GlomerulusFiltrate.Calc </call>
+  <call> NephronANP.Calc </call>
+  <call> PT_Na.Calc </call>
+  <call> PT_H2O.Calc </call>
+  <call> PT_Na.CalcConc </call>
+  <call> PT_NH3.Calc </call>
+  <call> NephronAldo.Calc </call>
+  <call> LH_Na.Calc </call>
+  <call> LH_H2O.Calc </call>
+  <call> LH_Na.CalcConc </call>
+  <call> MD_Na.Calc </call>
+  <call> DT_Na.Calc </call>
+  <call> NephronADH.Calc </call>
+  <call> DT_H2O.Calc </call>
+  <call> DT_Na.CalcConc </call>
+  <call> DT_K.Calc </call>
+
+  <call> MedullaNa.CalcConc </call>
+  <call> MedullaUrea.CalcConc </call>
+  <call> Medulla.CalcOsm </call>
+
+  <call> LeftHeart-Work.Calc </call>
+  <call> RespiratoryMuscle-Work.Calc </call>
+  <call> RightHeart-Work.Calc </call>
+  <call> SkeletalMuscle-Work.Calc </call>
+
+  <call> Organs-Metabolism.CalcCals </call>
+
+  <call> Metabolism-CaloriesUsed.Calc </call>
+  <call> Metabolism-MetabolicRate.Calc </call>
+
+  <call> HepaticArty.CalcFlow </call>
+ 
+  <call> SkeletalMuscle-MetabolicVasodilation.Calc </call>
+
+  <call> Organs-Flow.Calc </call>
+  <call> OrganFlow.Calc </call>
+
+  <call> Kidney-O2.Calc </call>
+  <call> Liver-O2.Calc </call>
+
+  <call> Organs-Metabolism.SplitCals </call>
+
+  <call> SkeletalMuscle-Glycogen.Dervs </call>
+  <call> RespiratoryMuscle-Glycogen.Dervs </call>
+
+  <call> Organs-Fuel.Dervs </call>
+
+  <call> NephronGlucose.CalcSpillover </call>
+  <call> NephronKetoacids.CalcExcretion </call>
+  <call> CollectingDuct.Calc </call>
+
+  <call> VasaRecta.Calc </call>
+
+  <call> Metabolism-FuelUse.Calc </call>
+
+  <call> CNSTrophicFactor.Dervs </call>
+  <call> ExcessLungWater.Dervs </call>
+
+  <call> Organs-Structure.Calc </call>
+  <call> Organs-Vasculature.Calc </call>
+  <call> Organs-CO2.CalcDervs </call>
+
+  <call> IVDrip.Dervs </call>
+  <call> Hemorrhage.Dervs </call>
+  <call> GILumen.Dervs </call>
+  <call> Heat.Dervs </call>
+  <call> Sweat.Dervs </call>
+  <call> H2O.EarlyDervs </call>
+  <call> TissueH2O.Dervs </call>
+
+  <call> NaPool.CalcDervs </call>
+  <call> K.Dervs </call>
+  <call> ClPool.CalcDervs </call>
+  <call> SO4Pool.CalcDervs </call>
+  <call> PO4Pool.CalcDervs </call>
+  <call> CellProtein.Dervs </call>
+  <call> Aldosterone.Dervs </call>
+  <call> ADH.Dervs </call>
+  <call> ANP.Dervs </call>
+  <call> Insulin.Dervs </call>
+  <call> Glucagon.Dervs </call>
+  <call> EPO.Dervs </call>
+  <call> ThyroidGland.Dervs </call>
+
+  <call> RightHeartPumping.Dervs </call>
+  <call> LeftHeartPumping.Dervs </call>
+
+  <call> VascularCompartments.Dervs </call>
+
+  <call> SplanchnicCirculation.Calc </call>
+  <call> Liver-Fuel.Dervs </call>
+  <call> Metabolism-Glucose.Calc </call>
+  <call> Metabolism-FattyAcid.Calc </call>
+
+  <call> LiverMetabolism.Dervs </call>
+  <call> LipidDeposits.Dervs </call>
+
+  <call> Urea.Dervs </call>
+  <call> KADecomposition.Dervs </call>
+  <call> KAPool.CalcDervs </call>
+  <call> FADecomposition.Dervs </call>
+  <call> FAPool.CalcDervs </call>
+  <call> Triglyceride.Dervs </call>
+  <call> GlucoseDecomposition.Dervs </call>
+  <call> GlucosePool.CalcDervs </call>
+  <call> AAPool.CalcDervs </call>
+
+  <call> Organs-Lactate.CalcDervs </call>
+  <call> LacPool.CalcDervs </call>
+
+  <call> MedullaNa.Dervs </call>
+  <call> MedullaUrea.Dervs </call>
+  <call> CD_H2OChannels.CalcDervs </call>
+
+  <call> O2.Dervs </call>
+  <call> CO2.Dervs </call>
+
+  <call> BVSeqArtys.Dervs </call>
+  <call> BVSeqVeins.Dervs </call>
+
+  <call> Bone-Mineral.Dervs </call>
+
+  <call> LeftHeart-ContractileProtein.Dervs </call>
+  <call> RightHeart-ContractileProtein.Dervs </call>
+
+  <call> RespiratoryMuscle-ContractileProtein.Dervs </call>
+  <call> SkeletalMuscle-ContractileProtein.Dervs </call>
+
+  <call> BrainInsult-PO2.Dervs </call>
+  <call> Baroreflex.Dervs </call>
+
+  <call> LeftHeart-Infarction.Dervs </call>
+  <call> RightHeart-Infarction.Dervs </call>
+
+  <call> ChemoreceptorAcclimation.Calc </call>
+
+  <call> Anesthesia.Dervs </call>
+  <call> Drugs.Dervs </call>
+
+  <call> TGF-Vascular.Dervs </call>
+  <call> TGF-Renin.Dervs </call>
+
+  <call> Renin.Dervs </call>
+  <call> Catechols.Dervs </call>
+  <call> Hypothalamus.Dervs </call>
+
+  <call> OralH2OGlucoseLoad.Dervs </call>
+  <call> Exercise-Treadmill.Dervs </call>
+  <call> Bladder.Dervs </call>
+  <call> Peritoneum.Dervs </call>
+  <call> Pericardium.Dervs </call>
+  <call> BloodVolume.Dervs </call>
+  <call> PlasmaProtein.CalcDervs </call>
+  <call> H2O.Dervs </call>
+  <call> Creatinine.Dervs </call>
+  <call> GlycerolPool.Dervs </call>
+
+  <call> RespiratoryMuscle-Insulin.Dervs </call>
+  <call> SkeletalMuscle-Insulin.Dervs </call>
+  <call> Kidney-Myogenic.Dervs </call>
+  <call> SkeletalMuscle-MetabolicVasodilation.Dervs </call>
+  <call> Leptin.Dervs </call>
+
+  <if>
+    <test> Gender.IsFemale </test>
+    <true>
+      <call> Ovaries.Dervs </call>
+      <call> Uterus.Dervs </call>
+    </true>
+    <false><call> Testes.Dervs </call></false>
+  </if>
+
+  <call> GnRH.Dervs </call>
+  <call> hCG.Dervs </call>
+  <call> Estradiol.Dervs </call>
+  <call> FSH.Dervs </call>
+  <call> Inhibin.Dervs </call>
+  <call> LH.Dervs </call>
+  <call> Progesterone.Dervs </call>
+  <call> Testosterone.Dervs </call>
+  <call> CO.Dervs </call>
+
+</block>
+
+<block><name> Wrapup </name>
+  <call> Organs-Function.Wrapup </call>
+  <call> Age.Calc </call>
+
+  <if>
+    <test> Gender.IsFemale </test>
+    <true><call> Ovaries.Wrapup </call></true>
+  </if>
+
+  <call> Autopsy.Calc </call>
+
+  <call> Seizure.Calc </call>
+  <call> Brain-Function.Page </call>
+
+  <call> SystemicArtys.Wrapup </call>
+
+  <call> Drugs.Wrapup </call>
+  <call> Catechols.Wrapup </call>
+
+  <call> Status.CheckConscious </call>
+  <call> Exercise-Control.Wrapup </call>
+  <call> DailyPlannerControl.Wrapup </call>
+  <call> Status.Wrapup </call>
+  <call> Hemodialysis.Wrapup </call>
+
+  <call> Bladder.Wrapup </call>
+  <call> Heart.Wrapup </call>
+  <call> CPR.Wrapup </call>
+  <call> Heart.Final </call>
+  <call> PeripheralResistance.Wrapup </call>
+  <call> BodyH2O.Wrapup </call>
+  <call> Symptoms.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

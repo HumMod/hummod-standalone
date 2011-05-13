@@ -1,0 +1,88 @@
+HumMod / Nutrition
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 8.4 </row>
+   <col> 1.0 </col>
+   <high> 10.4 </high>
+   <wide> 30.0 </wide>
+   <title> Nutrition </title>
+
+<structurename> DietIntakeNutrition </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Total_mG/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Amount (mG/Min) </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3.0 </col>
+   <name> Carbo_mG/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Carbo's </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3.0 </col>
+   <name> Fat_mG/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Fat </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3.0 </col>
+   <name> Protein_mG/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Protein </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> Total_Cal/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Calories (Cal/Min) </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.8 </row><col> 3.0 </col>
+   <name> Carbo_Cal/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Carbo's </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.8 </row><col> 3.0 </col>
+   <name> Fat_Cal/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Fat </label>
+</showvalue>
+
+<showvalue>
+   <row> 8.8 </row><col> 3.0 </col>
+   <name> Protein_Cal/Min </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Protein </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical values (mG/Min) are </line>
+  <line> </line>
+  <line> Carbo's = 152 </line>
+  <line> Fat = 60 </line>
+  <line> Protein = 80 </line>
+</infobutton>
+
+</groupbox>
+
+End

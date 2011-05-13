@@ -1,0 +1,99 @@
+HumMod / SkeletalMuscle-Glycogen
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\SkeletalMuscle\SkeletalMuscle-Glycogen\ ?>
+
+<?include SkeletalMuscle-Insulin.DES ?>
+
+<structure><name> SkeletalMuscle-Glycogen </name>
+
+<variables>
+
+<var><name> Synthesis </name></var>
+<var><name> Metabolism </name></var>
+
+<parm><name> BasicSynthesis </name><val> 20.0 </val></parm>
+
+<var><name> GlucoseEffect </name></var>
+<var><name> InsulinEffect </name></var>
+<var><name> Space </name></var>
+<var><name> Availability </name></var>
+
+<var><name> Metabolism(Cal/Min) </name></var>
+
+<constant><name> MG_TO_G </name><val> 0.001 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 500.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 5.3 </errorlim>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> GlucoseEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 100 </x><y> 1.0 </y><slope> 0.01 </slope></point>
+  <point><x> 300 </x><y> 3.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y>  0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  20 </x><y>  1.0 </y><slope> 0.2 </slope></point>
+  <point><x> 100 </x><y> 20.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> Space </name>
+  <point><x>   0 </x><y> 4.0 </y><slope> 0.0 </slope></point>
+  <point><x> 400 </x><y> 1.0 </y><slope> -0.015 </slope></point>
+  <point><x> 500 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> Availability </name>
+  <point><x>  0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 50 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> GlucoseEffect </name><val> GlucoseEffect [ GlucosePool.[Glucose(mG/dL)] ] </val></def>
+<def><name> InsulinEffect </name><val> InsulinEffect [ SkeletalMuscle-Insulin.[InsulinDelayed] ] </val></def>
+<def><name> Space </name><val> Space [ Mass ] </val></def>
+<def><name> Availability </name><val> Availability [ Mass ] </val></def>
+
+<def><name> Synthesis </name><val> BasicSynthesis * GlucoseEffect * InsulinEffect * Space </val></def>
+
+<def><name> Metabolism(Cal/Min) </name><val> SkeletalMuscle-Metabolism.AnaerobicCals * Availability </val></def>
+<def><name> Metabolism </name><val> Metabolism(Cal/Min) * Metabolism-Tools.CarboAnaerobic(mG/Cal) </val></def>
+
+<def><name> Change </name><val> MG_TO_G * ( Synthesis - Metabolism ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

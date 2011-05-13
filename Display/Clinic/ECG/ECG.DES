@@ -1,0 +1,37 @@
+HumMod / ECG
+
+Created : 2010-06-01
+Last Modified : 2010-06-01
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<panel><name> ECG </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> ECG </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> ECG </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\ECG\ ?>
+
+<?include Box.DES ?>
+
+</panel>
+
+End

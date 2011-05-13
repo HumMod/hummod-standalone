@@ -1,0 +1,35 @@
+HumMod / MuscleMass
+
+Created : 22-Nov-08
+Last Modified : 06-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 10.8 </row>
+   <col> 32.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> Muscle Mass </title>
+
+<structurename> Weight </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> InitialMuscleMass </name>
+  <format><integer/></format>
+  <label> Initial Mass </label>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> MuscleMass </name>
+  <format><integer/></format>
+  <label> Current Mass </label>
+</showvalue>
+
+</groupbox>
+
+End

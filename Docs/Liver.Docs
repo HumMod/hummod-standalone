@@ -1,0 +1,28 @@
+Digital Human / Liver
+
+Created : 21-Oct-04
+Last Modified : 28-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\Liver\ ?>
+
+<?include Liver-O2.docs ?>
+<?include Liver-Size.docs ?>
+
+<?include Liver-CO2.docs ?>
+<?include Liver-Lactate.docs ?>
+<?include Liver-Ph.docs ?>
+
+<?include Liver-Fuel.docs ?>
+<?include Liver-Function.docs ?>
+<?include Liver-Metabolism.docs ?>
+<?include Liver-AlphaReceptors.docs ?>
+<?include Liver.docs ?>
+
+</docs>
+End

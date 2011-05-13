@@ -1,0 +1,93 @@
+HumMod / Arteries
+
+Created : 18-Jun-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.4 </high>
+   <wide> 30.0 </wide>
+   <title> Arteries </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> RegionalPressure.UpperArty </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Upper Torso </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> RegionalPressure.MiddleArty </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Middle Torso </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 1.0 </col>
+   <name> RegionalPressure.LowerArty </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Lower Torso </label>
+</showvalue>
+
+<showgraph>
+  <row> 4.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> RegionalPressure.UpperArty </name>
+      <label> Upper </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <yvar>
+      <name> RegionalPressure.MiddleArty </name>
+      <label> Middle </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> RegionalPressure.LowerArty </name>
+      <label> Lower </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <scale>
+      <min> 80 </min><max> 90 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 14.8 </row><col> 1.0 </col>
+   <name> RegionalPressure.Brain </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Brain </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.8 </row><col> 1.0 </col>
+   <name> RegionalPressure.Carotid </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Carotid Sinus </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Arterial pressure is about 97 mmHg </line>
+  <line> when lying and dependent on region </line>
+  <line> and gravity when sitting and standing. </line>
+</infobutton>
+
+</groupbox>
+
+End

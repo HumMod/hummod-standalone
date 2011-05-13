@@ -1,0 +1,169 @@
+QHP 2008 / PO4.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> PO4Pool
+ </structurename>
+
+<vardoc>
+<name> PO4Pool.[PO4--(mEq/L)] </name>
+<topic> [PO4--] - PO4POverview </topic>
+<topic> [PO4--] - PO4PPhysical Units </topic>
+<topic> [PO4--] - PO4PConcentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.[PO4--] </name>
+<topic> [PO4--] - PO4POverview </topic>
+<topic> [PO4--] - PO4PPhysical Units </topic>
+<topic> [PO4--] - PO4PConcentration Units </topic>
+</vardoc> 
+
+<vardoc>
+<name> PO4Pool.Change </name>
+<topic> Change - PO4P1Definition </topic>
+<seealso> PO4Pool.Gain </seealso>
+<seealso> PO4Pool.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.Gain </name>
+<topic> Gain - PO4P2Definition </topic>
+<seealso> DietIntakeElectrolytes.PO4--mEq/L </seealso>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.InitialMass </name>
+<topic> InitialMass - PO4P3Definition </topic>
+<seealso> PO4Pool.Target[PO4--] </seealso>
+<seealso> ECFV.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.Loss </name>
+<topic> Loss - PO4P4Definition</topic>
+<seealso> CD_PO4.Outflow </seealso>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.Mass </name>
+<topic> Mass - PO4P5Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.Osmoles </name>
+<topic> Osmoles - Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> PO4Pool.Target[PO4--] </name>
+<topic> Target[PO4--] - PO4P6Definition </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> [PO4--] - PO4POverview </name>
+<label> Overview </label>
+<content>
+
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [PO4--] - PO4PPhysical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma
+Mass 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [PO4--] - PO4PConcentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - PO4P1Definition </name>
+<label> Definition </label>
+<content>
+
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - PO4P2Definition </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in mass of phosphate 
+and is a function of dietary intake through GI lumen 
+absorption. 
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> InitialMass - PO4P3Definition </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of phosphate. Since the 
+plasma concentration is (the Target[PO4--]) and the
+volume of distribution is the ECFV (15,000mL), then the 
+initial mass or circulating pool is .
+
+Initial Mass = Target[PO4--]*ECFV.Vol
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - PO4P4Definition </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as negative changes in the mass of phosphate. It 
+is a function of loss of phosphate in the urine;loss in sweat; loss
+during hemorrhage and loss during dialysis.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Mass - PO4P5Definition </name>
+<label> Definition </label>
+<content>
+
+Mass is the calculated amount of phosphate at any given time. 
+It is the change in phosphate integrated over time.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Target[PO4--] - PO4P6Definition </name>
+<label> Definition </label>
+<content>
+
+The Target[PO4--] is the initial plasma concentration of phosphate.
+Target[PO4--] = Initial Mass/ECFV.Vol
+
+</content>
+</topicdoc>
+
+ 
+End

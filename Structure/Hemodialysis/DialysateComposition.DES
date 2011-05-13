@@ -1,0 +1,24 @@
+HumMod / DialysateComposition
+
+Created : 03-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> DialysateComposition </name>
+
+<variables>
+
+<parm><name> [Na+] </name><val> 140.0 </val></parm>
+<parm><name> [K+] </name><val> 3.0 </val></parm>
+<parm><name> [Cl-] </name><val> 100.0 </val></parm>
+<parm><name> [Urea] </name><val> 0.0 </val></parm>
+
+</variables>
+
+</structure>
+
+End

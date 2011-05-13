@@ -1,0 +1,24 @@
+HumMod / O2.REF
+
+Created : 30-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+The arterial side of the circulation begins with the
+pulmonary capillaries and ends with the systemic
+arteries.
+
+The venous side of the circulation begins with the
+systemic veins and ends with the pulmonary artery.
+
+          Blood   O2 [O2]
+          ----- ---- ----
+Arty Side  1535  307 0.20
+Vein Side  3865  580 0.15
+--------- ----- ---- ----
+Total      5400  887 0.16
+
+End

@@ -1,0 +1,70 @@
+HumMod / ArteryP50
+
+Created : 15-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 16.8 </row>
+   <col> 1.0 </col>
+   <high> 8.8 </high>
+   <wide> 30.0 </wide>
+   <title> Artery P50 </title>
+
+<structurename> HgbLung </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> P50 </name>
+   <format><decimal> 1 </decimal></format>
+   <label> P50 </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> pHEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> pCO2Effect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pCO2 Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> TempEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temp Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> COEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> CO Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.2 </row><col> 1.0 </col>
+   <name> HgbProps.P50Basic </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Basic P50 </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Arteries and lungs share a common set of </line>
+  <line> hemoglobin properties. </line>
+</infobutton>
+
+</groupbox>
+
+End

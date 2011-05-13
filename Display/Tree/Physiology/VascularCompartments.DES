@@ -1,0 +1,88 @@
+HumMod / VascularCompartments
+
+Created : 09-Apr-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> VascularCompartments </name>
+  <label> Vascular Compartments </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> VascularCompartments_SystemicArteries </name>
+  <label> Systemic Arteries </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<branch>
+  <name> SystemicVeins </name>
+  <label> Systemic Veins </label>
+  <parent> VascularCompartments </parent>
+</branch>
+
+<leaf>
+  <name> SystemicVeins-Summary </name>
+  <label> Summary </label>
+  <parent> SystemicVeins </parent>
+</leaf>
+
+<leaf>
+  <name> SystemicVeins-Conductance </name>
+  <label> Conductance </label>
+  <parent> SystemicVeins </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_SplanchnicVeins </name>
+  <label> Splanchnic Veins </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_RightAtrium </name>
+  <label> Right Atrium </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_RightVentricle </name>
+  <label> Right Ventricle </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryArtery </name>
+  <label> Pulmonary Artery </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryCapillaries </name>
+  <label> Pulmonary Capillaries </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryVeins </name>
+  <label> Pulmonary Veins </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_LeftAtrium </name>
+  <label> Left Atrium </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_LeftVentricle </name>
+  <label> Left Ventricle </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+End

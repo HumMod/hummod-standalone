@@ -1,0 +1,16 @@
+HumMod / Urea
+
+Created : 29-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\Metabolism\Urea\ ?>
+
+<?include Cell\Cell.DES ?>
+<?include Pool\Pool.DES ?>
+
+End

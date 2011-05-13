@@ -1,0 +1,238 @@
+QHP 2008 / ADH.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> ADHPool </structurename>
+
+<vardoc>
+<name> ADHPool.[ADH(pMol/L)] </name>
+<topic> ADH - Overview </topic>
+<topic> ADH - Physical Units </topic>
+<topic> ADH - Concentration Units </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> ADHPool.[ADH(uU/mL)] </name>
+<topic>   </topic>
+<topic>  </topic>
+<topic> </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.[ADH] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Change </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Gain </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.InitialMass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Log10Conc </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Loss </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.PGTOPMOL </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.PGTOUUNITS </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> ADHPool.Target[ADH] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> ADH - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]    pG/mL
+Plasma Mass nG
+Fluxes      nG/Min
+Stored Mass uG
+
+Notice that micro (10^-6), nano (10^-9) and pico (10^-12)
+gram units are used.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ADH - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+ADH concentrations have been expressed in
+
+   pG/mL
+   pMol/L
+   uU/mL
+
+A typical concentration is 2.0 pG/mL; 1.8pMol/L or 0.8uU/mL
+To change from pG to pMol multiply by 0.922
+To change from pG to uU, multiply by 0.4
+
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ADH - Overview </name>
+<label> Overview </label>
+<content>
+
+Antidiuretic hormone(also known as vasopressin or AVP,a nonapeptide, 
+is synthesized in the magnocellular neurons of the paraventricular
+and supraoptic nuclei. Its release is stimulated by increased osmolality
+and by reductions in blood volume and blood pressure. 
+Increased ADH secretion causes increased fluid reabsorption by the
+kidneys, helping to restore blood pressure and blood volume toward normal. 
+
+When the osmolarity of the body fluids increases above normal,
+the posterior pituitary gland secretes more ADH, which increases
+the permeability of the distal tubules and collecting ducts to water.
+This allows large amounts of water to be reabsorbed and results 
+in increases in blood volume and decreases in urine volume.
+An increase in extracellular fluid osmolarity causes special 
+nerve cells called osmoreceptor cells, located in the anterior 
+hypothalamus near the supraoptic nuclei, to shrink. This  shrinkage 
+causes the cells to send nerve signals to the supraoptic nuclei which
+stimulates the release of ADH from the posterior pituitary. A second
+neuronal area important in controlling osmolarity and ADH secretion 
+is located along the anteroventral region of the third ventricle, 
+called the AV3V region. At the upper part of this region is a structure 
+called the subfornical organ, and at the inferior part is another structure 
+called the organum vasculosum of the lamina terminalis. Between these two 
+organs is the median preoptic nucleus, which has multiple nerve connections
+with the two organs as well as with the supraoptic nuclei and the blood 
+pressure control centers in the medulla of the brain. 
+
+ADH release is also controlled by cardiovascular reflexes in response to
+decreases in blood pressure and/or blood volume including the arterial
+baroreceptor reflexes and the cardiopulmonary reflexes. 
+
+The ADH pool is [ADH]*ECFV.  Typical [ADH] is 2.0 pg/ml and ECFV is 15,000ml 
+2.0pG/ml*15,000ml =30,000pG mass or 30nG (AJP 252: R635, 1986)
+ 
+ADH is secreted into this pool by the pituitary and generally cleared from 
+the pool by the liver and the kidneys. Typical ADH secretion is 3.2nG/min.
+
+With severe hemorrhage and hypotension, it is likely that the clearance of 
+vasopressin from the circulation will be reduced because of decreased blood 
+flow to the kidneys and splanchnic viscera, the organs resposible for the 
+removal of vasopressin from the circulating blood. 
+
+Share L. Control of Vasopressin Release: An Old But Continuing Story.
+News Physiol. Sci. Volume 11, February 1996
+
+</content>
+</topicdoc>
+
+   Normal synthesis and secretion
+   rates are 3.2 nG/Min into and
+   out of the fast pool.
+
+   The fast mass is 3200 nG, making
+   the fractional secretion rate
+   0.001 /Min.
+
+   The slow mass is 17000 nG.
+
+   Fluxes between the fast and slow
+   pools is 17 nG/Min, defining these
+   2 rate constants.
+
+      SlowToFast - 0.0010 /Min
+      FastToSlow - 0.0053 /Min
+
+   Thrasher. AJP 278:R469-R475, 2000.
+
+       Neural stimulation of ADH release
+       seems to come primarily from the
+       baroreflex.
+
+   I favoring the idea that there is little
+   tonic neural stimulation of AVP release.
+
+   Hemorrhage causes a big stimulus.  Brain
+   death only decreases AVP moderately.
+   Trauma to the hypophysis will decrease
+   AVP more.
+
+End

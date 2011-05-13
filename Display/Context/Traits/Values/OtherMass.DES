@@ -1,0 +1,132 @@
+HumMod / OtherMass
+
+Created : 22-Nov-08
+Last Modified : 01-Feb-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 11.6 </high>
+   <wide> 30.0 </wide>
+   <title> Other Mass</title>
+
+<structurename> Values-OtherMass</structurename>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> To calculate initial body weight, the body is </line>
+  <line> divided into three compartments. </line>
+  <line>  </line>
+  <line> Adipose Tissue (Fat) </line>
+  <line> Skeletal Muscle </line>
+  <line> Other Mass (All other tissue, including blood) </line>
+  <line>  </line>
+  <line> Default (male) initial values are </line>
+  <line>  </line>
+  <line> Adipose Tissue - 16.6 kG </line>
+  <line> Skeletal Muscle - 27.4 kG </line>
+  <line> Other Mass - 28.5 kG </line>
+  <line>  </line>
+  <line> Temperature control also uses 3 compartments, but </line>
+  <line> they are different. </line>
+  <line>  </line>
+  <line> Core Mass </line>
+  <line> Skeletal Muscle </line>
+  <line> Skin </line>
+</infobutton>
+
+<showtable>
+<row> 3.4 </row><col> 1.0 </col>
+
+<column>
+<indent> 0 </indent>
+<fieldwidth> 12 </fieldwidth>
+<justify> LEFT </justify>
+
+<textcell> Descriptor </textcell>
+<textcell> ------------------------------ </textcell>
+<textcell> Small </textcell>
+<textcell> Normal </textcell>
+<textcell> Large </textcell>
+<textcell> Very Large </textcell>
+
+</column>
+
+<column>
+<indent> 13 </indent>
+<fieldwidth> 6.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Male </textcell>
+<textcell> -------- </textcell>
+
+<valuecell>
+  <name> MALE_SMALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_LARGE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> MALE_VERYLARGE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+<column>
+<indent> 20 </indent>
+<fieldwidth> 7.0 </fieldwidth>
+<justify> RIGHT </justify>
+
+<textcell> Female </textcell>
+<textcell> ------------ </textcell>
+
+<valuecell>
+  <name> FEMALE_SMALL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_NORMAL </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_LARGE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+<valuecell>
+  <name> FEMALE_VERYLARGE </name>
+  <format><decimal> 1 </decimal></format>
+</valuecell>
+
+</column>
+
+</showtable>
+
+<showvalue>
+  <row> 10.0 </row><col> 1.0 </col>
+  <name> Mass(kG) </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass (kG) </label>
+</showvalue>
+
+</groupbox>
+
+End

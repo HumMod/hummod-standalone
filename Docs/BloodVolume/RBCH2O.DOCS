@@ -1,0 +1,203 @@
+QHP 2008 / BloodVolume.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RBCH2O </structurename>
+
+<vardoc>
+<name> RBCH2O.Change </name>
+<topic> Change - RBCH2O1Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCH20.Gain </seealso>
+<seealso> RBCH20.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.FractH2O </name>
+<topic> FractH2O - RBCH2O2Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units </topic>
+<topic> RBCH2O - Concentration Units  </topic>
+<seealso> RBCSolids.FractSolids </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.Gain </name>
+<topic> Gain - RBCH2O3Defintion </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units  </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCH20.FractH20 </seealso>
+<seealso> RBCVol.Gain </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.InitialVol </name>
+<topic> InitialVol - RBCH2O4Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCVol.InitialVol </seealso>
+<seealso> RBCH20.FractH20 </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.Loss </name>
+<topic> Loss - RBCH2O5Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCH20.FractH20 </seealso>
+<seealso> RBCVol.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.Vol </name>
+<topic> Vol - RBCH2O6Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic> RBCH2O - Physical Units  </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCH20.FractH20 </seealso>
+<seealso> RBCVol.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCH2O.Vol(L)</name>
+<topic> Vol(L) - RBCH2O7Definition </topic>
+<topic> RBCH2O - Overview </topic>
+<topic>RBCH2O - Physical Units </topic>
+<topic> RBCH2O - Concentration Units </topic>
+<seealso> RBCH20.Vol </seealso>
+</vardoc>
+
+<topicdoc>
+<name> RBCH2O - Overview </name>
+<label> Overview </label>
+<content>
+
+Each red blood cell is comprised of water and solids, 
+the latter in the form of hemoglobin.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCH20 - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+mL or L 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCH20 - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+RBCH20 is typically 1580mL
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - RBCH2O1Definition </name>
+<label>  Definition  </label>
+<content>
+
+Change in the water content of the red blood cell is the
+difference between gains and losses in red cell water over 
+time.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name>  FractH2O - RBCH2O2Definition </name>
+<label>  Definition </label>
+<content>
+
+FractH2O is the amount of water contained in the red cell. 
+It is expressed as a fraction of the total volume of the 
+red cell.
+FractH2O = 1.0 - RBCSolids.FractSolids.
+FractH2O is set by the model user by changing the parameter
+FractSolids using a sliding bar in HumMod. As the amount of 
+solids in the red cell increase, the amount of H2O decreases.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name>  Gain - RBCH2O3Definition </name>
+<label> Definition </label>
+<content>
+
+Gains in red blood cell H2O volume are a result
+of either a decrease in fraction of the cell which
+is comprised of solids (RBCSolids.FractSolids) and/or
+a gain in the total volume of red blood cells from
+either increased secretion rate and/or blood
+transfusion.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> InitialVol - RBCH2O4Definition </name>
+<label> Definition </label>
+<content>
+
+The initial H2O volume of the red cell is a function of the
+parameter RBCSolids.FractSolids and hence the varaible 
+RBCH2O.FractH2O as well as the initial volume of red blood 
+cells (RBCVol.InitialVol)  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - RBCH2O5Definition </name>
+<label> Definition </label>
+<content>
+
+Loss in red blood cell water content is a result of an 
+increase in the fraction of the red cell which is 
+comprised of solids (RBCSolids. FractSolids) as well
+as a loss in total red cells due to increased clearance
+and/or hemorrhage. 
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Vol - RBCH2O6Definition </name>
+<label>  Definition </label>
+<content>
+
+Red cell water volume is calculated from the initial 
+volume and the change in volume integrated over time.
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name>  Vol(L) - RBCH2O7Definition </name>
+<label>  Definition </label>
+<content>
+
+Vol(L) is the calculated volume expressed in liters
+Vol(L) = Vol/1000.00
+
+</content>
+</topicdoc>
+
+  
+
+End

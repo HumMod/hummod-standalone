@@ -1,0 +1,25 @@
+HumMod / ANP Reference
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : DES 2005
+Schema : 2005.0
+
+   EPO mass is typically 136 U with a
+   volume of distribution of 40% of
+   ECFV, yielding a typical conc of
+   20 mU/ml.
+
+   Typical secretion and destruction
+   rates are 0.75 U/Min.
+
+   Effect of kidney tubule pO2 on EPO
+   secretion is so severe that a power
+   of 10 is used.
+
+   EPO secretion depends on kidney
+   function.
+
+End

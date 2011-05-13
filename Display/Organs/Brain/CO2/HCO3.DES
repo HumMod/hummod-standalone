@@ -1,0 +1,107 @@
+HumMod / HCO3
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.6 </high>
+   <wide> 30.0 </wide>
+   <title> HCO3 </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> [HCO3(mEq/L)] </name>
+   <format><decimal> 1 </decimal></format>
+   <label> [HCO3-] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [HCO3(mEq/L)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 10 </min><max> 20 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3 </col>
+   <name> Change </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> InflowBase</name>
+   <format><decimal> 2 </decimal></format>
+   <label> Inflow </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 3 </col>
+   <name> OutflowBase</name>
+   <format><decimal> 2 </decimal></format>
+   <label> Outflow </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.6 </row><col> 1.0 </col>
+   <name> PCO2</name>
+   <format> <integer/> </format>
+   <label> pCO2 </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.0 </row><col> 1.0 </col>
+   <name> Brain-Size.LiquidVol</name>
+   <format> <integer/> </format>
+   <label> Volume </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> [HCO3-] = 16 mEq/L </line>
+  <line>  </line>
+  <line> Mass = 95 mEq </line>
+  <line> Change = ~0 mEq/Min </line>
+  <line>  </line>
+  <line> Inflow = 0.38 mEq/Min </line>
+  <line> Outflow = 0.38 mEq/Min </line>
+  <line>  </line>
+  <line> pCO2 = 43 mmHg </line>
+  <line>  </line>
+  <line> Volume = 3150 </line>
+</infobutton>
+
+</groupbox>
+
+End

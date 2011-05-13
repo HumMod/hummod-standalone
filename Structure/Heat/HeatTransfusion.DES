@@ -1,0 +1,36 @@
+HumMod / HeatTransfusion
+
+Created : 27-Mar-05
+Last Modified : 18-Mar-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> HeatTransfusion </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Flux </name>
+
+<def>
+  <name> Flux </name>
+  <val>
+       Transfusion.Rate
+     * AmbientTemperature.Temp(K)
+     * SpecificHeat.Blood(kCal/G)
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

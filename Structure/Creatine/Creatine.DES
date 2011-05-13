@@ -1,0 +1,30 @@
+HumMod / Creatine
+
+Created : 28-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Creatine\ ?>
+
+<?include CreatineSkeletalMuscle.DES ?>
+<?include CreatineCells.DES ?>
+
+<structure><name> Creatine </name>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<call> CreatineSkeletalMuscle.Calc </call>
+<call> CreatineCells.Calc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

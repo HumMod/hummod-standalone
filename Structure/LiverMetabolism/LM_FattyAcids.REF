@@ -1,0 +1,57 @@
+HumMod / LM_FattyAcids
+
+Created : 30-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+   Glucose targets for continuous
+   feeding (drip) in mG/Min are
+
+   Absorption = 152
+   To Tissue = 90
+   Degradation = 12
+   Net Liver = 50
+
+      Glycogenesis = 75
+      Glycogenolysis = 75
+
+      Gluconeogenesis = 25
+      To FA = 75
+
+   75 mG glucose goes to 31.5 mG
+   of FA.
+
+   Liver glucose uptake is
+   modulated by an insulin effect
+   and a concentration effect.
+
+      [Glu] = 110 mG/dL normally
+
+   Amino acid absorption is 80 mG/Min.
+   Normal disposition (mG/Min) is as
+   follows
+
+      To Cells    = ~0
+      To Glucose  = 42
+      To FA       = 34
+      Decomposing =  4
+
+   Liver amino acid uptake is
+   modulated by an insulin effect
+   and a concentration effect.
+
+      [AA] = 50 mG/dL normally
+
+   The stoichiometry is 48 mG of
+   amino acids will make 21 mG of
+   FA.
+
+      STOICHK = 21 / 48 or 0.437
+
+
+
+End

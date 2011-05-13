@@ -1,0 +1,54 @@
+HumMod / LM_Glycogen
+
+Created : 29-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\LiverMetabolism\ ?>
+
+<?include LM_Glycogenesis.DES ?>
+<?include LM_Glycogenolysis.DES ?>
+
+<structure><name> LM_Glycogen </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 100.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> LM_Glycogenesis.Dervs </call>
+<call> LM_Glycogenolysis.Dervs </call>
+
+<def><name> Gain </name><val> LM_Glycogenesis.Rate </val></def>
+<def><name> Loss </name><val> LM_Glycogenolysis.Rate </val></def>
+
+<def><name> Change </name><val> 0.001 * ( Gain - Loss ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

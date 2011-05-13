@@ -1,0 +1,56 @@
+HumMod / O2Total
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> O2Total </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Inflow </name>
+  <val> LungO2.Uptake </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val>
+      Bone-Flow.O2Use
+    + Brain-Flow.O2Use
+    + Fat-Flow.O2Use
+    + GITract-Flow.O2Use
+    + Kidney-O2.O2Use
+    + LeftHeart-Flow.O2Use
+    + Liver-O2.O2Use
+    + OtherTissue-Flow.O2Use
+    + RespiratoryMuscle-Flow.O2Use
+    + RightHeart-Flow.O2Use
+    + SkeletalMuscle-Flow.O2Use
+    + Skin-Flow.O2Use
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,56 @@
+HumMod / Kidney-NephronCount
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Kidney-NephronCount </name>
+
+<variables>
+
+<parm>
+  <name> Total </name>
+  <val> 2400000 </val>
+</parm>
+
+<var>
+  <name> Total(xNormal) </name>
+</var>
+
+<constant>
+  <name> Normal </name>
+  <val> 2400000 </val>
+</constant>
+
+<parm>
+  <name> Filtering(%) </name>
+  <val> 100.0 </val>
+</parm>
+
+<var>
+  <name> Filtering(xNormal) </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Total(xNormal) </name>
+  <val> Total / Normal </val>
+</def>
+
+<def>
+  <name> Filtering(xNormal) </name>
+  <val> 0.01 * Filtering(%) * Total(xNormal) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

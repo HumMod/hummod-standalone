@@ -1,0 +1,83 @@
+HumMod / ThumbNail
+
+Created : 02-Apr-09
+Last Modified : 2011-03-30
+Author : Tom Coleman
+Copyright : 2008-2011
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<infobutton>
+  <row> 1.8 </row>
+  <col> 58 </col>
+  <line> TYPICAL VALUES </line>
+  <line>  </line>
+  <line> Age = 37 Years </line>
+  <line> Height = 70.0 Inches </line>
+  <line> Weight = 171 Lbs </line>
+  <line> Gender = Male </line>
+  <line>  </line>
+  <line> Mean Blood Pressure = 97 mmHg or 12.9 kPa </line>
+  <line> S/D = 120/80 mmHg or 15.9/10.6 kPa </line>
+  <line>  </line>
+  <line> Respiratory Rate = 12 /Min </line>
+  <line> Temperature = 98.6 F or 37.0 C </line>
+  <line> Heart Rate = 72 /Min </line>
+</infobutton>
+
+<showvalue>
+   <row> 2.0 </row><col> 32.0 </col>
+   <name> BMI.BMI </name>
+   <format><decimal> 1 </decimal></format>
+   <label> BMI </label>
+</showvalue>
+
+<maplist>
+  <name> Descriptors-Adiposity.Value </name>
+  <map><val>  0 </val><img> Underweight </img></map>
+  <map><val>  1 </val><img> Normal Weight </img></map>
+  <map><val>  2 </val><img> Overweight </img></map>
+  <map><val>  3 </val><img> Obese </img></map>
+  <map><val>  4 </val><img> Morbidly Obese </img></map>
+</maplist>
+
+<showvalue>
+  <row> 3.0 </row><col> 32.0 </col>
+  <name> Descriptors-Adiposity.Value </name>
+  <format><list> Descriptors-Adiposity.Value </list></format>
+  <label> Adiposity </label>
+</showvalue>
+
+<maplist>
+  <name> Descriptors-Muscularity.Value </name>
+  <map><val>  0 </val><img> Below Normal </img></map>
+  <map><val>  1 </val><img> Normal </img></map>
+  <map><val>  2 </val><img> Above Normal </img></map>
+  <map><val>  3 </val><img> Trained Athlete </img></map>
+</maplist>
+
+<showvalue>
+  <row> 4.0 </row><col> 32.0 </col>
+  <name> Descriptors-Muscularity.Value </name>
+  <format><list> Descriptors-Muscularity.Value </list></format>
+  <label> Muscularity </label>
+</showvalue>
+
+<maplist>
+  <name> Heart-ECG.Now </name>
+  <map><val>  0 </val><img> Normal </img></map>
+  <map><val>  1 </val><img> Paced </img></map>
+  <map><val>  2 </val><img> S-T Shift </img></map>
+  <map><val>  3 </val><img> V-Fib </img></map>
+  <map><val>  4 </val><img> Flat </img></map>
+</maplist>
+
+<showvalue>
+  <row> 5.4 </row><col> 32.0 </col>
+  <name> Heart-ECG.Now </name>
+  <format><list> Heart-ECG.Now </list></format>
+  <label> ECG </label>
+</showvalue>
+
+
+End

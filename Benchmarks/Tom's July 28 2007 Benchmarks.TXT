@@ -1,0 +1,21 @@
+Tom's July 28, 2007 Benchmarks
+
+Data taken from 'Exercise Physiology' publihed on 'themodelingworkshop'.
+
+EPINEPHRINE
+
+[Epi] = 40 pG/mL resting. ECFV = 15,000 mL. Mass = 600 nG or
+600,000 pG. Clearance = 9.4 L/Min. Removal = 376 nG/Min.
+
+
+NOREPINEPHRINE
+
+[NE] = 240 pG/mL. Mass = 3600 nG.
+
+EXERCISE - MECHANICAL EFFICIENCY
+
+23% at 50W and above, if a single number must be used. Actually
+has a small slope. Low efficiency at low work loads. 100 motion
+watts uses 335 heat watts for a total of 435 watts.
+
+End

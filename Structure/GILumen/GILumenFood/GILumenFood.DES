@@ -1,0 +1,35 @@
+HumMod / GILumenFood
+
+Created : 13-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<?path Structure\GILumen\GILumenFood\ ?>
+
+<?include GILumenCarbohydrates.DES ?>
+<?include GILumenFat.DES ?>
+<?include GILumenProtein.DES ?>
+
+<structure><name> GILumenFood </name>
+
+<definitions>
+
+<block><name> Conc </name>
+  <call> GILumenCarbohydrates.Conc </call>
+  <call> GILumenFat.Conc </call>
+  <call> GILumenProtein.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> GILumenCarbohydrates.Dervs </call>
+  <call> GILumenFat.Dervs </call>
+  <call> GILumenProtein.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

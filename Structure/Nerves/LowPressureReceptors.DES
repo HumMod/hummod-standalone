@@ -1,0 +1,110 @@
+HumMod / LowPressureReceptors
+
+Created : 21-Oct-04
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LowPressureReceptors </name>
+
+<variables>
+
+<var>
+  <name> NA </name>
+</var>
+
+<var>
+  <name> PressureChange </name>
+</var>
+
+<parm>
+  <name> Tau </name>
+  <val> 30.0 </val>
+</parm>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Level </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> AdaptedPressure </name>
+  <outputname> AdaptedPressure </outputname>
+  <initialval> 6.0 </initialval>
+  <inputname> AvePressure </inputname>
+  <rateconstname> RateConst </rateconstname>
+  <dervname> Derv </dervname>
+  <errorlim> 0.06 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> PressureChangeOnNA </name>
+  <point><x> -4.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>  0.0 </x><y> 1.0 </y><slope> 0.3 </slope></point>
+  <point><x> 12.0 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+<def>
+  <name> RateConst </name>
+  <val> INVERT ( 1440.0 * Tau ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> AvePressure </name>
+  <val> ( RightAtrium.TMP + LeftAtrium.TMP ) / 2.0 </val>
+</def>
+
+<def>
+  <name> PressureChange </name>
+  <val> AvePressure - AdaptedPressure </val>
+</def>
+
+<testcase>
+
+<case>
+<test> RightHeart-Function.Failed OR LeftHeart-Function.Failed </test>
+<def><name> NA </name><val> 0.0 </val></def>
+</case>
+
+<case>
+<test> Switch </test>
+<def><name> NA </name><val> Level </val></def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def><name> NA </name><val> PressureChangeOnNA [ PressureChange ] </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

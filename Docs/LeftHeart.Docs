@@ -1,0 +1,34 @@
+Digital Human / LeftHeart
+
+Created : 21-Oct-04
+Last Modified : 12-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\LeftHeart\ ?>
+
+<?include LeftHeart-Flow.docs ?>
+<?include LeftHeart-Pressure.docs ?>
+<?include LeftHeart-ContractileProtein.docs ?>
+<?include LeftHeart-Size.docs ?>
+<?include LeftHeart-Function.docs ?>
+
+<?include LeftHeart-CO2.docs ?>
+<?include LeftHeart-Lactate.docs ?>
+<?include LeftHeart-Ph.docs ?>
+
+<?include LeftHeart-Fuel.docs ?>
+<?include LeftHeart-Metabolism.docs ?>
+<?include LeftHeart-AlphaReceptors.docs ?>
+<?include LeftHeart-BetaReceptors.docs ?>
+<?include LeftHeart.docs ?>
+<?include LeftHeart-Vasculature.docs ?>
+
+<?include LeftHeart-Work.docs ?>
+<?include LeftHeart-Infarction.docs ?>
+
+</docs>
+End

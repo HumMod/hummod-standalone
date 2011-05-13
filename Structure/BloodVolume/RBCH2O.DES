@@ -1,0 +1,85 @@
+HumMod / RBCH2O
+
+Created : 26-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> RBCH2O </name>
+
+<variables>
+
+
+<var><name> Vol </name></var>
+<var><name> InitialVol </name></var>
+
+<var><name> Vol(L) </name></var>
+
+<var><name> FractH2O </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+<var><name> Change </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> FractH2O </name>
+  <val> 1.0 - RBCSolids.FractSolids </val>
+</def>
+
+<def>
+  <name> InitialVol </name>
+  <val> FractH2O * RBCVol.InitialVol </val>
+</def>
+
+</block>
+
+<block><name> CalcVol </name>
+
+<def>
+  <name> FractH2O </name>
+  <val> 1.0 - RBCSolids.FractSolids </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> FractH2O * RBCVol.Vol </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> FractH2O * RBCVol.Gain </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> FractH2O * RBCVol.Loss </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

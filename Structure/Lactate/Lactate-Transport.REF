@@ -1,0 +1,51 @@
+HumMod / Lactate-Transport.REF
+
+Created : 14-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+A figure in Astrand (p. 250) shows that lactate comes
+out of skeletal muscle at a rapid rate during strenuous
+exercise.
+
+This means that the diffusion coefficients are large
+and the lactate compartments are unstable. I'll use
+a flow predictor.
+
+Data suggests a gradient of 12 mEq/L over 10 minutes
+with extracellular fluid volume increasing to 15 mEq/L.
+ECFV = 15 L. The rate of outflux is 22.5 mEq/Min.
+
+Using mEq/mL yeilds
+
+   Outflux = DC * Gradient
+     22.5  = DC * 0.012
+
+This yields a DC of 1875 mL/Min for skeletal muscle or
+67.7 (mL/Min)/kG.
+
+                     DC     H2O
+                  ------  -----
+Bone                180    3513
+Brain               100    1193
+Fat                 270    2487
+GITract             180    1102
+Kidney               20     257
+LeftHeart            18     218
+Liver               100    1426
+OtherTissue         270    3167
+RespiratoryMuscle   270    3006
+RightHeart            3      38
+SkeletalMuscle     1875   20245
+Skin                270    1762
+                  ------  -----
+Total              3556   38414
+
+Astrand, P.-O. et.al. Textbook of Work Physiology.
+4th Edition. 2003.
+
+End

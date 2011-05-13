@@ -1,0 +1,36 @@
+HumMod / Cells
+
+Created : 24-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<panel><name> TissueH2O-Cells </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> H2O </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Tissue H2O - Cells </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\TissueH2O\Cells\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

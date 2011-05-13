@@ -1,0 +1,102 @@
+HumMod / LungBloodFlow
+
+Created : 29-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LungBloodFlow </name>
+
+<variables>
+
+<var><name> Total </name></var>
+<var><name> Alveolar </name></var>
+<var><name> AlveolarVentilated </name></var>
+<var><name> AlveolarShunt </name></var>
+
+<parm>
+  <name> BasicR-LShunt </name>
+  <val> 220.0 </val>
+</parm>
+
+<var><name> Right-LeftShunt </name></var>
+<var><name> TotalShunt </name></var>
+<var><name> RightLungTotal </name></var>
+<var><name> RightLungVentilated </name></var>
+<var><name> RightLungShunt </name></var>
+<var><name> LeftLungTotal </name></var>
+<var><name> LeftLungVentilated </name></var>
+<var><name> LeftLungShunt </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Total </name>
+  <val> ( PulmArty.Outflow + PulmCapys.Outflow ) / 2.0 </val>
+</def>
+
+<def>
+  <name> Right-LeftShunt </name>
+  <val> BasicR-LShunt MIN Total </val>
+</def>
+
+<def>
+  <name> Alveolar </name>
+  <val> Total - Right-LeftShunt </val>
+</def>
+
+<def>
+  <name> RightLungTotal </name>
+  <val> Alveolar * Thorax.RightLungFlowFract </val>
+</def>
+
+<def>
+  <name> RightLungVentilated </name>
+  <val> RightLungTotal * RightHemithorax.LungInflation </val>
+</def>
+
+<def>
+  <name> RightLungShunt </name>
+  <val> RightLungTotal - RightLungVentilated </val>
+</def>
+
+<def>
+  <name> LeftLungTotal </name>
+  <val> Alveolar * Thorax.LeftLungFlowFract </val>
+</def>
+
+<def>
+  <name> LeftLungVentilated </name>
+  <val> LeftLungTotal * LeftHemithorax.LungInflation </val>
+</def>
+
+<def>
+  <name> LeftLungShunt </name>
+  <val> LeftLungTotal - LeftLungVentilated </val>
+</def>
+
+<def>
+  <name> AlveolarVentilated </name>
+  <val> RightLungVentilated + LeftLungVentilated </val>
+</def>
+
+<def>
+  <name> AlveolarShunt </name>
+  <val> RightLungShunt + LeftLungShunt </val>
+</def>
+
+<def>
+  <name> TotalShunt </name>
+  <val> Right-LeftShunt + AlveolarShunt </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

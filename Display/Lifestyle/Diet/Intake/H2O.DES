@@ -1,0 +1,42 @@
+QHP 2007 / H2O
+
+Created : 20-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+Solver : QHP 2007
+Schema : 2007.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> H2O </title>
+
+<structurename> DietIntakeH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Rate(mL/Min) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> H2O </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> DietGoalH2O.DegF </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Temp (F) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Typical value for H2O intake is 1.4 mL/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,46 @@
+HumMod / Control
+
+CardiacPacemaker
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 5.8 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Heart-Pacemaker </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<repeatlist>
+  <name> Heart-Pacemaker.Setting </name>
+  <repeat><reps> 200 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Setting </name>
+  <listname> Heart-Pacemaker.Setting </listname>
+  <label> Setting </label>
+</slidebar>
+
+<showvalue>
+  <row> 4.2 </row><col> 1.0 </col>
+  <name> Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Rate </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+  <line> Units for setting and rate are beats/minute. </line>
+</infobutton>
+
+</groupbox>
+
+End

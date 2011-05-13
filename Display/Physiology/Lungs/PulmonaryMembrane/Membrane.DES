@@ -1,0 +1,107 @@
+HumMod / Membrane
+
+Created : 2010-06-04
+Last Modified : 2010-06-04
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.6 </high>
+   <wide> 30.0 </wide>
+   <title> Membrane </title>
+
+<structurename> PulmonaryMembrane </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> DiffusingCapacity </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Diffusing Capacity </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> DiffusingCapacity </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 20 </min><max> 30 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> ActiveArea </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Active Area </label>
+</showvalue>
+
+<repeatlist>
+  <name> TotalArea </name>
+  <repeat><reps> 200 </reps><stepsize>  1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.0 </row><col> 3.0 </col>
+  <name> TotalArea </name>
+  <listname> TotalArea </listname>
+  <label> Total Area </label>
+</slidebar>
+
+<showvalue>
+  <row> 12.2 </row><col> 3.0 </col>
+  <name> Recruitment </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Recruitment </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.6 </row><col> 1.0 </col>
+  <name> Thickness </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Thickness </label>
+</showvalue>
+
+<repeatlist>
+  <name> Thickness-Structure </name>
+  <firstval> 0.1 </firstval>
+  <repeat><reps> 49 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 14.8 </row><col> 3.0 </col>
+  <name> Thickness-Structure </name>
+  <listname> Thickness-Structure </listname>
+  <label> Structure </label>
+</slidebar>
+
+<showvalue>
+  <row> 16.0 </row><col> 3.0 </col>
+  <name> Thickness-H2O </name>
+  <format><decimal> 1 </decimal></format>
+  <label> H2O </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for area are M^2. Units for </line>
+  <line> thickness are microns. </line>
+  <line> </line>
+</infobutton>
+
+</groupbox>
+
+End

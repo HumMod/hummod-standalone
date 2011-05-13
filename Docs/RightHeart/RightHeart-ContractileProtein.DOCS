@@ -1,0 +1,55 @@
+QHP 2008 /RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-ContractileProtein </structurename>
+
+<vardoc>
+<name> RightHeart-ContractileProtein.Change </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-ContractileProtein.Mass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Size.InitialProteinMass </seealso>
+<seealso> RightHeart-ContractileProtein.Change </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

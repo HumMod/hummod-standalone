@@ -1,0 +1,60 @@
+HumMod / Compartments
+
+Created : 21-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+
+<groupbox>
+   <row> 8.4 </row>
+   <col> 32.0 </col>
+   <high> 7.4 </high>
+   <wide> 30.0 </wide>
+   <title> Compartments </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> HeatStorage.Mass </name>
+   <format><integer/></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> HeatCore.Mass </name>
+   <format><integer/></format>
+   <label> Core </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> HeatSkeletalMuscle.Mass </name>
+   <format><integer/></format>
+   <label> SkeletalMuscle </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 1.0 </col>
+   <name> HeatSkin.Mass </name>
+   <format><integer/></format>
+   <label> Skin </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.8 </row><col> 1.0 </col>
+   <name> GILumenTemperature.Mass </name>
+   <format><integer/></format>
+   <label> GI Lumen </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row><col> 26.0 </col>
+
+  <line> The units for heat in these </line>
+  <line> compartments is kCal. </line>
+</infobutton>
+
+</groupbox>
+
+End

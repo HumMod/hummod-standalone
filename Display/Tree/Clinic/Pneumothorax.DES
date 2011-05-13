@@ -1,0 +1,15 @@
+HumMod / Pneumothorax DES
+
+Created : 2010-05-18
+Last Modified : 2010-05-18
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<leaf>
+  <name> Clinic_Pneumothorax </name>
+  <label> Pneumothorax </label>
+  <parent> CLINIC </parent>
+</leaf>
+
+End

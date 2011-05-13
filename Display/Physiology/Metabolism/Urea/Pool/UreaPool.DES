@@ -1,0 +1,107 @@
+HumMod / UreaPool
+
+Created : 29-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.2 </high>
+   <wide> 30.0 </wide>
+   <title> Extracellular Urea </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> UreaPool.[Urea(mMol/L)] </name>
+   <format><decimal> 2 </decimal></format>
+   <label> [Urea] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> UreaPool.[Urea(mMol/L)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 6 </min><max> 7 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> UreaPool.Mass </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3 </col>
+   <name> UreaPool.Change </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 3 </col>
+   <name> UreaPool.Inflow </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Inflow </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 5 </col>
+   <name> UreaPool.Formed </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Formed </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 5 </col>
+   <name> UreaPool.Shifted </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Shifted </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.6 </row><col> 3 </col>
+   <name> UreaPool.Outflow </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Outflow </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> [Urea] = 6.2 mMol/L </line>
+  <line>  </line>
+  <line> Mass = 93 mMol </line>
+  <line> Change = ~0 mMol/Min </line>
+  <line>  </line>
+  <line> Inflow = 0.16 mMol/Min </line>
+  <line>  </line>
+  <line> Formed = 0.16 mMol/Min </line>
+  <line> Shifted = ~0 mMol/Min </line>
+  <line>  </line>
+  <line> Outflow = 0.16 mMol/Min </line>
+</infobutton>
+
+</groupbox>
+
+End

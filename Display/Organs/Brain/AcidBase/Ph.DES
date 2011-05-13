@@ -1,0 +1,72 @@
+HumMod / Ph
+
+Created : 14-May-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 15.3 </high>
+   <wide> 30.0 </wide>
+   <title> pH </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Ph </name>
+   <format><decimal> 2 </decimal></format>
+   <label> pH </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Ph </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 7.05 </min><max> 7.06 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> [SID] </name>
+   <format><decimal> 3 </decimal></format>
+   <label> [SID] </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 1.0 </col>
+   <name> Brain-CO2.PCO2</name>
+   <format> <integer/> </format>
+   <label> pCO2 </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> pH = 7.06 </line>
+  <line>  </line>
+  <line> [SID] = 0.036 mEq/mL </line>
+  <line> pCO2 = 45 mmHg </line>
+</infobutton>
+
+</groupbox>
+
+End

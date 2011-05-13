@@ -1,0 +1,87 @@
+HumMod / LM_Gluconeogenesis
+
+Created : 31-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> LM_Gluconeogenesis </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+<var><name> InsulinEffect </name></var>
+<var><name> GlucagonEffect </name></var>
+<var><name> GlucoseEffect </name></var>
+<var><name> AminoAcidEffect </name></var>
+
+<var><name> AminoAcidUptake </name></var>
+<parm><name> BasicUptake </name><val> 30.0 </val></parm>
+
+<constant><name> AA_TO_GLU </name><val> 0.60 </val></constant>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> InsulinEffect </name>
+  <point><x>   0 </x><y> 2.5 </y><slope> 0.0 </slope></point>
+  <point><x>  50 </x><y> 1.0 </y><slope> -0.005 </slope></point>
+  <point><x> 500 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucagonEffect </name>
+  <point><x> 170 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 680 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> GlucoseEffect </name>
+  <point><x>  45 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+  <point><x> 125 </x><y> 1.0 </y><slope> -0.008 </slope></point>
+  <point><x> 340 </x><y> 0.3 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve>
+  <name> AminoAcidEffect </name>
+  <point><x>   0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x>  50 </x><y> 1.0 </y><slope> 0.03 </slope></point>
+  <point><x> 200 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> InsulinEffect </name><val> InsulinEffect [ LM_Insulin.[InsulinDelayed] ] </val></def>
+<def><name> GlucagonEffect </name><val> GlucagonEffect [ PortalVein-Glucagon.[Glucagon] ] </val></def>
+<def><name> GlucoseEffect </name><val> GlucoseEffect [ PortalVein-Glucose.[Glucose(mG/dL)] ] </val></def>
+<def><name> AminoAcidEffect </name><val> AminoAcidEffect [ AAPool.[AA(mG/dL)] ] </val></def>
+
+<def><name> AminoAcidUptake </name>
+  <val>
+      BasicUptake
+    * InsulinEffect
+    * GlucagonEffect
+    * GlucoseEffect
+    * AminoAcidEffect
+    * Liver-Function.Effect
+  </val>
+</def>
+
+<def><name> Rate </name><val> AminoAcidUptake * AA_TO_GLU </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

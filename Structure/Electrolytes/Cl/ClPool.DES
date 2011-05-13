@@ -1,0 +1,76 @@
+HumMod / ClPool
+
+Created : 06-Apr-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> ClPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [Cl-] </name></var>
+<var><name> [Cl-(mEq/L)] </name></var>
+
+<var><name> Target[Cl-] </name><val> 0.106 </val></var>
+<var><name> InitialMass </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 16.1 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> InitialMass </name><val> Target[Cl-] * ECFV.Vol </val></def>
+  <def><name> Mass </name><val> InitialMass </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [Cl-] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [Cl-(mEq/L)] </name><val> 1000.0 * [Cl-] </val></def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+
+<def><name> Gain </name>
+  <val>  
+      GILumenChloride.Absorption
+    + IVDrip.ClRate
+    + Transfusion.ClRate
+  </val>
+</def>
+
+<def><name> Loss </name>
+  <val>  
+      CD_Cl.Outflow
+    + SweatDuct.ClOutflow
+    + Hemorrhage.ClRate
+    + DialyzerActivity.Cl-Flux
+  </val>
+</def>
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

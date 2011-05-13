@@ -1,0 +1,69 @@
+HumMod / Concentration
+
+Created : 26-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.4 </high>
+   <wide> 30.0 </wide>
+   <title> Concentration </title>
+
+<structurename> FAPool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> [FA(mG/dL)] </name>
+  <format><decimal> 1 </decimal></format>
+  <label> [FattyAcid (mG/dL)] </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> [FA(mG/dL)] </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 10 </min><max> 20 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> [FA(mMol/L)] </name>
+  <format><decimal> 3 </decimal></format>
+  <label> [FattyAcid (mMol/L)] </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> I've assumed that plasma fatty acids are, on average, </line>
+  <line> 16-carbon molecules. </line>
+  <line>  </line>
+  <line> Plasma fatty acid concentration is typically 15 mG/dL </line>
+  <line> or 0.60 mMol/L. </line>
+  <line>  </line>
+  <line> To convert mG/dL fatty acid to mMol/L fatty acid, </line>
+  <line> multiply by 0.0392. </line>
+</infobutton>
+
+</groupbox>
+
+End

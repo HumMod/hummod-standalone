@@ -1,0 +1,64 @@
+HumMod / LungArtyO2
+
+Created : 29-Mar-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> LungArtyO2 </name>
+
+<variables>
+
+<var>
+  <name> [O2] </name>
+</var>
+
+<var>
+  <name> PO2 </name>
+</var>
+
+<var>
+  <name> Saturation </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> [O2] </name>
+  <val> O2Veins.[O2] </val>
+</def>
+
+<copy>
+  <from> [O2] </from>
+  <to> HgbTissue.[O2] </to>
+</copy>
+
+<call> HgbTissue.O2ToPO2 </call>
+
+<copy>
+  <from> HgbTissue.pO2 </from>
+  <to> PO2 </to>
+</copy>
+
+<copy>
+  <from> [O2] </from>
+  <to> HgbConc.[O2] </to>
+</copy>
+
+<call> HgbConc.Sat(%) </call>
+
+<copy>
+  <from> HgbConc.Sat(%) </from>
+  <to> Saturation </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

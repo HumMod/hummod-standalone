@@ -1,0 +1,43 @@
+HumMod / GlomerulusKetoacid
+
+Created : 17-Mar-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> GlomerulusKetoacid </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [KA-] </name></var>
+
+<var><name> Rate(mMol/Min) </name></var>
+<constant><name> MG_TO_MMOL </name><val> 0.0098 </val></constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [KA-] </name><val> KAPool.[KA] * GlomerulusFiltrate.AnionAdjustment </val></def>
+<def><name> Rate </name><val> [KA-] * GlomerulusFiltrate.GFR </val></def>
+<def><name> Rate(mMol/Min) </name><val> MG_TO_MMOL * Rate </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [KA-] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+<def><name> Rate(mMol/Min) </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

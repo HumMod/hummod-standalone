@@ -1,0 +1,45 @@
+HumMod / Setup
+
+Created : 16-Jan-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 18.8 </row>
+   <col> 1.0 </col>
+   <high> 3.6 </high>
+   <wide> 30.0 </wide>
+   <title> Setup </title>
+
+<structurename> Hemorrhage </structurename>
+
+<repeatlist>
+  <name> Hemorrhage.TargetRate </name>
+  <repeat><reps> 100 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.6 </row>
+  <col> 1.0 </col>
+  <wide> 8.0 </wide>
+  <name> TargetRate </name>
+  <listname> Hemorrhage.TargetRate </listname>
+  <label> Target Rate </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Set the target hemorrhage rate here </line>
+  <line> and then go to hemorrhage control. </line>
+  <line> </line>
+  <line> Units for target rate are mL/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

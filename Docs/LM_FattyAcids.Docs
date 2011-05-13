@@ -1,0 +1,16 @@
+Digital Human / LM_FattyAcids
+
+Created : 30-Mar-08
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path docs\LiverMetabolism\ ?>
+
+<?include LM_FA_AminoAcids.docs ?>
+<?include LM_FA_Glucose.docs ?>
+
+End

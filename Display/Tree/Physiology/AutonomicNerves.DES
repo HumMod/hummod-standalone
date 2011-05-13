@@ -1,0 +1,164 @@
+HumMod / AutonomicNerves
+
+Created : 19-Jun-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> AutonomicNerves </name>
+  <label>  Autonomic Nerves </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<branch>
+  <name> AutonomicNerves-Afferents </name>
+  <label> Afferents </label>
+  <parent> AutonomicNerves </parent>
+</branch>
+
+<leaf>
+  <name> AutonomicNerves-Afferents-Summary </name>
+  <label> Summary </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Afferents-Baroreflex </name>
+  <label> Baroreflex </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Afferents-LowPressureReceptors </name>
+  <label> Low Pressure Receptors </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Afferents-Mechanoreceptors </name>
+  <label> Heart Mechanoreceptors </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Afferents-Chemoreceptors </name>
+  <label> Chemoreceptors </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> AutonomicNerves-Afferents-Metaboreflex </name>
+  <label> Metaboreflex </label>
+  <parent> AutonomicNerves-Afferents </parent>
+</leaf>
+-->
+
+<branch>
+  <name> AutonomicNerves-CNS </name>
+  <label> CNS </label>
+  <parent> AutonomicNerves </parent>
+</branch>
+
+<leaf>
+  <name> AutonomicNerves-CNS-Integration </name>
+  <label> Integration </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-CNS-Baroreflex </name>
+  <label> Baroreflex </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-CNS-LowPressureReceptors </name>
+  <label> Low Pressure Receptors </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> AutonomicNerves-CNS-Chemoreceptors </name>
+  <label> Chemoreceptors </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+-->
+
+<leaf>
+  <name> AutonomicNerves-CNS-Exercise </name>
+  <label> Exercise </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> AutonomicNerves-CNS-Cushing </name>
+  <label> Cushing Response </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+-->
+
+<!--
+<leaf>
+  <name> AutonomicNerves-CNS-TrophicFactor </name>
+  <label> Trophic Factor </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+-->
+
+<leaf>
+  <name> AutonomicNerves-CNS-PituitaryNerve </name>
+  <label> Pituitary Nerve </label>
+  <parent> AutonomicNerves-CNS </parent>
+</leaf>
+
+<branch>
+  <name> AutonomicNerves-Efferents </name>
+  <label> Efferents </label>
+  <parent> AutonomicNerves </parent>
+</branch>
+
+<leaf>
+  <name> AutonomicNerves-Efferents-GangliaGeneral </name>
+  <label> Ganglia General </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Efferents-GangliaKidney </name>
+  <label> Ganglia Kidney </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Efferents-VagusNerve </name>
+  <label> Vagus Nerve </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Efferents-AdrenalNerve </name>
+  <label> Adrenal Nerve </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+
+<leaf>
+  <name> AutonomicNerves-Efferents-SystemicVeins </name>
+  <label> Systemic Veins </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+
+<!--
+<leaf>
+  <name> AutonomicNerves-Efferents-SequesteredBV </name>
+  <label> Sequestered Blood </label>
+  <parent> AutonomicNerves-Efferents </parent>
+</leaf>
+-->
+
+End

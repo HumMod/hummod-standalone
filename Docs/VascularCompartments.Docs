@@ -1,0 +1,27 @@
+Digital Human / Compartments
+
+Created : 16-May-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path Docs\VascularCompartments\ ?>
+
+<?include LeftAtrium.docs ?>
+<?include PulmArty.docs ?>
+<?include PulmCapys.docs ?>
+<?include PulmVeins.docs ?>
+<?include RightAtrium.docs ?>
+<?include SplanchnicVeins.docs ?>
+<?include SystemicArtys.docs ?>
+<?include SystemicVeins.docs ?>
+
+<?include LeftVentricle.docs ?>
+<?include RightVentricle.docs ?>
+</docs>
+
+end.

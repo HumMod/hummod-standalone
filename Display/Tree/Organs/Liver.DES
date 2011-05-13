@@ -1,0 +1,94 @@
+HumMod / Liver
+
+Created : 08-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Liver </name>
+  <label> Liver </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Liver-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> Liver </parent>
+</leaf>
+
+<branch>
+  <name> Liver-Fuel </name>
+  <label> Fuel </label>
+  <parent> Liver </parent>
+</branch>
+
+<leaf>
+  <name> LiverFuel-Selection </name>
+  <label> Selection </label>
+  <parent> Liver-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LiverFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> Liver-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LiverFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> Liver-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> LiverFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> Liver-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-CO2 </name>
+  <label> CO2 </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-Lactate </name>
+  <label> Lactate </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-Nerves </name>
+  <label> Nerves </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-Function </name>
+  <label> Function </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-Structure </name>
+  <label> Structure </label>
+  <parent> Liver </parent>
+</leaf>
+
+<leaf>
+  <name> Liver-Size </name>
+  <label> Size </label>
+  <parent> Liver </parent>
+</leaf>
+
+End

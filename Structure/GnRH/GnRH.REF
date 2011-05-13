@@ -1,0 +1,37 @@
+HumMod / GnRH Reference
+
+Created : 02-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : DES V1.0
+
+Gonadotropic Releasing Hormone
+
+This was called LHRH after first studies, but then it
+was found to also have an effect on FSH so the name
+evolved to gonadotropin.
+
+C55-H75-N17-O13  M.W. = 1182.3  Decapeptide
+
+Volume of distribution is ECFV
+  15,000 mL in male
+   9,720 mL in female
+
+GnRH is dumped in pulses into the hypothamic - pituitary
+portal circulation, do the main characterization is
+interval between pulses, which is typically 60 to 120
+minutes in the female and 90 to 180 minutes in the
+male.
+
+I don't have units yet.
+
+Half-life is 2 - 4 minutes.
+
+GnRH pulse rate is lowest mid-luteal at 3 / 24 Hrs
+(480 Min period). Rate is greatest at menses at
+14 / 24 Hrs (100 Min period).
+
+End

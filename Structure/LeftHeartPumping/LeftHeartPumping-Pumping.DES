@@ -1,0 +1,49 @@
+HumMod / LeftHeartPumping-Pumping
+
+Created : 2010-05-25
+Last Modified : 2010-05-25
+Author : Tom Coleman
+Copyright : 2010-2010
+By : University of Mississippi Medical Center
+
+<structure><name> LeftHeartPumping-Pumping </name>
+
+<variables>
+
+<var><name> BloodFlow </name></var>
+<var><name> StrokeVolume </name></var>
+<var><name> EjectionFraction </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> StrokeVolume </name>
+  <val>
+      LeftHeartPumping-Diastole.EDV
+    - LeftHeartPumping-Systole.ESV
+  </val>
+</def>
+
+<def>
+  <name> BloodFlow </name>
+  <val> Heart-Ventricles.Rate * StrokeVolume </val>
+</def>
+
+<def>
+  <name> EjectionFraction </name>
+  <val>
+      StrokeVolume
+    / LeftHeartPumping-Diastole.EDV
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

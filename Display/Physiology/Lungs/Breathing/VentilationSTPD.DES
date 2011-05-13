@@ -1,0 +1,62 @@
+HumMod / VentilationSTPD
+
+Created : 09-Feb-06
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2006-2010
+By : University Of Mississippi Medical Center
+Schema : DES V1.0
+
+<groupbox>
+   <row> 19.4 </row>
+   <col> 32.0 </col>
+   <high> 7.4 </high>
+   <wide> 30.0 </wide>
+   <title> Ventilation STPD </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalVentilation(L-STPD) </name>
+  <label> Total </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 2.4 </row><col> 1.0 </col>
+  <name> AlveolarVentilation(L-STPD) </name>
+  <label> Alveolar </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 3.8 </row><col> 1.0 </col>
+  <name> TidalVolume(STPD) </name>
+  <label> Tidal Volume </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 4.8 </row><col> 1.0 </col>
+  <name> DeadSpace(STPD) </name>
+  <label> Dead Space </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 5.8 </row><col> 1.0 </col>
+  <name> AlveolarVolume(STPD) </name>
+  <label> Alveolar Volume </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Conversion from BTPS to STPD </line>
+  <line> decreases volumes a bit. </line>
+</infobutton>
+
+</groupbox>
+
+End

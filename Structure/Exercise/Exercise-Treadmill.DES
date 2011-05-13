@@ -1,0 +1,125 @@
+HumMod / Exercise-Treadmill
+
+Created : 20-Dec-05
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2005-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<structure><name> Exercise-Treadmill </name>
+
+<variables>
+
+<parm><name> Speed(MPH) </name><val> 0.0 </val></parm>
+<parm><name> Grade(%) </name><val> 0.0 </val></parm>
+<parm><name> Efficiency(%) </name><val> 30.0 </val></parm>
+<parm><name> RunOrWalk </name><val> 0.0 </val></parm>
+
+<var><name> Power(W) </name></var>
+<var><name> Power(kPM/Min) </name></var>
+
+<timervar><name> ElapsedTime </name><val> 0.0 </val></timervar>
+<var><name> Efficiency </name></var>
+<var><name> TotalWatts </name></var>
+
+<var><name> Speed(FPM) </name></var>
+<var><name> Speed(KPH) </name></var>
+<var><name> StepsPerMinute </name></var>
+
+<var><name> Distance(Miles) </name></var>
+<var><name> Distance(kM) </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> DistanceTraveled(Feet) </name>
+  <integralname> DistanceTraveled(Feet) </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Velocity </dervname>
+</diffeq>
+
+</equations>
+
+<functions>
+
+<curve><name> GradeX </name>
+  <point><x> -10.0 </x><y> 0.6 </y><slope> 0.0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.08 </slope></point>
+  <point><x>  10.0 </x><y> 2.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+<curve><name> WalkingBonus </name>
+  <point><x> 0.0 </x><y> 0.6 </y><slope> 0.0 </slope></point>
+  <point><x> 5.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<conditional><name> Speed(MPH) </name>
+<test> RunOrWalk </test>
+<true>
+  Speed(MPH) MIN 5.0
+</true>
+</conditional>
+
+<def><name> Speed(FPM) </name><val> 88.0 * Speed(MPH) </val></def>
+<def><name> Speed(KPH) </name><val> 1.609 * Speed(MPH) </val></def>
+<def><name> StepsPerMinute </name><val> 39.0 * Speed(MPH) </val></def>
+<def><name> Efficiency </name><val> 0.01 * Efficiency(%) </val></def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def><name> Power(W) </name>
+  <val> 0.412 * Weight.Weight(kG) * Speed(MPH) * GradeX [ Grade(%) ] </val>
+</def>
+
+<conditional><name> Power(W) </name>
+<test> RunOrWalk </test>
+<true>
+  Power(W) * WalkingBonus [ Speed(MPH) ]
+</true>
+</conditional>
+
+<def><name> Power(kPM/Min) </name><val> 6.12 * Power(W) </val></def>
+<def><name> TotalWatts </name><val> Power(W) / Efficiency </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<if><test> Status.Exertion EQ 4 </test>
+<true>
+  <timer><name> ElapsedTime </name><state> UP </state></timer>
+  <def><name> Velocity </name><val> Speed(FPM) </val></def>
+</true>
+<false>
+  <timer><name> ElapsedTime </name><state> OFF </state></timer>
+  <def><name> Velocity </name><val> 0.0 </val></def>
+</false>
+</if>
+
+<def><name> Distance(Miles) </name><val> DistanceTraveled(Feet) / 5280.0 </val></def>
+<def><name> Distance(kM) </name><val> 1.609 * Distance(Miles) </val></def>
+
+</block>
+
+<block><name> ResetTime&Distance </name>
+
+<timer><name> ElapsedTime </name><val> 0.0 </val></timer>
+<def><name> DistanceTraveled(Feet) </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End
