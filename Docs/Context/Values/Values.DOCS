@@ -1,0 +1,20 @@
+Digital Human / Traits DES
+
+Created : 03-Apr-05
+Last Modified : 21-Nov-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<?path docs ?>
+
+<?include \Values\Values-Adiposity.docs ?>
+<?include \Values\Values-Age.docs ?>
+<?include \Values\Values-BaseMass.docs ?>
+<?include \Values\Values-Height.docs ?>
+<?include \Values\Values-Muscularity.docs ?>
+
+
+End

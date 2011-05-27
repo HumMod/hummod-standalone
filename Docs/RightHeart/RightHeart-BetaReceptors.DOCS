@@ -1,0 +1,104 @@
+QHP 2008 / RightHeart.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-BetaReceptors </structurename>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.Activity </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> BetaBlockade.Effect </seealso>
+<seealso> RightHeart-BetaReceptors.Setting </seealso>
+<seealso> RightHeart-BetaReceptors.TotalAgonism </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.HumoralAgonism </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> BetaPool.Effect</seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.HUMORALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.NeuralAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> GangliaGeneral.NA(Hz) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.NEURALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.Setting </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.Switch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-BetaReceptors.TotalAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-BetaReceptors.NEURALK </seealso>
+<seealso> RightHeart-BetaReceptors.NeuralAgonism </seealso>
+<seealso> RightHeart-BetaReceptors.HUMORALK </seealso>
+<seealso> RightHeart-BetaReceptors.HumoralAgonism </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

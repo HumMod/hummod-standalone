@@ -1,0 +1,66 @@
+QHP 2008 / SequesteredBlood.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BVSeq </structurename>
+
+<vardoc>
+<name> BVSeq.Vol</name>
+<topic> BVSeq - Overview </topic>
+<topic> BVSeq - Concentration Units </topic>
+<seealso> BVSeqArtys.Vol </seealso>
+<seealso> BVSeqVeins.Vol </seealso>
+</vardoc>
+
+<topicdoc>
+<name> BVSeq - Overview </name>
+<label> Overview </label>
+<content>
+
+Sequestered blood volume is a term used to explain the
+changes in blood volume distribution and venous return
+when a subject moves from a lying to a standing postion. 
+As the subject changes from a lying to standing position,
+total blood volume does not acutely change, however 
+venous return falls as if some blood has been lost. The 
+(virtual) amount of blood that appears to be lost is called 
+sequestered. Some is in the arteries and some in the veins 
+of the lower extremities. Vascular compliance plays a role 
+in sequestration since the amount sequestered depends on 
+the distending (orthostatic) pressure versus the vascular 
+compliance pushing back.
+
+For reference about sequestered blood volume see:
+Thornton WE, Moore TP, Pool SL Fluid Shifts in Weightlessness
+Aviat.Space Environ Med 58(9, Suppl.):A86-90, 1987.
+
+Moore TP, Thornton WE Space shuttle inflight and postflight 
+fluid shifts measured by leg volume changes. 
+Aviat Space Environ. Med 58(9, Suppl.):A91-96, 1987.
+
+Musgrave FS, Zechman FW, Mains RC. Changes in total leg 
+volume during lower body negative pressure. 
+Aerospace Med 40(6):602-606, 1969.
+
+Asmussen E. The distribution of the blood between the lower 
+extremities and the rest of the body.
+Acta Physiol Scanda 5:31-38, 1943
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> BVSeq - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Sequestered Blood Volume is expressed in mL or L
+
+   
+</content>
+</topicdoc>
+
+End

@@ -1,0 +1,678 @@
+QHP 2008 / Hemoglobin.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> HgbProps </structurename>
+
+<vardoc>
+<name> HgbProps.[O2]</name>
+<topic> [O2] - DefinitionHP1 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.A </name>
+<topic> A - DefinitionHP2 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.An </name>
+<topic> An - DefinitionHP3 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.CO2NORM </name>
+<topic> CO2NORM - DefinitionHP4 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.COEffect </name>
+<topic> COEffect - DefinitionHP5 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.COK </name>
+<topic> COK - DefinitionHP6 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.CONORM</name>
+<topic> CONORM - DefinitionHP7 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.COSens </name>
+<topic> COSens - DefinitionHP8 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.Del </name>
+<topic> Del - DefinitionHP9 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.HILLCONSTANT </name>
+<topic> HILLCONSTANT - DefinitionHP10 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.K </name>
+<topic> K - DefinitionHP11 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.Log </name>
+<topic> Log - DefintionHP12 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.O2SOLUBILITY </name>
+<topic> O2SOLUBILITY - DefinitionHP13 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.P50 </name>
+<topic> P50 - DefinitionHP14 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.P50Basic </name>
+<topic> P50Basic - DefinitionHP15 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pCO2 </name>
+<topic> pCO2 - DefinitionHP16 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pCO2Effect </name>
+<topic> pCO2Effect - DefinitionHP17 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.PCO2K </name>
+<topic> PCO2K - DefinitionHP18 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pCO2Sens </name>
+<topic> pCO2Sens - DefinitionHP19 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pH </name>
+<topic> pH - DefintionHP20 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pHEffect </name>
+<topic> pHEffect - DefinitionHP21 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.PHK </name>
+<topic> PHK - DefinitionHP22 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.PHNORM </name>
+<topic> PHNORM - DefinitionHP23 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pHSens </name>
+<topic> pHSens - DefinitionHP24 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pO2</name>
+<topic> pO2 - DefinitionHP25 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.pO2SATURATED </name>
+<topic> pO2SATURATED - DefinitionHP26 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.S </name>
+<topic> S - DefinitionHP27 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.Sat </name>
+<topic> Sat - DefinitionHP28 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.ScaleForSat </name>
+<topic> ScaleForSat - DefinitionHP29 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.Temp </name>
+<topic> Temp - DefinitionHP30 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.TempEffect </name>
+<topic> TempEffect - DefinitionHP31 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.TEMPK </name>
+<topic> TEMPK - DefinitionHP32 </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbProps.TEMPNORM </name>
+<topic> TEMPNORM - DefinitionHP33 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+<vardoc>
+<name> HgbProps.TempSens </name>
+<topic> TempSens - DefinitionHP34 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> [O2] - DefinitionHP1 </name>
+<label> Definition </label>
+<content>
+
+[O2] is the oxygen concentration in the blood.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> A - DefinitionHP2 </name>
+<label> Definition </label>
+<content>
+
+A = P / P50
+
+Where P is the pO2 (partial pressure of oxygen)
+and P50 is the pO2 that produces a saturation 
+of  50%.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> An - DefinitionHP3 </name>
+<label> Definition </label>
+<content>
+
+An = (PO2SATURATED/P50)^HILLCONSTANT 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> CO2NORM - DefinitionHP4 </name>
+<label> Definition </label>
+<content>
+
+CO2NORM is a constant and is defined as the arterial
+partial pressure of carbon dioxide under normal 
+physiological conditions.
+
+It has a value of 40mm Hg. 
+
+Douglas AR, Jones NL, Reed JW. Calculation of 
+whole blood CO2 content.
+J Appl. Physiol. 65: 473 - 477, 1988
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> COEffect - DefinitionHP5 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> COK - DefinitionHP6 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> CONORM - DefinitionHP7 </name>
+<label> Definition </label>
+<content>
+
+CONORM is a constant and is defined as the arterial
+partial pressure of carbon monoixde under normal 
+physiological conditions.
+
+It has a value of 0.0 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> COSens - DefinitionHP8 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Del - DefintionHP9 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+<topicdoc>
+<name> HILLCONSTANT - DefinitionHP10 </name>
+<label> Definition </label>
+<content>
+
+HILLCONSTANT has a value of 2.3
+
+HILLCONSTANT is a exponent used in the equation 
+relating blood oxygen content and blood pO2.
+The relationship is described using the sigmoidal 
+Hill equation:
+
+S = An / 1 + An
+
+where S is the fraction saturation, An is 
+(PO2SATURATED/P50)^HILLCONSTANT where 
+PO2SATURATED is the pO2 at 100% saturation 
+and p50 is the pO2 that produces a saturation 
+of 1/2 or 50%.
+
+Dill DB, Edwards HT, Florkin M, Campbell RW. 
+Properties of dog blood. 
+J Biol. Chem. 95: 143 - 152, 1932.
+
+Hill AV. The possible effects of the aggregation of
+the molecules of haemoglobin on its dissociation curves.
+J Physiol. 40: iv - vii, 1910.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> K - DefinitionHP11 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Log - DefinitionHP12 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> O2SOLUBILITY - DefinitionHP13 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> P50 - DefinitionHP14 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> P50Basic - DefinitionHP15 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pCO2 - DefinitionHP16 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pCO2Effect - DefinitionHP17 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PCO2K - DefinitionHP18 </name>
+<label> Definition  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pCO2Sens - DefinitionHP19 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pH - DefinitionHP20 </name>
+<label> Definition </label>
+<content>
+
+pH is the calculated pH of blood.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pHEffect - DefinitionHP21 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PHK - DefinitionHP22 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PHNORM - DefinitionHP23 </name>
+<label> Definition </label>
+<content>
+
+It is customary to express H+ concentration of
+blood on a logarithm scale, using pH units.
+pH is related to the actual H+ concentration
+by the following formula:
+
+pH = log 1/[H+] = -log[H+] 
+
+PHNORM is a constant with a value of 7.40.
+This is normal pH of blood. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pHSens - DefinitionHP24 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pO2 - DefinitionHP25 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> PO2SATURATED - DefinitionHP26 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> S - DefinitionHP27 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Sat - DefinitionHP28 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ScaleForSat - DefinitionHP29 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Temp - DefinitionHP30 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TempEffect - DefinitionHP31 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TEMPK - DefinitionHP32 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TEMPNORM - DefinitionHP33 </name>
+<label> Definition </label>
+<content>
+
+TEMPNORM is constant and has a value of 37 degrees 
+centigrade. This is normal body temperature.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TempSens - DefinitionHP34 </name>
+<label> Definition </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

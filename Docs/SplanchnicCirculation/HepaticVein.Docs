@@ -1,0 +1,15 @@
+Digital Human / HepaticVein
+
+Created : 31-Mar-08
+Last Modified : 31-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+
+
+<?include HepaticVein\HepaticVein.docs ?>
+
+End

@@ -1,0 +1,128 @@
+QHP 2008 / BloodVolume.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RBCClearance </structurename>
+
+<vardoc>
+<name> RBCClearance.K </name>
+<topic> K - RBCC1Definition </topic>
+<topic> RBCClearance - Overview </topic>
+<topic> RBCClearance - Physical Units </topic>
+<topic> RBCClearance - Concentration Units </topic>
+<seealso> RBCClearance.Tau </seealso>
+<seealso> EpiClearance.K </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCClearance.Rate </name>
+<topic> Rate - RBCC2Definition </topic>
+<topic> RBCClearance - Overview </topic>
+<topic> RBCClearance - Physical Units </topic>
+<topic> RBCClearance - Concentration Units </topic>
+<seealso> RBCClearance.Tau </seealso>
+<seealso> RBCVol.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCClearance.Tau </name>
+<topic> Tau - RBCC3Definition </topic>
+<topic> RBCClearance - Overview </topic>
+<topic> RBCClearance - Physical Units </topic>
+<topic> RBCClearance - Concentration Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> RBCClearance - Overview </name>
+<label> Overview </label>
+<content>
+
+RBCs normally circulate an average of 120 days 
+before being destroyed. As the cells age, the 
+cell membrane becomes more fragile and the cells 
+rupture during passage through some tight spots 
+in the circulation, particularly in the spleen.
+
+RBCs are comprised of solids and water. 
+Typical RBC volume is 2400mL with 1580mL 
+being water and 820mL being solids. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCClearance - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Mass mL
+Flux mL/min
+RBCvolume mL
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCClearance - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+RBC concentrations have been expressed number per 
+cubic millimeter and as a % of the blood volume 
+(hematocrit).
+
+A typical hematocrit is 44% for males and 40% for females
+
+A typical concentration is 5,200,000 (plus or minus 300,000)in 
+males and 4,700,000 (plus or minus 300,000) in females
+
+A typical RBC secretion and clearance rate is 0.014mL/min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> K - RBCC1Definition   </name>
+<label> Definition   </label>
+<content>  
+
+K is the rate constant 
+K = 1/Tau
+K = 1/120*1440
+Since tau is in days and clearance is expressed in minutes, 
+multiply tau by 1440.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Rate - RBCC2Definition  </name>
+<label> Definition   </label>
+<content>  
+
+Rate is the calculated rate of clearance of 
+red blood cells.
+
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Tau - RBCC3Definition   </name>
+<label> Definition   </label>
+<content>  
+
+Tau = 120 days
+
+
+</content>
+</topicdoc>
+
+
+
+  
+End

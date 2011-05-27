@@ -1,0 +1,93 @@
+QHP 2008 / Glucose.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> GlucosePump </structurename>
+
+<vardoc>
+<name> GlucosePump.Rate </name>
+<topic> GlucosePump - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePump.Setting </name>
+<topic> GlucosePump - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePump.Switch </name>
+<topic> GlucosePump - Overview </topic>
+<topic> Glucose - Concentration Units </topic>
+<topic> Glucose - Physical Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> GlucosePump - Overview </name>
+<label> Overview </label>
+<content>
+
+The Glucose Pump enables the model user to change 
+plasma glucose levels by infusing glucose at different 
+rates. Data is taken from a variety of human studies 
+relating infusion rates to plasma concentrations 
+of glucose.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucose - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma Concentration  mG/mL, mG/dL or nMol/L
+Mass  mG 
+mG/dL * 0.05551 = mMol/L
+mG * 5.551 = mMol
+mG/mL * 100 = mG/dL
+Pump units are mG/Min
+Units for glucose movement are mG/Min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucose - Concentration Units  </name>
+<label> Concentration Units </label>
+<content>
+
+Molecular Weight (MW) of glucose is 180
+
+Typical plasma glucose concentration [Glucose] = 1.1mg/mL
+The volume of distribution is the ECFV.
+
+Glucose Mass = ECFV * [Glucose]
+             = 15000 * 1.1 = 16500mG
+
+Typical glucose concentrations under a variety of
+physiological situations. Drip is considered the 
+steady state.
+
+                 mG/dL  mMol/L
+                 -----  ------
+   Hypoglycemia    45     2.5
+   Starving        60     3.3
+   Fasting         85     4.7
+   Drip           110     6.1
+   Fed            130     7.2
+   Glucose Load   200    11.1
+
+</content>
+</topicdoc>
+
+   
+
+End

@@ -1,0 +1,275 @@
+QHP 2008 / H2O.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BodyH2O </structurename>
+
+<vardoc>
+<name> BodyH2O.Change </name>
+<topic> BodyH20 - Overview </topic>
+<topic> InitialTotalVol - Concentration Units </topic>
+<seealso> BodyH20.Gain </seealso>
+<seealso> BodyH20.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.ExtravascularVol </name>
+<topic> ExtravascularVol - Overview </topic>
+<topic> ExtravascularVol - Concentration Units </topic>
+<seealso> InterstitialWater.Vol </seealso>
+<seealso> CellH20.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.ExtravascularVol(L) </name>
+<topic> ExtravascularVol - Overview </topic>
+<topic> ExtravascularVol - Concentration units </topic>
+<seealso> InterstitialWater.Vol </seealso>
+<seealso> CellH20.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.Gain </name>
+<topic> Gain - Overview </topic>
+<seealso> TissueH20.Gain </seealso>
+<seealso> PlasmaVol.Gain </seealso>
+<seealso> RBCH20.Gain </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.InitialTotalVol </name>
+<topic> InitialTotalVol - Overview  </topic>
+<topic> InitialTotalVol - Concentration Units  </topic>
+<seealso> InitialVol </seealso>
+<seealso> ExternalH20.InitialVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.InitialVol </name>
+<topic> BodyH20 - Overview    </topic>
+<topic> InitialTotalVol - Concentration Units   </topic>
+<seealso> TissueH20.InitialVol </seealso>
+<seealso> PlasmaVol.InitialVol </seealso>
+<seealso> RBCH20.InitialVol </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> BodyH2O.IntravascularVol </name>
+<topic> IntravascularVol - Overview </topic>
+<topic> IntravascularVol - Concentration Units </topic>
+<seealso> PlasmaVol.Vol </seealso>
+<seealso> RBCH20.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.IntravascularVol(L) </name>
+<topic> IntravascularVol - Overview  </topic>
+<topic> IntravascularVol - Concentration Units  </topic>
+<seealso> PlasmaVol.Vol </seealso>
+<seealso> RBCH20.Vol </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> BodyH2O.Loss </name>
+<topic> Loss - Overview </topic>
+<seealso> TissueH20.Loss </seealso>
+<seealso> PlasmaVol.Loss </seealso>
+<seealso> RBCH20.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.TotalVol </name>
+<topic> TotalVol - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> BodyH20.Vol </seealso>
+<seealso> ExternalH20.Vol </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> BodyH2O.Vol </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> TissueH20.Vol </seealso>
+<seealso> PlasmaVol.Vol </seealso>
+<seealso> RBCH20.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> BodyH2O.Vol(L) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> BodyH2O.Vol </seealso>
+</vardoc>
+
+<topicdoc>
+<name> BodyH20 - Overview </name>
+<label> Overview </label>
+<content>
+
+There are several different ways to describe the body's
+water compartments.Water compartments can initially be 
+divided into two basic types: intracellular (ICFV) and 
+extracellular (ECFV).
+
+Intracellular compartments are red blood cells and
+(all other) cells.
+
+Extracellular compartments are plasma and interstitium.
+
+The problem with this scheme is that water cannot move
+freely between plasma and interstitium but it can move
+freely between interstitium and cell H2O.
+
+Another way of dividing the body's water compartments 
+is into intravascular and extravascular compartments. 
+The intravascular compartment can be futher subdivided 
+into RBC water and plasma. Extravascular water is also 
+referred to as tissue H2O.
+
+Changes in body water may occur as result of both
+internal and external exchanges.Internal exchanges 
+are capillary filtration and lymph flow.External 
+exchanges are many and include absorption
+from gut, urine, IV drip, transfusion,
+hemorrhage ...
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> BodyH2O - Values </name>
+<label> Values </label>
+<content>
+
+Units are in mL or L 
+Typical Values for Total Body H2O
+is 43L.
+
+Physiological parameter values for PBPK models.
+International Life Sciences Institute and Risk 
+Science Institute. 1994
+
+Snyder WS, Cook MJ, Nasset ES, Karhausen LR, 
+Howells GP and Tipton IH. Reports of the Task Group 
+on Reference Man. ICRP Publication 23. Pergamon 1974.
+
+Total Body H2O = 43.0L 
+Red Cells     =  1.6
+Cells         = 26.4
+                -----
+ICFV          = 28.0
+
+Interstitium  = 12.0
+Plasma        =  3.0
+                -----
+ECFV          = 15.0
+
+Total         = 43.0
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ExtravascularVol - Overview </name>
+<label> Overview </label>
+<content>
+
+Another way of dividing the body's water compartments 
+is into intravascular and extravascular compartments. The 
+intravascular compartment can be futher subdivided into RBC 
+water and plasma. Extravascular water is also referred 
+to as tissue H2O.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> ExtravascularVol - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Units are in ml or L
+
+Red Cells     =  1.6
+Plasma        =  3.0
+                 ---
+Vascular      =  4.6
+
+Cells         = 26.4 (ICFV less RBC's H2O)
+Interstitium  = 12.0
+                ----
+Extravascular = 38.4
+
+Total         = 43.0
+
+Physiological parameter values for PBPK models.
+International Life Sciences Institute and Risk 
+Science Institute. 1994
+
+Snyder WS, Cook MJ, Nasset ES, Karhausen LR, 
+Howells GP and Tipton IH. Reports of the Task Group 
+on Reference Man. ICRP Publication 23. Pergamon 1974.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - Overview </name>
+<label> Overview </label>
+<content>
+
+Gains in body water may occur as a result of 
+increased absorption from the gut; decreases 
+in urine output; IV drip or transfusion. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - Overview </name>
+<label> Overview </label>
+<content>
+
+Losses in body water may occur as a result of 
+decreased absorption from the gut; increases in 
+urine output; vomiting and hemorrhage.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> InitialTotalVol - Overview </name>
+<label> Overview </label>
+<content>
+
+Initial Total volume is defined as the initial body 
+water volume plus the initial value of External H2O
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> IntravascularVol - Overview </name>
+<label> Overview </label>
+<content>
+
+Another way of dividing the body's water compartments 
+is into intravascular and extravascular compartments. The 
+intravascular compartment can be futher subdivided into RBC 
+water and plasma. 
+
+</content>
+</topicdoc>
+
+
+
+End

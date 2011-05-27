@@ -1,0 +1,155 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> NEClearance </structurename>
+
+<vardoc>
+<name> NEClearance.K </name>
+<topic> NEClearance - Overview </topic>
+<topic> NEClearance - Physical Units </topic>
+<topic> NEClearance - Concentration Units </topic>
+<topic> Rate Constant Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> NEClearance.Rate </name>
+<topic> NEClearance - Overview </topic>
+<topic> NEClearance - Physical Units </topic>
+<topic> NEClearance - Concentration Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> NEClearance - Overview  </name>
+<label> Overview </label>
+<content>
+
+Norepinephrine is cleared from plasma mainly in the liver.
+
+Lund A. Elimination of adrenaline and noradrenaline from 
+the organism. Acta Pharmacol 7: 297, 1951 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NEClearance - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Clearance is typically expressed in nG/Min or L/Min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NEClearance - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+  
+Norepinephrine (C8 H11 N O3) has a molecular
+weight of 169. 
+
+Typical plasma concentration of NE is 240pG/mL or 
+1.42nMol/L (Multiply by 0.00592 to convert pG/mL 
+to nMol/L)
+
+Volume of distribution for catechols is ECFV or
+15,000mL. Therefore the typical circulating pool
+or mass of NE is
+
+240*15,000 = 3600nG
+
+Clearance rate is typically is 4.5L/Min or 1080nG/Min
+
+If the pool is 3600nG and 1080nG is cleared per minute
+the total pool is cleared in 3600/1800 = 0.33minutes
+K = 1/0.33 = 0.3
+
+Goldstein DS, Eisenhofer G, Kopin IJ. Sources and 
+significance of plasma levels of catechols and their 
+metabolites in humans.
+J Pharmacol Exp Ther 305(3): 800-811, 2003.
+
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Rate Constant Definition </name>
+<label> Rate Constant Definition </label>
+<content>
+
+Understanding rate constants is an 
+essential tool for all model builders.
+
+There is an irrational number called Euler's number 
+which is often denoted by e (and sometimes exp). 
+The value of e is roughly 2.718.
+
+If e is raised to a power, we have an exponential. 
+A specific example might be e^2. Note that the value 
+of e to a power can be obtained using an infinite series 
+(and e to a power is part of every scientific calculator 
+and computer programming library).
+
+If we raise e to an unspecified power using a variable, 
+we have an exponential function. An example might be e^x.
+
+The exponential function gets attention when is noted 
+that its derivative with respect to x is again the exponential 
+function. This can be denoted as
+
+	d(e^x)/dx = e^x
+
+The exponential function is also used to (inversely) 
+define the natural logarithm, denoted by In. If e^x = y 
+then x = ln y.
+
+Note that e0 = 1 and e-¥ = 0. (¥ represents infinity).
+
+In models, we often see responses where a variable decays 
+in an exponential fashion from an initial value to a steady 
+state value. Such responses can roughly be represented by
+
+	e^-Kt
+
+where K is a positive constant called the rate constant and 
+t is the independent variable (usually time). This function 
+again has the boundary values of e^K0 = 1 and e^-K¥ = 0. 
+(¥ represents infinity). The importance of K is that it 
+determines the speed (or rate and hence its name) of transition 
+between 1 and 0.
+
+We can now work this backwards and get an estimate of K 
+by looking at the speed or rate of the decay in an 
+appropriate data set.
+
+When t = 1/K, we have e^-1, which has a value of 0.37. 
+This means that the decay is 63% of way to its final value 
+(defined as t0.63). So we observe how long it takes the decay 
+to get to 63% of its final value and then we define K = 1/t0.63.
+
+Another way to find a rate constant is to 
+observe how long it takes a decay to get half way to its final 
+value - this is the half-time. We can denote the half-time 
+as t1/2. The exponential function is then e^-Kt1/2 = 0.5. 
+We can solve this equality for K by taking the natural 
+logarithm of both sides of the equation and rearranging.
+
+	-Kt1/2 = ln (0.5)
+	K = - ln(0.5) / t1/2
+
+Or simply
+
+	K = 0.69 / t1/2
+
+</content>
+</topicdoc>
+
+
+
+End

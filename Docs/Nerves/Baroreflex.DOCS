@@ -1,0 +1,124 @@
+QHP 2008 / Nerves.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Baroreflex </structurename>
+
+<vardoc>
+<name> Baroreflex.AdaptedPressure </name>
+<topic> AdaptedPressure - Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Baroreflex.NA </name>
+<topic> Baroreflex - Overview </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Baroreflex.PressureChange </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> CarotidSinus.Pressure </seealso>
+<seealso> Baroreflex.AdaptedPressure </seealso>
+</vardoc>
+
+<vardoc>
+<name> Baroreflex.RateConst </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Baroreflex.SinusPressure  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> CarotidSinus.Pressure </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> Baroreflex.Tau </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Baroreflex - Overview </name>
+<label> Overview </label>
+<content>
+
+The baroreceptor reflex has three parts: an afferent 
+part, processing in the central nervous system, and an
+efferent part. The afferent part of the baroreceptor 
+reflex consists of nerve endings that act as pressure 
+sensors in the arch of the aorta and carotid arteries.
+Receptors are most concentrated along the carotid artery 
+in a region called the carotid sinus. Increasing pressure 
+is excitatory and signals are transmitted from each 
+carotid sinus through very small Hering's nerves to the 
+glossopharyngeal nerve and then to the tractus solitarius 
+in the medullary area of the brain stem. Signals from the 
+aortic baroreceptors in the arch of the aorta are transmitted 
+through the vagus nerve to the same tractus solitarius of the 
+medulla. The baroreceptors respond extremely rapidly 
+to changes in arterial pressure.
+
+Angel-Davis J, Daly M de B. Comparison of reflex 
+vasomotor responses to separate and combined stimulation 
+of carotid sinus and aortic arch baroreceptors by 
+pulsatile and non-pulsatile pressures in the dog. 
+J Physiol 209: 257-293, 1970.
+ 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> AdaptedPressure - Overview </name>
+<label> Overview </label>
+<content>
+
+The acute response of the baroreceptors to a blood 
+pressure change is much stronger than the eventual 
+response. In other words, the baroreceptors adapt over
+time to the prevailing pressure.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NA - Overview </name>
+<label> Overview </label>
+<content>
+
+Nerve activity(NA) is quantified in multiples of normal 
+activity. Afferent nerve activity is one times normal 
+when the stimulating pressure is zero. A rising pressure 
+increases afferent nerve activity while a falling pressure 
+decreases it.  
+ 
+</content>
+</topicdoc>
+
+  
+End

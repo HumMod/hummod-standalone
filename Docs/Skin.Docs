@@ -1,0 +1,29 @@
+Digital Human / Skin
+
+Created : 21-Oct-04
+Last Modified : 25-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path Docs\Skin\ ?>
+
+<?include Skin-Flow.docs ?>
+<?include Skin-Pressure.docs ?>
+<?include Skin-Size.docs ?>
+
+<?include Skin-CO2.docs ?>
+<?include Skin-Lactate.docs ?>
+<?include Skin-Ph.docs ?>
+
+<?include Skin-Fuel.docs ?>
+<?include Skin-Function.docs ?>
+<?include Skin-Metabolism.docs ?>
+<?include Skin-AlphaReceptors.docs ?>
+<?include Skin-Structure.docs ?>
+<?include Skin-Vasculature.docs ?>
+
+</docs>
+End

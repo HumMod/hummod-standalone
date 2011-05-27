@@ -1,0 +1,106 @@
+QHP 2008 / Nerves.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> SystemicVeins-AlphaReceptors </structurename>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.Activity </name>
+<topic> SystemicVeins-AlphaReceptors-Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> BetaBlockade.Effect </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.HumoralAgonism </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> BetaPool.Effect</seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.HUMORALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.NeuralAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> GangliaGeneral.NA(Hz) </seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.NEURALK </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.Setting </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.Switch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> SystemicVeins-AlphaReceptors.TotalAgonism </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

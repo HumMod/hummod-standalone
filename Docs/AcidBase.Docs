@@ -1,0 +1,21 @@
+Digital Human / Acid-Base
+
+Created : 21-Oct-04
+Last Modified : 15-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path Docs\AcidBase\ ?>
+
+
+<?include PhGeneral.Docs ?>
+<?include PhBlood.Docs ?>
+<?include PhCells.Docs ?>
+
+<?include BloodPh.Docs ?>
+</docs>
+
+End

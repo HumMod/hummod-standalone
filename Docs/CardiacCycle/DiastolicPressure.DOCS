@@ -1,0 +1,65 @@
+QHP 2008 / CardiacCycle.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> DiastolicPressure </structurename>
+
+<vardoc>
+<name> DiastolicPressure.Pres </name>
+<topic> Diastolic Pressure - Overview  </topic>
+<topic> Diastolic Pressure - Physical Units </topic>
+<topic> Diastolic Pressure - Concentration Units  </topic>
+<seealso> DiastolicPressure.Stiffness </seealso>
+<seealso> DiastolicPressure.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> DiastolicPressure.Stiffness  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> DiastolicPressure.Vol  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

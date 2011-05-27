@@ -1,0 +1,82 @@
+QHP 2008 / Aldosterone.DOCS
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AldoPump </structurename>
+
+<vardoc>
+<name> AldoPump.Rate </name>
+<topic> AldoPump - Overview </topic>
+<topic> Aldo - Physical Units </topic>
+<topic> Aldo - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> AldoPump.Setting </name>
+<topic> AldoPump - Overview </topic>
+<topic> Aldo - Physical Units </topic>
+<topic> Aldo - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> AldoPump.Switch </name>
+<topic> AldoPump - Overview  </topic>
+<topic> Aldo - Physical Units </topic>
+<topic> Aldo - Concentration Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> AldoPump - Overview </name>
+<label> Overview </label>
+<content>
+
+The Aldo Pump enables the model user to change aldosterone
+levels by infusing aldosterone at different rates. The model 
+user first turns the switch on to activate the pump and then 
+sets the rate of infusion.
+
+Data is taken from a variety of human and animal studies
+relating infusion rates to plasma concentrations of aldosterone.
+
+WF Ganong, PJ Mulrow. Rate of change in sodium and potassium excretion 
+after injection of aldosterone into the aorta and renal artery of the dog.
+Am J Physiol 195: 337 - 342, 1958.
+
+Pan YJ, Young DB. Experimental aldosterone hypertension in the dog.
+Hypertension 4: 279 - 287, 1982.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Aldo - Physical Units</name>
+<label> Physical Units </label>
+<content>
+
+Aldo concentrations have been expressed in nG/100ml
+and pMol/L. 
+nG/dL = 0.036 * pMol/L.
+Aldosterone pump rate units are pMol/Min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Aldo - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+A typical [Aldo] concentration is 330pMol/L.
+Molecular weight of aldosterone is 360.45. Thus 1 pMol = 360.45 pG.
+
+The Merck Index. 12th Edition 1996
+
+</content>
+</topicdoc>
+
+   
+  
+
+End

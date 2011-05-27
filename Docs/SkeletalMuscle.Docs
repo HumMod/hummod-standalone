@@ -1,0 +1,38 @@
+Digital Human / SkeletalMuscle
+
+Created : 21-Oct-04
+Last Modified : 03-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human V0.4
+Schema : DES V1.0
+
+<docs>
+<?path docs\SkeletalMuscle\ ?>
+
+<?include SkeletalMuscle-Flow.docs ?>
+<?include SkeletalMuscle-MetabolicVasodilation.docs ?>
+<?include SkeletalMuscle-Pressure.docs ?>
+<?include SkeletalMuscle-ContractileProtein.docs ?>
+<?include SkeletalMuscle-Size.docs ?>
+
+<?include SkeletalMuscle-CO2.docs ?>
+<?include SkeletalMuscle-Lactate.docs ?>
+<?include SkeletalMuscle-Ph.docs ?>
+
+<?include SkeletalMuscle-Fuel.docs ?>
+<?include SkeletalMuscle-Function.docs ?>
+<?include SkeletalMuscle-Metabolism.docs ?>
+<?include SkeletalMuscle-AlphaReceptors.docs ?>
+<?include SkeletalMuscle-Structure.docs ?>
+<?include SkeletalMuscle-Vasculature.docs ?>
+
+<?include SkeletalMuscle-Work.docs ?>
+<?include SkeletalMuscle-MusclePumping.docs ?>
+<?include SkeletalMuscle-Metaboreflex.docs ?>
+
+<?include SkeletalMuscle-Glycogen.docs ?>
+
+</docs>
+End

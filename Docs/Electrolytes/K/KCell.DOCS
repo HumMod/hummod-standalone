@@ -1,0 +1,238 @@
+QHP 2008 / K.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> KCell </structurename>
+
+<vardoc>
+<name> KCell.[K+(mEq/L)]</name>
+<topic> [K+] - KC1Overview </topic>
+<topic> [K+] - KC2Physical Units</topic>
+<topic> [K+] - KC3Concentration Units </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.[K+] </name>
+<topic> [K+] - KC1Overview </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.CaptiveMass </name>
+<topic> CaptiveMass - KCDefinition1</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.Change </name>
+<topic> Change - KCDefinition2 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.Gain </name>
+<topic> Gain - KCDefinition3 </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.InitialMass </name>
+<topic> InitialMass - KCDefinition4 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.Loss </name>
+<topic> Loss - KCDefinition5</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.Mass </name>
+<topic> Mass - KCDefinition6 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KCell.Target[K+]</name>
+<topic> Target[K+] - KCDefinition7 </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+
+<topicdoc>
+<name> [K+] - KC1Overview </name>
+<label> Overview </label>
+<content>
+
+Control of potassium distribution between the extracellular 
+and intracellular compartments plays an important role in 
+potassium homeostasis. Because over 98 percent of the total body
+potassium is contained in the cells, they can serve as an 
+overflow site for excess extracellular fluid potassium during
+hyperkalemia or as a source of potassium during hypokalemia. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [K+] - KC2Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma mEq/L
+Mass mEq
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [K+] - KC3Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Extracellular K+ = 4.4 mEq/L
+Intracellular K+ = 142 mEq/L
+
+Total body K+ = 50mEq/KG. Scaling for a 75KG man,
+total body K+ = 50mEq/KG * 75KG = 3750mEq
+
+Extracellular Mass of K+ = 4.4mEq/L * 15L (ECFV) = 66mEq
+Intracellular Mass of K+ = 3750 - 66 = 3684mEq
+
+Forbes GB, Lewis AM. Total sodium, potassium and chloride 
+in adult man. J Clin Invest 35: 596 - 600, 1956
+
+Pierson RN Jr., Lin DH, Phillips RA. Total-body potassium in 
+health: effects of age, sex, height and fat.
+Am J Physiol 226: 206 - 212, 1974.
+
+Hollifield JW, Slaton PE. Thiazide diuretics hypokalemia and
+cardiac arrhythmias. Acta Med Scand Suppl 647:67 - 73, 1981
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> CaptiveMass - KCDefinition1 </name>
+<label> Definition </label>
+<content>
+
+Not all of the potassium contained in cells is readily 
+available for flux. From depletion studies it appears
+that 55% of cell K+ is captive. If we assume an initial
+mass of 3964mEq, then the captive mass is 3964 * 0.55
+= 2180 mEq. 
+
+Hollifield JW, Slaton PE. Thiazide diuretics hypokalemia and
+cardiac arrhythmias. Acta Med Scand Suppl 647:67 - 73, 1981
+
+Sterns RH, Cox M, Feig PU, Singer I. Internal potassium
+balance and the control of the plasma potassium concentration.
+Medicine 60: 339 - 354, 1981.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+   
+End

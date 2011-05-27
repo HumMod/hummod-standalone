@@ -1,0 +1,29 @@
+Digital Human / CollectingDuct
+
+Created : 09-Apr-05
+Last Modified : 16-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<?path docs\nephrons\CollectingDuct\ ?>
+
+<?include CD_H2O.docs ?>
+<?include CD_Glucose.docs ?>
+<?include CD_KA.docs ?>
+<?include CD_NH4.docs ?>
+<?include CD_PO4.docs ?>
+<?include CD_SO4.docs ?>
+<?include CD_Na.docs ?>
+<?include CD_K.docs ?>
+<?include CD_Cl.docs ?>
+<?include CD_HCO3.docs ?>
+<?include CD_Urea.docs ?>
+<?include CD_Creatinine.docs ?>
+<?include CD_Protein.docs ?>
+
+<?include CD_H2OChannels.docs ?>
+
+End

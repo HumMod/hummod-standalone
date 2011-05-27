@@ -1,0 +1,85 @@
+QHP 2008 / Circulation.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> HepaticArty </structurename>
+
+<vardoc>
+<name> HepaticArty.BasicConductance </name>
+<topic> Conductance - Overview </topic>
+<topic> Conductance - Physical Units </topic>
+<topic> Conductance - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> HepaticArty.Conductance </name>
+<topic> Conductance - Overview </topic>
+<topic> Conductance - Physical Units </topic>
+<topic> Conductance - Concentration Units </topic>
+
+</vardoc>
+
+<vardoc>
+<name> HepaticArty.Flow </name>
+<topic> Conductance - Overview </topic>
+<topic> Conductance - Physical Units  </topic>
+<topic> Conductance - Concentration Units </topic>
+<seealso> HepaticArty.PressureGradient </seealso>
+<seealso> HepaticArty.Conductance </seealso>
+</vardoc>
+
+<vardoc>
+<name> HepaticArty.PressureGradient </name>
+<topic> Conductance - Overview </topic>
+<topic> Conductance - Physical Units </topic>
+<topic> Conductance - Concentration Units  </topic>
+<seealso> SystemicArtys.Pressure </seealso>
+<seealso> SplanchnicVeins.Pressure </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Conductance - Overview </name>
+<label> Overview </label>
+<content>
+
+Conductance is a measure of the blood flow through 
+a vessel for a given pressure difference. It is the
+exact reciprocal of resistance. For the hepatic artery
+the pressure gradient is the difference between
+systemic arterial pressure and splanchnic venous pressure.
+Basic Conductance is conductance when the viscosity is 1.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Conductance - Physical Units </name>
+<label> Physical Units </label>
+<content>
+ 
+Flow is expressed in mL/min
+Conductance is expressed as (mL/Min)/mmHg
+Pressure gradient in mmHg 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Conductance - Concentration Units </name>
+<label> Concentration Units </label>
+<content> 
+
+Typical values for hepatic artery blood flow is 
+250mL/min. Arterial pressure is 97mmHg and splanchnic 
+venous pressure 8mmHg for a pressure gradient of 89mmHg
+Typical conductance units for the hepatic artery are
+2.8(mL/Min)/mmHg
+
+</content>
+</topicdoc>
+
+   
+End

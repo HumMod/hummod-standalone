@@ -1,0 +1,16 @@
+Digital Human / Furosemide
+
+Created : 10-Apr-05
+Last Modified : 05-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+
+
+<?include Furosemide\FurosemidePool.docs ?>
+<?include Furosemide\FurosemideKidney.docs ?>
+<?include Furosemide\FurosemideSingleDose.docs ?>
+
+End

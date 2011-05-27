@@ -1,0 +1,93 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Infarction </structurename>
+
+<vardoc>
+<name> RightHeart-Infarction.Area(%) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.DamagedFraction </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Infarction.Area(%) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.DeadTissueFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Infarction.DamagedFraction  </seealso>
+<seealso> RightHeart-Infarction.DeadTissueK  </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.DeadTissueK </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso>  LeftHeart-Infarction.DamagedFraction  </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.IschemicFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Infarction.DamagedFraction </seealso>
+<seealso> RightHeart-Infarction.DeadTissueFraction </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Infarction.IsIschemic </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

@@ -1,0 +1,22 @@
+Digital Human / Hypothalamus
+
+Created : 21-Jun-06
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\Hypothalamus\ ?>
+
+<?include HypothalamusSweating.docs ?>
+<?include HypothalamusShivering.docs ?>
+<?include HypothalamusSkinFlow.docs ?>
+<?include HypothalamusTSH.docs ?>
+
+<?include HypothalamusShiveringAcclimation.docs ?>
+<?include HypothalamusSweatingAcclimation.docs ?>
+
+</docs>
+End

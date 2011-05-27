@@ -1,0 +1,20 @@
+Digital Human / Hemodialysis
+
+Created : 03-Mar-08
+Last Modified : 03-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\Hemodialysis\ ?>
+
+<?include DialysisShunt.docs ?>
+<?include DialyzerControl.docs ?>
+<?include DialysateComposition.docs ?>
+<?include DialyzerActivity.docs ?>
+
+</docs>
+End

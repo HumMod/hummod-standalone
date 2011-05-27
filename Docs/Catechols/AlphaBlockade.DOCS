@@ -1,0 +1,90 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> AlphaBlockade </structurename>
+
+<vardoc>
+<name> AlphaBlockade.Block(%)</name>
+<topic> Adrenergic Receptor Overview </topic>
+<topic> AlphaBlockade - Overview </topic>
+<seealso> AlphaPool.Effect </seealso>
+</vardoc>
+
+<vardoc>
+<name> AlphaBlockade.Effect </name>
+<topic> AlphaBlockade - Overview </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> Adrenergic Receptor Overview </name>
+<label> Adrenergic Receptors </label>
+<content>
+
+The concept of a receptive mechanism was first introduced 
+by Langley to explain the action of curare on skeletal muscle(1).
+Dale (2), however, was probably the first to make significant use 
+of the receptor concept in connection with the sympathetic nervous 
+system. Ahlquist in his landmark paper of 1948(3), established two
+fundamental concepts: first, that a single sympathetic mediator
+could produce both excitatory and inhibitory responses; and second,
+that adrenergic receptors were of two different types, alpha and 
+beta receptors, based on rank order potency of activation by agonists.
+Lands et al.(4) subsequently showed that beta receptors can be
+subdivided into beta-1 receptors and beta 2 receptors. Alpha 
+receptors can also be subdivided into alpha-1 and alpha-2 depending 
+on the relative potencies of certain alpha agonists and 
+antagonists(5). Currently nine different subtypes of adrenergic 
+receptors have been cloned and pharmacologically catagorized (6).   
+Therefore the relative effects of norepinephrine and epinephrine 
+on different effector organs are determined by the types of receptors 
+in the organs. Furthermore certain alpha functions are excitatory, 
+whereas others are inhibitory. Likewise certain beta functions are 
+excitatory and others are inhibitory. Therefore, alpha and beta 
+receptors are not necessarly associated with excitation or 
+inhibition but simply with the affinity of the hormone for the 
+receptors in the given effector organ
+
+1. Langley JN J Physiol 33:374, 1905
+
+2. Dale HH J Physiol 34:163, 1906
+
+3. Ahlquist RP  A study of adrenergic receptors. 
+   Am J Physiol 153:586-600, 1948
+
+4. Lands AM, Arnold A, McAuliff JP, Luduena FP, Brown Jr. TG 
+   Differentiation of receptor systems activated by sympathomimetic
+   amines. Nature 214: 597-598, 1967
+
+5. Berthelson S, Pettinger WA. A functional basis for classification
+   of alpha-adrenergic receptors. Life Sci 21: 595-606, 1977
+
+6. Bylund DB Adrenergic receptors: historical perspectives from the 
+   20th century. In: The Adrenergic Receptors in the 21st century.
+   Edited by DM Perez. Totowa:Humana, 2005, Pg 3-21
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> AlphaBlockade - Overview </name>
+<label> Alpha Blockade - Overview </label>
+<content>
+
+The model user can block the effect of alpha receptor stimulation.
+Receptor blockade is applied at individual organs. Effect is
+1.0 when there is no blockade. For example,a 16% blockade results 
+in an effect of 0.84.
+There are a number of drugs known as alpha antagonists which can 
+be used clinically to cause alpha blockade. These include
+phentolamine, prazosin and yohimbine. 
+
+</content>
+</topicdoc>
+
+End

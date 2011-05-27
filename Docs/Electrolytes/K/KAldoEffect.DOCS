@@ -1,0 +1,98 @@
+QHP 2008 / K.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> KAldoEffect </structurename>
+
+<vardoc>
+<name> KAldoEffect.Delayed </name>
+<topic> KAldoEffect - Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KAldoEffect.Derv </name>
+<topic> Derv </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KAldoEffect.Immediate </name>
+<topic> Immediate </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+<vardoc>
+<name> KAldoEffect.RateConst </name>
+<topic> Rate Constant - Definition </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> KAldoEffect.Tau </name>
+<topic> Tau - Definition </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> KAldoEffect - Overview </name>
+<label> Overview </label>
+<content>
+
+Aldosterone affects the intracellular:extracellular fluid ratio
+of potassium. This ratio is determined by the balance of the
+sodium - potassium ATPase pump-driven potassium influx, and 
+potassium fluxes through several different pathways. Aldosterone 
+causes a shift of potassium into cells.
+
+In HumMod, this effect of aldosterone on potassium flux is
+defined by a multiplier named KAldoEffect. At a normal 
+plasma aldosterone concentration of 300pMol/L, the 
+KAldoEffect is 1.0. At a concentration of 1500pMol/L, 
+the KAldoEffect is 1.1.
+ 
+Young DB, Jackson TE. Effects of aldosterone on potassium
+distribution. Am J Physiol R526 - R530, 1982.
+
+Young DB. Quantitative analysis of aldosterone's role in
+potassium regulation. Am J Physiol 255: F811 - F822, 1988.
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

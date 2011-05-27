@@ -1,0 +1,355 @@
+QHP 2008 / Hemoglobin.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> HgbConc </structurename>
+
+<vardoc>
+<name> HgbConc.[Basic] </name>
+<topic> [Basic] - DefinitionHC1 </topic>
+<topic> HgbConc - Overview </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[Carboxy] </name>
+<topic> [Carboxy] - DefinitionHC2 </topic>
+<seealso> CO.[CO] </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[Free] </name>
+<topic> [Free] - DefinitionHC3 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[Level] </name>
+<topic> [Level] - DefinitionHC4 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[O2] </name>
+<topic> [O2] - DefinitionHC5 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[O2Max] </name>
+<topic> [O2Max] - DefinitionHC6 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.[Total] </name>
+<topic> [Total] - DefinitionHC7 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.CarboxyPercent </name>
+<topic> CarboxyPercent - DefinitionHC8 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.Clamp </name>
+<topic> Clamp - DefinitionHC9 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.GasMaxContent </name>
+<topic> GasMaxContent - DefinitionHC10 </topic>
+
+</vardoc>
+
+<vardoc>
+<name> HgbConc.HctEffect </name>
+<topic> HctEffect - DefinitionHC11 </topic>
+<seealso> BloodVol.Hct </seealso>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.NORMALHCT </name>
+<topic> NORMALHCT - DefinitionHC12 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.O2MAX(ML/G) </name>
+<topic> O2MAX(ML/G) - DefinitionHC13 </topic>
+</vardoc>
+
+<vardoc>
+<name> HgbConc.Sat(%) </name>
+<topic> Sat(%) - DefinitionHC14 </topic>
+</vardoc>
+
+<topicdoc>
+<name> HgbConc - Overview </name>
+<label> Overview </label>
+<content>
+
+Each red blood cell is comprised of water and solids, 
+the latter in the form of hemoglobin. When the hematocrit 
+and the quantity of hemoglobin in each respective cell are 
+normal, the whole blood of men contains an average of 15grams 
+of hemoglobin per 100mL of blood; for women, it contains an 
+average of 14grams/dL.
+
+Each gram of hemoglobin can bind with a maximum of 1.34mL of
+oxygen. Therefore, 15 times 1.34 equals 20.1, which means that
+the 15 grams of hemoglobin in 100mL blood can combine with a 
+total of almost exactly 20 milliliters of oxygen if the 
+hemoglobin is 100% saturated. 
+
+Textbook of Medical Physiology. Eleventh Edition
+Guyton AC, Hall JE.  Elsevier Saunders 
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Basic] - DefinitionHC1 </name>
+<label> Definition </label>
+<content> 
+
+[Basic] is the hemoglobin concentration set by the
+model user at the start of the simulation. Under
+normal physiological conditions [Basic] is 0.15g/ml.
+The model user can set [Basic] from levels close to 
+zero up to a maximum of 0.3g/ml.  
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Carboxy] - DefinitionHC2 </name>
+<label> Definition </label>
+<content>
+
+[Carboxy] is concentration of hemoglobin bound to
+carbon monoxide. Blood [Carboxy] originates from both
+endogenous and exogenous CO. Endogenous CO arises from
+hemoglobin metabolism. Exogenous CO occurs in inspired 
+air. Under normal conditions, the levels of CO in 
+inspired air are extremely small. At start-up, that level 
+is set at zero. The model user, however, can control the 
+content of inspired air, adding carbon monoxide if desired. 
+This is achieved using the Lifestyle /Air Supply tab.
+
+Coburn RF, Blakemore WS, Forster RE. Endogenous carbon
+monoxide production in man. 
+J Clin Invest 42: 1172 - 1178, 1963.
+
+Coburn RF, Forster RE, Kane PB. Considerations of the
+physiological variables that determine the blood 
+carboxyhemoglobin concentration in man. 
+J Clin Invest 44: 1899 - 1910, 1965.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Free] - DefinitionHC3 </name>
+<label> Definition </label>
+<content>
+
+[Free] is the concentration of hemoglobin available
+for binding to oxygen. Under normal physiological
+conditions, [Free] is equal to [Total]. HumMod, however,
+is set up to allow the model user to control the content 
+of inspired air. (This is achieved by switching
+on the gas tanks and altering the gas content of the 
+inspired air). In this way, it is possible to add 
+carbon monoxide to the air supply. Since carbon monoxide 
+combines with hemoglobin at the same point on the 
+hemoglobin molecule as does oxygen, it can displace 
+oxygen from the hemoglobin, thereby decreasing the oxygen
+carrying capacity of the blood. The affinity of hemoglobin
+for CO is 230 times its affinity for oxygen.
+
+[Free] = [Total] - [Carboxy]
+
+where[Carboxy] is the amount of hemoglobin bound to 
+carbon monoxide. Under normal physiological conditions,
+[Carboxy] = 0 and [Free] = [Total].
+
+Allen TA, Root WS. Partition of carbon monoxide and oxygen
+between air and whole blood of rats, dogs and men as 
+affected by pH. J Appl Physiol 10: 186 - 190, 1957.   
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Level] - DefinitionHC4 </name>
+<label> Definition </label>
+<content>
+
+The model user can set hemoglobin levels. This is 
+achieved by turning the clamp "on" and setting the 
+level using the sliding bar in the Hemoglobin 
+Properties display box.  
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [O2] - DefinitionHC5 </name>
+<label> Definition </label>
+<content>
+
+[O2] is the oxygen concentration in the blood.  
+ 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> [O2Max] - DefinitionHC6 </name>
+<label> Definition </label>
+<content>
+
+Each gram of hemoglobin is capable of combining with
+a maximum of 1.34ml oxygen. This constant is defined as
+O2MAX(ML/G). The maximum amount of oxygen in the blood 
+is a function of the available hemoglobin defined 
+as [Free].
+
+[O2Max] = [Free]*O2MAX(ML/G)
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> [Total] - DefinitionHC7 </name>
+<label> Definition </label>
+<content>
+
+[Total] is the calculated hemoglobin concentration.
+If the clamp is on, then [Total] is the level set by
+the model user. Otherwise [Total] = [Basic]*HctEffect.
+HctEffect is a multiplier which is calculated from 
+the actual hematocrit (Bloodvol.Hct) and the normal 
+hematocrit (NORMALHCT). 
+
+Under normal physiological conditions, actual hematocrit
+and normal hematocrit are the same and HctEffect is 1.0. 
+If actual hematocrit is less than normal hematocrit,
+then HctEffect is less than 1.0 and the calculated 
+hemoglobin concentration [Total] is less than [Basic].
+ 
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> CarboxyPercent - DefinitionHC8 </name>
+<label> Definition </label>
+<content>
+
+CarboxyPercent is the percentage of the total hemoglobin
+which is bound to carbon monoxide. 
+ 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Clamp - DefinitionHC9 </name>
+<label> Definition </label>
+<content>
+
+The clamp feature of HumMod enables the model user to fix
+hemoglobin concentration at a particular level. If the
+clamp is off, then hemoglobin concentration is a function
+of the hematocrit effect.
+
+If the clamp is on, then hemoglobin concentration is set
+to a particular level by the model user.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> GasMaxContent - DefinitionHC10 </name>
+<label> definition </label>
+<content>
+
+GasMaxContent is the maximum oxygen content of the blood.
+It is calculated by multiplying [O2MAX] by [Total] which
+is the concentration of hemoglobin in the blood.  
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> HctEffect - DefinitionHC11 </name>
+<label> Definition </label>
+<content>
+
+HctEffect is a multiplier which takes into account the 
+effect of hematocrit on hemoglobin concentration. As 
+hematocrit falls, the amount of hemoglobin available
+for transportation of oxygen also decreases.
+
+HctEffect = BloodVol.Hct / NORMALHCT. 
+
+Under normal physiological conditions, BloodVol.Hct 
+and NORMALHCT are the same and HctEffect is 1.0. 
+
+If actual hematocrit (BloodVol.Hct) is less than 
+NORMALHCT, then the HctEffect is less than 1.0 and
+The total hemoglobin concentration is lower.  
+ 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NORMALHCT - DefinitionHC12 </name>
+<label> Definition </label>
+<content>
+
+NORMALHCT is a constant and has a value of 0.44.
+This is the hematocrit of a normal male expressed
+as a fraction.
+
+Textbook of medical physiology. 11th Edition
+Guyton AC & Hall JE
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> O2MAX(ML/G) - DefinitionHC13 </name>
+<label> Definition </label>
+<content>
+
+O2Max(ML/G) is a constant and has a value of
+1.34. Each gram of hemoglobin is capable of combining 
+with a maximum of 1.34ml of oxygen. 
+
+Textbook of Medical Physiology. 11th Edition
+Guyton AC & Hall JE
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> Sat(%) - DefinitionHC14 </name>
+<label> Definition </label>
+<content>
+
+Under normal conditions, oxygen is carried to the tissues
+of the body almost entirely by hemoglobin. As blood PO2 
+increases, the percentage of hemoglobin bound with oxygen 
+increases. This is the percent saturation of hemoglobin.  
+
+</content>
+</topicdoc>
+
+
+
+End

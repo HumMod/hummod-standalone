@@ -1,0 +1,137 @@
+QHP 2008 / EPO.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EPOPump </structurename>
+
+<vardoc>
+<name> EPOPump.Rate </name>
+<topic> EPOPump - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> EPOPump.Setting</seealso>
+
+</vardoc>
+
+<vardoc>
+<name> EPOPump.Setting </name>
+<topic> EPOPump - Overview </topic>
+<topic> EPO - Physical Units  </topic>
+<topic> EPO - Concentration Units  </topic>
+
+</vardoc>
+
+<vardoc>
+<name> EPOPump.Switch </name>
+<topic> EPOPump - Overview  </topic>
+<topic> EPO - Physical Units  </topic>
+<topic> EPO - Concentration Units  </topic>
+
+</vardoc>
+
+<topicdoc>
+<name> EPOPump - Overview </name>
+<label> Overview </label>
+<content>
+
+The EPO Pump enables the model user to change 
+[EPO] levels by infusing EPO at different rates. 
+The switch enables the model user to turn the 
+pump on; the setting enables a particular rate of
+infusion.
+
+The anemia of chronic renal disease is often a 
+result of a lack of erythropoietin. Administration 
+of EPO using the pump illustrates the beneficial 
+effects of EPO in those patients.
+
+Data is taken from a variety of human and animal 
+studies relating infusion rates to plasma 
+concentrations of EPO.
+
+Human Data:
+Eschbach JW,Kelly MR, Haley NR, Abels RI, Adamson JW
+Treatment of the anemia of progressive renal failure 
+with recombinant human erythropoetin.
+New Engl J Medicine 321:158-163, 1989
+
+Winearls CG, Oliver DO, Pippard MJ, Reid C,
+Downing MR, Cotes PM. Effect of human erythropoietin
+derived from recombinant DNA on the anaemia of patients 
+maintained by chronic haemodialysis.
+Lancet 2:1175-1178, 1986
+
+Rat Data
+Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Physical Units </name>
+<label> Physical Units  </label>
+<content>
+
+Mass U
+Plasma Concentration  mU/ml
+Fluxes  U/min
+Pump Infusion rate U/min
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Concentration Units   </name>
+<label> Concentration Units    </label>
+<content>
+
+EPO mass is typically 136 U with a
+volume of distribution of 40% of
+ECFV, yielding a typical conc of
+22 mU/ml.[EPO] levels range from 10-30mU/mL 
+in humans.Typical secretion and destruction
+rates are 0.75 U/Min.
+
+
+Plasma Levels in Humans
+1.Milledge JS, Cotes, PM Serum erythropoietin in humans 
+at high altitude and its relation to plasma renin.
+J Appl Physiology 59: 360-364, 1985
+
+2.Miller ME, Cronkite EP, Garcia, JF
+Plasma levels of immunoreactive erythropoietin
+after acute blood loss in man.
+Brit. J. Haematology 52: 545-549, 1982
+
+3.Kokot M, Kokot F, Franek E, Wiecek A, Nowicki M, Dulawa J
+Effect of Isobaric hyperoxemia on erythropoietin secretion
+in hypertensive patients.
+Hypertension 24: 486-490, 1994
+
+Plasma Levels in Rats
+1.Cahan C, Heokje PL, Goldwasser E, Decker MJ, Strohl KP
+Assessing the characteristic between length of hypoxic 
+exposure and serum erythropoietin levels.
+Am J Physiol 258: R1016 - R1021, 1990
+ 
+2.Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+
+</content>
+</topicdoc>
+
+  
+  
+
+End

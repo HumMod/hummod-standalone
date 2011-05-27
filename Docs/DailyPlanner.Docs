@@ -1,0 +1,18 @@
+Digital Human / DailyPlanner.docs
+
+Created : 27-Feb-08
+Last Modified : 27-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\DailyPlanner\ ?>
+
+<?include DailyPlannerControl.docs ?>
+<?include DailyPlannerSchedule.docs ?>
+
+</docs>
+End

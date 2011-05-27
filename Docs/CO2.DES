@@ -1,0 +1,29 @@
+Digital Human / CO2
+
+Created : 21-Oct-04
+Last Modified : 08-Jan-07
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path DOCS\CO2\ ?>
+
+<?include CO2Tools.Docs ?>
+
+<?include CO2Total.Docs ?>
+<?include CO2Artys.Docs ?>
+<?include CO2Veins.Docs ?>
+
+<?include Blood-BaseToGas.Docs ?>
+<?include Blood-GasToBase.Docs ?>
+<?include Tissue-BaseToGas.Docs ?>
+<?include Tissue-GasToBase.Docs ?>
+<?include Muscle-BaseToGas.Docs ?>
+<?include Muscle-GasToBase.DES ?>
+
+</docs>
+
+End

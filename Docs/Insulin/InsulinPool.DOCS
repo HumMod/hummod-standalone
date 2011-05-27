@@ -1,0 +1,160 @@
+QHP 2008 / Insulin.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> InsulinPool  </structurename>
+
+<vardoc>
+<name> InsulinPool.[Insulin]  </name>
+<topic> Insulin - Overview </topic>
+<topic> Insulin - Physical Units </topic>
+<topic> Insulin - Concentration Units </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.Gain </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.InitialMass  </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.Loss </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.Mass </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> InsulinPool.Target[Insulin] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Insulin - Overview </name>
+<label> Overview </label>
+<content>
+
+Insulin was first isolated from the pancreas in 1922 by 
+Banting and Best. It is synthesized in and secreted by 
+the beta cells of the Islets of Langerhans in the pancreas 
+and plays an important role in the regulation of glucose, 
+lipid and protein metabolism. Insulin secretion is associated
+with energy abundance. When there is a great abundance of 
+energy-giving foods in the diet, especially excess amounts 
+of carbohydrates, insulin is secreted in great quantity. 
+In turn, the insulin plays an important role in storing 
+the excess energy. The primary controller of insulin 
+secretion is increased blood glucose concentration. 
+Insulin increases the transport of glucose into liver, 
+muscle and other cells, thereby reducing the blood 
+glucose concentration back towards a normal value. 
+Other factors which stimulate insulin secretion include 
+increased blood amino acids; gastrointestinal hormones 
+including gastrin, secretin, cholecystokinin and gastric 
+inhibitory peptide.
+
+Guyton AC & Hall JE Textbook of medical physiology. 
+Eleventh Edition. Elsevier Inc
+                
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Insulin - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Units for insulin pool are mU.
+Units for [plasma] are uU/mL.
+Uptake - mG/Min
+
+An international unit (U) is 1/24 mG.  
+Molecular weight is 5754.
+
+uU * 0.04167 = nG
+uU * 0.007241 = pMol
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Insulin - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+                Starve Fast Drip Meal Load
+                ------ ---- ---- ---- ----
+      [Insulin]     5    10   20   40  100
+      [Glucose]    60    85  110  130  200
+      [Glucagon]  300   100   70   50   40
+      Liver Net  Empty -100    0  200  200 
+       Uptake
+
+   Units are
+
+      [Insulin] - uU/mL
+      [Glucose] - mG/dL
+      [Glucagon] - pG/mL
+      Uptake - mG/Min
+
+   Drip (continuous feed) is the steady
+   state. [I] = 20 uU/mL.  ECFV = 15000
+   mL.  Mass = 300 mU.
+
+   Secretion = 17 mU/min.
+
+      Clear K = 17 / 300 or 0.057 /Min.
+
+   Mass = 2000 mU
+   Secretion Rate = 17 mU/min
+   Fraction = 17 / 2000 or 0.0085
+
+</content>
+</topicdoc>
+
+   
+End

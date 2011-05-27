@@ -1,0 +1,90 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Function </structurename>
+
+<vardoc>
+<name> LeftHeart-Function.Effect </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Function.PhEffect  </seealso>
+<seealso> LeftHeart-Function.ProteinEffect </seealso>
+<seealso> LeftHeart-Function.FuelEffect </seealso>
+<seealso> LeftHeart-Function.TemperatureEffect </seealso>
+<seealso> LeftHeart-Structure.Effect</seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Function.Failed </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Function.FuelEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> OtherTissue-Fuel.FractUseDelay </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Function.PhEffect </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> OtherTissue-Ph.Ph </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Function.ProteinEffect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> CellProtein.Mass(G) </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Function.TemperatureEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> HeatCore.Temp(C)</seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label>  </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+End

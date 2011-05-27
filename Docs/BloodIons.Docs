@@ -1,0 +1,18 @@
+Digital Human / BloodVolume
+
+Created : 21-Oct-04
+Last Modified : 20-Mar-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<docs>
+<?path docs\BloodIons\ ?>
+
+<?include BloodIons.docs ?>
+
+</docs>
+
+End

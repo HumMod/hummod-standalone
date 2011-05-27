@@ -1,0 +1,113 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Metabolism </structurename>
+
+<vardoc>
+<name> LeftHeart-Metabolism.AerobicCals </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> Metabolism-Tools.O2ToCal </seealso>
+<seealso> LeftHeart-Flow.O2Use </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.AnaerobicCals </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> Metabolism-Tools.O2ToCal </seealso>
+<seealso> LeftHeart-Metabolism.O2Lack </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.BasalCalsUsed </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.BasalCalsUsed((Cals/Min)/G) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.CalMultiplier </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.InitialBasalCalsUsed </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.O2Lack </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Metabolism.O2Need </seealso>
+<seealso> LeftHeart-Flow.O2Use </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.O2Need </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> Metabolism-Tools.CalToO2 </seealso>
+<seealso> LeftHeart-Metabolism.TotalCalsUsed </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Metabolism.TotalCalsUsed </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Metabolism.BasalCalsUsed </seealso>
+<seealso> Thyroid.Effect </seealso>
+<seealso> HeatMetabolism.Core </seealso>
+<seealso> LeftHeart-Structure.Effect </seealso>
+<seealso> LeftHeart-Work.TotalCals </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

@@ -1,0 +1,18 @@
+Digital Human / LymphProtein
+
+Created : 25-Mar-08
+Last Modified : 25-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+
+
+<?include lymphprotein\UT_LymphProtein.docs ?>
+<?include lymphprotein\MT_LymphProtein.docs ?>
+<?include lymphprotein\LT_LymphProtein.docs ?>
+
+
+End

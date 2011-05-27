@@ -1,0 +1,93 @@
+QHP 2008 / RightHeart.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Metabolism </structurename>
+
+<vardoc>
+<name> RightHeart-Metabolism.AerobicCals </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> Metabolism-Tools.O2ToCal </seealso>
+<seealso> RightHeart-Flow.O2Use </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Metabolism.AnaerobicCals </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> Metabolism-Tools.O2ToCal </seealso>
+<seealso> RightHeart-Metabolism.O2Lack </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Metabolism.BasalCalsUsed </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Metabolism.O2Lack </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Metabolism.O2Need </seealso>
+<seealso> RightHeart-Flow.O2Use </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Metabolism.O2Need </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> Metabolism-Tools.CalToO2 </seealso>
+<seealso> LeftHeart-Metabolism.TotalCalsUsed </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Metabolism.TotalCalsUsed </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Metabolism.BasalCalsUsed </seealso>
+<seealso> Thyroid.Effect </seealso>
+<seealso> HeatMetabolism.Core </seealso>
+<seealso> RightHeart-Structure.Effect </seealso>
+<seealso> RightHeart-Work.TotalCals </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

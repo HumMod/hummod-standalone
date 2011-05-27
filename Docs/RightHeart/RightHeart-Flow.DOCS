@@ -1,0 +1,195 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Flow </structurename>
+
+<vardoc>
+<name> RightHeart-Flow.[O2] </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> O2Artys.[O2] </seealso>
+<seealso> RightHeart-Flow.O2Use </seealso>
+<seealso> RightHeart-Flow.BloodFlow </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.A2Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.ADHEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso>ADHPool.Log10Conc </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.AerobicFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Flow.PO2 </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.BloodFlow </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Pressure.PressureGradient </seealso>
+<seealso> RightHeart-Flow.Conductance </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.Conductance </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.SmallVesselConductance </seealso>
+<seealso> RightHeart-Flow.LargeVesselConductance </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.LargeVesselBasicConductance </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.LargeVesselConductance </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.LargeVesselBasicConductance </seealso>
+<seealso> Viscosity.ConductanceEffect </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.MetabolismEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Metabolism.O2Need </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.O2Use </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Metabolism.O2Need  </seealso>
+<seealso> RightHeart-Flow.AerobicFraction </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.PlasmaFlow </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.BloodFlow </seealso>
+<seealso> BloodVol.PVCrit </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.PO2 </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.PO2End </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.PO2Effect </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Flow.PO2 </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.PO2End </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> HgbTissue.pO2 </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.SearchMax </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> PO2Artys.Pressure </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.SmallVesselBasicConductance </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.SmallVesselConductance </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.SmallVesselBasicConductance  </seealso>
+<seealso> RightHeart-Flow.SympsEffect </seealso>
+<seealso> RightHeart-Flow.PO2Effect </seealso>
+<seealso> RightHeart-Flow.ADHEffect </seealso>
+<seealso> LeftHeart-Flow.MetabolismEffect </seealso>
+<seealso> Viscosity.ConductanceEffect </seealso>
+<seealso> Anesthesia.VascularConductance </seealso>
+<seealso> RightHeart-Vasculature.Effect </seealso>
+<seealso> RightHeart-Infarction.Effect </seealso> 
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Flow.SympsEffect </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-AlphaReceptors.Activity </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+
+End

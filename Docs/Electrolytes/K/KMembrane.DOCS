@@ -1,0 +1,39 @@
+QHP 2008 / K.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> KMembrane </structurename>
+
+<vardoc>
+<name> KMembrane.MembranePotential </name>
+<topic> Membrane Potential - Overview </topic>
+<seealso> KCell.[K+] </seealso>
+<seealso> KPool.[K+] </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Membrane Potential - Overview </name>
+<label> Overview </label>
+<content>
+
+Electrical potentials exist across the membranes of virtually 
+all cells of the body. Because membranes are highly permeable 
+to potassium, but only slightly permeable to sodium, the 
+diffusion of potassium ions contributes far more to the membrane 
+potential than does the diffusion of sodium.
+
+At a normal body temperature, the electrical difference that will
+balance a given ion concentration difference of univalent ions
+can be determined using the Nernst equation in which EMF is the
+electromotive voltage between side 1 and side 2 of the membrane. 
+
+EMF(millivolts) = -61.0*LOG10(KCell.[K+]/KPool.[K+]) 
+
+
+</content>
+</topicdoc>
+
+End

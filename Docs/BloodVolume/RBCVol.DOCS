@@ -1,0 +1,108 @@
+QHP 2008 / BloodVolume.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RBCVol </structurename>
+
+<vardoc>
+<name> RBCVol.Change </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units </topic>
+<topic> RBCVol - Concentration Units </topic>
+<seealso> RBCVol.Gain </seealso>
+<seealso> RBCVol.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCVol.Gain </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units </topic>
+<topic> RBCVol - Concentration Units  </topic>
+<seealso> Transfusion.RBCRate </seealso>
+<seealso> RBCSecretion.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCVol.InitialVol </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units  </topic>
+<topic> RBCVol - Concentration Units </topic>
+<seealso> BloodVol.InitialHct </seealso>
+<seealso> BloodVol.InitialVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCVol.Loss </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units </topic>
+<topic> RBCVol - Concentration Units </topic>
+<seealso> Hemorrhage.RBCRate </seealso>
+<seealso> RBCClearance.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCVol.Vol </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units </topic>
+<topic> RBCVol - Concentration Units </topic>
+<seealso> RBCVol.Change  </seealso>
+<seealso> RBCVol.InitialVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> RBCVol.Vol(L) </name>
+<topic> RBCVol - Overview </topic>
+<topic> RBCVol - Physical Units  </topic>
+<topic> RBCVol - Concentration Units  </topic>
+<seealso> RBCVol.Vol </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> RBCVol - Overview </name>
+<label> Overview </label>
+<content>
+
+RBCs are produced in the bone marrow. The total 
+mass of red blood cells is regulated by tissue 
+oxygenation and the hormone erythropoietin [EPO]. 
+Hypoxia results in an increase in [EPO]production 
+which enhances RBC production.EPO controls erythrocyte 
+production by retarding DNA breakdown and preventing 
+apoptosis in erythroid progenitor cells.
+
+Erslev, A.J. Erythropoietin. 
+Leukemia Research Volume 14, No. 8: 683-688, 1990
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCVol- Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+RBC Volume mL or L
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> RBCVol - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+RBC Volume is typically 2400mL. The red cell volume 
+is a function of the initial volume,red cell loss 
+through either increases in clearance rates or 
+loss through hemorrhage and red cell gain by either 
+increases in production or by transfusion.  
+
+</content>
+</topicdoc>
+
+   
+End

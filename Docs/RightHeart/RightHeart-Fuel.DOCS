@@ -1,0 +1,276 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-Fuel </structurename>
+
+<vardoc>
+<name> RightHeart-Fuel.AerobicGlucoseFractionalDelivery </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.GlucoseDelivered  </seealso>
+<seealso> RightHeart-Fuel.AerobicGlucoseUsed(mG/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AerobicGlucoseUsed(Cal/Min) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.GlucoseFraction  </seealso>
+<seealso> RightHeart-Metabolism.AerobicCals </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AerobicGlucoseUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.AerobicGlucoseUsed(Cal/Min)  </seealso>
+<seealso> Metabolism-Tools.CarboAerobic(mG/Cal) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AnaerobicGlucoseDelivered </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.GlucoseDelivered </seealso>
+<seealso> RightHeart-Fuel.AerobicGlucoseUsed(Cal/Min)</seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AnaerobicGlucoseFractionalDelivery </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseDelivered  </seealso>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseUsed(Mg/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AnaerobicGlucoseUsed(Cal/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Metabolism.AnaerobicCals </seealso>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseDelivered </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.AnaerobicGlucoseUsed(Mg/Min) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseUsed(Cal/Min)  </seealso>
+<seealso> Metabolism-Tools.CarboAnaerobic(mG/Cal)  </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.DxMax </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FA+GlucoseFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.LacFraction </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FADelivered </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> FAPool.[FA] </seealso>
+<seealso> RightHeart-Flow.PlasmaFlow </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FAFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.FA+GlucoseFraction  </seealso>
+<seealso> RightHeart-Fuel.Ratio </seealso>
+<seealso> RightHeart-Fuel.KR </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FAFractionalDelivery </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.FADelivered </seealso>
+<seealso> RightHeart-Fuel.FAUsed(mG/Min) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FAUsed(Cal/Min) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Fuel.FAFraction </seealso>
+<seealso> LeftHeart-Metabolism.AerobicCals </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FAUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.FAUsed(Cal/Min)  </seealso>
+<seealso> Metabolism-Tools.Fat(mG/Cal) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FractUse </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Fuel.MinimumFractionalDelivery  </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.FractUseDelay </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.FractUse </seealso>
+<seealso> RightHeart-Fuel.K </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.GlucoseDelivered </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> GlucosePool.[Glucose] </seealso>
+<seealso> RightHeart-Flow.PlasmaFlow </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.GlucoseFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> LeftHeart-Fuel.FA+GlucoseFraction </seealso>
+<seealso> LeftHeart-Fuel.FAFraction </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.K </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.KR </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.LacFraction </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Lactate.[Lac-(mG/dL)] </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.LacUsed(Cal/Min) </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.LacFraction </seealso>
+<seealso> RightHeart-Metabolism.AerobicCals </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.LacUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.LacUsed(Cal/Min)</seealso>
+<seealso> Metabolism-Tools.Lac-(mG/Cal) </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.MinimumFractionalDelivery </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Fuel.FAFractionalDelivery </seealso>
+<seealso> RightHeart-Fuel.AerobicGlucoseFractionalDelivery  </seealso>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseFractionalDelivery </seealso> 
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.Ratio </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> FAPool.[FA(mG/dL)] </seealso>
+<seealso> GlucosePool.[Glucose(mG/dL)] </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-Fuel.TotalGlucoseUsed(mG/Min) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Fuel.AerobicGlucoseUsed(Mg/Min)  </seealso>
+<seealso> RightHeart-Fuel.AnaerobicGlucoseUsed(Mg/Min)  </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> 
+ </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+  
+
+End

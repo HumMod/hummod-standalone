@@ -1,0 +1,215 @@
+QHP 2008 / LiverMetabolism.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LM_Gluconeogenesis </structurename>
+
+<vardoc>
+<name> LM_Gluconeogenesis.AA_TO_GLU </name>
+<topic> Gluconeogenesis - Overview  </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.AminoAcidEffect  </name>
+<topic> AminoAcidEffect - Overview </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> AAPool.[AA(mG/dL)] </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.AminoAcidUptake  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.BasicUptake  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.GlucagonEffect  </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> GlucagonPool.[Glucagon] </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.GlucoseEffect  </name>
+<topic> Glucose Effect - Overview </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.InsulinEffect  </name>
+<topic> Insulin Effect - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> LM_Gluconeogenesis.Rate  </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Gluconeogenesis - Overview </name>
+<label> Overview </label>
+<content>
+
+The liver plays a key role in the maintenance of blood glucose 
+homeostasis. It releases glucose in the fasted state and takes 
+up and stores some of the glucose ingested in meals. In doing 
+so the liver ensures an even and predictable supply of glucose 
+to the extrahepatic tissues, primarily the brain.
+
+The liver is able to release glucose to the circulation from
+its glycogen stores (glycogenolysis) and it has the capacity 
+to take up the 3-carbon fragments lactate, pyruvate, glycerol 
+and amino acids and convert these to glucose. The latter process 
+is called gluconeogenesis. 
+
+In the overnight fasted state, the liver is the main source of 
+glucose production and it is widely believed that glycogenolysis
+and gluconeogenesis each contribute approximately 50% of glucose
+turnover in healthy subjects. 
+
+During continued fasting,gluconeogenesis from both the kidneys
+and the liver account for almost all glucose production. 
+
+Ekberg K, Landau BR, Wajngot A, Chandramouli V, Efendic S, 
+Brunengraber H, Wahren J. Contributions by kidney and liver to 
+glucose production in the postabsorptive state and after 60 h of 
+fasting. Diabetes 48:292 - 298, 1999.
+
+Wahren J, Ekberg K. Splanchnic regulation of glucose production
+Ann Rev Nutr 27: 329 - 345, 2007.
+
+Chandramouli V, Ekberg K, Schumann WC, Kalhan SC, Wahren J, Landau BR.
+Quantifying gluconeogenesis during fasting. 
+Am J Physiol Endocinol Metab 273: E1209 - E1215, 1997.
+
+Kruszynska YT. Normal metabolism: the physiology of fuel
+homeostasis. Chapter 9, Textbook of Diabetes edited by
+Pickup JC & Williams G. 2003 Blackwell Science
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Glucose Effect - Overview  </name>
+<label> Overview </label>
+<content>
+
+Glucose has the ability to modulate its own metabolism by
+the liver, independent of any change in insulin concentration.
+When insulin and glucagon are at basal levels, hyperglycemia
+inhibits endogenous glucose output and increases tissue glucose 
+uptake.
+
+DOG STUDIES
+Shulman GI, Liljenquist JE, Williams PE, Lacy WW, Cherrington AD.
+Glucose disposal during insulinopenia in somatostatin-treated 
+dogs. The roles of glucose and glucagon.
+J Clin Invest 62: 487 - 491, 1978
+
+HUMAN STUDIES
+Sacca L, Hendler R, Sherwin RS.
+Hyperglycemia inhibits glucose production in man independent of 
+changes in glucoregulatory hormones.
+J Clin Endocrinol Metab. 1978 Nov;47(5):1160-3.
+
+Liljenquist JE, Mueller GL, Cherrington AD, Perry JM, Rabinowitz D.
+Hyperglycemia per se (insulin and glucagon withdrawn) can inhibit 
+hepatic glucose production in man.
+J Clin Endocrinol Metab 48:171 - 175, 1979
+
+DeFronzo RA, Ferrannini E, Hendler R, Felig P, Wahren J. 
+Regulation of splanchnic and peripheral glucose uptake by insulin 
+and hyperglycemia in man. Diabetes 32: 35 - 45, 1983.
+
+RAT STUDIES
+Ruderman NB, Herrera MG. Glucose regulation of hepatic 
+gluconeogenesis. Am J Physiol 214: 1346 - 1351, 1968
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Insulin Effect - Overview </name>
+<label> Overview </label>
+<content>
+
+Substantial increases in insulin levels are required for 
+inhibition of gluconeogenesis.
+
+HUMAN STUDIES
+DeFronzo RA, Ferrannini E, Hendler R, Felig P, Wahren J. 
+Regulation of splanchnic and peripheral glucose uptake by 
+insulin and hyperglycemia in man. Diabetes 32: 35 - 45, 1983.
+
+Felig P, Wahren J. Influence of endogenous insulin secretion
+on splanchnic glucose and amino acid metabolism in man.
+J Clin Invest 50: 1702 - 1711, 1971
+
+DOGS
+Chiasson J, Liljenquist J, Finger F, Lacy W. Differential
+sensitivity of glycogenolysis and gluconeogenesis to insulin
+infusion in dogs. Diabetes 25: 283 - 291, 1976.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucagon Effect - Overview </name>
+<label> Overview </label>
+<content>
+
+Jiang G, Zhang BB. Glucagon and regulation of glucose metabolism.
+A J Physiol Endocrinol Metab 284: E671 - E678, 2003.
+
+Felig P, Wahren J,Sherwin R, Hendler R. insulin, glucagon and
+somatostatin in normal physiology and in diabetes mellitus.
+Diabetes 25: 1091 - 1099, 1976
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> AminoAcidEffect - Overview </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>   
+
+End

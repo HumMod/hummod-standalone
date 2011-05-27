@@ -1,0 +1,133 @@
+QHP 2008 / SequesteredBlood.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> BVSeqVeins </structurename>
+
+<vardoc>
+<name> BVSeqVeins.Change </name>
+<topic> BVSeqVeins-Overview </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> BVSeqVeins.Conductance</name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> BVSeqVeins.DxMax</name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> BVSeqVeins.Pressure</name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> BVSeqVeins.TMP</name>
+<topic> TMP - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> BVSeqVeins.Vol</name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> BVSeqVeins-Overview </name>
+<label> Overview </label>
+<content>
+
+Sequestered blood volume is a term used to explain the
+changes in blood volume distribution and venous return
+when a subject moves from a lying to a standing postion. 
+As the subject changes from a lying to standing position,
+total blood volume does not acutely change, however 
+venous return falls as if some blood has been lost. The 
+(virtual) amount of blood that appears to be lost is called 
+sequestered. Some is in the arteries (BVSeqArtys) and some 
+in the veins (BVSeqVeins) of the lower extremities.
+In the model we assume about 75% of sequestered volume is 
+in the veins and and 25% in the arteries.
+
+In the lying position, assume a pressure of 11mmHg in the
+veins and a sequestered volume of 150mL. Moving to a 
+standing position changes venous pressure to 50mmHg and 
+the venous sequestered volume to 600mL.
+
+Vascular compliance plays a role in sequestration since 
+the amount sequestered depends on the distending (orthostatic) 
+pressure versus the vascular compliance pushing back - 
+together they affect the transmural pressure (TMP)
+
+Thornton WE, Moore TP, Pool SL Fluid Shifts in Weightlessness
+Aviat.Space Environ Med 58(9, Suppl.):A86-90, 1987.
+
+Moore TP, Thornton WE Space shuttle inflight and postflight 
+fluid shifts measured by leg volume changes. 
+Aviat Space Environ. Med 58(9, Suppl.):A91-96, 1987.
+
+Musgrave FS, Zechman FW, Mains RC. Changes in total leg 
+volume during lower body negative pressure. 
+Aerospace Med 40(6):602-606, 1969.
+
+Asmussen E. The distribution of the blood between the lower 
+extremities and the rest of the body.
+Acta Physiol Scanda 5:31-38, 1943
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> TMP-Overview </name>
+<label> Overview </label>
+<content>
+
+The transmural pressure is the difference between the pressure
+within the vessel and outside the vessel. It is a function of
+vascular compliance, the orthostatic pressure and any other 
+pressure exerted externally(lower external pressure).
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+
+End

@@ -1,0 +1,125 @@
+QHP 2008 / Midodrine.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> MidodrinePool </structurename>
+
+<vardoc>
+<name> MidodrinePool.[Midodrine]</name>
+<topic> Midodrine - Overview </topic>
+<topic> Midodrine- Physical Units </topic>
+<seealso> AlphaPool.MidoPart </seealso>
+<seealso> AlphaBlockade.Block(%) </seealso>
+</vardoc>
+
+<vardoc>
+<name> MidodrinePool.Change </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> MidodrinePool.Gain </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> XXXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> MidodrinePool.K </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> MidodrinePool.Loss </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXX </seealso>
+</vardoc>
+
+<vardoc>
+<name> MidodrinePool.Mass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+
+<vardoc>
+<name> MidodrinePool.VolDist </name>
+<topic> VolDist - Units </topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> XXX </seealso>
+<seealso> XXXX </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Midodrine - Overview </name>
+<label> Overview </label>
+<content>
+
+Midodrine hydrochloride forms an active metabolite, desglymidodrine
+that is an alpha 1-agonist, and exerts its action via activation of
+the alpha-adrenergic receptors of the arteriolar and venous vasculature,
+producing an increase in vasculature tone and elevation of blood pressure.
+Midodrine hydrochloride is converted to desglymidodrine in the liver
+and is excreted by the kidney.  
+Midodrine does not cross the blood-brain barrier and is therefore 
+not associated with effects on the central nervous system. It is
+used in the treatment of symptomatic orthostatic hypotension. 
+
+Midodrine is almost completely absorbed after oral administration
+with a bioavailability (as desglymidodrine) of 93%
+
+Wright RA, Kaufman HC, Perera R, Opfer-Gehrking TL, McElligott MA, 
+Sheng KN, Low PA. A double-blind, dose-response study of midodrine
+in neurogenic orthostatic hypotension. Neurology 51: 120-124, 1998
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Midodrine - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Daily dosage of midodrine is reported in mG/Day 
+Plasma levels of the active desglymidodrine are reported in nG/mL
+Volume of distribution is 4L/KG  
+
+Clin Pharm Ther 39:586-591, 1986
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Midodrine - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Typical dose is 10-30mG/Day. Midodrine is available in 2.5mG and
+5mG tablets for oral administration.
+
+</content>
+</topicdoc>
+
+   
+End
+

@@ -1,0 +1,128 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> NEPump </structurename>
+
+<vardoc>
+<name> NEPump.Rate </name>
+<topic> NEPump - Overview </topic>
+<topic> NE - Physical Units </topic>
+<topic> NE - Concentration Units </topic>
+<seealso> NEPool.[NE] </seealso>
+</vardoc>
+
+<vardoc>
+<name> NEPump.Setting </name>
+<topic> NEPump - Overview </topic>
+<topic> NE - Physical Units </topic>
+<topic> NE - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> NEPump.Switch </name>
+<topic> NEPump - Overview  </topic>
+<topic> NE - Physical Units </topic>
+<topic> NE - Concentration Units </topic>
+</vardoc>
+
+<topicdoc>
+<name> NEPump - Overview </name>
+<label> Overview </label>
+<content>
+
+The NE Pump enables the model user to change 
+[NE] levels by infusing norepinephrine at different 
+rates. Data is taken from a variety of human studies 
+relating infusion rates to plasma concentrations 
+of norepinephrine.
+
+When the switch is turned on, the model user sets the 
+rate by changing the setting using the slide bar. 
+rates can be increased in 100 unit increments.
+
+Human Data
+Cohen G, Holland B, Sha J and Goldenberg M
+Plasma concentrations of epinephrine and norepinephrine
+during intravenous infusions in man.
+J Clin Invest 38:1935-1941, 1959.
+
+Manger WM, Frohlich ED, Gifford RW, Dustan HP. 
+Norepinephrine infusion in normal subjects and
+patients with essential or renal hypertension;
+Effect on blood pressure, heart rate, and plasma
+concentration. J Clin Pharm 16: 129 - 141, 1976.
+
+London GM, Safar ME, Weiss YA, Simon A, Lehner JP,
+Milliez PL. The spectrum of pressor-response to
+norepinephrine in normotensive and hypertensive
+patients. Biomedicine 24: 178 - 182, 1976.
+
+Silverberg AB, Shah SD, Haymond MW and Cryer PE. 
+Norepinephrine: hormone and neurotransmitter in man.
+Am J Physiol 234(3): E252-E256, 1978.
+
+Vlachakis ND. Blood pressure response to norepinephrine
+infusion in relationship to plasma renin activity in man.
+J Clin Pharm 19: 654 - 661, 1979.
+
+Cryer PE. Physiology and pathophysiology of the human
+sympathoadrenal neuroendocrine system.
+New England J Med 303: 436-444, 1984.
+
+Dog Data
+Casals-Stenzel J, Tree M, Brown JJ, Fraser R, Lever AF,
+Millar JA, Morton JJ, Robertson JIS, Reid JL, Hamilton C.
+Prolonged infusion of norepinephrine in the conscious
+dog: Effects on blood pressure, heart rate, renin,
+angiotensin II, and aldosterone.
+J of Cardiovascular Pharmacology 4: S114 - S121, 1982.
+
+Katholi RE, Carey RM, Ayers CR, Vaughan ED Jr.,
+Yancey MR, Morton CL. production of sustained hypertension
+by chronic intrarenal norepinephrine infusion in conscious
+dogs. Circ Res 40, Suppl 1, I-118 - I-126, 1977. 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NE - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]  pG/mL or nMol/L
+Plasma Mass  nG or pG
+Pump units are nG/Min
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> NE - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Norepinephrine (C8 H11 N O3) has a molecular
+weight of 169. Typical plasma concentration of 
+NE is 240pG/mL or 1.42nMol/L (Multiply by 0.00592
+to convert pG/mL to nMol/L 
+
+Jones DH, Carlene A, Hamilton A, Reid JL. Choice of
+control groups in the appraisal of sympathetic nervous 
+activity in essential hypertension.
+Clinical Science 57: 339 - 344, 1979
+
+</content>
+</topicdoc>
+
+  
+End

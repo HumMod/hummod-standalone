@@ -1,0 +1,21 @@
+Digital Human / DetailedANP
+
+Created : 21-Oct-04
+Last Modified : 30-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+
+<?path docs\ANP\ ?>
+
+<?include ANPPool.docs ?>
+<?include ANPPump.docs ?>
+<?include ANPSecretion.docs ?>
+<?include ANPClearance.docs ?>
+
+</docs>
+End

@@ -1,0 +1,18 @@
+Digital Human / Peritoneum
+
+Created : 19-Mar-08
+Last Modified : 19-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2009
+By : University of Mississippi Medical Center
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path docs\Peritoneum\ ?>
+
+<?include PeritoneumSpace.docs ?>
+<?include PeritoneumProtein.docs ?>
+
+</docs>
+End

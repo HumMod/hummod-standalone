@@ -1,0 +1,183 @@
+QHP 2008 / Na.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> NaPool
+ </structurename>
+
+
+<vardoc>
+<name> NaPool.[Na+(mEq/L)] </name>
+<topic> [Na+] - NaPOverview </topic>
+<topic> [Na+] - NaPPhysical Units </topic>
+<topic> [Na+] - NaPConcentration Units </topic> 
+<seealso> OsmECFV.Cations </seealso>
+</vardoc>
+
+<vardoc>
+<name> NaPool.[Na+]</name>
+<topic> [Na+] - NaPOverview </topic>
+<topic> [Na+] - NaPPhysical Units </topic>
+<topic> [Na+] - NaPConcentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> NaPool.Change </name>
+<topic> Change - NaP1Definition </topic>
+<seealso> NaPool.Gain </seealso>
+<seealso> NaPool.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> NaPool.Gain </name>
+<topic> Gain - NaP2Definition </topic>
+<seealso> GILumenSodium.Absorption </seealso>
+<seealso> IVDrip.NaRate </seealso>
+<seealso> Transfusion.NaRate </seealso>
+</vardoc>
+
+<vardoc>
+<name> NaPool.InitialMass </name>
+<topic> InitialMass - NaP3Definition </topic>
+<seealso> NaPool.Target[Na+] </seealso>
+<seealso> ECFV.Vol </seealso>
+</vardoc>
+
+<vardoc>
+<name> NaPool.Loss </name>
+<topic> Loss - NaP4Definition</topic>
+<seealso> CD_Na.Outflow </seealso>
+<seealso> SweatDuct.NaOutflow </seealso>
+<seealso> Hemorrhage.NaRate </seealso>
+<seealso> DialyzerActivity.Na+Flux </seealso>
+</vardoc>
+
+<vardoc>
+<name> NaPool.Mass </name>
+<topic> Mass - NaP5Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> NaPool.Target[Na+] </name>
+<topic> Target[Na+] - NaP6Definition </topic>
+</vardoc>
+
+
+<topicdoc>
+<name> [Na+] - NaPOverview </name>
+<label> Overview </label>
+<content>
+
+The extracellular fluid contains large amounts of sodium ions
+and plasma sodium is normally regulated within very narrow limits. 
+
+Textbook of Medical Physiology AC Guyton, JE Hall. Eleventh Edition
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Na+] - NaPPhysical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma mEq/L
+Mass mEq
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Na+] - NaPConcentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+Normal values for plasma sodium is 142mEq/L 
+Normal range 140 - 145mEq/L
+Sodium Mass 2130mEq
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - NaP1Definition </name>
+<label> Definition </label>
+<content>
+
+Changes in the sodium (Na+) pool or mass are a function of gains 
+and losses in sodium over time. Gains can occur from sodium in
+the diet via reabsorption from the GI lumen; from intravenous 
+administration or from transfusion. Losses in sodium can occur in 
+urine; from sweating; from hemorrhage and during dialysis
+ 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Gain - NaP2Definition </name>
+<label> Defintion </label>
+<content>
+
+Gain is defined as positive changes in mass of sodium 
+and is a function of dietary intake through GI lumen 
+absorption. Sodium can also be gained by intravenous drip 
+administration and/or intravenous blood transfusion.
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> InitialMass - NaP3Definition </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of sodium. Since the 
+plasma concentration is 144mEq/L (the Target[Na+]) and the
+volume of distribution is the ECFV (15,000mL), then the 
+initial mass or circulating pool is 2160.
+
+Initial Mass = Target[Na+]*ECFV.Vol
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - NaP4Definition </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as negative changes in the mass of sodium. It 
+is a function of loss of sodium in the urine;loss in sweat; loss
+during hemorrhage and loss during dialysis.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Mass - NaP5Definition </name>
+<label> Definition </label>
+<content>
+
+Mass is the calculated amount of sodium at any given time. 
+It is the change in sodium integrated over time.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Target[Na+] - NaP6Definition </name>
+<label> Definition </label>
+<content>
+
+The Target[Na+] is the initial plasma concentration of sodium.
+Target[Na+] = Initial Mass/ECFV.Vol
+
+</content>
+</topicdoc>
+
+ 
+End

@@ -1,0 +1,140 @@
+QHP 2008 / Hemorrhage.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> Hemorrhage </structurename>
+
+<vardoc>
+<name> Hemorrhage.ClRate </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> ClPool.[Cl-] </seealso>
+<seealso> Hemorrhage.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.KRate </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> KPool.[K+] </seealso>
+<seealso> Hemorrhage.Rate  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.NaRate </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> NaPool.[Na+] </seealso>
+<seealso> Hemorrhage.Rate  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.PlasmaRate </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> BloodVol.PVCrit</seealso>
+<seealso> Hemorrhage.Rate  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.ProteinRate </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> PlasmaProtein.[Protein] </seealso>
+<seealso> Hemorrhage.PlasmaRate  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.Rate </name>
+<topic> Hemorrhage - Overview </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> Hemorrhage.TargetRate </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.RBCRate </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> BloodVol.Hct </seealso>
+<seealso> Hemorrhage.Rate  </seealso>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.Switch </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.TargetRate </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<vardoc>
+<name> Hemorrhage.Volume </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso>Hemorrhage.Rate </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> Hemorrhage - Overview </name>
+<label> Overview </label>
+<content>
+
+Circulatory shock means generalized inadequate blood flow 
+through the body.  Shock usually results from inadequate 
+cardiac output. Factors that decrease venous return lead
+to a decrease in cardiac output and cause circulatory shock.
+The most common cause of decreased venous return is a diminished 
+blood volume. In the model, the user can create hypovolemic 
+shock by causing a hemorrhage. The volume and rate of blood loss 
+can be set by the user.  
+
+Adamson J, Hillman RS. Blood Volume and plasma protein 
+replacement following acute blood loss in normal man.
+J. Amer.Med.Assoc. 205:609-612, 1968.
+
+Ebert RV, Stead Jr. EA,Gibson II JG. Response of normal
+subjects to acute blood loss. 
+Arch.Int.Med. 68:578-590, 1941.
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

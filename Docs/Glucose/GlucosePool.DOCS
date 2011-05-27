@@ -1,0 +1,319 @@
+QHP 2008 / Glucose.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> GlucosePool </structurename>
+
+<vardoc>
+<name> GlucosePool.[Glucose(mG/dL)]</name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units1 </topic>
+<seealso> InsulinSecretion.GlucoseEffect </seealso>
+<seealso> GlucagonSecretion. GlucoseEffect </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.[Glucose(mMol/L)] </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.[Glucose] </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.[Osm(mOsm/L)]</name>
+<topic> Osmolarity - Overview  </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.[Osm] </name>
+<topic> Osmolarity - Overview </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Change </name>
+<topic> Change - GPDefinition1 </topic>
+<seealso> GlucosePool.Mass </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Gain </name>
+<topic> Gain - GPDefinition2 </topic>
+<seealso> GlucosePool.Change </seealso>
+<seealso> LM_Glucose.Release </seealso>
+<seealso> GILumenCarbohydrates.Absorption </seealso>
+</vardoc>
+
+<vardoc>
+<name>  GlucosePool.InitialMass </name>
+<topic> InitialMass - GPDefinition4 </topic>
+<seealso> GlucosePool.Mass </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Loss </name>
+<topic> Loss - GPDefinition3 </topic>
+<seealso> Metabolism-Glucose.TotalUptake </seealso>
+<seealso> LM_Glucose.Uptake.Uptake </seealso>
+<seealso> NephronGlucose.Spillover </seealso>
+<seealso> GlucoseDecomposition.Rate </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Mass </name>
+<topic> Mass - GPDefinition5 </topic>
+<seealso> GlucosePool.Change </seealso>
+<seealso> GlucosePool.InitialMass </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.MG_TO_MMOL </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.MW </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+<seealso> GlucosePool.Osmoles </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Osmoles </name>
+<topic> Osmolarity - Overview  </topic>
+<seealso> OsmECFV.Non-Electrolytes </seealso>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.PER_ML_TO_PER_DL </name>
+<topic> Glucose - Overview </topic>
+<topic> Glucose - Physical Units </topic>
+<topic> Glucose - Concentration Units </topic>
+</vardoc>
+
+<vardoc>
+<name> GlucosePool.Target[Glucose] </name>
+<topic> Target[Glucose] - GPDefinition6 </topic>
+<seealso> GlucosePool.InitialMass </seealso>
+</vardoc>
+
+<topicdoc>
+<name> Glucose - Overview </name>
+<label> Overview </label>
+<content>
+
+Glucose is the final product of carbohydrate digestion and is 
+used as a fuel source for the production of ATP in the cells 
+of the body.  Glucose is the principal fuel source for the brain 
+and cerebral function is critically dependent on maintaining 
+plasma glucose levels within narrow limits.
+Plasma glucose levels depend on the rates of entry of glucose 
+into the circulation and of its uptake into the tissues. 
+The main tissues that regulate blood glucose levels are the 
+liver (by glucose production and uptake) and skeletal muscle 
+(glucose uptake). The hormones insulin and glucagon function 
+as important feedback control systems for maintaining a normal 
+blood glucose concentration. 
+
+Immediately after a high-carbohydrate meal, the glucose that 
+is absorbed into the blood causes an increase in plasma 
+concentration of glucose and subsequent rapid secretion of 
+insulin.  Insulin causes rapid uptake and storage of glucose 
+by almost all tissues of the body but especially by the muscles, 
+adipose tissue, and liver. Excess glucose is stored in the 
+form of glycogen. Insulin also inhibits glycogen breakdown 
+and glucose release by the liver. Between meals, when 
+food is not available and the blood glucose concentration 
+begins to fall, insulin secretion decreases rapidly and 
+secretion of glucagon increases. Liver glycogen is split back 
+into glucose (glycogenolysis) and released back into the 
+blood to maintain the plasma glucose levels. The decrease 
+in insulin secretion and increase in glucagon release also
+causes increased gluconeogenesis in the liver and results in 
+the breakdown and use of stored glucose, fats and proteins.  
+Both of these effects greatly enhance the availability of 
+glucose to other organs of the body. 
+
+Kruszynska YT. Normal metabolism: the physiology of fuel
+homeostasis. Textbook of Diabetes. Chapter 9. Edited by 
+Pickup JC & Willams G. Third Edition 2003. Blackwell Science.
+
+Cryer PE. Glucose Counterregulation: prevention and correction 
+of hypoglycemia in humans. Am J Physiol 264: E149 - E155, 1993
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Glucose - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Plasma Concentration  mG/mL, mG/dL or nMol/L
+Mass  mG 
+mG/dL * 0.05551 = mMol/L
+mMol * 0.182 = mG
+mG * 5.551 = mMol
+mG/mL * 100 = mG/dL
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Glucose - Concentration Units1 </name>
+<label> Concentration Units </label>
+<content>
+
+Molecular Weight (MW) of glucose is 180
+
+Typical plasma glucose concentration [Glucose] = 1.1mg/mL
+The volume of distribution is the ECFV.
+
+Glucose Mass = ECFV * [Glucose]
+             = 15000 * 1.1 = 16500mG
+
+Typical glucose concentrations under a variety of
+physiological situations
+
+                 
+Hypoglycemia    45 mG/dL ; 2.5 mMol/L
+Starving        60 mG/dL ; 3.3 mMol/L
+Fasting         85 mG/dL ; 4.7 mMol/L
+Drip           110 mG/dL ; 6.1 mMol/L
+Fed            130 mG/dL ; 7.2 mMol/L
+Glucose Load   200 mG/dL ; 11.1 mMol/L
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - GPDefinition </name>
+<label> Definition </label>
+<content>
+
+Change in glucose mass is the gain in glucose minus the loss
+in glucose. 
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> Gain - GPDefinition2 </name>
+<label> Definition </label>
+<content>
+
+Gain is defined as positive changes in mass of glucose 
+and is a function of GI lumen carbohydrate absorption rate,
+rate of liver release of glucose and infused glucose (using 
+the glucose pump feature). 
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Loss - GPDefinition3 </name>
+<label> Definition </label>
+<content>
+
+Loss is defined as negative changes in mass of glucose 
+and is a function of uptake of glucose into the cells
+of the body; liver uptake; loss of glucose in the kidney
+(Nephron Glucose spillover) and glucose decomposition rate.
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> Osmolarity - Overview </name>
+<label> Overview </label> 
+<content>
+
+Osmolarity is the osmolal concentration of a solution
+expressed as osmoles (osm) per liter of solution. One 
+osmole  equal to one mole (mol)(6.02 * 10^23) of solute
+particles. Therefore a solution containing 1 mole of
+glucose in each liter has a concentration of 1 osm/L.
+In general, the osmole is too large a unit for expressing
+osmotic activity of solutes in body fluids. The term 
+milliosmole (mOsm), which equals 1/1000 osmole, is
+commonly used. 
+
+A normal plasma concentration of glucose is 100mG/dL.
+100mG/dL = 1000mG/L. The MW of glucose is 180
+Therefore 100mG/dL = 1000/180 = 5.55 mOsm/L.
+
+In patients with diabetes, plasma glucose levels can
+rise to dangerously high levels. This can exert a 
+large amount of osmotic pressure in the extracellular 
+fluid and result in cellular dehydration. Increased 
+excretion of glucose in the urine can also cause osmotic
+diuresis and a depletion of body fluids. 
+
+Guyton AC, Hall JE. Textbook of medical physiology.
+Eleventh Edition. Elsevier Saunders.
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> InitialMass - GPDefinition4 </name>
+<label> Definition </label>
+<content>
+
+The initial mass is the starting amount of glucose.
+It is the initial ECFV * Target[Glucose]. The initial
+ECFV is affected by body traits (size, adiposity and 
+muscularity). Target[Glucose] is the starting plasma
+glucose concentration. 
+  
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Mass - GPDefinition5 </name>
+<label> Definition </label>
+<content>
+
+Changes in the glucose pool or mass are a function of both 
+gains and losses in glucose over time. Gain is a function 
+of GI lumen carbohydrate absorption rate,
+rate of liver release of glucose and infused glucose (using 
+the glucose pump feature).  Loss is a function of uptake 
+of glucose into the cells of the body; liver uptake; loss 
+of glucose in the kidney (Nephron Glucose Spillover) 
+and glucose decomposition rate.
+
+</content>
+</topicdoc> 
+
+
+<topicdoc>
+<name> Target[Glucose] - GPDefinition6 </name>
+<label> Definition </label>
+<content>
+
+Target[Glucose] is the starting or initial plasma
+glucose concentration.
+
+</content>
+</topicdoc>  
+
+End

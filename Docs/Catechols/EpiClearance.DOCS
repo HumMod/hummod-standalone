@@ -1,0 +1,188 @@
+QHP 2008 / Catechols.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EpiClearance </structurename>
+
+<vardoc>
+<name> EpiClearance.K </name>
+<topic> EpiClearance - Overview </topic>
+<topic> [Epi] - Physical Units  </topic>
+<topic> [Epi] - Concentration Units </topic>
+<topic> Rate Constant Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> EpiClearance.Rate </name>
+<topic> EpiClearance - Overview </topic>
+<topic> [Epi] - Physical Units   </topic>
+<topic> [Epi] - Concentration Units  </topic>
+<seealso> EpiPool.[Epi(pG/mL)] </seealso>
+</vardoc>
+
+
+<topicdoc>
+<name> EpiClearance - Overview </name>
+<label> Overview </label>
+<content>
+
+Epinephrine is cleared from plasma mainly in the liver.
+
+Lund A. Elimination of adrenaline and noradrenaline from 
+the organism. Acta Pharmacol 7: 297, 1951 
+
+In a study of six normotensive volunteers, mean clearance 
+rate was 9.41L/Min and ranged from 4.86 
+to 14.61L/Min
+
+Fitzgerald GA, Barnes P, Hamilton CA, Dollery CT
+Circulating adrenaline and blood pressure: the metabolic
+effects and kinetics of infused  adrenaline in man.
+Eur J Clin Invest 10:401-406, 1980
+
+In a study of six normal humans, plasma metabolic clearance
+rate of epinephrine was 52/kg/min. Mean body weight 
+was 78.7Kg for a clearnce of 4.1L/Min
+
+Clutter WE, Bier DM, Shah SD and Cryer PE
+Epinephrine plasma metabolic clearance rates and 
+physiologic thresholds for metabolic and hemodynamic 
+actions in man.
+J Clin Invest 66: 94-101, 1980
+
+The article below is a review. Epinephrine clearance rates are 
+quoted as 2.3L/min
+
+Goldstein DS, Eisenhofer G, Kopin IJ. Sources and significance
+of plasma levels of catechols and their metabolites in humans.
+J Pharmacol Exp Ther 305(3): 800-811, 2003.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> [Epi] - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+[Plasma]  pG/mL or nMol/L
+Plasma Mass  nG or pG
+Clearance nG/Min or L/Min
+
+milli = 10^-3
+micro = 10^-6
+nano  = 10^-9
+pico  = 10^-12
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Epi - Concentration Units  </name>
+<label> Concentration Units </label>
+<content>
+
+Epinephrine (C9 H13 N O3) has a molecular weight
+of 183.
+
+Typical plasma concentration of epinephrine is 
+40pG/mL or 0.22nMol/L. (Multiply by 0.00546 to 
+convert pG/mL to nMol/L).
+
+Volume of distribution for catechols is ECFV or
+15,000 mL. Therefore the typical circulating pool 
+of epinephrine is
+
+40 * 15,000 = 600 nG or 600000 pG.
+
+Clearance is 9.4L/Min or 376nG/Min
+
+If the pool is 600nG and 376ng is cleared per minute
+the total pool is cleared in 600/376 = 1.596 minutes.
+K = 1/1.596 = 0.625 
+       
+Fitzgerald GA, Barnes P, Hamilton CA, Dollery CT
+Circulating adrenaline and blood pressure: the metabolic
+effects and kinetics of infused  adrenaline in man.
+Eur J Clin Invest 10:401-406, 1980
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Rate Constant Definition </name>
+<label> Rate Constant Definition </label>
+<content>
+
+Understanding rate constants is an 
+essential tool for all model builders.
+
+There is an irrational number called Euler's number 
+which is often denoted by e (and sometimes exp). 
+The value of e is roughly 2.718.
+
+If e is raised to a power, we have an exponential. 
+A specific example might be e^2. Note that the value 
+of e to a power can be obtained using an infinite series 
+(and e to a power is part of every scientific calculator 
+and computer programming library).
+
+If we raise e to an unspecified power using a variable, 
+we have an exponential function. An example might be e^x.
+
+The exponential function gets attention when is noted 
+that its derivative with respect to x is again the exponential 
+function. This can be denoted as
+
+	d(e^x)/dx = e^x
+
+The exponential function is also used to (inversely) 
+define the natural logarithm, denoted by In. If ex = y 
+then x = ln y.
+
+Note that e^0 = 1 and e^-¥ = 0. (¥ represents infinity).
+
+In models, we often see responses where a variable decays 
+in an exponential fashion from an initial value to a steady 
+state value. Such responses can roughly be represented by
+
+	e^-Kt
+
+where K is a positive constant called the rate constant and 
+t is the independent variable (usually time). This function 
+again has the boundary values of e^K0 = 1 and e^-K¥ = 0. 
+(¥ represents infinity). The importance of K is that it 
+determines the speed (or rate and hence its name) of transition 
+between 1 and 0.
+
+We can now work this backwards and get an estimate of K 
+by looking at the speed or rate of the decay in an 
+appropriate data set.
+
+When t = 1/K, we have e^-1, which has a value of 0.37. 
+This means that the decay is 63% of way to its final value 
+(defined as t0.63). So we observe how long it takes the decay 
+to get to 63% of its final value and then we define K = 1/t0.63.
+
+Another (and comparable) way to find a rate constant is to 
+observe how long it takes a decay to get half way to its final 
+value - this is the half-time. We can denote the half-time 
+as t1/2. The exponential function is then e^-Kt1/2 = 0.5. 
+We can solve this equality for K by taking the natural 
+logarithm of both sides of the equation and rearranging.
+
+	-Kt1/2 = ln (0.5)
+	K = - ln(0.5) / t1/2
+
+Or simply
+
+	K = 0.69 / t1/2
+
+</content>
+</topicdoc>
+
+  
+End

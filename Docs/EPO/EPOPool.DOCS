@@ -1,0 +1,399 @@
+ QHP 2008 / EPO.DOCS
+
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> EPOPool </structurename>
+
+<vardoc>
+<name> EPOPool.[EPO]</name>
+<topic> [EPO] - EPODefinition </topic>
+<topic> EPO - Overview </topic>
+<topic> EPO - Physical Units </topic>
+<topic> EPO - Concentration Units </topic>
+<seealso> EPOPool.VOLDIST </seealso>
+<seealso> EPOPool.Mass </seealso>
+<seealso> ECFV.Vol(L)</seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Change </name>
+<topic> Change - EPO1Definition </topic>
+<topic> EPO - Overview </topic>
+<topic> EPO - Concentration Units </topic>
+<topic> EPO - Physical Units </topic>
+<seealso> EPOPool.Gain </seealso>
+<seealso> EPOPool.Loss </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Gain </name>
+<topic> Gain - EPO2Definition </topic>
+<topic> EPO - Overview  </topic>
+<topic> EPO - Concentration Units  </topic>
+<topic> EPO - Physical Units  </topic>
+<seealso> EPOSecretion.Rate </seealso>
+<seealso> EPOPump.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.InitialMass </name>
+<topic> InitialMass - EPO3Definition </topic>
+<topic> EPO - Overview  </topic>
+<topic> EPO - Concentration Units  </topic>
+<topic> EPO - Physical Units  </topic>
+<seealso> EPOPool.Target[EPO] </seealso>
+<seealso> EPOPool.InitialVolDist </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.InitialVolDist </name>
+<topic>  InitialVolDist - EPO4Definition </topic>
+<topic> EPO - Overview  </topic>
+<topic> EPO - Concentration Units  </topic>
+<topic> EPO - Physical Units  </topic>
+<seealso> EPOPool.VOLDIST </seealso>
+<seealso> ECFV.InitialVol(L) </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Log10Conc </name>
+<topic> Log10Conc - EPO5Definition </topic>
+<topic> EPO - Overview  </topic>
+<topic> EPO - Concentration Units  </topic>
+<topic> EPO - Physical Units  </topic>
+<seealso> EPOPool.[EPO]</seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Loss </name>
+<topic> Loss - EPO6Definition </topic>
+<topic> EPO - Overview </topic>
+<topic> EPO - Concentration Units   </topic>
+<topic> EPO - Physical Units  </topic>
+<seealso> EPOClearance.Rate </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Mass </name>
+<topic> Mass - EPO7Definition </topic>
+<topic> EPO - Overview </topic>
+<topic> EPO - Concentration Units   </topic>
+<topic> EPO - Physical Units </topic>
+<seealso> EPOPool.InitialMass </seealso>
+<seealso>EPOPool.Change </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.Target[EPO] </name>
+<topic> Target[EPO] - EPO8Definition </topic>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.VolDist </name>
+<topic> VolDist - EPO9Definition </topic>
+<seealso> EPOPool.VOLDIST </seealso>
+<seealso> ECFV.Vol(L) </seealso>
+</vardoc>
+
+<vardoc>
+<name> EPOPool.VOLDIST </name>
+<topic> VOLDIST - EPO10Definition </topic>
+<topic> EPO - Overview </topic>
+<topic> EPO - Concentration Units   </topic>
+<topic> EPO - Physical Units  </topic>
+</vardoc>
+
+<topicdoc>
+<name> [EPO] - EPODefinition </name>
+<label> Definition </label>
+<content>
+
+[EPO] is the calculated plasma concentration of 
+erythropoietin.
+
+</content>
+</topicdoc>
+
+
+<topicdoc>
+<name> EPO - Overview </name>
+<label> Overview </label>
+<content>
+
+Erythropoietin (EPO) is a glycoprotein 
+which increases red blood cell (RBC) 
+production in response to decreases in 
+tissue oxygenation. EPO stimulates the 
+production of proerythroblasts from 
+hemopoietic stem cells in the bone marrow.
+In adult humans, 90% of all erythropoietin
+is formed in the kidneys. The cellular 
+site of production in the kidney are interstitial
+renal cells in the inner cortex lying in immediate 
+proximity to the proximal tubules. The remainder
+is formed in the liver. Although the exact liver cell
+type involved has not been isolated, hepatocytes,
+Kupffer cells and small interstitial cells are
+all possibilities. The hepatic component of 
+erythropoietin production is small( 5 - 15%).
+
+Although increased secretion of erythropoietin 
+occurs within minutes of a decrease in renal tissue 
+oxygenation ,it takes several days before there 
+is an increase in the red blood 
+cell concentration - this is the EPO delay.
+
+Erslev, A.J. Erythropoietin. 
+Leukemia Research Volume 14, No. 8: 683-688, 1990
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPOPool - Concentration Units </name>
+<label> Concentration Units </label>
+<content>
+
+EPO mass is typically 136 U with a
+volume of distribution of 40% of
+ECFV, yielding a typical conc of
+22 mU/ml.[EPO] levels range from 10-30mU/mL 
+in humans.Typical secretion and destruction
+rates are 0.75 U/Min.
+
+Plasma Levels in Humans
+1.Milledge JS, Cotes, PM Serum erythropoietin 
+in humans at high altitude and its relation to 
+plasma renin.
+J Appl Physiology 59: 360-364, 1985
+
+2.Miller ME, Cronkite EP, Garcia JF
+Plasma levels of immunoreactive erythropoietin
+after acute blood loss in man.
+Brit. J. Haematology 52: 545-549, 1982
+
+3.Kokot M, Kokot F, Franek E, Wiecek A, Nowicki M, 
+Dulawa J.
+Effect of Isobaric hyperoxemia on erythropoietin secretion
+in hypertensive patients.
+Hypertension 24: 486-490, 1994
+
+4.Koeffler HP, Goldwasser E
+Erythropoietin radioimmunoassay in evaluating patients 
+with polycythemia. Ann Int Med 94: 44-47, 1981
+
+5.Garcia JF, Ebbe SN, Hollander l, Cutting HO, Miller ME,
+Cronkite EP. Radioimmunoassay of erythropoietin: 
+Circulating levels in normal and polycythemic human beings.
+J. Lab. Clin. Med.99;624-635, 1982.
+
+Plasma Levels in Rats
+1.Cahan C, Heokje PL, Goldwasser E, Decker MJ, Strohl KP
+Assessing the characteristic between length of hypoxic 
+exposure and serum erythropoietin levels.
+Am J Physiol 258: R1016 - R1021, 1990
+ 
+2.Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> EPO - Physical Units </name>
+<label> Physical Units </label>
+<content>
+
+Mass U
+Plasma Concentration  mU/ml
+Fluxes  U/min
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> Change - EPO1Definition </name>
+<label> Definition </label>
+<content> 
+
+Changes in the EPO pool or mass are a function of both
+gains and losses in EPO over time. Gains may occur from
+increased secretion and from infusion of EPO using the 
+EPO pump feature of the model. Loss occurs from EPO 
+clearance from the blood
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> Gain - EPO2Definition </name>
+<label>  Definition  </label>
+<content>
+
+Gain is defined as positive changes in mass of EPO
+and is a function of EPO secretion rate and EPO
+from infusion (using the EPO pump feature).
+
+</content>
+</topicdoc>  
+
+<topicdoc>
+<name>  InitialMass - EPO3Definition  </name>
+<label>  Definition  </label>
+<content>
+
+During startup, the model user defines the particular 
+traits of the HumMod patient. These are gender, body size, 
+age, muscularity and adiposity. All of these traits 
+influence body volumes, most notably the extracellular 
+fluid volume (ECFV). The assumption is made that
+while volumes may change with traits, concentrations do 
+not. At startup,initial volumes,especially ECFV and plasma 
+volume are calculated. A target concentration is specified 
+- in this case Target[EPO]. 
+
+The initial mass or circulating pool is the Target[EPO] 
+multiplied by the initial volume of distribution.
+ 
+Initial Mass = Target[EPO]*InitialVolDist
+
+</content>
+</topicdoc>  
+
+<topicdoc>
+<name> InitialVolDist - EPO4Definition </name>
+<label> Definition  </label>
+<content>
+
+InitialVolDist is initial volume in which EPO is distributed.
+It is a fraction of the ECFV defined by the constant VOLDIST.
+InitialVolDist = VOLDIST * ECFV.InitialVol(L). 
+
+</content>
+</topicdoc> 
+
+<topicdoc>
+<name> Log10Conc - EPO5Definition </name>
+<label> Definition </label>
+<content>
+
+Log10Conc is a conditional element to ensure that
+[EPO]can never be less than zero.
+
+</content>
+</topicdoc>
+ 
+<topicdoc>
+<name> Loss - EPO6Definition </name>
+<label> Definition </label> 
+<content>
+
+Loss is defined as negative changes in mass of EPO and is 
+a function of EPO clearance.
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name>  Mass - EPO7Definition  </name>
+<label>  Definition </label>
+<content>
+
+The EPOPool.Mass is the calculated amount of EPO 
+at any given time. It is a function of EPO secretion
+rate, EPO clearance and the volume of distribution.
+
+Experimentation in rats examining the rapid 
+disappearance phase after a single injection of 
+EPO, suggests a distribution space of twice the 
+plasma volume or 40% of the extracellular fluid 
+volume(ECFV). If we assume an EPO mass is typically
+136U and a volume of distribution of 40% of the ECFV,
+this results in a typical plasma concentration of
+22 mU/ml. There is no evidence that clearance of EPO 
+is subject to any physiological regulation. Thus 
+changes in serum [EPO] result from changes in 
+production. Normal levels of [EPO] range from 10-30mU/mL
+
+Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+Eckardt KU & Kurtz A. 
+Regulation of erythropoietin production.
+Eur. J. Clin. Invest. 35 (suppl 3): 13-19, 2005
+
+Miller ME, Cronkite EP, Garcia, JF Plasma levels 
+of immunoreactive erythropoietin after acute 
+blood loss in man.
+Br J of Haematology 52:545-549, 1982
+
+</content>
+</topicdoc>  
+
+<topicdoc>
+<name> Target[EPO] - EPO8Definition </name>
+<label>  Definition  </label>
+<content> 
+
+Target[EPO] is the plasma concentration of EPO
+at startup. 
+
+</content>
+</topicdoc>  
+
+<topicdoc>
+<name> VolDist - EPO9Definition </name>
+<label> Definition </label>
+<content>
+
+VolDist is the calculated volume of distribution. 
+VolDist = VOLDIST*ECFV.Vol(L)
+
+</content>
+</topicdoc>  
+
+
+<topicdoc>
+<name>  VOLDIST - EPO10Definition  </name>
+<label>  Definition         </label>
+<content>
+
+VOLDIST is a constant defining what percentage of 
+the ECFV is the volume of distribution for EPO.
+The value of VOLDIST comes from experimentation
+in rats examining the rapid disappearance phase 
+after a single injection of EPO. The results suggest
+a distribution space of twice the plasma volume or 
+40% of the extracellular fluid volume(ECFV). 
+
+This value might be debatable as protein binding
+often messes up volume calculations.
+
+Reissmann KR, Diederich DA, Ito K, Schmans JW.
+Influence of disappearance rate and distribution 
+space on plasma concentration of erthropoietin 
+in normal rats. J Lab Clin Med 65:967-975, 1965
+
+Eckardt KU & Kurtz A. 
+Regulation of erythropoietin production.
+Eur. J. Clin. Invest. 35 (suppl 3): 13-19, 2005
+
+Miller ME, Cronkite EP, Garcia, JF Plasma levels 
+of immunoreactive erythropoietin after acute 
+blood loss in man.
+Br J of Haematology 52:545-549, 1982
+
+</content>
+</topicdoc>  
+
+End

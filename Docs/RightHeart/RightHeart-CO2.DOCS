@@ -1,0 +1,145 @@
+QHP 2008 / RightHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> RightHeart-CO2 </structurename>
+
+<vardoc>
+<name> RightHeart-CO2.[BloodHCO3] </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> Blood-GasToBase[HCO3] </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.[HCO3(mEq/L)] </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-CO2.[HCO3] </seealso> 
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.[HCO3] </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Size.LiquidVol </seealso>
+<seealso> RightHeart-CO2.Mass </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.Alpha </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> System.Dx </seealso>
+<seealso> RightHeart-CO2.K </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.Change </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-CO2.InflowBase </seealso>
+<seealso> RightHeart-CO2.OutflowBase </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.InflowBase </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> CO2Tools.LitersToMols </seealso>
+<seealso> RightHeart-CO2.InflowGas </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.InflowGas </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> Metabolism-RespiratoryQuotient.RQ </seealso>
+<seealso> RightHeart-Flow.O2Use </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.K </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-Flow.BloodFlow </seealso>
+<seealso> RightHeart-Size.LiquidVol </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.Mass </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-CO2.Change </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.Outflow(O) </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> RightHeart-Flow.BloodFlow </seealso>
+<seealso> RightHeart-CO2.[BloodHCO3] </seealso>
+<seealso> CO2Artys.[HCO3] </seealso>
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.OutflowBase </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+<seealso> RightHeart-CO2.Alpha </seealso>
+<seealso> RightHeart-CO2.Outflow(O)</seealso>
+<seealso> RightHeart-CO2.InflowBase </seealso>
+
+</vardoc>
+
+<vardoc>
+<name> RightHeart-CO2.PCO2 </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> Tissue-BaseToGas.pCO2 </seealso>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End

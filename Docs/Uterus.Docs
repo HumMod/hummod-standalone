@@ -1,0 +1,16 @@
+Digital Human / Uterus
+
+Created : 28-May-05
+Last Modified : 28-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : Digital Human
+Schema : DES V1.0
+
+<docs>
+<?path Docs\Uterus\ ?>
+
+<?include Uterus.docs ?>
+
+</docs>
+End

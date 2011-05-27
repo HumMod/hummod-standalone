@@ -1,0 +1,100 @@
+QHP 2008 / LeftHeart.DOCS
+
+Created : 27-Mar-09
+Last Modified : 27-Mar-09
+Author : Tom Coleman
+Copyright : 2009
+
+<structurename> LeftHeart-Infarction </structurename>
+
+<vardoc>
+<name> LeftHeart-Infarction.Area(%) </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.Change </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.DamagedTissueFraction </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Infarction.Area(%) </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.DeadTissueFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Infarction.DamagedFraction  </seealso>
+<seealso> LeftHeart-Infarction.DeadTissueK  </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.DeadTissueK </name>
+<topic> XX </topic>
+<topic> XX </topic>
+<topic> XXXX </topic>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.Effect </name>
+<topic> XXX</topic>
+<topic> XXXX </topic>
+<topic> XXX </topic>
+<seealso>  LeftHeart-Infarction.DamagedFraction  </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.IschemicTissueFraction </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<seealso> LeftHeart-Infarction.DamagedFraction </seealso>
+<seealso> LeftHeart-Infarction.DeadTissueFraction </seealso>
+</vardoc>
+
+<vardoc>
+<name> LeftHeart-Infarction.IsIschemic </name>
+<topic> XXX </topic>
+<topic> XXX </topic>
+<topic> XXX </topic>
+</vardoc>
+
+<topicdoc>
+<name> XXX</name>
+<label> XXX</label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XX </name>
+<label> XXX </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> XXX </name>
+<label> Overview </label>
+<content>
+
+
+</content>
+</topicdoc>
+
+   
+End
