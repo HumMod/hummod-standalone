@@ -23,6 +23,7 @@ When you're ready to push the data back to Github, push it to your branch.
 
 ```
 > git push origin riliescu
+> git branch # Just to make sure you're on the riliescu branch
 ```
 
 It's very important that your changes only happen on your branch and get pushed to your branch.  
