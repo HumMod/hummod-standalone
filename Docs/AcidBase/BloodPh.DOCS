@@ -11,7 +11,7 @@ Copyright : 2009
 <name> BloodPh.Artys[H+] </name>
 <topic> Artys[H+] - DefinitionBPH1 </topic>
 <topic> Artys[H+] - Physical Units </topic>
-<topic> Artys[H+]- Concentration Units </topic>
+<topic> Artys[H+] - Concentration Units </topic>
 </vardoc>
 
 <vardoc>
@@ -34,7 +34,7 @@ Copyright : 2009
 </vardoc>
 
 <topicdoc>
-<name> Artys[H+] - DefinitionPBH1 </name>
+<name> Artys[H+] - DefinitionBPH1 </name>
 <label> Definition  </label>
 <content>
 
@@ -56,7 +56,7 @@ arterial blood.
 
 <topicdoc>
 <name> Artys[H+] - Concentration Units </name>
-<label> Concentration Units   </label>
+<label> Concentration Units </label>
 <content>
 
 Normal arterial [H+] is 40nEq/L (0.00000004 Eq/L). 
@@ -89,8 +89,9 @@ J Physiol 273: 317 - 338, 1977.
 </content>
 </topicdoc>
 
+
 <topicdoc>
-<name> ArtysPh - DefinitionPBH2 </name>
+<name> ArtysPh - DefinitionBPH2 </name>
 <label> Definition  </label>
 <content>
 
@@ -122,7 +123,7 @@ acidosis. Intensive Care Med 28: 609 - 615, 2002.
 </topicdoc>
 
 <topicdoc>
-<name> Veins[H+] - DefinitionPBH3 </name>
+<name> Veins[H+] - DefinitionBPH3 </name>
 <label> Definition  </label>
 <content>
 
@@ -179,7 +180,7 @@ J Physiol 273: 317 - 338, 1977.
 
 
 <topicdoc>
-<name> VeinsPh - DefinitionPBH4 </name>
+<name> VeinsPh - DefinitionBPH4 </name>
 <label> Definition  </label>
 <content>
 

@@ -102,7 +102,7 @@ pH = log (1/[H+]) = -log[H+] where [H+] is the hydrogen
 ion concentration in Eq/L.
 
 The prmary determinants of pH in all body fluids are pCO2
-and SID. pH is calculated using teh following formula:
+and SID. pH is calculated using the following formula:
 
 [H+] = K * (pCO2/SID) or
 pH = pK + log10 (SID/pCO2)

@@ -26,6 +26,7 @@ Copyright : 2009
 <name> PhCells.pH </name>
 <topic> pH - DefinitionPHC3 </topic>
 <topic> pH - Concentration Units </topic>
+<topic> pH - Overview </topic>
 </vardoc>
 
 <vardoc>
@@ -85,6 +86,31 @@ II. The interaction between CO2 tension and extracellular
 bicar in the determination of muscle cell pH.
 J. Clin Invest. 44:21 - 30, 1965. 
 
+</content>
+</topicdoc>
+
+<topicdoc>
+<name> pH - Overview </name>
+<label> Overview </label>
+<content>
+
+Intracellular pH regulates many cellular processes, 
+including cell metabolism, calcium homeostasis, gene
+expression, cell motility and contractility  as well
+enzyme activity. A close regulation of intracellular 
+pH is therefore necessary to maintain normal cellular 
+activity. 
+
+Madshus IH. Regulation of intracellular pH in eukaryotic 
+cells. Biochem J 250: 1 - 8, 1988.
+
+Frelin C, Vigne P, Lanoux A, Lazdunski M. The regulation
+of the intracellular pH in cells from vertebrates. 
+Eur J Biochem 174: 3 - 14, 1988.
+
+Puceat M. pHi regulatory ion transporters: an update on structure,
+regulation and cell function. 
+Cell. Mol. Life Sci. 55: 1216 - 1229, 1999.
 
 </content>
 </topicdoc>
