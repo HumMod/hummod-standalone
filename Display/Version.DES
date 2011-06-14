@@ -1,0 +1,34 @@
+HumMod / Version.DES
+
+Created : 07-Sep-08
+Last Modified : 2011-02-18
+Author : Tom Coleman
+Copyright : 2008-2011
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<label>
+  <row> 2.0 </row><col> 1 </col>
+  <text> Release : V1.6.0 </text>
+  <color> RED </color>
+</label>
+
+<label>
+  <row> 3.0 </row><col> 1 </col>
+  <text> Schema : DES V1.0 </text>
+  <color> RED </color>
+</label>
+
+<label>
+  <row> 4.0 </row><col> 1 </col>
+  <text> Model : HumMod V1.6.0 </text>
+  <color> RED </color>
+</label>
+
+<label>
+  <row> 5.0 </row><col> 1 </col>
+  <text> Solver : HumMod V1.2.1 </text>
+  <color> RED </color>
+</label>
+
+End
